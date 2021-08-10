@@ -1,0 +1,222 @@
+---
+title: "Student and Faculty Experience in FSP this Year"
+subtitle: "Object / Setting / Experience"  
+author: 
+  - "Sadhvi Jawa, Minakshi Singh, Vidhu Gandhi, Yash Bhandari, Arvind Venkatadri"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    seal: FALSE
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF",
+  background_color = "#DEFACE"
+)
+```
+
+```{r xaringan-extra, include=FALSE, warning=FALSE}
+library(xaringanExtra)
+# use_animate_all()
+# use_broadcast()
+use_extra_styles(hover_code_line = TRUE, mute_unhighlighted_code = FALSE)
+```
+
+class: center middle
+
+# Student and Faculty Experiences
+## FSP 2020-2021
+
+### Sadhvi Jawa, Yash Bandari, Minakshi Singh, Vidhu Gandhi, Arvind Venkatadri
+
+---
+
+# Student and Faculty Experiences
+
+- **Some Metaphors for this year!!**
+
+- **Some Stories on what happened**
+
+- **Some Questions on Possibilities **
+
+- **Some thoughts on what we could do**
+
+
+
+---
+
+
+## Metaphors from Us: A Dragon Fruit !!
+
+.pull-left[
+
+
+- **Beautiful but Bizarre**
+
+- **Familiar yet unfamiliar ( taste )**
+
+
+]
+
+.pull-right[
+
+```{r echo = FALSE}
+
+knitr::include_graphics("https://cdn.pixabay.com/photo/2017/07/06/10/07/fruit-2477527__340.jpg")
+
+```
+
+
+]
+
+---
+
+## Metaphors from Us: A Slinky !!
+
+.pull-left[
+
+### Movement from Potential to Kinetic Energy!!
+- Some small Topics led to **yuuuge** realizations or creative output
+- Some Big Actions/Activities led to **Simple, Deep** Realization
+- So **PE<-->KE** !
+
+- ** But where does the Nudge come from?** 
+How do we create the Nudge to move from **PE<-->KE**?
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/Bq5z7WbQSt6xO/giphy.gif)
+
+
+]
+
+---
+
+## Metaphors from Us
+
+.pull-left[
+
+## A Stock Exchange
+
+- **Everyone is buying**
+- **Everyone is selling**
+- **People are following one another's cues....**
+
+##But....
+
+- ### No one **knows** anybody...
+
+]
+
+.pull-right[
+
+
+![](https://pup-assets.imgix.net/onix/images/9780691146461.jpg?w=410&auto=format)
+]
+
+---
+
+## Doing vs Thinking
+
+.pull-left[
+
+- Will they stop **making stuff** once they go into Y2/Y3/Y4?
+
+- **Talking** and **intellectualizing** more than **making**?
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/kFyEerRexPCvcWIBBl/giphy.gif)
+
+]
+
+---
+
+## Time and Choice
+
+.pull-left[
+
+- **Is Two Weeks of Workshop enough?**
+
+- ** Or should there be ongoing opportunities for Skilling?**
+
+- **What if they don't "LIKE" it? Should we push them anyway?**
+
+- **But there is Value, and Transformation, in pushing them to do things they don't like...**
+
+]
+
+.pull-right[
+![](https://media.giphy.com/media/3orif9EegUpebVJ30I/giphy.gif)
+]
+
+---
+
+# Unstructured Skilling?
+
+.pull-left[
+
+- ** Continuously Available Skill Programmes**
+
+- ** Students enroll at will**
+
+- ** Chunking of Skill Modules!!** 
+
+- ** Flexible Credits!!**
+
+- ** And...Faculty?** `r emo::ji("tired")`
+
+]
+
+.pull-right[
+![](https://media.giphy.com/media/Uni2jYCihB3fG/giphy.gif)
+]
+
+### Seems like a way to solve Time + Choice + "Value" + Self-Transformation"
+
+
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Slides created by Arvind Venkatadri<br>
+
+via the R packages:<br>
+
+"&#x2694;&#xFE0F; [**xaringan**](https://github.com/yihui/xaringan)<br> +<br/>&#x1F60E; 
+[**gadenbuie/xaringanthemer**](https://github.com/gadenbuie/xaringanthemer) <br>+<br/>
+&#x2718;[**gadenbuie/xaringanExtra**](https://github.com/gadenbuie/xaringanExtra)" 
+
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).

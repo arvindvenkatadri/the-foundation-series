@@ -1,0 +1,52 @@
+---
+title: "New Code with Download- from static"
+author: "Arvind Venkatadri"
+date: "30/06/2021"
+output: 
+  html_document:
+    code_download: TRUE
+    code_folding: hide
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+## Histogram
+
+```{r}
+
+hist(rnorm(500))
+
+```
+
+
+## Boxplot
+
+```{r}
+
+boxplot(rnorm(500))
+
+```
+
+
+## Tidyverse
+
+```{r}
+library(tidyverse)
+names(mpg)
+mpg %>% ggplot(aes(hwy,cty)) + geom_point(aes(colour = trans))
+```
+```{r}
+library(palmerpenguins)
+
+penguins %>% drop_na() %>% ggplot(aes(flipper_length_mm, body_mass_g, colour = species)) + 
+  geom_point() +
+  scale_colour_brewer(palette = "Spectral")
+```

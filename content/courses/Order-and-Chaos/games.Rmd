@@ -1,0 +1,43 @@
+---
+title: "\U0001F579 Games!"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(hugodown)
+```
+
+## Introduction
+
+### Do you know,  who  these four people are ?
+
+<a title="Maurice Leloir (1851-1940) Signature bottom rightwood engraving print by Jules Huyot Signature bottom left, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Dartagnan-musketeers.jpg"><img width="512" alt="Dartagnan-musketeers" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Dartagnan-musketeers.jpg/512px-Dartagnan-musketeers.jpg"></a>
+
+
+### Movie Time!
+Let us watch a (very ) small part of this movie, [The Three Musketeers -1973](https://en.wikipedia.org/wiki/The_Three_Musketeers_(1973_live-action_film))
+
+`r hugodown:: embed_youtube("Gj_DmO9jC3U") `
+
+### Fiction Time!
+
+Let us read a bit of good old classic fiction !! This is the Conversation that occurs right before the duel scene we saw in the video above. 
+
+[**Chapter 5. THE KING'S MUSKETEERS AND THE CARDINAL'S GUARDS**](http://www.literaturepage.com/read/thethreemusketeers-52.html)^[Download the entire e-book at [Project Gutenberg](https://www.gutenberg.org/ebooks/1257)]
+\
+Keep an eye on the conversation! And an ear for Frenchified English!!
+
+### Discussion
+ - Reward
+ - Regret aka FOMO
+ - Risk
+ - Retribution
+
+### The Game of Trust
+
+And finally, let us **play** a Game, the [Game of Trust](https://ncase.me/trust) !
+
+

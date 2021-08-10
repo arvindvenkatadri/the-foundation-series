@@ -1,0 +1,77 @@
+---
+title: Post with Hugodown and Blogdown
+author: Arvind Venkatadri
+date: '2021-08-04'
+slug: index.en-us
+categories: []
+tags: []
+image:
+  placement: 2
+  caption: 'Image credit: [**Alice In Wonderland dot Net**](https://www.alice-in-wonderland.net/)'
+  focal_point: ""
+  preview_only: true
+links:
+- icon: flask
+  icon_pack: fas
+  name: lab
+  url: /labs/00-install_name_plot.html
+- icon: magic
+  icon_pack: fas
+  name: Installation Slides
+  url: /slides/00-Installation.html
+output:
+  html_document:
+    theme: flatly
+    toc: TRUE
+    toc_float: TRUE
+    toc_depth: 2
+    number_sections: TRUE
+    code_folding: hide
+    code_download: TRUE
+---
+
+```{r setup, include=FALSE}
+library(hugodown)
+library(tidyverse)
+library(palmerpenguins)
+```
+
+```{r}
+penguins %>% drop_na() %>% 
+  ggplot(aes(x = flipper_length_mm, y = body_mass_g, colour = species)) + geom_point() + 
+  scale_color_brewer(palette = "Set3")
+```
+
+Let us look at this video for examples of how network pervade our lives:
+
+`r hugodown::embed_vimeo("14196818")`
+
+
+```{r,fig.align='center'}
+library(tidygraph)
+library(ggraph)
+nodes <- read_csv("greys-nodes.csv")
+edges <- read_csv("greys-edges.csv")
+
+ga <- tbl_graph(nodes, edges, directed = FALSE) 
+ga
+
+ga %>%
+  ggraph(layout = "graphopt") +
+  geom_edge_link0() +
+  geom_node_point(aes(fill = sex), shape = 21, size = 4) +
+  geom_node_text(aes(label = name), repel = TRUE, size  = 2) +
+  labs(title = "Grey's Anatomy Network")
+```
+
+
+
+# YouTube `hugodown`
+
+
+`r hugodown::embed_youtube("h29g21z0a68")`
+
+
+
+
+
