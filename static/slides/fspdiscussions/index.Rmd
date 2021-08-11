@@ -75,9 +75,9 @@ class: center middle
 .pull-left[
 
 
-- **Beautiful but Bizarre**
+- ### Beautiful but Bizarre
 
-- **Familiar yet unfamiliar ( taste )**
+- ### Familiar yet unfamiliar
 
 
 ]
@@ -100,8 +100,8 @@ knitr::include_graphics("https://cdn.pixabay.com/photo/2017/07/06/10/07/fruit-24
 .pull-left[
 
 ### Movement from Potential to Kinetic Energy!!
-- Some small Topics led to **yuuuge** realizations or creative output
-- Some Big Actions/Activities led to **Simple, Deep** Realization
+- Some small Topics led to **yuuuge** Creative Output/Activity
+- Some Big Actions/Activities led to **Simple, Deep** Realizations
 - So **PE<-->KE** !
 
 - ** But where does the Nudge come from?** 
@@ -118,19 +118,21 @@ How do we create the Nudge to move from **PE<-->KE**?
 
 ---
 
-## Metaphors from Us
+## Metaphors from Us: A Stock Exchange
 
 .pull-left[
-
-## A Stock Exchange
 
 - **Everyone is buying**
 - **Everyone is selling**
 - **People are following one another's cues....**
 
-##But....
+## But....
 
-- ### No one **knows** anybody...
+- ### Nobody **knows** anybody...
+
+- How do we make **Conversations and Networks** happen?
+ - Office Hours?
+ - Fireside Chats?
 
 ]
 
@@ -142,13 +144,14 @@ How do we create the Nudge to move from **PE<-->KE**?
 
 ---
 
-## Doing vs Thinking
+## Workshops : Doing vs Thinking
 
 .pull-left[
 
-- Will they stop **making stuff** once they go into Y2/Y3/Y4?
+- Will they stop **making stuff** once they go into **Y2/Y3/Y4**?
 
 - **Talking** and **intellectualizing** more than **making**?
+
 
 ]
 
@@ -157,6 +160,30 @@ How do we create the Nudge to move from **PE<-->KE**?
 ![](https://media.giphy.com/media/kFyEerRexPCvcWIBBl/giphy.gif)
 
 ]
+
+---
+## No Scaffolding?
+.pull-left[
+- Skills are not "continued" as part of curriculum in Y2/Y3/Y4?
+
+- Should senior year Wkshps be scaffolded on Foundation Wkshps and further?
+
+    - But we don't seem to have "Pre-Requisites" for courses?
+
+- Skills need an Increase in "Re-encounter value", or they cease to be Skills
+
+**" I don't draw" should stop !!**
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/SS7iPN0RcaFbEgMRV2/giphy.gif)
+
+]
+
+
+
 
 ---
 
@@ -200,7 +227,9 @@ How do we create the Nudge to move from **PE<-->KE**?
 ![](https://media.giphy.com/media/Uni2jYCihB3fG/giphy.gif)
 ]
 
-### Seems like a way to solve Time + Choice + "Value" + Self-Transformation"
+### Seems like a artistic way to solve Schrodinger's Wave Equation:
+
+### Time + Choice + "Value" + Self-Transformation"
 
 
 
