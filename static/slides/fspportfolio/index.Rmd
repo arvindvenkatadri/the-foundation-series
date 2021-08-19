@@ -1,0 +1,209 @@
+---
+title: "Teaching Foundation in this Pandemic Year"
+subtitle: "A brief Portfolio"  
+author: 
+  - "Arvind Venkatadri"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: ["kunoichi", "ninjutsu" , "assets/ninpo.css"]
+    seal: FALSE
+    nature:
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+library(emo)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF",
+  background_color = "#DEFACE"
+)
+```
+
+```{r xaringan-extra, include=FALSE, warning=FALSE}
+library(xaringanExtra)
+# use_animate_all()
+# use_broadcast()
+use_extra_styles(hover_code_line = TRUE, mute_unhighlighted_code = FALSE)
+```
+
+class: center middle
+
+# Teaching Foundation in this Pandemic Year
+## FSP 2020-2021
+###  A brief Portfolio of Outcomes
+
+### Arvind Venkatadri
+
+
+---
+
+
+## Some Metaphors first: A Dragon Fruit !!
+
+.pull-left[
+
+- ### Beautiful but Bizarre
+
+- ### Familiar yet unfamiliar
+
+]
+
+.pull-right[
+
+```{r echo = FALSE}
+
+knitr::include_graphics("https://cdn.pixabay.com/photo/2017/07/06/10/07/fruit-2477527__340.jpg")
+
+```
+
+
+]
+
+---
+
+## Some Metaphors first: A Slinky !!
+
+.pull-left[
+
+### Movement from Potential to Kinetic Energy!!
+- Some small Topics led to **yuuuge** Creative Output/Activity
+- Some Big Actions/Activities led to **Simple, Deep** Realizations
+- So **PE<-->KE** !
+- Class seemed to oscillate between intense activity and near-torpor
+
+- ** But where does the Nudge come from?** 
+How do we create the Nudge to move from **PE<-->KE**?
+
+]
+
+.pull-right[
+
+![](https://media.giphy.com/media/Bq5z7WbQSt6xO/giphy.gif)
+
+
+]
+
+---
+
+## Some Metaphors First: A Stock Exchange
+
+.pull-left[
+- **Everyone is buying, Everyone is selling**
+- **People are following one another's cues....**
+- **A Counter-Culture in the Teams Chat...**
+- **There's Peer Learning and ...Even Peer Imitation in Not-Learning**
+    - How does **the Same One Idea** miss everybody?? `r emo::ji("thinking")`
+
+### But....
+
+- #### Nobody **really knows** anybody...
+
+- #### How do we make **Conversations and Networks** happen?
+]
+
+.pull-right[
+
+![](https://pup-assets.imgix.net/onix/images/9780691146461.jpg?w=410&auto=format)
+]
+
+---
+
+# Delaunay Tesselation Portrait
+.pull-left[
+- Made with Geogebra
+- Delaunay Tesselation of points on a portrait picture
+- 
+]
+
+.pull-right[
+```{r portrait, echo=FALSE, fig.align='center',fig.dim=c(14, 9),}
+
+knitr::include_graphics("Tanmayi - Portrait.png")
+
+```
+]
+
+---
+
+# Mandelbrot and Julia Jewellery
+
+.pull-left[
+- Using XaOS software (FOSS)
+- Personal Choice of Complex constant $c$ (Julia Seed)
+- Constraints: Mandelbrot and Julia only
+$$
+z = z^2 + c
+$$
+![](Mandelbrot-location.png)
+]
+
+.pull-right[
+
+```{r jewellery, echo=FALSE, fig.align='center'}
+
+knitr::include_graphics("fractal_jewellery.png")
+
+```
+]
+
+
+
+---
+## Coding: Teaching in Reverse
+
+.pull-left[
+- ### Read Shakespeare first, not the alphabet
+- ### Match the complexity of the Tool immediately to Students' Creative Purposes
+- ### And...Motivation!!
+
+]
+
+.pull-right[
+![](https://cdn.pixabay.com/photo/2019/01/27/22/31/girl-3959203_1280.jpg)
+
+]
+
+.footnote[
+[1] [What is PRIMM?](https://www.futurelearn.com/info/courses/secondary-programming-pedagogy/0/steps/68416)
+]
+
+---
+
+
+---
+
+class: center, middle
+
+# Thanks!
+
+Portfolioa created by Arvind Venkatadri<br>
+
+via the R packages:<br>
+
+"&#x2694;&#xFE0F; [**xaringan**](https://github.com/yihui/xaringan)<br> +<br/>&#x1F60E; 
+[**gadenbuie/xaringanthemer**](https://github.com/gadenbuie/xaringanthemer) <br>+<br/>
+&#x2718;[**gadenbuie/xaringanExtra**](https://github.com/gadenbuie/xaringanExtra)" 
+
+
+The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
