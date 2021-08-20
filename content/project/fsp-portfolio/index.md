@@ -1,5 +1,5 @@
 ---
-date: "2016-04-27T00:00:00Z"
+date: "2021-08-21T00:00:00Z"
 external_link: ""
 image:
   caption: Photo by rawpixel on Unsplash
@@ -10,12 +10,12 @@ links:
 #   name: Follow
 #   url: https://twitter.com/georgecushen
 slides: 
-summary: Summary of Group Discussions
+summary: Teaching in this Pandemic Year 2020-2021
 tags:
 - Object
 - Setting
 - Experience
-title: School of Foundation Studies, SMI, MAHE
+title: Teaching in this Pandemic Year 2020-2021
 url_code: ""
 url_pdf: ""
 url_slides: "slides/fspportfolio"

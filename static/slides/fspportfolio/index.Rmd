@@ -1,209 +1,600 @@
 ---
-title: "Teaching Foundation in this Pandemic Year"
-subtitle: "A brief Portfolio"  
-author: 
-  - "Arvind Venkatadri"
-date: '`r Sys.Date()`'
+title: "Teaching in this Pandemic Year 2020-2021"
+subtitle: "A Portfolio of Student Outcomes and Teaching Experiences"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
-    css: ["kunoichi", "ninjutsu" , "assets/ninpo.css"]
-    seal: FALSE
+    lib_dir: libs
+    css: ["kunoichi", "ninjutsu", "default"]
+    self_contained: false
+    seal: false
     nature:
-      slideNumberFormat: "%current%"
+      ratio: "16:9"
       highlightStyle: github
       highlightLines: true
-      ratio: 16:9
-      countIncrementalSlides: true
+      countIncrementalSlides: false
 ---
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(
-  fig.width=9, fig.height=3.5, fig.retina=3,
-  out.width = "100%",
-  cache = FALSE,
-  echo = TRUE,
-  message = FALSE, 
-  warning = FALSE,
-  hiline = TRUE
-)
-library(emo)
-```
-
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-style_duo_accent(
-  primary_color = "#1381B0",
-  secondary_color = "#FF961C",
-  inverse_header_color = "#FFFFFF",
-  background_color = "#DEFACE"
-)
-```
-
-```{r xaringan-extra, include=FALSE, warning=FALSE}
+library(xaringan)
 library(xaringanExtra)
-# use_animate_all()
-# use_broadcast()
-use_extra_styles(hover_code_line = TRUE, mute_unhighlighted_code = FALSE)
-```
-
-class: center middle
-
-# Teaching Foundation in this Pandemic Year
-## FSP 2020-2021
-###  A brief Portfolio of Outcomes
-
-### Arvind Venkatadri
-
-
----
-
-
-## Some Metaphors first: A Dragon Fruit !!
-
-.pull-left[
-
-- ### Beautiful but Bizarre
-
-- ### Familiar yet unfamiliar
-
-]
-
-.pull-right[
-
-```{r echo = FALSE}
-
-knitr::include_graphics("https://cdn.pixabay.com/photo/2017/07/06/10/07/fruit-2477527__340.jpg")
-
+library(anicon)
+library(emoji)
+library(flipbookr)
+library(spData)
+library(tmap)
+data("lnd", package = "spData") # Boroughs of London
+data("cycle_hire_osm", package = "spData") # Cycle Hire locations
 ```
 
 
+class: bg-main1 split-50 hide-slide-number with-thick-border
+
+.column.bg-white[
+<br>
+<br>
+<br>
+<br>
+![](images/Mad-Party.jpg)
+]]
+
+.column.bg-main1[.content.vmiddle.center[
+.font4[Teaching in this Pandemic Year 2020-2021]<br>
+.font2[A Portfolio of Student Outcomes and Teaching Experiences]<br><br>
+.font2[Arvind Venkatadri]<br><br>
+`r anicon::faa("wifi")` https://we-r-us.netlify.app <br>
+`r anicon::faa("wifi")` https://r-for-artists.netlify.app <br>
+`r anicon::faa("wifi")` https://arvindvenkatadri.netlify.app
+
+]]
+
+
+
+---
+
+class: split-three
+
+.column.bg-main3[.content[
+# Course-1 : Order and Chaos
+
+.row[.content.nopadding[
+.img-fill[![](https://images.pexels.com/photos/3874511/pexels-photo-3874511.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260)]
+]]
+
+.bottom_abs.content[.white[
+## Emergence, Spatial Patterns, Game Theory, and Fractals]
+]
+]]
+
+
+.column.bg-main2[.content[
+# Course-2 : Play and Invent
+.row[.content.nopadding[
+.img-fill[![](https://www.triz.co.uk/hs-fs/hubfs/images/panels/cartoons/0727-b-church-bell.jpg?width=570&name=0727-b-church-bell.jpg)
+]]
+]]
+.bottom_abs.content[
+## Metaphors, <br> Analogic Thinking,<br>Creative Problem Solving, de Bono Methods, <br>and TRIZ
+]
+]]
+
+.column.bg-main1[.content[
+# Course-3 : Digital Thinking Tools
+.row[.content.nopadding[
+.img-fill[![](images/Hatter.jpg)]
+]]
+
+.bottom_abs.content[
+## Data Viz, Maps, and Networks in `r anicon::faa("r-project", animate="vertical")`
+]
+]]
+
+
+---
+
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+.content.vmiddle.center[
+## FSP : Order and Chaos
+### Designing with Fractals
+.row[.content.nopadding[
+.fig90[![](images/Mandelbrot-location.png)
+]]
+]
+]
+]
+
+
+.column.bg-main1[.row[
+.content.nopadding[.img-fill[![](images/fractal_jewellery.png)]
+]
+]
+
+.row[.content[
+## Mandelbrot and Julia Jewellery
+### Made using `XaOS` software
+### Programmable Complex Seed (`z = z^2 + c`)
+]]
+]
+
+
+
+
+---
+
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+.content.vmiddle.center[
+# FSP : Order and Chaos
+### Designing with Proximity
+]
+]
+
+
+.column.bg-white[
+.row[
+.content.nopadding[
+.img-fill[
+
+![](images/Tanmayi - Portrait.png)
+]
+]
+]
+
+.row[.content.black[
+## Delaunay / Voronoi Spatial Pattern
+### Made using `Geogebra` software
+]]
+]
+
+
+
+---
+
+class: bg-main1 split-30 hide-slide-number
+
+.column.bg-main3[
+.content.vmiddle.center[
+# FSP : Order and Chaos
+## Game Theory - The Stag Hunt Model
+The **Stag Hunt** is a Game Theoretic Model of Public Behaviour
+]
+]
+
+
+.column.bg-white[
+.row[
+.content.nopadding[
+.img-fill[
+![](images/stag-hunt.PNG)
+]
+]
+]
+]
+
+
+
+---
+
+class: bg-red split-30 hide-slide-number
+
+.column.bg-red[
+.content.vmiddle.center[
+# FSP : Play and Invent
+
+### `TRIZ` Interpretation of ***Home Alone***
+`TRIZ` is a .yellow[System] for .blue[Innovative Problem Solving] that orginated in Soviet Russia
+
+Based on .yellow[Innovative Patterns] mined from over .blue[3 million Patents]
+]
+]
+
+
+
+.column.bg-white[
+<center>
+<img src="images/Sameera -TRIZ - Home Alone.jpg" width="800" height="700">
+]
+
+
+
+
+---
+
+class: bg-red split-30 hide-slide-number
+
+class: bg-red split-30 hide-slide-number
+
+.column.bg-red[
+.content.vmiddle.center[
+# FSP : Play and Invent
+
+### `TRIZ` Interpretation of ***Home Alone***
+`TRIZ` is a System for Innovative Problem Solving invented by .yellow[Genrikh Altshuller]
+
+It is now used by many of the Fortune 500 Companies ( e.g. Samsung )
+]
+]
+
+
+
+.column.bg-white[
+<center>
+<img src="images/AnanyaDharmaraj_T12HomeAloneTRIZAnalysis.jpg" width="800" height="700">
+]
+
+
+---
+class: bg-blue split-30 hide-slide-number
+
+.column.bg-blue[
+.content.vmiddle.center[
+# FSP : Digital Thinking Tools
+## .yellow[Data Viz] in R
+]
+]
+
+.column.bg-white[
+.img-fill[
+![](images/storms.PNG)
+]
+
+.row[.content.black[
+## Data Visualization of Weather Patterns ( Points and Regression Models)
+### Made using `r anicon::faa("r-project", animate="vertical")` with packages `dplyr`and `ggplot`
+]]
+]
+---
+
+
+
+class: bg-blue split-30 hide-slide-number
+
+.column.bg-blue[
+.content.vmiddle.center[
+# FSP : Digital Thinking Tools
+## .yellow[Map Making] in R
+]
+]
+
+.column.bg-white[
+.img-fill[
+![](images/map.PNG)
+]
+
+.row[.content.black[
+## Map of Restaurants in Rajajinagar, Bangalore
+### Made using `r anicon::faa("r-project", animate="vertical")` with packages `osmdata`, `sf` and `ggplot`
+]]
 ]
 
 ---
 
-## Some Metaphors first: A Slinky !!
+class: bg-blue split-30 hide-slide-number
 
-.pull-left[
-
-### Movement from Potential to Kinetic Energy!!
-- Some small Topics led to **yuuuge** Creative Output/Activity
-- Some Big Actions/Activities led to **Simple, Deep** Realizations
-- So **PE<-->KE** !
-- Class seemed to oscillate between intense activity and near-torpor
-
-- ** But where does the Nudge come from?** 
-How do we create the Nudge to move from **PE<-->KE**?
-
+.column.bg-blue[
+.content.vmiddle.center[
+# FSP : Digital Thinking Tools
+## .yellow[Network Graphs] in R
+### Which is your Favourite TV Show?
+]
 ]
 
-.pull-right[
-
-![](https://media.giphy.com/media/Bq5z7WbQSt6xO/giphy.gif)
 
 
+
+.column.bg-white[
+.img-fill[
+![](images/simpsons.png)
 ]
+
+.row[.content.black[
+## The society in `The Simpsons`
+### Made using `r anicon::faa("r-project", animate="vertical")` with packages `tidygraph`, and `ggraph`
+]]
+]
+
+
+
+---
+class: bg-blue split-30 hide-slide-number
+
+.column.bg-blue[
+.content.vmiddle.center[
+# FSP : Digital Thinking Tools
+## Making .yellow[Sequence Diagrams] in R
+]
+]
+
+
+.column.bg-white[
+.img-fill[
+![](images/spanish.png)
+]
+
+.row[.content.black[
+## A Spanish Language Tutorial
+### Made using `r anicon::faa("r-project", animate="vertical")` with packages `plantUML` and `DiagrammeR`
+]]
+]
+
 
 ---
 
-## Some Metaphors First: A Stock Exchange
+class: split-two white with-thick-border
 
-.pull-left[
-- **Everyone is buying, Everyone is selling**
-- **People are following one another's cues....**
-- **A Counter-Culture in the Teams Chat...**
-- **There's Peer Learning and ...Even Peer Imitation in Not-Learning**
-    - How does **the Same One Idea** miss everybody?? `r emo::ji("thinking")`
+.column.bg-green[.content.vmiddle.center[
+# And Teaching?
+#⚔
+#忍者
 
-### But....
+### Trying to be a ninja
+]]
 
-- #### Nobody **really knows** anybody...
-
-- #### How do we make **Conversations and Networks** happen?
+.column.bg-green[.content.vmiddle.center[
+<img src="images/Jabberwock.jpg" width="70%" height = "50%">
+]
 ]
 
-.pull-right[
-
-![](https://pup-assets.imgix.net/onix/images/9780691146461.jpg?w=410&auto=format)
-]
 
 ---
 
-# Delaunay Tesselation Portrait
+class: split-two white with-thick-border
+
+
+.column.bg-green[.content.vmiddle.center[
+## Creating Personal Webpage .yellow[in R] for all Content
+<center>
+<img src="images/website.png" width="90%" height = "100%">
+- .yellow[Theme:] Alice in Wonderland
+]]
+
+.column.bg-green[.content.vmiddle.center[
+## Code-Labs and Classwork : Show, then Make
+<center>
+<img src="images/learning-module.png" width="90%" height = "100%">
+- .yellow[Metaphors] from Alice for Data Viz
+]]
+
+
+---
+
+class: middle center bg-green
+
+## Using "Code-Movies"
+
+### .yellow[Highlighting] and .purple[Incremental Execution] in .red[***Slides***]
+
+---
+ # Code Movies
 .pull-left[
-- Made with Geogebra
-- Delaunay Tesselation of points on a portrait picture
-- 
+```{r tm1, warning=FALSE, fig.show='hide', message=FALSE}
+tm_shape(lnd) + #<<
+  tm_borders(col = "black", lwd = 1) + #<<
+  tm_fill("NAME", legend.show = FALSE) #<<
+```
+]
+.pull-right[
+```{r, echo=FALSE}
+knitr::include_graphics(
+  knitr::fig_chunk("tm1", "png")
+)
+```
 ]
 
+---
+# Code Movies
+
+.pull-left[
+```{r tm1a, warning=FALSE, fig.show='hide', message=FALSE}
+# Group 1 #<<
+tm_shape(lnd) +
+  tm_borders(col = "black",lwd = 1) + 
+  tm_fill("NAME", legend.show = FALSE) +
+
+# Group 2 = Layer 2 #<<
+  tm_shape(cycle_hire_osm) + #<<
+  tm_symbols(size = 0.2, col = "red") #<<
+
+```
+]
 .pull-right[
-```{r portrait, echo=FALSE, fig.align='center',fig.dim=c(14, 9),}
-
-knitr::include_graphics("Tanmayi - Portrait.png")
-
+```{r, echo=FALSE}
+knitr::include_graphics(
+  knitr::fig_chunk("tm1a", "png")
+)
 ```
 ]
 
 ---
 
-# Mandelbrot and Julia Jewellery
+# Code Movies
 
 .pull-left[
-- Using XaOS software (FOSS)
-- Personal Choice of Complex constant $c$ (Julia Seed)
-- Constraints: Mandelbrot and Julia only
-$$
-z = z^2 + c
-$$
-![](Mandelbrot-location.png)
+```{r tm2, warning=FALSE, fig.show='hide', message=FALSE}
+# Group 1
+tm_shape(lnd) +
+  tm_borders(col = "black",lwd = 1) + 
+  tm_fill("NAME", legend.show = FALSE) +
+# Group 2 = Layer 2
+  tm_shape(cycle_hire_osm) + 
+  tm_symbols(size = 0.2, col = "red") +
+  
+  tm_graticules() + #<<
+  tm_add_legend(type = "symbol", col = "red", #<<
+                title = "Hire Cycles Here") #<<
+```
+]
+.pull-right[
+```{r, echo=FALSE}
+knitr::include_graphics(
+  knitr::fig_chunk("tm2", "png")
+)
+```
+]
+
+---
+
+# Code Movies
+
+.pull-left[
+
+
+```{r tm1b, warning=FALSE, fig.show='hide', message=FALSE}
+# Group 1
+tm_shape(lnd) +
+  tm_borders(col = "black",lwd = 1) + 
+  tm_fill("NAME", legend.show = FALSE) +
+# Group 2 = Layer 2
+  tm_shape(cycle_hire_osm) + 
+  tm_symbols(size = 0.2, col = "red") +
+  tm_graticules() +
+  tm_add_legend(type = "symbol", col = "red",
+                title = "Hire Cycles Here") +
+
+  tm_scale_bar(position=c("left", "bottom"),#<<
+               text.size = 1) + #<<
+  tm_compass(position = c("right", "top"), #<<
+             type = "rose", #<<
+             size = 2)  #<<
+```
 ]
 
 .pull-right[
+```{r, echo=FALSE}
+knitr::include_graphics(
+  knitr::fig_chunk("tm1b", "png")
+)
+```
+]
 
-```{r jewellery, echo=FALSE, fig.align='center'}
+---
 
-knitr::include_graphics("fractal_jewellery.png")
+# Code Movies
 
+.pull-left[
+
+```{r tm1c, warning=FALSE, fig.show='hide', message=FALSE}
+mymap <- 
+# Group 1
+tm_shape(lnd) +
+  tm_borders(col = "black", lwd = 1) + 
+  tm_fill("NAME", legend.show = FALSE) +
+# Group 2 = Layer 2
+  tm_shape(cycle_hire_osm) + 
+  tm_symbols(size = 0.2, col = "red") +
+  tm_graticules() +
+  tm_add_legend(type = "symbol", col = "red",
+                title = "Hire Cycles Here") +
+  tm_scale_bar(position=c("left", "bottom"),text.size = 1) + 
+  tm_compass(position = c("right", "top"), type = "rose",
+             size = 2) +
+  
+  tm_credits(text = "Arvind V, 2021", #<<
+             position = c("left", "bottom")) + #<<
+  tm_layout(main.title = "London Bike Share", #<<
+            bg.color = "lightblue", #<<
+            inner.margins = c(0, 0, 0, 0)) #<<
+mymap
+```
+]
+.pull-right[
+```{r, echo=FALSE}
+knitr::include_graphics(
+  knitr::fig_chunk("tm1c", "png")
+)
 ```
 ]
 
 
 
----
-## Coding: Teaching in Reverse
-
-.pull-left[
-- ### Read Shakespeare first, not the alphabet
-- ### Match the complexity of the Tool immediately to Students' Creative Purposes
-- ### And...Motivation!!
-
-]
-
-.pull-right[
-![](https://cdn.pixabay.com/photo/2019/01/27/22/31/girl-3959203_1280.jpg)
-
-]
-
-.footnote[
-[1] [What is PRIMM?](https://www.futurelearn.com/info/courses/secondary-programming-pedagogy/0/steps/68416)
-]
 
 ---
 
+class: bg-yellow
+
+## Using Teams for ***Assignments***
+
+<center>
+<img src="images/teams-assignment.png" width="100%" height = "60%">
 
 ---
 
-class: center, middle
+class: bg-yellow
 
-# Thanks!
+## Using Teams for ***Grading***
 
-Portfolioa created by Arvind Venkatadri<br>
+<center>
+<img src="images/assignment-rubric.png" width="100%" height = "50%">
+ Rubric can be attached to each Assignment in Teams and scores downloaded in Excel ( student-wise )
 
-via the R packages:<br>
+---
 
-"&#x2694;&#xFE0F; [**xaringan**](https://github.com/yihui/xaringan)<br> +<br/>&#x1F60E; 
-[**gadenbuie/xaringanthemer**](https://github.com/gadenbuie/xaringanthemer) <br>+<br/>
-&#x2718;[**gadenbuie/xaringanExtra**](https://github.com/gadenbuie/xaringanExtra)" 
+class: bg-yellow
+
+## Student Portfolio Website : Digital Thinking Tools
+
+<center>
+<img src="images/portfolio.png" width="100%" height = "60%">
+we-r-us.netlify.app
 
 
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihui.name/knitr), and [R Markdown](https://rmarkdown.rstudio.com).
+---
+
+
+class: bg-main1 
+
+# Lessons
+.font2[
+* .yellow[Teaching Together] was hard at first
+* .yellow[Naming a course as] .red["CE"], and then .yellow[merging] .green[GS] and .blue[GSK] into it was hard too
+* Coherence and Structure of the Course was at times iffy
+]
+.font2[
+* .yellow[Teaching Together] made sense later....when we got tired
+* .yellow[Merging] .green[GS] and .blue[GSK] into .red[CE] made us think deeper about curriculum and practice
+* Some .yellow[Through-Lines] emerged as we thought about and worked the Content. 
+- E.g .blue[Pointillism] and .red[Emergence] ( after Stephen Johnson )
+- E.g. .blue[Alice in Wonderland] and .red[Schelling Points]
+* Assignment were more nuanced perhaps, with three areas for assignments?
+]
+
+---
+
+
+layout: false
+class: shuriken-reverse-100 white with-thick-border border-double
+
+
+.blade1.bg-red.content[
+# Thank you !!
+]]
+.blade2.bg-green[.content.vertical-rl[
+
+]]
+.blade3.bg-deep-purple[.content.center[
+`r anicon::faa("wifi")` https://we-r-us.netlify.app <br>
+`r anicon::faa("wifi")` https://r-for-artists.netlify.app <br>
+`r anicon::faa("wifi")` https://arvindvenkatadri.netlify.app
+
+]]
+.blade4.bg-orange[.content.sideways-rl[.center[
+
+]]]
+.hole.bg-black[.content.center.vmiddle[
+# Slides made by Arvind Venkatadri
+###with 
+## `r anicon::faa("r-project", animate="vertical")` 
+### via the R packages:<br>
+
+&#x2694;&#xFE0F; [**xaringan**](https://github.com/yihui/xaringan)<br> +<br/>&#x1F60E; 
+&#x2718;[**gadenbuie/xaringanExtra**](https://github.com/gadenbuie/xaringanExtra)<br><br/>
+### and with
+&#x2694;&#xFE0F;[**the tidyverse**](https://tidyverse.tidyverse.org/)
+
+]]
+
