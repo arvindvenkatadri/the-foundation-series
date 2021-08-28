@@ -1,0 +1,303 @@
+---
+title: "My Teaching Manifesto"
+subtitle: "Thoughts on Values and Beliefs in Teaching"
+author: 
+  - "Arvind Venkatadri"
+date: '`r Sys.Date()`'
+output:
+  xaringan::moon_reader:
+    css: xaringan-themer.css
+    nature:
+      seal: TRUE
+      slideNumberFormat: "%current%"
+      highlightStyle: github
+      highlightLines: true
+      ratio: 16:9
+      countIncrementalSlides: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(
+  fig.width=9, fig.height=3.5, fig.retina=3,
+  out.width = "100%",
+  cache = FALSE,
+  echo = TRUE,
+  message = FALSE, 
+  warning = FALSE,
+  hiline = TRUE
+)
+```
+
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_duo_accent(
+  primary_color = "orange",
+  #primary_color = "#1381B0",
+  secondary_color = "#FF961C",
+  inverse_header_color = "#FFFFFF"
+)
+```
+
+
+```{r xaringan-extra, include=FALSE, warning=FALSE}
+library(xaringanExtra)
+use_extra_styles(hover_code_line = TRUE,mute_unhighlighted_code = FALSE)
+use_xaringan_extra()
+
+```
+
+## What am I going to say here?
+
+.pull-left[
+![](https://images.unsplash.com/photo-1562149184-aacce11fce44?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=667&q=80)
+]
+
+.pull-right[
+### My Personal Values in Teaching
+### What I believe is worth Teaching in FSP!
+### What Skills would I impart?
+### What Attitudes would I wish to inculcate?
+]
+
+---
+
+## Values in Teaching
+
+.pull-left[
+- Some Universal Sacreds
+    - Do no "teacherly" harm
+    
+    - Honesty
+    
+    - Love and Respect for the Kids and what they bring
+  
+
+]
+
+.pull-right[
+![](https://images.unsplash.com/photo-1553002401-c0945c2ff0b0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=675&q=80)
+]
+
+---
+
+## Values: Do No Harm
+.pull-left[
+
+- The Golden Rule, of course, is **“do to others as you would have them do to you.”**
+
+- The Silver Rule, in all its double negative glory, is ***“do not do to others what you don’t want them to do to you.”***
+
+  - In other words: never impose a Way of Thinking or Acting on Students that is not a living reality for yourself. 
+  
+  - Teach from a position of Belief and Practice
+  
+  - "Unlearn". Bah!
+
+  - It’s close in some ways to the Hippocratic Oath, or “do no harm”.
+
+.footnote[https://medium.com/@jeffdesjardins/the-silver-rule-taleb-and-the-slippery-slope-to-interventionism-ef6baef17c23]
+
+]
+
+.pull-right[
+
+![Hippocratic Oath](https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Engraving%3B_bust_of_Hippocrates%3B_by_Paul_Wellcome_L0019959.jpg/330px-Engraving%3B_bust_of_Hippocrates%3B_by_Paul_Wellcome_L0019959.jpg)]
+
+
+
+---
+
+## Values: Honesty
+
+.pull-left[
+
+- Differentiate between: 
+ - What I know from my own experience
+ - What I know from someone else's experience
+
+- Transparency
+  - "Arvind, Why is this Assignment graded so low?" is a **good** question!!
+  - All grades **public** in my classroom
+  - More than one way of doing good work in class !!
+  
+- If I goof up, I own up and make good
+    - Change grades / comments /scores / if I make an error
+    - In full public glare
+    
+
+]
+
+.pull-right[
+![](https://images.pexels.com/photos/6700369/pexels-photo-6700369.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)
+]
+
+---
+
+
+
+.pull-left[
+## Values: Love and Respect<br>for the Students
+
+- Know their **NAMES**
+ 
+- Acknowledge their **PRESENCE**
+ 
+- Welcome their **BACKGROUNDS**
+
+- Endorse their **IDENTITIES**
+ 
+- Celebrate their **WORK**
+ 
+
+]
+
+.pull-right[
+![](https://images.unsplash.com/photo-1579762714453-51d9913984e2?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=671&q=80)
+]
+
+
+---
+
+## What I Teach
+.pull-left[
+- #### Big Understandings (**Understandings** Approach)
+- #### Modelling and Applying (**Dispositions** Approach)
+- #### Taxonomy of Ideas, Structures and Tools (**Skills** Approach)
+
+#### Example: Classical TRIZ in ***FSP: Play and Invent***
+- ***Big Idea:*** Generalized Problem: "Your Problem has been solved somewhere else"
+
+- ***Modelling/Applying:*** "Metaphorize" your Problem using 39 TRIZ Parameters
+- ***Taxonomy:*** The 8 TRIZ Laws of Evolution of a Product; TRIZ Contradictions Matrix; TRIZ 40 Inventive Principles
+]
+.pull-right[
+.pull-left[
+![](https://m.media-amazon.com/images/I/51R9WS8BNTL._SL500_.jpg)
+]
+.pull-right[
+![](https://images-na.ssl-images-amazon.com/images/I/517-sR6hIgL._SX331_BO1,204,203,200_.jpg)
+]
+]
+
+
+---
+
+## Skills : Digital Technology
+.pull-left[
+- Creative Purpose <--> Tool Capability: a Dance
+
+- Replication is key: 
+  - I want work to be ***"reproducible"*** and ***"copy-able"***. 
+  - Replication precedes **Change** and **Innovation**
+  - Replication can create **Scaleable** Things
+  - Tech tools help with all that. 
+
+- Tech can be **trans-disciplinary**
+
+- I am a technologist and a tech practitioner
+]
+.pull-right[
+.pull-left[
+<center><img src= "https://www.r-project.org/logo/Rlogo.png" height="100px" /></center>
+
+![](https://www.mitchelloharawild.com/blog/2018-07-10-hexwall_files/figure-html/final-1.png)
+![](https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcRfV_4iF69tL1Q-qcSpTHcofFpJuga96x50JLFzV63P1EqlYAM_%26s&sp=1630118122Tb5121f4e45a47d3e0c8fe24e7575b5a4b0b4cf57e28941e32039999f25d0fb6c)
+]
+.pull-right[
+
+![](https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png)
+<center><img src="https://www.raspberrypi.org/app/uploads/2018/03/RPi-Logo-Reg-SCREEN.png" height="150px" /></center>
+
+<center><img src = "https://github.com/pure-data/pd-icon/raw/master/masters/icon1024.png" height = "150px"/></center>
+
+]
+]
+---
+
+## Skills : Community and Languages
+.pull-left[
+- Reading, Writing, Talking
+    - Absolutely Critical Skills!
+
+- Talking and Collaboration
+    - Vernacular Languages
+    - Mother Tongue
+
+    
+- Community Orientation
+
+    - How many strangers do you talk to **daily?**
+]
+
+.pull-right[
+<center><img src = "https://images.unsplash.com/photo-1463335361701-e90f4c5045d0?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fG1lZXRpbmclMjBzdHJhbmdlcnMlMjBpbmRpYXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60" height = "800px"/></center>
+]
+ 
+---
+
+.pull-left[
+## Attitude : The Word "Yet"
+
+Add "yet" to every perceived shortcoming...
+
+- "I don't **know**...YET"
+
+- "I don't **draw**...YET"
+
+- I don't **code**..."YET"
+
+- etc. 
+]
+
+.pull-right[
+![](https://images.pexels.com/photos/5238645/pexels-photo-5238645.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)
+]
+
+---
+
+.pull-left[
+## Attitude : Anti-Fragile
+
+To Students: Where are you on this Scale?
+
+- Scale **-5** - Fragile: When random things break you
+
+- Scale **0**: Resilient: When random things affect you very little
+
+- Scale **+5**: Anti-Fragile: When random things make you thrive!!
+
+- So:
+    - Rise and Meet things.
+    - Take Risks
+    - Put your **Skin in the Game**
+    - Be ***Antifragile!***
+
+]
+
+.pull-right[
+![](https://m.media-amazon.com/images/I/51yVeIZ2ymL.jpg)
+]
+
+
+
+---
+
+.pull-left[
+![](https://www.startpage.com/av/proxy-image?piurl=https%3A%2F%2Fencrypted-tbn0.gstatic.com%2Fimages%3Fq%3Dtbn%3AANd9GcT41wc4QRd2zW6A8O1jv678wP6_whgJi9DEFRqNDgJEB7i6zyU%26s&sp=1630128818T1b73963df5ce4b8cec82bab43e5af208b85f91936708945aea9b399fc4e5047d)
+
+Maurice Leloir (1851-1940)
+]
+
+.pull-right[
+
+# Thanks!
+
+## Slides made 
+###with 
+## `r anicon::faa("r-project", animate="vertical")` 
+### via the R packages:<br>
+
+&#x2694;&#xFE0F; [**xaringan**](https://github.com/yihui/xaringan)<br> +<br/>&#x1F60E; 
+&#x2718;[**gadenbuie/xaringanExtra**](https://github.com/gadenbuie/xaringanExtra)<br><br/>
+]
