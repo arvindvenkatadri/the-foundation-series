@@ -88,9 +88,9 @@ use_xaringan_extra()
 
 - The Silver Rule, in all its double negative glory, is ***“do not do to others what you don’t want them to do to you.”***
 
-  - In other words: never impose a Way of Thinking or Acting on Students that is not a living reality for yourself. 
+  - In other words: never impose a Way of Thinking or Acting on Students that is not *a living reality* for yourself. 
   
-  - Teach from a position of Belief and Practice
+  - Teach from a position of **Belief and Practice**
   
   - "Unlearn". Bah!
 
@@ -118,18 +118,18 @@ use_xaringan_extra()
 
 - Transparency
   - "Arvind, Why is this Assignment graded so low?" is a **good** question!!
-  - All grades **public** in my classroom
   - More than one way of doing good work in class !!
+  - All grades **public** in my classroom
   
 - If I goof up, I own up and make good
-    - Change grades / comments /scores / if I make an error
+    - Change grades / comments /scores  if I make an error
     - In full public glare
     
 
 ]
 
 .pull-right[
-![](https://images.pexels.com/photos/6700369/pexels-photo-6700369.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500)
+![](https://images.pexels.com/photos/6700369/pexels-photo-6700369.jpeg)
 ]
 
 ---
@@ -261,11 +261,11 @@ Add "yet" to every perceived shortcoming...
 
 To Students: Where are you on this Scale?
 
-- Scale **-5** - Fragile: When random things break you
+- Scale **-5**: Fragile: When random things break you
 
 - Scale **0**: Resilient: When random things affect you very little
 
-- Scale **+5**: Anti-Fragile: When random things make you thrive!!
+- Scale **+5**: **Anti-Fragile**: When random things make you ***thrive***!!
 
 - So:
     - Rise and Meet things.
