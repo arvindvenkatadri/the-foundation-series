@@ -1,0 +1,58 @@
+---
+title: "\U0001F579 Kandinsky and Spatial Thinking"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(hugodown)
+library(emoji)
+library(emojifont)
+library(fontawesome)
+```
+
+## Introduction
+
+Have you heard of a painter called Wassily Kandinksy? Here is a link to his [Top 40 Paintings. ](https://www.wassilykandinsky.net/painting1896-1944.php)
+ 
+Let us listen to Mathew Ritchie tell us about Kandinsky. This will be a starting point for our journey into Form and Structure. 
+
+<iframe width="972" height="547" src="https://www.youtube.com/embed/_oxS2TM182I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+### Non-Fiction Time!
+
+Kandinsky was remarkable for many things, but perhaps most so in that he wrote an entire book about why he painted, called the [Über das Geistige in der Kunst: Insbesondere in der Malerei (Concerning the Spiritual in Art: Especially in Painting)](https://www.gutenberg.org/files/46203/46203-h/46203-h.htm). This book, in German, is almost like a "credo". 
+
+Since we can't read German, let us read parts of an Article about Kandinsky's credo: [Kandinsky, Math Artist? by Karl Kattchee, Proceedings of Bridges 2013: Mathematics, Music, Art, Architecture, Culture (2013), Pages 473–476 Short Papers](http://archive.bridgesmathart.org/2013/bridges2013-473.pdf)
+
+### Discussion
+
+- Spatial Metaphors
+- Space and the Spiritual
+- Space and Emotions
+
+### Activity for the Day
+
+1. Fire up [Google Earth](https://earth.google.com/web/)
+2. Create a **new Project** by clicking on `r fa("map-marked-alt", fill = "black")`
+2. Make sure you log in with a **Gmail Account**. Please create one if you don't have one and use it to log in. 
+3. What you need to do:
+
+- Work in Pairs
+- Take Inspiration from [Kandinsky's Paintings](https://www.wassilykandinsky.net/painting1896-1944.php)
+- Use Google Earth to create a **Spatial - Temporal Life Journey** that takes us through the main Places and Events of your Life
+- Show the Places in your Life as **SHAPES** with **COLOURS**. Choose these keeping in mind your **memories of that place**
+- Add Descriptive Text to each Place relating your story of that place
+- Add pictures and YT videos as needed, to each Place
+- Save your Journey as a Keyhole Markup File(.kmz /.kml)
+- Email your file to your pair-buddy and check that they can see it as you do!
+- Submit your .kmx/.kml file on Teams when and where I tell you!
+
+Trouble? Ask me for help!!
+
+4. Show and Tell...hmm...maybe tomorrow morning?
+
+5. **Before you Start** : Import [this](kml-files/Anne Frank- Diary of a Young Girl v1.kmz) kml file into Google Earth and play with it. 
+
