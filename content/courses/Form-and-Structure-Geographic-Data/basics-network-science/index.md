@@ -7,6 +7,7 @@ tags:
 image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
+weight: 10
 external_link: ""
 links:
 # - icon: linkedin
@@ -18,7 +19,7 @@ links:
 #   name: 
 #   url: https://twitter.com/arvind_v
 slides: ""
-url_code: "code/course-related/example/example.html"
+url_code: "https://r-for-artists.netlify.app/labs/07-grammar-of-networks"
 url_pdf: ""
 url_slides: "slides/new/index.html"
 url_video: ""

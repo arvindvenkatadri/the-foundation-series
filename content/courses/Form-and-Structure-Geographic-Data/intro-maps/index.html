@@ -1,0 +1,119 @@
+---
+title: "The Grammar of Maps"
+subtitle: "The Grammar of Maps"
+summary: "The Grammar of Maps"
+author: "Arvind Venkatadri"
+date: "2021-09-17"
+weight : 7
+featured: no
+image:
+  placement: 2
+  caption: 'Image credit: [**Alice In Wonderland dot Net**](https://www.alice-in-wonderland.net/)'
+  focal_point: ""
+  preview_only: true
+projects: []
+output:
+  html_document:
+    toc_float: true
+    theme: flatly
+    toc: true
+    code_folding: true
+links:
+- icon: flask
+  icon_pack: fas
+  name: lab
+  url: https://r-for-artists.netlify.app/labs/06-Grammar-of-Maps.html
+  
+- icon: magic
+  icon_pack: fas
+  name: Introduction Slides
+  url: https://r-for-artists.netlify.app/slides/06-Spatial-Data-in-R.html
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>We will use the R package <code>sf</code> (“simple features”) to understand how simple geometric shapes are encoded into data, that can be plotted as maps.</p>
+<p>We will then plot maps using mapping packages like <code>ggplot</code> and <code>tmap</code> to create static and interactive maps. We will initially use data that we can download from <strong>Natural Earth</strong> and <strong>Open Street Map (OSM)</strong>.</p>
+<p>Later we will construct our own maps using data that we gather from the street using the <strong>Vespucci</strong> app.</p>
+<p>Finally, we will look at his
+# References</p>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://docs.ropensci.org/osmplotr/articles/basic-maps.html">OSM Basic Maps Vignette</a></p></li>
+<li><p>Nikita Voevodin, <a href="https://bookdown.org/voevodin_nv/R_Not_the_Best_Practices/maps.html">R, Not the Best Practices</a></p></li>
+<li><p>Nico Hahn, <a href="https://bookdown.org/nicohahn/making_maps_with_r5/docs/introduction.html">Making Maps with R</a></p></li>
+<li><p>Emine Fidan, <a href="https://bookdown.org/eneminef/DRR_Bookdown/">Interactive Maps in R</a></p></li>
+<li><p>Lovelace et al, <a href="https://geocompr.robinlovelace.net/adv-map.html">Geocomputation in R</a></p></li>
+</ol>
+</div>
+<div id="mapping-projects" class="section level1">
+<h1>Mapping Projects</h1>
+<div id="animal-and-bird-migration" class="section level2">
+<h2>1. Animal and Bird Migration</h2>
+<ol style="list-style-type: decimal">
+<li>Head off to <a href="https://www.movebank.org/cms/movebank-main">movebank.org</a></li>
+<li>Look at a few species of interest and choose one.</li>
+<li>Download the data ( <strong>ESRI Shapefile</strong>)</li>
+<li>Import that into R using <code>sf_read()</code></li>
+<li>See how you can plot locations, tracks and colour by species….based on the data you download.</li>
+</ol>
+<p>For tutorial info: <a href="https://movebankworkshopraleighnc.netlify.app/" class="uri">https://movebankworkshopraleighnc.netlify.app/</a></p>
+</div>
+<div id="mapping-india-places-of-worship" class="section level2">
+<h2>2. Mapping India: Places of Worship</h2>
+<ol style="list-style-type: decimal">
+<li><p>Do some searching and make a list of Places of Worship in India that are known to you.</p></li>
+<li><p>Head off to the <a href="http://india.info-proto.com/index.php/">India Place Finder</a> website. Using the search facility there, download a CSV file that contains names of the places and their lon-lat coordinates.</p></li>
+<li><p>Read this CSV into R. Use the <code>sfheaders</code> package to convert this data into an <code>sf</code> spatial data frame.</p></li>
+<li><p>Use the <code>ggplot</code> or the <code>tmap</code> +<code>plotly</code> packages to plot these on an India map. Use the <code>rnaturalearth</code> package to get hold of an India map that is relevant to your area of interest.</p></li>
+<li><p>Extra:</p>
+<ul>
+<li>Use <a href="https://fontawesome.com/icons">font-awesome</a> icons to signify your Places of Worship.</li>
+<li>Use popups in <code>tmap/plotly</code> to pop-up a picture or video about the place</li>
+</ul></li>
+</ol>
+</div>
+<div id="food-at-home" class="section level2">
+<h2>3. Food at Home</h2>
+<ol style="list-style-type: decimal">
+<li>Draw a map of your home-town with your favourite restaurants shown. Pop-ups for each restaurant will win bonus points.</li>
+</ol>
+<p>Take a look at:
+Burkhart, Christian. n.d. “Streetmaps.” <a href="https://ggplot2tutor.com/tutorials/streetmaps">StreetMaps</a></p>
+<p><img src="https://ggplot2tutor.com/static/093466a0f94f04f36e2c028fe7ae3f23/fd84e/maps.png" /></p>
+</div>
+<div id="mapping-places-yelahanka-on-open-street-map" class="section level2">
+<h2>4. Mapping Places Yelahanka on Open Street Map</h2>
+<ol style="list-style-type: decimal">
+<li>Download the Vespucci app on your phone:
+<ul>
+<li>Android <a href="https://play.google.com/store/apps/details?id=de.blau.android&amp;hl=en&amp;gl=US">app on Play Store</a></li>
+<li>iPhone is sadly not available. So partner with an Android phone user please!</li>
+</ul></li>
+<li>You will need to create an account on Open Street Map and login to the app on your phone. This will allow you to contribute changes and data to the map and your data will be available to any netizen for download.</li>
+<li>Read this <a href="https://learnosm.org/en/mobile-mapping/vespucci/">Vespucci Tutorial</a></li>
+<li>Choose specific categories of Places of interest:
+<ul>
+<li>Restaurants</li>
+<li>Street Food locations</li>
+<li>Medicines</li>
+<li>Dustbins/garbage</li>
+<li>Flowering Trees</li>
+<li>Park Benches</li>
+<li>Street Lighting</li>
+</ul></li>
+<li>Wherever possible, record metadata:</li>
+</ol>
+<ul>
+<li>Menu / Cuisine</li>
+<li>Timings</li>
+<li>Indoor or outdoor seating</li>
+<li>Parking available</li>
+</ul>
+<ol start="5" style="list-style-type: decimal">
+<li>Download in R and plot using <code>ggplot</code> or using <code>tmap</code>.</li>
+</ol>
+</div>
+</div>
