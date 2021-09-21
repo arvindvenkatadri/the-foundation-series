@@ -6,15 +6,7 @@ output:
   html_document:
     df_print: paged
     toc: yes
-  pdf_document:
-    toc: yes
-    latex_engine: xelatex
-  html_notebook:
-    fig_caption: yes
-    number_sections: yes
-    toc: yes
-  word_document:
-    toc: yes
+    code_download: TRUE
 editor_options: 
   chunk_output_type: inline
 ---
@@ -36,7 +28,7 @@ set_here()
 
 ## Penguin Random Forest Model with`randomForest`
 
-Using the `penguins` dataset and Ramdom Forest Classification.
+Using the `penguins` dataset and Random Forest Classification.
 
 ```{r penguins}
 penguins

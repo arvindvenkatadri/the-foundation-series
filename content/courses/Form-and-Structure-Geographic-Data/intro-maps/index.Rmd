@@ -38,7 +38,7 @@ We will then plot maps using mapping packages like `ggplot` and `tmap` to create
 
 Later we will construct our own maps using data that we gather from the street using the **Vespucci** app. 
 
-Finally, we will look at his
+
 # References
 
 1. [OSM Basic Maps Vignette](https://docs.ropensci.org/osmplotr/articles/basic-maps.html)
@@ -63,9 +63,18 @@ Finally, we will look at his
 
 For tutorial info: <https://movebankworkshopraleighnc.netlify.app/>
 
+    
 
+## 2. Food at Home
 
-## 2. Mapping India: Places of Worship
+1. Draw a map of your home-town with your favourite restaurants shown. Pop-ups for each restaurant will win bonus points. 
+
+Take a look at:
+Burkhart, Christian. “Streetmaps.” [StreetMaps](https://ggplot2tutor.com/tutorials/streetmaps)
+
+![](https://ggplot2tutor.com/static/093466a0f94f04f36e2c028fe7ae3f23/fd84e/maps.png)
+
+## 3. Mapping India: Places of Worship
 
 1. Do some searching and make a list of Places of Worship in India that are known to you. 
 
@@ -79,17 +88,8 @@ For tutorial info: <https://movebankworkshopraleighnc.netlify.app/>
     - Use [font-awesome](https://fontawesome.com/icons) icons to signify your Places of Worship. 
     - Use popups in `tmap/plotly` to pop-up a picture or video about the place
     
-
-## 3. Food at Home
-
-1. Draw a map of your home-town with your favourite restaurants shown. Pop-ups for each restaurant will win bonus points. 
-
-Take a look at:
-Burkhart, Christian. n.d. “Streetmaps.” [StreetMaps](https://ggplot2tutor.com/tutorials/streetmaps)
-
-![](https://ggplot2tutor.com/static/093466a0f94f04f36e2c028fe7ae3f23/fd84e/maps.png)
-
 ## 4. Mapping Places Yelahanka on Open Street Map
+
 1. Download the Vespucci app on your phone:  
    - Android [app on  Play Store](https://play.google.com/store/apps/details?id=de.blau.android&hl=en&gl=US)
    - iPhone is sadly not available. So partner with an Android phone user please!
@@ -109,4 +109,5 @@ Burkhart, Christian. n.d. “Streetmaps.” [StreetMaps](https://ggplot2tutor.co
   - Timings
   - Indoor or outdoor seating
   - Parking available
+
 5. Download in R and plot using `ggplot` or using `tmap`.
