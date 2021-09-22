@@ -32,14 +32,27 @@ links:
 
 # Introduction
 
+```{r setup, include=FALSE}
+library(hugodown)
+```
+
 We will use the R package `sf` ("simple features") to understand how simple geometric shapes are encoded into data, that can be plotted as maps.
 
 We will then plot maps using mapping packages like `ggplot` and `tmap` to create static and interactive maps. We will initially use data that we can download from **Natural Earth** and **Open Street Map (OSM)**. 
 
 Later we will construct our own maps using data that we gather from the street using the **Vespucci** app. 
 
+First; let us watch a short, noisy video on maps:
+
+Maps That Will Change The Way You See The World:(https://www.youtube.com/watch?v=YH2sAbXv7p4)
+
+
+{{<youtube YH2sAbXv7p4>}}
+
 
 # References
+
+1. **Start Here**[Our Coding Club Tutorial](https://ourcodingclub.github.io/tutorials/spatial-vector-sf/)
 
 1. [OSM Basic Maps Vignette](https://docs.ropensci.org/osmplotr/articles/basic-maps.html)
 
