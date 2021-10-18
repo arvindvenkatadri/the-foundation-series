@@ -24,7 +24,7 @@ role: Faculty Member, School of Foundation Studies
 social:
 - icon: envelope
   icon_pack: fas
-  link: /contact
+  link: mailto:arvind.venkatadri@manipal.edu
 - display:
     header: true 
   icon: twitter

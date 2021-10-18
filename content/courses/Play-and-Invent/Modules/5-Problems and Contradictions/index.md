@@ -1,8 +1,8 @@
 ---
-title: Pi-Int-1
-date: "2016-04-27T00:00:00Z"
+date: "2021-10-20"
+title: "Problems and Contradictions"
 external_link: ""
-type: page
+weight: 4
 image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
@@ -10,15 +10,17 @@ links:
 - icon: twitter
   icon_pack: fab
   name: Follow
-  url: https://twitter.com/georgecushen
+  url: https://twitter.com/arvindv
 slides: example
-summary: An example of using the in-built project page.
+summary: 
 tags:
-- Deep Learning
+- Flow and Play
+- Anxiety and Boredom
+- Mihaly Csikszentmihalyi
+- Ian Bogost
 url_code: "/code/course-related/new"
 url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
 
-Play and Invent Internal # 1

@@ -4,6 +4,7 @@ date: "2021-08-10"
 linkTitle: Order and Chaos 
 summary: A study of Complexity Phenomena in Real Life
 view: 2
+weight: 4
 ---
 
 {{< toc hide_on="xl" >}}
