@@ -87,6 +87,7 @@ Assignment: on Logo design using a piece of Map
 
 
 ## Day 4:
+
 - Guildford and Wallas-Kogan Tasks - Brainstorming
 - CC as a source of "Problems" and Propositions ( "*ex nihilo*")
 - Tie in Mihaly's idea of the *Domain* with CC, when it comes to solutions
