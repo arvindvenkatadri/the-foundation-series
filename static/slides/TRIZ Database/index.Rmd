@@ -31,12 +31,7 @@ knitr::opts_chunk$set(
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
-style_duo_accent(
-  primary_color = "orange",
-  #primary_color = "#1381B0",
-  secondary_color = "#FF961C",
-  inverse_header_color = "#FFFFFF"
-)
+xaringanthemer:::style_solarized_light()
 library(tidyverse)
 library(anicon)
 library(emojifont)
@@ -173,7 +168,7 @@ use_xaringan_extra()
 Before we further clarify our **CONTRADICTION**, what Resources do we have?
 - One Good way to do this is using the **Ishikawa Diagram**
 
-  - Man, Material, Method, "Manifestation" (Ishikawa)
+  - Man, Material, Method, Management, Machinery (Ishikawa)
   - This diagram is used **primarily** to assign **CAUSES**
   - But it conveniently lists all the **Resources**
   - We should understand that word, **Resources** in its most startling "TRIZ" sense !!
@@ -205,8 +200,7 @@ Before we further clarify our **CONTRADICTION**, what Resources do we have?
 - **But: the Milk will boil over...**
 
 - **TC**: 
-    - I can either boil Milk, OR do something else, NOT both. Umm... 
-    - Milk must not boil over EVEN if the Stove is on
+    - I can either boil Milk, OR do something else, NOT both.
 ]
 .pull-right[
 ![](images/IshikawaDiagram2-386e9108096f4149b67cb5a803c45dd0.webp)
@@ -216,6 +210,7 @@ Before we further clarify our **CONTRADICTION**, what Resources do we have?
       - Operating the Stove
       - Wanting/Doing Two Things at the Same Time
     - Material: Milk, Vessel, Stove, Gas, Time, Heat
+        - Milk boils over when it is heated
 ]
 ]
 
@@ -255,26 +250,19 @@ The ***extreme result*** of this evolution is the Ideal Final Result:
 Any other way of saying this?
 
 
----
-
-## TRIZ Workflow: Metaphorise the CONTRADICTION
-
-- TRIZ offers 39 Metaphors to symbolize CONTRADICTIONs
-
-- PAIRS of these parameters metaphorically represent our CONTRADICTION
-
-  - One Worsening Parameter: **17: Energy Usage by Stationary Object** (Stove is ON !!)
-  
-  - One Parameter to Improve: **21: Stability** ( Milk must NOT boil over !!)
-
     
 ---
 
-## TRIZ Workflow: Metaphorise the CONTRADICTION
+## TRIZ Workflow: Use the Contradiction Matrix
 .pull-left[
 ![](https://darrellmann.com/wp-content/uploads/boiling-pan-mini-case.png)
 ]
 .pull-right[
+- TRIZ offers 39 Metaphors to symbolize CONTRADICTIONs
+- PAIRS of these parameters metaphorically represent our CONTRADICTION
+  - One Worsening Parameter: **17: Energy Usage by Stationary Object** (Stove is ON !!)
+  - One Parameter to Improve: **21: Stability** ( Milk must NOT boil over !!)
+  
 - **INVENTIVE PRINCIPLES** from the Matrix: 
     - 35: Parameter Change, 
     - 18: Mechanical Vibration, 
@@ -283,7 +271,6 @@ Any other way of saying this?
     - 3: The Other Way Around
 
 
-Now to see how we can use each of these "metaphoric" solutions in our specific problem with Milk !!
 .footnote[The TRIZ Contradiction Matrix, 2003, http://www.systematic-innovation.com/assets/matrix2003.pdf]
 ]
 
@@ -308,11 +295,14 @@ Also we can use two vessels, one inside the other. The inner one with milk and t
 ]
 
 .pull-right[
-And of course, there is a patent.
-Yes , in Russia, where else !!
+**A Milk Watcher Device**
+- This is dropped into the vessel before pouring the milk
+- It vibrates when the milk is boiling and prevents spillage
+- And of course, there is a patent. Yes , in Russia, where else !!
 
 [Milk Saver Patent Web Page!!](https://findpatent.ru/patent/1/10362.html)
 ]
+
 ---
 
 ## TRIZ Workflow: IP-35: Parameter Change
@@ -332,7 +322,8 @@ Yes , in Russia, where else !!
 Here are some solutions using Parameter Change
 - Sprinkle Water on the Froth...Umm
 
-- **Apply butter to the rim of the vessel beforehand !!** This is also a solution derivable from **IP-9: Prior CounterAction**
+- **Apply butter to the rim of the vessel beforehand !!**
+- This is also a solution derivable from **IP-9: Prior Counter Action**
 
 ]
 
@@ -340,6 +331,7 @@ Here are some solutions using Parameter Change
 .footnote[https://www.herzindagi.com/recipe-tips/how-to-prevent-milk-from-boiling-over-article-161289#]
 
 ---
+
 ## TRIZ Workflow: IP - 13: The Other Way Around
 What do you think?
 
@@ -347,6 +339,9 @@ What do you think?
 
 - How about the Two Vessel Trick, from earlier: one inside the other. The inner one with milk and the other one with water! Can the Water be hot before hand?
 
+- Not all IPs may strike you as applicable! 
+
+- Try and leverage somebody's else's **Cultural Capital** !!
 ---
 
 ## TRIZ Workflow: Example #2: Problem Statement
@@ -378,6 +373,7 @@ If our job is "improve the lawnmower" instead, we could immediately set up and p
 
 
 ---
+
 ## TRIZ Workflow: Example #2: IFR, Resources,and Contradictions
 
 .pull-left[
@@ -397,6 +393,7 @@ If our job is "improve the lawnmower" instead, we could immediately set up and p
 - 
 
 ]
+
 ---
 
 .pull-left[
