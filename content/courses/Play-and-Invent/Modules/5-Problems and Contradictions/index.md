@@ -11,7 +11,7 @@ links:
   icon_pack: fab
   name: Follow
   url: https://twitter.com/arvindv
-slides: example
+slides: TRIZ Database
 summary: 
 tags:
 - Flow and Play
@@ -22,5 +22,10 @@ url_code: "/code/course-related/new"
 url_pdf: ""
 url_slides: ""
 url_video: ""
+links:
+- icon: flask
+  icon_pack: fas
+  name: TRIZ Intro
+  url: /slides/TRIZ Database/index.html
 ---
 

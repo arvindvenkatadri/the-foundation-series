@@ -43,6 +43,6 @@ Let us get an actual experience of TRIZ methods with these short videos:
 4. TRIZ Tales: Nina at Work #1 
 {{< youtube bXxMf4AX_lE >}}
 
-4. TRIZ Tales: Nina at Work #2 
+5. TRIZ Tales: Nina at Work #2 
 {{< youtube J_O3yR2kk2Q >}}
 
