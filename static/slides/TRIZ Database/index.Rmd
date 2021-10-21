@@ -83,6 +83,7 @@ use_xaringan_extra()
 
 ---
 ![](images/quadratic-analogy.png)
+
 .footnote[Stan Kaplan, "An Introduction to TRIZ - The Russian System of Inventive Problem Solving", Ideation International Inc]
 
 ---

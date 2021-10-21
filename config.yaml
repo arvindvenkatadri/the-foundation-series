@@ -1,4 +1,3 @@
-theme: "starter-hugo-academic"
 # Configuration of Hugo
 # Guide: https://wowchemy.com/docs/getting-started/
 # Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
@@ -6,8 +5,10 @@ theme: "starter-hugo-academic"
 
 title: The Foundation Series # Website name
 baseurl: 'https://the-foundation-series.netlify.app' # Website URL
-copyright: '' # Footer text, e.g. '© {year} Me'
+copyright: '© {year} Arvind Venkatadri'
 
+# Name of Academic theme folder in `themes/`.
+theme: "hugo-academic"
 ############################
 ## LANGUAGE
 ############################
@@ -30,7 +31,7 @@ module:
 ## ADVANCED
 ############################
 
-enableGitInfo: false
+enableGitInfo: true
 summaryLength: 30
 paginate: 10
 enableEmoji: true
@@ -49,16 +50,21 @@ disableAliases: true
 outputs:
   home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
   section: [HTML, RSS]
+
 imaging:
   resampleFilter: lanczos
-  quality: 75
+  quality: 90
   anchor: smart
+
+
 timeout: 600000
+
 taxonomies:
   tag: tags
   category: categories
   publication_type: publication_types
   author: authors
+
 related:
   threshold: 80
   includeNewer: true
@@ -74,3 +80,4 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    codeFences: false

@@ -16,27 +16,27 @@ subtitle:
 # - Add/remove as many `feature` blocks below as you like.
 # - For available icons, see: https://wowchemy.com/docs/page-builder/#icons
 feature:
-- description: 90%
+- description:
   icon: r-project
   icon_pack: fab
   name: R
-- description: 80%
+- description: 
   icon: chart-line
   icon_pack: fas
   name: Data Visualization
-- description: 60%
+- description: 
   icon: music
   icon_pack: fas
   name: Indian Classical Music
-- description: 60%
+- description: 
   icon: box-open
   icon_pack: fas
   name: TRIZ
-- description: 60%
+- description: 
   icon: book
   icon_pack: fas
   name: Reading and Writing
-- description: 90%
+- description: 
   icon: microchip
   icon_pack: fas
   name: Electronics
