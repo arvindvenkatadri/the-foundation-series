@@ -5,9 +5,9 @@
 
 # Appearance
 
-theme: native
+theme: "av"
 day_night: true
-font: ''
+font: 'av'
 font_size: L
 
 # SEO

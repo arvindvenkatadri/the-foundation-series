@@ -6,7 +6,7 @@ author:
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
+    css: ["default", "slides/css/uhsu.css", "slides/css/uhsu-fonts.css"]
     seal: FALSE
     nature:
       slideNumberFormat: "%current%"
@@ -27,6 +27,10 @@ knitr::opts_chunk$set(
   warning = FALSE,
   hiline = TRUE
 )
+library(emoji)
+library(emojifont)
+# devtools::install_github("hadley/emo")
+library(emo)
 ```
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
