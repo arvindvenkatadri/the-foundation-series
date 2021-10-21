@@ -6,7 +6,7 @@ author:
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
-    css: ["default", "slides/css/uhsu.css", "slides/css/uhsu-fonts.css"]
+    css: xaringan-themer.css
     seal: FALSE
     nature:
       slideNumberFormat: "%current%"
@@ -35,12 +35,7 @@ library(emo)
 
 ```{r xaringan-themer, include=FALSE, warning=FALSE}
 library(xaringanthemer)
-style_duo_accent(
-  primary_color = "#1381B0",
-  secondary_color = "#FF961C",
-  inverse_header_color = "#FFFFFF",
-  background_color = "#DEFACE"
-)
+style_solarized_light()
 ```
 
 ```{r xaringan-extra, include=FALSE, warning=FALSE}

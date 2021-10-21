@@ -7,8 +7,8 @@ date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
     css: xaringan-themer.css
+    seal: FALSE
     nature:
-      seal: TRUE
       slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
@@ -47,6 +47,14 @@ use_xaringan_extra()
 
 ```
 
+class: center middle
+
+# TRIZ - A Very Contradictory Method
+## A Workflow for Students
+
+Arvind Venkatadri
+
+---
 
 ## Classical TRIZ 
 

@@ -1,7 +1,7 @@
 ---
 title: Code walkthrough
 author: Arvind Venkatadri
-summary: Slides using xaringan, xaringanExtra
+summary: Slides using xaringan, xaringanExtra and Wowchemy!
 tags: []
 authors: []
 categories: []

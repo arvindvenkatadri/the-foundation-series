@@ -8,7 +8,7 @@ output:
   xaringan::moon_reader:
     css: xaringan-themer.css
     nature:
-      seal: TRUE
+      seal: FALSE
       slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
@@ -47,6 +47,13 @@ use_xaringan_extra()
 
 ```
 
+class: center middle
+
+# My Teaching Manifesto
+## Thoughts on Values and Beliefs in Teaching
+Arvind Venkatadri
+
+---
 ## What am I going to say here?
 
 .pull-left[
