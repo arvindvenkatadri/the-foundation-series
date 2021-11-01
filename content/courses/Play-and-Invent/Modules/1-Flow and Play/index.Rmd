@@ -1,0 +1,51 @@
+---
+date: "2021-10-11"
+title: "Flow and Play"
+external_link: ""
+weight: 1
+image:
+  caption: Photo from 
+  focal_point: Smart
+links:
+slides: 
+summary: 
+tags:
+- Flow and Play
+- Anxiety and Boredom
+- Mihaly Csikszentmihalyi
+- Ian Bogost
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+```{r include=FALSE}
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr)
+```
+
+`r blogdown::shortcode("tweet", "1451016130999455750")`
+
+![](https://pbs.twimg.com/media/FCMLPHPVUAAm3Yu?format=jpg&name=small)
+
+![](https://images.prismic.io/sketchplanations/054f9ecd-3a96-48a3-9bf3-c56cbfad99f0_SP+691+-+Flow.png?auto=format&ixlib=react-9.0.3&h=1887.557603686636&w=1600&q=75&dpr=1)
+
+We will understand **Flow** from:
+
+1) The book **Flow and the Psychology of Happiness**, pp; 72-76; by **Mihaly Csikszentmihalyi** `r embedr::embed_audio("https://upload.wikimedia.org/wikipedia/commons/5/59/Mih%C3%A1ly_Cs%C3%ADkszentmih%C3%A1lyi.ogg")` 
+
+2) This video:
+<br>
+`r blogdown::shortcode("youtube", "8h6IMYRoCZw")`
+<br>
+
+3) This TED Talk : [**Flow, the Secret to Happiness**]("https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare")
+
+4) This Article: **8 Ways To Create Flow According to Mihaly Csikszentmihalyi** <https://positivepsychology.com/mihaly-csikszentmihalyi-father-of-flow/>
+
+5) Ian Bogost, "Play at Anything"
+
+
+5) Want still more Flow? Find me in this picture !!
+![Pillar Rock](Pillar.JPG)
+

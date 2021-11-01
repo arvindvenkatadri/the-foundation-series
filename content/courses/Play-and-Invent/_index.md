@@ -81,7 +81,7 @@ Discuss James P Carse's ideas
 
 Assignment: on Logo design using a piece of Map
 
-## Day 3: Online Class
+## Day 3:
 - MBTI / Big-5 Game
 - Discussion on all 4 Aspects, but especially on on Information / Decision Making / Planning
 
@@ -146,8 +146,9 @@ Assignment: on Logo design using a piece of Map
 - Make, Show and Tell
 
 
+## Modules
 
-{{< list_children >}}
+
 
 
 
