@@ -31,6 +31,12 @@ library(xaringan)
 library(xaringanExtra)
 ```
 
+```{r include=FALSE}
+library(xaringanthemer)
+xaringanthemer::style_solarized_light()
+```
+
+
 ```{r xaringanExtra, include=FALSE}
 use_animate_all()
 use_webcam()

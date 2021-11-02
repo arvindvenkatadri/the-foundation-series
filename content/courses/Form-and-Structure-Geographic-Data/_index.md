@@ -5,6 +5,7 @@ linkTitle: Form and Structure - GeoSpatial and NetworkData
 summary: Enabling Complex Data Drive Experiences with geospatial data
 view: 2
 weight: 2
+type: book
 ---
 
 {{< toc hide_on="xl" >}}

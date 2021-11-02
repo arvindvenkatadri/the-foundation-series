@@ -5,6 +5,7 @@ linkTitle: Order and Chaos
 summary: A study of Complexity Phenomena in Real Life
 view: 2
 weight: 4
+type: book
 ---
 
 {{< toc hide_on="xl" >}}

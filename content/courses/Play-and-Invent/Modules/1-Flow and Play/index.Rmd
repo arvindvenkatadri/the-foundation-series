@@ -40,7 +40,8 @@ We will understand **Flow** from:
 <br>
 
 3) This TED Talk : [**Flow, the Secret to Happiness**]("https://www.ted.com/talks/mihaly_csikszentmihalyi_flow_the_secret_to_happiness?utm_campaign=tedspread&utm_medium=referral&utm_source=tedcomshare")
-
+`r blogdown::shortcode("youtube", "fXIeFJCqsPs")`
+<br>
 4) This Article: **8 Ways To Create Flow According to Mihaly Csikszentmihalyi** <https://positivepsychology.com/mihaly-csikszentmihalyi-father-of-flow/>
 
 5) Ian Bogost, "Play at Anything"
@@ -48,4 +49,7 @@ We will understand **Flow** from:
 
 5) Want still more Flow? Find me in this picture !!
 ![Pillar Rock](Pillar.JPG)
+
+## References
+1. Scott Eberle, "The Aspects of Play" <https://www.journalofplay.org/sites/www.journalofplay.org/files/pdf-articles/6-2-article-elements-of-play.pdf>
 

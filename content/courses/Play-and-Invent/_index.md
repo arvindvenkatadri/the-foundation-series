@@ -5,6 +5,7 @@ summary: Using Metaphors and Analogic Thinking techniques like TRIZ to solve Inv
 title: "\U0001F4CA Play and Invent"
 view: 2
 weight: 1
+type: book
 ---
 ## Introduction
 

@@ -4,4 +4,5 @@ author: "Arvind Venkatadri"
 type:
 view: 2
 weight: 6
+type: book
 ---

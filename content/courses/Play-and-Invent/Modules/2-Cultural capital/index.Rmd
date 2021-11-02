@@ -1,0 +1,29 @@
+---
+date: "2021-10-12"
+title: Cultural Capital
+external_link: ""
+weight: 2
+image: 
+  caption: Photo from Getty Images
+  focal_point: Smart
+links:
+slides: ""
+summary: 
+tags:
+- Deep Learning
+
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+We will understand Pierre Bourdieu's Concept of Cultural Capital ( CC ). 
+
+CC affects our view of the world and helps us identify Problem Situations and Contradictions in Life. These can then become subject to analysis using techniques such as Edward de Bono's Six Thinking Hats and Genrikh Altshuller's TRIZ.
+
+1. **What is Cultural Capital?** <https://culturallearningalliance.org.uk/what-is-cultural-capital/>
+<br>
+
+2. Cultural Capital <br>
+`r blogdown::shortcode("youtube", "5DBEYiBkgp8")`
+
