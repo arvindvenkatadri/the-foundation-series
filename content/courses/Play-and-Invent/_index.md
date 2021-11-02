@@ -5,8 +5,12 @@ summary: Using Metaphors and Analogic Thinking techniques like TRIZ to solve Inv
 title: "\U0001F4CA Play and Invent"
 view: 2
 weight: 1
-type: book
+type: 
+image:
+  caption: ""
+  focal_point: "smart"
 ---
+
 ## Introduction
 
 This is a {{<hl>}} Contextual Enquiry Course{{</hl>}} in the Foundation ( freshman) year of a Bachelor's Degree in Art and Design, at the Srishti Manipal Institute of Art, Design, and Technology, Bangalore, India. 

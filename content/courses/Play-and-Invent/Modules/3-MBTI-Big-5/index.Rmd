@@ -10,7 +10,12 @@ links:
 slides: 
 summary: 
 tags:
-- Deep Learning
+- MBTI
+- Personality PReferences
+- Information
+- Energy
+- Decisions
+- Plans
 
 url_code: ""
 url_pdf: "pdf/MBTI Team Building.pdf"
@@ -24,3 +29,5 @@ url_video: ""
 1. Here is the MBTI Test site: <https://www.16personalities.com/free-personality-test>
 
 2. Ice-breaker Activity Presentation [(Go to Webpage)](https://slidetodoc.com/numbers-icebreaker-this-is-one-of-many-free/)
+
+3. MBTI Game: [PDF](/pdf/MBTI Activities.pdf)

@@ -10,14 +10,19 @@ links:
 slides: ""
 summary: 
 tags:
-- Deep Learning
+- Pierre Bourdieu
+- Cultural Capital
+- Habitus
+- Embodied CC
+- Objectified CC
+- Institutionalized CC
 
 url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
-We will understand Pierre Bourdieu's Concept of Cultural Capital ( CC ). 
+We will understand Pierre Bourdieu's Concept of {{<hl>}}Cultural Capital ( CC ){{</hl>}}. 
 
 CC affects our view of the world and helps us identify Problem Situations and Contradictions in Life. These can then become subject to analysis using techniques such as Edward de Bono's Six Thinking Hats and Genrikh Altshuller's TRIZ.
 
