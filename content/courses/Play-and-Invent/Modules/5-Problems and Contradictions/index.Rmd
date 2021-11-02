@@ -1,0 +1,51 @@
+---
+date: "2021-10-20"
+title: "Metaphors and Contradictions"
+external_link: ""
+weight: 4
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+slides: ""
+summary: 
+tags:
+- Genrikh Altshuller
+- TRIZ
+- Contradictions
+- 39 TRIZ Parameters ( Metaphors )
+- 40 TRIZ Inventive Principles
+- Ishikawa
+- Fish Bone Diagram
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+links:
+- icon: flask
+  icon_pack: fas
+  name: TRIZ Intro
+  url: /slides/TRIZ Basics/index.html
+---
+
+## Some Everyday Objects for us to Contemplate
+
+1) [](https://cdn1.npcdn.net/image/1552872726a0d1a84de690949b32678d9ef041649b.jpg?md5id=357429c78239304d194f517cde4ad439&new_width=1000&new_height=1000&size=max&w=-62170009200)
+
+## Materials
+
+1. Joshua Ferris, ***The Market Value of my Father***, a metaphorical Short Story, [(Web Link)](https://www.wealthsimple.com/en-ca/magazine/joshua-ferris)
+1. David Chen, ***Creative Paradoxical Thinking
+and Its Implications for Teaching
+and Learning Motor Skills*** [(PDF)](pdf/TRIZ/CreativeParadoxicalThinking2011.pdf)
+
+1. Holyoak and Thagard, ***The Analogical Mind***, [(PDF)](pdf/TRIZ/Holyoak-Thagard-The Analogical Mind.pdf)
+
+1. Stan Kaplan, ***An Introduction to TRIZ***[(PDF)](pdf/TRIZ/Stan Kaplan-Intro-to-TRIZ.pdf)
+This is a simple and short introduction to *all* aspects of Classical TRIZ. 
+
+
+## Case Studies
+
+1. Pizza Box (https://www.metodolog.ru/triz-journal/archives/2008/03/04/)
+
+
