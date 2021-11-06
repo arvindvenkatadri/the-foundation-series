@@ -4,7 +4,7 @@ title: "Metaphors and Contradictions"
 external_link: ""
 weight: 4
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: Photo by <a href="https://unsplash.com/@etiennegirardet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Etienne Girardet</a> on <a href="https://unsplash.com/s/photos/contradiction?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
 slides: ""
 summary: 
@@ -27,9 +27,28 @@ links:
   url: /slides/TRIZ Basics/index.html
 ---
 
+# What are Contradictions?
+
+We see them everywhere....if one is observant!! 
+How is this for a Contradiction?  A shelf in a supermarket carries this placard for a shelf of ***FRESH JUICE***:
+`r blogdown::shortcode("twitter", "1453536795564683264")`
+
+![](Juice.jpeg)
+
+
 ## Some Everyday Objects for us to Contemplate
 
-1) [](https://cdn1.npcdn.net/image/1552872726a0d1a84de690949b32678d9ef041649b.jpg?md5id=357429c78239304d194f517cde4ad439&new_width=1000&new_height=1000&size=max&w=-62170009200)
+1) ![Pizza Box](https://cdn1.npcdn.net/image/1552872726a0d1a84de690949b32678d9ef041649b.jpg?md5id=357429c78239304d194f517cde4ad439&new_width=1000&new_height=1000&size=max&w=-62170009200)
+
+
+1) ![ Wrench](wrench.jpg)
+
+
+
+1) ![Cycle Chain](chain.jpg)
+
+What sort of Contradictions do we see in these familiar objects? What is good and what is not so good? Could that be the source of a problem to solve?
+
 
 ## Materials
 
@@ -47,5 +66,10 @@ This is a simple and short introduction to *all* aspects of Classical TRIZ.
 ## Case Studies
 
 1. Pizza Box (https://www.metodolog.ru/triz-journal/archives/2008/03/04/)
+
+1.
+
+
+1.
 
 
