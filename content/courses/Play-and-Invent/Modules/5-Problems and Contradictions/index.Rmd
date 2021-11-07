@@ -1,6 +1,6 @@
 ---
 date: "2021-10-20"
-title: "Metaphors and Contradictions"
+title: "Problems and Contradictions"
 external_link: ""
 weight: 4
 image:
@@ -27,6 +27,7 @@ links:
   url: /slides/TRIZ Basics/index.html
 ---
 
+
 # What are Contradictions?
 
 We see them everywhere....if one is observant!! 
@@ -52,6 +53,9 @@ What sort of Contradictions do we see in these familiar objects? What is good an
 
 ## Materials
 
+1. Valeri Souchkov, "How to Define a Contradiction",[(Weblink)](http://xtriz.com/Training/TRIZ_DefineContradiction_Tutorial.pdf)
+
+
 1. Joshua Ferris, ***The Market Value of my Father***, a metaphorical Short Story, [(Web Link)](https://www.wealthsimple.com/en-ca/magazine/joshua-ferris)
 1. David Chen, ***Creative Paradoxical Thinking
 and Its Implications for Teaching
@@ -59,11 +63,9 @@ and Learning Motor Skills*** [(PDF)](pdf/TRIZ/CreativeParadoxicalThinking2011.pd
 
 1. Holyoak and Thagard, ***The Analogical Mind***, [(PDF)](pdf/TRIZ/Holyoak-Thagard-The Analogical Mind.pdf)
 
-1. Stan Kaplan, ***An Introduction to TRIZ***[(PDF)](pdf/TRIZ/Stan Kaplan-Intro-to-TRIZ.pdf)
-This is a simple and short introduction to *all* aspects of Classical TRIZ. 
 
 
-## Case Studies
+## Case Studies (Move this to Slides soon!!)
 
 1. Pizza Box (https://www.metodolog.ru/triz-journal/archives/2008/03/04/)
 
@@ -71,5 +73,15 @@ This is a simple and short introduction to *all* aspects of Classical TRIZ.
 
 
 1.
+
+
+## Additional Readings
+
+1. https://www.bbc.com/worklife/article/20201109-why-the-paradox-mindset-is-the-key-to-success
+
+1. https://hbr.org/2008/06/the-contradictions-that-drive-toyotas-success
+
+
+1. 
 
 

@@ -30,9 +30,9 @@ url_slides: ""
 url_video: ""
 ---
 
+
 ## Project TETRIS TRIZ Videos
 Let us get an actual experience of TRIZ methods with these short videos:
-
 
 
 1. History of TRIZ   
@@ -57,13 +57,14 @@ Let us get an actual experience of TRIZ methods with these short videos:
 
 7. The TRIZ Contradiction Matrix (2003) [(Matrix)](pdf/TRIZ/TRIZ_interactive_contradiction_matrix_2016.xlsx)
 
+
 ## Game Plan
 
 Let us play two Games to motivate the philosophy of TRIZ-oriented thinking and to obtain an understanding of its main ideas:  
 
-- Contradictions
-- Ideal Final Result
-- All Avaiable Resources  
+- Problems and Contradictions
+- Ideal Final Result ( IFR )
+- All Available Resources  
 - Contradiction Matrix and the 39 (Metaphorical) Parameters  
 - 40 Inventive Principles  
 
@@ -72,3 +73,21 @@ Let us play two Games to motivate the philosophy of TRIZ-oriented thinking and t
 2. Titanic Game [(PDF)](pdf/TRIZ/Titanic_Case_Study.pdf)
 
 
+## References
+
+1. Stan Kaplan, ***An Introduction to TRIZ***[(PDF)](pdf/TRIZ/Stan Kaplan-Intro-to-TRIZ.pdf)
+This is a simple and short introduction to *all* aspects of Classical TRIZ.
+
+1. Jack Hipple, "The Ideal Result: What it is and how to achive it", Springer, 2012.
+
+1. Project TETRIS: Chapter 1: Introduction to Classical TRIZ [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_01.pdf)
+
+1. Project TETRIS: Chapter 2: Laws of System Evolution [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_02.pdf)
+
+1. Project TETRIS: Chapter 3: Short Review of ARIZ: Algorithm for Innovative Problem Solving and a Case Study [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_03.pdf)
+
+1. Project TETRIS: Chapter 4: Substance-Field ( "Su-Field" ) Analysis and Standard Solutions basic notions and rules [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_04.pdf)
+
+1. Project TETRIS: Chapter 5: Techniques  to  Resolve  Contradictions / Resources / Effects [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_05.pdf)
+
+1. Project TETRIS: Examples of inventive problems: Example 1-5 [(RAR Archive File)](https://innovazionesistematica.it/wp-content/uploads/2020/10/ExamplesEN.rar)
