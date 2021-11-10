@@ -75,6 +75,8 @@ Let us play two Games to motivate the philosophy of TRIZ-oriented thinking and t
 
 ## References
 
+1. TRIZ Inventive Principles in Pics @instagram: <https://www.instagram.com/stories/highlights/17857566926043828/>
+
 1. Stan Kaplan, ***An Introduction to TRIZ***[(PDF)](pdf/TRIZ/Stan Kaplan-Intro-to-TRIZ.pdf)
 This is a simple and short introduction to *all* aspects of Classical TRIZ.
 

@@ -27,17 +27,69 @@ links:
   url: /slides/TRIZ Basics/index.html
 ---
 
+```{r setup, include=FALSE}
+library(blogdown)
+```
+
+# Introduction
+
+In TRIZ, the fundamental way of looking at an Inventive Design Problem is to discover and propose **Contradictions**. These are rendered in as **simple** and **stark** a language as possible...the starker the better! 
+
+Once we have our Contradiction (and there can be more than one in a given Design Situation !) we can use TRIZ Principles to solve them **WITHOUT COMPROMISE**
 
 # What are Contradictions?
 
-We see them everywhere....if one is observant!! 
+We see them everywhere....if one is observant!! Let's see a few:
+
+### C1: Contradiction-1
 How is this for a Contradiction?  A shelf in a supermarket carries this placard for a shelf of ***FRESH JUICE***:
-`r blogdown::shortcode("twitter", "1453536795564683264")`
+
+```{r include=FALSE}
+blogdown::shortcode("twitter", "1453536795564683264")
+```
 
 ![](Juice.jpeg)
 
+### C2: Contradiction-2
+Here is another:
+```{r include=FALSE}
+blogdown::shortcode("tweet", "1238079127992795137")
+```
+ 
+### C3: Contradiction-3
+And another:
+```{r include=FALSE}
+blogdown::shortcode("tweet", "1276893105065771008")
+```
+Snails want to stay safe, and there is safety on the ground, but the ground is too hot.  
 
-## Some Everyday Objects for us to Contemplate
+![Snails-1](Snails-1.jpeg)
+![Snails-2](Snails-2.jpeg)
+
+### C4:Contradiction-4
+
+Most people's healthcare is tied to their job....Therefore, every corona-time layoff creates yet another person without health insurance in this country. (*The Corona Pandemic needs healthcare and therefore health Insurance.* - AV)
+
+This outbreak is highlighting, with extreme clarity, every major ***contradiction*** of this society and its decaying social order. <https://t.co/EtSUY3pPMi>
+
+```{r include=FALSE}
+blogdown::shortcode("tweet", "1238167337792090112")
+
+```
+
+--- Revolutionary Left Radio (\@RevLeftRadio)
+
+
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The first U.S. layoffs from the coronavirus are here.<br><br>Job losses have begun in ports, bakeries and travel agencies. Economists worry more layoffs are coming in the next few weeks as many businesses see plummeting sales. <a href="https://t.co/Jf00rrLkV2">https://t.co/Jf00rrLkV2</a></p>&mdash; The Washington Post (@washingtonpost) <a href="https://twitter.com/washingtonpost/status/1237821091680313344?ref_src=twsrc%5Etfw">March 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
+### C5: Contradiction-5
+
+
+
+
+
+# Some Everyday Objects for us to Contemplate
 
 1) ![Pizza Box](https://cdn1.npcdn.net/image/1552872726a0d1a84de690949b32678d9ef041649b.jpg?md5id=357429c78239304d194f517cde4ad439&new_width=1000&new_height=1000&size=max&w=-62170009200)
 
@@ -45,18 +97,23 @@ How is this for a Contradiction?  A shelf in a supermarket carries this placard 
 1) ![ Wrench](wrench.jpg)
 
 
-
 1) ![Cycle Chain](chain.jpg)
 
 What sort of Contradictions do we see in these familiar objects? What is good and what is not so good? Could that be the source of a problem to solve?
 
+Let us watch this short video from the **Open Source TRIZ** [website]
+(https://www.opensourcetriz.com/triz-books/triz-skills/resolving-contradictions.html)
 
-## Materials
+# Materials
 
 1. Valeri Souchkov, "How to Define a Contradiction",[(Weblink)](http://xtriz.com/Training/TRIZ_DefineContradiction_Tutorial.pdf)
 
+1. Open Source TRIZ: TRIZ Power Tools: Resolving Contradictions: [Webpage](https://www.opensourcetriz.com/triz-books/triz-skills/resolving-contradictions.html)
 
 1. Joshua Ferris, ***The Market Value of my Father***, a metaphorical Short Story, [(Web Link)](https://www.wealthsimple.com/en-ca/magazine/joshua-ferris)
+
+# References on Metaphors
+
 1. David Chen, ***Creative Paradoxical Thinking
 and Its Implications for Teaching
 and Learning Motor Skills*** [(PDF)](pdf/TRIZ/CreativeParadoxicalThinking2011.pdf)
