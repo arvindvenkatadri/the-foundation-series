@@ -30,6 +30,17 @@ url_slides: ""
 url_video: ""
 ---
 
+# Introduction
+
+In the previous Module on **Problems and Contradictions** we understood how to identify a **Technical Contradiction** in everyday situations. This is the first and most important step in the TRIZ Problem Solving Method. 
+
+Next we look at two methods to **Resolve Contradictions**:
+
+- Using the **Contradiction Matrix** and **Inventive Principles**
+
+- Using TRIZ **Separation Principles**
+
+
 
 ## Project TETRIS TRIZ Videos
 Let us get an actual experience of TRIZ methods with these short videos:
@@ -58,7 +69,7 @@ Let us get an actual experience of TRIZ methods with these short videos:
 7. The TRIZ Contradiction Matrix (2003) [(Matrix)](pdf/TRIZ/TRIZ_interactive_contradiction_matrix_2016.xlsx)
 
 
-## Game Plan
+## Game Plan # 2
 
 Let us play two Games to motivate the philosophy of TRIZ-oriented thinking and to obtain an understanding of its main ideas:  
 
@@ -67,8 +78,6 @@ Let us play two Games to motivate the philosophy of TRIZ-oriented thinking and t
 - All Available Resources  
 - Contradiction Matrix and the 39 (Metaphorical) Parameters  
 - 40 Inventive Principles  
-
-1. Candle Game
 
 2. Titanic Game [(PDF)](pdf/TRIZ/Titanic_Case_Study.pdf)
 

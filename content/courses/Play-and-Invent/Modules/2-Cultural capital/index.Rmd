@@ -22,17 +22,23 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
+
+# Introduction
+
 We will understand Pierre Bourdieu's Concept of {{<hl>}}Cultural Capital ( CC ){{</hl>}}. 
 
 CC affects our view of the world and helps us identify Problem Situations and Contradictions in Life. These can then become subject to analysis using techniques such as Edward de Bono's Six Thinking Hats and Genrikh Altshuller's TRIZ.
 
-1. **What is Cultural Capital?** <https://culturallearningalliance.org.uk/what-is-cultural-capital/>
+1. **What is Cultural Capital?** [(weblink)](https://culturallearningalliance.org.uk/what-is-cultural-capital)
 <br>
 
 2. Cultural Capital <br>
 `r blogdown::shortcode("youtube", "5DBEYiBkgp8")`
 
-Activity:
+3. Mhaly Csikszentmihalyi's Systems Model: **Domain, Field and the Creative Person**
+[(Weblink)](https://medium.com/call4/domain-8a22b6b486f4)
+
+# Activity
 
 1. Web Apps for your Makey-Makey:  [(Weblink)](https://makeymakey.com/blogs/how-to-instructions/apps-for-plug-and-play)
 
