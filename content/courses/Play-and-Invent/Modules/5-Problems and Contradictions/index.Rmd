@@ -17,14 +17,10 @@ tags:
 - Ishikawa
 - Fish Bone Diagram
 url_code: ""
-url_pdf: ""
+url_pdf: "pdf/TRIZ/TRIZ_DefineContradiction_Tutorial.pdf"
 url_slides: ""
 url_video: ""
-links:
-- icon: flask
-  icon_pack: fas
-  name: TRIZ Intro
-  url: /slides/TRIZ Basics/index.html
+
 ---
 
 ```{r setup, include=FALSE}
@@ -122,7 +118,15 @@ blogdown::shortcode("tweet", "1238167337792090112")
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">The first U.S. layoffs from the coronavirus are here.<br><br>Job losses have begun in ports, bakeries and travel agencies. Economists worry more layoffs are coming in the next few weeks as many businesses see plummeting sales. <a href="https://t.co/Jf00rrLkV2">https://t.co/Jf00rrLkV2</a></p>&mdash; The Washington Post (@washingtonpost) <a href="https://twitter.com/washingtonpost/status/1237821091680313344?ref_src=twsrc%5Etfw">March 11, 2020</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 
-### C5: Contradiction-5
+## Contradiction Challenges:
+
+1. Challenge #1: https://web.archive.org/web/20200813061353/https://triz-journal.com/triz-challenge-may-2001/
+
+1. Challenge #2: https://web.archive.org/web/20200813061945/https://triz-journal.com/triz-challenge-july-2001/
+
+1. Challenge #3: https://web.archive.org/web/20200813061928/https://triz-journal.com/triz-challenge-july-2002/
+
+1. Challenge #4: https://web.archive.org/web/20200813063906/https://triz-journal.com/triz-challenge-november-2003/
 
 
 # Materials
