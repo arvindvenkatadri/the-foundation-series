@@ -141,8 +141,30 @@ Arvind Venkatadri
 - Adobe Workfront Blog, "The 5 Ws (and 1 H) that should be asked of every project!", https://www.workfront.com/blog/project-management-101-the-5-ws-and-1-h-that-should-be-asked-of-every-project 
 - "What is Cultural Capital?", https://culturallearningalliance.org.uk/what-is-cultural-capital/
 - "Platform Creativity: Domain, Field, and Person", https://medium.com/call4/domain-8a22b6b486f4
+- Rudyard Kipling, "I Keep Six Honest Serving Men", https://allpoetry.com/I-Keep-Six-Honest-Serving-Men
 ]
 
+
+---
+## TRIZ Workflow: Formulate a Contradiction:
+
+Let us make a list for each Object:
+
+  - What is the Object meant to do? What is its main Purpose?
+  
+  - What are the other Accompanying Objects that it works with?
+  
+  - What is One Parameter or Knob for each of the Objects that you have listed?
+  
+  - What are the current Settings for each Knob?
+  
+  - Change the Setting of Each Knob to its natural opposite extreme. What Happens?
+  
+  - You will see that in many cases, each Knob creates a Certain Outcome at one Setting and another Outcome at the Opposite Setting.
+  
+  - This is the Source of your Contradiction !!
+  
+What sort of Contradictions do we see in these familiar objects? What is good and what is not so good? Could that be the source of a problem to solve?
 
 ---
 

@@ -18,7 +18,7 @@ tags:
 - Fish Bone Diagram
 url_code: ""
 url_pdf: "pdf/TRIZ/TRIZ_DefineContradiction_Tutorial.pdf"
-url_slides: ""
+url_slides: "/slides/TRIZ Basics/index.html"
 url_video: ""
 
 ---
