@@ -154,11 +154,11 @@ Let us make a list for each Object:
   
   - What are the other Accompanying Objects that it works with?
   
-  - What is One Parameter or Knob for each of the Objects that you have listed?
+  - What is **One Parameter or Knob** for each of the Objects that you have listed?
   
-  - What are the current Settings for each Knob?
+  - What are the **current Settings** for each Knob?
   
-  - Change the Setting of Each Knob to its natural opposite extreme. What Happens?
+  - Change the Setting of Each Knob to its **natural opposite extreme**. What Happens?
   
   - You will see that in many cases, each Knob creates a Certain Outcome at one Setting and another Outcome at the Opposite Setting.
   
