@@ -36,10 +36,20 @@ And an ear open for Frenchified English, I beseech you!!
  - Regret aka FOMO
  - Risk
  - Retribution
+ 
 
 ### The Game of Trust
 
 And finally, let us **play** a Game, the [Game of Trust](https://ncase.me/trust) !
 
+### Robert Axelrod's Study on Cooperation
+
+This is a famous study of the Iterated Prisoners' Dilemma by Robert Axelrod, **The Evolution of Cooperation**,[(PDF)](pdf/Complexity/Axelrod-Hamilton.pdf)
+
 
 [^1]:Download the entire e-book at [Project Gutenberg](https://www.gutenberg.org/ebooks/1257)]
+
+
+### Prisoners' Dilemma: A Case Study
+
+The story of Southwest Airlines' [**Early Bird Check-In**](https://mindyourdecisions.com/blog/2013/03/05/southwest-airlines-boarding-and-game-theory/)

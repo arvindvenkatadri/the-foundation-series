@@ -41,7 +41,7 @@ The students will finally use the methods and ideas they have learnt and apply t
 
 ## Daywise Plan
 
-1. **Day 1:Play Childhood games**
+1. **Day 1: Play Childhood games**
 -   Construction Games
 
 -   "Finding" Games
