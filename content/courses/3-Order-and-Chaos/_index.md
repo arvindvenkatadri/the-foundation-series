@@ -7,7 +7,7 @@ view: 2
 weight: 3
 type: book
 image:
-  caption: ""
+  caption: "Photo by Mateus Maia on Unsplash"
   focal_point: "smart"
 ---
 

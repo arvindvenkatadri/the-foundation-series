@@ -29,3 +29,6 @@ We will look at the `tidymodels` based flow to develop some simple ML models.
 1. Bradley Boehmke
 2. Julia Silge and Max Kuhn
 3. Rhys Heffin
+
+https://towardsdatascience.com/data-science-made-easy-data-modeling-and-prediction-using-orange-f451f17061fa
+
