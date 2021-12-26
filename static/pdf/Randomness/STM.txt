@@ -1,0 +1,304 @@
+---
+title: "Report on a Sampling Experiment"
+author: "Arvind Venkatadri"
+date: 20 September 2018
+output:
+  html_notebook: 
+    number_sections: yes
+    toc: yes
+  word_document: default
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+# Introduction
+This is a Research Application Note blah blah blah...fill this in
+
+First I will load up the required R packages
+
+```{r Library Set up, message=FALSE}
+library(tidyverse)
+library(readxl)
+library(rmarkdown)
+library(knitr)
+```
+
+
+Then I get my Sampling Survey data in.
+
+```{r Get Data in}
+doe <- read_excel("~/Documents/STM Testing - Working.xlsx")
+str(doe)
+head(doe)
+tail(doe)
+#View(doe) 
+```
+
+
+# Steps that I need to follow to analyze my Survey :
+1. Take means of WORD and DIGIT scores
+2. Variances of WORD and DIGIT scores
+2. Take means of WORD and DIGIT scores, "Segregated" by Gender
+3. Plot histograms of WORD and DIGIT Scores
+4. Plot historgrams of WORD and DIGIT segregated by Gender
+5. Maybe something else too, God knows!
+
+
+## Step 1: Check the Overall Means and Variances
+
+```{r Overall Means and Variance all scores}
+doe %>% 
+  select(`Word Score`,`Digit Score`) %>%
+  summarise_all(funs(length,mean,var))
+
+#Same command again with Tabulation
+doe %>% 
+  select(`Word Score`,`Digit Score`) %>%
+  summarise_all(funs(length,mean,var)) %>% 
+  kable() # Creates a neat table
+```
+
+### What do we learn from the overall Means and Variances?
+WRITE YOUR ANALYSIS AND IMPRESSIONS HERE. 
+
+
+
+
+
+
+
+
+## Step 2: Take means of WORD and DIGIT scores, "Segregated" by Gender
+
+```{r Segregated Counts, Means and Variances}
+
+doe %>% 
+  group_by(Gender) %>% 
+  summarise_all(funs(length,mean,var))
+
+#Same command again, with tabulation
+doe %>% 
+  group_by(Gender) %>% 
+  summarise_all(funs(length,mean,var)) %>% 
+  kable() # Creates a neat table
+```
+### What do we learn from the Segregated Means and Variances?
+WRITE YOUR ANALYSIS AND IMPRESSIONS HERE. 
+
+
+
+
+
+
+
+
+
+
+## Step 3: Simple Score Plots
+
+```{r Some Simple Base R plots}
+hist(doe$`Word Score`)
+# Complete for Digit Score.
+# 
+# 
+# 
+# 
+# 
+# 
+```
+
+OK, somewhat adventurous here and using the Tidyverse R package by *Hadley Wickham*, which implements *Leland Wilkinson*'s **Grammar of Graphics**
+
+```{r Simple Plots using Tidyverse}
+############################################################
+# Histograms (using tidyverse, based on Leland Wilkinson's "Grammar of Graphics")
+# Implemented in Hadley Wickham's super R-package "tidyverse")
+# 
+ggplot(doe) +
+  geom_histogram(aes(x = `Word Score`))
+# Complete Histogram for Digit Score.
+
+
+
+
+
+
+
+```
+
+
+
+## Step 4: Plots of Word and Digit Scores factored by Gender
+
+```{r Plots by Gender}
+# Histograms using Base R, with some more bells and whistles.
+# 
+plot(doe$`Word Score`[doe$Gender=="Male"],
+     main = "Scatter Plot for Male Word Recall Scores",
+     xlab = "Index",
+     ylab = "Word Recall Scores")
+
+hist(doe$`Word Score`[doe$Gender=="Male"], 
+     main = "Word Scores for Males", # Main Title
+     xlab = "Score", # X Axis label
+     ylab = "Frequency Count of Dudes", # Y Axis label
+     col = "light blue",
+     breaks = 20,
+     xlim = c(1,10),
+     ylim = c(0,20)) # colour of the bars
+
+# Complete this chunk for Male/Female and for both  Word Score/Digit Score
+
+
+
+
+
+```
+
+```{r Box Whisker Plots}
+# This is a Box Whisker plot that I will explain in class.
+plot(x = factor(doe$Gender), y = doe$`Word Score`)
+# Complete this Code Command for Digit Score
+
+
+
+
+
+
+
+
+
+
+
+```
+
+
+
+Now let us be *even more adventurous* and plot Gender-split data using the Tidyverse. This time we will dress up the plots in our favourite colours and fonts.
+
+```{r Plots by Gender using Tidyverse}
+# Histograms by Gender using Tidyverse for the more adventurous people!
+
+ggplot(doe) + # Invokes the Tidyverse Plotting function
+  geom_histogram(aes(x = `Word Score`)) + # Plots the Histogram
+  facet_grid(~Gender,scales = "fixed") + # Splits the plots by Gender. 
+  
+  
+# All the following stuff dresses up your plotNote the "+" sign: this R-Command Continues below ! 
+# Examine the final plot and you can figure out which part of the command does what exactly to the plot below. 
+  
+    
+  labs(title=" Are Girls better than Boys at Word recall?", # Creates Plot Title
+       subtitle = "Word Recall Scores by Gender",           # Creates Plot subtitle
+       caption = "Based on Survey in Srishti N3 campus") +  # Creates Plot caption
+                                                            # Play with these
+  
+  
+  theme(axis.title = element_text(size = 12),               
+        
+        plot.title = element_text(family = "American Typewriter",
+                             face = "bold",
+                             colour = "firebrick",
+                             size = 16),
+        
+        panel.background = element_rect(fill ="light green"),
+        
+        strip.background = element_rect(fill ="light yellow"),
+        
+        strip.text = element_text(family = "Impact",
+                                  size = 12,
+                                  colour = "purple"))
+
+######
+ ggplot(doe) +
+   geom_boxplot(aes(y = `Word Score`,colour = Gender)) # Dress up your plot here too!
+
+
+
+
+
+# Repeat for Digit Score
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+```
+
+
+# Commentary on Plots
+Write your interpretations here. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Note on the t-Tests
+We will compare the mean scores of Words and Digits grouped by Gender using a t-test. For a t-test to be successfully applied, the variances of the two sets of data being checked should be fairly equal. What this means is:
+
+$$
+Variance(Word Score for Males) \simeq Variance(Word Score for Females)\\
+Variance(Digit Score for Males) \simeq Variance(Digit Score for Females)
+$$
+
+Comment on whether this is true of our data. Look at the results of the Segregated Means and Variances above. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+```{r Gender Diff in Digit Recall?}
+#setting up "segregated" Digit Scores for Male and Female
+#
+figm <- doe %>% filter(Gender == "Male") %>% select(`Digit Score`) 
+figf  <- doe %>% filter(Gender =="Female") %>% select(`Digit Score`)
+
+# Run the t-test to compare the Means of these segregated scores
+t.test(x = figm$`Digit Score`,
+       y = figf$`Digit Score`,
+       paired = FALSE)             
+```
+
+```{r Gender Diff in Word Recall?}
+
+
+
+# Repeat this t.test for Word Scores also
+```
+```
+### Finally, the Conclusions
+Look at the result of the t.tests. The Confidence Interval shows the range over which the Score Difference ( Females vs Males) can vary. If that range includes ZERO, then what can we conclude?
+Write your thoughts here. 
+
+
+
+
+
+
+
+
+And you are done. Whew!

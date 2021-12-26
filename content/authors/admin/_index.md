@@ -14,7 +14,7 @@ education:
 interests:
   - Complexity Science
   - Creative Thinking and Problem Solving using TRIZ
-  - Computing in R - Data Visualisation, Stats, Maps, Networks, and ML using R
+  - Data Visualisation, Stats, Maps, Networks, and ML using R and other Open Source Tools
   - Open Source Electronics
   - Music and Sound
 organizations:
