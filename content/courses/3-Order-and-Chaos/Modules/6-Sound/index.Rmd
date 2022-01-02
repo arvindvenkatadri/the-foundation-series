@@ -126,5 +126,7 @@ d) Play it again, Sam !
 
 
 ### References
-[^1]: https://www.wikiwand.com/en/William_Wordsworth
-[^2]:https://groups.google.com/g/rec.music.indian.classical/c/29xDcW1rXzY?pli=1
+1. https://www.wikiwand.com/en/William_Wordsworth
+2. https://groups.google.com/g/rec.music.indian.classical/c/29xDcW1rXzY?pli=1
+3. https://musicianscompendium.netlify.app/
+

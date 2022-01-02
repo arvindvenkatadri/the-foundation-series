@@ -30,11 +30,15 @@ links:
   url: https://r-for-artists.netlify.app/slides/06-Spatial-Data-in-R.html
 ---
 
-# Introduction
+![](featured.jpg)
+
 
 ```{r setup, include=FALSE}
-library(hugodown)
+library(blogdown)
 ```
+
+
+# Introduction
 
 We will use the R package `sf` ("simple features") to understand how simple geometric shapes are encoded into data, that can be plotted as maps.
 
@@ -46,8 +50,7 @@ First; let us watch a short, noisy video on maps:
 
 Maps That Will Change The Way You See The World:(https://www.youtube.com/watch?v=YH2sAbXv7p4)
 
-
-{{<youtube YH2sAbXv7p4>}}
+` r blogdown::shortcode("youtube", "YH2sAbXv7p4")`
 
 
 # References

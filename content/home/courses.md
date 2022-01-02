@@ -28,16 +28,16 @@ content:
   # To filter by a specific tag, set `tag` to an existing tag name.
   # To remove the toolbar, delete the entire `filter_button` block.
   filter_button:
-  - name: All
+  - name: All Courses
     tag: '*'
-  - name: R
-    tag: R
-  - name: Data Viz
-    tag: Dat Viz
+  - name: Play and Invent
+    tag: Play and Invent
+  - name: Order and Chaos
+    tag: Order and Chaos
 
 design:
   # Choose how many columns the section has. Valid values: '1' or '2'.
-  columns: '2'
+  columns: '1'
 
   # Toggle between the various page layout types.
   #   1 = List
@@ -49,3 +49,4 @@ design:
   # For Showcase view, flip alternate rows?
   flip_alt_rows: false
 ---
+

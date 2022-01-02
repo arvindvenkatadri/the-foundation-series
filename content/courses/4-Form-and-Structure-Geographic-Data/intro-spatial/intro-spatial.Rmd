@@ -21,7 +21,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
-library(hugodown)
+library(blogdown)
 library(emoji)
 library(emojifont)
 library(fontawesome)
@@ -34,6 +34,8 @@ Have you heard of a painter called Wassily Kandinksy?
 Here is a link to his [Top 40 Paintings. ](https://www.wassilykandinsky.net/painting1896-1944.php)
  
 Let us listen to Mathew Ritchie tell us about Kandinsky. This will be a starting point for our journey into Form and Structure. 
+
+`r blogdown::shortcode("youtube", "_oxS2TM182I")`
 
 <iframe width="972" height="547" src="https://www.youtube.com/embed/_oxS2TM182I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 

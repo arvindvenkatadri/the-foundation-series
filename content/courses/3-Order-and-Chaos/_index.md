@@ -7,8 +7,14 @@ view: 2
 weight: 3
 type: book
 image:
-  caption: "Photo by Mateus Maia on Unsplash"
+  placement: 3
+  caption: "Image credit [**Mateus Maia on Unsplash**](https://unsplash.com/s/photos/clock-at-grand-central-station)"
   focal_point: "smart"
+  
+# Featured image
+# To use, add an image named `featured.jpg/png` to your page's folder.
+# Placement options: 1 = Full column width, 2 = Out-set, 3 = Screen-width
+# Focal point options: Smart, Center, TopLeft, Top, TopRight, Left, Right, BottomLeft, Bottom, BottomRight
 ---
 
 ![](featured.jpg)
