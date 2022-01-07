@@ -41,42 +41,29 @@ Interpolation:
   - Proportions based on "distance" from each colour
   - On a "plane" with these points
 
-## GeoGebra {#geogebra-taylor}
 
-<script type="text/javascript" src="https://cdn.geogebra.org/apps/deployggb.js"></script>
-<script type="text/javascript">
-var parameters = {
-"appName":"graphing",
-"material_id":"jg2qjmar",
-"width":800,
-"height":600,
-"showToolBar":true,
-"borderColor":null,
-"showMenuBar":true,
-"showFullscreenButton":true,
-"enableShiftDragZoom":true};
+### Geogebra Activity
 
-var applet = new GGBApplet(parameters, 'applet_container');
-window.onload = function() { applet.inject('applet_container'); updateHelp('AG');}
-</script>
-<div id="applet_container"></div>
+$Y = mX + c$
 
-
-\newpage
-
-
-https://www.geogebra.org/m/nnzdapc3
+https://www.geogebra.org/m/nFJp7McJ
 
 
 
 
 ### Some Examples from Drama
 
-Legally Blonde: https://www.youtube.com/watch?v=aVRUfPRUKtU
+1. Legally Blonde: 
 
-Greek Chorus Explained: https://www.youtube.com/watch?v=orXPMdCU-6s
+`r blogdown::shortcode("youtube", "aVRUfPRUKtU")`
 
-Sutradhar: https://www.britannica.com/art/theater-building/Developments-in-Asia#ref463835
+2. Greek Chorus Explained: 
+
+`r blogdown::shortcode("youtube", "orXPMdCU-6s")`
+
+3. Sutradhar in Indian Drama
+
+https://www.britannica.com/art/theater-building/Developments-in-Asia#ref463835
 
 ### Discussion
 
@@ -135,6 +122,7 @@ scatter3D(x, y, z, pch = 18, cex = 2,
 my_df <- penguins %>% drop_na()
 penguin_lm <- lm(body_mass_g ~ 0 + flipper_length_mm + bill_length_mm, data = my_df)
 ```
+
 
 ```{r echo=FALSE}
 #Graph Resolution (more important for more complex shapes)

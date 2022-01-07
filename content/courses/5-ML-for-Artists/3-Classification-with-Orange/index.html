@@ -23,15 +23,63 @@ url_video: ""
 ---
 
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="{{< blogdown/postref >}}index_files/viz/viz.js"></script>
+<link href="{{< blogdown/postref >}}index_files/DiagrammeR-styles/styles.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/grViz-binding/grViz.js"></script>
 
 
-<p>We will look at the <code>tidymodels</code> based flow to develop some simple ML models.</p>
+<div id="a-childhood-game" class="section level3">
+<h3>A Childhood Game</h3>
+<p>Have you played <strong>20 Questions</strong>?</p>
+<ul>
+<li><p>How does one create questions in the game?</p>
+<ul>
+<li>Categories?</li>
+<li>Numbers? How?</li>
+<li>Comparisons?</li>
+</ul></li>
+<li><p>What sort of answers can you expect for each question?</p></li>
+<li><p>Can you imagine how the <strong>20 Questions</strong> Game can be shown as a <strong>tree</strong>?</p></li>
+</ul>
+</div>
+<div id="what-is-a-decision-tree" class="section level3">
+<h3>What is a Decision Tree?</h3>
+<div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph tree_diagram {\n\n  # a \"graph\" statement\n  graph [overlap = false, fontsize = 10]\n\n  # several \"node\" statements\n  node [shape = circle,\n        fontname = Helvetica,\n        label = root]\n  A; \n\n  node [shape = circle,\n        fixedsize = true,\n        label = nodes,\n        fillcolor = purple,\n        width = 0.9] // sets as circles\n  B; C; \n\nnode [shape = diamond,\n        fixedsize = true,\n        label = leaf,\n        color = springgreen,\n        width = 0.9] \n  D;E;\n\n  # several \"edge\" statements\n  A->B[color = blue, label = yes]; A->C[color = red,label = no]; \nB->D[color = blue,label = yes]; B->E[color = red,label = no]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="using-orange-to-view-decision-trees" class="section level3">
+<h3>Using Orange to view Decision Trees</h3>
+<p>What if we played <strong>many</strong> 20 Questions games in parallel? There would be many things to guess and there would be 20 questions aimed at guessing each of them. Would it be possible to play this “parallel” game? No?</p>
+<p>Let us try!!</p>
+<p>Let us look at the now famous <code>penguins</code> dataset, available here:</p>
+<p><a href="https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv" class="uri">https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv</a></p>
+<p>We see that there three <code>species</code> of penguins, that live on three <code>islands</code>. The measurements for each penguin are <code>flipper_length_mm</code>, <code>bill_depth_mm</code> and <code>body_mass_g</code>.</p>
+<ol style="list-style-type: decimal">
+<li><p><strong>Task 1:</strong> Create a few data visualizations for the variables, and pairs of variables from this dataset.</p></li>
+<li><p><strong>Task 2:</strong> Can you imagine how each of this dataset can be used in a <code>20 Questions Game</code>, to create a <strong>Decision Tree</strong> for this dataset as shown below?</p></li>
+</ol>
+<div class="figure">
+<img src="penguins.png" alt="" />
+<p class="caption">Penguins!</p>
+</div>
+</div>
+<div id="how-do-we-use-our-decision-tree" class="section level3">
+<h3>How do we Use our Decision Tree</h3>
+<p>Our aim is to make <code>predictions</code>. Predictions of what? Either a <strong>numerical value</strong> or a <strong>class/category</strong>. Trees can do both these things for us.</p>
+<p>What we need to do is to use some data to <strong>design the tree</strong> and then use the tree to predict some aspect of the remaining, but similar, data.</p>
+<p>Let us split the <code>penguins</code> dataset into two pieces: a <code>training set</code> to design our tree, and a <code>test set</code> to check how it is working.</p>
+<p>Download this <a href="penguins-tree.ows">penguin tree file</a> and open it in Orange.</p>
+</div>
+<div id="a-visual-introduction-to-random-forests" class="section level3">
+<h3>A Visual Introduction to Random Forests</h3>
+<p><a href="https://waternova.github.io/random-forest-viz/" class="uri">https://waternova.github.io/random-forest-viz/</a></p>
+</div>
 <div id="references" class="section level2">
 <h2>References</h2>
 <ol style="list-style-type: decimal">
-<li>Bradley Boehmke</li>
-<li>Julia Silge and Max Kuhn</li>
-<li>Rhys Heffin</li>
+<li><p><a href="https://towardsdatascience.com/data-science-made-easy-data-modeling-and-prediction-using-orange-f451f17061fa" class="uri">https://towardsdatascience.com/data-science-made-easy-data-modeling-and-prediction-using-orange-f451f17061fa</a></p></li>
+<li><p>The beauty of Random Forests: <a href="https://orangedatamining.com/blog/2016/12/22/the-beauty-of-random-forest/" class="uri">https://orangedatamining.com/blog/2016/12/22/the-beauty-of-random-forest/</a></p></li>
+<li><p>Pythagorean Trees for Random Forests: <a href="https://orangedatamining.com/blog/2016/07/29/pythagorean-trees-and-forests/" class="uri">https://orangedatamining.com/blog/2016/07/29/pythagorean-trees-and-forests/</a></p></li>
 </ol>
-<p><a href="https://towardsdatascience.com/data-science-made-easy-data-modeling-and-prediction-using-orange-f451f17061fa" class="uri">https://towardsdatascience.com/data-science-made-easy-data-modeling-and-prediction-using-orange-f451f17061fa</a></p>
 </div>
