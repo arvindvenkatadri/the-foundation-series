@@ -1,0 +1,35 @@
+---
+title: "Ireland - William Trevor"
+subtitle:  "A Choice of Butchers"
+output: html_document
+date: 2021-12-28
+weight: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+```
+
+
+## Ireland: William Trevor
+
+![William Trevor](https://s26162.pcdn.co/wp-content/uploads/2018/05/trevor.png)
+
+
+
+### Story
+
+
+### Additional Material
+
+
+### Notes and References
+  1. <u>[** 7 Writers share their favourite William Trevor story**](https://lithub.com/7-writers-share-their-favorite-william-trevor-story/)</u>
+
+
+### Song for the Story
+
+Billy Currington's Country hit from 2008, *Walk a Little Straighter, Daddy*
+
+`r blogdown::shortcode("youtube", "U1no7Or9BeI")`
