@@ -1,11 +1,12 @@
 ---
 title: Basics of Machine Learning - Regression
-subtitle: Part-1 Regression
+subtitle: 
 date: "2021-08-09"
 external_link: ""
 image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
+weight: 3
 # links:
 # - icon: twitter
 #   icon_pack: fab

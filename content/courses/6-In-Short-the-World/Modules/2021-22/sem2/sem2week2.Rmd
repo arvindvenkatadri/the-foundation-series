@@ -1,0 +1,35 @@
+---
+title: "FSP 2021-2022 - Semester 2 Week 2"
+subtitle: "In Short, the World"
+output: html_document
+date: 2021-12-28
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+```
+
+
+## Week 2. England: V.S Pritchett
+
+![photo: www.literariness.org](https://i0.wp.com/literariness.org/wp-content/uploads/2020/06/mw12635.jpg?w=800&ssl=1)
+
+> V.S. Pritchett (1900–1997)was the best short story writer in English during the twentieth century. There should be no argument about this. He was born in 1900 and died ninety-seven years later having written two brilliant memoirs – A Cab at the Door and Midnight Oil – and several excellent biographies, including Chekhov. Chatto & Windus published his Collected Short Stories and Collected Essays in 1991, and it says something about our culture that neither are still in print.  
+- David Miller, *That Glimpse of Truth*
+
+
+> VS Pritchett (1900-97) was a brilliant pen-driving machine for a great deal of the century in which he lived. (He always wrote with a pen, in difficult, crabbed writing, which was patiently typed by his wife Dorothy, and then further embellished in spidery trails by VSP.) He was a prolific novelist, short-story writer, essayist, reviewer, travel writer, biographer and autobiographer. Increasingly in later life a sitter on literary committees, he must have grown tired of being be-laurelled with the "man of letters" wreath. He ended up with a knighthood, and then a huge swath of reverential and affectionate obituaries. He was much loved.  
+- Extract from <u>[the Guardian](https://www.theguardian.com/books/2004/oct/16/featuresreviews.guardianreview6)</u>
+
+### Story
+
+
+### Additional Material
+
+
+### Notes and References
+  1. <u>[**A brief survey of the short story: VS Pritchett**](https://www.theguardian.com/books/booksblog/2008/feb/22/vspritchett)</u>
+
+
+### Song for the Story

@@ -1,11 +1,12 @@
 ---
-title: Basics of Machine Learning in R - Classification
-subtitle: Part-1 Classification
+title: Basics of Machine Learning - Classification
+subtitle: 
 date: "2021-08-09"
 external_link: ""
 image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
+weight: 2
 links:
 # - icon: twitter
 #   icon_pack: fab
@@ -16,10 +17,10 @@ summary: We will look at the basic models for Classification of Data.
 tags:
 - Machine Learning
 - tidymodels
-url_code: "code/course-related/example/example.html"
-url_pdf: ""
-url_slides: "slides/new/index.html"
-url_video: ""
+# url_code: "code/course-related/example/example.html"
+# url_pdf: ""
+# url_slides: "slides/new/index.html"
+# url_video: ""
 ---
 
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
@@ -29,8 +30,8 @@ url_video: ""
 <script src="{{< blogdown/postref >}}index_files/grViz-binding/grViz.js"></script>
 
 
-<div id="a-childhood-game" class="section level3">
-<h3>A Childhood Game</h3>
+<div id="a-childhood-game" class="section level2">
+<h2>A Childhood Game</h2>
 <p>Have you played <strong>20 Questions</strong>?</p>
 <ul>
 <li><p>How does one create questions in the game?</p>
@@ -43,13 +44,13 @@ url_video: ""
 <li><p>Can you imagine how the <strong>20 Questions</strong> Game can be shown as a <strong>tree</strong>?</p></li>
 </ul>
 </div>
-<div id="what-is-a-decision-tree" class="section level3">
-<h3>What is a Decision Tree?</h3>
+<div id="what-is-a-decision-tree" class="section level2">
+<h2>What is a Decision Tree?</h2>
 <div id="htmlwidget-1" style="width:672px;height:480px;" class="grViz html-widget"></div>
 <script type="application/json" data-for="htmlwidget-1">{"x":{"diagram":"\ndigraph tree_diagram {\n\n  # a \"graph\" statement\n  graph [overlap = false, fontsize = 10]\n\n  # several \"node\" statements\n  node [shape = circle,\n        fontname = Helvetica,\n        label = root]\n  A; \n\n  node [shape = circle,\n        fixedsize = true,\n        label = nodes,\n        fillcolor = purple,\n        width = 0.9] // sets as circles\n  B; C; \n\nnode [shape = diamond,\n        fixedsize = true,\n        label = leaf,\n        color = springgreen,\n        width = 0.9] \n  D;E;\n\n  # several \"edge\" statements\n  A->B[color = blue, label = yes]; A->C[color = red,label = no]; \nB->D[color = blue,label = yes]; B->E[color = red,label = no]\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 </div>
-<div id="using-orange-to-view-decision-trees" class="section level3">
-<h3>Using Orange to view Decision Trees</h3>
+<div id="twenty-times-20-questions" class="section level2">
+<h2>Twenty times 20 Questions !!</h2>
 <p>What if we played <strong>many</strong> 20 Questions games in parallel? There would be many things to guess and there would be 20 questions aimed at guessing each of them. Would it be possible to play this “parallel” game? No?</p>
 <p>Let us try!!</p>
 <p>Let us look at the now famous <code>penguins</code> dataset, available here:</p>
@@ -63,17 +64,93 @@ url_video: ""
 <img src="penguins.png" alt="" />
 <p class="caption">Penguins!</p>
 </div>
+<div id="what-did-we-learn" class="section level4">
+<h4>What did we learn?</h4>
+<ul>
+<li>The 20Q Game can be viewed as a “Decision Tree” of Questions and Answers,</li>
+<li>Each <strong>fork</strong> in the game is a Question.</li>
+<li>Depending upon whether the current answer is <strong>yes or no</strong>, we turn in one direction or the other.</li>
+<li>Each of our questions is <strong>based</strong> on the information available in one or other of the columns!!</li>
+<li>We arrive at a final “answer” or “target” after a particular sequence of yes/no answers. This is the one of the <strong>leaf</strong> nodes in the Tree.</li>
+<li>The <code>island</code> and the <code>species</code> columns are <strong>categories</strong> and are especially suited to being the <strong>targets</strong> for a 20 Questions Game.</li>
+<li>We can therefore use an <strong>entire column</strong> of data as our 20Questions <strong>target</strong>, rather than just one entity, person.</li>
+</ul>
+<p>This is how we will use this Game as a Model for our first ML algorithm, <strong>classification</strong>.</p>
 </div>
-<div id="how-do-we-use-our-decision-tree" class="section level3">
-<h3>How do we Use our Decision Tree</h3>
+</div>
+<div id="how-do-we-use-our-decision-tree" class="section level2">
+<h2>How do we Use our Decision Tree</h2>
 <p>Our aim is to make <code>predictions</code>. Predictions of what? Either a <strong>numerical value</strong> or a <strong>class/category</strong>. Trees can do both these things for us.</p>
 <p>What we need to do is to use some data to <strong>design the tree</strong> and then use the tree to predict some aspect of the remaining, but similar, data.</p>
 <p>Let us split the <code>penguins</code> dataset into two pieces: a <code>training set</code> to design our tree, and a <code>test set</code> to check how it is working.</p>
 <p>Download this <a href="penguins-tree.ows">penguin tree file</a> and open it in Orange.</p>
 </div>
-<div id="a-visual-introduction-to-random-forests" class="section level3">
-<h3>A Visual Introduction to Random Forests</h3>
+<div id="how-many-trees-do-we-need-enter-the-wild-wood" class="section level2">
+<h2>How Many Trees do we Need? Enter the Wild Wood…</h2>
+<p>Even when we have <strong>multiple targets</strong>, we will see that the Questions, answers and resulting Decision Trees look very similar! Check all your individual Trees: do they ask the same Questions? Do they fork in the same way?</p>
+<p>Yes, they all seem to use the same set of parameters to reach the target. So they are capable of being “biased” and make the <strong>same mistakes</strong>. So we ask: Does it help to use more than one tree, if all the questions/forks in the Trees are similar?</p>
+<p>No…we need different Trees to be able to <strong>ask different questions</strong>, based on different <strong>variables</strong> or <strong>features</strong> in the data. That will make the Trees as different as possible and so…unbiased.</p>
+<p>How do we do this?</p>
+<p>By tossing a coin to “randomize” the Trees into using different <strong>features</strong> at different times.</p>
+<p>A forest of such trees is called <del><strong>the Wild Wood</strong></del> <strong>a Random Forest</strong> !</p>
+</div>
+<div id="a-visual-introduction-to-random-forests" class="section level2">
+<h2>A Visual Introduction to Random Forests</h2>
+<p>In the Random Forest method, we do as follows:</p>
+<ol style="list-style-type: decimal">
+<li>Split the dataset into <code>training</code> and <code>test</code> subsets (70::30 proportion is very common). Keep aside the <code>testing</code> dataset for final testing.</li>
+<li>Decide on a number of trees, say 100-500 in the forest.</li>
+<li>Take the training dataset and repeatedly sample some of the rows in it. Rows can be <strong>repeated</strong> too; this is called <strong>bootstrap sampling</strong>.</li>
+<li>Give this sampled training set to each tree. Each tree develops a question from this dataset, in a <strong>random fashion</strong>, using a <strong>randomly chosen</strong> variable.
+E.g. with <code>penguins</code>, if our target is <code>species</code>, then some trees will will use <code>island</code>, some others will use <code>body_mass_g</code> and some others may use <code>bill_length_mm</code>. Use the answer to grow each tree separately.
+Since the questions are possibly based on a different variable at each time, the trees will grow in very different ways.</li>
+<li>Stop when the required accuracy has been achieved (the sets contain observations/rows from only one <code>species</code> predominantly)</li>
+<li>With the <code>test set</code> let each tree vote on which <code>species</code> it has decided upon. Take the majority vote.</li>
+</ol>
+<p>Phew!!</p>
+<p>Let’s get a visual sense of how all this works:</p>
 <p><a href="https://waternova.github.io/random-forest-viz/" class="uri">https://waternova.github.io/random-forest-viz/</a></p>
+</div>
+<div id="random-forest-classification-for-heart-patients" class="section level2">
+<h2>Random Forest Classification for Heart Patients</h2>
+<p>Do you want to develop an ML model for heart patients? We have a dataset of heart patients at the <a href="https://archive.ics.uci.edu/ml/datasets/heart+disease"><strong>University of California, <del>Arvind</del> Irvine ML Dataset Repository</strong></a></p>
+<p><a href="https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/processed.cleveland.data"><strong>Heart Patient Data</strong></a>. Import into Orange !!</p>
+<p>What are the variables?</p>
+<ol style="list-style-type: decimal">
+<li>(age): age in years<br />
+</li>
+<li>(sex): 1 = male; 0 = female<br />
+</li>
+<li>(cp): chest-pain type( 4 types, 1/2/3/4)<br />
+</li>
+<li>(trestbps): resting blood pressure (in mm Hg on admission to the hospital)</li>
+<li>(chol) : serum cholestoral in mg/dl</li>
+<li>(fbs): (fasting blood sugar &gt; 120 mg/dl) (1 = true; 0 = false)</li>
+<li>(restecg): resting electrocardiographic results (0 = normal; 1= ST-T wave abnormality; 3 = LV hypertrophy)</li>
+<li>(thalach): maximum heart rate achieved</li>
+<li>(exang): exercise induced angina (1 = yes; 0 = no) (Puneet Rajkumar)<br />
+</li>
+<li>(oldpeak): ST depression induced by exercise relative to rest</li>
+<li>(slope): the slope of the peak exercise ST segment
+– Value 1: upsloping
+– Value 2: flat
+– Value 3: downsloping</li>
+<li>(ca): number of major vessels (0-3) colored by flourosopy</li>
+<li>(thal): 3 = normal; 6 = fixed defect; 7 = reversable defect<br />
+</li>
+<li>(num) : <strong>the target attribute</strong>, diagnosis of heart disease (angiographic disease status)
+– Value 0: &lt; 50% diameter narrowing
+– Value 1: &gt; 50% diameter narrowing
+(in any major vessel: attributes 59 through 68 are vessels)</li>
+</ol>
+</div>
+<div id="how-good-is-my-random-forest" class="section level2">
+<h2>How good is my Random Forest?</h2>
+<ul>
+<li>Gini Impurity</li>
+<li>Cross Entropy</li>
+<li>Classification Error</li>
+</ul>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>

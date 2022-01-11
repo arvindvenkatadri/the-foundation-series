@@ -1,11 +1,12 @@
 ---
-title: Basics of Machine Learning in R - Clustering
-subtitle: Part-2 Clustering
+title: Basics of Machine Learning - Clustering
+subtitle: 
 date: "2021-08-09"
 external_link: ""
 image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
+weight: 4
 links:
 # - icon: twitter
 #   icon_pack: fab
@@ -15,18 +16,11 @@ slides:
 summary: We will look at the basic models for Clustering of Data.
 tags:
 - Machine Learning
-- tidymodels
-url_code: "code/course-related/example/example.html"
-url_pdf: ""
-url_slides: "slides/new/index.html"
-url_video: ""
+- Orange
+# url_code: "code/course-related/example/example.html"
+# url_pdf: ""
+# url_slides: "slides/new/index.html"
+# url_video: ""
 ---
 
-We will look at the `tidymodels` based flow to develop some simple ML models.
-
-## References
-
-1. Bradley Boehmke
-2. Julia Silge and Max Kuhn
-3. Rhys Heffin
-4. 
+### Introduction
