@@ -71,5 +71,4 @@ Let us play **The Game of the Polygons** [(web link)](http://ncase.me/polygons/)
 
 Why are Petrol Stations located next to each other? Here is the **Hotelling's Phenomenon**, explained. 
 
- <br> `r blogdown::shortcode("youtube", "Gj_DmO9jC3U")` <br>
-{{< youtube "u4cKzGj58q4">}}
+ <br> `r blogdown::shortcode("youtube", "u4cKzGj58q4")` <br>
