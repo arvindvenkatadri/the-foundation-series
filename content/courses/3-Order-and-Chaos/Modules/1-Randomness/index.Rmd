@@ -98,7 +98,7 @@ We will choose one of these questions, or a similar one, and use the **PPDAC Met
 
 - **Lawrence - A Design of Experiments Workshop as an Introduction to Statistics** [(**Weblink to PDF**)](Lawrence - A Design of Experiments Workshop as an Introduction to Statistics.pdf)
 
-This is the paper describing a simple Design of Experiments workshop in class much like ours. We will try to mimic as much of this as we can. Do read through this in the evening today in preparation for our experiment.
+This is the paper describing a simple *Design of Experiments* workshop in class much like ours. We will try to mimic as much of this as we can. Do read through this in the evening today in preparation for our experiment.
 
 
 
@@ -120,3 +120,5 @@ What have been our Conclusions with the Experiment? Let us take our Experiment a
 
 1. Scientific Method, Statistical Method and
 the Speed of Light by R. J. MacKay and R. W. Oldford [**(Web Link)**](https://projecteuclid.org/euclid.ss/1009212817)
+
+1. The Man Who Invented Modern Probability - Andrei Kolmogorov:[**(Web Link)**](https://getpocket.com/explore/item/the-man-who-invented-modern-probability)
