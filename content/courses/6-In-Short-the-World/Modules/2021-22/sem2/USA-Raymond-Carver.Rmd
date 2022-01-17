@@ -21,7 +21,7 @@ library(blogdown)
 
 ### Story
 
-**Cathedral** [**(Web Link)**](http://www.giuliotortello.it/ebook/cathedral.pdf) and [PDF](cathedral.pdf)
+**Cathedral** [PDF](/pdf/ISTW/RaymondCarver-Cathedral.pdf)
 
 ### Themes
   - Blindness
