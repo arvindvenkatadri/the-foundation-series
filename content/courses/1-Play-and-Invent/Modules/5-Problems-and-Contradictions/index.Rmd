@@ -131,7 +131,7 @@ blogdown::shortcode("tweet", "1238167337792090112")
 
 # Materials
 
-1. Valeri Souchkov, "How to Define a Contradiction", [(Weblink)](http://xtriz.com/Training/TRIZ_DefineContradiction_Tutorial.pdf)
+1. Valeri Souchkov, "How to Define a Contradiction", [(Weblink)](https://xtriz.com/Training/TRIZ_DefineContradiction_Tutorial.pdf)
 
 1. Open Source TRIZ: TRIZ Power Tools: Formulating Contradictions: [Webpage](https://www.opensourcetriz.com/triz-books/triz-skills/resolving-contradictions.html)
 

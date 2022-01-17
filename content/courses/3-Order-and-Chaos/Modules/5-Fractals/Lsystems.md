@@ -64,6 +64,6 @@ if you have heard of the word "godwottery", it came from this poem.
 
 https://www.poets.org/poetsorg/poem/how-do-i-love-thee-sonnet-43
 
-http://mathstat.slu.edu/escher/index.php/Introduction_to_Symmetry
+https://mathstat.slu.edu/escher/index.php/Introduction_to_Symmetry
 
 

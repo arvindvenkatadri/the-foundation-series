@@ -94,7 +94,7 @@ Are you thirsty? Would you like some water?
 
 ### A Proximity Effect
 
-Let us play this <u>[**Vaccination Game**](http://rocs.hu-berlin.de/D3/herd/)</u>
+Let us play this <u>[**Vaccination Game**](https://rocs.hu-berlin.de/D3/herd/)</u>
 
 
 

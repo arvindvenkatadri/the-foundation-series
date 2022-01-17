@@ -72,5 +72,4 @@ Let us create some simple visualizations using Orange.
 
 1. Introduction to *Data Mining-Working notes for the hands-on course with Orange Data Mining*. [(Download file)](Interactive Visual Data Mining in Orange - kolkata.pdf)
 
-2. Also available on the Orange website [**here**](http://file.biolab.si/notes/2018-05-intro-to-datamining-notes.pdf)
 

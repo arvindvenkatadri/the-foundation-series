@@ -64,7 +64,7 @@ Let us read the famous nunnery scene from **Hamlet**:
 a)  Hamlet in 4 Minutes:\
     <br> `r blogdown::shortcode("youtube", "EmjWIMMtjDc")` <br>
 
-b)  *To be or Not to be*: [(Web Link)](http://www.nosweatshakespeare.com/quotes/hamlet-to-be-or-not-to-be/)
+b)  *To be or Not to be*: [(Web Link)](https://www.nosweatshakespeare.com/quotes/hamlet-to-be-or-not-to-be/)
 
 What was Hamlet's problem? How did he solve that problem?
 

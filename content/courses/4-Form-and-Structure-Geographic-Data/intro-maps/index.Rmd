@@ -94,7 +94,7 @@ Burkhart, Christian. “Streetmaps.” [StreetMaps](https://ggplot2tutor.com/tut
 
 1. Do some searching and make a list of Places of Worship in India that are known to you. 
 
-1. Head off to the [India Place Finder](http://india.info-proto.com/index.php/) website. Using the search facility there, download a CSV file that contains names of the places and their lon-lat coordinates.
+1. Head off to the **India Place Finder** website (india.info-proto.com/index.php/). Using the search facility there, download a CSV file that contains names of the places and their lon-lat coordinates.
 
 1. Read this CSV into R. Use the `sfheaders` package to convert this data into an `sf` spatial data frame.
 

@@ -30,9 +30,9 @@ Let us see what data means and how we can work with it in R
 
 
 ## References:
-1. [R for Data Science, Workflow: Basics Chapter:](http://r4ds.had.co.nz/workflow-basics.html)
+1. [R for Data Science, Workflow: Basics Chapter:](https://r4ds.had.co.nz/workflow-basics.html)
 
-2. [Modern Dive, Getting Started Chapter:](http://moderndive.com/2-getting-started.html)
+2. [Modern Dive, Getting Started Chapter:](https://moderndive.com/2-getting-started.html)
 
 
 ## Assignment(s)

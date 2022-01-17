@@ -47,7 +47,7 @@ CC affects our view of the world and helps us identify Problem Situations and Co
 
 ## Assignment:
 
-1. Making a Street Intersection Logo: [(Inspiration)](http://www.cartogrammar.com/blog/maps-make-the-best-logos/). <br> <br>
+1. Making a Street Intersection Logo: [(Inspiration)](https://www.cartogrammar.com/blog/maps-make-the-best-logos/). <br> <br>
 Here are some instructions:
  - Visit your home town on Google Maps
  - Select a specific STREET INTERSECTION there.

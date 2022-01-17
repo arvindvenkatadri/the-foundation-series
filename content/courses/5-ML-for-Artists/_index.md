@@ -28,8 +28,8 @@ type: book
 - Doing **point-and-click** ML using an open source ML tool called **Orange** [(**Weblink**)](https://orangedatamining.com/)
 ![](https://orangedatamining.com/images/orange_title_scaled.png)
 
-- Experience with **Wekinator** [(**Weblink**)](http://www.wekinator.org/) and similar ML apps for Creative Outcomes
-![](http://www.wekinator.org/wp-content/uploads/2015/08/wekinator31-300x177.jpg)
+- Experience with **Wekinator** [(**Weblink**)](https://www.wekinator.org/) and similar ML apps for Creative Outcomes
+![](https://www.wekinator.org/wp-content/uploads/2015/08/wekinator31-300x177.jpg)
 - Simple Projects applying ML on your own Data/Research 
 
 If time permits:
