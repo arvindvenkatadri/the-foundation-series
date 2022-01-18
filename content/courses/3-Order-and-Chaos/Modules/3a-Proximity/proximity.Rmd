@@ -69,7 +69,7 @@ Let us listen to Mathew Ritchie tell us about Kandinsky.
 
 ### The Math in Kandinsky
 
-Here is a brief paper discussing the <u>[**Math-Art of Wassily Kandinsky.**](/pdf/Proximity/Kandinsky - Math Artist.pdf)</u>
+Here is a brief paper discussing the <u>[**Math-Art of Wassily Kandinsky.**](/pdf/Proximity/Kandinsky-MathArtist.pdf)</u>
 
 What are the Key Insights from this paper?
 
@@ -81,7 +81,10 @@ What are the Key Insights from this paper?
 
 ## Using Proximity as a Model
 
-Can we use Proximity as a measure to quantify our experiences? What sort of experiences? What emotions could be involved?
+Can we use Proximity as a measure to quantify our experiences? 
+What sort of experiences? 
+What emotions could be involved?
+How can we attach *numerical significance* to those emotions?
 
 ### Walking the Streets in Soho
 
@@ -115,5 +118,5 @@ Maybe not.  There are better Models , may be!!
 
 ## References
 
-1. Dirk Brockman - [This message must be Herd](pdf/Proximity/Brockman - This message must be Herd.pdf)
+1. Dirk Brockman - [This message must be Herd](/pdf/Proximity/Brockman-ThisMessageMustBeHerd.pdf)
 

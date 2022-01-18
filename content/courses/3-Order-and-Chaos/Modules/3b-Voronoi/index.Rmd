@@ -6,7 +6,7 @@ output: html_document
 weight: 5
 external_link: ""
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: Photo by iStock
   focal_point: Smart
 links:
 slides: 
@@ -78,11 +78,36 @@ A. I am Predator
 - Plot Points on the Portrait such that the main facial features are defined.
 - Use a Delaunay Triagulation of these points to create a Portrait. 
 
-![](AVinMath.jpeg")
+![](AVinMath.jpeg)
 
 B. My Face is My Fortune
+
 - Do the same for a famous person, past or present.
 - Run a small survey in the class to see how many people can recognize celebrity!
 
+## Other Distances?
+
+We have used the simplest and most common of geometric distances between entities, the **Euclidean Distance ** to model proximity. Are there other *measures of distance*?
+
+- How would you measure distance between *digital words*? For example $10010011$ and $11011011$?
+
+>The **Hamming distance** between two equal-length strings of symbols is the number of positions at which the corresponding symbols are different. The symbols may be letters, bits, or decimal digits, among other possibilities. For example, the Hamming distance between:
+"karolin" and "kathrin" is 3.
+"karolin" and "kerstin" is 3.
+"kathrin" and "kerstin" is 4.
+0000 and 1111 is 4.
+2173896 and 2233796 is 3.
 
 
+- How would you measure distance over a *curved surface* such as the earth?
+
+View the path here: <https://www.greatcirclemap.com/>
+Calculate distances here: <https://www.gpsvisualizer.com/calculators>
+
+- And if you lived in New York?
+
+![](taxicab-manhattan-grid-layout-paths.gif)
+
+![](taxicab-manhattan-grid-taxicab-distance.png)
+
+We will use the Euclidean and maybe other concepts of distance when we get into our Machine Learning models!

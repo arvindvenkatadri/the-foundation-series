@@ -6,7 +6,7 @@ output: html_document
 weight: 5
 external_link: ""
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: Photo by iStock
   focal_point: Smart
 links:
 slides: 
@@ -23,7 +23,7 @@ url_slides: ""
 url_video: ""
 ---
 
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 
 
 <div id="a-model-for-proximity-the-voronoi-and-the-delaunay-diagrams" class="section level2">
@@ -75,8 +75,36 @@ url_video: ""
 - Take a picture of yourself and import it into Geogebra
 - Plot Points on the Portrait such that the main facial features are defined.
 - Use a Delaunay Triagulation of these points to create a Portrait.</p>
-<p><img src="AVinMath.jpeg%22" /></p>
-<p>B. My Face is My Fortune
-- Do the same for a famous person, past or present.
-- Run a small survey in the class to see how many people can recognize celebrity!</p>
+<p><img src="AVinMath.jpeg" /></p>
+<p>B. My Face is My Fortune</p>
+<ul>
+<li>Do the same for a famous person, past or present.</li>
+<li>Run a small survey in the class to see how many people can recognize celebrity!</li>
+</ul>
+</div>
+<div id="other-distances" class="section level2">
+<h2>Other Distances?</h2>
+<p>We have used the simplest and most common of geometric distances between entities, the <strong>Euclidean Distance </strong> to model proximity. Are there other <em>measures of distance</em>?</p>
+<ul>
+<li>How would you measure distance between <em>digital words</em>? For example <span class="math inline">\(10010011\)</span> and <span class="math inline">\(11011011\)</span>?</li>
+</ul>
+<blockquote>
+<p>The <strong>Hamming distance</strong> between two equal-length strings of symbols is the number of positions at which the corresponding symbols are different. The symbols may be letters, bits, or decimal digits, among other possibilities. For example, the Hamming distance between:
+“karolin” and “kathrin” is 3.
+“karolin” and “kerstin” is 3.
+“kathrin” and “kerstin” is 4.
+0000 and 1111 is 4.
+2173896 and 2233796 is 3.</p>
+</blockquote>
+<ul>
+<li>How would you measure distance over a <em>curved surface</em> such as the earth?</li>
+</ul>
+<p>View the path here: <a href="https://www.greatcirclemap.com/" class="uri">https://www.greatcirclemap.com/</a>
+Calculate distances here: <a href="https://www.gpsvisualizer.com/calculators" class="uri">https://www.gpsvisualizer.com/calculators</a></p>
+<ul>
+<li>And if you lived in New York?</li>
+</ul>
+<p><img src="taxicab-manhattan-grid-layout-paths.gif" /></p>
+<p><img src="taxicab-manhattan-grid-taxicab-distance.png" /></p>
+<p>We will use the Euclidean and maybe other concepts of distance when we get into our Machine Learning models!</p>
 </div>
