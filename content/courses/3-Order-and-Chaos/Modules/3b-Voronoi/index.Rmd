@@ -74,6 +74,7 @@ Now let us make such a diagram step by step:
 3. Voronoi Portraits and Facial Recognition
 
 A. I am Predator
+
 - Take a picture of yourself and import it into Geogebra
 - Plot Points on the Portrait such that the main facial features are defined.
 - Use a Delaunay Triagulation of these points to create a Portrait. 
