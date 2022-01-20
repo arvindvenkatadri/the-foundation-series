@@ -112,3 +112,12 @@ Calculate distances here: <https://www.gpsvisualizer.com/calculators>
 ![](taxicab-manhattan-grid-taxicab-distance.png)
 
 We will use the Euclidean and maybe other concepts of distance when we get into our Machine Learning models!
+
+
+## References
+
+1. **Voronoi Diagrams and a Day at the Beach**
+[**(PDF)**](/pdf/Proximity/VoronoiDiagrams-ADayAtTheBeach.pdf)
+Talks about cholera in Soho, the Voronoi diagram, and how to construct it using waves on a beach!!
+
+
