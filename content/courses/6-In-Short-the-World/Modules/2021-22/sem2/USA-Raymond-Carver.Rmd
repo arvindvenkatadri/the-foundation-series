@@ -37,7 +37,7 @@ library(blogdown)
 
 <br>
 
-2. H.G. Wells' story, <u>[The Country of the Blind](HGWells - The Country of the Blind.docx)</u>
+2. H.G. Wells' story, <u>[The Country of the Blind](/pdf/ISTW/HGWells - The Country of the Blind.docx)</u>
 
 > "The Country of the Blind" is a short story written by H. G. Wells. It was first published in the April 1904 issue of The Strand Magazine and included in a 1911 collection of Wells's short stories, The Country of the Blind and Other Stories. It is one of Wells's best known short stories, and features prominently in literature **dealing with blindness**.  
 - Wikipedia
