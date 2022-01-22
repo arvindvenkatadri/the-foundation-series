@@ -75,8 +75,13 @@ Mahendra Kapoor from the movie Sambandh(1969):
 `r blogdown::shortcode("youtube", "u5uRivqwCZk")`
 
 
+ Deep Purple, **When a Blind Man Cries**
+ 
+ `r blogdown::shortcode("youtube","SSn6Vyp0_Vg")`
+ 
+ 
 ### Notes and References  
 
  1. Raymond Carver on <u>[How to Write](https://lithub.com/get-in-get-out-dont-linger-go-on-read-raymond-carvers-greatest-writing-advice/)</u>
  
- 
+
