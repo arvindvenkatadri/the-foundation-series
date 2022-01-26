@@ -15,7 +15,9 @@ library(blogdown)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Ventura_Garcia_Calderon.jpg/330px-Ventura_Garcia_Calderon.jpg)
 
-> Ventura García Calderón (1886–1959) was a Peruvian man of letters and a diplomat who was at the center of the hispanophone community in Paris in the first half of the twentieth century. Known as a proponent of Spanish American literature, García Calderón achieved a global celebrity for his dramatic, colorful, and ironic short stories. These stories, published in both Spanish and French, feature a raw depiction of reality, a strong sense of retributive justice, and a sympathy for the marginalized people that characterize European Naturalism. García Calderón adapted this style to advance his goal of providing European readers with an authentic understanding of Peru and Spanish America, thus replacing the voyeuristic and patronizing notion of the "exotic" inherited from literary romanticism and nineteenth-century travel writers. The construction of García Calderón's stories was subversive and destabilized the widespread notion of Peru held by European critics and readers. While international critics during the author's lifetime unanimously praised García Calderón's fiction as well as his essays that theorize the transformation and renaissance of Spanish language and literature by americano writers, scholars since the 1960s have largely misunderstood his reformative project. 
+> Ventura García Calderón (1886–1959) was a Peruvian man of letters and a diplomat who was at the center of the hispanophone community in Paris in the first half of the twentieth century. Known as a proponent of Spanish American literature, García Calderón achieved a global celebrity for his dramatic, colorful, and ironic short stories. These stories, published in both Spanish and French, feature a raw depiction of reality, a strong sense of retributive justice, and a sympathy for the marginalized people that characterize European Naturalism. García Calderón adapted this style to advance his goal of providing European readers with an authentic understanding of Peru and Spanish America, thus replacing the voyeuristic and patronizing notion of the "exotic" inherited from literary romanticism and nineteenth-century travel writers. 
+
+> The construction of García Calderón's stories was subversive and destabilized the widespread notion of Peru held by European critics and readers. While international critics during the author's lifetime unanimously praised García Calderón's fiction as well as his essays that theorize the transformation and renaissance of Spanish language and literature by americano writers, scholars since the 1960s have largely misunderstood his reformative project. 
 
 ### Story
 
@@ -35,12 +37,18 @@ We will read Ventura Garcia Calderon's short short story, <u>[**The Lottery Tick
 
 1. Review of **The Lottery Ticket** <https://caponomics.blogspot.com/2013/05/short-story-review-lottery-ticket-by.html>
 
-2. Ventural Garcia Calderon at Short Story Magic Tricks: <https://shortstorymagictricks.com/2021/07/06/the-lottery-ticket-by-ventura-garcia-calderon/>
+2. Ventural Garcia Calderon at **Short Story Magic Tricks**: <https://shortstorymagictricks.com/2021/07/06/the-lottery-ticket-by-ventura-garcia-calderon/>
 
-3. Goldberg, N. S. (2014). Rereading Ventura García Calderón. Hispania, 97(2), 220–232. http://www.jstor.org/stable/24368768
+3. Goldberg, N. S. (2014). Rereading Ventura García Calderón. Hispania, 97(2), 220–232. http://www.jstor.org/stable/24368768 [^1]
 
 
- 
+### Notes and References  
+
+1. Rene Girard's Mimetic Theory and the Scapegoat: <https://violenceandreligion.com/mimetic-theory/>
+
+2. Frear, G. L. (1992). René Girard on Mimesis, Scapegoats, and Ethics. The Annual of the Society of Christian Ethics, 12, 115–133. http://www.jstor.org/stable/23559770
+
+
 ### Song for the Story !!
 
 Band: Moving Pictures  
@@ -56,7 +64,5 @@ Chart Position:
 
 `r blogdown::shortcode("youtube", "OzQKECQgjW8")`
 
-### Notes and References  
 
- 
-
+[^1]:You should be able to log in to <u>[**JSTOR**](https://jstor.org)</u> from campus. 
