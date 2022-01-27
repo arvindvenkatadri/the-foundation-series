@@ -122,3 +122,10 @@ What have been our Conclusions with the Experiment? Let us take our Experiment a
 the Speed of Light by R. J. MacKay and R. W. Oldford [**(Web Link)**](https://projecteuclid.org/euclid.ss/1009212817)
 
 1. The Man Who Invented Modern Probability - Andrei Kolmogorov:[**(Web Link)**](https://getpocket.com/explore/item/the-man-who-invented-modern-probability)
+
+### Fun Stuff
+
+Hamlet's *To be or not to be* in Pidgin English - Video on Twitter!
+
+`r blogdown::shortcode("twitter", "1108724221784530945")`
+
