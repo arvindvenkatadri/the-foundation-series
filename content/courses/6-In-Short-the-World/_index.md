@@ -7,7 +7,7 @@ view: 2
 weight: 6
 type: book
 image:
-  caption: ""
+  caption: "Photo by <a href=\"https://unsplash.com/@chrislawton?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Chris Lawton</a> on <a href=\"https://unsplash.com/s/photos/globe-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"
   focal_point: "smart"
 tags:
   - Short Story
