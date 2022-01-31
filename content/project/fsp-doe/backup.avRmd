@@ -1,8 +1,19 @@
 ---
 title: "A Design Of Experiments Class"
+subtitle: 
 author: "Arvind Venkatadri"
 date: "2022-01-30"
-output: html_document
+weight: 1
+output:
+  html_document:
+    theme: flatly
+    toc: TRUE
+    toc_float: TRUE
+    toc_depth: 2
+    number_sections: TRUE
+    code_folding: hide
+    code_download: TRUE
+
 ---
 
 ```{r setup, include=FALSE}
@@ -13,7 +24,7 @@ library(mosaic)
 
 ## Introduction
 
-This project is a quick analysis of the Design of Experiments class carried out in the Order and Chaos course, FSP-2021-2022, SMI MAHE, Bangalore. 
+This project is a quick analysis of the Design of Experiments class carried out in the Order and Chaos course, FSP-2021-2022, at SMI MAHE, Bangalore.  
 
 The methodology followed was that in A.J. Lawrance's paper [^1] describing a Statistics module based on the method of Design of Experiments. The inquiry relates to Short Term Memory (STM) among students.
 
@@ -37,19 +48,25 @@ The data was then "flattened" for each of the binary parameters; this was logica
 
 
 ## Data
+
 ```{r, reading-data}
-stm <- readxl::read_xlsx("Random Testers.xlsx",
+stm <- readxl::read_xlsx("RandomTesters.xlsx",
                          sheet = "Data",
                          range = "C31:H91") %>% 
   janitor::clean_names()
 stm
 ```
 
+The data has scores that have been combined into single columns for each setting for each of the parameters. For example, the column `syllable_2` contains STM scores for **all** tests that used SL = 2-syllables in their tests. The Word Length WL and Study Time ST go through all their combinations in this column. 
+The other columns are constructed similarly. 
+
+
 ## Basic Plots
 
-We will use Box Plots to compare the STM score distributions for each Parameter. To do this we need to `pivot_long` the adjacent columns ( e.g. `syllable_2` and syllable_5) and use these names as categorical variables:
+We will use Box Plots and Density Plots to compare the STM score distributions for each Parameter. To do this we need to `pivot_longer` the adjacent columns ( e.g. `syllable_2` and syllable_5) and use these names as categorical variables:
 
 ### Syllable Parameter SL
+
 ```{r plots-1}
 stm_syllable <- stm %>%
   select(contains("syllable")) %>%
@@ -80,6 +97,7 @@ patchwork::wrap_plots(p1 + p2, guides = "collect")
 
 
 ### Study Time Parameter ST
+
 ```{r plots-2}
 stm_studytime <- stm %>%
   select(contains("study")) %>%
@@ -110,6 +128,7 @@ patchwork::wrap_plots(p1 + p2, guides = "collect")
 
 
 ### Word List Length Parameter WL
+
 ```{r plots-3}
 stm_words <- stm %>% 
   select(contains("list")) %>% 
@@ -139,10 +158,10 @@ We wish to establish the significance of the effect size due to each of the Para
 
 Hence we go for a Permutation Test to check for significance of effect.
  
-On the other hand, as remarked in [^2], the non-parametric permutation test can be both *exact* and also **intuitively easier** for students to grasp, as I can testify from direct observation in this class. There is no need to discuss sampling distributions and means, t-tests and the like. Permutations are easily executed in R, using packages such as `mosaic` [^3].
+On the other hand, as remarked in Ernst[^2], the non-parametric permutation test can be both *exact* and also **intuitively easier** for students to grasp, as I can testify from direct observation in this class. There is no need to discuss sampling distributions and means, t-tests and the like. Permutations are easily executed in R, using packages such as `mosaic`[^3].
 
 
-```{r}
+```{r,shapiro-wilkes}
 shapiro.test(stm$syllable_2)
 shapiro.test(stm$syllable_5)
 
@@ -152,6 +171,8 @@ shapiro.test(stm$study_time_30)
 shapiro.test(stm$list_length_7)
 shapiro.test(stm$list_length_15)
 ```
+
+
 ## A Permutation Test
 
 We proceed with a Permutation Test for each of the Parameters. 
@@ -227,10 +248,10 @@ On the other hand, Syllable Count (SL) does not seem to affect the STM scores si
 
 # References
 
-[^1]. Lawrance, A. J. 1996. “A Design of Experiments Workshop as an Introduction to Statistics.” American Statistician 50 (2): 156–58. doi:10.1080/00031305.1996.10474364.
+[^1]: Lawrance, A. J. 1996. “A Design of Experiments Workshop as an Introduction to Statistics.” American Statistician 50 (2): 156–58. doi:10.1080/00031305.1996.10474364.
 
-[^2]. Ernst, Michael D. 2004. “Permutation Methods: A Basis for Exact Inference.” Statistical Science 19 (4): 676–85. doi:10.1214/088342304000000396.
+[^2]: Ernst, Michael D. 2004. “Permutation Methods: A Basis for Exact Inference.” Statistical Science 19 (4): 676–85. doi:10.1214/088342304000000396.
 
-[^3]. Pruim R, Kaplan DT, Horton NJ (2017). “The mosaic Package: Helping Students to 'Think with Data' Using R.” The R Journal, 9(1), 77–102. https://journal.r-project.org/archive/2017/RJ-2017-024/index.html.
+[^3]: Pruim R, Kaplan DT, Horton NJ (2017). “The mosaic Package: Helping Students to 'Think with Data' Using R.” The R Journal, 9(1), 77–102. https://journal.r-project.org/archive/2017/RJ-2017-024/index.html.
 
 
