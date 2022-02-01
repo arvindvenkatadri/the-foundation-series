@@ -1,6 +1,6 @@
 ---
 title: "England - V S Pritchett"
-subtitle:  ""
+subtitle:  "The Family Man"
 output: html_document
 date: 2021-12-28
 weight: 4
@@ -35,10 +35,9 @@ We will read his story <u>[**A Family Man**](/pdf/ISTW/VS-Pritchett-A-Family-Man
 - Lies and Lying
 - Affairs
 - "Collateral" damage to other people
-- "Satyam bruyat, Priyam Bruyaat..
-सत्यं ब्रूयात् प्रियं ब्रूयात् न ब्रूयात् सत्यमप्रियम् ।
-
-प्रियं च नानृतं ब्रूयात् एष धर्मः सनातनः ॥
+- "Satyam bruyat, Priyam Bruyaat..   
+    - सत्यं ब्रूयात् प्रियं ब्रूयात् न ब्रूयात् सत्यमप्रियम्
+    - प्रियं च नानृतं ब्रूयात् एष धर्मः सनातनः ॥
   
 
 ### Additional Material
