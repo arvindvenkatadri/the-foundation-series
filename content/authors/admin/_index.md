@@ -20,7 +20,7 @@ interests:
 organizations:
 - name: Srishti Manipal Institute of Art, Design, and Technology
   url: https://srishtimanipalinstitute.in
-role: Faculty Member, School of Foundation Studies
+role: Faculty Member, School of Foundation Studies, SMI, MAHE
 social:
 - icon: envelope
   icon_pack: fas
