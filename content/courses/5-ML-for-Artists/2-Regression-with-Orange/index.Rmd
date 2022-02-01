@@ -43,15 +43,6 @@ Interpolation:
   - On a "plane" with these points
 
 
-### Geogebra Activity
-
-$Y = mX + c$
-
-https://www.geogebra.org/m/nFJp7McJ
-
-
-
-
 ### Some Examples from Drama
 
 1. Legally Blonde: 
