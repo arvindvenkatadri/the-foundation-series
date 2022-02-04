@@ -17,10 +17,10 @@ summary: We will look at the basic models for Linear Regression.
 tags:
 - Machine Learning
 - tidymodels
-url_code: "code/course-related/example/regression.ows"
-url_pdf: ""
-url_slides: "slides/new/index.html"
-url_video: ""
+# url_code: "code/course-related/example/regression.ows"
+# url_pdf: ""
+# url_slides: "slides/new/index.html"
+# url_video: ""
 ---
 
 
