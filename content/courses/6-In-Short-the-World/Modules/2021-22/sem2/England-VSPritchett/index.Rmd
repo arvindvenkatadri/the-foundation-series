@@ -43,8 +43,8 @@ We will read his story <u>[**A Family Man**](/pdf/ISTW/VS-Pritchett-A-Family-Man
 ### Additional Material
 
 1. Adultery makes for good fiction! 
-- Ford Madox Ford, *The Good Soldier*
-- Jane Smiley, *The Age of Grief*
+  - Ford Madox Ford, *The Good Soldier*
+  - Jane Smiley, *The Age of Grief*
 
 ### Notes and References
 
@@ -54,4 +54,13 @@ We will read his story <u>[**A Family Man**](/pdf/ISTW/VS-Pritchett-A-Family-Man
 
 ### Song for the Story
 
+1. Whitney Houston (1985) : Saving All my Love for You 
+
 `r blogdown::shortcode("youtube", "7_S2lTmIecI")`
+
+
+2. Fleetwood Mac (1987) : Tell Me Lies
+
+< https://www.youtube.com/watch?v=nL_VvbgC6sA >
+
+
