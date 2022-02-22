@@ -81,3 +81,11 @@ markup:
     renderer:
       unsafe: true
     codeFences: false
+
+security:
+  funcs:
+    getenv:
+      - ^HUGO_
+      - ^WC_
+
+
