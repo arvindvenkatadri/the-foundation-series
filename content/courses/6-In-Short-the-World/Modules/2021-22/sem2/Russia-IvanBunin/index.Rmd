@@ -49,6 +49,7 @@ We will read Ivan Bunin's short story, <u>[**Sunstroke**](/pdf/ISTW/IvanBunin-Su
 1. The Map of the Story  
 
 ```{r,echo=FALSE,warning=FALSE,message=FALSE}
+
 library(tidyverse)
 library(sf)
 library(maps)
