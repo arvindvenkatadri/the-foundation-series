@@ -62,8 +62,9 @@ Listen to Leonard Nimoy discuss this project on NPR:
 <iframe src="https://www.npr.org/player/embed/15912659/15912667" width="100%" height="290" frameborder="0" scrolling="no" title="NPR embedded audio player"></iframe>
 
 
-### Song for the Story !!
+### Songs for the Story !!
 
+1. Song for the Black Hero of this story:  
 Title: What About Me?  
 Band: Moving Pictures  
 Band Location: Sydney, NSW, Australia  
@@ -71,12 +72,23 @@ Album: Days Of Innocence
 Composed By: Garry Frost, Frances Swan  
 Release Date:: January, 1982  
 Chart Position:   
-  - No.1 (Australia)  
-  - No.29 (US Billboard Hot 100)  
-  - No.46 (US Billboard Hot 100, 1989 re-release)    
-   
+- No.1 (Australia)  
+- No.29 (US Billboard Hot 100)  
+`r blogdown::shortcode("youtube", "OzQKECQgjW8")`  
 
-`r blogdown::shortcode("youtube", "OzQKECQgjW8")`
+
+2. Song for Cielito:  
+Title: Bette Davis Eyes  
+Artiste: Kim Carnes  
+Album: Mistaken Identity  
+Composed by: Donna Weiss and Jackie DeShannon  
+Year: 1981  
+Chart Position:  
+- No.1 (Australia)  
+- No.1 (US Billboard Hot 100)  
+- No. 10 (UK Singles Charts)
+`r blogdown::shortcode("youtube", "2Wdu5FYGTRs")`  
+
 
 
 [^1]:You should be able to log in to <u>[**JSTOR**](https://jstor.org)</u> from campus. 
