@@ -11,7 +11,6 @@ editor_options:
   chunk_output_type: inline
 ---
 
-<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
 
 
 <div id="references" class="section level2">
@@ -100,6 +99,14 @@ editor_options:
 </table>
 <p><strong>Variable type: factor</strong></p>
 <table>
+<colgroup>
+<col width="16%" />
+<col width="12%" />
+<col width="16%" />
+<col width="9%" />
+<col width="10%" />
+<col width="33%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">skim_variable</th>
@@ -138,7 +145,20 @@ editor_options:
 </tbody>
 </table>
 <p><strong>Variable type: numeric</strong></p>
-<table>
+<table style="width:100%;">
+<colgroup>
+<col width="13%" />
+<col width="7%" />
+<col width="10%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="30%" />
+</colgroup>
 <thead>
 <tr class="header">
 <th align="left">skim_variable</th>
@@ -259,12 +279,12 @@ penguin_split</code></pre>
 <pre><code>## # A tibble: 6 x 8
 ##   species island bill_length_mm bill_depth_mm flipper_length_~ body_mass_g sex  
 ##   &lt;fct&gt;   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;int&gt;       &lt;int&gt; &lt;fct&gt;
-## 1 Gentoo  Biscoe           52.1          17                230        5550 male 
-## 2 Adelie  Dream            38.8          20                190        3950 male 
-## 3 Adelie  Dream            35.6          17.5              191        3175 fema~
-## 4 Adelie  Torge~           36.2          16.1              187        3550 fema~
-## 5 Gentoo  Biscoe           46.7          15.3              219        5200 male 
-## 6 Gentoo  Biscoe           53.4          15.8              219        5500 male 
+## 1 Gentoo  Biscoe           46.2          14.9              221        5300 male 
+## 2 Adelie  Torge~           34.4          18.4              184        3325 fema~
+## 3 Adelie  Biscoe           35.5          16.2              195        3350 fema~
+## 4 Chinst~ Dream            50.2          18.8              202        3800 male 
+## 5 Adelie  Dream            37.5          18.5              199        4475 male 
+## 6 Gentoo  Biscoe           46.9          14.6              222        4875 fema~
 ## # ... with 1 more variable: year &lt;int&gt;</code></pre>
 <pre class="r"><code># Recipe
 penguin_recipe &lt;- penguins %&gt;% 
@@ -284,12 +304,12 @@ head(penguin_train_baked)</code></pre>
 <pre><code>## # A tibble: 6 x 8
 ##   island bill_length_mm bill_depth_mm flipper_length_~ body_mass_g sex      year
 ##   &lt;fct&gt;           &lt;dbl&gt;         &lt;dbl&gt;            &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;   &lt;dbl&gt;
-## 1 Biscoe          1.48        -0.0837            2.07        1.67  male   1.18  
-## 2 Dream          -0.950        1.44             -0.782      -0.319 male  -1.28  
-## 3 Dream          -1.53         0.170            -0.711      -1.28  fema~  1.18  
-## 4 Torge~         -1.42        -0.541            -0.997      -0.816 fema~ -0.0517
-## 5 Biscoe          0.495       -0.947             1.29        1.23  male  -1.28  
-## 6 Biscoe          1.72        -0.693             1.29        1.61  male   1.18  
+## 1 Biscoe          0.404        -1.15            1.43         1.36  male  -0.0517
+## 2 Torge~         -1.75          0.627          -1.21        -1.10  fema~ -1.28  
+## 3 Biscoe         -1.55         -0.490          -0.426       -1.06  fema~ -0.0517
+## 4 Dream           1.14          0.830           0.0737      -0.506 male   1.18  
+## 5 Dream          -1.19          0.678          -0.140        0.333 male   1.18  
+## 6 Biscoe          0.532        -1.30            1.50         0.830 fema~  1.18  
 ## # ... with 1 more variable: species &lt;fct&gt;</code></pre>
 </div>
 <div id="penguin-random-forest-model" class="section level3">
@@ -311,7 +331,6 @@ penguin_model</code></pre>
 penguin_fit</code></pre>
 <pre><code>## parsnip model object
 ## 
-## Fit time:  0ms 
 ## 
 ## Call:
 ##  randomForest(x = maybe_data_frame(x), y = y, ntree = ~100) 
@@ -319,12 +338,12 @@ penguin_fit</code></pre>
 ##                      Number of trees: 100
 ## No. of variables tried at each split: 2
 ## 
-##         OOB estimate of  error rate: 2.01%
+##         OOB estimate of  error rate: 1.51%
 ## Confusion matrix:
 ##           Adelie Chinstrap Gentoo class.error
-## Adelie        93         3      0  0.03125000
-## Chinstrap      1        33      0  0.02941176
-## Gentoo         0         0     69  0.00000000</code></pre>
+## Adelie        82         1      0  0.01204819
+## Chinstrap      2        41      0  0.04651163
+## Gentoo         0         0     73  0.00000000</code></pre>
 <pre class="r"><code># iris_ranger &lt;- 
 #   rand_forest(trees = 100) %&gt;% 
 #   set_mode(&quot;classification&quot;) %&gt;% 
@@ -341,11 +360,11 @@ predict(object = penguin_fit, new_data = penguin_test_baked) %&gt;%
 ## Columns: 9
 ## $ .pred_class       &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel~
 ## $ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse~
-## $ bill_length_mm    &lt;dbl&gt; -0.8215515, -0.6752636, -0.8764095, -1.7175649, -0.2~
-## $ bill_depth_mm     &lt;dbl&gt; 0.11940428, 0.42409105, 1.23658911, 1.99830605, 1.79~
-## $ flipper_length_mm &lt;dbl&gt; -1.0678666, -0.4257325, -0.4257325, -0.2116878, -0.2~
-## $ body_mass_g       &lt;dbl&gt; -0.50552542, -1.18857213, 0.58113979, 0.23961644, 0.~
-## $ sex               &lt;fct&gt; female, female, male, male, male, female, female, ma~
+## $ bill_length_mm    &lt;dbl&gt; -0.8946955, -0.6752636, -1.3335592, -0.9312674, -0.9~
+## $ bill_depth_mm     &lt;dbl&gt; 0.77955895, 0.42409105, 1.08424573, 0.32252879, 0.93~
+## $ flipper_length_mm &lt;dbl&gt; -1.4246077, -0.4257325, -0.5684290, -1.4246077, -0.4~
+## $ body_mass_g       &lt;dbl&gt; -0.56762058, -1.18857213, -0.94019151, -0.72285846, ~
+## $ sex               &lt;fct&gt; male, female, female, female, female, male, female, ~
 ## $ year              &lt;dbl&gt; -1.2818130, -1.2818130, -1.2818130, -1.2818130, -1.2~
 ## $ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel~</code></pre>
 <pre class="r"><code># Prediction Accuracy Metrics
@@ -355,8 +374,8 @@ predict(object = penguin_fit, new_data = penguin_test_baked) %&gt;%
 <pre><code>## # A tibble: 2 x 3
 ##   .metric  .estimator .estimate
 ##   &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;
-## 1 accuracy multiclass     0.993
-## 2 kap      multiclass     0.989</code></pre>
+## 1 accuracy multiclass     0.985
+## 2 kap      multiclass     0.976</code></pre>
 <pre class="r"><code># Prediction Probabilities
 penguin_fit_probs &lt;- 
   predict(penguin_fit, penguin_test_baked, type = &quot;prob&quot;) %&gt;%
@@ -364,15 +383,15 @@ penguin_fit_probs &lt;-
 glimpse(penguin_fit_probs)</code></pre>
 <pre><code>## Rows: 134
 ## Columns: 11
-## $ .pred_Adelie      &lt;dbl&gt; 0.97, 0.98, 0.99, 0.95, 0.88, 1.00, 1.00, 0.99, 0.99~
-## $ .pred_Chinstrap   &lt;dbl&gt; 0.03, 0.02, 0.01, 0.04, 0.10, 0.00, 0.00, 0.01, 0.01~
-## $ .pred_Gentoo      &lt;dbl&gt; 0.00, 0.00, 0.00, 0.01, 0.02, 0.00, 0.00, 0.00, 0.00~
+## $ .pred_Adelie      &lt;dbl&gt; 0.98, 0.98, 0.98, 0.99, 0.97, 0.99, 1.00, 0.99, 0.99~
+## $ .pred_Chinstrap   &lt;dbl&gt; 0.02, 0.02, 0.02, 0.01, 0.03, 0.00, 0.00, 0.00, 0.00~
+## $ .pred_Gentoo      &lt;dbl&gt; 0.00, 0.00, 0.00, 0.00, 0.00, 0.01, 0.00, 0.01, 0.01~
 ## $ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse~
-## $ bill_length_mm    &lt;dbl&gt; -0.8215515, -0.6752636, -0.8764095, -1.7175649, -0.2~
-## $ bill_depth_mm     &lt;dbl&gt; 0.11940428, 0.42409105, 1.23658911, 1.99830605, 1.79~
-## $ flipper_length_mm &lt;dbl&gt; -1.0678666, -0.4257325, -0.4257325, -0.2116878, -0.2~
-## $ body_mass_g       &lt;dbl&gt; -0.50552542, -1.18857213, 0.58113979, 0.23961644, 0.~
-## $ sex               &lt;fct&gt; female, female, male, male, male, female, female, ma~
+## $ bill_length_mm    &lt;dbl&gt; -0.8946955, -0.6752636, -1.3335592, -0.9312674, -0.9~
+## $ bill_depth_mm     &lt;dbl&gt; 0.77955895, 0.42409105, 1.08424573, 0.32252879, 0.93~
+## $ flipper_length_mm &lt;dbl&gt; -1.4246077, -0.4257325, -0.5684290, -1.4246077, -0.4~
+## $ body_mass_g       &lt;dbl&gt; -0.56762058, -1.18857213, -0.94019151, -0.72285846, ~
+## $ sex               &lt;fct&gt; male, female, female, female, female, male, female, ~
 ## $ year              &lt;dbl&gt; -1.2818130, -1.2818130, -1.2818130, -1.2818130, -1.2~
 ## $ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel~</code></pre>
 <pre class="r"><code># Confusion Matrix
@@ -386,9 +405,9 @@ penguin_fit$fit$confusion %&gt;% tidy()</code></pre>
 <pre><code>## # A tibble: 3 x 1
 ##   x[,&quot;Adelie&quot;] [,&quot;Chinstrap&quot;] [,&quot;Gentoo&quot;] [,&quot;class.error&quot;]
 ##          &lt;dbl&gt;          &lt;dbl&gt;       &lt;dbl&gt;            &lt;dbl&gt;
-## 1           93              3           0           0.0312
-## 2            1             33           0           0.0294
-## 3            0              0          69           0</code></pre>
+## 1           82              1           0           0.0120
+## 2            2             41           0           0.0465
+## 3            0              0          73           0</code></pre>
 <pre class="r"><code># Gain Curves
 penguin_fit_probs %&gt;% 
   yardstick::gain_curve(species, .pred_Adelie:.pred_Gentoo) %&gt;%
@@ -407,23 +426,23 @@ penguin_fit_probs%&gt;%
 <pre><code>## # A tibble: 333 x 2
 ##      Row Data    
 ##    &lt;int&gt; &lt;chr&gt;   
-##  1     1 Analysis
-##  2     4 Analysis
-##  3     5 Analysis
-##  4     6 Analysis
-##  5     8 Analysis
-##  6     9 Analysis
+##  1     2 Analysis
+##  2     5 Analysis
+##  3     7 Analysis
+##  4     8 Analysis
+##  5     9 Analysis
+##  6    10 Analysis
 ##  7    11 Analysis
-##  8    12 Analysis
-##  9    15 Analysis
-## 10    18 Analysis
+##  8    13 Analysis
+##  9    14 Analysis
+## 10    15 Analysis
 ## # ... with 323 more rows</code></pre>
 <pre class="r"><code>penguin_recipe %&gt;% broom::tidy()</code></pre>
 <pre><code>## # A tibble: 2 x 6
 ##   number operation type      trained skip  id             
 ##    &lt;int&gt; &lt;chr&gt;     &lt;chr&gt;     &lt;lgl&gt;   &lt;lgl&gt; &lt;chr&gt;          
-## 1      1 step      normalize TRUE    FALSE normalize_r68A6
-## 2      2 step      corr      TRUE    FALSE corr_Vkoc4</code></pre>
+## 1      1 step      normalize TRUE    FALSE normalize_Cm3oj
+## 2      2 step      corr      TRUE    FALSE corr_Y7rLc</code></pre>
 <pre class="r"><code># Following do not work for `random forest models` !! ;-()
 #penguin_model %&gt;% tidy()
 #penguin_fit %&gt;% tidy() 
@@ -446,16 +465,16 @@ penguin_model %&gt;% str()</code></pre>
 <pre><code>## # A tibble: 134 x 8
 ##    island  bill_length_mm bill_depth_mm flipper_length_~ body_mass_g sex    year
 ##    &lt;fct&gt;            &lt;dbl&gt;         &lt;dbl&gt;            &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt; &lt;dbl&gt;
-##  1 Torger~         -0.822        0.119            -1.07       -0.506 fema~ -1.28
-##  2 Torger~         -0.675        0.424            -0.426      -1.19  fema~ -1.28
-##  3 Torger~         -0.876        1.24             -0.426       0.581 male  -1.28
-##  4 Torger~         -1.72         2.00             -0.212       0.240 male  -1.28
-##  5 Torger~         -0.273        1.80             -0.283       0.364 male  -1.28
-##  6 Torger~         -1.75         0.627            -1.21       -1.10  fema~ -1.28
-##  7 Biscoe          -1.13         0.576            -1.92       -1.00  fema~ -1.28
-##  8 Biscoe          -1.15         0.780            -1.50       -0.754 male  -1.28
-##  9 Biscoe          -0.950        0.0178           -1.50       -0.506 male  -1.28
-## 10 Biscoe          -1.59         0.881            -0.997      -0.506 fema~ -1.28
+##  1 Torger~         -0.895         0.780           -1.42       -0.568 male  -1.28
+##  2 Torger~         -0.675         0.424           -0.426      -1.19  fema~ -1.28
+##  3 Torger~         -1.33          1.08            -0.568      -0.940 fema~ -1.28
+##  4 Torger~         -0.931         0.323           -1.42       -0.723 fema~ -1.28
+##  5 Torger~         -0.968         0.932           -0.426      -0.940 fema~ -1.28
+##  6 Biscoe          -1.15          0.780           -1.50       -0.754 male  -1.28
+##  7 Biscoe          -1.48          1.03            -0.854      -0.506 fema~ -1.28
+##  8 Biscoe          -1.06          0.475           -1.14       -0.319 male  -1.28
+##  9 Biscoe          -0.620         0.729           -1.28       -0.816 male  -1.28
+## 10 Biscoe          -1.11          0.729           -2.07       -1.31  fema~ -1.28
 ## # ... with 124 more rows, and 1 more variable: species &lt;fct&gt;</code></pre>
 </div>
 </div>
@@ -471,18 +490,18 @@ iris_split</code></pre>
 <pre class="r"><code>iris_split %&gt;% training() %&gt;% glimpse()</code></pre>
 <pre><code>## Rows: 90
 ## Columns: 5
-## $ Sepal.Length &lt;dbl&gt; 6.9, 5.5, 5.4, 5.8, 6.0, 6.5, 5.8, 5.8, 5.9, 5.1, 6.5, 5.~
-## $ Sepal.Width  &lt;dbl&gt; 3.2, 2.4, 3.0, 4.0, 3.4, 3.0, 2.8, 2.6, 3.2, 3.5, 3.0, 3.~
-## $ Petal.Length &lt;dbl&gt; 5.7, 3.7, 4.5, 1.2, 4.5, 5.8, 5.1, 4.0, 4.8, 1.4, 5.5, 4.~
-## $ Petal.Width  &lt;dbl&gt; 2.3, 1.0, 1.5, 0.2, 1.6, 2.2, 2.4, 1.2, 1.8, 0.3, 1.8, 1.~
-## $ Species      &lt;fct&gt; virginica, versicolor, versicolor, setosa, versicolor, vi~</code></pre>
+## $ Sepal.Length &lt;dbl&gt; 6.3, 6.1, 4.9, 6.3, 5.8, 6.5, 5.0, 7.1, 5.4, 6.4, 5.9, 7.~
+## $ Sepal.Width  &lt;dbl&gt; 3.3, 3.0, 2.4, 3.4, 2.6, 3.0, 3.4, 3.0, 3.9, 2.8, 3.0, 3.~
+## $ Petal.Length &lt;dbl&gt; 4.7, 4.6, 3.3, 5.6, 4.0, 5.8, 1.6, 5.9, 1.3, 5.6, 5.1, 5.~
+## $ Petal.Width  &lt;dbl&gt; 1.6, 1.4, 1.0, 2.4, 1.2, 2.2, 0.4, 2.1, 0.4, 2.2, 1.8, 1.~
+## $ Species      &lt;fct&gt; versicolor, versicolor, versicolor, virginica, versicolor~</code></pre>
 <pre class="r"><code>iris_split %&gt;% testing() %&gt;% glimpse()</code></pre>
 <pre><code>## Rows: 60
 ## Columns: 5
-## $ Sepal.Length &lt;dbl&gt; 5.4, 4.4, 4.3, 5.4, 5.7, 4.6, 5.1, 5.0, 5.0, 5.2, 4.7, 5.~
-## $ Sepal.Width  &lt;dbl&gt; 3.9, 2.9, 3.0, 3.9, 3.8, 3.6, 3.3, 3.0, 3.4, 3.4, 3.2, 4.~
-## $ Petal.Length &lt;dbl&gt; 1.7, 1.4, 1.1, 1.3, 1.7, 1.0, 1.7, 1.6, 1.6, 1.4, 1.6, 1.~
-## $ Petal.Width  &lt;dbl&gt; 0.4, 0.2, 0.1, 0.4, 0.3, 0.2, 0.5, 0.2, 0.4, 0.2, 0.2, 0.~
+## $ Sepal.Length &lt;dbl&gt; 5.0, 4.9, 5.4, 5.8, 5.7, 5.1, 5.4, 4.6, 4.8, 5.2, 5.2, 4.~
+## $ Sepal.Width  &lt;dbl&gt; 3.6, 3.1, 3.7, 4.0, 4.4, 3.5, 3.4, 3.6, 3.4, 3.5, 3.4, 3.~
+## $ Petal.Length &lt;dbl&gt; 1.4, 1.5, 1.5, 1.2, 1.5, 1.4, 1.7, 1.0, 1.9, 1.5, 1.4, 1.~
+## $ Petal.Width  &lt;dbl&gt; 0.2, 0.1, 0.2, 0.2, 0.4, 0.3, 0.2, 0.2, 0.2, 0.2, 0.2, 0.~
 ## $ Species      &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setosa, s~</code></pre>
 <div id="iris-data-pre-processing-creating-the-recipe" class="section level3">
 <h3>Iris Data Pre-Processing: Creating the Recipe</h3>
@@ -531,16 +550,16 @@ iris_training_baked</code></pre>
 <pre><code>## # A tibble: 90 x 4
 ##    Sepal.Length Sepal.Width Petal.Width Species   
 ##           &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;     
-##  1      1.36          0.286      1.55   virginica 
-##  2     -0.360        -1.57      -0.191  versicolor
-##  3     -0.483        -0.178      0.480  versicolor
-##  4      0.00818       2.14      -1.26   setosa    
-##  5      0.254         0.751      0.614  versicolor
-##  6      0.868        -0.178      1.42   virginica 
-##  7      0.00818      -0.643      1.69   virginica 
-##  8      0.00818      -1.11       0.0775 versicolor
-##  9      0.131         0.286      0.882  versicolor
-## 10     -0.851         0.983     -1.13   setosa    
+##  1       0.527       0.684        0.405 versicolor
+##  2       0.285      -0.0607       0.139 versicolor
+##  3      -1.17       -1.55        -0.393 versicolor
+##  4       0.527       0.932        1.47  virginica 
+##  5      -0.0780     -1.05        -0.127 versicolor
+##  6       0.770      -0.0607       1.20  virginica 
+##  7      -1.05        0.932       -1.19  setosa    
+##  8       1.50       -0.0607       1.07  virginica 
+##  9      -0.562       2.17        -1.19  setosa    
+## 10       0.648      -0.557        1.20  virginica 
 ## # ... with 80 more rows</code></pre>
 <pre class="r"><code>iris_testing_baked &lt;- 
   iris_split %&gt;% 
@@ -550,16 +569,16 @@ iris_testing_baked </code></pre>
 <pre><code>## # A tibble: 60 x 4
 ##    Sepal.Length Sepal.Width Petal.Width Species
 ##           &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt; &lt;fct&gt;  
-##  1       -0.483       1.91       -0.995 setosa 
-##  2       -1.71       -0.410      -1.26  setosa 
-##  3       -1.83       -0.178      -1.40  setosa 
-##  4       -0.483       1.91       -0.995 setosa 
-##  5       -0.115       1.68       -1.13  setosa 
-##  6       -1.46        1.22       -1.26  setosa 
-##  7       -0.851       0.519      -0.861 setosa 
-##  8       -0.974      -0.178      -1.26  setosa 
-##  9       -0.974       0.751      -0.995 setosa 
-## 10       -0.728       0.751      -1.26  setosa 
+##  1      -1.05         1.43        -1.46 setosa 
+##  2      -1.17         0.188       -1.59 setosa 
+##  3      -0.562        1.68        -1.46 setosa 
+##  4      -0.0780       2.42        -1.46 setosa 
+##  5      -0.199        3.41        -1.19 setosa 
+##  6      -0.926        1.18        -1.32 setosa 
+##  7      -0.562        0.932       -1.46 setosa 
+##  8      -1.53         1.43        -1.46 setosa 
+##  9      -1.29         0.932       -1.46 setosa 
+## 10      -0.805        1.18        -1.46 setosa 
 ## # ... with 50 more rows</code></pre>
 </div>
 <div id="iris-model-training-using-parsnip" class="section level3">
@@ -588,7 +607,7 @@ iris_ranger &lt;-
 <p><code>ranger</code> can generate random forest models for <code>classification</code>, <code>regression</code>, <code>survival</code>( time series, time to event stuff). <code>Extreme Forests</code> are also supported, wherein all points in the dataset are used ( instead of bootstrap samples) along with <code>feature bagging</code>.
 We can also run the same model using the <code>randomForest</code> package:</p>
 <pre class="r"><code>library(randomForest,quietly = TRUE)</code></pre>
-<pre><code>## randomForest 4.6-14</code></pre>
+<pre><code>## randomForest 4.7-1</code></pre>
 <pre><code>## Type rfNews() to see new features/changes/bug fixes.</code></pre>
 <pre><code>## 
 ## Attaching package: &#39;randomForest&#39;</code></pre>
@@ -616,9 +635,9 @@ We can also run the same model using the <code>randomForest</code> package:</p>
 <pre><code>## Rows: 60
 ## Columns: 5
 ## $ .pred_class  &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setosa, s~
-## $ Sepal.Length &lt;dbl&gt; -0.4828628, -1.7104801, -1.8332418, -0.4828628, -0.114577~
-## $ Sepal.Width  &lt;dbl&gt; 1.91212187, -0.41029336, -0.17805183, 1.91212187, 1.67988~
-## $ Petal.Width  &lt;dbl&gt; -0.9952411, -1.2634199, -1.3975092, -0.9952411, -1.129330~
+## $ Sepal.Length &lt;dbl&gt; -1.04668376, -1.16776543, -0.56235709, -0.07803041, -0.19~
+## $ Sepal.Width  &lt;dbl&gt; 1.42858178, 0.18753583, 1.67679097, 2.42141854, 3.4142553~
+## $ Petal.Width  &lt;dbl&gt; -1.4561563, -1.5890712, -1.4561563, -1.4561563, -1.190326~
 ## $ Species      &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setosa, s~</code></pre>
 </div>
 <div id="iris-classification-model-validation" class="section level3">
@@ -631,7 +650,7 @@ We can also run the same model using the <code>randomForest</code> package:</p>
 ##   .metric  .estimator .estimate
 ##   &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;
 ## 1 accuracy multiclass     0.967
-## 2 kap      multiclass     0.950</code></pre>
+## 2 kap      multiclass     0.949</code></pre>
 <p>We can also check the metrics for <code>randomForest</code> model:</p>
 <pre class="r"><code>predict(iris_rf, iris_testing_baked) %&gt;%
   dplyr::bind_cols(iris_testing_baked) %&gt;% 
@@ -639,8 +658,8 @@ We can also run the same model using the <code>randomForest</code> package:</p>
 <pre><code>## # A tibble: 2 x 3
 ##   .metric  .estimator .estimate
 ##   &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;
-## 1 accuracy multiclass     0.967
-## 2 kap      multiclass     0.950</code></pre>
+## 1 accuracy multiclass     0.95 
+## 2 kap      multiclass     0.924</code></pre>
 </div>
 <div id="iris-per-classifier-metrics" class="section level3">
 <h3>Iris Per-Classifier Metrics</h3>
@@ -652,12 +671,12 @@ We can also run the same model using the <code>randomForest</code> package:</p>
 glimpse(iris_ranger_probs)</code></pre>
 <pre><code>## Rows: 60
 ## Columns: 7
-## $ .pred_setosa     &lt;dbl&gt; 0.96227778, 0.93311905, 0.97197619, 0.96227778, 0.781~
-## $ .pred_versicolor &lt;dbl&gt; 0.023722222, 0.055873016, 0.017015873, 0.023722222, 0~
-## $ .pred_virginica  &lt;dbl&gt; 0.014000000, 0.011007937, 0.011007937, 0.014000000, 0~
-## $ Sepal.Length     &lt;dbl&gt; -0.4828628, -1.7104801, -1.8332418, -0.4828628, -0.11~
-## $ Sepal.Width      &lt;dbl&gt; 1.91212187, -0.41029336, -0.17805183, 1.91212187, 1.6~
-## $ Petal.Width      &lt;dbl&gt; -0.9952411, -1.2634199, -1.3975092, -0.9952411, -1.12~
+## $ .pred_setosa     &lt;dbl&gt; 0.9900000, 0.9142778, 0.9869444, 0.7730000, 0.8408333~
+## $ .pred_versicolor &lt;dbl&gt; 0.000000000, 0.062750000, 0.013055556, 0.141726190, 0~
+## $ .pred_virginica  &lt;dbl&gt; 0.010000000, 0.022972222, 0.000000000, 0.085273810, 0~
+## $ Sepal.Length     &lt;dbl&gt; -1.04668376, -1.16776543, -0.56235709, -0.07803041, -~
+## $ Sepal.Width      &lt;dbl&gt; 1.42858178, 0.18753583, 1.67679097, 2.42141854, 3.414~
+## $ Petal.Width      &lt;dbl&gt; -1.4561563, -1.5890712, -1.4561563, -1.4561563, -1.19~
 ## $ Species          &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setos~</code></pre>
 <pre class="r"><code>iris_rf_probs &lt;- 
   predict(iris_rf, iris_testing_baked, type = &quot;prob&quot;) %&gt;%
@@ -665,26 +684,26 @@ glimpse(iris_ranger_probs)</code></pre>
 glimpse(iris_rf_probs)</code></pre>
 <pre><code>## Rows: 60
 ## Columns: 7
-## $ .pred_setosa     &lt;dbl&gt; 0.99, 0.92, 0.99, 0.99, 0.88, 1.00, 0.93, 0.95, 1.00,~
-## $ .pred_versicolor &lt;dbl&gt; 0.01, 0.08, 0.01, 0.01, 0.12, 0.00, 0.06, 0.04, 0.00,~
-## $ .pred_virginica  &lt;dbl&gt; 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.01, 0.01, 0.00,~
-## $ Sepal.Length     &lt;dbl&gt; -0.4828628, -1.7104801, -1.8332418, -0.4828628, -0.11~
-## $ Sepal.Width      &lt;dbl&gt; 1.91212187, -0.41029336, -0.17805183, 1.91212187, 1.6~
-## $ Petal.Width      &lt;dbl&gt; -0.9952411, -1.2634199, -1.3975092, -0.9952411, -1.12~
+## $ .pred_setosa     &lt;dbl&gt; 1.00, 0.94, 0.99, 0.82, 0.89, 1.00, 0.94, 1.00, 1.00,~
+## $ .pred_versicolor &lt;dbl&gt; 0.00, 0.04, 0.01, 0.14, 0.08, 0.00, 0.05, 0.00, 0.00,~
+## $ .pred_virginica  &lt;dbl&gt; 0.00, 0.02, 0.00, 0.04, 0.03, 0.00, 0.01, 0.00, 0.00,~
+## $ Sepal.Length     &lt;dbl&gt; -1.04668376, -1.16776543, -0.56235709, -0.07803041, -~
+## $ Sepal.Width      &lt;dbl&gt; 1.42858178, 0.18753583, 1.67679097, 2.42141854, 3.414~
+## $ Petal.Width      &lt;dbl&gt; -1.4561563, -1.5890712, -1.4561563, -1.4561563, -1.19~
 ## $ Species          &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setos~</code></pre>
 <pre class="r"><code># Tabulating the probabilities
 ftable(iris_rf_probs$.pred_versicolor)</code></pre>
-<pre><code>##  0 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09 0.1 0.12 0.13 0.14 0.17 0.18 0.34 0.39 0.58 0.59 0.72 0.76 0.77 0.82 0.87 0.88 0.9 0.91 0.95 0.97 0.99 1
-##                                                                                                                                                         
-##  7    5    2    5    1    2    1    3    2    1   2    4    1    1    1    1    1    1    2    1    1    1    1    1    2    1   2    1    1    2    1 2</code></pre>
+<pre><code>##   0 0.01 0.02 0.03 0.04 0.05 0.06 0.07 0.08 0.09 0.1 0.13 0.14 0.16 0.46 0.47 0.67 0.7 0.74 0.77 0.85 0.89 0.9 0.91 0.93 0.96 0.97 0.98 0.99
+##                                                                                                                                             
+##  10    5    4    3    3    2    2    2    2    1   1    2    1    1    1    1    1   1    1    1    2    1   1    1    1    2    3    1    3</code></pre>
 <pre class="r"><code>ftable(iris_rf_probs$.pred_virginica)</code></pre>
-<pre><code>##   0 0.01 0.03 0.04 0.07 0.08 0.1 0.11 0.12 0.13 0.18 0.21 0.22 0.23 0.24 0.28 0.61 0.66 0.76 0.77 0.87 0.88 0.9 0.91 0.92 0.93 0.95 0.97 0.98 0.99
-##                                                                                                                                                   
-##  17    4    2    1    1    1   1    1    1    1    1    2    1    1    1    1    1    1    1    1    1    3   2    1    2    2    2    4    1    1</code></pre>
+<pre><code>##   0 0.01 0.02 0.03 0.04 0.06 0.09 0.1 0.11 0.15 0.23 0.26 0.3 0.49 0.53 0.82 0.84 0.87 0.9 0.92 0.93 0.96 0.97 0.98 0.99
+##                                                                                                                         
+##  16    7    3    4    3    1    1   2    1    1    1    1   2    1    1    1    1    1   2    1    4    2    1    1    1</code></pre>
 <pre class="r"><code>ftable(iris_rf_probs$.pred_setosa)</code></pre>
-<pre><code>##   0 0.01 0.02 0.05 0.06 0.19 0.21 0.86 0.88 0.92 0.93 0.95 0.98 0.99  1
-##                                                                        
-##  32    1    3    1    2    1    2    1    1    1    2    1    2    3  7</code></pre>
+<pre><code>##   0 0.01 0.03 0.04 0.05 0.82 0.89 0.94 0.96 0.97 0.98 0.99  1
+##                                                              
+##  23    8    1    1    3    1    1    4    2    2    2    4  8</code></pre>
 <pre><code>
 ### Iris Classifier: Gain and ROC Curves
 
@@ -695,13 +714,13 @@ We can plot gain and ROC curves for each of these models
 iris_ranger_probs %&gt;% 
   yardstick::gain_curve(Species, .pred_setosa:.pred_virginica) %&gt;% 
   glimpse()</code></pre>
-<pre><code>## Rows: 139
+<pre><code>## Rows: 140
 ## Columns: 5
 ## $ .level          &lt;chr&gt; &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;set~
-## $ .n              &lt;dbl&gt; 0, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18~
-## $ .n_events       &lt;dbl&gt; 0, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18~
-## $ .percent_tested &lt;dbl&gt; 0.000000, 5.000000, 6.666667, 8.333333, 10.000000, 11.~
-## $ .percent_found  &lt;dbl&gt; 0.00000, 16.66667, 22.22222, 27.77778, 33.33333, 38.88~</code></pre>
+## $ .n              &lt;dbl&gt; 0, 1, 2, 4, 5, 6, 7, 9, 10, 11, 13, 14, 16, 17, 18, 19~
+## $ .n_events       &lt;dbl&gt; 0, 1, 2, 4, 5, 6, 7, 9, 10, 11, 13, 14, 16, 17, 18, 19~
+## $ .percent_tested &lt;dbl&gt; 0.000000, 1.666667, 3.333333, 6.666667, 8.333333, 10.0~
+## $ .percent_found  &lt;dbl&gt; 0.000000, 4.166667, 8.333333, 16.666667, 20.833333, 25~</code></pre>
 <pre class="r"><code>iris_ranger_probs %&gt;% 
   yardstick::gain_curve(Species, .pred_setosa:.pred_virginica) %&gt;% 
   autoplot()</code></pre>
@@ -709,11 +728,11 @@ iris_ranger_probs %&gt;%
 <pre class="r"><code>iris_ranger_probs %&gt;% 
   yardstick::roc_curve(Species, .pred_setosa:.pred_virginica) %&gt;% 
   glimpse()</code></pre>
-<pre><code>## Rows: 142
+<pre><code>## Rows: 143
 ## Columns: 4
 ## $ .level      &lt;chr&gt; &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;~
-## $ .threshold  &lt;dbl&gt; -Inf, 0.000000000, 0.001000000, 0.003000000, 0.004666667, ~
-## $ specificity &lt;dbl&gt; 0.0000000, 0.0000000, 0.3333333, 0.3571429, 0.4047619, 0.4~
+## $ .threshold  &lt;dbl&gt; -Inf, 0.00000000, 0.00400000, 0.00500000, 0.00625000, 0.01~
+## $ specificity &lt;dbl&gt; 0.0000000, 0.0000000, 0.2777778, 0.3055556, 0.3611111, 0.3~
 ## $ sensitivity &lt;dbl&gt; 1.0000000, 1.0000000, 1.0000000, 1.0000000, 1.0000000, 1.0~</code></pre>
 <pre class="r"><code>iris_ranger_probs %&gt;% 
   yardstick::roc_curve(Species, .pred_setosa:.pred_virginica) %&gt;% 
@@ -722,13 +741,13 @@ iris_ranger_probs %&gt;%
 <pre class="r"><code>iris_rf_probs %&gt;% 
   yardstick::gain_curve(Species, .pred_setosa:.pred_virginica) %&gt;% 
   glimpse()</code></pre>
-<pre><code>## Rows: 80
+<pre><code>## Rows: 70
 ## Columns: 5
 ## $ .level          &lt;chr&gt; &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;set~
-## $ .n              &lt;dbl&gt; 0, 7, 10, 12, 13, 15, 16, 17, 18, 20, 21, 23, 24, 27, ~
-## $ .n_events       &lt;dbl&gt; 0, 7, 10, 12, 13, 15, 16, 17, 18, 18, 18, 18, 18, 18, ~
-## $ .percent_tested &lt;dbl&gt; 0.000000, 11.666667, 16.666667, 20.000000, 21.666667, ~
-## $ .percent_found  &lt;dbl&gt; 0.00000, 38.88889, 55.55556, 66.66667, 72.22222, 83.33~</code></pre>
+## $ .n              &lt;dbl&gt; 0, 8, 12, 14, 16, 18, 22, 23, 24, 27, 28, 29, 37, 60, ~
+## $ .n_events       &lt;dbl&gt; 0, 8, 12, 14, 16, 18, 22, 23, 24, 24, 24, 24, 24, 24, ~
+## $ .percent_tested &lt;dbl&gt; 0.000000, 13.333333, 20.000000, 23.333333, 26.666667, ~
+## $ .percent_found  &lt;dbl&gt; 0.00000, 33.33333, 50.00000, 58.33333, 66.66667, 75.00~</code></pre>
 <pre class="r"><code>iris_rf_probs %&gt;% 
   yardstick::gain_curve(Species, .pred_setosa:.pred_virginica) %&gt;% 
   autoplot()</code></pre>
@@ -736,11 +755,11 @@ iris_ranger_probs %&gt;%
 <pre class="r"><code>iris_rf_probs %&gt;% 
   yardstick::roc_curve(Species, .pred_setosa:.pred_virginica) %&gt;% 
   glimpse()</code></pre>
-<pre><code>## Rows: 83
+<pre><code>## Rows: 73
 ## Columns: 4
 ## $ .level      &lt;chr&gt; &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;, &quot;setosa&quot;~
-## $ .threshold  &lt;dbl&gt; -Inf, 0.00, 0.01, 0.02, 0.05, 0.06, 0.19, 0.21, 0.86, 0.88~
-## $ specificity &lt;dbl&gt; 0.0000000, 0.0000000, 0.7619048, 0.7857143, 0.8571429, 0.8~
+## $ .threshold  &lt;dbl&gt; -Inf, 0.00, 0.01, 0.03, 0.04, 0.05, 0.82, 0.89, 0.94, 0.96~
+## $ specificity &lt;dbl&gt; 0.0000000, 0.0000000, 0.6388889, 0.8611111, 0.8888889, 0.9~
 ## $ sensitivity &lt;dbl&gt; 1.0000000, 1.0000000, 1.0000000, 1.0000000, 1.0000000, 1.0~</code></pre>
 <pre class="r"><code>iris_rf_probs %&gt;% 
   yardstick::roc_curve(Species, .pred_setosa:.pred_virginica) %&gt;% 
@@ -755,9 +774,9 @@ iris_ranger_probs %&gt;%
   glimpse()</code></pre>
 <pre><code>## Rows: 60
 ## Columns: 5
-## $ .pred_setosa     &lt;dbl&gt; 0.96227778, 0.93311905, 0.97197619, 0.96227778, 0.781~
-## $ .pred_versicolor &lt;dbl&gt; 0.023722222, 0.055873016, 0.017015873, 0.023722222, 0~
-## $ .pred_virginica  &lt;dbl&gt; 0.014000000, 0.011007937, 0.011007937, 0.014000000, 0~
+## $ .pred_setosa     &lt;dbl&gt; 0.9900000, 0.9142778, 0.9869444, 0.7730000, 0.8408333~
+## $ .pred_versicolor &lt;dbl&gt; 0.000000000, 0.062750000, 0.013055556, 0.141726190, 0~
+## $ .pred_virginica  &lt;dbl&gt; 0.010000000, 0.022972222, 0.000000000, 0.085273810, 0~
 ## $ .pred_class      &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setos~
 ## $ Species          &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setos~</code></pre>
 <pre class="r"><code>predict(iris_ranger, iris_testing_baked, type = &quot;prob&quot;) %&gt;% 
@@ -768,9 +787,9 @@ iris_ranger_probs %&gt;%
 ##   .metric     .estimator .estimate
 ##   &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
 ## 1 accuracy    multiclass     0.967
-## 2 kap         multiclass     0.950
-## 3 mn_log_loss multiclass     0.196
-## 4 roc_auc     hand_till      0.993</code></pre>
+## 2 kap         multiclass     0.949
+## 3 mn_log_loss multiclass     0.167
+## 4 roc_auc     hand_till      0.999</code></pre>
 <pre class="r"><code># And for the `randomForest`method
 
 predict(iris_rf, iris_testing_baked, type = &quot;prob&quot;) %&gt;% 
@@ -779,9 +798,9 @@ predict(iris_rf, iris_testing_baked, type = &quot;prob&quot;) %&gt;%
   glimpse()</code></pre>
 <pre><code>## Rows: 60
 ## Columns: 5
-## $ .pred_setosa     &lt;dbl&gt; 0.99, 0.92, 0.99, 0.99, 0.88, 1.00, 0.93, 0.95, 1.00,~
-## $ .pred_versicolor &lt;dbl&gt; 0.01, 0.08, 0.01, 0.01, 0.12, 0.00, 0.06, 0.04, 0.00,~
-## $ .pred_virginica  &lt;dbl&gt; 0.00, 0.00, 0.00, 0.00, 0.00, 0.00, 0.01, 0.01, 0.00,~
+## $ .pred_setosa     &lt;dbl&gt; 1.00, 0.94, 0.99, 0.82, 0.89, 1.00, 0.94, 1.00, 1.00,~
+## $ .pred_versicolor &lt;dbl&gt; 0.00, 0.04, 0.01, 0.14, 0.08, 0.00, 0.05, 0.00, 0.00,~
+## $ .pred_virginica  &lt;dbl&gt; 0.00, 0.02, 0.00, 0.04, 0.03, 0.00, 0.01, 0.00, 0.00,~
 ## $ .pred_class      &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setos~
 ## $ Species          &lt;fct&gt; setosa, setosa, setosa, setosa, setosa, setosa, setos~</code></pre>
 <pre class="r"><code>predict(iris_rf, iris_testing_baked, type = &quot;prob&quot;) %&gt;% 
@@ -792,8 +811,8 @@ predict(iris_rf, iris_testing_baked, type = &quot;prob&quot;) %&gt;%
 ##   .metric     .estimator .estimate
 ##   &lt;chr&gt;       &lt;chr&gt;          &lt;dbl&gt;
 ## 1 accuracy    multiclass     0.967
-## 2 kap         multiclass     0.950
-## 3 mn_log_loss multiclass     0.175
-## 4 roc_auc     hand_till      0.990</code></pre>
+## 2 kap         multiclass     0.949
+## 3 mn_log_loss multiclass     0.128
+## 4 roc_auc     hand_till      0.999</code></pre>
 </div>
 </div>
