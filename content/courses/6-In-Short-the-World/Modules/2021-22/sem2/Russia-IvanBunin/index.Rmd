@@ -48,7 +48,7 @@ We will read Ivan Bunin's short story, <u>[**Sunstroke**](/pdf/ISTW/IvanBunin-Su
 
 1. The Map of the Story  
 
-```{r,echo=FALSE,warning=FALSE,message=FALSE}
+```{r,echo=FALSE,warning=FALSE,message=FALSE, fig.width= 7}
 
 library(tidyverse)
 library(sf)
@@ -151,9 +151,11 @@ bunin_map <- tm_shape(bunin_world, bbox = volga_bb_bigger) +
     auto.placement = TRUE
   ) +
   
-  tm_layout(main.title = "World from Ivan Bunin\'s story \"Sunstroke\"",
+  tm_layout(main.title = "World from Ivan Bunin\'s story \n \"Sunstroke\"",
+            main.title.position = "center",
             fontface = "italic", 
             fontfamily = "serif",
+            title.size = 4,
             bg.color = "skyblue")
 bunin_map
 # tmap_bunin <- tmap_leaflet(bunin_map, mode = "view", show = FALSE,add.titles = FALSE) %>% setView(1249033,2682288,zoom=16)%>% fitBounds(25,35,55,60) %>% clearBounds() #https://tlorusso.github.io/geodata_workshop/tmap_package#interactive-map-with-leaflet-and-tmap
@@ -167,11 +169,12 @@ bunin_map
 
 
 
-### Notes and References  
-
-
-
-
 ### Song for the Story !!
 
-Naah. 
+A [**torch ballad**](https://en.wikipedia.org/wiki/Torch_song) by Phil Collins!
+
+
+`r blogdown::shortcode("youtube", "Cq7Je8uveKE")`
+
+
+### Notes and References  
