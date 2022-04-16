@@ -113,9 +113,11 @@ bunin_cities <-
       "Rostov-on-Don"))
 
 anapa <- tibble(name = "Anapu", country.etc = "Russia", pop = 0, lat = 44.97284609498404, long = 37.32939127799273, capital = 0) 
+seb <- tibble(name = "Sebastopol", country.etc = "Russia", pop = 0, lat =44.705451858013014, long = 33.57323774328175, capital = 0) 
     
 bunin_cities <- bunin_cities %>% 
       rbind(anapa) %>% 
+  rbind(seb) %>% 
   st_as_sf(coords = c("long", "lat"))
 
 bunin_map <- tm_shape(bunin_world, bbox = volga_bb_bigger) +
