@@ -1,0 +1,55 @@
+---
+title: "India - Bharati Mukherjee"
+subtitle:  "Courtly Vision"
+output: html_document
+date: 2021-12-28
+weight: 4
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+```
+
+
+## India - Bharati Mukherjee
+
+
+
+
+### Story
+
+We will read a sombre but enlightening story by this great Writer. 
+
+<u>[**A Choice of Butchers**](/pdf/ISTW/A-Choice-of-Butchers.pdf)</u>
+
+### Additional Material
+
+Quoted from the <u>[**LitHub Website**](https://lithub.com/)</u>
+
+> One of his stories that has always spoken to me is “A Choice of Butchers.” Reading it again, I prepared myself in advance for the emotional impact it would have on me, only to experience its tragic force more acutely. He handles the intersection of childhood with the adult world so beautifully. To me this is a story both about the loss of innocence and, at the same time, the ongoing state of innocence that can betray us when we are young.
+I cherish the dreary details of the house, the oatmeal wallpaper, the way he describes domestic spaces and habits, and people’s physical traits. And that uncommon, perfect word at the end to describe the father: “rumbustiousness.” The story is layered and ambiguous, elegiac, brilliantly understated, impossible not to read in one sitting. It articulates the terrifying resentment, disappointment, and anger we can feel towards our parents, and the confusion and distress evoked by those very feelings.
+–Jhumpa Lahiri
+
+# Themes
+
+- Families
+- Adults and Children
+- Parents are human too
+- Petty Jealousy
+- Personal Folly
+- "From the Mouths of Babes"
+
+
+### Notes and References
+
+1. <u>[**7 Writers share their favourite William Trevor story**](https://lithub.com/7-writers-share-their-favorite-william-trevor-story/)</u>
+
+2. Another good "Dad" story is this one by Grace Paley:<u>[**A Conversation with My Father**](/pdf/ISTW/AConversationWithMyFather-GracePaley.pdf)</u>
+
+
+### Song for the Story
+
+Billy Currington's Country hit from 2008, *Walk a Little Straighter, Daddy*
+
+`r blogdown::shortcode("youtube", "U1no7Or9BeI")`
