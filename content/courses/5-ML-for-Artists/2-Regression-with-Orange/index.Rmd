@@ -4,7 +4,7 @@ subtitle:
 date: "2021-08-09"
 external_link: ""
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: The Tight Rope Walker (Seiltänzer) (1923) by Paul Klee
   focal_point: Smart
 weight: 3
 # links:
@@ -35,12 +35,13 @@ library(reshape2)
 
 ### Introduction: Mixing Colours
 
-Interpolation: 
-- between TWO colours, both colours inclusive using a straight line between them 
-- between several different colours?
-  - by mixing "equal proportions" of each
-  - Proportions based on "distance" from each colour
-  - On a "plane" with these points
+Interpolation:   
+
+ - between TWO colours, both colours inclusive using a straight line between them  
+ - between several different colours?  
+    - by mixing "equal proportions" of each  
+    - Proportions based on "distance" from each colour  
+    - On a "plane" with these points  
 
 
 ### Some Examples from Drama
@@ -73,7 +74,7 @@ knitr::include_graphics("LinearRegression.png")
 
 Let us "draw inspiration" from the picture above, and see if we can replicate it. We will fire up Orange, **paint some data** and see if we can fit a **linear regression ML model** to it. 
 
-Here is the Orange file for you to download. Open [**this file**](LinearRegression.ows) in Orange. 
+Here is the Orange file for you to download. Open <u>[**this file**](LinearRegression.ows)</u> in Orange. 
 
 
 ### Regression Plane
@@ -108,7 +109,7 @@ scatter3D(x, y, z, pch = 18, cex = 2,
 
 ### Interactive Regression Plane
 
-```{r echo=FALSE}
+```{r echo=FALSE,warning=FALSE}
 #load data
 
 my_df <- penguins %>% drop_na()
@@ -116,7 +117,7 @@ penguin_lm <- lm(body_mass_g ~ 0 + flipper_length_mm + bill_length_mm, data = my
 ```
 
 
-```{r echo=FALSE}
+```{r echo=FALSE,warning=FALSE}
 #Graph Resolution (more important for more complex shapes)
 graph_reso <- 0.5
 
@@ -132,7 +133,7 @@ penguin_lm_surface <- acast(penguin_lm_surface, bill_length_mm ~ flipper_length_
 ```
 
 
-```{r echo=FALSE}
+```{r echo=FALSE,warning=FALSE}
 hcolors=c("red","blue","green")[my_df$species]
 penguins_plot <- plot_ly(my_df, 
                      x = ~flipper_length_mm, 
