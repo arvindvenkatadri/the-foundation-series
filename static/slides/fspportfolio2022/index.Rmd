@@ -105,7 +105,7 @@ class: split-60 hide-slide-number with-thick-border
 .content[
 .split-40[
 .row[.content[
-# What I Teach in CE
+# How I Teach in CE
 
 ### **Understandings** Approach: Big Understandings 
 ### **Dispositions** Approach: Modelling and Applying 
@@ -172,7 +172,7 @@ class: split-two
 ## Flow and Play
 ## Creative Problem Solving 
 ## de Bono Methods
-## TRIZ .yellow[ New Classroom Games (Titanic), TRIZ related Experiences]
+## TRIZ .yellow[ New Classroom Games, TRIZ related Experiences]
 ]
 ]
 ]
@@ -258,7 +258,7 @@ class: bg-red split-30 hide-slide-number
 .column.bg-white[
 .split-two[
 .column[
-.content[
+.content.vmiddle.center[
 ```{r echo=FALSE}
 knitr::include_graphics("images/Ananya-Design-1.png")
 ```
@@ -271,7 +271,7 @@ knitr::include_graphics("images/Ananya-Design-2.png")
 ]
 
 .column[
-.content[
+.content.vmiddle.center[
 ```{r echo=FALSE, out.height="600px"}
 knitr::include_graphics("images/Ananya-Analysis.png")
 
@@ -297,13 +297,14 @@ class: bg-red split-30 hide-slide-number
 ]
 
 .column.bg-white[
+.content.vmiddle.center[
 ```{r echo=FALSE, out.height="600px", fig.cap="TRIZ Solutions for the Joint Family - Mahi Agarwal"}
 knitr::include_graphics("images/Mahi-poster.png")
 
 ```
 ]
 ]
-
+]
 
 ---
 
@@ -505,11 +506,13 @@ class: bg-red split-30 hide-slide-number
 .split-30[
 
 .row[
+.content.vmiddle[
 ## Rishika Saboo
 http://u.pc.cd/60ArtalK
 
 ## Mridula Gopal
 http://u.pc.cd/8JzctalK
+]
 ]
 
 .row[
@@ -568,9 +571,8 @@ class: shuriken-reverse-100 white with-thick-border border-double
 
 ]]
 .blade3.bg-deep-purple[.content.center[
-`r anicon::faa("wifi")` https://we-r-us.netlify.app <br>
+`r anicon::faa("wifi")` https://the-foundation-series.netlify.app <br>
 `r anicon::faa("wifi")` https://r-for-artists.netlify.app <br>
-`r anicon::faa("wifi")` https://arvindvenkatadri.netlify.app
 
 ]]
 .blade4.bg-orange[.content.sideways-rl[.center[
