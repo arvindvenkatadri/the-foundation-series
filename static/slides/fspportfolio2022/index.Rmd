@@ -157,7 +157,7 @@ The 8 TRIZ Laws of Evolution of a Product; TRIZ Contradictions Matrix; TRIZ 40 I
 
 ---
 
-class: split-two
+class: split-two 
 
 
 .column.bg-red[
@@ -179,18 +179,28 @@ class: split-two
 
 
 
-.column.bg-main3[.content[
-# Course Modules
-### Idea of Flow, Zone of Play, Boredom and Creative Problem Solving
-### Pierre Bourdieu "Cultural Capital"
-### Six Hats Method of de Bono
-### JP Guilford, Seymour Papert and Constructionism / Metaphor Making
-### Metaphors as a gateway to TRIZ
-### Problems as Contradictions (Technical and Physical Contradictions)
-### Resource Mentality: Titanic Game / Candle Game 
-### Ideal Final Result
-### Contradiction Matrix
-### 39 TRIZ Metaphors, 40 TRIZ Inventive Principles, 6 TRIZ Separation Principles
+.column.bg-red[.content[
+# Course Modules  
+
+### Understandings: 
+- Idea of Flow, Zone of Play, Boredom and Creative Problem Solving;
+- Pierre Bourdieu "Cultural Capital"
+- JP Guilford, Seymour Papert and Constructionism / Metaphor Making
+- "Generalized" Problm Solving in TRIZ
+
+### Dispositions:
+- Metaphors as a gateway to Problem Solving
+- Problems as Contradictions (Administrative, Technical, and Physical Contradictions in TRIZ)
+- Resource Mentality: Titanic Game / Candle Game
+- Six Hats Method of de Bono
+- Ideal Final Result in TRIZ
+
+### Skills:
+- Ishikawa Diagram, Entities, and their Parameters
+- Contradiction Matrix
+- 39 TRIZ Metaphors
+- 40 TRIZ Inventive Principles
+- 6 TRIZ Separation Principles
 ]]
 
 ---
@@ -225,9 +235,11 @@ class: bg-red split-30 hide-slide-number
 .content.vmiddle.center[
 # FSP : Play and Invent
 # TRIZ
-### Using the Contradiction Matrix-1
-### Inventive Principles
-### Segmentation, Merging, Phase transitions, Self service
+## Using the Contradiction Matrix-1
+### Inventive Principles:
+### *Segmentation*, 
+### *Merging*, 
+### *Phase Transitions*, *Self Service*
 ]
 ]
 
@@ -249,8 +261,12 @@ class: bg-red split-30 hide-slide-number
 .content.vmiddle.center[
 # FSP : Play and Invent
 # TRIZ
-### Using the Contradiction Matrix-2
-### Inventive Principles: Segmentation, Local Quality, Merging, Phase transitions, Self service
+## Using the Contradiction Matrix-2
+### Inventive Principles: 
+### *Segmentation*, 
+### *Local Quality*, 
+### *Merging*, 
+### *Phase Transitions, Self Service*
 ]
 ]
 
@@ -291,7 +307,11 @@ class: bg-red split-30 hide-slide-number
 # FSP : Play and Invent
 # TRIZ
 ### Using the Contradiction Matrix-3
-### Inventive Principles:Blessing in Disguise, Composite Materials, Local Quality, Equipotentiality, Preliminary Anti-Action
+### Inventive Principles:
+### *Blessing in Disguise*, 
+### *Composite Materials*, 
+### *Local Quality*, 
+### *Equipotentiality, Preliminary Anti-Action*
 ]
 ]
 
@@ -328,17 +348,27 @@ knitr::include_graphics(path = "images/Stag.jpg")
 
 .column.bg-main3[
 .content[
-## Big Ideas
-### 4As of Complexity: Agents, Actions, Again, Aggregation
-### Game Theory: Prisoners' Dilemma, Stag Hunt, Chicken
-### Segregation, Schelling Focus Points, Hotelling's Phenomenon
-### Spatial Organization: Proximity Models, Voronoi/Delaunay Models
-### Randomness, Probability and Belief
-### Hypothesis Testing (Short Term Memory: Factors, Effect Sizes, p-values)
-### Permutation Tests in Excel
-### Proximity in Data: Machine Learning with zero-coding
-### Classification (Random Forests)
-### Linear Regression
+## Course Modules  
+
+### Understandings:
+- 4As of Complexity: Agents, Actions, Again, Aggregation
+- Game Theory: Prisoners' Dilemma, Stag Hunt, Chicken
+- Segregation, Schelling Focus Points, Hotelling's Phenomenon
+
+### Dispositions:
+- Rewards, Risks, Regrets, and Retributions in Game Theory
+- Bias
+- Proximity in Space and in Data
+- Randomness, Probability and Belief
+- Predictions and Inference
+
+### Skills:
+- Voronoi/Delaunay Models in Geogebra
+- Hypothesis Testing (Short Term Memory: Factors, Effect Sizes, p-values)
+- Permutation Tests in Excel
+- Machine Learning with zero-coding
+  1. Classification (Random Forests)
+  2. Linear Regression
 ]]
 
 ---
