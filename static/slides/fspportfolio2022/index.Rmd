@@ -180,18 +180,17 @@ class: split-two
 
 
 .column.bg-main3[.content[
-# Big Ideas
+# Course Modules
 ### Idea of Flow, Zone of Play, Boredom and Creative Problem Solving
+### Pierre Bourdieu "Cultural Capital"
 ### Six Hats Method of de Bono
 ### JP Guilford, Seymour Papert and Constructionism / Metaphor Making
 ### Metaphors as a gateway to TRIZ
 ### Problems as Contradictions (Technical and Physical Contradictions)
+### Resource Mentality: Titanic Game / Candle Game 
 ### Ideal Final Result
-### Resource Mentality: Titanic Game / Candle Game
 ### Contradiction Matrix
-### 39 TRIZ Metaphors 
-### 40 TRIZ Inventive Principles
-### 6 Separation Principles
+### 39 TRIZ Metaphors, 40 TRIZ Inventive Principles, 6 TRIZ Separation Principles
 ]]
 
 ---
@@ -251,7 +250,7 @@ class: bg-red split-30 hide-slide-number
 # FSP : Play and Invent
 # TRIZ
 ### Using the Contradiction Matrix-2
-### Inventive Principles:Segmentation, Merging, Phase transitions, Self service
+### Inventive Principles: Segmentation, Local Quality, Merging, Phase transitions, Self service
 ]
 ]
 
