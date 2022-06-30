@@ -8,7 +8,7 @@ baseurl: 'https://the-foundation-series.netlify.app' # Website URL
 copyright: '© {year} Arvind Venkatadri'
 
 # Name of Academic theme folder in `themes/`.
-theme: "hugo-academic"
+theme: "starter-hugo-academic"
 ############################
 ## LANGUAGE
 ############################

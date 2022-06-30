@@ -1,0 +1,44 @@
+---
+title: "\U0001F578 No Man is an Island"
+subtitle: "Part of a Whole"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+weight: 4
+tags:
+- Pie Charts
+- Mosaic Charts
+- Venn Diagrams
+- Tree Charts and Dendrograms
+- Parliament and Waffle Charts
+
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+external_link: ""
+links:
+# - icon: linkedin
+#   icon_pack: fab
+#   name: 
+#   url: https://linkedin.com/arvindvenkatadri
+# - icon: twitter
+#   icon_pack: fab
+#   name: 
+#   url: https://twitter.com/arvind_v
+slides: ""
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+
+```
+
+## An Example
+
+
+
+## What is the Story here?
