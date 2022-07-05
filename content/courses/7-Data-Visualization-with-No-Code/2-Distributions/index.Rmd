@@ -1,0 +1,79 @@
+---
+title: "\U0001F576 Happy Data are all alike"
+subtitle: "Distributions"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+weight: 1
+summary: "The nature of Data, and some Basic graphs"
+tags:
+- Qual and Quant Variables
+- Bar Charts, Histograms
+- Box and Violin Plots
+- Density Plots
+- Beeswarm Plots
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+external_link: ""
+links:
+# - icon: linkedin
+#   icon_pack: fab
+#   name: 
+#   url: https://linkedin.com/arvindvenkatadri
+# - icon: twitter
+#   icon_pack: fab
+#   name: 
+#   url: https://twitter.com/arvind_v
+slides: ""
+url_code: "https://schoolofdata.org/handbook/courses/what-is-data/"
+url_pdf: ""
+url_slides: "slides/new/index.html"
+url_video: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+
+```
+
+
+
+## What are Data Types??
+
+https://www.youtube.com/watch?v=dwFsRZv4oHA
+
+`r blogdown::shortcode("youtube", "dwFsRZv4oHA")`
+
+
+In more detail:
+
+`r blogdown::shortcode("youtube", "hZxnzfnt5v8")`
+
+## What are Basic Data Graphs
+
+Some of the very basic and commonly used plots for data are:
+- Pareto or Bar graph  
+- Pie Chart  
+- Line Graph  
+- Scatter Plot  
+- Box Plot  
+
+
+## What Tool are we going to be using?
+
+Fire up this website in your browser:
+
+<https://www.datawrapper.de/>
+
+This is a #NoCode #NoInstallation browser-only tool that is free for us to use. 
+
+Let us play with this tool today and try to make as many visualizations and explanations as possible. 
+
+
+
+## An Example
+
+
+
+## What is the Story here?

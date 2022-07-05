@@ -1,0 +1,123 @@
+---
+title: "\U0001F5FA The Map is Not the Territory"
+subtitle: "Maps"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+weight : 6
+summary: "Geospatial Data and how it varies based on location"
+tags:
+- Maps
+- Cartograms
+- Chloropleth Maps
+
+featured: no
+image:
+  placement: 2
+  caption: 'Image credit: [**Alice In Wonderland dot Net**](https://www.alice-in-wonderland.net/)'
+  focal_point: ""
+  preview_only: true
+projects: []
+output:
+  html_document:
+    toc_float: true
+    theme: flatly
+    toc: true
+    code_folding: true
+links:
+# - icon: flask
+#   icon_pack: fas
+#   name: lab
+#   url: https://r-for-artists.netlify.app/labs/06-Grammar-of-Maps.html
+#   
+# - icon: magic
+#   icon_pack: fas
+#   name: Introduction Slides
+#   url: https://r-for-artists.netlify.app/slides/06-Spatial-Data-in-R.html
+---
+
+![](featured.jpg)
+
+
+```{r setup, include=FALSE}
+library(blogdown)
+```
+
+
+# Introduction
+
+
+First; let us watch a short, noisy video on maps:
+
+Maps That Will Change The Way You See The World:(https://www.youtube.com/watch?v=YH2sAbXv7p4)
+
+` r blogdown::shortcode("youtube", "YH2sAbXv7p4")`
+
+
+## An Example
+
+Here is a UFO Sighting dataset, containing location and text descriptions. <https://github.com/planetsig/ufo-reports/blob/master/csv-data/ufo-scrubbed-geocoded-time-standardized.csv>
+
+## What is the Story?
+
+
+
+## Mapping Projects
+
+## 1. Animal and Bird Migration
+
+1. Head off to [movebank.org](https://www.movebank.org/cms/movebank-main)
+2. Look at a few species of interest and choose one.
+3. Download the data ( **ESRI Shapefile**)
+4. Import that into  R using `sf_read()`
+5. See how you can plot locations, tracks and colour by species....based on the data you download. 
+
+For tutorial info: <https://movebankworkshopraleighnc.netlify.app/>
+
+    
+
+## 2. Food at Home
+
+1. Draw a map of your home-town with your favourite restaurants shown. Pop-ups for each restaurant will win bonus points. 
+
+Take a look at:
+Burkhart, Christian. “Streetmaps.” [StreetMaps](https://ggplot2tutor.com/tutorials/streetmaps)
+
+![](https://ggplot2tutor.com/static/093466a0f94f04f36e2c028fe7ae3f23/fd84e/maps.png)
+
+## 3. Mapping India: Places of Worship
+
+1. Do some searching and make a list of Places of Worship in India that are known to you. 
+
+1. Head off to the **India Place Finder** website (india.info-proto.com/index.php/). Using the search facility there, download a CSV file that contains names of the places and their lon-lat coordinates.
+
+1. Read this CSV into R. Use the `sfheaders` package to convert this data into an `sf` spatial data frame.
+
+1. Use the `ggplot` or the `tmap` +`plotly` packages to plot these on an India map. Use the `rnaturalearth` package to get hold of an India map that is relevant to your area of interest. 
+
+1. Extra:
+    - Use [font-awesome](https://fontawesome.com/icons) icons to signify your Places of Worship. 
+    - Use popups in `tmap/plotly` to pop-up a picture or video about the place
+    
+## 4. Mapping Places Yelahanka on Open Street Map
+
+1. Download the Vespucci app on your phone:  
+   - Android [app on  Play Store](https://play.google.com/store/apps/details?id=de.blau.android&hl=en&gl=US)
+   - iPhone is sadly not available. So partner with an Android phone user please!
+1. You will need to create an account on Open Street Map and login to the app on your phone. This will allow you to contribute changes and data to the map and your data will be available to any netizen for download. 
+2. Read this [Vespucci Tutorial](https://learnosm.org/en/mobile-mapping/vespucci/)
+3. Choose specific categories of Places of interest:
+   - Restaurants
+   - Street Food locations
+   - Medicines
+   - Dustbins/garbage
+   - Flowering Trees
+   - Park Benches
+   - Street Lighting
+
+4. Wherever possible, record metadata:
+  - Menu / Cuisine
+  - Timings
+  - Indoor or outdoor seating
+  - Parking available
+
+5. Download in R and plot using `ggplot` or using `tmap`.

@@ -1,0 +1,48 @@
+---
+title: "\U0001F578 I dare say you never even spoke to Time!"
+subtitle: "Time Series"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+weight: 7
+summary: "Trends, Seasons, and Changes over time"
+tags:
+- Time Series
+- Trends
+- Line Graphs
+- CandleStick Graphs
+- Heatmap Graphs
+
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+
+external_link: ""
+links:
+# - icon: linkedin
+#   icon_pack: fab
+#   name: 
+#   url: https://linkedin.com/arvindvenkatadri
+# - icon: twitter
+#   icon_pack: fab
+#   name: 
+#   url: https://twitter.com/arvind_v
+slides: ""
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+![](featured.jpg)
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+
+```
+
+## An Example
+
+
+
+## What is the Story here?

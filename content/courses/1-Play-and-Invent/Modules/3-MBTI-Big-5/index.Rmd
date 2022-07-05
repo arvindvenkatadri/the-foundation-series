@@ -1,8 +1,8 @@
 ---
-date: "2021-10-12"
+date: "`r Sys.Date()`"
 title: MBTI-Big-5
 external_link: ""
-weight: 2
+weight: 3
 image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart

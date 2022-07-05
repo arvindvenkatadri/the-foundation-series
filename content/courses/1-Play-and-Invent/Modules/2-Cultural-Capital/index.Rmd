@@ -1,5 +1,5 @@
 ---
-date: "2021-10-12"
+date: "`r Sys.Date()`"
 title: Cultural Capital
 external_link: ""
 weight: 2

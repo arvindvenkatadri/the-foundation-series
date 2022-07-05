@@ -53,7 +53,7 @@ Take a look at the graph visualization below:
 <br>
 What information does the graph convey? How ?   
 What aspects of the Visual convey "human" information, such as Number and Relation?  
-What could the dotted line in the picture depict?
+What could the sloping dotted line in the picture depict?
 
 Over the next two weeks we will form our intuition about shapes and data and learn to create some evocative information graphics that tell stories. 
 
@@ -103,6 +103,10 @@ David McCandless' terrific information visualization site. All datasets used her
 
 1. **311-data.org** <https://www.311-data.org/>  
 Data about 311 calls in different parts of the US. (#311 is a complaints service that deals with non-crime / non-emergency related neighbourhood issues in the US)
+
+1. **Google Dataset Search** <https://datasetsearch.research.google.com/>
+
+1. **Github dataset search** <https://github.com/search?q=datasets>
 
 ## Modules
 
