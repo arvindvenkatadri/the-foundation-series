@@ -1,6 +1,6 @@
 ---
 date: "`r Sys.Date()`"
-title: "TRIZ - The Unreasonable use of Available Resources"
+title: "TRIZ - IFR and the Unreasonable use of Available Resources"
 author: "Arvind Venkatadri"
 external_link: ""
 weight: 7
@@ -12,15 +12,17 @@ links:
 #   icon_pack: fas
 #   name: TRIZ DataBase
 #   url: /slides/TRIZ Database/index.html
-- icon: game
-  icon_pack: fab
-  name: Game
-  url: /pdf/TRIZ/Titanic_Case_Study.pdf
+# - icon: game
+#   icon_pack: fab
+#   name: Game
+#   url: /pdf/TRIZ/Titanic_Case_Study.pdf
 slides: 
 summary: 
 tags:
-- Ishikawa Fishbone Diagram
-- Knobs and Parameters
+- Available Resources
+- Functional Fixedness
+- Assumptions
+
 url_code: ""
 url_pdf: ""
 url_slides: ""
@@ -31,63 +33,80 @@ url_video: ""
 
 In the previous Module on **Problems and Contradictions** we understood how to identify a **Technical Contradiction** in everyday situations. This is the first and most important step in the TRIZ Problem Solving Method. 
 
-Next we look at two methods to **Resolve Contradictions**:
+Another important idea in TRIZ is that of **Available Resources** and the **Ideal Final Result(IFR)**. 
 
-- Using the **Contradiction Matrix** and **Inventive Principles**
-
-- Using TRIZ **Separation Principles**
-
-
-
-## Project TETRIS TRIZ Videos
-Let us get an actual experience of TRIZ methods with these short videos:
-
-
-1. History of TRIZ   
-  `r blogdown::shortcode("youtube", "NeDAnftRx8c")`<br>
-
-
-2. TRIZ Tales: Nina at School   
-  `r blogdown::shortcode("youtube", "ouWWuwW21ZI")` <br>
-
-3. TRIZ Tales: Nina at University   
-  `r blogdown::shortcode("youtube", "MxOGaB4OgYc")` <br>
-
-4. TRIZ Tales: Nina at Work #1 
-  `r blogdown::shortcode("youtube", "bXxMf4AX_lE")` <br>
-
-5. TRIZ Tales: Nina at Work #2 
-  `r blogdown::shortcode("youtube", "J_O3yR2kk2Q")` <br>
-
-
-6. How to use the Contradiction Matrix:[(Coursera Video)](https://www.coursera.org/lecture/creative-thinking-techniques-and-tools-for-success/contradiction-matrix-DtEKz>)
-
-
-7. The TRIZ Contradiction Matrix (2003) [(Matrix)](pdf/TRIZ/TRIZ_interactive_contradiction_matrix_2016.xlsx)
-
-
-
-# Game Plan # 1  
-
-Let us play a quick Game to motivate the philosophy of TRIZ-oriented thinking and to obtain an understanding of its main ideas:  
-
-## The Candle Game  
+## Game #1  
 
 You have to Stick the lighted candle to the Wall in such a way that the melting wax does not drop on to the floor. 
 
 
-## Game Plan # 2
+## Game #2
 
-Let us play two Games to motivate the philosophy of TRIZ-oriented thinking and to obtain an understanding of its main ideas:  
+Look at the graph below: does it remind you of something you know very well?
+
+```{r echo=FALSE}
+# Reference: https://rkabacoff.github.io/datavis/Other.html
+library(readr)
+data("Titanic")
+
+# summarize data
+library(dplyr)
+titanic_table <- Titanic %>%
+  as_tibble() %>% 
+  group_by(Class, Sex, Survived) %>%
+  count()
+
+titanic_table$Survived <- factor(titanic_table$Survived, 
+                                 levels = c("Yes", "No"))
+
+# Alluvial Plot
+library(ggplot2)
+library(ggalluvial)
+
+# ggplot(titanic_table,
+#        aes(axis1 = Class,
+#            axis2 = Survived,
+#            y = n)) +
+#   geom_alluvium(aes(fill = Sex)) +
+#   geom_stratum() +
+#   geom_text(stat = "stratum", aes(label = after_stat(stratum))) +
+#             #label.strata = TRUE) +
+#   scale_x_discrete(limits = c("Class", "Survived"),
+#                    expand = c(.1, .1)) +
+#   # labs(title = "Titanic data",
+#   #      subtitle = "stratified by class, sex, and survival",
+#   #      y = "Frequency") +
+#   theme_minimal()
+
+ggplot(titanic_table,
+       aes(axis1 = Class,
+           axis2 = Sex,
+           axis3 = Survived,
+           y = n)) +
+  geom_alluvium(aes(fill = Class)) +
+  geom_stratum() +
+  geom_text(stat = "stratum", aes(label = after_stat(stratum))) +
+            #label.strata = TRUE) +
+  scale_x_discrete(limits = c("Class", "Sex", "Survived"),
+                   expand = c(.1, .1)) +
+  scale_fill_viridis_d() +
+  # labs(title = "Titanic data",
+  #      subtitle = "stratified by class, sex, and survival",
+  #      y = "Frequency") +
+  theme_minimal() +
+  theme(legend.position = "none") 
+
+```
+
+Let us pretend we are part of this graph and see where our Problem Formulating Skills take us!
+
+
+# Discussion
 
 - Problems and Contradictions
 - Ideal Final Result ( IFR )
-- All Available Resources  
-- Contradiction Matrix and the 39 (Metaphorical) Parameters  
-- 40 Inventive Principles  
-
-2. Titanic Game [(PDF)](pdf/TRIZ/Titanic_Case_Study.pdf)
-
+- All Available Resources 
+- **Assumptions** and **Functional Fixedness**
 
 ## Case Studies (Move this to Slides soon!!)
 
@@ -102,6 +121,8 @@ Let us play two Games to motivate the philosophy of TRIZ-oriented thinking and t
 
 ## References
 
+1. Titanic Game [(PDF)](pdf/TRIZ/Titanic_Case_Study.pdf)
+
 1. TRIZ for Dummies Cheat Sheet [(weblink)](https://www.dummies.com/business/management/triz-for-dummies-cheat-sheet/)
 
 1. TRIZ Inventive Principles in Pics @instagram: <https://www.instagram.com/stories/highlights/17857566926043828/>
@@ -109,7 +130,7 @@ Let us play two Games to motivate the philosophy of TRIZ-oriented thinking and t
 1. Stan Kaplan, ***An Introduction to TRIZ***[(PDF)](pdf/TRIZ/Stan Kaplan-Intro-to-TRIZ.pdf)
 This is a simple and short introduction to *all* aspects of Classical TRIZ.
 
-1. Jack Hipple, "The Ideal Result: What it is and how to achive it", Springer, 2012.
+1. Jack Hipple, "The Ideal Result: What it is and how to achieve it", Springer, 2012.
 
 1. Project TETRIS: Chapter 1: Introduction to Classical TRIZ [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_01.pdf)
 

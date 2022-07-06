@@ -1,0 +1,93 @@
+---
+date: "`r Sys.Date()`"
+title: "TRIZ - A World of Contradictions"
+external_link: ""
+weight: 8
+image:
+  caption: Photo by <a href="https://unsplash.com/@etiennegirardet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Etienne Girardet</a> on <a href="https://unsplash.com/s/photos/contradiction?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  focal_point: Smart
+slides: ""
+summary: 
+tags:
+- Genrikh Altshuller
+- TRIZ
+- Contradictions
+- Ishikawa Fish Bone Diagram
+url_code: ""
+url_pdf: "pdf/TRIZ/TRIZ_DefineContradiction_Tutorial.pdf"
+url_slides: "/slides/TRIZ Basics/index.html"
+url_video: ""
+
+---
+
+```{r setup, include=FALSE}
+library(blogdown)
+```
+
+## Contradictory Objects
+
+Now that we know how problems can be stated as simple *Administrative Contradictions (AC)*, we need to take the next step and make what TRIZ calls **Technical Contradictions(TC)** and **Physical Contradictions(PC)**
+
+Recall that you considered several familiar objects in the earlier module on Problems and Contradictions.
+
+![Pizza Box](pizza.jpg)
+![ Wrench](wrench.jpg)
+![Cycle Chain](chain.jpg)
+
+- What is One Aspect/Parameter or Knob for each of the Objects that you have listed?
+  
+- What are the current Settings for each Knob? High/Low; Soft/Hard; Thin/Thick...
+  
+- Change the Setting of Each Knob to its natural opposite extreme. What happens?
+  
+- You will see that in many cases, each Knob creates a Certain Outcome at one Setting and another Outcome at the Opposite Setting. 
+  
+- Are **both** of these Outcomes desirable? Then, this is one Source of your Contradiction !!
+
+- If not, continue with other Knobs that the Object may possess.
+  
+
+## Contradictory Situations
+
+We don't contemplate only *objects* at all times; indeed, as designers/artists/creators, we want to be able to **make** objects. What we more commonly contemplate is a **situation**.
+
+How does one figure Parameters/Aspects/Knobs on situations?
+
+We use what is called an **Ishikawa Fishbone Diagram**. There are many versions of this diagram depending upon the **DOMAIN** it is applied in; it should be considered more as a process for thinking. You should search for other forms of this diagram and quickly learn to apply them. 
+
+```{r,echo=FALSE, fig.dim=c(4,3)}
+knitr::include_graphics("IshikawaDiagram.png")
+
+```
+
+This diagram gives us a few prompts on Aspects/Parameters/Knobs to consider. Let us apply these to the situations below and see how to get familiar with this tool. 
+
+## Contradiction Challenges
+
+1. Challenge #1: [**Web**](https://web.archive.org/web/20200813061353/https://triz-journal.com/triz-challenge-may-2001/) and [**PDF**](TRIZ Challenge - May 2001The Triz Journal.pdf)
+
+
+1. Challenge #2: [**Web**](https://web.archive.org/web/20200813061945/https://triz-journal.com/triz-challenge-july-2001/) and [**PDF**](TRIZ Challenge - July 2001The Triz Journal.pdf)
+
+1. Challenge #3: [**Web**](https://web.archive.org/web/20200813061928/https://triz-journal.com/triz-challenge-july-2002/) and [**PDF**](TRIZ Challenge - July 2002The Triz Journal.pdf)
+
+1. Challenge #4: [**Web**](https://web.archive.org/web/20200813063906/https://triz-journal.com/triz-challenge-november-2003/) and [**PDF**](TRIZ Challenge - November 2003The Triz Journal.pdf)
+
+
+# Materials
+
+1. Valeri Souchkov, **"How to Define a Contradiction"**, [**Web**](https://xtriz.com/Training/TRIZ_DefineContradiction_Tutorial.pdf) and [**PDF**](TRIZ_DefineContradiction_Tutorial.pdf)
+
+1. Open Source TRIZ: **TRIZ Power Tools: Formulating Contradictions**: [Webpage](https://www.opensourcetriz.com/triz-books/triz-skills/resolving-contradictions.html)
+
+
+
+## Additional Readings
+
+1. https://www.bbc.com/worklife/article/20201109-why-the-paradox-mindset-is-the-key-to-success
+
+1. https://hbr.org/2008/06/the-contradictions-that-drive-toyotas-success
+
+
+
+
