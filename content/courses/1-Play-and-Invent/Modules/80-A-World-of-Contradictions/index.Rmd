@@ -1,0 +1,151 @@
+---
+date: "`r Sys.Date()`"
+title: "TRIZ - A World of Contradictions"
+external_link: ""
+weight: 80
+image:
+  caption: Photo by <a href="https://unsplash.com/@brett_jordan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brett Jordan</a> on <a href="https://unsplash.com/s/photos/contradiction?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  focal_point: Smart
+slides: ""
+summary: 
+tags:
+- Genrikh Altshuller
+- TRIZ
+- Contradictions
+- Ishikawa Fish Bone Diagram
+url_code: ""
+url_pdf: "pdf/TRIZ/TRIZ_DefineContradiction_Tutorial.pdf"
+url_slides: "/slides/TRIZ Basics/index.html"
+url_video: ""
+
+---
+
+```{r setup, include=FALSE}
+library(blogdown)
+library(tidyverse)
+library(hrbrthemes)
+hrbrthemes::import_roboto_condensed()
+```
+
+## Metaphors for our Contradictions
+
+Now that we know how problems can be stated as simple *Administrative Contradictions (AC)*, we need to take the next step and make what TRIZ calls **Technical Contradictions (TC)** and **Physical Contradictions (PC)**
+
+Recall that you considered several familiar *Objects* in the earlier module on Problems and Contradictions. And also considered a few sample *Situations* to find *Administrative Contradictions* in them
+
+We used the method of:
+
+- Finding Knobs in Objects and Situations using the Ishikawa Diagram
+- Turning the Knobs both ways
+- Finding what improves or worsens in each case
+- Deciding upon an *Administrative Contradiction*
+
+What we will do next is to re-state our *Administrative Contradictions* as **Technical Contradictions**. To do this, we will use a set of *metaphoric phrases* that are an integral part of (classical) TRIZ. These metaphoric phrases are simple enough and provide rich troves for imaginative problem solving.
+
+Before we study this *TRIZ Contradiction Language*, we need to obtain an understanding of its history.
+
+## The History of TRIZ
+
+```{r echo=FALSE, fig.align='center'}
+knitr::include_graphics("Altshuller.454.png")
+```
+
+The creator of TRIZ, **Genrich Altshuller**, was born in Russia in 1926, made his first invention at age 14 (9th Grade), and was later educated as a mechanical engineer. At the time he started working on TRIZ, in 1946, he was employed in the patent department of the Soviet navy, assisting
+inventors in filing their patents, in Baku, Azerbaijan.  
+
+While there he became intrigued by the question of how an invention happens: `Is it a matter of luck? The result of a mental “light bulb” turning on, as in the comics? Or can inventions be seen as the result of systematic patterns of inventive thinking?`  
+
+Altshuller adopted an empirical approach to answering this question. He **studied thousands of patents, looking for commonalities, repetitive patterns, and principles of inventive thought**. As he found them he codified and documented them, as shown below. His results, when eventually published, attracted many enthusiasts who continued and expanded the work over the years, reviewing what is now estimated to be more than two million patents worldwide. 
+
+```{r echo=FALSE}
+
+data <- tibble(
+  pp = c(32, 45, 18, 4, 1),
+  Levels  = c(
+    "Level 1. Apparent Solution",
+    "Level 2. Improvement",
+    "Level 3. Invention Inside the Paradigm",
+    "Level 4. Invention Outside the Paradigm",
+    "Level 5. Discovery"
+  )
+)
+# pie(slices, labels = lbls, main="Levels of Invention",clockwise = TRUE, init.angle = 90)
+ggplot(data, aes(x = Levels, y = pp, fill = Levels)) + geom_col(colour = "black") + 
+  geom_text(aes(label = paste0(pp,"%")), 
+            colour = "black", 
+            nudge_y = 1.5,
+            size = 3) + 
+  coord_flip() + scale_fill_brewer(palette = "Spectral", 
+                                   guide = guide_legend(reverse = TRUE)) +
+  theme_void() + 
+  theme(plot.title = element_text(family="serif", 
+                                  face="bold", 
+                                  size=20),
+        plot.subtitle = element_text(family="sans", 
+                                     face = "bold",
+                                     size = 12),
+        legend.title = element_text(family = "serif", 
+                                    face = "bold", 
+                                    size = 12),
+        legend.text = element_text(family = "Fira Code", 
+                                   size = 8),
+        legend.position = c(0.65, 0.8),
+        legend.background = element_rect(fill = "cornsilk", 
+                                         colour = "black"),
+        legend.margin = margin(t = 5, r = 5, b = 5, l = 5, 
+                               unit = "pt")
+) +
+  labs(title = "Soviet Patents and their Innovation Levels", subtitle = "Analyzed by Genrikh Altshuller")
+
+```
+
+Level 1: Apparent Solution. This level requires no real invention; it consists of minor adaptations of existing concepts. Simple improvement of a technical system. They require knowledge available within an industry relevant to that system.  
+
+Level 2: Improvement. This level makes small improvements to existing approaches. inventions include the resolution of a technical contradiction. They require knowledge from different areas within an industry relevant to the system.  
+Level 3: Invention Inside the Paradigm. This level uses methods from other fields and improves previous approaches. This is an invention containing a resolution of a physical contradiction. It requires knowledge from other industries. 
+
+Levels #2 & #3 solve contradictions and therefore are innovative by definition.About 18% of all patent applications were in this category.
+
+Level 4. Invention Outside the Paradigm. This level involves a new design that is based on modifications of existing principles but in a manner not previously used. This level involves development a new technology. It is developed by using breakthrough solutions that requires knowledge from different fields of science. This fourth level also improves upon a technical system, but without solving an existing technical problem. Instead, it improves the function by replacing the original technology with a new technology. For example a mechanical system is replaced with a chemical system to perform the function.
+
+Level 5: Discovery. This is the highest invention level. It consists of completely new concepts using new principles, and involves the discovery of new phenomena. The new phenomenon is discovered that allows pushing the existing technology to a higher level.
+
+
+Altshuller concluded from his research that a large number of patents (77%) belong only to Levels #1 and #2. The practical utilization of TRIZ methodology can help inventors elevate their innovative solutions to Levels #3 and #4.
+
+As a result of this work, hundreds of technical papers and many books on TRIZ have been published, including 14
+books by Altshuller himself. TRIZ is actively used in Companies such as **Boeing, Bridgestone, Eastman Kodak, Ford Motor Company, Harley-Davidson Motor Company, Hewlett-Packard, Illinois Tool Works, Inficon, Ingersoll Rand, Kimberly-Clark, L.G. Electronics, Lucent Technologies, Michelin, National Semiconductor, NASA, Philips, Rolls-Royce, Samsung, Siemens, Western Digital, and Xerox** among others.
+
+The repeated patterns found by 
+## The TRIZ Contradiction Language
+Before we e
+
+
+
+
+## Speaking TRIZ
+
+
+
+## A TRIZ Workflow
+```{r echo=FALSE}
+knitr::include_url("/slides/TRIZ Basics/index.html")
+```
+
+# Materials
+
+1. Valeri Souchkov, **"How to Define a Contradiction"**, [**Web**](https://xtriz.com/Training/TRIZ_DefineContradiction_Tutorial.pdf) and [**PDF**](TRIZ_DefineContradiction_Tutorial.pdf)
+
+1. Open Source TRIZ: **TRIZ Power Tools: Formulating Contradictions**: [Webpage](https://www.opensourcetriz.com/triz-books/triz-skills/resolving-contradictions.html)
+
+
+
+## Additional Readings
+
+1. https://www.bbc.com/worklife/article/20201109-why-the-paradox-mindset-is-the-key-to-success
+
+1. https://hbr.org/2008/06/the-contradictions-that-drive-toyotas-success
+
+
+
+

@@ -1,0 +1,25 @@
+---
+date: "`r Sys.Date()`"
+title: " Domain, Field, and Self"
+author: "Arvind Venkatadri"
+external_link: ""
+weight: 30
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+links:
+slides: ""
+summary: 
+tags:
+- Mihaly Csikszentmihalyi
+- Systems Model
+- Domain
+- Field
+
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+## Introduction

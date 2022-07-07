@@ -1,0 +1,44 @@
+---
+date: "`r Sys.Date()`"
+title: MBTI-Big-5
+external_link: ""
+weight: 30
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+links:
+  - icon: flask
+    icon_pack: fas
+    name: ice-breaker
+    url: pdf/OPP_Numbers_Exercise.pdf
+slides: 
+summary: 
+tags:
+- MBTI
+- Personality Preferences
+- Information
+- Energy
+- Decisions
+- Plans
+
+url_code: ""
+url_pdf: ""
+url_slides: "pdf/MBTI Team Building.pdf"
+url_video: ""
+
+---
+
+## References
+
+1. Here is the MBTI Test site: <https://www.16personalities.com/free-personality-test>
+
+2. Ice-breaker Activity Presentation [(Go to Webpage)](https://slidetodoc.com/numbers-icebreaker-this-is-one-of-many-free/)
+
+3. MBTI Game: [PDF](/pdf/MBTI Activities.pdf)
+
+## Why does this Matter to Us
+
+From the two exercises, we see that:  
+- reality really matters upon the viewer: and that there are many possible points of view.  
+- We all have our "default modes" for behaviour  
+- As creators we need to be able straddle, if possible, the spectrum of the 4 preference pairs, in order to comprehend reality better. 

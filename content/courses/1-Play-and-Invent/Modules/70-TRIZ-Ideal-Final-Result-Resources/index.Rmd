@@ -1,0 +1,145 @@
+---
+date: "`r Sys.Date()`"
+title: "TRIZ - IFR and the Unreasonable use of Available Resources"
+author: "Arvind Venkatadri"
+external_link: ""
+weight: 70
+image:
+  caption: 
+  focal_point: Smart
+links:
+# - icon: flask
+#   icon_pack: fas
+#   name: TRIZ DataBase
+#   url: /slides/TRIZ Database/index.html
+# - icon: game
+#   icon_pack: fab
+#   name: Game
+#   url: /pdf/TRIZ/Titanic_Case_Study.pdf
+slides: 
+summary: 
+tags:
+- Available Resources
+- Functional Fixedness
+- Assumptions
+
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+# Introduction
+
+In the previous Module on **Problems and Contradictions** we understood how to identify a **Technical Contradiction** in everyday situations. This is the first and most important step in the TRIZ Problem Solving Method. 
+
+Another important idea in TRIZ is that of **Available Resources** and the **Ideal Final Result(IFR)**. 
+
+## Game #1  
+
+You have to Stick the lighted candle to the Wall in such a way that the melting wax does not drop on to the floor. 
+
+
+## Game #2
+
+Look at the graph below: does it remind you of something you know very well?
+
+```{r echo=FALSE}
+# Reference: https://rkabacoff.github.io/datavis/Other.html
+library(readr)
+data("Titanic")
+
+# summarize data
+library(dplyr)
+titanic_table <- Titanic %>%
+  as_tibble() %>% 
+  group_by(Class, Sex, Survived) %>%
+  count()
+
+titanic_table$Survived <- factor(titanic_table$Survived, 
+                                 levels = c("Yes", "No"))
+
+# Alluvial Plot
+library(ggplot2)
+library(ggalluvial)
+
+# ggplot(titanic_table,
+#        aes(axis1 = Class,
+#            axis2 = Survived,
+#            y = n)) +
+#   geom_alluvium(aes(fill = Sex)) +
+#   geom_stratum() +
+#   geom_text(stat = "stratum", aes(label = after_stat(stratum))) +
+#             #label.strata = TRUE) +
+#   scale_x_discrete(limits = c("Class", "Survived"),
+#                    expand = c(.1, .1)) +
+#   # labs(title = "Titanic data",
+#   #      subtitle = "stratified by class, sex, and survival",
+#   #      y = "Frequency") +
+#   theme_minimal()
+
+ggplot(titanic_table,
+       aes(axis1 = Class,
+           axis2 = Sex,
+           axis3 = Survived,
+           y = n)) +
+  geom_alluvium(aes(fill = Class)) +
+  geom_stratum() +
+  geom_text(stat = "stratum", aes(label = after_stat(stratum))) +
+            #label.strata = TRUE) +
+  scale_x_discrete(limits = c("Class", "Sex", "Survived"),
+                   expand = c(.1, .1)) +
+  scale_fill_viridis_d() +
+  # labs(title = "Titanic data",
+  #      subtitle = "stratified by class, sex, and survival",
+  #      y = "Frequency") +
+  theme_minimal() +
+  theme(legend.position = "none") 
+
+```
+
+Let us pretend we are part of this graph and see where our Problem Formulating Skills take us!
+
+
+# Discussion
+
+- Problems and Contradictions
+- Ideal Final Result ( IFR )
+- All Available Resources 
+- **Assumptions** and **Functional Fixedness**
+
+## Case Studies (Move this to Slides soon!!)
+
+1. Pizza Box (https://www.metodolog.ru/triz-journal/archives/2008/03/04/)
+
+1.
+
+
+1.
+
+
+
+## References
+
+1. Titanic Game [(PDF)](pdf/TRIZ/Titanic_Case_Study.pdf)
+
+1. TRIZ for Dummies Cheat Sheet [(weblink)](https://www.dummies.com/business/management/triz-for-dummies-cheat-sheet/)
+
+1. TRIZ Inventive Principles in Pics @instagram: <https://www.instagram.com/stories/highlights/17857566926043828/>
+
+1. Stan Kaplan, ***An Introduction to TRIZ***[(PDF)](pdf/TRIZ/Stan Kaplan-Intro-to-TRIZ.pdf)
+This is a simple and short introduction to *all* aspects of Classical TRIZ.
+
+1. Jack Hipple, "The Ideal Result: What it is and how to achieve it", Springer, 2012.
+
+1. Project TETRIS: Chapter 1: Introduction to Classical TRIZ [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_01.pdf)
+
+1. Project TETRIS: Chapter 2: Laws of System Evolution [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_02.pdf)
+
+1. Project TETRIS: Chapter 3: Short Review of ARIZ: Algorithm for Innovative Problem Solving and a Case Study [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_03.pdf)
+
+1. Project TETRIS: Chapter 4: Substance-Field ( "Su-Field" ) Analysis and Standard Solutions basic notions and rules [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_04.pdf)
+
+1. Project TETRIS: Chapter 5: Techniques  to  Resolve  Contradictions / Resources / Effects [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_05.pdf)
+
+1. Project TETRIS: Examples of inventive problems: Example 1-5 [(RAR Archive File)](https://innovazionesistematica.it/wp-content/uploads/2020/10/ExamplesEN.rar)
