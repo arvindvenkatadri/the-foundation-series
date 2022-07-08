@@ -87,5 +87,5 @@ security:
     getenv:
       - ^HUGO_
       - ^WC_
-
-
+#### Added 8th July 2022
+ignoreErrors: "error-remote-getjson"
