@@ -20,6 +20,11 @@ url_slides: ""
 url_video: ""
 ---
 
+## Parallel Thinking
+
+`r blogdown::shortcode("youtube", "uYBaSZYZ3sI")`
+
+
 ## Propositions
 
 Let us consider a couple of ideas for schemes that have been "around" for some time:
@@ -29,10 +34,6 @@ Let us consider a couple of ideas for schemes that have been "around" for some t
 - Young People must be assigned one Elderly Person to live with
 - All Cars must be removed from the City Centre
 
-
-## Parallel Thinking
-
-`r blogdown::shortcode("youtube", "uYBaSZYZ3sI")`
 
 Some of the de Bono Thinking Tools: 
 
