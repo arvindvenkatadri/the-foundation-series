@@ -17,7 +17,7 @@ links:
 #   name: Game
 #   url: /pdf/TRIZ/Titanic_Case_Study.pdf
 slides: 
-summary: 
+summary: "This Module is part of a Creative Problem Solving course I offer at Srishti Manipal Institute, Bangalore"
 tags:
 - Contradictions
 - Contradiction Matrix
