@@ -44,7 +44,7 @@ Where do you reckon you can “see” these shapes ? Can you briefly describe an
 
 ```{r echo=FALSE}
 knitr::include_graphics("images/zigzag.jpg")
-knitr::include_graphics("images/zigzag.jpg")
+knitr::include_graphics("images/star.jpg")
 ```
 Images by rawpixel.com
 
