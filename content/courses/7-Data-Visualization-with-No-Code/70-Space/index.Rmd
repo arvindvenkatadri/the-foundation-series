@@ -3,7 +3,7 @@ title: "\U0001F5FA The Map is Not the Territory"
 subtitle: "Maps"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
-weight : 6
+weight : 70
 summary: "Geospatial Data and how it varies based on location"
 tags:
 - Maps

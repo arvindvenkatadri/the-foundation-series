@@ -3,7 +3,7 @@ title: "\U0001F578 I dare say you never even spoke to Time!"
 subtitle: "Time Series"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
-weight: 7
+weight: 80
 summary: "Trends, Seasons, and Changes over time"
 tags:
 - Time Series

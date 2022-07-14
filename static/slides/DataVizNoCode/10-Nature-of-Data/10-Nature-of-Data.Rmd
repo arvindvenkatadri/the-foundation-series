@@ -34,8 +34,8 @@ knitr::opts_chunk$set(
     warning = FALSE,
     message = FALSE,
     fig.path = "figs/",
-    fig.width = 7.252,
-    fig.height = 4,
+    #fig.width = 7.252,
+    #fig.height = 4,
     comment = "#>",
     fig.retina = 3) # Better figure resolution
 dateWritten <- format(as.Date('2022-07-13'), 
@@ -137,7 +137,7 @@ knitr::include_graphics("images/Anecdote-spotting-a-business-story.png")
 - How?
 - How Big? How small? How frequent? How sudden?
 - And....How Surprising ! How Shocking! How sad...How Wonderful !!!  
-So: Our Questions, and our .orange[*Surprise*] lead us to creating Human Experiences.
+So: Our .orange[Questions], and our .orange[*Surprise*] lead us to creating Human Experiences.
 ]
 
 
@@ -266,7 +266,7 @@ knitr::include_graphics( "images/rose.jpg")
 library(HistData)
 library(patchwork)
 data("Nightingale")
-knitr::kable(head(Nightingale[, -c(4:5)], 6))
+knitr::kable(head(Nightingale[, c(2,3,8:10)], 10))
 
 ```
 
@@ -304,7 +304,8 @@ knitr::include_graphics("images/Ratio Interval Ordinal Nominal.PNG")
 
 ## Types of Variables in Nightingale Data
 
-.pull-left[
+.leftcol30[
+.small[
 ### Using Interrogative Pronouns:
 - Nominal: None
 - Ordinal: (Factors, Dimensions)
@@ -313,12 +314,14 @@ knitr::include_graphics("images/Ratio Interval Ordinal Nominal.PNG")
   - .orange[WHEN?] `Year, Month`
 - Ratio: (Numbers, *Facts*)
   - .orange[HOW MANY?] `Rate of Deaths` (War, Disease, Other) 
-
+]
 ]
 
-.pull-right[
-```{r, echo=FALSE, fig.align='center', out.height="450px", out.width="600px"}
-
+.rightcol70[
+```{r, echo=FALSE, fig.align='center', out.height="100px", out.width="100px"}
+knitr::kable(head(Nightingale[, c(2,3,8:10)], 3))
+```
+```{r, echo=FALSE, fig.align='center', out.height="300px", out.width="400px"}
 knitr::include_graphics("images/Ratio Interval Ordinal Nominal.PNG")
 
 ```
@@ -326,10 +329,11 @@ knitr::include_graphics("images/Ratio Interval Ordinal Nominal.PNG")
 
 .footnote[Nightingale's data table had *dimensions* coded into column names. This is not considered **tidy** in the modern age]
 
+
 ---
 ## Nightingale's Rose
 .pull-left[
-.small[Nightingale created a remarkable and original graphical display to show us just what'd really gone on in the War. It was a Polar-Area Diagram that showed how people had died during the period from July, 1854, through the end of the following year. 
+.small[Nightingale created a remarkable and original graphical display to show us just what hadd really gone on in the War. It was a .orange[Polar-Area Diagram] that showed how people had died during the period from July, 1854, through the end of the following year. 
 
 Nightingale's graph is like a pie chart, cut into twelve equal angles. These slices advance in a clockwise direction, one each month. The radius shows how many deaths occurred in that month. We see little short slices in April, May and June of 1854. After the troops land in the Crimea, the slices begin reaching far outward in the radial direction.
 
@@ -434,9 +438,10 @@ ggplot(Night, aes(x = factor(Date), y = Deaths, fill = Cause)) +
 ---
 ### From Data -> Geometry
 
-- How did we arrive at shapes, colours, lines, points...from data? All Statistical Graphs do a Kalidasa:
-  - they use metaphors to map *data variables* to *geometrical aspects*
-  - they may `count` or `bin` or `sort` the variables too...  
+- How did we arrive at shapes, colours, lines, points...from data? 
+- All Statistical Graphs do a Kalidasa:
+  - Transform a variable with a .orange[`stat`(`count`,`bin`,`sort`)]
+  - they use metaphors to map .orange[data variables] and .orange[computed stats] to .orange[geometrical aspects] aka .orange[aesthetics]
   
 .pull-left[
 ```{r, echo=FALSE, fig.align='center'}
@@ -445,6 +450,7 @@ knitr::include_graphics("images/common-aesthetics-1.png")
 ]
 
 .pull-right[
+
 - Commonly used aesthetics in data visualization: position, shape, size, color, line width, line type. 
 - Some of these aesthetics can represent both continuous and discrete data (position, size, line width, color) 
 - While others can usually only represent discrete data (shape, line type).
@@ -459,75 +465,173 @@ knitr::include_graphics("images/perceptual-ranking.png")
 ]
 
 .rightcol30[
-### Some geometries work better than others
+### Each of the geometries works differently
 ]
 
 
 ---
+## The Need for Answers: Questions to Visuals
 
-## Variables and Graphs
-.pull-left[
-
-```{r,echo=FALSE, fig.align='center'}
-knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/amounts-1.png")
+```{r, echo=FALSE, fig.align='center', out.width="650px"}
+knitr::include_graphics("images/Workflow.png")
 ```
-Quant Variables
-- Interval
-- Ratio
-]
 
-.pull-right[
-
-]
 
 ---
 
 ## Variables and Graphs: Qualitative Variables
 .pull-left[
-`r knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/amounts_multi-1.png")`
-- Ordinal
-- Nominal
+```{r, echo=FALSE, out.height="125px",out.width="300px"}
+knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/amounts_multi-1.png")
+```
+
+### Amounts and Counts
+- Variable: Ordinal / Nominal
+- Stat: `count`
+- Geometry: height and colour
+- Questions: 
+  - .orange[How many] of each type of #Var1?
+  - .orange[How many] of each type of #Var2 broken up by #Var2?
 ]
 
 .pull-right[
-```{r, echo=FALSE, out.height="200px"}
-ggplot(diamonds, aes(x = cut)) + 
-  geom_bar(position = "dodge") + 
-  theme_void()
-ggplot(diamonds, aes(x = cut)) + 
-  geom_bar(aes(fill = clarity)) + 
-  scale_fill_brewer(palette = "Set3") + 
-  theme_void()
+
+```{r, echo=FALSE, out.height="450px"}
+p1 <- ggplot(diamonds, aes(x = cut)) +
+  geom_bar() + theme_void() + ggtitle("Bars")+ scale_fill_brewer(palette = "Spectral") + theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+p2 <- ggplot(diamonds, aes(x = cut)) +
+  geom_bar(aes(fill = clarity)) +
+  scale_fill_brewer(palette = "Spectral") +
+  theme_void() + ggtitle("Stacked Bars") +
+  theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+p3 <- ggplot(diamonds, aes(x = cut)) +
+  geom_bar(aes(fill = clarity),position = "dodge") +
+  scale_fill_brewer(palette = "Spectral") +
+  theme_void() + ggtitle("Grouped Bars") +
+  theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+
+(p1 + p2)/p3 
+
 
 ```
 
 ]
 
 ---
-
-## Variables and Graphs
+## Variables and Graphs : Quantitative Variables
 .pull-left[
-Quantitative Variable
-- Distributions
+
+```{r,echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/single-distributions-1.png")
+```
+### Distributions
+- Variable: Interval / Ratio
+- Stat: `bin` and `count`
+- Geometry: x = bins, y = count, and colour
+- Questions: Range and frequency of Interval/Ratio variable
 ]
 
 .pull-right[
-`r knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/single-distributions-1.png")`
+```{r, echo=FALSE, out.height="450px"}
+p1 <- ggplot(diamonds, aes(x = price)) +
+  geom_histogram() + theme_void() + ggtitle("Histogram") + scale_fill_brewer(palette = "Spectral") + theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+p2 <- ggplot(diamonds, aes(x = cut)) +
+  geom_density(aes(x = price),fill = "grey") +
+  scale_fill_brewer(palette = "Spectral") +
+  theme_void() + ggtitle("Density") +
+  theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+# p3 <- ggplot(diamonds, aes(x = cut)) +
+#   geom_bar(aes(fill = clarity),position = "dodge") +
+#   scale_fill_brewer(palette = "Spectral") +
+#   theme_void() + ggtitle("Grouped Bars") +
+#   theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+
+(p1 + p2) 
+
+
+```
 ]
 
 ---
 
-## Variables and Graphs
+## Variables and Graphs : Quantitative Variable
 .pull-left[
-- Quantitative Variables
->Boxplots, violins, strip charts, and sina plots are useful when we want to visualize many distributions at once and/or if we are primarily interested in overall shifts among the distributions
+
+```{r,echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/multiple-distributions-1.png")
+```
+.small[### Distributions (Many of them at once)
+- Variable: Interval/Ratio + Nominal/Ordinal 
+- Stat: `sort`(boxplot), `bin`(violin)
+- Geometry: x = Nom/Ord, y = Int/Ratio, and colour = Nom/ord
 ]
+]
+
 .pull-right[
-`r knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/multiple-distributions-1.png")`
+
+```{r, echo=FALSE, out.height="450px"}
+p1 <- ggplot(diamonds, aes(x = cut, y = price)) +
+  geom_boxplot(aes(fill = cut)) + theme_void() + ggtitle("Boxplot")+ scale_fill_brewer(palette = "Spectral") + theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+p2 <- ggplot(diamonds, aes(x = cut, y = price)) +
+  geom_violin(aes(fill = cut)) +
+  scale_fill_brewer(palette = "Spectral") +
+  theme_void() + ggtitle("Violin Plot") +
+  theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+p3 <- ggplot(diamonds, aes(x = cut, y = price)) +
+  geom_jitter(aes(colour = cut),alpha = 0.05,width = 0.15, height = 0.15) +
+  scale_fill_brewer(palette = "Spectral") +
+  theme_void() + ggtitle("Strip Plot") +
+  theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+
+(p1 + p2)/p3 
+
+
+```
 ]
 
 
 ---
+
+## Variables and Graphs : Quantitative Variables
+.pull-left[
+
+```{r,echo=FALSE, fig.align='center'}
+knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/basic-scatter-1.png")
+```
+### X-Y Relationships
+- Variable: Interval/Ratio + Nominal/Ordinal 
+- Stat: none
+- Geometry: x = Int/Ratio, y = Int/Ratio, and colour = Nom/ord
+]
+.pull-right[
+```{r, echo=FALSE, out.height="450px"}
+p1 <- ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(aes(fill = species)) + theme_void() + ggtitle("Scatter") + scale_fill_brewer(palette = "Spectral") + theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+p2 <- ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(aes(size = species, fill = species),shape = 21, alpha = 0.5) + theme_void() + ggtitle("Bubble") + scale_fill_viridis_d() + theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+# p3 <- ggplot(diamonds, aes(x = cut, y = price)) +
+#   geom_jitter(aes(colour = cut),alpha = 0.05,width = 0.15, height = 0.15) +
+#   scale_fill_brewer(palette = "Spectral") +
+#   theme_void() + ggtitle("Strip Plot") +
+#   theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))
+
+p1 + p2 
+
+
+```
+]
+
+---
+
+## Conclusion
+### - We question the world and form *Hypothesis* out of surprise
+### - Hypotheses leads us to define *Questions*
+### - Questions lead to *Variables*
+### - Questions *with* Variables lead to *Graphs*
+### - With Graphs, we can write *Stories* ( Next Time!!)
+
+---
+class: hidden
 ## Variables and Graphs
 .pull-left[
 - Quantitative Variables
@@ -539,7 +643,7 @@ Quantitative Variable
 ]
 
 ---
-
+class: hidden
 ## Variables and Graphs
 .pull-left[
 - Quantitative Variables
@@ -552,6 +656,7 @@ Quantitative Variable
 
 
 ---
+class:hidden
 ## Variables and Graphs
 .pull-left[
 - More than on Quantitative Variables
@@ -565,7 +670,7 @@ For paired data, where the variables along the x and the y axes are measured in 
 
 
 ---
-
+class: hidden
 ## Variables and Graphs
 .pull-left[
 - More than on Quantitative Variables
@@ -578,7 +683,7 @@ For paired data, where the variables along the x and the y axes are measured in 
 
 
 ---
-
+class:hidden
 ## Variables and Graphs
 .pull-left[
 - More than on Quantitative Variables
@@ -591,7 +696,7 @@ For paired data, where the variables along the x and the y axes are measured in 
 
 
 ---
-
+class:hidden
 ## Variables and Graphs
 .pull-left[
 - Geospatial Data
@@ -607,10 +712,16 @@ In addition, we can show data values in different regions by coloring those regi
 
 
 ---
-
+class: middle, center
 # Thanks!
 
-Slides created by Arvind Venkatadri via the R packages:
+## Slides created via the R packages:
 
-[**xaringan**](https://github.com/yihui/xaringan)<br>
+### with  `r anicon::faa("r-project",animate="vertical")` 
+### via the R packages:<br>
+
+&#x2694;&#xFE0F; [**xaringan**](https://github.com/yihui/xaringan)<br> +<br/>&#x1F60E; 
+&#x2718;[**gadenbuie/xaringanExtra**](https://github.com/gadenbuie/xaringanExtra)
+<br> +<br/>
+&#x2694;&#xFE0F;[**the tidyverse**](https://tidyverse.tidyverse.org/)
 
