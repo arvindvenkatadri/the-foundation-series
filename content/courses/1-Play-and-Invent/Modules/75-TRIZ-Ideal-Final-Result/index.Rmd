@@ -30,9 +30,21 @@ url_video: ""
 
 # Introduction
 
-In the previous Module on **Available Resources** we understood how to identify resources in everyday situations and to come to terms with our assumptions and **functional fixedness**. This is the first and most important step in the TRIZ Problem Solving Method. 
+> “The reasonable man adapts himself to the world: the unreasonable one persists in trying to adapt the world to himself. Therefore all progress depends on the unreasonable man.” 
+[— George Bernard Shaw]{style="float:right"}
 
-Another important idea in TRIZ is that of the **Ideal Final Result(IFR)**. 
+
+How "unreasonable" can we become?
+
+In the previous Module on ***the Unreasonable Effectiveness of Available Resources*** we understood how to identify resources in everyday situations and to come to terms with our assumptions and ***functional fixedness***. This is the first and most important step in the TRIZ Problem Solving Method. 
+
+Another important idea in TRIZ is that of the ***Ideal Final Result(IFR)***. 
+
+Here is what TRIZ pioneer Ellen Domb says:  
+
+> The IFR is an *implementation-free description* of the situation after the problem has been solved. It focuses on customer needs or functions needed, *not the current process or equipment*. The goal of formulating the IFR is to eliminate rework ( solve the right problem the first time!) by addressing the root cause of the problem or customer need. The IFR helps you reach breakthrough solutions by thinking about the solution, not the intervening problems.
+
+In this way, TRIZ is itself an implementation of TRIZ: we are working backwards to the present from the solution, "**the other way around**" !! (We will see this Principle later)
 
 
 ## Ideal Final Result: Game
@@ -44,8 +56,9 @@ TBD
 
 # Discussion
 
-Like in Alice in Wonderland, it is important to conceptualize the Ideal Final Result as one of the **six impossible things before breakfast**(<http://www.literaturepage.com/read/throughthelookingglass-42.html>). As Jack Hipple says in his book *The Ideal Result* ( Reference 3), **it's when something performs its function, and does not exist.** In this sense, TRIZ is a foretaste of what was said later, that the [Best Technologies are those that disappear](https://web.archive.org/web/20141022035044/http://www.ubiq.com/hypertext/weiser/SciAmDraft3.html) 
-<https://web.archive.org/web/20141022035044/http://www.ubiq.com/hypertext/weiser/SciAmDraft3.html>
+Like the Queen in Alice in Wonderland, it is important to conceptualize the Ideal Final Result as one of the <u>[**six impossible things before breakfast.**](http://www.literaturepage.com/read/throughthelookingglass-42.html)</u>As Jack Hipple says in his book *The Ideal Result* ( Reference 3), *it's when something performs its function, and does not exist.*
+
+In this sense, TRIZ is a foretaste of what was said much later after TRIZ was invented, that <u>[**the best Technologies are those that disappear.**](https://web.archive.org/web/20141022035044/http://www.ubiq.com/hypertext/weiser/SciAmDraft3.html)</u>
 
 
 

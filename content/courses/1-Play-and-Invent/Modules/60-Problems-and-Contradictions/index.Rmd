@@ -73,7 +73,9 @@ We see them everywhere....if one is observant!! Let's see a few:
 How is this for a Contradiction? A shelf in a supermarket carries this placard for a shelf of ***FRESH JUICE***:
 
 ```{r echo=FALSE}
-blogdown::shortcode("tweet", "1453536795564683264")
+blogdown::shortcode("tweet", 
+                    user = "JoshHochschild", 
+                    id = "1453536795564683264")
 ```
 
 ![](Juice.jpeg)
@@ -83,17 +85,13 @@ blogdown::shortcode("tweet", "1453536795564683264")
 Here is another:
 
 ```{r echo=FALSE}
-blogdown::shortcode("tweet", "1238079127992795137")
+blogdown::shortcode("tweet",
+                    user = "otherliztaylor", 
+                    id = "1238079127992795137")
 
 ```
 
 ### C3: Contradiction-3
-
-And another:
-
-```{r echo=FALSE}
-blogdown::shortcode("tweet", "1276893105065771008")
-```
 
 Snails want to stay safe, and there is safety on the ground, but the ground is too hot. On the Ground, a Snail can be by itself, above the ground, they become visible to predators.
 
@@ -111,7 +109,12 @@ Most people's healthcare is tied to their job....Therefore, every corona-time la
 > This outbreak is highlighting, with extreme clarity, every major ***contradiction*** of this society and its decaying social order. <https://t.co/EtSUY3pPMi>\
 > --- Revolutionary Left Radio (\@RevLeftRadio)
 
-`r hugodown::embed_tweet(id="1237821091680313344")`
+```{r echo=FALSE}
+blogdown::shortcode("tweet", 
+                    user ="washingtonpost" ,
+                    id="1237821091680313344")
+
+```
 
 ## Contradictory Situations
 

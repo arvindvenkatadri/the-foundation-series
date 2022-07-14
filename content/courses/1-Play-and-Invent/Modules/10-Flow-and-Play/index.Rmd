@@ -23,7 +23,8 @@ url_video: ""
 library(blogdown)
 ```
 
-`r blogdown::shortcode("tweet", "1451016130999455750")`
+
+`r blogdown::shortcode("tweet", user = "avantgame", id = "1451016130999455750")`
 
 ![](https://pbs.twimg.com/media/FCMLPHPVUAAm3Yu?format=jpg&name=small)
 

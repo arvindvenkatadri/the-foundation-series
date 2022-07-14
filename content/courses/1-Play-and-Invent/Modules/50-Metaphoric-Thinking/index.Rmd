@@ -42,7 +42,7 @@ knitr::include_graphics("images/yellow-bucket-image-22.jpg")
 Activity-2: Some Shapes to Contemplate
 Where do you reckon you can “see” these shapes ? Can you briefly describe and quickly sketch a few ideas?
 
-```{r echo=FALSE}
+```{r echo=FALSE, out.height="40%", out.width="40%"}
 knitr::include_graphics("images/zigzag.jpg")
 knitr::include_graphics("images/star.jpg")
 ```
@@ -67,6 +67,10 @@ Both these activities are examples of exercises in divergent thinking. See the r
 - Are metaphors more interesting when they are surprising?
 - How did the attributes of the objects ( shape , texture, size, weight, orientation…) get embedded in the ideas presented?
 - Were these “embeddings” meaningful? How and why so? (Ask Bourdieu !!)
+
+## Seymour Papert Constructionism Game
+
+EMBED SLIDES HERE!!
 
 ## References
 
