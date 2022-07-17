@@ -1,10 +1,10 @@
 ---
 date: "`r Sys.Date()`"
-title: MBTI-Big-5
+title: "Birds of Different Feathers: MBTI-Big-5"
 external_link: ""
 weight: 30
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: Photo by <a href="https://unsplash.com/@bostonpubliclibrary?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Boston Public Library</a> on <a href="https://unsplash.com/s/photos/bird-species?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
 links:
   - icon: flask
@@ -33,17 +33,19 @@ We will briefly study the Big5/MBTI Personality Test Matrix and understand the "
 
 ## Icebreaker!
 
-Look at the slide full of numbers on the screen. I would like you to:
-- *Silently* work through the slide until you have found all the numbers
-- Raise your hand when you have done so.
+Look at the slide full of numbers on the screen. I would like you to:  
+- *Silently* work through the slide until you have found all the numbers  
+- Raise your hand when you have done so.  
 
 ## A Personality Game
 
-I have divided you up into 4 groups. Each group will be given a specific task. You will need to:
-- Discuss how to complete the Task
-- Complete the Task and document your work
-- *Also* document the main aspects of Discussion in your group. Who said/ suggested what; what were the points of agreement; what were the contentious points etc. 
-- Present all of this : 7 + 5 minutes / team
+I have divided you up into 4 groups. Each group will be given a specific task. You will need to:  
+
+- Discuss how to complete the Task  
+- Complete the Task and document your work  
+- *Also* document the main aspects of Discussion in your group. Who said/ suggested what; what were the points of agreement; what were the contentious points etc.   
+- Present all of this : 7 + 5 minutes / team  
+
 
 ## References
 

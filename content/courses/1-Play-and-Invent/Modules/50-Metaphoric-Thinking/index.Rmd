@@ -24,14 +24,14 @@ url_video: ""
 
 ## Introduction
 
->The Year of Magical Thinking is Joan Didion’s account of the year following the death of her husband, writer John Gregory Dunne, and her attempts to make sense of her grief while tending to the severe illness of her adopted daughter, Quintana. As she tries to make sense of John’s death and her own changed identity, Didion discovers that grief is not what she expected it to be. Consumed by memories of the years they lived in Los Angeles, shortly after they married and adopted Quintana, Didion feels that she has entered a state of temporary insanity. Though cool and collected on the surface, she begins to believe that her wishes might have the power to bring John back. To this end, she refuses to give away his clothes and shoes, believing that her husband will need them when he returns to her. She calls this childlike belief that her thoughts and wishes can alter reality “magical thinking.”
+>*The Year of Magical Thinking* is Joan Didion’s account of the year following the death of her husband, writer John Gregory Dunne, and her attempts to make sense of her grief while tending to the severe illness of her adopted daughter, Quintana. As she tries to make sense of John’s death and her own changed identity, Didion discovers that grief is not what she expected it to be. Consumed by memories of the years they lived in Los Angeles, shortly after they married and adopted Quintana, Didion feels that she has entered a state of temporary insanity. Though cool and collected on the surface, she begins to believe that her wishes might have the power to bring John back. To this end, she refuses to give away his clothes and shoes, believing that her husband will need them when he returns to her. She calls this childlike belief that her thoughts and wishes can alter reality “magical thinking.”
 
 Of course we are not embarked on anything like this, but we do want to generate some “magic” in our thoughts! So taking some inspiration from her “childlike belief” that can “alter reality”, let us hark back to our childhoods and see what we can do with these objects below:
 
 ## Activity-1: Some Objects to Contemplate
 How many different uses can you imagine for each of these objects? Can you briefly describe and quickly sketch a few ideas?
 
-```{r echo=FALSE}
+```{r echo=FALSE, fig.cap="Images by rawpixel.com"}
 knitr::include_graphics("images/256px-Brick.jpg")
 knitr::include_graphics("images/yellow-bucket-image-22.jpg")
 ```
@@ -42,11 +42,11 @@ knitr::include_graphics("images/yellow-bucket-image-22.jpg")
 Activity-2: Some Shapes to Contemplate
 Where do you reckon you can “see” these shapes ? Can you briefly describe and quickly sketch a few ideas?
 
-```{r echo=FALSE, out.height="40%", out.width="40%"}
+```{r echo=FALSE, out.height="40%", out.width="40%", fig.cap="Images by rawpixel.com"}
 knitr::include_graphics("images/zigzag.jpg")
 knitr::include_graphics("images/star.jpg")
 ```
-Images by rawpixel.com
+
 
 ## Scoring your Ideas
 Scoring is comprised of four components:
@@ -58,7 +58,10 @@ Scoring is comprised of four components:
 
 *You might have noticed that the higher fluency the higher the originality (if you did “good for you!”) This is a contamination problem and can be corrected by using a corrective calculation for originality (originality = originality/fluency).
 
+
+
 ## Discussion
+
 Both these activities are examples of exercises in divergent thinking. See the references for more information.
 
 - Did you use the words “as” and “like” to describe your ideas?
@@ -68,20 +71,29 @@ Both these activities are examples of exercises in divergent thinking. See the r
 - How did the attributes of the objects ( shape , texture, size, weight, orientation…) get embedded in the ideas presented?
 - Were these “embeddings” meaningful? How and why so? (Ask Bourdieu !!)
 
+
+
+## Metaphor Game from Thibodeau and Boroditsky
+
+We will divide into two groups (four if necessary) and contemplate a brief description of a city. There are three short questions / problems for you to consider at the end. We will then compare the answers and see how metaphors shape not just our thinking but our *solution making* as well!
+
+
 ## Seymour Papert Constructionism Game
 
 EMBED SLIDES HERE!!
 
 ## References
 
-1. Guilford Test for Divergent Thinking: [(Weblink)](https://curtbonk.com/bobweb/d1.html)
+1. **Guilford Test for Divergent Thinking**: [(Weblink)](https://curtbonk.com/bobweb/d1.html)
 
-1. Wallas-Kogan Test for Divergent Thinking: [(Weblink)](https://curtbonk.com/bobweb/d2.html)
+1. **Wallas-Kogan Test for Divergent Thinking**: [(Weblink)](https://curtbonk.com/bobweb/d2.html)
 
-1. Bobo Hjort, Drawing, Knowledge, and Intuitive Thinking: Drawing as a Way to Understand and Solve Complex Problems in Art and Complexity, J. Casti and A. Karlqvist (editors) © 2003 Published by Elsevier Science B.V.[(PDF)](Hjort.pdf)
+1. Thibodeau, Paul & Boroditsky, Lera. (2011). **Metaphors We Think With: The Role of Metaphor in Reasoning**. PloS one. 6. e16782. 10.1371/journal.pone.0016782.  [(PDF)](Thibodeau-Boroditsky-Role-of-Metaphor.pdf)
 
-1. David Chen, Creative Paradoxical Thinking and Its Implications for Teaching and Learning Motor Skills(PDF)
+1. Bobo Hjort. (2003) **Drawing, Knowledge, and Intuitive Thinking: Drawing as a Way to Understand and Solve Complex Problems in Art and Complexity**. J. Casti and A. Karlqvist (editors) © 2003 Published by Elsevier Science B.V.[(PDF)](Hjort.pdf)
 
-1. Holyoak and Thagard, The Analogical Mind, (PDF)
+1. David Chen, **Creative Paradoxical Thinking and Its Implications for Teaching and Learning Motor Skills** [(PDF)](CreativeParadoxicalThinking2011.pdf)
 
-1. Joshua Ferris, The Market Value of my Father, a metaphorical Short Story, [(Web Link)](https://www.wealthsimple.com/en-ca/magazine/joshua-ferris)
+1. Holyoak and Thagard, **The Analogical Mind**, [(PDF)](Holyoak- Thagard - Analogical Mind.1997pdf.pdf)
+
+1. Joshua Ferris, **The Market Value of my Father**, a metaphorical Short Story. [(Web Link)](https://www.wealthsimple.com/en-ca/magazine/joshua-ferris)
