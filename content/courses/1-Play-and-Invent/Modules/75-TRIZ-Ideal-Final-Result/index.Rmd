@@ -4,8 +4,9 @@ title: "TRIZ - The Ideal Final Result"
 author: "Arvind Venkatadri"
 external_link: ""
 weight: 75
+type: book
 image:
-  caption: 
+  caption: "Photo by suzukii xingfu: https://www.pexels.com/photo/food-photography-of-food-and-wine-bottles-on-table-inside-boat-872835/"
   focal_point: Smart
 links:
 # - icon: flask
@@ -28,6 +29,14 @@ url_slides: ""
 url_video: ""
 ---
 
+
+
+```{r,echo=FALSE, fig.align='center',fig.alt="Photo by suzukii xingfu on pexels"}
+knitr::include_graphics("featured.jpg")
+
+```
+
+
 # Introduction
 
 > “The reasonable man adapts himself to the world: the unreasonable one persists in trying to adapt the world to himself. Therefore all progress depends on the unreasonable man.” 
@@ -42,7 +51,7 @@ Another important idea in TRIZ is that of the ***Ideal Final Result(IFR)***.
 
 Here is what TRIZ pioneer Ellen Domb says:  
 
-> The IFR is an *implementation-free description* of the situation after the problem has been solved. It focuses on customer needs or functions needed, *not the current process or equipment*. The goal of formulating the IFR is to eliminate rework ( solve the right problem the first time!) by addressing the root cause of the problem or customer need. The IFR helps you reach breakthrough solutions by thinking about the solution, not the intervening problems.
+> The IFR is an *implementation-free description* of the situation after the problem has been solved. It focuses on customer needs or functions needed, *not the current process or equipment*. The goal of formulating the IFR is to eliminate rework (solve the right problem the first time!) by addressing the root cause of the problem or customer need. The IFR helps you reach breakthrough solutions by thinking about the solution, not the intervening problems.
 
 In this way, TRIZ is itself an implementation of TRIZ: we are working backwards to the present from the solution, "**the other way around**" !! (We will see this Principle later)
 

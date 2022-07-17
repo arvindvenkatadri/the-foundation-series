@@ -15,7 +15,7 @@ image:
 
 ## Introduction
 
-This is a {{<hl>}} Contextual Enquiry Course{{</hl>}} in the Foundation ( freshman) year of a Bachelor's Degree in Art and Design, at the Srishti Manipal Institute of Art, Design, and Technology, Bangalore, India.
+This is a {{<hl>}} Contextual Enquiry Course{{</hl>}} in the Foundation (freshman) year of a Bachelor's Degree in Art and Design, at the Srishti Manipal Institute of Art, Design, and Technology, Bangalore, India.
 
 ## Course Contents
 

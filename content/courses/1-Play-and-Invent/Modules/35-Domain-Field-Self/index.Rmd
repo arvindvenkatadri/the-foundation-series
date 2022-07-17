@@ -4,6 +4,7 @@ title: "The Creativity Systems Model"
 subtitle: "Domain, Field, and Self"
 external_link: 
 weight: 35
+type: book
 image:
   caption: Image by rawpixel.com
   focal_point: Smart
@@ -20,13 +21,20 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
+
+```{r,echo=FALSE, fig.align='center',fig.alt="Image by rawpixel.com"}
+knitr::include_graphics("featured.jpg")
+
+```
+
+
 ```{r include=FALSE}
 library(blogdown)
 ```
 
 ## The Creativity Systems Model
 
-```{r echo=FALSE, out.height= "150%", out.width="150%", fig.cap= "Mihaly Csikszentmihalyi"}
+```{r echo=FALSE, out.height= "150%", out.width="150%", fig.cap= "Mihaly Csikszentmihalyi",fig.align='center'}
 knitr::include_graphics("mihaly.jpg")
 ```
 

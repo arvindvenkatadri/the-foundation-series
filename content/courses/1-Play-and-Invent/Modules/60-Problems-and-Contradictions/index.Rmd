@@ -3,6 +3,7 @@ date: "`r Sys.Date()`"
 title: "TRIZ - Problems and Contradictions"
 external_link: ""
 weight: 60
+type: book
 image:
   caption: Photo by <a href="https://unsplash.com/@etiennegirardet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Etienne Girardet</a> on <a href="https://unsplash.com/s/photos/contradiction?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
@@ -18,6 +19,13 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
+
+
+```{r,echo=FALSE, fig.align='center',fig.alt="Image by Etienne Girardet on Unsplash"}
+knitr::include_graphics("featured.jpg")
+
+```
+
 
 ```{r setup, include=FALSE}
 library(blogdown)

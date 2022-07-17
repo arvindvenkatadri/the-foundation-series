@@ -3,8 +3,9 @@ date: "`r Sys.Date()`"
 title: "Flow and Play"
 external_link: ""
 weight: 10
+type: book
 image:
-  caption: Photo from 
+  caption: Photo by <a href="https://unsplash.com/@grwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Petr Slováček</a> on <a href="https://unsplash.com/s/photos/rock-climbing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
 links:
 slides: 
@@ -19,10 +20,17 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
+
+```{r,echo = FALSE, fig.alt="Petr Slováček on Unsplash", fig.align='center'}
+knitr::include_graphics("featured.jpg")
+```
+
+
 ```{r include=FALSE}
 library(blogdown)
 ```
 
+![](Mihaly.jpg)
 
 `r blogdown::shortcode("tweet", user = "avantgame", id = "1451016130999455750")`
 

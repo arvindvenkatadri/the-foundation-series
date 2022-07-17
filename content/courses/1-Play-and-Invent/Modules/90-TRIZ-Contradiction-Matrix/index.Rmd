@@ -4,8 +4,10 @@ title: "TRIZ - The Contradiction Matrix Workflow"
 author: "Arvind Venkatadri"
 external_link: ""
 weight: 90
+type: book
 image:
-  caption: 
+  caption: Photo by <a href="https://unsplash.com/@lanirudhreddy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ANIRUDH</a> on <a href="https://unsplash.com/s/photos/matrix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
   focal_point: Smart
 links:
 - icon: flask
@@ -30,15 +32,21 @@ url_slides: ""
 url_video: ""
 ---
 
+
+```{r,echo=FALSE, fig.align='center',fig.alt="Photo by Anirudh on unsplash"}
+knitr::include_graphics("featured.jpg")
+
+```
+
 # Introduction
 
 In the previous Module on **Problems and Contradictions** we understood how to identify a **Technical Contradiction** in everyday situations. This is the first and most important step in the TRIZ Problem Solving Method. 
 
 Next we look at two methods to **Resolve Contradictions**:
 
-- Using the **Contradiction Matrix** and **Inventive Principles**
+- Using the **Contradiction Matrix** and **Inventive Principles** for **Technical Contradictions (TC)**
 
-- Using TRIZ **Separation Principles**
+- Using TRIZ **Separation Principles** for **Physical Contradictions (PC)**
 
 
 ## Project TETRIS TRIZ Videos
@@ -65,7 +73,25 @@ Let us get an actual experience of TRIZ methods with these short videos:
 6. How to use the Contradiction Matrix:[(Coursera Video)](https://www.coursera.org/lecture/creative-thinking-techniques-and-tools-for-success/contradiction-matrix-DtEKz>)
 
 
-7. The TRIZ Contradiction Matrix (2003) [(Matrix)](pdf/TRIZ/TRIZ_interactive_contradiction_matrix_2016.xlsx)
+## A TRIZ Workflow
+
+We have seen  
+- How to examine a Situation  
+- Use the Ishikawa Diagram to find Knobs and Settings
+- Find one or more Administrative Contradictions  
+- State the Ideal Final Result  
+- Convert the AC into a TC with 39 TRIZ Parameters  
+
+Now we will use the TC and find out solutions for it using what is called the **Contradiction Matrix**. Here is a workflow presentation below:  
+
+```{r echo=FALSE}
+knitr::include_url("/slides/PlayAndInvent/TRIZ Basics/index.html")
+```
+
+
+## The TRIZ Contradiction Matrix
+
+1. The TRIZ Contradiction Matrix (2003) [(Matrix)](pdf/TRIZ/TRIZ_interactive_contradiction_matrix_2016.xlsx)
 
 
 
@@ -93,11 +119,6 @@ This is a simple and short introduction to *all* aspects of Classical TRIZ.
 
 1. Project TETRIS: Chapter 1: Introduction to Classical TRIZ [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_01.pdf)
 
-1. Project TETRIS: Chapter 2: Laws of System Evolution [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_02.pdf)
-
-1. Project TETRIS: Chapter 3: Short Review of ARIZ: Algorithm for Innovative Problem Solving and a Case Study [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_03.pdf)
-
-1. Project TETRIS: Chapter 4: Substance-Field ( "Su-Field" ) Analysis and Standard Solutions basic notions and rules [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_04.pdf)
 
 1. Project TETRIS: Chapter 5: Techniques  to  Resolve  Contradictions / Resources / Effects [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_05.pdf)
 

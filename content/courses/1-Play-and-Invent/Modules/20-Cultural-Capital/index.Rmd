@@ -3,6 +3,7 @@ date: "`r Sys.Date()`"
 title: Cultural Capital
 external_link: ""
 weight: 20
+type: book
 image: 
   caption: Photo from Getty Images
   focal_point: Smart
@@ -22,6 +23,13 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
+
+![](featured.jpg)
+
+```{r, echo=FALSE, eval = FALSE, fig.alt="Photo from Getty Images", fig.align='center'}
+knitr::include_graphics("featured.jpg")
+
+```
 
 # Introduction
 
