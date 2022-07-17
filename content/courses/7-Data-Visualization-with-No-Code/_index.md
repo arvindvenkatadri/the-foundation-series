@@ -26,7 +26,7 @@ tags:
 
 This Unit takes students on a journey of using data to tell stories, without writing one byte of code. The tools used are also web-based and require no installation. 
 
-Datasets from various domains of *human enterprise and activity* are introduced. The datasets are motivated from the point of view of the *Types of Information* they contain: {{<hl>}}**Changes**, **Relations**, **Space**, and **Time**{{</hl>}}, for example. 
+Datasets from various domains of *human enterprise and activity* are introduced. The datasets are motivated from the point of view of the *Types of Information* they contain: {{<hl>}}**Changes**, **Distributions**, **Ranking**, **Relations**, **Space**, and **Time**{{</hl>}}, for example. 
 
 The {{<hl>}}**human contexts**{{</hl>}} from these datasets are used to appreciate the specifics of {{<hl>}}**data formats**{{</hl>}}, and the {{<hl>}}**nature of variables**{{</hl>}} within the data. Student will relate the data variables to Data/Information Visualizations, making decisions on how geometric shapes and other aspects of different Data Types and Visualizations can be metaphorically matched to the contexts. These {{<hl>}}**information-to-geometry metaphors**{{</hl>}} will lead us to {{<hl>}}**Insights**, **Questions**{{</hl>}}, and eventually to {{<hl>}}**Stories**{{</hl>}}.
 
@@ -37,8 +37,7 @@ Students will then be prompted to work in groups, or as a whole, to conduct a co
 - {{<hl>}}Data Basics{{</hl>}}: What does data look like and why should we care?
 - {{<hl>}}How to Spot a good Variable{{</hl>}}
 - What can we do with the data, visually? How do geometric attributes such as location, size, and colour, lend themselves to representing data?
-- Creating {{<hl>}}Graphs and Data Visualizations{{</hl>}} using pure web-based point-and-click software {{<hl>}}[Data Wrapper](https://www.datawrapper.de/){{</hl>}}
-- Using these Graphs and Data Visualizations to create Infographics and Stories using {{<hl>}}[Data Wrapper](https:///){{</hl>}}
+- Creating {{<hl>}}Graphs and Data Visualizations{{</hl>}} using pure web-based point-and-click software {{<hl>}}Flourish Studio](https://flourish.studio){{</hl>}} and to create Story Board Infographics with them.
 - Rapidly make different kinds of graphs
 - Use Graphs and Tables as a way of getting answers to your {{<hl>}}Questions{{</hl>}}
 - {{<hl>}}Develop intuition{{</hl>}} that matches data and graph types
@@ -63,6 +62,8 @@ Over the next two weeks we will form our intuition about shapes and data and lea
 ## References
 
 1. Jack Dougherty and Ilya Ilyankou, *Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code*, <https://handsondataviz.org/>. Available free Online. 
+
+1. Claus O. Wilke, *Fundamentals of Data Visualization*, <https://clauswilke.com/dataviz/>. Available free Online.   
 
 1. Jonathan Schwabish, *Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks, Columbia University Press, 2021. 
 
