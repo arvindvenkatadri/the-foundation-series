@@ -87,18 +87,39 @@ library(downloadthis)
 Some of the very basic and commonly used plots for data are:
 - Bar and Column Charts
 - Histograms and Frequency Distributions
-- Scatter Plots ( if there is more than one quantvariable)
-
-
-Advanced Plots:
-- 2D Hexbins Plots and Frequency Distributions
+- Scatter Plots (if there is more than one quant variable)
+and
+- 2D Hexbins Plots and 2D Frequency Distributions (horrors?)
 
 ## An Example: Bar and Column Charts
+
+Here is a dataset from Jeremy Singer-Vine's blog, [Data Is Plural](https://www.data-is-plural.com/). This is a list of all books banned in schools across the US. 
+
+```{r, echo=FALSE}
+banned <- readxl::read_xlsx(path = "banned.xlsx",
+                            sheet = "Sorted by Author & Title")
+
+banned %>% download_this(output_name = "banned",output_extension = ".csv", button_label = "Banned Books data", button_type = "default", icon = "fa fa-save")
+
+``` 
+```{r}
+banned_by_state <- banned %>% group_by(State) %>% summarise(total = n())
+banned %>% group_by(State, `Type of Ban`) %>% summarise(count = n()) %>%
+ #  pivot_wider(.,id_cols = State,
+ #              names_from = `Type of Ban`,
+ #              values_from = count) %>% janitor::clean_names() %>% 
+ #  replace_na(list(banned_from_libraries_and_classrooms = 0,
+ #                  banned_from_libraries = 0,
+ #                  banned_pending_investigation = 0,
+ #                  banned_from_classrooms = 0)) %>% 
+ # mutate(total = sum(across(where(is.integer)))) %>%
+ggplot(aes(x = reorder(State, banned_by_state$total), y = count, fill = `Type of Ban`)) + geom_col() + coord_flip()
+```
 
 
 ## An Example: Histograms and Frequency Distributions
 
-TBD: Example using Datawrapper
+TBD: Example using Flourish
 
 ### How does this Work?
 
@@ -111,6 +132,7 @@ By contrast, column charts show *categorical data*, such as the number of apples
 ### How could you explore?
 
 TBD. Add `hexbin` plots here
+
 ### What is the Story here?
 
 TBD

@@ -13,7 +13,7 @@ tags:
 featured: no
 image:
   placement: 2
-  caption: 'Image credit: [**Alice In Wonderland dot Net**](https://www.alice-in-wonderland.net/)'
+  caption: 
   focal_point: ""
   preview_only: true
 projects: []
@@ -35,11 +35,11 @@ links:
 #   url: https://r-for-artists.netlify.app/slides/06-Spatial-Data-in-R.html
 ---
 
-![](featured.jpg)
 
 
 ```{r setup, include=FALSE}
 library(blogdown)
+library(tidyverse)
 ```
 
 
@@ -61,9 +61,9 @@ Here is a UFO Sighting dataset, containing location and text descriptions. <http
 
 
 
-## Mapping Projects
+## Your Turn
 
-## 1. Animal and Bird Migration
+### 1. Animal and Bird Migration
 
 1. Head off to [movebank.org](https://www.movebank.org/cms/movebank-main)
 2. Look at a few species of interest and choose one.
@@ -73,51 +73,5 @@ Here is a UFO Sighting dataset, containing location and text descriptions. <http
 
 For tutorial info: <https://movebankworkshopraleighnc.netlify.app/>
 
-    
+###
 
-## 2. Food at Home
-
-1. Draw a map of your home-town with your favourite restaurants shown. Pop-ups for each restaurant will win bonus points. 
-
-Take a look at:
-Burkhart, Christian. “Streetmaps.” [StreetMaps](https://ggplot2tutor.com/tutorials/streetmaps)
-
-![](https://ggplot2tutor.com/static/093466a0f94f04f36e2c028fe7ae3f23/fd84e/maps.png)
-
-## 3. Mapping India: Places of Worship
-
-1. Do some searching and make a list of Places of Worship in India that are known to you. 
-
-1. Head off to the **India Place Finder** website (india.info-proto.com/index.php/). Using the search facility there, download a CSV file that contains names of the places and their lon-lat coordinates.
-
-1. Read this CSV into R. Use the `sfheaders` package to convert this data into an `sf` spatial data frame.
-
-1. Use the `ggplot` or the `tmap` +`plotly` packages to plot these on an India map. Use the `rnaturalearth` package to get hold of an India map that is relevant to your area of interest. 
-
-1. Extra:
-    - Use [font-awesome](https://fontawesome.com/icons) icons to signify your Places of Worship. 
-    - Use popups in `tmap/plotly` to pop-up a picture or video about the place
-    
-## 4. Mapping Places Yelahanka on Open Street Map
-
-1. Download the Vespucci app on your phone:  
-   - Android [app on  Play Store](https://play.google.com/store/apps/details?id=de.blau.android&hl=en&gl=US)
-   - iPhone is sadly not available. So partner with an Android phone user please!
-1. You will need to create an account on Open Street Map and login to the app on your phone. This will allow you to contribute changes and data to the map and your data will be available to any netizen for download. 
-2. Read this [Vespucci Tutorial](https://learnosm.org/en/mobile-mapping/vespucci/)
-3. Choose specific categories of Places of interest:
-   - Restaurants
-   - Street Food locations
-   - Medicines
-   - Dustbins/garbage
-   - Flowering Trees
-   - Park Benches
-   - Street Lighting
-
-4. Wherever possible, record metadata:
-  - Menu / Cuisine
-  - Timings
-  - Indoor or outdoor seating
-  - Parking available
-
-5. Download in R and plot using `ggplot` or using `tmap`.

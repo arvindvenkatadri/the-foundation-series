@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>TRIZ - A Database of Case Studies</title>
+    <title>TRIZ - A (Growing) Database of Case Studies</title>
     <meta charset="utf-8" />
     <meta name="author" content="Arvind Venkatadri" />
-    <meta name="date" content="2022-07-17" />
+    <meta name="date" content="2022-07-24" />
     <script src="index_files/header-attrs/header-attrs.js"></script>
     <link href="index_files/animate.css-xaringan/animate.slide_left.css" rel="stylesheet" />
     <script src="index_files/xaringanExtra-webcam/webcam.js"></script>
@@ -72,28 +72,33 @@ class: center middle
 ---
 ## TRIZ: A Workflow Review
 
- - Formulate a **CONTRADICTION** (a trade-off or a compromise)
- 
+
  - Specify an **IDEAL FINAL RESULT**
  
- - Convert/metaphorize the **CONTRADICTION** into **TRIZ PARAMETER**s
+ - A. Formulate a **ADMINISTRATIVE CONTRADICTION (AC)** (a trade-off or a compromise) in "plain English
  
- - Look up the **CONTRADICTION MATRIX**
  
- - Discover the **INVENTIVE PRINCIPLES** you might apply
+ - Convert/metaphorize the **AC** into a **TECHNICAL CONTRADICTION(TC)** using **39 TRIZ PARAMETER**s
  
- - *Un-metaphorize* the **INVENTIVE PRINCIPLES** to apply them in a specific way in your problem and solve it
+  - Look up the **CONTRADICTION MATRIX**
+ 
+  - Discover the **INVENTIVE PRINCIPLES** you might apply
+ 
+  - *Un-metaphorize* the **INVENTIVE PRINCIPLES** to apply them in a specific way in your problem and solve it
+  
+ - B. If possible develop a **PHYSICAL CONTRADICTION(PC)** from your AC. 
+  - E.g Something has to be hot and cold at the same time
+  - Use **SEPARATION PRINCIPLES** to solve the **PC**
+  - Use of **SEPARATION PRINCIPLES** may not involve much *un-metaphorization*, but getting to a PC may not be easy.
  
 
 ---
 
-## TRIZ Workflow: Example #1
-### Meat Transportation
+## TRIZ Workflow: Example #1: Meat Transportation
+
 
 .pull-left[
-A meat plant in South America ships its product to the United States. Refrigeration is required during
-
-transport to keep the meat frozen. The meat is flown to the United States, so refrigeration systems were installed in cargo planes. When competition increased, the owner of the plant sought to reduce delivery cost. It became obvious that he must increase the amount of product per air shipment. Analysis of the situation revealed that he could compete better if the weight of the refrigeration system were replaced with that of meat. He did exactly that. Flying at an altitude of 15,000–25,000 feet the air temperature is below 32oF, so no refrigeration system was actually needed. 
+A meat plant in South America ships its product to the United States. Refrigeration is required during transport to keep the meat frozen. The meat is flown to the United States, so refrigeration systems were installed in cargo planes. When competition increased, the owner of the plant sought to reduce delivery cost. It became obvious that he must increase the amount of product per air shipment. Analysis of the situation revealed that he could compete better if the weight of the refrigeration system were replaced with that of meat. He did exactly that. Flying at an altitude of 15,000–25,000 feet the air temperature is below 32 deg. F, so no refrigeration system was actually needed. 
 ]
 .pull-right[
 Conclusion: Utilization of existing resources costing nothing brought the system closer to Ideality. The art of inventing is the ability to remove barriers to Ideality in order to qualitatively improve a technical system. (In this book we are talking only about technical systems; however, this statement can be applied to any system.)
@@ -102,38 +107,62 @@ Conclusion: Utilization of existing resources costing nothing brought the system
 ]
 
 ---
-An oil well in Saudi Arabiaexploded and caught fire.
-The resultwas a blazing inferno that consumed an enor-
-mous quantity of oil eachday. After initial efforts to ex-
-tinguish it failed, famed firefighter Red Adairwascalled
+## TRIZ Workflow: Example #2: Oil Well Fires
+
+An oil well in Saudi Arabia exploded and caught fire.
+The result was a blazing inferno that consumed an enormous quantity of oil each day. After initial efforts to extinguish it failed, famed firefighter Red Adair was called
 in. Red knew that the fire could be put out if a huge amount
 of fire retardant foam could be dumped on the base of the
 well. There was enough foam available at the site to do
-thejob. However, there was no hose large  enough to put
+the job. However, there was no hose large  enough to put
 all the foam on the fire fast enough. The small hoses that
-were available could not shootthe foam quickly enough
-todoanygood. It looked liketherewould have to be costly
+were available could not shoot the foam quickly enough
+to do any good. It looked like there would have to be costly
 delay before a serious attempt could be made.
-However, RedAdairknew just what to do. Hestationed
-menin a circleallaround thefire, withallof theavailable
-small hoses. When everyone wasready all ofthehoses were
-opened upandfoam wasdirected atthefirefromall direc-
-tions. In this way a hugeamount of foam quickly struck
-thesource of thefire. Theblazewasextinguished, andthe
-Saudis weresatisfied thatRedhadearnedhisthreemillion
+However, Red Adair knew just what to do. He stationed
+men in a circle all around the fire, with all of the available small hoses. When everyone was ready all of the hoses were
+opened up and foam was directed at the fire from all directions. In this way a huge amount of foam quickly struck
+the source of the fire. The blaze was extinguished, and the
+Saudis were satisfied that Red had earned his three million
 dollar fee.
 
 
 ---
-## TRIZ Workflow: Example #2
-### Meat Transportation
-.pull_left[]
-.pull-right[]
-
-
+## TRIZ Workflow: Example #3: Spotify Ad
+.center[
+&lt;iframe width="760" height="500" src="https://www.youtube.com/embed/X1WP5J-I9f8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+]
 
 ---
-## TRIZ Workflow: Example #3
+## TRIZ Workflow: Example #3: Spotify Ad
+
+.pull-left[
+- **AC**: I want to chill but Mom wants me to take her veggie shopping. I have to put up with waste of time and possibly boredom. 
+- **Knobs** (short list): 
+  - Travel Time(L/S); Purchase Time(L/S); Noise(Loud/Soft); Bargaining Talk(Long/Short)
+- **Output**: Stress / Boredom / Waste of Time
+- **IFR**: *"I should go AND not go to the market at the same time"*
+
+- **TC**: From the 39 TRIZ parameters:
+  - **TC1**: Increase *Productivity(39)* and not worsen *Stress(11)*
+  - **TC2**: Improve *Loss of Time(25)* and not worsen *Effect of External Harmful Factors(30)*
+  ]
+  
+.pull-right[
+Inventive Principles:
+- TC1: 10(Prior Action), 37(Thermal Expansion), 14(Spheroidality).....hmm, not very inspiring, unless 37 means *get angry with Mom* !! Never!!
+- TC2: 35(Parameter Change), 18(Mechanical Vibration)!!, 34(Rejecting and Regenerating Parts). 
+
+Solution:
+- 18(Mechanical Vibration) : Make noise of your own? 🔉 😆
+- 35(Parameter Change): Change *Bargaining Talk* to *Sweet Sound*: Play music!!🎵
+- Also 14(Spheroidality): Wear "spherical" headphones!!🎧! Create a "sound sphere"! Long shot!!
+- SO: with music on, I was **in the market, and not in the market** !!IFR achieved !! Ta Da !!
+
+]
+---
+
+## TRIZ Workflow: Example #4
 ### 
 .pull_left[]
 .pull-right[]
@@ -141,7 +170,7 @@ dollar fee.
 
 
 ---
-## TRIZ Workflow: Example #4
+## TRIZ Workflow: Example #5
 ###
 .pull_left[]
 .pull-right[]
@@ -149,10 +178,10 @@ dollar fee.
 
 
 ---
-## TRIZ Workflow: Example #2
-### Arc of the Diver
-.pull_left[For high water diving, water must be “hard” to support the diver and “soft” so as not to injure the diver. The physical contradiction: The water must be hard and soft at the same time. This contradiction is resolved by separating the requirements in space: Saturate the water with air bubbles — the pool contains both air and water.]
-.pull-right[]
+## TRIZ Workflow: Example #6: Arc of the Diver
+
+For high water diving, water must be “hard” to support the diver and “soft” so as not to injure the diver. The physical contradiction: The water must be hard and soft at the same time. This contradiction is resolved by separating the requirements in space: Saturate the water with air bubbles — the pool contains both air and water.
+
 
 
 

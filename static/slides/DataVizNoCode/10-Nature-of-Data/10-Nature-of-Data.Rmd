@@ -406,7 +406,7 @@ ggplot(Night, aes(x = Date, y = Deaths, colour = Cause)) +
   labs(title = "Did Florence Nightingale's Interventions Work?", 
        subtitle = "Deaths over Time during the Crimean War") +  
   theme_minimal() +
-  theme(plot.title = element_text(family = "American Typewriter",size = 16,face = "bold", colour = "tomato"),axis.text = element_text(size = 6))
+  theme(plot.title = element_text(family = "bell",size = 16,face = "bold", colour = "tomato"),axis.text = element_text(size = 6))
 
   
 ```
@@ -604,6 +604,7 @@ knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizati
 - Geometry: x = Int/Ratio, y = Int/Ratio, and colour = Nom/ord
 ]
 .pull-right[
+
 ```{r, echo=FALSE, out.height="450px"}
 p1 <- ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point(aes(fill = species)) + theme_void() + ggtitle("Scatter") + scale_fill_brewer(palette = "Spectral") + theme(plot.background = element_rect(color = "black", fill = NA, size = 1),plot.title = element_text(hjust = 0.5))

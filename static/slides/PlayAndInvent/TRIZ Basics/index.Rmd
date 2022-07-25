@@ -1,58 +1,106 @@
 ---
 title: "TRIZ - A Very Contradictory Method"
 subtitle: "A Workflow for Students"
-author: 
-  - "Arvind Venkatadri"
+author: "Arvind Venkatadri"
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:
-    css: xaringan-themer.css
-    seal: FALSE
+    css:
+      - default
+      - css/lexis.css
+      - css/lexis-fonts.css
+    lib_dir: libs
+    seal: false
     nature:
       slideNumberFormat: "%current%"
       highlightStyle: github
       highlightLines: true
-      ratio: 16:9
-      countIncrementalSlides: true
+      countIncrementalSlides: false
+      ratio: "16:9"
 ---
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(
-  fig.width=9, fig.height=3.5, fig.retina=3,
-  out.width = "100%",
-  cache = FALSE,
-  echo = TRUE,
-  message = FALSE, 
-  warning = FALSE,
-  hiline = TRUE
-)
-```
-
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-xaringanthemer:::style_solarized_light()
+```{r setup, include=FALSE,warning=FALSE}
+library(knitr)
 library(tidyverse)
-library(anicon)
-library(emojifont)
-library(emoji)
-library(icons)
-```
-
-
-```{r xaringan-extra, include=FALSE, warning=FALSE}
+library(fontawesome)
+library(rmarkdown)
+options(
+    htmltools.dir.version = FALSE,
+    knitr.table.format = "html",
+    knitr.kable.NA = ''
+)
+knitr::opts_chunk$set(
+    echo = FALSE,
+    warning = FALSE,
+    message = FALSE,
+    fig.path = "figs/",
+    #fig.width = 7.252,
+    #fig.height = 4,
+    comment = "#>",
+    fig.retina = 3) # Better figure resolution
+dateWritten <- format(as.Date('2022-07-13'), 
+                      format="%B %d %Y")
+today <- format(Sys.Date(), 
+                format="%B %d %Y")
+library(xaringanthemer)
 library(xaringanExtra)
-use_extra_styles(hover_code_line = TRUE,mute_unhighlighted_code = FALSE)
-use_xaringan_extra()
+library(xaringanBuilder)
+library(renderthis)
+library(tidyverse)
+library(patchwork)
+library(emoji)
+library(emojifont)
+library(anicon)
+library(sf)
+library(showtext)
+# https://www.r-bloggers.com/2014/07/using-showtext-in-knitr/
+# https://github.com/yixuan/showtext/blob/master/README.md
+library(palmerpenguins)
 
+# Enables the ability to show all slides in a tile overview by pressing "o"
+xaringanExtra::use_tile_view()
+xaringanExtra::use_panelset()
+xaringanExtra::use_clipboard()
+xaringanExtra::use_share_again()
+xaringanExtra::style_share_again(share_buttons = "all")
+xaringanExtra::use_fit_screen()
+xaringanExtra::use_scribble()
+xaringanExtra::use_search()
+xaringanExtra::use_freezeframe()
+xaringanExtra::use_tachyons()
+xaringanExtra::use_animate_css()
+xaringanExtra::use_extra_styles(
+  hover_code_line = TRUE,
+  mute_unhighlighted_code = FALSE
+)
+
+# xaringanExtra::use_logo(
+#   image_url = "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/xaringan.png",
+#   link_url = "http://slides.yihui.name/xaringan",
+#   position = xaringanExtra::css_position(top = "1em", right = "1em")
+# )
+# Xaringan Lexis theme
+# https://jhelvy.github.io/lexis/
+showtext::showtext.auto()
 ```
 
-class: center middle
+name: title-slide
+class: title-slide, center, middle, inverse
 
-# TRIZ - A Very Contradictory Method
-## A Workflow for Students
+# `r rmarkdown::metadata$title`
+#.fancy[`r rmarkdown::metadata$subtitle`]
 
-Arvind Venkatadri
+<br>
+
+.large[by `r rmarkdown::metadata$author`]
+
+Written: `r dateWritten`
+
+Updated: `r today`
+
+.footer-large[.right[.fira[
+<br><br><br><br><br>[The Foundation Series](https://the-foundation-series.netlify.app/courses/1-Play-and-Invent/)
+]]]
 
 ---
 
@@ -409,7 +457,7 @@ If our job is "improve the lawnmower" instead, we could immediately set up and p
 
 .pull-left[
 **IFR**:
-- **Nice looking grass** with no problems !!`r emoji("laugh")`
+- **Nice looking grass** with no problems !!`r emoji::emoji("laugh")`
 
 **RESOURCES:**
 - Grass
