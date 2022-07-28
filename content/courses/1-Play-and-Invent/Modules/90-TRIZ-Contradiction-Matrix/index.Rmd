@@ -4,6 +4,7 @@ title: "TRIZ - The Contradiction Matrix Workflow"
 author: "Arvind Venkatadri"
 external_link: ""
 weight: 90
+type: book
 image:
   caption: Photo by <a href="https://unsplash.com/@lanirudhreddy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ANIRUDH</a> on <a href="https://unsplash.com/s/photos/matrix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
@@ -32,7 +33,7 @@ url_video: ""
 ---
 
 
-```{r,echo=FALSE, eval=FALSE, fig.align='center',fig.alt="Photo by Anirudh on unsplash"}
+```{r,echo=FALSE, fig.align='center',fig.alt="Photo by Anirudh on unsplash"}
 knitr::include_graphics("featured.jpg")
 
 ```
@@ -79,7 +80,8 @@ We have seen
 - Use the Ishikawa Diagram to find Knobs and Settings
 - Find one or more Administrative Contradictions  
 - State the Ideal Final Result  
-- Convert the AC into a TC with 39 TRIZ Parameters  
+- Convert the AC into a TC with 39 TRIZ Parameters 
+- (Convert the AC into a PC)
 
 Now we will use the TC and find out solutions for it using what is called the **Contradiction Matrix**. Here is a workflow presentation below:  
 

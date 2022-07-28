@@ -1,9 +1,11 @@
 ---
 date: "`r Sys.Date()`"
 title: Cultural Capital
+linkTitle: Cultural Capital
 external_link: ""
 weight: 20
 type: book
+view: 2
 image: 
   caption: Photo from Getty Images
   focal_point: Smart
@@ -26,12 +28,12 @@ url_video: ""
 
 ![](featured.jpg)
 
-```{r, echo=FALSE, eval = FALSE, fig.alt="Photo from Getty Images", fig.align='center'}
-knitr::include_graphics("featured.jpg")
+```{r, echo=FALSE,eval=FALSE,fig.alt="Photo from Getty Images", fig.align='center'}
+knitr::include_graphics(path = "featured.jpg")
 
 ```
 
-# Introduction
+## Introduction
 
 We will understand Pierre Bourdieu's Concept of {{<hl>}}Cultural Capital(CC){{</hl>}}. 
 
@@ -44,7 +46,7 @@ CC affects our view of the world and helps us identify Problem Situations and Co
 `r blogdown::shortcode("youtube", "5DBEYiBkgp8")`
 
 
-# Activity
+## Activities
 
 1. Sharing of CC: we will each of us take turns to reveal some aspect of Cultural Capital that we directly possess: **Objectified**, **Institutional**, and **Embodied**
 

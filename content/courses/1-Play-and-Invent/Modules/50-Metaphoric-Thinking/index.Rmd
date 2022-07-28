@@ -1,9 +1,12 @@
 ---
 date: "`r Sys.Date()`"
 title: " A Year of Metaphoric Thinking"
+linkTitle: A Year of Metaphoric Thinking
 author: "Arvind Venkatadri"
 external_link: ""
 weight: 50
+view: 2
+type: book
 image:
   caption: Image by <a href="https://pixabay.com/users/makamuki0-1102736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1001743">Marc Pascual</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1001743">Pixabay</a>
   focal_point: Smart
@@ -22,7 +25,7 @@ url_slides: ""
 url_video: ""
 ---
 
-```{r, echo=FALSE, eval=FALSE,fig.align='center', fig.alt="Marc Pascual on pixabay"}
+```{r, echo=FALSE,fig.align='center', fig.alt="Marc Pascual on pixabay"}
 knitr::include_graphics("featured.jpg")
 
 ```
@@ -36,7 +39,7 @@ Of course we are not embarked on anything like this, but we do want to generate 
 ## Activity-1: Some Objects to Contemplate
 How many different uses can you imagine for each of these objects? Can you briefly describe and quickly sketch a few ideas?
 
-```{r echo=FALSE, fig.cap="Images by rawpixel.com"}
+```{r echo=FALSE, fig.alt="Images by rawpixel.com", fig.dim=c(4,3)}
 knitr::include_graphics("images/256px-Brick.jpg")
 knitr::include_graphics("images/yellow-bucket-image-22.jpg")
 ```
@@ -54,6 +57,7 @@ knitr::include_graphics("images/star.jpg")
 
 
 ## Scoring your Ideas
+
 Scoring is comprised of four components:
 
 - **Fluency** - total. Just add up all the responses. In this example it is 6.  
@@ -85,7 +89,10 @@ We will divide into two groups (four if necessary) and contemplate a brief descr
 
 ## Seymour Papert Constructionism Game
 
-EMBED SLIDES HERE!!
+```{r, echo=FALSE}
+knitr::include_url("/slides/PlayAndInvent/Constructionism/index.html")
+```
+
 
 ## References
 

@@ -1,8 +1,11 @@
 ---
 date: "`r Sys.Date()`"
 title: "Flow and Play"
+linktitle: Flow and Play
 external_link: ""
 weight: 10
+type: book
+view: 2
 image:
   caption: Photo by <a href="https://unsplash.com/@grwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Petr Slováček</a> on <a href="https://unsplash.com/s/photos/rock-climbing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
@@ -20,7 +23,7 @@ url_slides: ""
 url_video: ""
 ---
 
-```{r,echo = FALSE, eval = FALSE, fig.alt="Petr Slováček on Unsplash", fig.align='center'}
+```{r,echo = FALSE, fig.alt="Petr Slováček on Unsplash", fig.align='center'}
 knitr::include_graphics("featured.jpg")
 ```
 

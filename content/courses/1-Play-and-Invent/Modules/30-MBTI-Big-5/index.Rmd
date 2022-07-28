@@ -1,12 +1,13 @@
 ---
 date: "`r Sys.Date()`"
 title: "Birds of Different Feathers: MBTI-Big-5"
-external_link: ""
+linkTitle: "Birds of Different Feathers: MBTI-Big-5"
 weight: 30
+type: book
+view: 2
 image:
   caption: Photo by <a href="https://unsplash.com/@bostonpubliclibrary?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Boston Public Library</a> on <a href="https://unsplash.com/s/photos/bird-species?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
-type: book
 links:
   - icon: flask
     icon_pack: fas
@@ -29,7 +30,7 @@ url_video: ""
 
 ---
 
-```{r, echo=FALSE, fig.cap="Boston Public Library on Unsplash", fig.align='center'}
+```{r, echo=FALSE, fig.alt="Boston Public Library on Unsplash", fig.align='center'}
 knitr::include_graphics("featured.jpg")
 ```
 
@@ -41,7 +42,8 @@ We will briefly study the Big5/MBTI Personality Test Matrix and understand the "
 ## Icebreaker Game!
 
 Look at the slide full of numbers on the screen. I would like you to:  
-- *Silently* work through the slide until you have found all the numbers  
+
+- *Silently* work through the slide until you have found all the numbers   
 - Raise your hand when you have done so. 
 
 

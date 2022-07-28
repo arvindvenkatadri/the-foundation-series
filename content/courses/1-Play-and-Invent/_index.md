@@ -1,8 +1,8 @@
 ---
+title: "\U0001F9ED Play and Invent"
 date: "2021-01-24"
 linkTitle: Play and Invent
-summary: Using Metaphors and Analogic Thinking techniques like TRIZ to solve Inventive Problems
-title: "\U0001F9ED Play and Invent"
+summary: "Using Metaphors and Analogic Thinking techniques like TRIZ to solve Inventive Problems"
 view: 2
 weight: 1
 type: book
@@ -19,9 +19,12 @@ This is a {{<hl>}} Contextual Enquiry Course{{</hl>}} in the Foundation (freshma
 
 ## Course Contents
 
--   Fundamentals of {{<hl>}}Flow and Play{{</hl>}} as defined by Mihaly Csikszentmihalyi
--   {{<hl>}}The Six Thinking Hats Method{{</hl>}} and how to apply them in practice
--   Gain experience with the {{<hl>}}TRIZ{{</hl>}} philosophy and techniques such as the {{<hl>}}Contradiction Matrix{{</hl>}} and {{<hl>}}40 Inventive Principles{{</hl>}}
+- Fundamentals of {{<hl>}}Flow and Play{{</hl>}} as defined by Mihaly Csikszentmihalyi
+- {{<hl>}}Cultural Capital{{</hl>}} as a source of one's Ideas
+- Genes and {{<hl>}}Memes{{</hl>}}
+- {{<hl>}}The Six Thinking Hats Method{{</hl>}} and how to apply them in practice
+- Innovative Problems Solving Methods like {{<hl>}}TRIZ{{</hl>}}, its philosophy and techniques such as the {{<hl>}}Contradiction Matrix{{</hl>}} and {{<hl>}}40 Inventive Principles{{</hl>}}
+
 
 ## Abstract
 
@@ -35,7 +38,7 @@ Structured heuristic techniques based on de Bono's 6 Hat method will help us see
 
 Aspects of the Russian system of innovation and problem solving, TRIZ (Teoriya Resheniya Izobretatelskhikh Zadatch) invented by Genrikh Altshuller will be introduced. Alshuller's idea of Generalized Problem Solving by borrowing ideas/memes from other Domains, his 8 Laws of Evolution of Products, and ( a few of ) the 40 Inventive Principles derived from his analysis of patents, will be covered in gamified fashion. These will be linked to with David Perkin's (Harvard Project Zero) ideas and Edward de Bono's methods to interpret, and design for, existing situations and products.
 
-Field visits to product and logistics companies will be used to bolster and demonstrate the unity of these concepts acquired in class. Technological assignments, and non-tech making and presenting tasks will also be used in class to create gamified experiences for all of these.
+Field visits to product, food preparation, solar energy, and logistics companies will be used to bolster and demonstrate the unity of these concepts acquired in class. Technological assignments, and non-tech making and presenting tasks will also be used in class to create gamefied experiences for all of these.
 
 The students will finally use the methods and ideas they have learnt and apply them in creating a project, artifact or performance of their own.
 

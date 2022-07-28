@@ -1,9 +1,11 @@
 ---
 date: "`r Sys.Date()`"
 title: "TRIZ - Problems and Contradictions"
+linkTitle: TRIZ - Problems and Contradictions
 external_link: ""
 weight: 60
 type: book
+view: 2
 image:
   caption: Photo by <a href="https://unsplash.com/@etiennegirardet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Etienne Girardet</a> on <a href="https://unsplash.com/s/photos/contradiction?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
@@ -162,6 +164,11 @@ You can document your analysis of the *Situation* using the following questionna
 With this method you should be able to state an *Administrative Contradiction* in the following (loose!) sentence structure --- Items in `< >` come from the Ishikawa and your 5W + H questions):
 
 `When we, as < WHO / MANPOWER >, attempt to perform < HOW / METHOD > during <WHEN> on < WHERE / MACHINERY / KNOB>, we improve <EFFECT>, but lose out on <negative EFFECT>.`
+
+Let's see this method in action. The area of work may not be ours, but the context should be clear enough!
+
+<iframe width="853" height="480" src="https://www.youtube.com/embed/cah0OhCH55k" title="How to Properly Formulate a Contradiction" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 
 Let us now apply these ideas to examine the following challenges below.
 

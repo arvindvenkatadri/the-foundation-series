@@ -34,8 +34,9 @@ library(blogdown)
 
 ## The Creativity Systems Model
 
-```{r echo=FALSE, out.height= "150%", out.width="150%", fig.cap= "Mihaly Csikszentmihalyi",fig.align='center'}
+```{r echo=FALSE, out.height= "150%", out.width="150%", fig.cap= "Mihaly Csikszentmihalyi",fig.align='default'}
 knitr::include_graphics("mihaly.jpg")
+
 ```
 
 Mihaly Csikszentmihalyi created what he called a Systems Model for Creativity, shown in the Figure below.
