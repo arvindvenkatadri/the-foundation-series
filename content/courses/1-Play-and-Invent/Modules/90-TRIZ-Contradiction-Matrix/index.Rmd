@@ -7,7 +7,6 @@ weight: 90
 type: book
 image:
   caption: Photo by <a href="https://unsplash.com/@lanirudhreddy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ANIRUDH</a> on <a href="https://unsplash.com/s/photos/matrix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
   focal_point: Smart
 links:
 - icon: flask
@@ -91,24 +90,28 @@ knitr::include_url("/slides/PlayAndInvent/TRIZ Basics/index.html")
 ```
 
 
+
+
+
+## TRIZ Stories and Case Studies!!
+
+Want to create a good protest or strike? Or simply want to clean up the oceans?
+
+
+```{r echo=FALSE}
+knitr::include_url("/slides/PlayAndInvent/TRIZ Database/index.html")
+
+```
+
 ## The TRIZ Contradiction Matrix
 
 1. The TRIZ Contradiction Matrix (2003) [(Matrix)](pdf/TRIZ/TRIZ_interactive_contradiction_matrix_2016.xlsx)
 
 
 
-## Case Studies (Move this to Slides soon!!)
+## References
 
 1. Pizza Box (https://www.metodolog.ru/triz-journal/archives/2008/03/04/)
-
-1.
-
-
-1.
-
-
-
-## References
 
 1. TRIZ for Dummies Cheat Sheet [(weblink)](https://www.dummies.com/business/management/triz-for-dummies-cheat-sheet/)
 

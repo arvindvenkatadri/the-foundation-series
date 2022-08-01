@@ -89,68 +89,91 @@ library(DiagrammeR)
 ## CREATE WORKFLOW DIAGRAM HERE
 ```
 
+- Find a "Problem Situation", using say 5W + H. 
+- Use the Ishikawa Diagram to finds **Knobs** and their **Parameters**
+- A. Formulate a **ADMINISTRATIVE CONTRADICTION (AC)** (a trade-off or a compromise) in "plain English using the method of manipaulation of the **Knobs**
  - Specify an **IDEAL FINAL RESULT**
- 
- - A. Formulate a **ADMINISTRATIVE CONTRADICTION (AC)** (a trade-off or a compromise) in "plain English
- 
- 
- - Convert/metaphorize the **AC** into a **TECHNICAL CONTRADICTION(TC)** using **39 TRIZ PARAMETER**s
- 
-  - Look up the **CONTRADICTION MATRIX**
- 
-  - Discover the **INVENTIVE PRINCIPLES** you might apply
- 
-  - *Un-metaphorize* the **INVENTIVE PRINCIPLES** to apply them in a specific way in your problem and solve it
+ - Convert/metaphorize the **AC** into a **TECHNICAL CONTRADICTION(TC)** using **48 TRIZ PARAMETER**s
+ - Look up the **CONTRADICTION MATRIX**
+ - Discover the **INVENTIVE PRINCIPLES** you might apply
+ - *Un-metaphorize* the **INVENTIVE PRINCIPLES** to apply them in a specific way in your problem and solve it. Use your **CC**, and available **Resources**!
   
- - B. If possible develop a **PHYSICAL CONTRADICTION(PC)** from your AC. 
+- B. If possible formulate a **PHYSICAL CONTRADICTION(PC)** from your AC. 
   - E.g Something has to be hot and cold at the same time
   - Use **SEPARATION PRINCIPLES** to solve the **PC**
-  - Use of **SEPARATION PRINCIPLES** may not involve much *un-metaphorization*, but getting to a PC may not be easy.
+  - Use of **SEPARATION PRINCIPLES** may not involve much *un-metaphorization*, but applying them may be easier!!
+  - But getting to a PC may not be easy.
  
 
 ---
 
-## TRIZ Workflow: Example #1: Meat Transportation
+class: inverse, center, middle
+.pull-left[
+# Let us start with a couple of TRIZ stories!
+## Then we jump in with detailed Case Studies!
+.small[
+Alice laughed. “There’s no use trying,” she said: “one can’t believe impossible things.”
+
+“I daresay you haven’t had much practice,” said the Queen. “When I was your age, I always did it for half-an-hour a day. Why, sometimes I’ve believed as many as six impossible things before breakfast.”]
+
+]
+
+.pull-right[
+![](images/2book25.jpg)
+]
+---
+
+## TRIZ Workflow: Story#1: Meat Transportation
 
 
 .pull-left[
-A meat plant in South America ships its product to the United States. Refrigeration is required during transport to keep the meat frozen. The meat is flown to the United States, so refrigeration systems were installed in cargo planes. When competition increased, the owner of the plant sought to reduce delivery cost. It became obvious that he must increase the amount of product per air shipment. Analysis of the situation revealed that he could compete better if the weight of the refrigeration system were replaced with that of meat. He did exactly that. Flying at an altitude of 15,000–25,000 feet the air temperature is below 32 deg. F, so no refrigeration system was actually needed. 
+A meat plant in South America ships its product to the United States. Refrigeration is required during transport to keep the meat frozen. The meat is flown to the United States, so refrigeration systems were installed in cargo planes. When competition increased, the owner of the plant sought to reduce delivery cost. 
+
+It became obvious that he must increase the amount of product per air shipment. 
+
+Analysis of the situation revealed that he could compete better if the weight of the refrigeration system were replaced with that of meat. 
+
+He did exactly that. 
 ]
 .pull-right[
-Conclusion: Utilization of existing resources costing nothing brought the system closer to Ideality. The art of inventing is the ability to remove barriers to Ideality in order to qualitatively improve a technical system. (In this book we are talking only about technical systems; however, this statement can be applied to any system.)
+Flying at an altitude of 15,000–25,000 feet the air temperature is below 32 deg. F, so no refrigeration system was actually needed. 
+
+Conclusion: **Utilization of existing resources** costing nothing brought the system closer to Ideality. 
+
+The art of inventing is the ability to remove barriers to Ideality in order to qualitatively improve a technical system. 
 
 .footnote[https://www.triz.org/triz/ideality]
 ]
 
 ---
-## TRIZ Workflow: Example #2: Oil Well Fires
 
-An oil well in Saudi Arabia exploded and caught fire.
-The result was a blazing inferno that consumed an enormous quantity of oil each day. After initial efforts to extinguish it failed, famed firefighter Red Adair was called
-in. Red knew that the fire could be put out if a huge amount
-of fire retardant foam could be dumped on the base of the
-well. There was enough foam available at the site to do
-the job. However, there was no hose large  enough to put
-all the foam on the fire fast enough. The small hoses that
-were available could not shoot the foam quickly enough
-to do any good. It looked like there would have to be costly
-delay before a serious attempt could be made.
-However, Red Adair knew just what to do. He stationed
-men in a circle all around the fire, with all of the available small hoses. When everyone was ready all of the hoses were
-opened up and foam was directed at the fire from all directions. In this way a huge amount of foam quickly struck
-the source of the fire. The blaze was extinguished, and the
-Saudis were satisfied that Red had earned his three million
-dollar fee.
+## TRIZ Workflow: Story#2: Red Adair and Oil Well Fires
 
+.pull-left[An oil well in Saudi Arabia exploded and caught fire.
+The result was a blazing inferno that consumed an enormous quantity of oil each day. After initial efforts to extinguish it failed, famed firefighter Red Adair was called in. Red knew that the fire could be put out if a huge amount of fire retardant foam could be dumped on the base of the well. 
+
+There was enough foam available at the site to do the job. However, there was no hose large  enough to put all the foam on the fire fast enough. 
+
+The small hoses that were available could not shoot the foam quickly enough
+to do any good. It looked like there would have to be costly delay before a serious attempt could be made.
+]
+
+.pull-right[However, Red Adair knew just what to do. He stationed
+men in a circle all around the fire, with all of the available small hoses. When everyone was ready all of the hoses were opened up and foam was directed at the fire from all directions. In this way a huge amount of foam quickly struck the source of the fire. The blaze was extinguished, and the Saudis were satisfied that Red had earned his three million dollar fee.
+
+**Segmentation   
+Excessive Action**
+]
 
 ---
-## TRIZ Workflow: Example #3: Spotify Ad
+
+## TRIZ Workflow: Case Study #1: Spotify Ad
 .center[
 <iframe width="760" height="500" src="https://www.youtube.com/embed/X1WP5J-I9f8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 ]
 
 ---
-## TRIZ Workflow: Example #3: Spotify Ad
+## TRIZ Workflow: Case Study#2: Spotify Ad
 
 .pull-left[
 - **AC**: I want to chill but Mom wants me to take her veggie shopping. I have to put up with waste of time and possibly boredom. 
@@ -159,7 +182,7 @@ dollar fee.
 - **Output**: Stress / Boredom / Waste of Time
 - **IFR**: *"I should go AND not go to the market at the same time"*
 
-- **TC**: From the 39 TRIZ parameters:
+- **TC**: From the 48 TRIZ parameters:
   - **TC1**: Increase *Productivity(39)* and not worsen *Stress(11)*
   - **TC2**: Improve *Loss of Time(25)* and not worsen *Effect of External Harmful Factors(30)*
   ]
@@ -173,51 +196,259 @@ Solution:
 - 18(Mechanical Vibration) : Make noise of your own? `r emoji("sound")` `r emoji("laugh")`
 - 35(Parameter Change): Change *Bargaining Talk* to *Sweet Sound*: Play music!!`r emojifont::emoji("musical_note")`
 - Also 14(Spheroidality): Wear "spherical" headphones!!`r emoji("headphones")`! Create a "sound sphere"! Long shot!!
-- SO: with music on, I was **in the market, and not in the market** !!IFR achieved !! Ta Da !!
+- SO: with Spotify on, I was **in the market, and not in the market** !! IFR achieved !! Ta Da !!
+]
+
+---
+
+## TRIZ Workflow: Case Study #3
+### Wildlife Crossings Key to Highway Safety in Banff
+
+.pull-left[
+Why did the bear cross the Trans-Canada Highway?
+
+We may never know, but thanks to the Banff Wildlife Crossings Project, there’s a good chance it made it to the other side.
 
 ]
----
+.pull-right[
+When the 82-kilometre section of the Trans-Canada Highway that runs through the Rocky Mountains in Banff National Park was built in the early 1950s, it wasn’t expected to be the major artery it is today. 
+But as park visitation increased, traffic volume surged—and so did highway-related wildlife mortality.
+]
 
-## TRIZ Workflow: Example #4
-### 
-.pull_left[]
-.pull-right[]
-
-
-
----
-## TRIZ Workflow: Example #5
-###
-.pull_left[]
-.pull-right[]
-
+.footnote[https://discoverapega.ca/stories/wildlife-crossings-key-to-highway-safety-in-banff/]
 
 
 ---
-## TRIZ Workflow: Example #6: Arc of the Diver
 
-For high water diving, water must be “hard” to support the diver and “soft” so as not to injure the diver. The physical contradiction: The water must be hard and soft at the same time. This contradiction is resolved by separating the requirements in space: Saturate the water with air bubbles — the pool contains both air and water.
-
-
-
-
----
+### TRIZ Workflow: Case Study #3: Wildlife Crossings in Banff
 .pull-left[
-**IFR**:
-- **Nice looking grass** with no problems !!`r emoji("laugh")`
+- **AC**: We want to drive at high speed, but not kill migrating wild animals (or endanger our vehicles). 
 
-**RESOURCES:**
-- Grass
-- Human
-- Lawnmower
-- Fuel
-- Soil, Air, Wind
+- **Knobs** (short list): 
+  - Speed(L/S); Size of Animal(L/S); Number of Animals(L/S); Time of Migration(D/N);
+- **Output**: Road Kill / Affects Animal Migration / Human Costs
+
+- **IFR**: *"The Animals and Humans should use the Road at the Same Time"*
+  ]
+  
+.pull-right[
+
+- **TC**: From the 39 TRIZ parameters:
+  - **TC1**: Increase *Speed(9)* and not worsen *Duration of Action by Moving Object(15)*
+  - **TC2**: Improve *Volume of Moving Object(7)* and not worsen *Loss of Time(25)*
+  - **TC3**: Improve *Object affected by external harmful factors*(30) and not worsen *Duration of Action by Stationary Object*(16)[ see footnote]
+  
+.footnote[Animals are stationary compared to the cars!!]
+
+]
+
+
+
+
+---
+
+### TRIZ Workflow: Case Study #3: Wildlife Crossings in Banff
+
+.pull-left[
+Inventive Principles:
+- TC1: 3(Local Quality), 19(Periodic Action), 35(Parameter Change), 5(Merging).....Local Quality? Parameter Change? Ok, change the road in some way...can't change all cars and definitely can't "change" animals!!
+
+- TC2: 35(Parameter Change), 18(Mechanical Vibration)!!, 34(Rejecting and Regenerating Parts). 
+
+- TC3: ***17(Another Dimension)!!!***, 1(Segmentation), 40(Composite Materials), 33(Homogeneity)
+
+Solution:
+- (17)Another Dimension + (35)Parameter Change + 3(Local Quality) = Animal Bridge!!!
+- Also 33(Homogeneity) = Equal Opportunity for Animals and Vehicles
 ]
 
 .pull-right[
-**CONTRADICTIONs**
-- 
+![](images/banff.jpg)
 
+Watch in acton: https://youtu.be/9JX6cqME6Hw
+
+NOTE: The IFR embodies a **PC** !! So **Separation Principles** suggest "separation in Space and there you are: you have a bridge!!
+]
+
+
+
+
+
+
+---
+
+### TRIZ Workflow: Case Study #4: Bike Lane
+
+.pull-left[
+Very Similar Considerations!!
+- AC: Bicycles have no room, people park cars or drive on bicycle lanes
+
+- Knobs:??
+
+- TC: ??
+
+- IFR: ??
+
+- Solution:
+  - What is/are the Inventive Principles applied here?
+
+]
+
+.pull-right[
+
+![](images/bike-lane.jpg)
+
+
+]
+
+  
+.footnote[https://twitter.com/darrellmann/status/1551835492819369984?t=TrF6Yo6pZ6x-xWKa1CKFgA&s=08]
+
+---
+
+## TRIZ Workflow: Case Study #5: Arc of the Diver
+
+.pull-left[
+- AC: When diving, the water may hurt the diver if they do not land properly. 
+- Knobs: Water(Deep/Shallow); Dive(High/Low); Weight of Diver(H/L); Posture?
+
+- IFR: For high water diving, water must be “hard” to support the diver and “soft” so as not to injure the diver. 
+
+- TC: Try!!
+
+- PC: The physical contradiction: The water must be hard and soft at the same time. 
+
+- Solution: 
+This contradiction is resolved by **Separating** the requirements **in space**: Saturate the water with air bubbles — the pool contains both air and water.
+]
+
+
+.pull-right[
+<iframe src="https://giphy.com/embed/9MFrUbcvCC3pCcq6vx" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/usnationalarchives-9MFrUbcvCC3pCcq6vx">via GIPHY</a></p>
+]
+
+
+---
+
+### TRIZ Workflow: Case Study #6: Plastics in the Water
+.pull-left[
+- **AC**: 
+  - Plastics are polluting the oceans
+  - They are impossible to retrieve from there; 
+  - 80% of all ocean plastics come from ~1600 rivers!
+]
+
+.pull-right[
+```{r echo=FALSE}
+knitr::include_graphics("https://ourworldindata.org/uploads/2021/04/Plastic-river-inputs-Meijer-et-al.-2021-2048x1505.png")
+```
+]
+
+
+
+
+---
+### TRIZ Workflow: Case Study #6: Plastics in the Water
+.pull-left[
+- **AC**: Plastics are polluting the oceans, they are impossible to retrieve from there; 80% of all ocean plastics come from ~1600 rivers!
+
+- **Knobs**: Rivers? Water? Flow? Humans? Plastic waste itself? Water craft(boats/ships..)
+
+- **IFR**: Rivers must flow, but plastic must not.
+
+- **TC**: 
+  - **TC1**: Increase *Volume of Stationary Object*(8) and not worsen *Object affected by external harmful factors*(30)
+  
+- **PC**: The Plastics must be in the water AND not in the water at the same time. ( Do we need "two kinds of water", then??? )
+]
+
+.pull-right[
+Inventive Principles:
+- TC1: 34(Discarding and Recovering), 39(Inert Atmosphere), 19(Periodic Action), 27(Cheap Short Living Objects).....
+  - IP34: Discarding and Recovering? What can we discard in the water? Would we want to? Not sure...
+  - IP39: Inert Atmosphere? In water? Ok..water must *not* flow in some places and be "inert". But how? Some blockage?
+  - IP19: Periodic Action? Doing something again? What? Agitate the water? How?
+  - IP27: Cheap Short Living Objects? In the water? Wait....BUBBLES !!!!
+
+]
+
+
+---
+
+## TRIZ Workflow: Case Study  #6: The Great Bubble Barrier
+
+<center><iframe width="950" height="500" src="https://www.youtube.com/embed/n_KwF-gf0S0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+---
+
+## TRIZ Workflow: Case Study #7: Bus Strikes in Japan
+
+.pull-left[
+- Drivers "need" to protest against their Employers
+
+- Strikes hurt commuters, who are **forced to empathize** (Ha! Design Thinking!!)
+
+- When drivers return, they are apologetic...maybe. 
+
+
+]
+
+.pull-right[
+<iframe src="https://giphy.com/embed/xT9KVti6uOede1cYZq" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/filmeditor-horror-friday-the-13th-xT9KVti6uOede1cYZq">via GIPHY</a></p>
+
+]
+
+
+.footnote[http://www.darrellmann.com/mini-case-study-strike/]
+
+---
+## TRIZ Workflow: Case Study #7: Bus Strikes in Japan
+
+.pull-left[
+![](images/japan-bus-0-800x504.png)
+]
+
+.pull-right[
+
+- AC: We want to strike against our employers, but they are not riding on the buses we drive !! Commuters are!!
+
+- Knobs: 
+  - Drivers(Y/N); Commuters(Y/N); 
+  - Schedules; Timings(OK/NOK); Time of Day
+  - Fares; Routes; 
+  - Types of Busses...
+  
+
+- PC: Drivers must strike AND not strike at the same time! ( From whose point of view !! )
+
+- IFR: We must convey our anger only to employers who are far away. 
+
+]
+---
+
+## TRIZ Workflow: Case Study #7: Bus Strikes in Japan
+
+.pull-left[
+
+**TC**: Improve *Force(10)* ( i.e.of the Strike) and not worsen * Object generated Harmful Effects(31)* ( i.e. on themselves nor on commuters)
+
+Inventive Principles:
+- IP13(The Other Way Around)!!...what is one way and can be turned around? Bus Routes? No...Wait! The Bus Tickets! So Conductors *pay* commuters..by not charging!!
+- 3(Local Quality)...Something should be different *inside* the bus!! No Tickets!!
+- 36(Phase Transition)..hmm..everybody involved must "change dramatically"...who? Commuters? No. Drivers/Conductors? Yes...All of them. How? Wait...Nobody sells tickets !!!
+- 24 Intermediary...Fuel Cost and Loss of Revenue as intermediary between striking staff and the company!
+
+
+]
+
+.pull-right[
+![](images/bus-strike.png)
+
+Solution:
+- Run buses properly on time, but FREE
+- All Conductors stop ISSUING TICKETS !!
+
+.footnote[http://www.darrellmann.com/mini-case-study-strike/]
 ]
 
 ---
