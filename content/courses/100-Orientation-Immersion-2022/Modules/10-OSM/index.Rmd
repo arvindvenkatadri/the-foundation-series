@@ -1,0 +1,79 @@
+---
+date: "`r Sys.Date()`"
+title: "Treasure Hunt on Open Street Map (OSM)"
+linktitle: "OSM Treasure Hunt"
+external_link: ""
+weight: 10
+type: book
+view: 2
+image:
+  caption: Photo by <a href="https://unsplash.com/@grwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Petr Slováček</a> on <a href="https://unsplash.com/s/photos/rock-climbing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  focal_point: Smart
+links:
+slides: 
+summary: 
+tags:
+- Open Street Map
+- Map Editing
+- Feaures, Nodes, Ways, Paths
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+```{r,echo = FALSE, fig.alt="Petr Slováček on Unsplash", fig.align='center'}
+knitr::include_graphics("featured.jpg")
+```
+
+
+```{r include=FALSE}
+library(blogdown)
+```
+
+## Introduction
+
+> **OpenStreetMap is a free map of the world, created by an ever growing community of mappers.**
+Anyone can edit OpenStreetMap. LearnOSM provides easy to understand, step-by-step guides for you to get started with contributing to OpenStreetMap and using OpenStreetMap and using OpenStreetMap data.
+
+We will learn to edit the OSM and add to it features that are of our interest. These are usually reviewed by approved map-reviewers and if approved, become part of the OSM database. 
+
+1. Fire up [OpenStreetMap](https://www.openstreetmap.org)  
+
+1. Create a login ID and login
+
+1. Hit the `edit` button at the upper left. Choose the `Edit with iD (in-browser editor)`. Go through the short walk through.
+
+1. Create a new feature on the Map using the buttons `Point`, ( or `Line` and `Area`< if a specific building does not show up on the map. )  Give the `Point` a name and fill out the OSM fields that pop up at the left. 
+
+
+## Activity: Treasure Hunt !!
+
+Now that you are able to make ( small ) editions to the OSM Map, it is time to create your Treasure Hunt!!
+
+1. Let us form into two teams of 10 each. 7 people will be out walking and the remaining three will man the on-desktop mapping. 
+
+1. Form a Whatsapp group for your Team. 
+
+1. The Walkers will find specific interesting `Points` in the vicinity of campus, which are all of a similar category ( e.g eateries or hang out spots). Send the details over Whatsapp so that these can be mapped on to OSM, populating the fields based on your street-side observations.
+
+1. Come back to class.
+
+1. As a Team, create cryptic/poetic/literary/pun-based clues for as many of your `Points` as possible. 
+
+1. See if the clues can create a sequence based on which one can traverse all the `Points ` (nice to have, but not compulsory)
+
+1. Each Team will share one clue at a time with the other team. 
+
+
+1. The Team that first cracks all the `Points` and places a note on them on OSM will, ahem, get a prize. Yes from me!! 
+
+
+
+
+## References
+
+1. **Learn OSM: Beginner's Guide**, <https://learnosm.org/en/beginner/>  
+
+
+
