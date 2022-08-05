@@ -83,6 +83,9 @@ Over the next two weeks we will form our intuition about shapes and data and lea
 
 1. Financial Times **Visual Vocabulary Chart**. 
 A great chart to match data to data-viz. [**PDF**](/pdf/DataViz/FT4Schools_RGS.pdf)
+Web version: <https://ft-interactive.github.io/visual-vocabulary/>  
+
+1. 72 types of Visualization for Data Stories <https://blog.gramener.com/types-of-data-visualization-for-data-stories/>
 
 
 ## Dataset Resources
