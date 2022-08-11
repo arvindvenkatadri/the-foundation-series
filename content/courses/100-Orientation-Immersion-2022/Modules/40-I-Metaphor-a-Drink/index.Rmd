@@ -85,11 +85,11 @@ We will divide into two groups (four if necessary) and contemplate a brief descr
 
 ### Activity-4: Seymour Papert Constructionism Game
 
+
 ```{r, echo=FALSE}
 knitr::include_url("/slides/PlayAndInvent/Constructionism/index.html")
 
 ```
-
 ### Activity-5: C'est ne une Pipe
 
 1. We will break up into groups of 4-5. 

@@ -1,0 +1,51 @@
+---
+date: "`r Sys.Date()`"
+title: "I am Insta Famous"
+linktitle: ""
+external_link: ""
+weight: 50
+type: page
+view: 2
+image:
+  caption: Image by <a href="https://pixabay.com/users/makamuki0-1102736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1001743">Marc Pascual</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1001743">Pixabay</a>
+  focal_point: Smart
+links:
+slides: 
+summary: 
+tags:
+- Networks
+- Structure and Processes on Networks
+- Degree, Power
+- Network Effects
+
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+```{r,echo = FALSE, eval=FALSE,fig.alt="Petr Slováček on Unsplash", fig.align='center'}
+knitr::include_graphics("featured.jpg")
+```
+
+```{r include=FALSE}
+library(blogdown)
+
+```
+
+## Introduction
+
+Do you think your friends have more friends than you have? 
+Do you think that you are **outside the herd**, and that what you think or do is from your own mind?
+
+Anyways...
+
+## Activities
+
+
+
+## References
+
+1. Mark Newman
+
+1. Frigyes Karinthy, "Chains". A Network oriented short story
