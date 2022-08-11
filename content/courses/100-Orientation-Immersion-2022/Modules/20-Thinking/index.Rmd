@@ -4,7 +4,7 @@ title: "Thinking, Fast and Slow with Daniel Kahneman"
 linktitle: "Thinking, Fast and Slow"
 external_link: ""
 weight: 20
-type: book
+type: page
 view: 2
 image:
   caption: Photo by <a href="https://unsplash.com/@grwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Petr Slováček</a> on <a href="https://unsplash.com/s/photos/rock-climbing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -16,7 +16,7 @@ tags:
 - Biases
 - Heuristics
 - Decision Making
-- Bayesian Thinking
+- Bayesian Thinking ( maybe )
 url_code: ""
 url_pdf: ""
 url_slides: ""
@@ -48,7 +48,6 @@ blogdown::shortcode("youtube", "9Il_D3Xt9W0")
 <br>
 <br>
 
-
 Right! On to our first little fallibility!
 
 
@@ -60,7 +59,6 @@ blogdown::shortcode("youtube", "IGQmdoK_ZfY")
 
 ```
 
-
 <br>
 <br>
 
@@ -71,14 +69,12 @@ Test: [PPT](Cognitive-Misers.pptx)
 Short Reading: [PDF](Cognitive-Misers.pdf)  
 
 
-
 ### Exaggerated Emotional Coherence
 
 <br>
 <br>
 
 Tool: [**PDF**](Halo-Effect-Test_tool.pdf)
-
 
 <br>
 <br>
@@ -95,7 +91,6 @@ TBD!! ;-(
 ### Activity
 
 Let's find some of these ideas in our favourite Episode of one Season of your favourite show and tell everybody with a poster!
-
 
 
 ## References

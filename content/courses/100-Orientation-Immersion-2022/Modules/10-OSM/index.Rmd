@@ -4,7 +4,7 @@ title: "Treasure Hunt on Open Street Map (OSM)"
 linktitle: "OSM Treasure Hunt"
 external_link: ""
 weight: 10
-type: book
+type: page
 view: 2
 image:
   caption: Photo by <a href="https://unsplash.com/@grwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Petr Slováček</a> on <a href="https://unsplash.com/s/photos/rock-climbing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -55,7 +55,9 @@ Now that you are able to make ( small ) editions to the OSM Map, it is time to c
 
 1. Form a Whatsapp group for your Team. 
 
-1. The Walkers will find specific interesting `Points` in the vicinity of campus, which are all of a similar category ( e.g eateries or hang out spots). Send the details over Whatsapp so that these can be mapped on to OSM, populating the fields based on your street-side observations.
+1. The Walkers will find specific interesting `Points` in the vicinity of campus, which are all of a **similar category** ( e.g eateries or hang out spots). 
+
+1. Send the details over Whatsapp so that the Mappers can map these on to OSM, populating the fields based on your street-side observations.
 
 1. Come back to class.
 
@@ -63,17 +65,26 @@ Now that you are able to make ( small ) editions to the OSM Map, it is time to c
 
 1. See if the clues can create a sequence based on which one can traverse all the `Points ` (nice to have, but not compulsory)
 
-1. Each Team will share one clue at a time with the other team. 
+1. Each Team will share one clue at a time with the other team. Figure out how !!
 
 
-1. The Team that first cracks all the `Points` and places a note on them on OSM will, ahem, get a prize. Yes from me!! 
+1. The Team that first cracks all the `Points` and places a note on them on OSM will, ahem, get a prize. Yes, from me!! 
 
+
+### Flexing with a couple of Examples
+
+Try to crack these cryptic clues! 
+
+Some background for both: Think of a typical Apartment Complex, the standard "locations" and "features" within such a complex.
+
+> 1. So JRR Tolkien has a quiet car for Gandalf? I can half hear it...
+
+> 1. A sub-terranean address? Prime, prime location !!
 
 
 
 ## References
 
 1. **Learn OSM: Beginner's Guide**, <https://learnosm.org/en/beginner/>  
-
 
 
