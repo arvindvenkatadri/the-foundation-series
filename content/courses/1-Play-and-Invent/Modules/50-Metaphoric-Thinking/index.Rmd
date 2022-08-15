@@ -6,7 +6,6 @@ author: "Arvind Venkatadri"
 external_link: ""
 weight: 50
 view: 2
-type: book
 image:
   caption: Image by <a href="https://pixabay.com/users/makamuki0-1102736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1001743">Marc Pascual</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1001743">Pixabay</a>
   focal_point: Smart
@@ -25,7 +24,7 @@ url_slides: "slides/PlayAndInvent/Constructionism/index.html"
 url_video: ""
 ---
 
-```{r, echo=FALSE,fig.align='center', fig.alt="Marc Pascual on pixabay"}
+```{r, echo=FALSE, eval=FALSE, fig.align='center', fig.alt="Marc Pascual on pixabay"}
 knitr::include_graphics("featured.jpg")
 
 ```

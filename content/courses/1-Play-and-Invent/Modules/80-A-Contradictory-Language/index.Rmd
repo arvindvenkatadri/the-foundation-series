@@ -4,7 +4,6 @@ title: "TRIZ - A Contradictory Language"
 linkTitle: TRIZ - A Contradictory Language
 external_link: ""
 weight: 80
-type: book
 view: 2
 image:
   caption: Photo by <a href="https://unsplash.com/@brett_jordan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brett Jordan</a> on <a href="https://unsplash.com/s/photos/contradiction?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -29,7 +28,7 @@ url_video: ""
 ---
 
 
-```{r,echo=FALSE, fig.align='center',fig.alt="Image by Brett Jordan on Unsplash"}
+```{r,echo=FALSE, eval = FALSE, fig.align='center',fig.alt="Image by Brett Jordan on Unsplash"}
 knitr::include_graphics("featured.jpg")
 
 ```
@@ -188,20 +187,20 @@ ggplot(data.frame(x=c(0, 50)), aes(x=x)) +
   geom_abline(slope = 12, intercept = 0, colour = "pink") +
   labs(ylab = "Likelihood of losing a Wheel",
        title =  "Automobile Wheel Bolts (*A Contradiction*)") +
-annotate("text", x = 6, y = 25, label = "Effort to Remove Wheel Bolts") +
-  annotate("text", x = 45, y = 100, label = "Number of Wheel Bolts") +
+annotate("text", x = 6, y = 25, label = "Effort to Remove Wheel Bolts",size = 18) +
+  annotate("text", x = 45, y = 100, label = "Number of Wheel Bolts", size = 18) +
   annotate("text", x = 45, y = 450, label = "Ideality") +
   theme_void() +
   theme(
     plot.title = element_text(
       family = "serif",
       face = "bold",
-      size = 20
+      size = 28
     ),
     plot.subtitle = element_text(
       family = "gochi",
       face = "bold",
-      size = 18
+      size = 24
     ),
     legend.title = element_text(
       family = "bell",
@@ -209,7 +208,7 @@ annotate("text", x = 6, y = 25, label = "Effort to Remove Wheel Bolts") +
       size = 24
     ),
     legend.text = element_text(family = "bell",
-                               size = 18),
+                               size = 24),
     legend.position = c(0.65, 0.8),
     legend.background = element_rect(fill = "cornsilk",
                                      colour = "black"),

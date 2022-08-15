@@ -4,7 +4,6 @@ title: "TRIZ - The Contradiction Matrix Workflow"
 author: "Arvind Venkatadri"
 external_link: ""
 weight: 90
-type: book
 image:
   caption: Photo by <a href="https://unsplash.com/@lanirudhreddy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ANIRUDH</a> on <a href="https://unsplash.com/s/photos/matrix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
@@ -12,7 +11,7 @@ links:
 - icon: flask
   icon_pack: fas
   name: TRIZ DataBase
-  url: /slides/PlayAndInvent/TRIZ Database/index.html
+  url: slides/PlayAndInvent/TRIZ-Database/index.html
 # - icon: game
 #   icon_pack: fab
 #   name: Game
@@ -27,12 +26,12 @@ tags:
 - Genrikh Altshuller
 url_code: ""
 url_pdf: ""
-url_slides: ""
+url_slides: "slides/PlayAndInvent/TRIZ-Basics/index.html"
 url_video: ""
 ---
 
 
-```{r,echo=FALSE, fig.align='center',fig.alt="Photo by Anirudh on unsplash"}
+```{r,echo=FALSE, eval = FALSE, fig.align='center',fig.alt="Photo by Anirudh on unsplash"}
 knitr::include_graphics("featured.jpg")
 
 ```
@@ -85,7 +84,7 @@ We have seen
 Now we will use the TC and find out solutions for it using what is called the **Contradiction Matrix**. Here is a workflow presentation below:  
 
 ```{r echo=FALSE}
-knitr::include_url("/slides/PlayAndInvent/TRIZ Basics/index.html")
+knitr::include_url("/slides/PlayAndInvent/TRIZ-Basics/index.html")
 
 ```
 
@@ -99,7 +98,7 @@ Want to create a good protest or strike? Or simply want to clean up the oceans?
 
 
 ```{r echo=FALSE}
-knitr::include_url("/slides/PlayAndInvent/TRIZ Database/index.html")
+knitr::include_url("/slides/PlayAndInvent/TRIZ-Database/index.html")
 
 ```
 

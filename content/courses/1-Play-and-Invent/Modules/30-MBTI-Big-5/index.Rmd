@@ -3,7 +3,6 @@ date: "`r Sys.Date()`"
 title: "Birds of Different Feathers: MBTI-Big-5"
 linkTitle: "Birds of Different Feathers: MBTI-Big-5"
 weight: 30
-type: book
 view: 2
 image:
   caption: Photo by <a href="https://unsplash.com/@bostonpubliclibrary?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Boston Public Library</a> on <a href="https://unsplash.com/s/photos/bird-species?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -30,7 +29,7 @@ url_video: ""
 
 ---
 
-```{r, echo=FALSE, fig.alt="Boston Public Library on Unsplash", fig.align='center'}
+```{r, echo=FALSE, eval=FALSE, fig.alt="Boston Public Library on Unsplash", fig.align='center'}
 knitr::include_graphics("featured.jpg")
 ```
 

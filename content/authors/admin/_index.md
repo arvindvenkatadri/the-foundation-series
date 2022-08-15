@@ -2,7 +2,7 @@
 title: "Arvind Venkatadri"
 bio: My research interests are Complexity Science, TRIZ, Literature, Indian Classical
   Music, and Computing with R.
-email: arvind.venkatadri@manipal.edu
+email: arvind.venkatadri@gmail.com
 highlight_name: no
 education:
   courses:
@@ -15,8 +15,7 @@ education:
 interests:
 - Complexity Science
 - Creative Thinking and Problem Solving using TRIZ
-- Data Visualisation, Stats, Maps, Networks, and ML using R and other Open Source
-  Tools
+- Data Visualisation, Stats, Maps, Networks, and ML using R and other Open Source Tools
 - Open Source Electronics
 - Music and Sound
 - Reading and Literature
@@ -27,7 +26,7 @@ role: Faculty Member, School of Foundation Studies, SMI, MAHE
 social:
 - icon: envelope
   icon_pack: fas
-  link: mailto:arvind.venkatadri@manipal.edu
+  link: mailto:arvind.venkatadri@gmail.com
 - display:
     header: yes
   icon: twitter
