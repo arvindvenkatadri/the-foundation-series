@@ -3,13 +3,13 @@ date: "`r Sys.Date()`"
 title: "I yam what I yam"
 linktitle: "I yam what I yam"
 external_link: ""
-weight: 30
+weight: 20
 type: page
 view: 2
 image:
   caption: Photo by <a href="https://unsplash.com/@grwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Petr Slováček</a> on <a href="https://unsplash.com/s/photos/rock-climbing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
-links:
+links: 
 slides: 
 summary: 
 tags:
@@ -69,3 +69,12 @@ CC affects our view of the world and helps us identify Problem Situations and Co
  - Create A LOGO for your city, using the Shape, such that you show off some interesting aspects of your City, based on your own CULTURAL CAPITAL.
  - Three sentences to describe your Logo.
  - See examples at the link above for inspiration
+
+## References
+
+1. Web Apps for your Makey-Makey:  [(Weblink)](https://makeymakey.com/blogs/how-to-instructions/apps-for-plug-and-play)
+
+1. Make your own game with a Makey-Makey: [(Weblink)](https://www.instructables.com/Using-Scratch-and-Makey-Makey-to-make-your-own-gam/)
+
+1. <https://richarddawkins.net/2014/02/whats-in-a-meme/>
+

@@ -1,5 +1,5 @@
 ---
-title: "\U0001F579 Iterated Games with D'Artagnan!"
+title: "Games with D'Artagnan!"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 image:

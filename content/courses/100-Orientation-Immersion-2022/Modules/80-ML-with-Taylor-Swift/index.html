@@ -1,7 +1,7 @@
 ---
 title: "ML with Taylor Swift"
 subtitle: 
-date: "2022-08-14"
+date: "2022-08-15"
 external_link: ""
 image:
   caption: Photo by rawpixel on Unsplash
@@ -17,6 +17,7 @@ summary: We will look at the basic models for Classification of Data.
 tags:
 - 20 Questions Game
 - Machine Learning
+- Classification
 - Orange Data Mining
 - Decision Trees
 - Random Forests
@@ -137,11 +138,11 @@ tags:
 <p>What if the dataset we had contained <strong>many</strong> rows, instead of just one row? How would we play the 20Q Game in this situation? Here is a sample of the famous <em>penguins</em> dataset:</p>
 <table>
 <colgroup>
-<col width="11%" />
-<col width="7%" />
-<col width="17%" />
+<col width="10%" />
+<col width="10%" />
+<col width="16%" />
 <col width="15%" />
-<col width="20%" />
+<col width="19%" />
 <col width="13%" />
 <col width="7%" />
 <col width="5%" />
@@ -160,76 +161,26 @@ tags:
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left">Chinstrap</td>
+<td align="left">Adelie</td>
 <td align="left">Dream</td>
-<td align="right">50.7</td>
+<td align="right">44.1</td>
 <td align="right">19.7</td>
-<td align="right">203</td>
-<td align="right">4050</td>
+<td align="right">196</td>
+<td align="right">4400</td>
 <td align="left">male</td>
-<td align="right">2009</td>
+<td align="right">2007</td>
 </tr>
 <tr class="even">
 <td align="left">Chinstrap</td>
 <td align="left">Dream</td>
-<td align="right">49.6</td>
-<td align="right">18.2</td>
-<td align="right">193</td>
-<td align="right">3775</td>
-<td align="left">male</td>
-<td align="right">2009</td>
-</tr>
-<tr class="odd">
-<td align="left">Adelie</td>
-<td align="left">Biscoe</td>
-<td align="right">41.6</td>
-<td align="right">18.0</td>
-<td align="right">192</td>
-<td align="right">3950</td>
+<td align="right">52.8</td>
+<td align="right">20.0</td>
+<td align="right">205</td>
+<td align="right">4550</td>
 <td align="left">male</td>
 <td align="right">2008</td>
 </tr>
-<tr class="even">
-<td align="left">Gentoo</td>
-<td align="left">Biscoe</td>
-<td align="right">48.7</td>
-<td align="right">14.1</td>
-<td align="right">210</td>
-<td align="right">4450</td>
-<td align="left">female</td>
-<td align="right">2007</td>
-</tr>
 <tr class="odd">
-<td align="left">Gentoo</td>
-<td align="left">Biscoe</td>
-<td align="right">52.1</td>
-<td align="right">17.0</td>
-<td align="right">230</td>
-<td align="right">5550</td>
-<td align="left">male</td>
-<td align="right">2009</td>
-</tr>
-<tr class="even">
-<td align="left">Gentoo</td>
-<td align="left">Biscoe</td>
-<td align="right">50.0</td>
-<td align="right">15.2</td>
-<td align="right">218</td>
-<td align="right">5700</td>
-<td align="left">male</td>
-<td align="right">2007</td>
-</tr>
-<tr class="odd">
-<td align="left">Adelie</td>
-<td align="left">Biscoe</td>
-<td align="right">40.6</td>
-<td align="right">18.6</td>
-<td align="right">183</td>
-<td align="right">3550</td>
-<td align="left">male</td>
-<td align="right">2007</td>
-</tr>
-<tr class="even">
 <td align="left">Gentoo</td>
 <td align="left">Biscoe</td>
 <td align="right">50.0</td>
@@ -239,45 +190,95 @@ tags:
 <td align="left">male</td>
 <td align="right">2007</td>
 </tr>
-<tr class="odd">
-<td align="left">Adelie</td>
-<td align="left">Biscoe</td>
-<td align="right">41.1</td>
-<td align="right">19.1</td>
-<td align="right">188</td>
-<td align="right">4100</td>
-<td align="left">male</td>
-<td align="right">2008</td>
-</tr>
 <tr class="even">
 <td align="left">Gentoo</td>
 <td align="left">Biscoe</td>
-<td align="right">55.1</td>
-<td align="right">16.0</td>
-<td align="right">230</td>
-<td align="right">5850</td>
+<td align="right">45.5</td>
+<td align="right">13.9</td>
+<td align="right">210</td>
+<td align="right">4200</td>
+<td align="left">female</td>
+<td align="right">2008</td>
+</tr>
+<tr class="odd">
+<td align="left">Chinstrap</td>
+<td align="left">Dream</td>
+<td align="right">46.0</td>
+<td align="right">18.9</td>
+<td align="right">195</td>
+<td align="right">4150</td>
+<td align="left">female</td>
+<td align="right">2007</td>
+</tr>
+<tr class="even">
+<td align="left">Adelie</td>
+<td align="left">Torgersen</td>
+<td align="right">40.6</td>
+<td align="right">19.0</td>
+<td align="right">199</td>
+<td align="right">4000</td>
 <td align="left">male</td>
 <td align="right">2009</td>
 </tr>
 <tr class="odd">
-<td align="left">Adelie</td>
-<td align="left">Dream</td>
-<td align="right">40.3</td>
-<td align="right">18.5</td>
-<td align="right">196</td>
-<td align="right">4350</td>
+<td align="left">Gentoo</td>
+<td align="left">Biscoe</td>
+<td align="right">48.6</td>
+<td align="right">16.0</td>
+<td align="right">230</td>
+<td align="right">5800</td>
 <td align="left">male</td>
 <td align="right">2008</td>
 </tr>
 <tr class="even">
-<td align="left">Gentoo</td>
-<td align="left">Biscoe</td>
-<td align="right">46.7</td>
-<td align="right">15.3</td>
-<td align="right">219</td>
-<td align="right">5200</td>
+<td align="left">Adelie</td>
+<td align="left">Torgersen</td>
+<td align="right">39.2</td>
+<td align="right">19.6</td>
+<td align="right">195</td>
+<td align="right">4675</td>
 <td align="left">male</td>
 <td align="right">2007</td>
+</tr>
+<tr class="odd">
+<td align="left">Gentoo</td>
+<td align="left">Biscoe</td>
+<td align="right">50.4</td>
+<td align="right">15.7</td>
+<td align="right">222</td>
+<td align="right">5750</td>
+<td align="left">male</td>
+<td align="right">2009</td>
+</tr>
+<tr class="even">
+<td align="left">Chinstrap</td>
+<td align="left">Dream</td>
+<td align="right">52.7</td>
+<td align="right">19.8</td>
+<td align="right">197</td>
+<td align="right">3725</td>
+<td align="left">male</td>
+<td align="right">2007</td>
+</tr>
+<tr class="odd">
+<td align="left">Gentoo</td>
+<td align="left">Biscoe</td>
+<td align="right">44.0</td>
+<td align="right">13.6</td>
+<td align="right">208</td>
+<td align="right">4350</td>
+<td align="left">female</td>
+<td align="right">2008</td>
+</tr>
+<tr class="even">
+<td align="left">Adelie</td>
+<td align="left">Biscoe</td>
+<td align="right">38.6</td>
+<td align="right">17.2</td>
+<td align="right">199</td>
+<td align="right">3750</td>
+<td align="left">female</td>
+<td align="right">2009</td>
 </tr>
 </tbody>
 </table>

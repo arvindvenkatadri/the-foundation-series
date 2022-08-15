@@ -17,6 +17,7 @@ summary: We will look at the basic models for Classification of Data.
 tags:
 - 20 Questions Game
 - Machine Learning
+- Classification
 - Orange Data Mining
 - Decision Trees
 - Random Forests
