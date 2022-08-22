@@ -144,6 +144,9 @@ Here is a good Summary of modern thinking about Human Cooperation:
 
 1. Avinash Dixit, Susan Skeath, David Reiley, *Games of strategy*, ISBN: 9780393124446, New York :W.W. Norton & Company, 2015. 
 
+1. Brams Steven J., 1994. "Game Theory and Literature," Games and Economic Behavior, Elsevier, vol. 6(1), pages 32-54, January.[**PDF**](http://www.sscnet.ucla.edu/polisci/faculty/chwe/austen/brams1994.pdf)
+
+
 1. Alexander Mehlmann,*The game’s afoot! Game theory in myth and paradox*, 
 American Mathematical Society 2000. [**(AMS Bookstore.)**](https://bookstore.ams.org/stml-5/)
 
