@@ -48,7 +48,7 @@ And an ear open for Frenchified English, I beseech you!!
 
 ### Discussion-1
 
-Which pill do you want? Blue, or Red?
+What **emotions** or **motivations** are portrayed by the characters in the story?
 
  - Reward
  - Regret aka FOMO
@@ -62,11 +62,13 @@ Which pill do you want? Blue, or Red?
 
 ### Discussion-2
 
+Are there COSTs to ACTIONs? Who decides? 
+
   - Players
   - Payoffs
-  - Strategies
   - Game Matrix
-  
+  - Strategies
+
 What strategies are possible as a bowler in Cricket? As a batsman? What strategies are **permitted**? By whom?
 
 
@@ -113,6 +115,10 @@ The story of Southwest Airlines' **Early Bird Check-In**[(Weblink)](https://mind
 - Players have identical and opposed aims (Symmetry)
 - In most cases, the game is **zero-sum**
 - Some form of spoke/unspoken agreement as to what may and may not be done ( i.e Rules of the Game )
+
+Here is a good Summary of modern thinking about Human Cooperation:
+*The Evolution of Human Cooperation*, [**PDF***](The Evolution of Human Cooperation – The Evolution Institute.pdf)
+
 
 ### Game Theory Pop Music and TV ad Playlist !!
 
