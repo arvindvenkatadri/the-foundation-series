@@ -1,7 +1,7 @@
 ---
 date: "`r Sys.Date()`"
-title: "Cultural Capital"
-linktitle: "Cultural Capital"
+title: "I yam what I yam"
+linktitle: "I yam what I yam"
 external_link: ""
 weight: 20
 view: 2

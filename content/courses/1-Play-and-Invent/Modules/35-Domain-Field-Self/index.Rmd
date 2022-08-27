@@ -1,7 +1,7 @@
 ---
 date: "`r Sys.Date()`"
-title: "The Creativity Systems Model"
-subtitle: "Domain, Field, and Self"
+title: "I Connect therefore I am"
+subtitle: "I Connect therefore I am"
 external_link: 
 weight: 35
 image:

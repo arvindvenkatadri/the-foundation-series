@@ -1,7 +1,7 @@
 ---
 date: "`r Sys.Date()`"
-title: "Birds of Different Feathers: MBTI-Big-5"
-linkTitle: "Birds of Different Feathers: MBTI-Big-5"
+title: "Birds of Different Feathers"
+linkTitle: "Birds of Different Feathers"
 weight: 30
 view: 2
 image:
