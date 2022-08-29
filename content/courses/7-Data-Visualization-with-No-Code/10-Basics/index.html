@@ -2,7 +2,7 @@
 title: "\U0001F576 Science, Human Experience, Experiments, and Data"
 subtitle: ""
 author: "Arvind Venkatadri"
-date: "2022-07-14"
+date: "2022-08-27"
 weight: 10
 summary: "Why do we visualize data"
 output:
@@ -137,7 +137,7 @@ Figure 2: Source <a href="https://datareveals.org/crime-data/" class="uri">https
 <td>How Many / Much / Heavy? Few? Seldom? Often? When?</td>
 <td><p>Quantities, with Scale and a Zero Value.</p>
 <p>Differences and Ratios /Products are meaningful. (e.g Weight )</p></td>
-<td>Quanitative / Ratio**</td>
+<td>Quantitative / Ratio**</td>
 <td align="left"><ul>
 <li><p>Weight,length,Height</p></li>
 <li><p>Temperature in Kelvin</p></li>
@@ -152,7 +152,7 @@ Figure 2: Source <a href="https://datareveals.org/crime-data/" class="uri">https
 </tr>
 </tbody>
 </table>
-<p>As you go from Qualitative to Quantitative data types in the table, I hope you can detect a movement from fuzzy groups/categories to more and more crystallized numbers. Each variable/scale can be subjected to the operations of the previous group. In the words of <a href="https://stats.idre.ucla.edu/other/mult-pkg/whatstat/what-is-the-difference-between-categorical-ordinal-and-interval-variables/">S.S. Stevens</a> ,</p>
+<p>As you go from <code>Qualitative</code> to <code>Quantitative</code> data types in the table, I hope you can detect a movement from fuzzy groups/categories to more and more crystallized numbers. Each variable/scale can be subjected to the operations of the previous group. In the words of <a href="https://stats.idre.ucla.edu/other/mult-pkg/whatstat/what-is-the-difference-between-categorical-ordinal-and-interval-variables/">S.S. Stevens</a> ,</p>
 <blockquote>
 <p>the basic operations needed to create each type of scale is cumulative: to an operation listed opposite a particular scale must be added all those operations preceding it.</p>
 </blockquote>
@@ -173,14 +173,16 @@ Figure 3: From Claus Wilke, Fundamentals of Data Visualization
 <p>What does that mean? We can think of simple visualizations as <strong>combinations</strong> of these aesthetics. Some examples:</p>
 <table>
 <colgroup>
-<col width="13%" />
-<col width="16%" />
-<col width="70%" />
+<col width="10%" />
+<col width="12%" />
+<col width="36%" />
+<col width="41%" />
 </colgroup>
 <thead>
 <tr class="header">
 <th>Aesthetic #1</th>
 <th>Aesthetic #2</th>
+<th align="center">Shape</th>
 <th>Chart Picture</th>
 </tr>
 </thead>
@@ -188,32 +190,38 @@ Figure 3: From Claus Wilke, Fundamentals of Data Visualization
 <tr class="odd">
 <td>Position X = Quant Variable</td>
 <td>Position Y = Quant Variable</td>
+<td align="center">Points/Circles with Fixed Size</td>
 <td><img src="https://img.icons8.com/ios-filled/100/000000/scatter-plot.png"/></td>
 </tr>
 <tr class="even">
 <td>Position X = Qual Variable</td>
-<td>Shape = Count of Qual var)</td>
+<td>Position Y = Count of Qual var)</td>
+<td align="center">Columns</td>
 <td><img src="https://img.icons8.com/material/100/000000/futures--v1.png"/></td>
 </tr>
 <tr class="odd">
 <td>Position X = Qual Variable</td>
 <td>Position Y = Qual Variable</td>
+<td align="center">Rectangles, with <em>area</em> proportional to joint(X,Y) <em>count</em></td>
 <td><img src="https://img.icons8.com/windows/100/000000/modern-art.png"/></td>
 </tr>
 <tr class="even">
-<td>Qualitative Variable</td>
-<td>Rank Ordered Quant Variable</td>
+<td>Position X = Qualitative Variable</td>
+<td>Position Y = Rank Ordered Quant Variable</td>
+<td align="center">Box + Whisker, Box length proportional to <em>Inter-Quartile Range</em>, whisker-length proportional to upper and lower quartile resp.</td>
 <td><img src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/100/000000/external-plot-data-analytics-icongeek26-glyph-icongeek26-1.png"/></td>
 </tr>
 <tr class="odd">
-<td>Quant Variable</td>
-<td>Quant Variable + Qual Var</td>
+<td>Position X = Quant Variable</td>
+<td>Postion Y = Quant Variable + Qual Var</td>
+<td align="center"></td>
 <td><img src="https://img.icons8.com/ios-filled/100/000000/area-chart.png"/></td>
 </tr>
 <tr class="even">
 <td>Quant Variable</td>
 <td>Shape = Line with Quant Variable</td>
-<td><img src="https://img.icons8.com/material/24/000000/combo-chart--v1.png"/></td>
+<td align="center"></td>
+<td><img src="https://img.icons8.com/material/24/000000/combo-chart--v1.png" width="100" /></td>
 </tr>
 </tbody>
 </table>

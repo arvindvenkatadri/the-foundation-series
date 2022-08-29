@@ -99,7 +99,7 @@ By asking questions!
 |                                                    | **Differences** are meaningful, but not products or ratios                                                                    |                             | -   Credit score (300-850).                                                                     | -   Standard Deviation |
 |                                                    |                                                                                                                               |                             | -   Year of Starting in College                                                                 |                        |
 +----------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------------+-------------------------------------------------------------------------------------------------+------------------------+
-| How Many / Much / Heavy? Few? Seldom? Often? When? | Quantities, with Scale and a Zero Value.                                                                                      | Quanitative / Ratio\*\*     | -   Weight,length,Height                                                                        | -   Correlation        |
+| How Many / Much / Heavy? Few? Seldom? Often? When? | Quantities, with Scale and a Zero Value.                                                                                      | Quantitative / Ratio\*\*    | -   Weight,length,Height                                                                        | -   Correlation        |
 |                                                    |                                                                                                                               |                             |                                                                                                 | -   Coeff of Variation |
 |                                                    | Differences and Ratios /Products are meaningful. (e.g Weight )                                                                |                             | -   Temperature in Kelvin                                                                       |                        |
 |                                                    |                                                                                                                               |                             |                                                                                                 |                        |
@@ -110,7 +110,7 @@ By asking questions!
 |                                                    |                                                                                                                               |                             | -   Survival time                                                                               |                        |
 +----------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------+-----------------------------+-------------------------------------------------------------------------------------------------+------------------------+
 
-As you go from Qualitative to Quantitative data types in the table, I hope you can detect a movement from fuzzy groups/categories to more and more crystallized numbers. Each variable/scale can be subjected to the operations of the previous group. In the words of [S.S. Stevens](https://stats.idre.ucla.edu/other/mult-pkg/whatstat/what-is-the-difference-between-categorical-ordinal-and-interval-variables/) ,
+As you go from `Qualitative` to `Quantitative` data types in the table, I hope you can detect a movement from fuzzy groups/categories to more and more crystallized numbers. Each variable/scale can be subjected to the operations of the previous group. In the words of [S.S. Stevens](https://stats.idre.ucla.edu/other/mult-pkg/whatstat/what-is-the-difference-between-categorical-ordinal-and-interval-variables/) ,
 
 > the basic operations needed to create each type of scale is cumulative: to an operation listed opposite a particular scale must be added all those operations preceding it.
 
@@ -134,7 +134,7 @@ g <- diamonds %>% slice_sample(n = 500) %>% ggplot(aes(x = carat, y = price, col
         panel.background = element_rect(fill = "white"),
         plot.subtitle = element_text(size = 12, 
                                      colour = "orange"),
-        plot.caption = element_text(size = 10, 
+        plot.caption = element_text(size = 8, 
                                     colour = "orange"),
         axis.title.x = element_text(colour = "orange", 
                                     size = 12),
@@ -143,10 +143,10 @@ g <- diamonds %>% slice_sample(n = 500) %>% ggplot(aes(x = carat, y = price, col
         )
 
 annotation <- tibble(
-   x = c(2,-0.01),
-   y = c(0, 10000),
-   angle = c(0, 90), 
-   label = c("X-axis", "Y-axis")
+   x = c(2,-0.01, 1.2),
+   y = c(0, 10000, 17000),
+   angle = c(0, 90, 0), 
+   label = c("X-axis", "Y-axis", "Annotation")
 )
 
 # Add text
@@ -165,14 +165,21 @@ knitr::include_graphics("common-aesthetics-1.png")
 
 What does that mean? We can think of simple visualizations as **combinations** of these aesthetics. Some examples:
 
-| Aesthetic #1                | Aesthetic #2                     | Chart Picture                                                                                                                                      |
-|-----------------------------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
-| Position X = Quant Variable | Position Y = Quant Variable      | <img src="https://img.icons8.com/ios-filled/100/000000/scatter-plot.png"/>                                                                         |
-| Position X = Qual Variable  | Shape = Count of Qual var)       | <img src="https://img.icons8.com/material/100/000000/futures--v1.png"/>                                                                            |
-| Position X = Qual Variable  | Position Y = Qual Variable       | <img src="https://img.icons8.com/windows/100/000000/modern-art.png"/>                                                                              |
-| Qualitative Variable        | Rank Ordered Quant Variable      | <img src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/100/000000/external-plot-data-analytics-icongeek26-glyph-icongeek26-1.png"/> |
-| Quant Variable              | Quant Variable + Qual Var        | <img src="https://img.icons8.com/ios-filled/100/000000/area-chart.png"/>                                                                           |
-| Quant Variable              | Shape = Line with Quant Variable | <img src="https://img.icons8.com/material/24/000000/combo-chart--v1.png"/>                                                                         |
++-----------------------------------+------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Aesthetic #1                      | Aesthetic #2                             | Shape                                                                                                                           | Chart Picture                                                                                                                                      |
++===================================+==========================================+:===============================================================================================================================:+====================================================================================================================================================+
+| Position X = Quant Variable       | Position Y = Quant Variable              | Points/Circles with Fixed Size                                                                                                  | <img src="https://img.icons8.com/ios-filled/100/000000/scatter-plot.png"/>                                                                         |
++-----------------------------------+------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Position X = Qual Variable        | Position Y = Count of Qual var)          | Columns                                                                                                                         | <img src="https://img.icons8.com/material/100/000000/futures--v1.png"/>                                                                            |
++-----------------------------------+------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Position X = Qual Variable        | Position Y = Qual Variable               | Rectangles, with *area* proportional to joint(X,Y) *count*                                                                      | <img src="https://img.icons8.com/windows/100/000000/modern-art.png"/>                                                                              |
++-----------------------------------+------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Position X = Qualitative Variable | Position Y = Rank Ordered Quant Variable | Box + Whisker, Box length proportional to *Inter-Quartile Range*, whisker-length proportional to upper and lower quartile resp. | <img src="https://img.icons8.com/external-icongeek26-glyph-icongeek26/100/000000/external-plot-data-analytics-icongeek26-glyph-icongeek26-1.png"/> |
++-----------------------------------+------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Position X = Quant Variable       | Postion Y = Quant Variable + Qual Var    |                                                                                                                                 | <img src="https://img.icons8.com/ios-filled/100/000000/area-chart.png"/>                                                                           |
++-----------------------------------+------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
+| Quant Variable                    | Shape = Line with Quant Variable         |                                                                                                                                 | ![](https://img.icons8.com/material/24/000000/combo-chart--v1.png){width="100"}                                                                    |
++-----------------------------------+------------------------------------------+---------------------------------------------------------------------------------------------------------------------------------+----------------------------------------------------------------------------------------------------------------------------------------------------+
 
 ## What Tool are we going to be using?
 
