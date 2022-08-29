@@ -40,6 +40,10 @@ Do you think that you are **outside the herd**, and that what you think or do is
 
 Anyways...
 
+
+`r blogdown::shortcode("vimeo", "191074419")`
+
+
 ## Activities
 
 
@@ -50,22 +54,14 @@ What can go wrong with this?
 
 Should we use this instead? <https://www.drawnames.com.sg/secret-santa-generator>
 
-Discussion: 
-- Nodes
-- Links
-- Link Directionality
-- Connected and Disconnected Networks
+Discussion: `Nodes, Links, Link Directionality, Connected and Disconnected Networks`
 
 
 ### Activity-2: Barabasi Cocktail Party Game
 
 This is a game "invented" by Alberto-Laszlo Barabasi, a Network Science pioneer and expert, who has written a wonderful, and wonderfully acessible, book on Network Science, available online <http://networksciencebook.com/> 
 
-Discussion:
-- Network Mechanisms
-- Information Flow
-- Giant Component
-- Emergence
+Discussion: `Network Mechanisms, Information Flow, Giant Component,Emergence` 
 
 ### Activity-3: Indian Surnames Game
 
@@ -74,11 +70,7 @@ Discussion:
 1. Write down the score for each surname.
 1. Let's plot this on (yet another ) network!!
 
-Discussion:
-- Node Degree
-- Giant Component?
-- Small Worlds?
-- Multi-Link network, or "Link Values or Costs"
+Discussion: `Node Degree, Giant Component?  Small Worlds?  Multi-Link network, Link Values or Costs`
 
 ### Activity-4: Way-Spotting Game
 
@@ -87,17 +79,12 @@ Now that we have an idea of `nodes`, `links` and `costs`, let us get an experien
 1. Make groups of 3.
 1. Head over to <http://www.wayspotting.com/index.html>
 1. Play!! Make a note of your route each time ( your "traversal" of the network)
-1. Note if you can see the following:
- - Frequently Used Nodes
- - Frequently used Links
-1. See here for more info: <https://medium.com/@ran_katzir/teaching-network-science-using-board-games-f78489a3b3bd> 
+1. Note if you can see the following:  
+  - Frequently Used Nodes
+  - Frequently used Links  
+5. See here for more info: <https://medium.com/@ran_katzir/teaching-network-science-using-board-games-f78489a3b3bd> 
 
-Discussion:
-- Network Traversal
-- Node Degree
-- Centrality
-- Betweenness
-- Link Values or Costs
+Discussion: `Network Traversal, Node Degree, Centrality, Betweenness, Link Values or Costs`
 
 ### Activity-5: Hi, I am Kevin Bacon, SMI Foundation 2022 Batch
 
@@ -107,11 +94,7 @@ Let us find a Keven Bacon in SMI Foundation Studies Programme!!
 1. Use this online tool at [DataBasic.io](https://databasic.io) <https://databasic.io> to *Connect the Dots*, OR
 1. Even more fun at at [GraphCommons](https://graphcommons.com/graphs/new) <https://graphcommons.com/graphs/new>
 
-Discussion:
-- Node Degree
-- Centrality
-- Betweenness
-- Link Values or Costs
+Discussion:  `Node Degree, Centrality, Betweenness, Link Values or Costs` 
 
 ### Activity-6: Can you Introduce me to Chandler, again?
 
@@ -119,10 +102,7 @@ Discussion:
 1. Visualize it either with or without tech tools From Teach Engineering, this [Activity Sheet](https://www.teachengineering.org/activities/view/uno_graphtheory_lesson01_activity2) <https://www.teachengineering.org/activities/view/uno_graphtheory_lesson01_activity2>
 1. Can also use [Graph Comics](https://aviz.fr/~bbach/graphcomics/)<https://aviz.fr/~bbach/graphcomics/>
 
-Discussion:
-- Networks are everywhere
-- Cannot "unsee" them
-- You are a node and you are a link..are you?
+Discussion: `Networks are everywhere, Cannot "unsee" them, You are a node and you are a link..are you?`
 
 ## References
 
@@ -133,7 +113,7 @@ Discussion:
 
 1. A Network oriented short story. Frigyes Karinthy, "Chains".  [Read PDF](http://vadeker.net/articles/Karinthy-Chain-Links_1929.pdf)
 
-1. Who told you about Srishti? Where? Read Mark Granovetter, *The Strength of Weak Ties*, <https://www.cs.cmu.edu/~jure/pub/papers/granovetter73ties.pdf>
+1. *Who told you about Srishti? Where?* Read Mark Granovetter, *The Strength of Weak Ties*, <https://www.cs.cmu.edu/~jure/pub/papers/granovetter73ties.pdf>
 
 
 
