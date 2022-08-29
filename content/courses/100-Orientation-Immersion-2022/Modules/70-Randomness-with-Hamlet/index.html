@@ -97,9 +97,9 @@ url_video: ""
 <h3>Design of Experiments</h3>
 <p>Let us pretend we are Hamlet and design a simple experiment to find out some “truth” ( highly probable idea) that is important to us.</p>
 <p>For example:</p>
-<p>Let us consider the <strong>Short Term Memory</strong> of Foundation Students:
-- Is it different between those who pursue “<em>Art-related</em>” degrees and those who pursue “<em>Design-related</em>” degrees?
-- Between Male and Female students?
+<p>Let us consider the <strong>Short Term Memory</strong> of Foundation Students:<br />
+- Is it different between those who pursue “<em>Art-related</em>” degrees and those who pursue “<em>Design-related</em>” degrees?<br />
+- Between Male and Female students?<br />
 - Any other factors, not related to types of individuals, but more like parameters of STM itself?</p>
 <p>Or we could use the <a href="https://curtbonk.com/bobweb/r546/modules/creativity/creativity_tests/guilford_uses_task.html"><strong>Guilford Test for Alternative Uses</strong></a> as our vehicle for testing similar Hypotheses.</p>
 <p>We will choose one of these questions, or a similar one, and use the <strong>PPDAC Method</strong> to proceed with our Experiment. This paper by Lawrence to guide our Hypothesis Testing and the Design of our Experiment:</p>
@@ -115,9 +115,24 @@ url_video: ""
 <li>Download this <a href="STM.xlsx"><strong>spreadsheet</strong></a> and save as your own <em>named</em> local copy.</li>
 <li>Enter the data from all tests on the first sheet titled “RawData” (the one with the warning)</li>
 <li><strong>Duplicate this data</strong> on the sheet titled “Data Duplicated”. <strong>Do not touch</strong> the “RawData” sheet again.</li>
-<li>For each of the <em>factors</em> under consideration, we will need to stack up STM scores from 4 tests, i.e. four columns. Since we have three factors, we will get three sets of stacked scores, each from a (shuffled) set of 4 tests.</li>
-<li>We will set up these stacked scores in Col A on three separate sheets, similar to the one shown, titled “Permutation Test”.</li>
-<li>Create Histograms for each of the columns using WTFcsv. Ensure that there are <em>TWO</em> Histograms: one for each value of the factor under consideration.</li>
+<li>For each of the <em>factors</em> under consideration, we will need to stack up STM scores from <span class="math inline">\(2^3 = 8\)</span> tests, i.e. eight columns.</li>
+<li>If we have three two-valued, categorical factors, we will get three sets of stacked scores, each from a (shuffled) set of the tests.</li>
+<li>Half the scores in these stacked columns will pertain to one <em>level</em> of the factor, and the other half of the scores will pertain to the other level. (This should remind you of the Karnaugh Map you may have learnt in your digital logic courses in school.). See example below: it shows how we can stack up the scores from <em>4</em> tests for each <em>level</em> of the parameter <em>p1</em>.</li>
+</ol>
+<pre><code>##   scores test    p1    p2    p3
+## 1     20    A  True  Long   Big
+## 2     20    B  True  Long Small
+## 3     20    C  True Short   Big
+## 4     20    D  True Short Small
+## 5     20    E False  Long   Big
+## 6     20    F False  Long Small
+## 7     20    G False Short   Big
+## 8     20    H False Short Small</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li>We will set up each of these <em>two stacked-score columns</em> in Col A on separate sheets, similar to the one shown in the sheet titled “Permutation Test”. One sheet for each two-valued parameter.</li>
+<li>Create <em>paired</em> Histograms for each of the two stacked-score columns using WTFcsv, or Excel itself if you are confident. Ensure that there are <em>TWO</em> Histograms: one for each value of the factor under consideration.</li>
+<li>Inspection of the shapes and locations of these paired Histograms may give you an idea whether the factor under consideration has any effect on STM scores or none.</li>
 <li>Save these 6 histograms as PNG files on your machines and use them along with <em>Comic Generator</em> (discussed below) to tell the story of your Hypothesis Testing.</li>
 </ol>
 </div>
@@ -284,7 +299,7 @@ in the basic channels, vs only 6.87 minutes in the extended channels. This seems
 </tr>
 </tbody>
 </table>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
 </div>
 <div id="data-analysis-2-permutation-tests-using-excel" class="section level3">
 <h3>Data Analysis-2: Permutation Tests using Excel</h3>

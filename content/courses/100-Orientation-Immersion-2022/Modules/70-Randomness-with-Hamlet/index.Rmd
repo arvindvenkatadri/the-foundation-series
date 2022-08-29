@@ -27,6 +27,7 @@ url_video: ""
 library(blogdown)
 library(tidyverse)
 library(mosaic)
+library(patchwork)
 ```
 
 
@@ -111,10 +112,10 @@ Let us pretend we are Hamlet and design a simple experiment to find out some "tr
 
 For example: 
 
-Let us consider the **Short Term Memory** of Foundation Students: 
-- Is it different between those who pursue "*Art-related*" degrees and those who pursue "*Design-related*" degrees? 
-- Between Male and Female students? 
-- Any other factors, not related to types of individuals, but more like parameters of STM itself?
+Let us consider the **Short Term Memory** of Foundation Students:   
+- Is it different between those who pursue "*Art-related*" degrees and those who pursue "*Design-related*" degrees?   
+- Between Male and Female students?   
+- Any other factors, not related to types of individuals, but more like parameters of STM itself?  
 
 Or we could use the [**Guilford Test for Alternative Uses**](https://curtbonk.com/bobweb/r546/modules/creativity/creativity_tests/guilford_uses_task.html) as our vehicle for testing similar Hypotheses. 
 
@@ -132,9 +133,32 @@ Once our test is complete, let us collate all the data for all tests using Excel
 1. Download this [**spreadsheet**](STM.xlsx) and save as your own *named* local copy. 
 1. Enter the data from all tests on the first sheet titled "RawData" (the one with the warning)
 1. **Duplicate this data** on the sheet titled "Data Duplicated". **Do not touch** the "RawData" sheet again. 
-1. For each of the *factors* under consideration, we will need to stack up STM scores from 4 tests, i.e. four columns. Since we have three factors, we will get three sets of stacked scores, each from a (shuffled) set of 4 tests.
-1. We will set up these stacked scores in Col A on three separate sheets, similar to the one shown, titled "Permutation Test".
-1. Create Histograms for each of the columns using WTFcsv. Ensure that there are *TWO* Histograms: one for each value of the factor under consideration. 
+1. For each of the *factors* under consideration, we will need to stack up STM scores from $2^3 = 8$ tests, i.e. eight columns. 
+1. If we have three two-valued, categorical factors, we will get three sets of stacked scores, each from a (shuffled) set of the  tests. 
+1. Half the scores in these stacked columns will pertain to one *level* of the factor, and the other half of the scores will pertain to the other level. (This should remind you of the Karnaugh Map you may have learnt in your digital logic courses in school.). See example below: it shows how we can stack up the scores from *4* tests for each *level* of the parameter *p1*.
+
+```{r,echo=FALSE,message=FALSE,warning=FALSE}
+
+dat <- tibble(scores = rep(20, 8),
+              test = LETTERS[1:8])
+params <- expand_grid(p1 = c("True", "False"), p2 = c("Long", "Short"), p3 = c("Big", "Small"))
+
+scores <- cbind(dat, params)
+scores
+
+p1 <- ggplot(scores, aes(x = test, y = scores, fill = test)) + 
+  geom_bar(stat = "identity") + theme_minimal() + labs(title = "8 sets of 20 scores")
+
+p2 <- ggplot(scores, aes(x = p1, y = scores, fill = test), colour = "black") + 
+  geom_bar(stat = "identity", position = "stack") + theme_minimal() + labs(title = "Two sets of scores from 8 tests")
+
+wrap_plots(p1,p2, ncol = 2, nrow = 1, guides = "collect")
+
+```
+
+1. We will set up each of these *two stacked-score columns* in Col A on separate sheets, similar to the one shown in the sheet titled "Permutation Test". One sheet for each two-valued parameter. 
+1. Create *paired* Histograms for each of the two stacked-score columns using WTFcsv, or Excel itself if you are confident. Ensure that there are *TWO* Histograms: one for each value of the factor under consideration. 
+1. Inspection of the shapes and locations of these paired Histograms may give you an idea whether the factor under consideration has any effect on STM scores or none. 
 1. Save these 6 histograms as PNG files on your machines and use them along with *Comic Generator* (discussed below) to tell the story of your Hypothesis Testing. 
 
 
