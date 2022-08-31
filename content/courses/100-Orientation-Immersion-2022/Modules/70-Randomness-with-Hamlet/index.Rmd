@@ -28,6 +28,8 @@ library(blogdown)
 library(tidyverse)
 library(mosaic)
 library(patchwork)
+library(ggtext)
+library(ggformula)
 ```
 
 
@@ -160,9 +162,33 @@ wrap_plots(p1,p2, ncol = 2, nrow = 1, guides = "collect")
 ```
 
 1. We will set up each of these *two stacked-score columns* in Col A on separate sheets, similar to the one shown in the sheet titled "Permutation Test". One sheet for each two-valued parameter. 
-1. Create *paired* Histograms for each of the two stacked-score columns using WTFcsv, or Excel itself if you are confident. Ensure that there are *TWO* Histograms: one for each value of the factor under consideration. 
-1. Inspection of the shapes and locations of these paired Histograms may give you an idea whether the factor under consideration has any effect on STM scores or none. 
-1. Save these 6 histograms as PNG files on your machines and use them along with *Comic Generator* (discussed below) to tell the story of your Hypothesis Testing. 
+2. Create *paired* Histograms for each of the two stacked-score columns using WTFcsv, or Excel itself if you are confident. Ensure that there are *TWO* Histograms: one for each value of the factor under consideration. 
+3. Inspection of the shapes and locations of these paired Histograms may give you an idea whether the factor under consideration has any effect on STM scores or none. 
+
+```{r,echo=FALSE,message=FALSE}
+
+p1_T<- tibble(values = rpois(n = 80, lambda = 10),
+              p1 = rep("HIGH", 80))
+p1_F<- tibble(values = rpois(n = 80, lambda = 5),
+              p1 = rep("LOW", 80))
+p1 <- rbind(p1_T, p1_F)
+
+ggplot(p1, aes(x = values, fill = p1, colour = p1)) + 
+  geom_histogram(alpha = 0.3,) + theme_minimal() +
+  geom_vline(xintercept = mean(p1$values[p1$p1 == "HIGH"]), colour = "red", size = 2, linetype = "dotdash") + 
+  geom_vline(xintercept = mean(p1$values[p1$p1 == "LOW"]), colour = "#00BFC4", size = 2, linetype = "dotdash") +
+  labs(title = "Paired STM score Histograms for Factor ***p1***",
+      y = "Count of STM scores",
+      x = "STM Scores"
+  ) +
+  geom_textbox(x = 2.5, y = 15, label = "Mean Score <br> for p1(LOW)", alpha = 0.1, width = unit(0.2, "npc"), fill = "cornsilk", colour = "#00BFC4") + 
+  geom_textbox(x = 12.5, y = 12, label = "Mean Score <br>for p1(HIGH)", alpha = 0.1, width = unit(0.2, "npc"), fill = "cornsilk", colour = "red") + 
+  theme(plot.title = ggtext::element_markdown())
+
+```
+
+
+4. Save these 6 histograms as PNG files on your machines and use them along with *Comic Generator* (discussed below) to tell the story of your Hypothesis Testing. 
 
 
 
