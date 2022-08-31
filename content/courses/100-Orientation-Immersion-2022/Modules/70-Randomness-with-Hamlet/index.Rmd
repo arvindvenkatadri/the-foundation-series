@@ -59,7 +59,7 @@ Let us import our data into the **WTFcsv** tool [(**Web Link**)](https://databas
 1. Did you have run home to get the salt + chilly powder? 
 1. Why did you trust your friends not to eat off the best mangoes in your absence? ;-D
 1. Were you used to being the "*denner*" in every game?
-1. Was that a completely "mad" thing to do, throwing stuff on the floor?
+1. Was that a completely "mad" thing to do, throwing stuff on the floor? Or was it an act of *Pedagogical Vandalism*?
 1. Is Randomness just too much to handle or comprehend?
 1. Or can we "tame" it in some way, and put it to use in Art, Design, and Tech?
 1. Have we been doing this all along? Have we been "*holding infinity in the palm of our hands*"[^1], in the हाथ कीे लकीरे?
@@ -94,7 +94,9 @@ What would we want to know?
 - What is the chance that we will survive?   
 - Who killed Dad?   
 
-Did Hamlet have an idea about this, that he might have wanted to prove? If we wanted to know the truth of something, some guess, or a **Hypothesis** that we had, then we would need to conduct an "Experiment", rather like Hamlet did, without quite going or **feigning madness** of course. But there is a **Madness to the Method**, as we will see...
+Did Hamlet have an idea, any suspicion, that he might have wanted to prove? Yes, he did, and that is why he *feigned madness*, so people would open up and tell him things, in an unguarded way. So there was [*craft in his madness*](http://www.shakespeare-online.com/plays/hamlet/antichamlet.html).
+
+If we wanted to know the truth of something, some guess, or a **Hypothesis** that we had, then we would need to conduct an "Experiment", rather like Hamlet did, without quite going or **feigning madness** of course. But there is a **Madness to the Method**, as we will see...
 
 !["Design of Experiments - A Workflow: A Madness in the Method"](https://www.statsref.com/HTML/ppdac.png)
 
@@ -113,6 +115,7 @@ Let us pretend we are Hamlet and design a simple experiment to find out some "tr
 For example: 
 
 Let us consider the **Short Term Memory** of Foundation Students:   
+
 - Is it different between those who pursue "*Art-related*" degrees and those who pursue "*Design-related*" degrees?   
 - Between Male and Female students?   
 - Any other factors, not related to types of individuals, but more like parameters of STM itself?  
