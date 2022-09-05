@@ -217,7 +217,7 @@ Let's get a visual sense of how all this works:
 
 Do you want to develop an ML model for heart patients? We have a dataset of heart patients at the [**University of California, ~~Arvind~~ Irvine ML Dataset Repository**](https://archive.ics.uci.edu/ml/datasets/heart+disease)
 
-[**Heart Patient Data**](https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/processed.cleveland.data). Import into Orange !!
+Let us download some [**Heart Patient Data**](https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/processed.cleveland.data). Import into Orange !!
 
 What are the variables?
 
@@ -262,5 +262,8 @@ We will create a Random Forest Model for this dataset, and compare with the Desi
 3. Pythagorean Trees for Random Forests: https://orangedatamining.com/blog/2016/07/29/pythagorean-trees-and-forests/
 
 4. *data.tree* sample applications, Christoph Glur, 2020-07-31. <https://cran.r-project.org/web/packages/data.tree/vignettes/applications.html>
+
+
+5. Christopher McFadden, *15 Examples of the Magnificent Phenomenon of Crown Shyness*, https://interestingengineering.com/science/15-examples-of-the-magnificent-phenomenon-of-crown-shyness
 
 
