@@ -14,7 +14,7 @@ links:
 - icon: flask
   icon_pack: fas
   name: TRIZ Basics
-  url: /slides/PlayAndInvent/TRIZ Basics/index.html
+  url: /slides/PlayAndInvent/TRIZ-Basics/index.html
 tags:
 - Genrikh Altshuller
 - TRIZ
