@@ -176,10 +176,10 @@ Excessive Action**
 ## TRIZ Workflow: Case Study#2: Spotify Ad
 
 .pull-left[
-- **AC**: I want to chill but Mom wants me to take her veggie shopping. I have to put up with waste of time and possibly boredom. 
+- **AC**: I want to chill, but Mom wants me to take her veggie shopping. I have to put up with waste of time and possibly boredom. 
 - **Knobs** (short list): 
   - Travel Time(L/S); Purchase Time(L/S); Noise(Loud/Soft); Bargaining Talk(Long/Short)
-- **Output**: Stress / Boredom / Waste of Time
+- **Output**: Stress / Boredom / Waste of Time / Mom is Happy / Veggies
 - **IFR**: *"I should go AND not go to the market at the same time"*
 
 - **TC**: From the 48 TRIZ parameters:
@@ -226,7 +226,7 @@ But as park visitation increased, traffic volume surged—and so did highway-rel
 
 - **Knobs** (short list): 
   - Speed(L/S); Size of Animal(L/S); Number of Animals(L/S); Time of Migration(D/N);
-- **Output**: Road Kill / Affects Animal Migration / Human Costs
+- **Output**: Road Kill / Affects Animal Migration / Human Costs / Fast Journeys
 
 - **IFR**: *"The Animals and Humans should use the Road at the Same Time"*
   ]
