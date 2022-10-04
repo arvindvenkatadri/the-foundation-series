@@ -74,7 +74,7 @@ Both these activities are examples of exercises in divergent thinking. See the r
 -   Did you not use these words to describe your ideas?
 -   Were there, in your opinion, any outrageous ideas presented? Why were they outrageous?
 -   Are metaphors more interesting when they are surprising?
--   How did the attributes of the objects ( shape , texture, size, weight, orientation...) get embedded in the ideas presented?
+-   How did the **attributes of the objects** ( shape , texture, size, weight, orientation...) get embedded in the ideas presented?
 -   Were these "embeddings" meaningful? How and why so? (Ask Bourdieu !!)
 
 ### Activity-3: Gangs of Wasseypur
@@ -97,6 +97,21 @@ knitr::include_url("/slides/PlayAndInvent/Constructionism/index.html")
 1. Use **only** Gen Z language in your ad. 
 1. Ad = Performance/Jingle + Poster
 
+(Articles: Book End made of Wood; Aristo Slide Rule; 80-year-old brass mortar and pestle; Node from Elephant Bamboo stem)
+
+### Activity-6: Metaphorical Story re(Writing)
+
+1. Read the story in Ref. 7 below.
+2. Understand the metaphors in the story:
+  - What is the story about?
+  - What "metaphorical language" has Joshua Ferris used to describe the characters, their actions, and the results of their actions?
+  - What is the *domain* of these metaphors in the story?
+3. Now, choose a (short!) story that you know really well, something that you may have encountered in school.
+4. Re-write this story using language, metaphors, and images from any *domain* (other than what may be in the original story). 
+  - For example, in Primo Levi's lyrical story [**Carbon**](https://www.arvindguptatoys.com/arvindgupta/periodic-primo.pdf), a lot of metaphors from Chemistry and atomic physics are used to describe life, and connections with people.
+
+
+
 ## References
 
 1.  **Guilford Test for Divergent Thinking**: [(Weblink)](https://curtbonk.com/bobweb/d1.html)
@@ -112,3 +127,5 @@ knitr::include_url("/slides/PlayAndInvent/Constructionism/index.html")
 6.  Holyoak and Thagard, **The Analogical Mind**, [(PDF)](Holyoak-%20Thagard%20-%20Analogical%20Mind.1997pdf.pdf)
 
 7.  Joshua Ferris, **The Market Value of my Father**, a metaphorical Short Story. [(Web Link)](https://www.wealthsimple.com/en-ca/magazine/joshua-ferris)
+
+

@@ -1,11 +1,11 @@
 ---
 date: "`r Sys.Date()`"
 linkTitle: R for Artists
-external link: "https://r-for-artists.netlify.app"
 summary: An introductory course on data and visualization in R.
 title: "\U0001F4CA R for Artists"
 type: book
-weight: 2
+weight: 1
+view: 2
 ---
 
 {{< figure src="featured.jpg" >}}
@@ -19,4 +19,6 @@ weight: 2
 - Plotting Networks with {{<hl>}}tidygraph{{</hl>}}
 
 
-{{< cta cta_text="Begin the course" cta_link="https://r-for-artists.netlify.app" >}}
+## Abstract
+
+

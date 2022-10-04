@@ -157,7 +157,7 @@ TRIZ is actively used in Companies such as **Boeing, Bridgestone, Eastman Kodak,
 
 Altshuller made two more discoveries (at least!) based on his study of Soviet Patents:
 
- - That when the the problems solved in the patents were **expressed as Contradictions**, there were only a few *standard phrases* using which these Contradictions could be constructed. These were an astonishingly small **38** in number!! Every problem could be described as a contradiction using some pair of these 48 parameters. We will call these the **48 TRIZ Parameters**[^1].
+ - That when the the problems solved in the patents were **expressed as Contradictions**, there were only a few *standard phrases* using which these Contradictions could be constructed. These were an astonishingly small **48** in number!! Every problem could be described as a contradiction using some pair of these 48 parameters. We will call these the **48 TRIZ Parameters**[^1].
  
 - When the **solutions in the Patents** were examined, they could all be expressed simply as one of **40** abstract nouns or phrases. Just...40! We will call these the **40 TRIZ Inventive Principles**
 
@@ -168,17 +168,19 @@ Some examples:
 
 So the task is:  
 - Take your *Administrative Contradiction (AC)*  
-- Convert "each side" (i.e terms) of the AC into a TRIZ *Technical Contradiction* by using a pair of the *39 TRIZ Parameters*. 
-- Make sure that you are able to justify to yourself the **metaphorical connection** between the terms of AC and the chosen pair of TRIZ Parameters. For example, "Loss of substance" could mean "loss of money"!! Write this down, for both sides of your AC.  
-- We may be able to also create a *Physical Contradiction* at this time. When we are examining the Ishikawa knobs
+- Convert "each side" (i.e terms) of the AC into a TRIZ *Technical Contradiction* by using a pair of the *48 TRIZ Parameters*. 
+- Make sure that you are able to justify to yourself the **metaphorical connection** between the terms of AC and the chosen pair of TRIZ Parameters. For example, *"Loss of substance"* could mean *"loss of money"*!! Write this down, for both sides of your AC.  
+- We may be able to also create a *Physical Contradiction* at this time, when we are examining the Ishikawa knobs.
 
 ## Some Contradiction Examples
 
 *TC Examples*:  
-- Increasing the power of an engine (positive improvement) requires an increase in the size of the engine (negative effect). So, an inventor considers increasing the power partially in order to reduce the negative effect (compromise solution). To increase the speed of an airplane, a new and more powerful engine is installed. This increases the weight of the airplane so the wings can no longer support it during takeoff. Increasing the wing size produces more drag, slowing the airplane down.
-- 
-```{r,echo=FALSE}
-library("ggplot2")
+- Increasing the power of an engine (positive improvement) requires an increase in the size of the engine (negative effect). So, an inventor considers increasing the power partially in order to reduce the negative effect (compromise solution). 
+- To increase the speed of an airplane, a new and more powerful engine is installed. This increases the weight of the airplane so the wings can no longer support it during takeoff. Increasing the wing size produces more drag, slowing the airplane down.
+
+
+```{r,echo=FALSE, eval=FALSE}
+library(ggplot2)
 library(ggtext)
 eq = function(x){(x-25)*(x-25)}
 ggplot(data.frame(x=c(0, 50)), aes(x=x)) +
@@ -225,13 +227,88 @@ annotate("text", x = 6, y = 25, label = "Effort to Remove Wheel Bolts",size = 18
 
 ```
 
+
+```{r,echo=FALSE}
+library(ggplot2)
+library(ggtext)
+
+eq = function(x){(x-25)*(x-25)}
+data <- data.frame(x=c(0, 50))
+
+ggplot(data, aes(x = x)) + 
+  stat_function(fun=eq) + 
+  geom_abline(slope = -12, intercept = 600, colour = "skyblue") + 
+  geom_abline(slope = 12, intercept = 0, colour = "pink") +
+  geom_richtext(
+    data = data,
+    x = 40, y = 600,
+    label = "Effort in Removing Bolts",
+    hjust = 0.5, vjust = 0.5,fill = "pink",
+    size = 8
+  ) + 
+  geom_richtext(
+    data = data, 
+    x = 10, y = 600,
+    label = "Likelihood of losing a Wheel",
+    hjust = 0.5, vjust = 0.4, fill = "skyblue",
+    size = 8
+  ) + 
+  
+   geom_richtext(
+    data = data, 
+    x = 25, y = 50,
+    label = "Ideality??",
+    hjust = 0.5, vjust = 0.5,
+    size = 8
+  )  + 
+  labs(title =  "Automobile Wheel Bolts",
+       subtitle = "*A Contradiction*",  
+  y = "Likelihood of losing a Wheel / Effort",
+  x = "Number of Bolts") + 
+  
+  # annotate("text", x = 6, y = 25, label = "Effort to Remove Wheel Bolts",size = 12) +
+  # annotate("text", x = 45, y = 100, label = "Number of Wheel Bolts", size = 12) +
+  # annotate("text", x = 45, y = 450, label = "Ideality") +
+  theme_minimal() +
+  theme(
+    axis.text.y = element_blank(),
+    axis.text.x = element_blank(),
+    axis.title = element_text(size = 18),
+    axis.line = element_line(arrow = arrow(), size = 1),
+    panel.grid = element_blank(),
+    
+    plot.title = element_text(
+      family = "serif",
+      face = "bold",
+      size = 24
+    ),
+    plot.subtitle = element_markdown(
+      family = "gochi",
+      face = "bold",
+      size = 18
+    )
+  )
+
+
+# curve(eq, 0, 50) also works
+
+```
 *PC Examples*:  
-- Landing gear must be present on an airplane in order to land and takeoff. It should not be present during flight because of an increase in air drag. The physical contradiction is that the landing gear must be both present and absent. This contradiction is resolved by separating the requirements in time — make the landing gear retractable.  
-- For high water diving, water must be “hard” to support the diver and “soft” so as not to injure the diver. The physical contradiction: The water must be hard and soft at the same time. This contradiction is resolved by separating the requirements in space: Saturate the water with air bubbles — the pool contains both air and water.  
-- ... an inherent contradiction in
-takeout pizza products. The customer wants the pizza to be hot, but hot pizza gives off steam. As a result, the cardboard box lid absorbs the steam, softens, and collapses down on the pizza. When the customer lifts the lid of the pizza box after arriving home, some of the pizza, which has stuck to the lid, attaches to the raised lid and the customer is not pleased because a significant amount of the cheese that he paid for is not edible. We want the pizza to be hot for one reason (an enjoyable pizza) and we want it to be cold for another (preventing the lid from becoming soggy and collapsing due to steam and water absorption). The little plastic tripod that is in the center of many takeout pizzas was the subject of the talk I heard. Such a simple invention! It resolves the contradiction of the pizza being hot and cold at the same time. (Jack Hipple, The Ideal Result)
+- Landing gear must be present on an airplane in order to land and takeoff. It should not be present during flight because of an increase in air drag. The physical contradiction is that **the landing gear must be both present and absent**. This contradiction is resolved by separating the requirements in time — make the landing gear retractable.   
 
+- For high water diving, water must be “hard” to support the diver and “soft” so as not to injure the diver. The physical contradiction: **The water must be hard and soft at the same time**. This contradiction is resolved by separating the requirements in space: Saturate the water with air bubbles — the pool contains both air and water.   
 
+- ... an inherent contradiction in takeout pizza products. The customer wants the pizza to be hot, but hot pizza gives off steam. As a result, the cardboard box lid absorbs the steam, softens, and collapses down on the pizza. When the customer lifts the lid of the pizza box after arriving home, some of the pizza, which has stuck to the lid, attaches to the raised lid and the customer is not pleased because a significant amount of the cheese that he paid for is not edible. **We want the pizza to be hot for one reason (an enjoyable pizza) and we want it to be cold for another** (preventing the lid from becoming soggy and collapsing due to steam and water absorption). The little plastic tripod that is in the center of many takeout pizzas was the subject of the talk I heard. Such a simple invention! It resolves the contradiction of the pizza being hot and cold at the same time. (Jack Hipple, The Ideal Result)
+
+## Thinking, Problem Solving, and Language
+
+Here is Albert Einstein speaking on **The Language of Science**. The transcript is here.[**PDF**](albert-einstein-the-common-language-of-science.pdf).
+
+One quote from this short reading seems very apposite here:
+
+> "The supernational character of scientific concepts and scientific language is due to the fact that they have been set up by the best brains of all countries and all times. In solitude, and yet in cooperative effort as regards the final effect, they created the spiritual tools for the technical revolutions which have transformed the life of mankind in the last centuries. Their system of concepts has served as a guide in the bewildering chaos of perceptions so that we learned to grasp general truths from particular observations."
+
+`r blogdown::shortcode("youtube", "iEtQ-gQ0Bq8")`
 
 ## References
 

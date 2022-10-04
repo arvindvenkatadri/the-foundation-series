@@ -73,19 +73,25 @@ Over the next two weeks we will form our intuition about shapes and data and lea
 
 ## Quick Lookup 
 
+### Charts and Data
+
 1. **Data Vis Project** <https://datavizproject.com/> Allows you to match data types and data-vis types!! Perfect!!
 
+1. **Data Viz Catalogue** <https://datavizcatalogue.com/> Another good place to look for graphs that match your data!
+
 1. **From Data-to-Viz**  <https://www.data-to-viz.com/#explore>
+
+1. Financial Times **Visual Vocabulary Chart**. A great chart to match data to data-viz. [**PDF here**](/pdf/DataViz/FT4Schools_RGS.pdf) and Web version <https://ft-interactive.github.io/visual-vocabulary/>  
+
+1. 72 types of Visualization for Data Stories <https://blog.gramener.com/types-of-data-visualization-for-data-stories/>
+
+### Charting in R
 
 1. **R Charts** <https://r-charts.com/>
 
 1. **R Graph Gallery** <https://r-graph-gallery.com/index.html>
 
-1. Financial Times **Visual Vocabulary Chart**. 
-A great chart to match data to data-viz. [**PDF**](/pdf/DataViz/FT4Schools_RGS.pdf)
-Web version: <https://ft-interactive.github.io/visual-vocabulary/>  
 
-1. 72 types of Visualization for Data Stories <https://blog.gramener.com/types-of-data-visualization-for-data-stories/>
 
 
 ## Dataset Resources
@@ -128,19 +134,32 @@ David McCandless' terrific information visualization site. All datasets used her
 
 1. **World Bank Open Data** <https://data.worldbank.org/>. A global collection of economic development data .
 
-1. Jonathan Schwabish's **PolicyViz DataViz Catalogue**. This is a spreadsheet that has links to data *and* images of visualizations that have been achieved with each of the datasets. Over *800* entries...see table below! ( Should be US centric, but very inspirational visualizations!)
+1. Jonathan Schwabish's **PolicyViz DataViz Catalogue**. <https://policyviz.com/resources/policyviz-data-visualization-catalog/> This is a spreadsheet that has links to data *and* images of visualizations that have been achieved with each of the datasets. Over *800* entries...see table below! (US centric, but very inspirational visualizations!), See the emebedded version below:
 
 <p align="center"><iframe width="600" height="800" src="https://datastudio.google.com/embed/reporting/eb2fea55-8eeb-440f-9c56-e8278266a368/page/vZWQB" frameborder="0" style="border:0" allowfullscreen></iframe></p>
 
 
 ## Our Tools
 
-1. **Datawrapper Academy** <https://academy.datawrapper.de/ >  
-Check out the crisp tutorials on how to make, annotate and liven up your graphs.
+### Chart Creation and Export
 
-1. **Infogram** < https://infogram.com/> Create engaging infographics and reports in minutes
+1. **Orange Data Mining** <https://orangedatamining.com/> Free software. Very intuitive, point-and-click, goes all the way from simple data-viz to ML!
 
-1. **Flourish Studio** < https://flourish.studio/> Beautiful and easy data visualization and storytelling
+1. **Datawrapper Academy** <https://academy.datawrapper.de/> A free browser-based tool, requires registration and login. 
+
+1. **RAWGraphs** <https://app.rawgraphs.io/>  Another Free browser-based tool, no registration, no login. Simple interface too. 
+
+
+
+### Story Telling with Charts
+
+1. **Flourish Studio** <https://flourish.studio/> Beautiful and easy data visualization and storytelling
+
+1. **Infogram** <https://infogram.com/> Create engaging infographics and reports in minutes
+
+1.  **Visme** <https://www.visme.co/> Yet another...
+
+
 
 ## Modules
 
