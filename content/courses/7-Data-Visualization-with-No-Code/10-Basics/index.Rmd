@@ -45,6 +45,16 @@ library(tidyverse)
 library(ggtext)
 ```
 
+## Where does Data come from?
+Let us look at the slides. Click on the icon above:
+
+```{r}
+knitr::include_url("10-Nature-of-Data/10-Nature-of-Data.html")
+
+```
+
+
+
 ## Why Visualize?
 
 -   We can digest information more easily when it is pictorial

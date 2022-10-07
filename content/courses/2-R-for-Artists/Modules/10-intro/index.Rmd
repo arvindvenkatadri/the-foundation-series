@@ -48,7 +48,7 @@ library(ggtext)
 ## Where does Data come from?
 
 ```{r, echo=FALSE}
-knitr::include_url("slides/R-for-Artists/10-Nature-of-Data/10-Nature-of-Data.html")
+knitr::include_url("10-Nature-of-Data/10-Nature-of-Data.html")
 
 
 ```
@@ -62,12 +62,12 @@ knitr::include_url("slides/R-for-Artists/10-Nature-of-Data/10-Nature-of-Data.htm
 -   It helps sift facts and mere statements: for example:
 
 ```{r echo=FALSE, fig.alt= "Source https://www.deccanherald.com/national/india-is-known-as-the-rape-capital-of-the-world-rahul-783495.html", fig.cap="Source https://www.deccanherald.com/national/india-is-known-as-the-rape-capital-of-the-world-rahul-783495.html"}
-knitr::include_graphics("rape-capital.png")
+knitr::include_graphics("img/rape-capital.png")
 
 ```
 
 ```{r echo=FALSE, fig.alt= "Source https://datareveals.org/crime-data/", fig.cap= "Source https://datareveals.org/crime-data/"}
-knitr::include_graphics("data-reveals-crime.png")
+knitr::include_graphics("img/data-reveals-crime.png")
 
 ```
 
@@ -169,7 +169,7 @@ g + geom_text(data=annotation, aes( x=x, y=y, label=label, angle = angle),      
 Most Data Visualizations use one or more of the following geometric attributes or aesthetics. These geometric aesthetics are used to *represent* qualitative or quantitative variables from your data.
 
 ```{r echo=FALSE, fig.cap="From Claus Wilke, Fundamentals of Data Visualization"}
-knitr::include_graphics("common-aesthetics-1.png")
+knitr::include_graphics("img/common-aesthetics-1.png")
 ```
 
 What does that mean? We can think of simple visualizations as **combinations** of these aesthetics. Some examples:
