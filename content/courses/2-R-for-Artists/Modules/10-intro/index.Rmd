@@ -11,6 +11,7 @@ output:
     theme: united
     toc: true
     code_folding: true
+
 tags:
 - Scientific Inquiry
 - Experiments
@@ -45,7 +46,39 @@ library(tidyverse)
 library(ggtext)
 ```
 
-## Where does Data come from?
+## Some Data Games
+
+Let us start with a couple of small rumpus/games.[^1] 
+
+### Game-1: Making Sushi
+I will call out a few random *characteristics*, such as "People who wake up before 0800 hours in the morning", or "People who love Sushi". We will see how our classgroup spontaneously reorganises itself based on these characteristics.
+
+Questions to Ponder:  
+
+1. Did you stay in the one group you chose?  
+1. If you moved, why did you move?  
+1. How did you know "where to stand"? (like Archimedes seems to have known)  
+1. Did you feel some groups to be "cooler" than say the groups you were in?  
+1. If you were to look down at our classroom arrangement *from the ceiling*, how would you know which group was which?  
+
+
+### Game-2: Thinking like Kandinsky
+Look around the room, at the people, furniture, walls, fittings....
+and write down as many **abstract nouns** that pertain to **concrete things** as you can.
+
+> A concrete noun is a noun that can be identified through one of the five senses (taste, touch, sight, hearing, or smell).
+
+> An abstract nounnames a quality or an idea that cannot be physically quantified with the senses. Instead, it symbolises an abstract concept, such as a feeling, a quality, or an idea. In other words, abstract nouns are intangible concepts.
+
+Questions to Ponder:  
+
+1. Did any of the Abstract Nouns "show up" in the way you formed Sushi groups?  
+1. How did you know "where to stand"? ( like Archimedes seems to have known)  
+1. Did you feel some groups to be "cooler" than say the groups you were in?  
+1. If you were to look down at our classroom arrangement *from the ceiling*, how would you know which group was which?  
+1. How could you possibly *use* some of the Abstract Nouns in the Sushi-group-making?
+
+## The Nature of Data
 
 ```{r, echo=FALSE}
 knitr::include_url("10-Nature-of-Data/10-Nature-of-Data.html")
@@ -56,8 +89,10 @@ knitr::include_url("10-Nature-of-Data/10-Nature-of-Data.html")
 
 ## Why Visualize?
 
+So now that we know where data comes from, why do we want to visualize it?
+
 -   We can digest information more easily when it is pictorial
--   Our [Working Memories](https://www.understood.org/en/articles/working-memory-what-it-is-and-how-it-works) are both *short-term* and *limited* in capacity. So a picture abstracts the details and presents us with an overall summary, an insight, or a story that is both easy to recall and easy on retention.\
+-   Our [Working Memories](https://www.understood.org/en/articles/working-memory-what-it-is-and-how-it-works) are both *short-term* and *limited* in capacity. So a picture abstracts the details and presents us with an overall summary, an insight, or a story that is both easy to recall and easy on retention.  
 -   Data Viz includes *shapes* that carry strong cultural memories and impressions for us. These cultural memories help us to use data viz in a *universal way* to appeal to a wide variety of audiences. (Do humans have a gene for geometry?)
 -   It helps sift facts and mere statements: for example:
 
@@ -70,6 +105,23 @@ knitr::include_graphics("img/rape-capital.png")
 knitr::include_graphics("img/data-reveals-crime.png")
 
 ```
+
+
+## Why Code? Why not use no-Code?
+
+There are good arguments in favour of using code to produce charts. There are of course also situations and needs where you may decide to not use code.
+
+Let us paraphrase the arguments from Data Viz expert [Claus Wilke](https://clauswilke.com/dataviz/preface.html) : 
+
+>Ideally, (charts) should come out of the pipeline ready to be sent to the printer, no manual post-processing needed.   
+  - First, the moment you manually edit a figure, your final figure becomes irreproducible. A third party cannot generate the exact same figure you did. This may be important for example in scientific and research disciplines certainly, but also when you are part of a larger team of collaborators and you have to swap roles and work products.   
+  - If you use say Adobe Illustrator to spruce up a chart, how does another person know *why* you made the changes? Code can show what *decisions* you make.  
+  - No chart is ever done-done one time.  And if you add a lot of manual post-processing to your figure-preparation pipeline, then you will be more reluctant to make any changes or redo your work. Code makes it easier to iterate, especially you may not be in a position to ignore reasonable requests for change made by collaborators or colleagues.   
+  - You may yourself forget what exactly you did to prepare a given figure, or you may not be able to generate a future figure on new data that exactly visually matches your earlier figure. For example then, what do you do if the underlying data changes and causes changes and you can't remember what you did?  
+  
+
+So, we will play it safe and do both: Code and No-Code. 
+
 
 ## What are Data Types??
 
@@ -192,3 +244,4 @@ What does that mean? We can think of simple visualizations as **combinations** o
 
 
 
+[^1]: The plural of rumpus is unlikely to be "rumpii". 
