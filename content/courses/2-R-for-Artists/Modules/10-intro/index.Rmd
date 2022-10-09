@@ -8,7 +8,7 @@ summary: "What is Data? Why do we visualize it?"
 output:
   html_document:
     toc_float: true
-    theme: united
+    theme: flatly
     toc: true
     code_folding: true
 
