@@ -146,133 +146,125 @@ E.g. Q. How many penguins? A. We need to count...rows?
 In the Table below, we have a rough mapping of interrogative pronouns to
 the kinds of variables in the data:
 
-+-----------+-----------+--------------+-----------+---------------------+
-| Pronoun   | Answer    | Variable /   | Example   | What Operations?    |
-|           |           | Scale        |           |                     |
-+===========+===========+==============+===========+=====================+
-| What,     | Name,     | Qualitative  | Name      | -   Count no. of    |
-| Who,      | Place,    | /            |           |     cases           |
-| Where,    | Animal,   | **Nominal**  |           |                     |
-| Whom,     | Thing     |              |           | -   Mode            |
-| Which     |           |              |           |                     |
-+-----------+-----------+--------------+-----------+---------------------+
-| How, What | A Manner  | Qualitative  | -   Socio | -   Median          |
-| Kind,     | / Method, | /            | -economic | -   Percentiles     |
-| What Sort | Type or   | **Ordinal**  |           |                     |
-|           | Attribute |              |    status |                     |
-|           | from a    |              |     ("low |                     |
-|           | list,     |              |           |                     |
-|           | with list |              |   income, |                     |
-|           | items in  |              |           |                     |
-|           | some "    |              |    middle |                     |
-|           | *         |              |           |                     |
-|           | *order**" |              |   income, |                     |
-|           | ( e.g.    |              |     high  |                     |
-|           | good,     |              |           |                     |
-|           | better,   |              |   income) |                     |
-|           | improved, |              |           |                     |
-|           | best..)   |              | -         |                     |
-|           |           |              | education |                     |
-|           |           |              |     level |                     |
-|           |           |              |           |                     |
-|           |           |              |     ("hig |                     |
-|           |           |              | hschool", |                     |
-|           |           |              |           |                     |
-|           |           |              |           |                     |
-|           |           |              |   "BS","M |                     |
-|           |           |              | S","PhD") |                     |
-|           |           |              |           |                     |
-|           |           |              | -         |                     |
-|           |           |              |    income |                     |
-|           |           |              |     level |                     |
-|           |           |              |           |                     |
-|           |           |              |    ("less |                     |
-|           |           |              |     than  |                     |
-|           |           |              |     50K", |                     |
-|           |           |              |           |                     |
-|           |           |              |           |                     |
-|           |           |              |   "50K-10 |                     |
-|           |           |              |           |                     |
-|           |           |              | 0K","over |                     |
-|           |           |              |           |                     |
-|           |           |              |           |                     |
-|           |           |              |    100K") |                     |
-|           |           |              |           |                     |
-|           |           |              | -   Sat   |                     |
-|           |           |              | isfaction |                     |
-|           |           |              |           |                     |
-|           |           |              |    rating |                     |
-|           |           |              |     ("    |                     |
-|           |           |              | extremely |                     |
-|           |           |              |           |                     |
-|           |           |              | dislike", |                     |
-|           |           |              |     "     |                     |
-|           |           |              |           |                     |
-|           |           |              | dislike", |                     |
-|           |           |              |     "     |                     |
-|           |           |              |           |                     |
-|           |           |              | neutral", |                     |
-|           |           |              |           |                     |
-|           |           |              |   "like", |                     |
-|           |           |              |     "     |                     |
-|           |           |              | extremely |                     |
-|           |           |              |           |                     |
-|           |           |              |   like"). |                     |
-+-----------+-----------+--------------+-----------+---------------------+
-| How Many  | Q         | Quantitative | -   pH    | -   Mean            |
-| / Much /  | uantities | /            | -   SAT   |                     |
-| Heavy?    | with      | **Interval** |     score | -   Standard        |
-| Few?      | Scale.    |              |           |     Deviation       |
-| Seldom?   |           |              | (200-800) |                     |
-| Often?    | **Diff    |              | -         |                     |
-| When?     | erences** |              |    Credit |                     |
-|           | are       |              |     score |                     |
-|           | me        |              |           |                     |
-|           | aningful, |              | (300-850) |                     |
-|           | but not   |              | -   Year  |                     |
-|           | products  |              |     of    |                     |
-|           | or ratios |              |           |                     |
-|           |           |              |  Starting |                     |
-|           |           |              |     in    |                     |
-|           |           |              |           |                     |
-|           |           |              |   College |                     |
-+-----------+-----------+--------------+-----------+---------------------+
-| How Many  | Qu        | Quantitative | -         | -   Correlation     |
-| / Much /  | antities, | / **Ratio**  |   Weight, | -   Coeff of        |
-| Heavy?    | with      |              |           |     Variation       |
-| Few?      | Scale and |              |           |                     |
-| Seldom?   | a Zero    |              |   Length, |                     |
-| Often?    | Value.    |              |           |                     |
-| When?     |           |              |           |                     |
-|           | Di        |              |    Height |                     |
-|           | fferences |              |           |                     |
-|           | and       |              | -   Te    |                     |
-|           | Ratios    |              | mperature |                     |
-|           | /Products |              |     in    |                     |
-|           | are       |              |           |                     |
-|           | me        |              |    Kelvin |                     |
-|           | aningful. |              |           |                     |
-|           | (e.g      |              | -         |                     |
-|           | Weight )  |              |    Enzyme |                     |
-|           |           |              |           |                     |
-|           |           |              | activity, |                     |
-|           |           |              |     dose  |                     |
-|           |           |              |           |                     |
-|           |           |              |   amount, |                     |
-|           |           |              |           |                     |
-|           |           |              |  reaction |                     |
-|           |           |              |     rate, |                     |
-|           |           |              |     flow  |                     |
-|           |           |              |     rate, |                     |
-|           |           |              |     conc  |                     |
-|           |           |              | entration |                     |
-|           |           |              |           |                     |
-|           |           |              | -   Pulse |                     |
-|           |           |              |           |                     |
-|           |           |              | -         |                     |
-|           |           |              |  Survival |                     |
-|           |           |              |     time  |                     |
-+-----------+-----------+--------------+-----------+---------------------+
++------------+------------+------------+------------+------------+
+| Pronoun    | Answer     | Variable / | Example    | What       |
+|            |            | Scale      |            | O          |
+|            |            |            |            | perations? |
++============+============+============+============+============+
+| What, Who, | Name,      | Q          | Name       | -   Count  |
+| Where,     | Place,     | ualitative |            |     no. of |
+| Whom,      | Animal,    | /          |            |     cases  |
+| Which      | Thing      | N          |            |            |
+|            |            | ominal\*\* |            | -   Mode   |
++------------+------------+------------+------------+------------+
+| How, What  | A Manner / | Q          | -          | -   Median |
+| Kind, What | Method,    | ualitative | Socioecono | -   P      |
+| Sort       | Type or    | /          |            | ercentiles |
+|            | Attribute  | O          | mic-status |            |
+|            | from a     | rdinal\*\* |     ("l    |            |
+|            | list, with |            |            |            |
+|            | list items |            | ow-income, |            |
+|            | in some "  |            |     midd   |            |
+|            | order\*\*" |            |            |            |
+|            | ( e.g.     |            | le-income, |            |
+|            | good,      |            |     hi     |            |
+|            | better,    |            |            |            |
+|            | improved,  |            | gh-income) |            |
+|            | best..)    |            |            |            |
+|            |            |            | -          |            |
+|            |            |            |  education |            |
+|            |            |            |     level  |            |
+|            |            |            |            |            |
+|            |            |            |     ("hi   |            |
+|            |            |            |            |            |
+|            |            |            | ghschool", |            |
+|            |            |            |            |            |
+|            |            |            | "BS","MS", |            |
+|            |            |            | "PhD")     |            |
+|            |            |            |            |            |
+|            |            |            | -   income |            |
+|            |            |            |     level  |            |
+|            |            |            |            |            |
+|            |            |            |     ("less |            |
+|            |            |            |     than   |            |
+|            |            |            |     50K",  |            |
+|            |            |            |            |            |
+|            |            |            |     "      |            |
+|            |            |            |            |            |
+|            |            |            | 50K-100K", |            |
+|            |            |            |     "      |            |
+|            |            |            |            |            |
+|            |            |            | over100K") |            |
+|            |            |            |            |            |
+|            |            |            | -   Sa     |            |
+|            |            |            |            |            |
+|            |            |            | tisfaction |            |
+|            |            |            |     rating |            |
+|            |            |            |     (      |            |
+|            |            |            |            |            |
+|            |            |            | "extremely |            |
+|            |            |            |            |            |
+|            |            |            | dislike",  |            |
+|            |            |            |            |            |
+|            |            |            | "dislike", |            |
+|            |            |            |            |            |
+|            |            |            | "neutral", |            |
+|            |            |            |            |            |
+|            |            |            | "like",    |            |
+|            |            |            |            |            |
+|            |            |            | "extremely |            |
+|            |            |            |            |            |
+|            |            |            | like").    |            |
++------------+------------+------------+------------+------------+
+| How Many / | Quantities | Qu         | -   pH     | -   Mean   |
+| Much /     | with       | antitative | -   SAT    |            |
+| Heavy?     | Scale.     | /          |     scor   | -          |
+| Few?       |            | **         |            |   Standard |
+| Seldom?    | **Dif      | Interval** | e(200-800) |            |
+| Often?     | ferences** |            | -   Credit |  Deviation |
+| When?      | are m      |            |     scor   |            |
+|            | eaningful, |            |            |            |
+|            | but not    |            | e(300-850) |            |
+|            | products   |            | -   Year   |            |
+|            | or ratios  |            |     of     |            |
+|            |            |            |            |            |
+|            |            |            | Starting   |            |
+|            |            |            | in         |            |
+|            |            |            |            |            |
+|            |            |            | College    |            |
++------------+------------+------------+------------+------------+
+| How Many / | Q          | Qu         | -          | -   C      |
+| Much /     | uantities, | antitative |    Weight, | orrelation |
+| Heavy?     | with Scale | /          |            | -   Coeff  |
+| Few?       | and a Zero | **Ratio**  | -          |     of     |
+| Seldom?    | Value.     |            |    Length, |            |
+| Often?     |            |            |            |  Variation |
+| When?      | D          |            | -   Height |            |
+|            | ifferences |            |            |            |
+|            | and Ratios |            | -   T      |            |
+|            | /Products  |            |            |            |
+|            | are m      |            | emperature |            |
+|            | eaningful. |            |     in     |            |
+|            | (e.g       |            |     Kelvin |            |
+|            | Weight )   |            |            |            |
+|            |            |            | -   Enzyme |            |
+|            |            |            |            |            |
+|            |            |            | activity,  |            |
+|            |            |            | dose       |            |
+|            |            |            |            |            |
+|            |            |            | amount,    |            |
+|            |            |            |            |            |
+|            |            |            | reaction   |            |
+|            |            |            | rate, flow |            |
+|            |            |            | rate, con  |            |
+|            |            |            | centration |            |
+|            |            |            |            |            |
+|            |            |            | -   Pulse  |            |
+|            |            |            |            |            |
+|            |            |            | -          |            |
+|            |            |            |   Survival |            |
+|            |            |            |     time   |            |
++------------+------------+------------+------------+------------+
 
 As you go from Qualitative to Quantitative data types in the table, I
 hope you can detect a movement from fuzzy groups/categories to more and
@@ -286,8 +278,13 @@ Stevens](https://stats.idre.ucla.edu/other/mult-pkg/whatstat/what-is-the-differe
 > added all those operations preceding it.
 
 Do think about this as you work with data.
+![](static/images/Type-of-Variables.png")
 
-![](images/Type-of-Variable.png)
+```{r echo=FALSE, eval = FALSE, out.width= "450px", out.height="450px",fig.align='center'}
+
+knitr::include_graphics(here::here("static", "images", "Type-of-Variables.png"))
+
+```
 
 Do take a look at these references:
 
