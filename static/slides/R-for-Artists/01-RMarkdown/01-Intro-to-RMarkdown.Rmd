@@ -78,7 +78,7 @@ Click on the File -> RMarkdown
 
 ```{r out.height = "400px", out.width= "850px", echo=FALSE}
 
-knitr::include_graphics(here("static", "img", "New-Rmd.png"))
+knitr::include_graphics(here("static", "images", "New-Rmd.png"))
 
 ```
 
@@ -101,7 +101,7 @@ SAVE.
 
 ```{r echo=FALSE, out.width= "500px", out.height="450px", fig.align='center'}
 
-knitr::include_graphics(here("static", "img", "YAML.png"))
+knitr::include_graphics(here("static", "images", "YAML.png"))
 
 ```
 
@@ -168,7 +168,7 @@ Changes your plain text to:
 
 ```{r echo=FALSE, out.width= "450px", out.height="450px", fig.align='center'}
 
-knitr::include_graphics(here("static", "img", "17.jpg"))
+knitr::include_graphics(here("static", "images", "17.jpg"))
                         
 ```
 
