@@ -10,7 +10,7 @@ output:
     toc_depth: 2
     number_sections: TRUE
     code_folding: hide
-    code_download: TRUE
+    code_download: FALSE
 abstract: Part of the `R for Artists and Designers` at the School of Foundation Studies, Srishti Manipal Institute of Art, Design, and Technology, Bangalore.
 ---
 
@@ -69,35 +69,14 @@ library(tidyverse)
 # Becoming the `lorem ipsum` dataset in R!!
 library(palmerpenguins)
 
-# A collection of historical datasets
-library(HistData)
-
 # For pedagogical reasons
 library(flair)
 ```
 
 
-
-# A Teaser from John Snow
-
-```{r teaser}
-SnowMap(polygons = TRUE)
-# Write some comments on this code and what it seems to be creating
-# Are there "layers" in this visualization?
-
-
-
-
-
-
-
-#
-```
-
-
 # Tidy Data
 
-"Tidy Data" is an important way of thinking about what data typically look like in R. Let's fetch a figure from the web to show the (preferred) structure of data in R. (The syntax to bring in a web-figure is `![caption](url)`)
+"Tidy Data" is an important way of thinking about what data typically look like in R. 
 
 ![Tidy Data](https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/tidydata_1.jpg)
 The three features described in the figure above define the nature of tidy data:
@@ -114,21 +93,20 @@ Data are imagined to be resulting from an **experiment**. Each *variable* repres
 **Kinds of Variable** are defined by the kind of *questions* they answer to:
 
 1.  What/Who/Where? -> Some kind of Name. **Categorical** variable
-2.  What Kind? How? -> Some kind of "Type".  **Factor** variable
+2.  What Kind? How? -> Some kind of "Type".  **Factor** variable ( Categorical with)
 3.  How Many? How large? -> Some kind of Quantity. **Numerical** variable. 
 Most Figures in R are computed with variables, and therefore, with **columns**.
 
 # Interrogations and Graphs
 
-Creating graphs from data is an act of asking questions and viewing answers in a geometric way. 
-Let us write some simple English descriptions of measures and visuals and see what commands they use in R.
+Creating graphs from data is an act of asking questions and viewing answers in a geometric way. Let us write some simple English descriptions of measures and visuals and see what commands they use in R.
 
 # Components of the layered grammar of graphics
 
 **Layers** are used to create the objects on a plot. They are defined by five basic parts:
 
 1.  Data (What dataset/spreadsheet am I using?)
-2.  Mapping (What does each column do in my graph?)
+2.  Mapping (What does each column do in my graph?) ( Metaphors!)
 3.  Statistical transformation (stat) (Do I have count something first?)
 4.  Geometric object (geom) (What shape, colour, size...do I want?)
 5.  Position adjustment (position) (Where do I want it on the graph?)
@@ -177,7 +155,7 @@ Remember **variable** = **column**.
 
 So if we were graphing information from `penguins`, we might map a penguin's `flipper_length_mm` **column** to the $x$ position, and the `body_mass_g` **column** to the $y$ position.
 
-### Mapping Example-1 {.tabset .tabset-pills}
+### Mapping Example-1: Histogram {.tabset .tabset-pills}
 
 We can try another example of aesthetic mapping with the same dataset:
 
@@ -201,7 +179,6 @@ ggplot(penguins) +
 
 
 ```{r, echo=FALSE}
-
 decorate("mapping-1b") %>% 
   flair_lines(4:5) %>% 
   knit_print.with_flair()
@@ -228,7 +205,8 @@ decorate("mapping-1c") %>%
 
 ```
 
-### Mapping Example-2 {.tabset .tabset-pills}
+
+### Mapping Example-2: Boxplot {.tabset .tabset-pills}
 
 We can try another example of aesthetic mapping with the same dataset:
 
@@ -245,9 +223,10 @@ ggplot(data = penguins)
 ```{r mapping-2b,include=FALSE}
 ggplot(penguins) + 
 
-# Plot geom = histogram. So we need a quantity on the x
-  geom_histogram(
+# Plot geom = boxplot. So we need a quantity on the x
+  geom_boxplot(
     aes(x = body_mass_g))
+
 ```
 
 
@@ -256,6 +235,7 @@ ggplot(penguins) +
 decorate("mapping-2b") %>% 
   flair_lines(4:5) %>% 
   knit_print.with_flair()
+
 ```
 
 
@@ -263,10 +243,10 @@ decorate("mapping-2b") %>%
 ```{r mapping-2c,include = FALSE}
 ggplot(penguins) +
 
-# Plot geom = histogram. So we need a quantity on the x
-  geom_histogram(
+# Plot geom = boxplot. So we need a quantity on the x
+  geom_boxplot(
     aes(x = body_mass_g,
-        fill = island)    # color aesthetic = another variable
+        fill = island)    # fill aesthetic = another variable
     )
 
 ```
@@ -279,7 +259,7 @@ decorate("mapping-2c") %>%
 
 ```
 
-### Mapping Example-3 {.tabset .tabset-pills}
+### Mapping Example-3:Distribution {.tabset .tabset-pills}
 
 We can try another example of aesthetic mapping with the same dataset:
 
@@ -297,7 +277,7 @@ ggplot(data = penguins)
 ggplot(penguins) + 
 
 # Plot geom = histogram. So we need a quantity on the x
-  geom_histogram(
+  geom_density(
     aes(x = body_mass_g))
 ```
 
@@ -315,7 +295,7 @@ decorate("mapping-3b") %>%
 ggplot(penguins) +
 
 # Plot geom = histogram. So we need a quantity on the x
-  geom_histogram(
+  geom_density(
     aes(x = body_mass_g,
         fill = island)    # color aesthetic = another variable
     )
@@ -384,60 +364,6 @@ decorate("mapping-4c") %>%
 ```
 
 
-## Geometric objects {.tabset .tabset-pills}
-
-**Geometric objects** (*geoms*) control the type of plot you create. Geoms are classified by their dimensionality:
-
--   0 dimensions - point, text
--   1 dimension - path, line
--   2 dimensions - polygon, interval
-
-Each geom can only display certain **aesthetics** or visual attributes of the geom. For example, a point geom has position, color, shape, and size aesthetics.
-
-We can also stack up geoms on top of one another to add layers to the graph.
-
-### Plot1
-```{r other_geoms-1}
-ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
-  geom_line()
-```
-
-### Plot2
-```{r other-geoms-2}
-ggplot(data = penguins) + 
-  geom_line(aes(x = bill_length_mm, 
-                     y = body_mass_g))
-```
-
-### Plot3
-```{r other-geoms-3}
-ggplot(data = penguins) + 
-  geom_point(aes(x = bill_length_mm, 
-                     y = body_mass_g,
-                 color = island, 
-                 shape = species)) + 
-  
-  ggtitle("A point geom with position and color and shape aesthetics")
-```
-
-
-```{r geom_bar-1}
-ggplot(data = penguins, 
-       aes(x = species)) + # x position => ?
-  # No need to type "mapping"...
-  geom_bar() + # Where does the height come from?
-  ggtitle("A bar geom with position and height aesthetics")
-```
-
-```{r geom_bar-2}
-ggplot(data = penguins, aes(x = species)) +
-  geom_bar() +
-  ggtitle("A bar geom with position and height aesthetics")
-```
-
--   Position determines the starting location (origin) of each bar
--   Height determines how tall to draw the bar. Here the height is based on the number of observations in the dataset for each possible number of cylinders.
-
 ## Position adjustment {.tabset .tabset-pills}
 
 Sometimes with dense data we need to adjust the position of elements on the plot, otherwise data points might obscure one another. Bar plots frequently **stack** or **dodge** the bars to avoid overlap:
@@ -454,17 +380,6 @@ count(x = penguins, species, island) %>%
   ggtitle(label = "A dodged bar chart")
 ```
 
-```{r}
-penguins %>%
-  ggplot(mapping = aes(x = species, fill = island)) +
-  geom_bar() +
-  ggtitle(label = "A stacked bar chart")
-
-penguins %>%
-  ggplot(mapping = aes(x = species, fill = island)) +
-  geom_bar(position = "dodge") +
-  ggtitle(label = "A dodged bar chart")
-```
 
 Sometimes scatterplots with few unique $x$ and $y$ values are **jittered** (random noise is added) to reduce overplotting.
 
@@ -545,7 +460,8 @@ ggplot(data = penguins,
   geom_point() 
 
 ```
- The scale can be changed to use a different color palette:
+
+The scale can be changed to use a different color palette:
 
 ```{r scale-color-palette}
 ggplot(data = penguins, 
@@ -556,7 +472,7 @@ ggplot(data = penguins,
   scale_color_brewer(palette = "Dark2",direction = -1)
 ```
 
-Now we are using a different palette, but the scale is still consistent: all Adelie penguins utilize the same color, whereas Chinstrap use a new color **but each Adelie still uses the same, consistent color**.
+Now we are using a different palette, but the scale is still consistent: all Adelie penguins utilize the same color, whereas Chinstrap use a new color, and so do all the Gentoos. 
 
 ## Coordinate system {.tabset .tabset-pills}
 
@@ -571,10 +487,11 @@ p +
   ggtitle(label = "Cartesian coordinate system")
 
 
-ggplot(penguins, aes(flipper_length_mm, body_mass_g)) +
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
   geom_point() + 
   coord_polar()
 ```
+
 
 This system requires a fixed and equal spacing between values on the axes. 
 That is, the graph draws the same distance between 1 and 2 as it does between 5 and 6. The graph could be drawn using a [**semi-log coordinate system**](https://en.wikipedia.org/wiki/Semi-log_plot) which logarithmically compresses the distance on an axis:
