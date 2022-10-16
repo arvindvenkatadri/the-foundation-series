@@ -514,7 +514,7 @@ popup = paste("Name: ", metro$name, "<br>",
 
 ```
 
-We can also try downloading an `sf` data frame with POINT geometry from say OSM data<https://osm.> Let us get hold of restaurants data in Malleswaram, Bangalore from OSM data:
+We can also try downloading an `sf` data frame with POINT geometry from say OSM data <https://osm.> Let us get hold of restaurants data in Malleswaram, Bangalore from OSM data:
 
 ```{r}
 

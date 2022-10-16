@@ -697,7 +697,7 @@ ga_community %>% activate(nodes) %>% as_tibble()
 Now let us plot the Communities, and colour the nodes based on which
 Community they belong with:
 
-```{r Plot-Community}
+```{r Plot-Community-1}
 
 # setting theme_graph 
 set_graph_style()
@@ -715,6 +715,26 @@ ga_community %>%
   scale_colour_brewer(palette = "Accent")
 
 ```
+
+We can also place *names* or *labels* in place of the shapes, for each node:
+
+
+```{r Plot-Community-2}
+
+# setting theme_graph 
+set_graph_style()
+
+
+ga_community %>% 
+  ggraph(layout = "graphopt") + 
+  geom_edge_link0() + 
+
+    geom_node_label(aes(label = name, fill = community), 
+                    size = 3, repel = TRUE) +
+  scale_fill_brewer(palette = "Accent")
+
+```
+
 
 ## Interactive Graphs with `visNetwork`
 
