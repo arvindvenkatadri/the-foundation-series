@@ -60,7 +60,7 @@ What information do you think went into making it?
 .pull-right[
 ```{r, echo=FALSE, out.height="450px", out.width="900px"}
 
-knitr::include_graphics(here("static", "img", "piece-of-map.png"))
+knitr::include_graphics(here("static", "images", "piece-of-map.png"))
 
 ```
 
@@ -140,7 +140,7 @@ Features have a **geometry** describing **where** on Earth the feature is locate
 
 ```{r,echo=FALSE, out.height="450px", out.width="900px"}
 
-knitr::include_graphics(here("static", "img", "Holmes-Tree.jpg"))
+knitr::include_graphics(here("static", "images", "Holmes-Tree.jpg"))
 
 ```
 
@@ -206,7 +206,7 @@ knitr::include_graphics("https://raw.githubusercontent.com/allisonhorst/stats-il
 
 ```{r,echo=FALSE, out.height="450px", out.width="900px"}
 
-knitr::include_graphics(here("static", "img", "sf-classes.png"))
+knitr::include_graphics(here("static", "images", "sf-classes.png"))
 
 ```
 
@@ -590,7 +590,7 @@ A **Projection** is a *shadow* or **Image**...
 
 ```{r,echo=FALSE, out.height="350px", out.width="450px"}
 
-knitr::include_graphics(here("static", "img", "2book4.jpg"))
+knitr::include_graphics(here("static", "images", "2book4.jpg"))
 
 ```
 
@@ -600,7 +600,7 @@ We see Maps Through The Looking Glass...
 
 ```{r,echo=FALSE, out.height="350px", out.width="450px"}
 
-knitr::include_graphics(here("static", "img", "2book18.jpg"))
+knitr::include_graphics(here("static", "images", "2book18.jpg"))
 
 ```
 
@@ -615,7 +615,7 @@ No Two Map Projections are Alike!
 
 ```{r,echo=FALSE, out.height="350px", out.width="450px"}
 
-knitr::include_graphics(here("static", "img", "orange-peel.jpg"))
+knitr::include_graphics(here("static", "images", "orange-peel.jpg"))
 
 ```
 
@@ -636,7 +636,7 @@ Regular Cylindrical Projection
 
 ```{r, echo=FALSE, out.height="350px", out.width="250px"}
 
-knitr::include_graphics(here("static", "img", "reg_cyl_proj.png"))
+knitr::include_graphics(here("static", "images", "reg_cyl_proj.png"))
                         
 ```
 
@@ -647,7 +647,7 @@ Oblique Cylindrical Projection
 
 ```{r, echo=FALSE, out.height="350px", out.width="350px"}
 
-knitr::include_graphics(here("static", "img", "oblq_cyl_proj.png"))
+knitr::include_graphics(here("static", "images", "oblq_cyl_proj.png"))
 
 ```
 ]
@@ -661,7 +661,7 @@ Polar Azimuthal Projection
 
 ```{r, echo=FALSE, out.height="350px", out.width="350px"}
 
-knitr::include_graphics(here("static", "img", "polar_azi_proj.png"))
+knitr::include_graphics(here("static", "images", "polar_azi_proj.png"))
 
 ```
 ]
@@ -671,7 +671,7 @@ Oblique Azimuthal Projection
 
 ```{r, echo=FALSE, out.height="350px", out.width="350px"}
 
-knitr::include_graphics(here("static", "img", "oblq_azim_proj.png"))
+knitr::include_graphics(here("static", "images", "oblq_azim_proj.png"))
                         
 ```
 ]
