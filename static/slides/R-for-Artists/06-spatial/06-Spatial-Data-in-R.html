@@ -58,25 +58,6 @@ What information do you think went into making it?
 &lt;img src="../../../images/piece-of-map.png" width="900px" height="450px" style="display: block; margin: auto;" /&gt;
 
 ]
----
-
-# Let's get started
-
-
-- To make maps, we need data organized in a specific way
-
-- Let us look at the pieces that go into making spatial data
-
-- Our focus will be the r package `sf` ( "simple features")
-
----
-class: inverse, center, middle
-## Data Structure in `sf`
-
----
-&lt;img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/sf.png" width="750px" height="450px" style="display: block; margin: auto;" /&gt;
-
-The picture shows a familiar looking `data-frame` with the far-right column containing geometries, or shapes....hmmm.
 
 ---
 
@@ -97,7 +78,7 @@ The picture shows a familiar looking `data-frame` with the far-right column cont
 
 .pull-right[
 
-&lt;img src="06-Spatial-Data-in-R_files/figure-html/unnamed-chunk-3-1.png" width="900px" height="450px" style="display: block; margin: auto;" /&gt;
+&lt;img src="06-Spatial-Data-in-R_files/figure-html/unnamed-chunk-2-1.png" width="900px" height="450px" style="display: block; margin: auto;" /&gt;
 
 ]
 ---
@@ -157,6 +138,7 @@ Features have a **geometry** describing **where** on Earth the feature is locate
 &lt;img src="https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/sf.png" width="900px" height="450px" style="display: block; margin: auto;" /&gt;
 ]
 ---
+
 
 # Kinds of Geospatial Data
 
@@ -275,8 +257,8 @@ crs_india &lt;- st_crs(india)
 
 ```
 *'data.frame':	5 obs. of  2 variables:
-* $ lon: num  75.8 73.5 80 78.1 76.2
-* $ lat: num  27.6 21.3 29.6 15.2 15.8
+* $ lon: num  74.5 76.7 77.8 74.2 76.6
+* $ lat: num  35.4 26.8 25.6 20.3 12.1
 ```
 ]
 
@@ -312,13 +294,13 @@ points_sf &lt;- st_as_sf(points,
 
 ```
 'data.frame':	5 obs. of  2 variables:
-* $ lon: num  76.2 79.4 76.5 75.5 79
-* $ lat: num  18.4 23.4 25.7 14.9 27.3
+* $ lon: num  74.1 77.3 75.8 75.8 80.3
+* $ lat: num  30.4 24.8 22.6 20.8 20.8
 ```
 
 ```
 Classes 'sf' and 'data.frame':	5 obs. of  1 variable:
-* $ geometry:sfc_POINT of length 5; first list element:  'XY' num  76.2 18.4
+* $ geometry:sfc_POINT of length 5; first list element:  'XY' num  74.1 30.4
 * - attr(*, "sf_column")= chr "geometry"
  - attr(*, "agr")= Factor w/ 3 levels "constant","aggregate",..: 
   ..- attr(*, "names")= chr(0) 

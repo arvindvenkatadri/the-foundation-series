@@ -65,29 +65,6 @@ knitr::include_graphics(here("static", "images", "piece-of-map.png"))
 ```
 
 ]
----
-
-# Let's get started
-
-
-- To make maps, we need data organized in a specific way
-
-- Let us look at the pieces that go into making spatial data
-
-- Our focus will be the r package `sf` ( "simple features")
-
----
-class: inverse, center, middle
-## Data Structure in `sf`
-
----
-```{r, echo = FALSE, out.height="450px", out.width="750px"}
-
-knitr::include_graphics("https://raw.githubusercontent.com/allisonhorst/stats-illustrations/master/rstats-artwork/sf.png")
-
-```
-
-The picture shows a familiar looking `data-frame` with the far-right column containing geometries, or shapes....hmmm.
 
 ---
 
@@ -188,6 +165,7 @@ knitr::include_graphics("https://raw.githubusercontent.com/allisonhorst/stats-il
 ```
 ]
 ---
+
 
 # Kinds of Geospatial Data
 
