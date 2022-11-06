@@ -44,6 +44,34 @@ experience:
         * Collaborations with visiting Artists/Creators on outbound student courses
         * Design of Exams, Evaluations, and Grading Systems
  
+  - title: Co-Founder
+    company: Chipper Sage Education, Bangalore, India
+    company_url: 'https://www.thechippersage.com/'
+    location: Bangalore, India
+    date_start: '2013-06-14'
+    date_end: '2014-04-15'
+    description: |2-
+        
+        * Edutech startup incubated at NSRCEL, IIM-Bangalore, India
+        * Pedagogy, Tech
+        * Marketing to Affordable Private Schools
+        * Partnerships
+  
+  - title: Program Manager
+    company: Akshara Foundation, Bangalore, India
+    company_url: 'https://akshara.org.in'
+    location: Bangalore, India
+    date_start: '2007-01-02'
+    date_end: '2013-06-13'
+    description: |2-
+        
+        * Building and Running Libraries in 1400+ Government Primary Schools
+        * Processes for Library Setup; Staffing and Training; Provisioning; Operations; Assessment
+        * Financial Management; Donor Management
+        * Interfacing with Government Department of Public Instruction
+        * Volunteer Programmes and Community Outreach
+  
+  
   - title: Systems Design Manager
     company: Texas Instruments, India
     company_url: 'https://www.ti.com'
@@ -85,19 +113,6 @@ experience:
         * Synthesizer Design ( 2 GHz band)
         * Systems Testing and Qual
         
-  - title: Program Manager
-    company: Akshara Foundation, Bangalore, India
-    company_url: 'https://akshara.org.in'
-    location: Bangalore, India
-    date_start: '2007-01-02'
-    date_end: '2013-06-13'
-    description: |2-
-        
-        * Building and Running Libraries in 1400+ Government Primary Schools
-        * Processes for Library Setup; Staffing and Training; Provisioning; Operations; Assessment
-        * Financial Management; Donor Management
-        * Interfacing with Government Department of Public Instruction
-        * Volunteer Programmes and Community Outreach
 
   - title: Scientist / Engineer "SD"
     company: ISRO Satellite Centre, Bangalore, India
