@@ -26,6 +26,23 @@ date_format: Jan 2006
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 
 experience:
+
+  - title: Faculty Member
+    company: Srishti Manipal Institute of Art, Design, and Technology
+    company_url: 'https://srishtimanipalinstitute.in/'
+    location: Bangalore, India
+    date_start: '2014-05-02'
+    date_end: '2022-10-31'
+    description: |2-
+        
+        * Teaching courses in the School of Foundation Studies
+        * TRIZ
+        * Complexity Science and Math Models in Design
+        * Data Viz and ML in R and other FOSS software
+        * Literature, Reading and Writing
+        * Guiding Students on Final Year Graduation Projects
+        * Collaborations with visiting Artists/Creators on outbound student courses
+        * Design of Exams, Evaluations, and Grading Systems
  
   - title: Systems Design Manager
     company: Texas Instruments, India
@@ -34,7 +51,6 @@ experience:
     date_start: '2002-06-16'
     date_end: '2007-01-02'
     description: |2-
-        Responsibilities include:
         
         * Managed a Team of Algorithm Designers for Modem Designs
         * GPS, Wi-Fi, FM and, Advanced Radio Architectures
@@ -48,11 +64,11 @@ experience:
     date_start: '1998-11-23'
     date_end: '2002-06-15'
     description: |2-
-        Responsibilities include:
         
         * Design Consultancy on Electronics Hardware and Software Designs
         * Systems Modelling 
         * Analog Design and RF Design
+        * ATM / IP / SDH / PDH / Wi-Fi
         * Pre-Sales
     
   - title: Senior Program Manager
@@ -62,11 +78,11 @@ experience:
     date_start: '1992-06-15'
     date_end: '1998-11-05'
     description: |2-
-        Responsibilities include:
         
         * Managed a Modem Design Laboratory 
         * Design of Digital Microwave Radios ( PDH / SDH )
         * Led and managed Systems Design for new systems ( WCDMA )
+        * Synthesizer Design ( 2 GHz band)
         * Systems Testing and Qual
         
   - title: Program Manager
@@ -76,7 +92,6 @@ experience:
     date_start: '2007-01-02'
     date_end: '2013-06-13'
     description: |2-
-        Responsibilities include:
         
         * Building and Running Libraries in 1400+ Government Primary Schools
         * Processes for Library Setup; Staffing and Training; Provisioning; Operations; Assessment
@@ -91,7 +106,6 @@ experience:
     date_start: '1987-06-15'
     date_end: '1992-06-13'
     description: |2-
-        Responsibilities include:
         
         * Spread Spectrum Modem Design
         * GPS Simulator Design
