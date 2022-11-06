@@ -20,9 +20,9 @@ interests:
 - Music and Sound
 - Reading and Literature
 organizations:
-- name: Srishti Manipal Institute of Art, Design, and Technology
-  url: https://srishtimanipalinstitute.in
-role: Faculty Member, School of Foundation Studies, SMI, MAHE
+- name: Dayanand Sagar University
+  url: https://www.dsu.edu.in/
+role: Adjunct Professor
 social:
 - icon: envelope
   icon_pack: fas
@@ -42,4 +42,4 @@ social:
 superuser: yes
 ---
 
-Teaching Complexity Science, Problem Solving using TRIZ, Reading Short Stories in English, and the use of R for Data Visualization, Statistical Inference, and Machine Learning.
+Teaching Complexity Science, Problem Solving using TRIZ, Reading Short Stories in English, and the use of R and FOSS Software for Data Visualization, Statistical Inference, and Machine Learning.
