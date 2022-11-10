@@ -1,0 +1,51 @@
+---
+title: "\U0001F578 Additional Reference Material"
+author: "Arvind Venkatadri"
+weight: 120
+subtitle: "Miscellaneous References"
+date: "`r Sys.Date()`"
+summary: 
+tags:
+- References
+- Project Ideas
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+external_link: ""
+links:
+# - icon: linkedin
+#   icon_pack: fab
+#   name: 
+#   url: https://linkedin.com/arvindvenkatadri
+# - icon: twitter
+#   icon_pack: fab
+#   name: 
+#   url: https://twitter.com/arvind_v
+slides: ""
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+
+```
+
+## What other free tools are there on the web?
+
+### Palladio
+
+<https://hdlab.stanford.edu/palladio/>
+
+
+### Infogram
+<https://infogram.com/>
+
+
+### Visme
+<https://www.visme.co/chart-maker/>
+
+
