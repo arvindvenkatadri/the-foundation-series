@@ -1,0 +1,77 @@
+---
+title: "\U0001F5FA The Map is Not the Territory"
+subtitle: "Maps"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+weight : 70
+summary: "Geospatial Data and how it varies based on location"
+tags:
+- Maps
+- Cartograms
+- Chloropleth Maps
+
+featured: no
+image:
+  placement: 2
+  caption: 
+  focal_point: ""
+  preview_only: true
+projects: []
+output:
+  html_document:
+    toc_float: true
+    theme: flatly
+    toc: true
+    code_folding: true
+links:
+# - icon: flask
+#   icon_pack: fas
+#   name: lab
+#   url: https://r-for-artists.netlify.app/labs/06-Grammar-of-Maps.html
+#   
+# - icon: magic
+#   icon_pack: fas
+#   name: Introduction Slides
+#   url: https://r-for-artists.netlify.app/slides/06-Spatial-Data-in-R.html
+---
+
+
+
+```{r setup, include=FALSE}
+library(blogdown)
+library(tidyverse)
+```
+
+
+# Introduction
+
+
+First; let us watch a short, noisy video on maps:
+
+Maps That Will Change The Way You See The World:(https://www.youtube.com/watch?v=YH2sAbXv7p4)
+
+` r blogdown::shortcode("youtube", "YH2sAbXv7p4")`
+
+
+## An Example
+
+Here is a UFO Sighting dataset, containing location and text descriptions. <https://github.com/planetsig/ufo-reports/blob/master/csv-data/ufo-scrubbed-geocoded-time-standardized.csv>
+
+## What is the Story?
+
+
+
+## Your Turn
+
+### 1. Animal and Bird Migration
+
+1. Head off to [movebank.org](https://www.movebank.org/cms/movebank-main)
+2. Look at a few species of interest and choose one.
+3. Download the data ( **ESRI Shapefile**)
+4. Import that into  R using `sf_read()`
+5. See how you can plot locations, tracks and colour by species....based on the data you download. 
+
+For tutorial info: <https://movebankworkshopraleighnc.netlify.app/>
+
+###
+

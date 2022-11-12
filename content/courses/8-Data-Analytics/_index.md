@@ -25,7 +25,7 @@ tags:
 
 This Course takes Business Practitioners on a journey of using data to derive insights, make predictions, and decide on plans of action that can be communicated and actualized in a Business context.
 
-> "Business analytics, or simply analytics, is the use of data, information technology, statistical analysis, quantitative methods, and mathematical or computer-based models to help managers gain improved insight about their business operations and make better, fact-based decisions. Business analytics is "a process of transforming data into actions through analysis and insights in the context of organizational decision making and problem solving."<div style="text-align: right"> - Libertore and Luo, 2010 </div>
+> "Business analytics, or simply analytics, is the use of data, information technology, statistical analysis, quantitative methods, and mathematical or computer-based models to help managers gain improved insight about their business operations and make better, fact-based decisions. Business analytics is"a process of transforming data into actions through analysis and insights in the context of organizational decision making and problem solving."<div style="text-align: right"> - Libertore and Luo, 2010 </div>
 
 <br> The Course starts with **Descriptive Analytics**: Datasets from various domains of Business enterprise and activity are introduced. The datasets are motivated from the point of view of the types of information they contain: students will relate the Data Variables (Qualitative and Quantitative) to various types of Data/Information Visualizations.
 
@@ -42,7 +42,7 @@ The Course will create a full **Business Analytics Workflow** that embeds Data G
 ## What you will learn
 
 -   **Data Basics**: What does data look like and why should we care?
--   Rapidly and intutitively creating **Graphs and Data Visualizations** to explore data for insights
+-   Rapidly and intuitively creating **Graphs and Data Visualizations** to explore data for insights
 -   Use **Statistical Tests, Models, and Simulations** and to answer Business Questions
 -   Using **ML algorithms** such Regression, Classification, and Clustering to develop Business Insights
 -   **Make Decisions** based on Data and dealing with Uncertainty and Risk
