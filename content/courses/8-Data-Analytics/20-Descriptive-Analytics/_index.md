@@ -15,4 +15,6 @@ image:
 
 ## Introduction
 
+We will explore visualizing of different kinds of data in this set of modules. 
+
 

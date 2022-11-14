@@ -1,8 +1,8 @@
 ---
-title: "\U0001F5FA The Map is Not the Territory"
+title: "\U0001F5FA Maps"
 subtitle: "Maps"
 author: "Arvind Venkatadri"
-date: "2022-07-14"
+date: "2022-11-14"
 weight : 70
 summary: "Geospatial Data and how it varies based on location"
 tags:
@@ -13,7 +13,7 @@ tags:
 featured: no
 image:
   placement: 2
-  caption: 'Image credit: [**Alice In Wonderland dot Net**](https://www.alice-in-wonderland.net/)'
+  caption: 
   focal_point: ""
   preview_only: true
 projects: []
@@ -37,24 +37,22 @@ links:
 
 
 
-<p><img src="featured.jpg" /></p>
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>First; let us watch a short, noisy video on maps:</p>
 <p>Maps That Will Change The Way You See The World:(<a href="https://www.youtube.com/watch?v=YH2sAbXv7p4" class="uri">https://www.youtube.com/watch?v=YH2sAbXv7p4</a>)</p>
 <p><code>r blogdown::shortcode("youtube", "YH2sAbXv7p4")</code></p>
-<div id="an-example" class="section level2">
-<h2>An Example</h2>
-<p>Here is a UFO Sighting dataset, containing location and text descriptions. <a href="https://github.com/planetsig/ufo-reports/blob/master/csv-data/ufo-scrubbed-geocoded-time-standardized.csv" class="uri">https://github.com/planetsig/ufo-reports/blob/master/csv-data/ufo-scrubbed-geocoded-time-standardized.csv</a></p>
+<div id="a-workflow-in-orange" class="section level2">
+<h2>A Workflow in Orange</h2>
 </div>
-<div id="what-is-the-story" class="section level2">
-<h2>What is the Story?</h2>
+<div id="a-workflow-in-radiant" class="section level2">
+<h2>A Workflow in Radiant</h2>
+<p>Radiant does not support map-making.</p>
 </div>
-<div id="mapping-projects" class="section level2">
-<h2>Mapping Projects</h2>
-</div>
-<div id="animal-and-bird-migration" class="section level2">
-<h2>1. Animal and Bird Migration</h2>
+<div id="a-workflow-in-r" class="section level2">
+<h2>A Workflow in R</h2>
+<div id="animal-and-bird-migration" class="section level3">
+<h3>1. Animal and Bird Migration</h3>
 <ol style="list-style-type: decimal">
 <li>Head off to <a href="https://www.movebank.org/cms/movebank-main">movebank.org</a></li>
 <li>Look at a few species of interest and choose one.</li>
@@ -64,59 +62,9 @@ links:
 </ol>
 <p>For tutorial info: <a href="https://movebankworkshopraleighnc.netlify.app/" class="uri">https://movebankworkshopraleighnc.netlify.app/</a></p>
 </div>
-<div id="food-at-home" class="section level2">
-<h2>2. Food at Home</h2>
-<ol style="list-style-type: decimal">
-<li>Draw a map of your home-town with your favourite restaurants shown. Pop-ups for each restaurant will win bonus points.</li>
-</ol>
-<p>Take a look at:
-Burkhart, Christian. “Streetmaps.” <a href="https://ggplot2tutor.com/tutorials/streetmaps">StreetMaps</a></p>
-<p><img src="https://ggplot2tutor.com/static/093466a0f94f04f36e2c028fe7ae3f23/fd84e/maps.png" /></p>
+<div id="ufo-sightings" class="section level3">
+<h3>2. UFO Sightings</h3>
+<p>Here is a UFO Sighting dataset, containing location and text descriptions. <a href="https://github.com/planetsig/ufo-reports/blob/master/csv-data/ufo-scrubbed-geocoded-time-standardized.csv" class="uri">https://github.com/planetsig/ufo-reports/blob/master/csv-data/ufo-scrubbed-geocoded-time-standardized.csv</a></p>
 </div>
-<div id="mapping-india-places-of-worship" class="section level2">
-<h2>3. Mapping India: Places of Worship</h2>
-<ol style="list-style-type: decimal">
-<li><p>Do some searching and make a list of Places of Worship in India that are known to you.</p></li>
-<li><p>Head off to the <strong>India Place Finder</strong> website (india.info-proto.com/index.php/). Using the search facility there, download a CSV file that contains names of the places and their lon-lat coordinates.</p></li>
-<li><p>Read this CSV into R. Use the <code>sfheaders</code> package to convert this data into an <code>sf</code> spatial data frame.</p></li>
-<li><p>Use the <code>ggplot</code> or the <code>tmap</code> +<code>plotly</code> packages to plot these on an India map. Use the <code>rnaturalearth</code> package to get hold of an India map that is relevant to your area of interest.</p></li>
-<li><p>Extra:</p>
-<ul>
-<li>Use <a href="https://fontawesome.com/icons">font-awesome</a> icons to signify your Places of Worship.</li>
-<li>Use popups in <code>tmap/plotly</code> to pop-up a picture or video about the place</li>
-</ul></li>
-</ol>
-</div>
-<div id="mapping-places-yelahanka-on-open-street-map" class="section level2">
-<h2>4. Mapping Places Yelahanka on Open Street Map</h2>
-<ol style="list-style-type: decimal">
-<li>Download the Vespucci app on your phone:
-<ul>
-<li>Android <a href="https://play.google.com/store/apps/details?id=de.blau.android&amp;hl=en&amp;gl=US">app on Play Store</a></li>
-<li>iPhone is sadly not available. So partner with an Android phone user please!</li>
-</ul></li>
-<li>You will need to create an account on Open Street Map and login to the app on your phone. This will allow you to contribute changes and data to the map and your data will be available to any netizen for download.</li>
-<li>Read this <a href="https://learnosm.org/en/mobile-mapping/vespucci/">Vespucci Tutorial</a></li>
-<li>Choose specific categories of Places of interest:
-<ul>
-<li>Restaurants</li>
-<li>Street Food locations</li>
-<li>Medicines</li>
-<li>Dustbins/garbage</li>
-<li>Flowering Trees</li>
-<li>Park Benches</li>
-<li>Street Lighting</li>
-</ul></li>
-<li>Wherever possible, record metadata:</li>
-</ol>
-<ul>
-<li>Menu / Cuisine</li>
-<li>Timings</li>
-<li>Indoor or outdoor seating</li>
-<li>Parking available</li>
-</ul>
-<ol start="5" style="list-style-type: decimal">
-<li>Download in R and plot using <code>ggplot</code> or using <code>tmap</code>.</li>
-</ol>
 </div>
 </div>

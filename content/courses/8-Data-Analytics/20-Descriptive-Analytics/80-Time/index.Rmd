@@ -1,5 +1,5 @@
 ---
-title: "\U0001F578 I dare say you never even spoke to Time!"
+title: "\U0001F578 Time Series"
 subtitle: "Time Series"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
@@ -10,7 +10,7 @@ tags:
 - Trends
 - Line Graphs
 - CandleStick Graphs
-- Heatmap Graphs
+- Heatmap Graphs ( over time)
 
 image:
   caption: Photo by rawpixel on Unsplash
@@ -41,8 +41,10 @@ library(blogdown)
 
 ```
 
-## An Example
+## A Workflow in Orange
 
 
+## A Workflow in Radiant
 
-## What is the Story here?
+
+## A Workflow in R

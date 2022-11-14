@@ -1,5 +1,5 @@
 ---
-title: "\U0001F5FA The Map is Not the Territory"
+title: "\U0001F5FA Maps"
 subtitle: "Maps"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
@@ -40,6 +40,8 @@ links:
 ```{r setup, include=FALSE}
 library(blogdown)
 library(tidyverse)
+library(leaflet)
+library(mapview)
 ```
 
 
@@ -53,15 +55,14 @@ Maps That Will Change The Way You See The World:(https://www.youtube.com/watch?v
 ` r blogdown::shortcode("youtube", "YH2sAbXv7p4")`
 
 
-## An Example
-
-Here is a UFO Sighting dataset, containing location and text descriptions. <https://github.com/planetsig/ufo-reports/blob/master/csv-data/ufo-scrubbed-geocoded-time-standardized.csv>
-
-## What is the Story?
+## A Workflow in Orange
 
 
+## A Workflow in Radiant
+Radiant does not support map-making. 
 
-## Your Turn
+## A Workflow in R
+
 
 ### 1. Animal and Bird Migration
 
@@ -73,5 +74,10 @@ Here is a UFO Sighting dataset, containing location and text descriptions. <http
 
 For tutorial info: <https://movebankworkshopraleighnc.netlify.app/>
 
-###
+### 2. UFO Sightings
+
+Here is a UFO Sighting dataset, containing location and text descriptions. <https://github.com/planetsig/ufo-reports/blob/master/csv-data/ufo-scrubbed-geocoded-time-standardized.csv>
+
+
+
 

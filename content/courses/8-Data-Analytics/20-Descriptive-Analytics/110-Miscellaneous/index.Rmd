@@ -1,5 +1,5 @@
 ---
-title: "\U0001F533 Everything that begins with an M—such as mouse-traps, and the moon, and memory, and muchness"
+title: "\U0001F533 Miscellaneous Graphs and Tools "
 author: "Arvind Venkatadri"
 weight: 110
 subtitle: "Miscellaneous Graphs and Tools"
@@ -87,6 +87,7 @@ library(blogdown)
 
 1.Christopher G. Healey
 Department of Computer Science, North Carolina State University. [Perception in Visualization](https://www.csc2.ncsu.edu/faculty/healey/PP/index.html)  
+
 1. 
 
 

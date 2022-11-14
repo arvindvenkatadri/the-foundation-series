@@ -1,5 +1,5 @@
 ---
-title: "\U0001F5FA The Rich get Richer!"
+title: "\U0001F5FA Networks"
 subtitle: "Networks"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
@@ -36,8 +36,10 @@ library(blogdown)
 
 ```
 
-## An Example
+## A Workflow in Orange
 
 
+## A Workflow in Radiant
 
-## What is the Story here?
+
+## A Workflow in R

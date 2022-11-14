@@ -1,5 +1,5 @@
 ---
-title: "\U0001F578 The further is from England..the closer is to France"
+title: "\U0001F578 Correlations"
 subtitle: "Correlations"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
@@ -38,8 +38,12 @@ library(blogdown)
 ```
 
 
-## An Example
+## A Workflow in Orange
 
 
+## A Workflow in Radiant
 
-## What is the Story here?
+
+## A Workflow in R
+
+

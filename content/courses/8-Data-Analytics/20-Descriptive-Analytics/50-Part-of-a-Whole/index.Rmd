@@ -1,6 +1,6 @@
 ---
-title: "\U0001F578 No Man is an Island"
-subtitle: "Part of a Whole"
+title: "\U0001F578 Parts of a Whole"
+subtitle: "Parts of a Whole"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 weight: 50
@@ -53,4 +53,12 @@ Data was gathered from participants in experimental speed dating events from 200
 1. Is that different for men and women?
 1. Does physical attractiveness help to overcome age differences?  
 
+
+## A Workflow in Orange
+
+
+## A Workflow in Radiant
+
+
+## A Workflow in R
 
