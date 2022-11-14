@@ -1,0 +1,38 @@
+---
+title: The Simplex Method
+subtitle: 
+date: "`r Sys.Date()`"
+external_link: ""
+image:
+  caption: The Tight Rope Walker (Seiltänzer) (1923) by Paul Klee
+  focal_point: Smart
+weight: 20
+# links:
+# - icon: twitter
+#   icon_pack: fab
+#   name: Follow
+#   url: https://twitter.com/arvind_v
+slides:
+summary: We will look at developing an intuitive understanding of the Simplex Method for Linear Programming.
+tags:
+- Linear Programming
+- Simplex Method
+# url_code: "code/course-related/example/regression.ows"
+# url_pdf: ""
+# url_slides: "slides/new/index.html"
+# url_video: ""
+---
+
+
+```{r include=FALSE}
+library(blogdown)
+library(tidyverse)
+library(palmerpenguins)
+library(plotly)
+library(reshape2)
+```
+
+
+### Introduction
+
+
