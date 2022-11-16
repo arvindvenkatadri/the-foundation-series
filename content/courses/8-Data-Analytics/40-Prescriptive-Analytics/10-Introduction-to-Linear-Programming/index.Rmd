@@ -97,4 +97,3 @@ plotPolytope(A, b, faces = c("c","c","c"),
 ## References
 
 1.  Virginia Postrel, *Operations Everything*, Boston Globe, Hune 27, 2004. <http://archive.boston.com/news/globe/ideas/articles/2004/06/27/operation_everything?pg=full>
-
