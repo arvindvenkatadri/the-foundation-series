@@ -59,9 +59,20 @@ knitr::include_graphics("featured.jpg")
 
 ## References
 
-1. Diez, David M & Barr, Christopher D & Çetinkaya-Rundel, Mine:
-    [OpenIntro Statistics](https://www.openintro.org/book/os/)  
+1. Diez, David M & Barr, Christopher D & Çetinkaya-Rundel, Mine, *OpenIntro Statistics*. <https://www.openintro.org/book/os/>
 
-1. https://www.socscistatistics.com/tests/what_stats_test_wizard.aspx
+1. <https://www.socscistatistics.com/tests/what_stats_test_wizard.aspx>
+
+1. Diez, David M & Barr, Christopher D & Çetinkaya-Rundel, Mine: *OpenIntro Statistics*. Available online <https://www.openintro.org/book/os/>
+
+1. Måns Thulin, *Modern Statistics with R: From wrangling and exploring data to inference and predictive modelling* <http://www.modernstatisticswithr.com/>
+
+1. Jonas Kristoffer Lindeløv, Common statistical tests are linear models (or: how to teach stats) <https://lindeloev.github.io/tests-as-linear/>
+
+1. CheatSheet <https://lindeloev.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf>
+
+1. Common statistical tests are linear models: a work through by Steve Doogue <https://steverxd.github.io/Stat_tests/>
+
+1. Jeffrey Walker "Elements of Statistical Modeling for Experimental Biology". <https://www.middleprofessor.com/files/applied-biostatistics_bookdown/_book/>
 
 

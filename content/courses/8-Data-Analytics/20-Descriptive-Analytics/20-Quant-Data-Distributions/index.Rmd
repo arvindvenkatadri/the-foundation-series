@@ -1,0 +1,221 @@
+---
+title: "\U0001F576 Graphing Numerical Data - Distributions"
+subtitle: "Distributions"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+weight: 20
+summary: "Quant Variable Graphs and their Siblings"
+tags:
+- Qual Variables and Quant Variables
+- Bar and Column Charts
+- Histograms and Density Plots
+- Box Plots
+
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+external_link: ""
+links:
+# - icon: linkedin
+#   icon_pack: fab
+#   name: 
+#   url: https://linkedin.com/arvindvenkatadri
+# - icon: twitter
+#   icon_pack: fab
+#   name: 
+#   url: https://twitter.com/arvind_v
+slides: ""
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+library(tidyverse)
+library(downloadthis)
+library(palmerpenguins)
+library(patchwork)
+# #remotes::install_github("R-CoderDotCom/ridgeline@main")
+# library(ridgeline)
+library(ggridges)
+
+```
+
+## What graphs will we see today?
+
+Some of the very basic and commonly used plots for data are:
+- Bar and Column Charts
+- Histograms and Frequency Distributions
+- 2D Hexbins Plots and 2D Frequency Distributions
+- Ridge Plots ( Quant + Qual variables)
+- Box Plots
+
+`r blogdown::shortcode("youtube", "Xm0PPtci3JE")`
+
+## Histograms and Frequency Distributions
+
+Histograms are best to show the distribution of raw *quantitative data*, by displaying the number of values that fall within defined ranges, often called *buckets* or *bins*. 
+
+Although histograms may look similar to column charts, the two are different. First, histograms show *continuous data*, and usually you can adjust the bucket ranges to explore frequency patterns. For example, you can shift histogram buckets from 0-1, 1-2, 2-3, etc. to 0-2, 2-4, etc. 
+By contrast, column charts show *categorical data*, such as the number of apples, bananas, carrots, etc. Second, histograms do not usually show spaces between buckets because these are *continuous values*, while column charts show spaces to separate each *category*. 
+
+
+Let us listen to the late great Hans Rosling from the [Gapminder Project](https://www.gapminder.org), which aims at telling stories of the world with data, to remove systemic biases about poverty, income and gender related issues.
+
+
+<iframe src="https://player.vimeo.com/video/127511255?h=a225cf98cc" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+<p><a href="https://vimeo.com/127511255">How many are rich and how many are poor?</a> from <a href="https://vimeo.com/gapminder">Gapminder</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
+
+<p align="center"><iframe src="//www.gapminder.org/tools/?embedded=true#$model$markers$mountain$encoding$frame$speed:187;;;;;&chart-type=mountain&url=v1" style="width: 100%; height: 500px; margin: 0 0 0 0; border: 1px solid grey;"allowfullscreen></iframe></p>
+
+
+## A Workflow in Orange
+
+Let us fire up Orange and analyze the famous `iris` dataset in it. 
+
+
+## A Workflow in Radiant
+
+Let us fire up Radiant and analyze the equally famous `diamonds` dataset in it. 
+
+## A Workflow in R
+
+Let us fire up RStudio, and run the code shown below. Let us see what modifications we can make, based on our appreciation of the data variables. Which other variables in the `mpg` dataset can you use?
+
+
+```{r charts, warning=FALSE,message=FALSE}
+# library(tidyverse)
+# library(patchwork)
+# library(ggridges)
+
+mpg <- mpg %>% mutate(drv= as_factor(drv))
+p <- ggplot(mpg, alpha = 0.3) 
+p1 <- p + geom_histogram(aes(x = hwy, fill = drv)) + labs(title = "Histogram")
+p2 <- p + geom_density(aes(x = hwy, fill = drv))+ labs(title = "Frequency Density")
+p3 <- p + geom_boxplot(aes(x = drv, y = hwy, fill = drv))+ labs(title = "Boxplot")
+p4 <- p + geom_violin(aes(x = drv, y = hwy, fill = drv))+ labs(title = "Violin")
+p5 <- p + geom_density_ridges(aes(x = hwy, y = drv, fill = drv), alpha = 0.3, rel_min_height = 0.005) +
+  scale_y_discrete(expand = c(0.01, 0)) +
+  scale_x_continuous(expand = c(0.01, 0)) +
+  theme_ridges() + labs(title = "Ridge Plot")
+(p1+p3)/(p2+p4) / p5 + plot_layout(nrow = 3) + plot_annotation(title = "Single Quant Variable",subtitle = "And one Qual Variable too", tag_levels = 'A') & theme_minimal()
+
+```
+
+```{r more-charts, echo=FALSE, warning=FALSE,message=FALSE}
+mpg <- mpg %>% mutate(drv= as_factor(drv))
+
+p5 <- p + geom_point(aes(x = hwy, y = cty, fill = drv, colour = drv), size = 0.5) + labs(title = "Scatter Plot")
+p6 <- p + geom_hex(aes(x = hwy, y = cty, fill = drv))+ labs(title = "Hex Bin Plot")
+p7 <- p + geom_density_2d(aes(x = hwy, y = cty))+ labs(title = "2D Density Plot")
+
+(p5/ (p6| p7 + plot_layout(guides = 'keep'))) + 
+  plot_annotation(title = "Two Quant Variables",subtitle = "And one Qual Variable too", tag_levels = 'A') & theme_minimal()
+
+```
+
+
+```{css, echo=FALSE}
+/* from https://ianlunn.github.io/Hover/ */
+.hvr-sweep-to-left {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-sweep-to-left:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 100% 50%;
+  transform-origin: 100% 50%;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
+  color: white;
+}
+.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+}
+
+```
+
+
+## An Example: Bar and Column Charts
+
+Here is a dataset from Jeremy Singer-Vine's blog, [Data Is Plural](https://www.data-is-plural.com/). This is a list of all books banned in schools across the US. 
+
+```{r, bar-charts}
+banned <- readxl::read_xlsx(path = "data/banned.xlsx",
+                            sheet = "Sorted by Author & Title")
+``` 
+
+```{r}
+banned_by_state <- banned %>% group_by(State) %>% summarise(total = n()) %>% ungroup()
+banned_by_state
+
+banned %>% group_by(State, `Type of Ban`) %>% summarise(count = n()) %>% ungroup() %>% left_join(., banned_by_state, by = c("State" = "State")) %>% 
+ #  pivot_wider(.,id_cols = State,
+ #              names_from = `Type of Ban`,
+ #              values_from = count) %>% janitor::clean_names() %>% 
+ #  replace_na(list(banned_from_libraries_and_classrooms = 0,
+ #                  banned_from_libraries = 0,
+ #                  banned_pending_investigation = 0,
+ #                  banned_from_classrooms = 0)) %>% 
+ # mutate(total = sum(across(where(is.integer)))) %>%
+ggplot(aes(x = reorder(State, total), y = count, fill = `Type of Ban`)) + geom_col() + coord_flip()
+
+```
+
+
+## Conclusion
+
+Histograms and Frequency Density Plots are good intuitive choices to describe Quant variables. They are especially useful when we slie/facet them using other Qual variables. 
+
+## Your Turn
+
+1. Try one of these datasets (download and unzip this file)  
+
+```{r,echo=FALSE}
+download_file(path = "data/qdd-data.zip",
+              output_name = "qdd-data",
+              button_label = "Download .zip file of data",
+              button_type = "danger",
+              has_icon = TRUE,
+              icon = "fa fa-save",
+              self_contained = FALSE)
+# banned %>% download_this(output_name = "banned",output_extension = ".csv", button_label = "Banned Books data", button_type = "default", icon = "fa fa-save")
+```
+
+
+1. A dataset from calmcode.io <https://calmcode.io/datasets.html>  
+1. Old Faithful Data in R
+
+
+## References
+
+1. See the scrolly animation for a histogram at this website: **Exploring Histograms, an essay by Aran Lunzer and Amelia McNamara**
+<https://tinlizzie.org/histograms/?s=09>
+

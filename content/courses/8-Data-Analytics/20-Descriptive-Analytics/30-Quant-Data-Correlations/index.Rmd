@@ -1,0 +1,93 @@
+---
+title: "\U0001F578 Graphing Numerical Data - Correlations"
+subtitle: "Correlations"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+weight: 30
+summary: "How one variable changes with another"
+tags:
+- Correlations
+- Scatter and Bubble Plots
+- 2D Density Plots
+- Heatmaps
+- Regression Lines
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+external_link: ""
+links:
+# - icon: linkedin
+#   icon_pack: fab
+#   name: 
+#   url: https://linkedin.com/arvindvenkatadri
+# - icon: twitter
+#   icon_pack: fab
+#   name: 
+#   url: https://twitter.com/arvind_v
+slides: ""
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(blogdown)
+library(tidyverse)
+library(downloadthis)
+library(palmerpenguins)
+library(patchwork)
+library(ggridges)
+library(GGally)
+library(grid)
+
+```
+
+## What graphs will we see today?
+
+Some of the very basic and commonly used plots for data are:
+- Scatter Plot
+- Contour Plot
+- Correlogram
+- Heatmap
+
+
+## What Correlation Charts can we plot with Numerical  / Quantitative Data?
+
+```{r charts, echo=FALSE, warning=FALSE,message=FALSE}
+mpg <- mpg %>% mutate(drv= as_factor(drv))
+p <- ggplot(mpg, alpha = 0.3) 
+p1 <- p + 
+  geom_point(aes(x = hwy, y = cty, fill = drv, colour = drv), size = 0.5) +
+  geom_smooth(aes(x = hwy, y = cty), method = "lm") + 
+  labs(title = "Scatter Plot with Correlation/Regression/Trend Line")
+p2 <- p + geom_density_2d(aes(x = hwy, y = cty, fill = drv))+ labs(title = "2D Density Plot")
+p1 + p2
+
+```
+
+```{r pairs-charts, echo=FALSE, warning=FALSE,message=FALSE}
+p2 <- GGally::ggpairs(mpg, columns = c("hwy", "cty", "displ","cyl"), diag = list("densityDiag"))
+p2
+
+```
+
+```{r cor-plot, echo=FALSE, warning=FALSE,message=FALSE}
+library(corrplot)
+library(caret)
+mpg_num <- mpg %>% select(hwy, cty, displ, cyl)
+mydata_cor <- cor(mpg_num)
+p3 <- mydata_cor %>% corrplot(method = "ellipse",type = "lower")
+p3
+```
+
+## A Workflow in Orange
+
+
+## A Workflow in Radiant
+
+
+## A Workflow in R
+
+

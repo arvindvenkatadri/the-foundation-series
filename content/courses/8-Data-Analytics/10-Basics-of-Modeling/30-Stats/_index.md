@@ -11,19 +11,22 @@ image:
 tags: 
   - Comparing Means and Proportions
   - Parametric and Non-Parametric Tests
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ![](featured.jpg)
 
 ## Introduction
 
-In this set of modules we will explore Sampling, Summary Statistics, Statistical Tests for data. 
-
+In this set of modules we will explore Sampling, Summary Statistics,
+Statistical Tests for data.
 
 # Pedagogical Note
 
 Common statistical tests are linear models (or: how to teach
-stats)[\^1], written by Jonas Lindeløv. The book beautifully
+stats)\[^1\], written by Jonas Lindeløv. The book beautifully
 demonstrates how many common statistical tests (such as the t-test,
 ANOVA and chi-squared) are special cases of the linear model. The book
 also demonstrates that many non-parametric tests, which are needed when
@@ -44,19 +47,19 @@ regressions, which emphasizes understanding over rote learning.
 1.  *Common statistical tests are linear models (or: how to teach
     stats)* by [Jonas Kristoffer
     Lindeløv](https://lindeloev.github.io/tests-as-linear/)
-    
-1.  CheatSheet <https://lindeloev.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf>
 
-1.  *Common statistical tests are linear models: a work through* by
+2.  CheatSheet
+    <https://lindeloev.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf>
+
+3.  *Common statistical tests are linear models: a work through* by
     [Steve Doogue](https://steverxd.github.io/Stat_tests/)
-    
-1.  [Jeffrey Walker "Elements of Statistical Modeling for Experimental
+
+4.  [Jeffrey Walker "Elements of Statistical Modeling for Experimental
     Biology"](https://www.middleprofessor.com/files/applied-biostatistics_bookdown/_book/)
-    
-1.  Text: Diez, David M & Barr, Christopher D & Çetinkaya-Rundel, Mine:
+
+5.  Text: Diez, David M & Barr, Christopher D & Çetinkaya-Rundel, Mine:
     [OpenIntro Statistics](https://www.openintro.org/book/os/)
-    
-1.  Modern Statistics with R: From wrangling and exploring data to
+
+6.  Modern Statistics with R: From wrangling and exploring data to
     inference and predictive modelling by [Måns
     Thulin](http://www.modernstatisticswithr.com/)
-    

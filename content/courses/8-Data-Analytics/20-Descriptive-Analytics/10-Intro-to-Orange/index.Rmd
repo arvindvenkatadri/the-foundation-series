@@ -1,7 +1,7 @@
 ---
-title: "\U0001F409 Intro to Orange"
+title: "\U0001F409 Introduction to Orange"
 author: "Arvind Venkatadri"
-date: 12/26/2022
+date: "`r Sys.Date()`"
 linkTitle: Intro to Orange
 summary: Using A Visual drag and drop tool called Orange
 view: 2
@@ -71,5 +71,7 @@ Let us create some simple visualizations using Orange.
 ## Reference
 
 1. Introduction to *Data Mining-Working notes for the hands-on course with Orange Data Mining*. [(Download file)](Interactive Visual Data Mining in Orange - kolkata.pdf)
+
+1. Orange Data Mining Widget Catalog: Look here for help and guidance! <https://orangedatamining.com/widget-catalog/>
 
 
