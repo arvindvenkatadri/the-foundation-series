@@ -1,0 +1,66 @@
+---
+title: 'Bootstrap Tests'
+author: "Arvind Venkatadri"
+subtitle: ""
+date: "`r Sys.Date()`"
+view: 2
+type: page
+weight: 20
+summary: ""
+output:
+  html_document:
+    toc_float: true
+    theme: united
+    toc: true
+    code_folding: true
+tags:
+- Bootstrap Sampling
+- Replacement
+- Monte Carlo Simulation
+- Random Number Generation
+- Distributions
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+external_link: ""
+links:
+- icon: book
+  icon_pack: fa
+  name: notes
+  url: ""
+- icon: file-powerpoint
+  icon_pack: fa
+  name: slides
+  url: ""
+- icon: registered
+  icon_pack: fa
+  name: installation
+  url: ""
+slides: ""
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+## Introduction
+
+
+
+
+
+## Datasets
+
+
+## Workflow in Orange
+
+
+
+## Workflow in Radiant
+
+
+
+## Workflow in R
+
+
+## Conclusion
