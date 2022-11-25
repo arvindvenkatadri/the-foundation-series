@@ -43,42 +43,45 @@ The Course will culminate in a full **Business Analytics Workflow** that include
 -   Rapidly and intuitively creating **Graphs and Data Visualizations** to explore data for insights
 -   Use **Statistical Tests, Procedures, Models, and Simulations** and to answer Business Questions
 -   Using **ML algorithms** such Regression, Classification, and Clustering to develop Business Insights
-- Use **Linear Programming** to make Business Decisions
+-   Use **Linear Programming** to make Business Decisions
 -   Create crisp and readable **Reports** that can be shared in a Business Context
 
 ## Texts
 
 1.  James R Evans, *Business Analytics: Methods, Models, and Decisions*, Pearson Education, 2021.
 
-
-
 ## References
 
-1.  Dimitris Bertsimas, Robert Freund, *Data, Models, and Decisions: the Fundamentals of Management Science*, Dynamic Ideas Press, 2004.  
+1.  Dimitris Bertsimas, Robert Freund, *Data, Models, and Decisions: the Fundamentals of Management Science*, Dynamic Ideas Press, 2004.
 
-1. Cliff T. Ragsdale, *Spreadsheet Modeling & Decision Analysis: A Practical Introduction to Management Science*, South Western, Cengage Learning, Mason, OH, 2012.  
+2.  Cliff T. Ragsdale, *Spreadsheet Modeling & Decision Analysis: A Practical Introduction to Management Science*, South Western, Cengage Learning, Mason, OH, 2012.
 
-1.  Jack Dougherty and Ilya Ilyankou, *Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code*, <https://handsondataviz.org/>. Available free Online.  
+3.  Jack Dougherty and Ilya Ilyankou, *Hands-On Data Visualization: Interactive Storytelling from Spreadsheets to Code*, <https://handsondataviz.org/>. Available free Online.
 
-1.  Claus O. Wilke, *Fundamentals of Data Visualization*, <https://clauswilke.com/dataviz/>. Available free Online.  
+4.  Claus O. Wilke, *Fundamentals of Data Visualization*, <https://clauswilke.com/dataviz/>. Available free Online.
 
-1.  Jonathan Schwabish, *Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks*, Columbia University Press, 2021.  
+5.  Jonathan Schwabish, *Better Data Visualizations: A Guide for Scholars, Researchers, and Wonks*, Columbia University Press, 2021.
 
-1.  Alberto Cairo, *The Functional Art:An introduction to information graphics and visualization*, New Riders. 2013. ISBN-9780133041361.  
+6.  Alberto Cairo, *The Functional Art:An introduction to information graphics and visualization*, New Riders. 2013. ISBN-9780133041361.
 
-1.  Cole Nussbaumer Knaflic, *Storytelling With Data: A Data Visualization Guide for Business Professionals*, Wiley 2015. ISBN-9781119002253.  
-
+7.  Cole Nussbaumer Knaflic, *Storytelling With Data: A Data Visualization Guide for Business Professionals*, Wiley 2015. ISBN-9781119002253.
 
 ## Our Tools
 
-1. **Orange Data Mining** <https://orangedatamining.com/> 
-Orange is a FOSS visual point-and-click software for Data Mining and ML, developed at the University of Slovenia, Ljubljana.
+1.  **Orange Data Mining** <https://orangedatamining.com/> Orange is a FOSS visual point-and-click software for Data Mining and ML, developed at the University of Slovenia, Ljubljana.
 
-1.  **Radiant -- Business analytics using R and Shiny** <https://radiant-rstats.github.io/docs/index.html> 
+{{< youtube HXjnDIgGDuI >}} 
+
+<br>
+
+1.  **Radiant -- Business analytics using R and Shiny** <https://radiant-rstats.github.io/docs/index.html>
+
 Radiant is a FOSS platform-independent browser-based interface for business analytics in R, developed at the University of San Diego. The application is based on the Shiny package and can be run using R, or in your browser with no installation required.
 
-1. **R** <https://cran.r-project.org/> and **RStudio** <https://posit.co/>
-R is a freely available language and environment for statistical computing and graphics which provides a wide variety of statistical and graphical techniques: linear and nonlinear modelling, statistical tests, time series analysis, classification, clustering, etc. 
-RStudio is an integrated development environment (IDE) for R and Python. 
+{{< youtube 7L3hDpLw53I >}}
 
+<br>
 
+1.  **R** <https://cran.r-project.org/> and **RStudio** <https://posit.co/>
+
+R is a freely available language and environment for statistical computing and graphics which provides a wide variety of statistical and graphical techniques: linear and nonlinear modelling, statistical tests, time series analysis, classification, clustering, etc. RStudio is an integrated development environment (IDE) for R and Python.

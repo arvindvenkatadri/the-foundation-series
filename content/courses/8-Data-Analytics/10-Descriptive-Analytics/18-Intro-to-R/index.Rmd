@@ -1,0 +1,53 @@
+---
+title: "\U0001F409 Introduction to R"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+linkTitle: Intro to R
+summary: How to use R and RStudio
+view: 2
+weight: 1
+tags:
+-
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+external_link: ""
+slides: ""
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+links:
+- icon: flask
+  icon_pack: fas
+  name: lab
+  url: /labs/R-for-Artists/02-pronouns/02-Pronouns-and-Data.html
+- icon: magic
+  icon_pack: fas
+  name: slides
+  url: /slides/R-for-Artists/02-working/02-working-in-R.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(blogdown)
+```
+
+## Introduction to R
+
+
+We will get acquainted with data and its representations in R!  We will also form a view of how English Grammar ( pronouns, verbs, adjectives, figures of speech..) get metaphorized into the R World!!
+
+
+## Readings
+
+
+- R for Data Science, Workflow: Basics Chapter: http://r4ds.had.co.nz/workflow-basics.html
+
+- Modern Dive, Getting Started Chapter: http://moderndive.com/2-getting-started.html
+
+- R & RStudio Basics: https://bookdown.org/chesterismay/rbasics/3-rstudiobasics.html
+
+- RStudio IDE Cheatsheet: https://github.com/rstudio/cheatsheets/blob/master/rstudio-ide.pdf
+
+

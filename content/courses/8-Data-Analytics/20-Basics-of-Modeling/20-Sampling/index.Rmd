@@ -19,9 +19,9 @@ links:
 - icon: file-powerpoint
   icon_pack: fa
   name: Case Study
-  url: /pdf/TRIZ/Titanic_Case_Study.pdf
+  url: 
 slides: 
-summary: "This Module is part of a Course in Business Analytics"
+summary: "How much Data does a Man need?"
 tags:
 - Models
 - 

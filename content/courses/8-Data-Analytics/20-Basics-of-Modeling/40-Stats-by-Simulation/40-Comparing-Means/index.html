@@ -1,0 +1,389 @@
+---
+title: "Comparing Means"
+author: "Arvind Venkatadri"
+date: "2022-11-25"
+output:
+  html_document:
+    toc_float: yes
+    theme: flatly
+    highlight: tango
+    toc: yes
+    code_folding: show
+    code_download: yes
+    number_sections: yes
+  pdf_document:
+    toc: yes
+    latex_engine: xelatex
+keywords: Statistics ; Tests; p-value; Feynman Technique
+abstract: This module is intended to assist with making statistically significant insights that drive business decisions. This document deals with the basics of stats. The method followed is that of Jonas Lindoloev, wherein every stat test is treated as a linear model `y = mx + c`.
+editor_options: 
+  chunk_output_type: inline
+  markdown: 
+    wrap: 72
+---
+
+
+
+<div id="structure-of-this-document" class="section level1">
+<h1>Structure of this document</h1>
+<p>We will follow the following structure: Each kind of Test is described
+in a separate Chapter. The Test <em>Model</em> is laid out in formula
+<span class="math inline">\(y = mx + c\)</span> and in <em>Code</em>.</p>
+</div>
+<div id="the-linear-model" class="section level1">
+<h1>The Linear Model</h1>
+<p>The premise here is that <strong>many common statistical tests are special cases of the linear model</strong>. So what <em>is</em> the linear model?</p>
+<p>A <strong>linear model</strong> estimates the relationship between dependent variable or “response” variable (<span class="math inline">\(y\)</span>) and an explanatory variable or “predictor” (<span class="math inline">\(x\)</span>).</p>
+<p>(It is also possible that there is more than one explanatory variable: this is <strong>multiple regression.</strong>. We will get there later).</p>
+<p>It is assumed that the relationship is <strong>linear</strong>:</p>
+<p><span class="math display">\[
+y = \beta_0 + \beta_1 *x
+\]</span></p>
+<p><span class="math inline">\(\beta_0\)</span> is the <em>intercept</em> and <span class="math inline">\(\beta_1\)</span> is the slope of the linear fit, that <strong>predicts</strong> the value of y based the value of x.</p>
+<p>Each prediction leaves a small “residual” error between the actual and predicted values. <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are calculated based on minimizing the <em>sum of square</em>s of these residuals, and hence this method is called “ordinary least squares” regression.</p>
+<div class="figure">
+<img src="images/OLS.png" alt="" />
+<p class="caption">Least Squares</p>
+</div>
+<p>The net <em>area</em> of all the shaded squares is minimized in the calculation
+of <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span>.</p>
+<p><span class="math display">\[
+y = \beta_0 + \beta_1*x_1 + \beta_2*x_2 ...+ \beta_n*x_n
+\]</span></p>
+<p>where each of the <span class="math inline">\(\beta_i\)</span> are slopes defining the relationship between
+y and <span class="math inline">\(x_i\)</span>. Together, the RHS of that equation defines an n-dimensional
+<em>plane</em>.</p>
+<p>As per Lindoloev, many statistical tests, going from one-sample t-tests
+to two-way ANOVA, are special cases of this system.</p>
+<p>Also see <a href="https://www.middleprofessor.com/files/applied-biostatistics_bookdown/_book/intro-linear-models.html#a-linear-model-can-be-fit-to-data-with-continuous-discrete-or-categorical-x-variables">Jeffrey Walker “A
+linear-model-can-be-fit-to-data-with-continuous-discrete-or-categorical-x-variables”</a></p>
+<div id="linear-models-as-hypothesis-tests" class="section level2">
+<h2>Linear Models as Hypothesis Tests</h2>
+<p>Using linear models is based on the idea of <strong>Testing of Hypotheses</strong>.
+The Hypothesis Testing method typically defines a NULL Hypothesis where
+the statements read as “<strong>there is no relationship</strong>” between the
+variables at hand, explanatory and responses. The Alternative Hypothesis
+typically states that there <em>is</em> a relationship between the variables.</p>
+<p>Accordingly, in fitting a linear model, we follow the process as
+follows:</p>
+<ol style="list-style-type: decimal">
+<li>Make the following hypotheses: <span class="math display">\[
+y = \beta_0 + \beta_1 *x \\
+NULL\ Hypothesis\ H_0 =&gt; x\ and\ y\ are\ unrelated.\ (\beta_1 = 0)
+\]</span> <span class="math display">\[
+y = \beta_0 + \beta_1 *x \\
+Alternate\ Hypothesis\ H_1 =&gt; x\ and\ y\ are\ linearly\ related\ (\beta_1 \ne 0)
+\]</span></li>
+<li>We “assume” that <span class="math inline">\(H_0\)</span> is true.</li>
+<li>We calculate <span class="math inline">\(\beta_1\)</span>.</li>
+<li>We then find probability <strong>p</strong> that [<span class="math inline">\(\beta_1 = Estimated\ Value\)</span>]
+<strong>when the NULL Hypothesis</strong> is <strong>assumed</strong> TRUE. This is the
+<strong>p-value</strong>. If that probability is <strong>p&gt;=0.05</strong>, we say we “cannot
+reject” <span class="math inline">\(H_0\)</span> and there is unlikely to be significant linear
+relationship.</li>
+</ol>
+<p>However, if <strong>p&lt;= 0.05</strong> can we reject the NULL hypothesis, and say
+that there could be a significant linear relationship,because
+<span class="math inline">\(\beta_1 = Estimated\ Value\)</span> by mere chance under <span class="math inline">\(H_0\)</span> is very small.</p>
+</div>
+<div id="assumptions-in-linear-models" class="section level2">
+<h2>Assumptions in Linear Models</h2>
+<ol style="list-style-type: decimal">
+<li><strong>L</strong>: <span class="math inline">\(\color{blue}{linear}\)</span> relationship</li>
+<li><strong>I</strong>: Errors are <strong>independent</strong> (across observations)</li>
+<li><strong>N</strong>: y is <span class="math inline">\(\color{red}{normally}\)</span> distributed at each “level”
+of x.</li>
+<li><strong>E</strong>: equal variance at all levels of x. No <em>heteroscedasticity</em>.
+<img src="images/ols_assumptions.png" alt="OLS Assumptions" /></li>
+</ol>
+<p>Let us now see which standard statistical tests can be re-formulated as
+Linear Models.</p>
+</div>
+</div>
+<div id="data" class="section level1">
+<h1>Data</h1>
+<div id="sample-values" class="section level2">
+<h2>Sample Values</h2>
+<p>Most examples in this exposition are based on three “imaginary” samples,
+<span class="math inline">\(x, y, y2\)</span>. Each is normally distributed and made up of 50 observations. The means are (<span class="math inline">\(mu = c(0,0.3,0.5)\)</span>), and the sds (<span class="math inline">\(sd = c(1,2,1.5)\)</span>) are</p>
+<pre><code>## # A tibble: 3 × 2
+##      mu    sd
+##   &lt;dbl&gt; &lt;dbl&gt;
+## 1   0     1  
+## 2   0.3   2  
+## 3   0.5   1.5</code></pre>
+<p>Let us look at our toy data in three ways:</p>
+<pre><code>## # A tibble: 50 × 3
+##     x[,1] y1[,1] y2[,1]
+##     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+##  1  0.427  1.98   0.103
+##  2  0.444  1.27  -0.281
+##  3 -0.828 -0.944  0.624
+##  4 -0.799  0.103  5.43 
+##  5 -0.323  2.19   0.168
+##  6 -1.24   0.192 -0.549
+##  7 -1.36   4.81   0.309
+##  8  1.62   1.55  -0.990
+##  9 -0.292  3.36  -0.172
+## 10 -1.25   1.92  -0.158
+## # … with 40 more rows</code></pre>
+<pre><code>## # A tibble: 150 × 2
+##    group value[,1]
+##    &lt;chr&gt;     &lt;dbl&gt;
+##  1 x         0.427
+##  2 y1        1.98 
+##  3 y2        0.103
+##  4 x         0.444
+##  5 y1        1.27 
+##  6 y2       -0.281
+##  7 x        -0.828
+##  8 y1       -0.944
+##  9 y2        0.624
+## 10 x        -0.799
+## # … with 140 more rows</code></pre>
+<pre><code>## # A tibble: 100 × 2
+##    group value[,1]
+##    &lt;chr&gt;     &lt;dbl&gt;
+##  1 y1        1.98 
+##  2 y2        0.103
+##  3 y1        1.27 
+##  4 y2       -0.281
+##  5 y1       -0.944
+##  6 y2        0.624
+##  7 y1        0.103
+##  8 y2        5.43 
+##  9 y1        2.19 
+## 10 y2        0.168
+## # … with 90 more rows</code></pre>
+</div>
+<div id="signed-rank-values" class="section level2">
+<h2>“Signed Rank” Values</h2>
+<p>Most statistical tests use the <strong>actual values</strong> of the data variables.
+However, in some <em>non-parametric</em> statistical tests, the data are used
+in <strong>rank-transformed</strong> sense/order. In some cases the <strong>signed-rank</strong>
+of the data values is used instead of the data itself.</p>
+<p>Signed Rank is calculated as follows:<br />
+1. Take the absolute value of each observation in a sample<br />
+2. Place the <u><em>ranks</em></u> in order of (absolute magnitude). The
+smallest number has <em>rank = 1</em> and so on.<br />
+3. Give each of the ranks the sign of the original observation ( + or -
+)</p>
+</div>
+<div id="plotting-original-and-signed-rank-data" class="section level2">
+<h2>Plotting Original and Signed Rank Data</h2>
+<p>A quick plot:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/data_plots-1.png" width="672" /></p>
+</div>
+<div id="how-does-sign-rank-data-work" class="section level2">
+<h2>How does Sign-Rank data work?</h2>
+<p>TBD: need to add some explanation here.</p>
+</div>
+</div>
+<div id="tests-for-correlation" class="section level1 tabset">
+<h1>Tests for Correlation</h1>
+<p>Correlation <strong>r</strong> is a measure of <em>strength</em> and <em>direction</em> of <em>linear
+association</em> between two variables. <strong>r</strong> is between [-1,+1], with 0
+implying no association/correlation.</p>
+<p>From this definition, the <em>linear model</em> lends itself in a
+straightforward way as a model to interpret <em>correlation</em>. Intuitively,
+the slope of the linear model could be related to the correlation
+between y and x.</p>
+<p>Now we look at the numbers.</p>
+<div id="pearson-correlation" class="section level2 tabset">
+<h2>Pearson Correlation</h2>
+<div id="model" class="section level3">
+<h3>Model</h3>
+<p>The model for Pearson Correlation tests is exactly the Linear Model:</p>
+<p><span class="math display">\[
+y = \beta_0 + \beta_1 * x
+\\
+H_0: \beta_1 = 0
+\]</span></p>
+<p>See the Code section for further insights into the relationship between
+the Correlation Score and the Slope of the Linear Model.</p>
+</div>
+<div id="code" class="section level3">
+<h3>Code</h3>
+<pre><code>## # A tibble: 1 × 2
+##   estimate p.value
+##      &lt;dbl&gt;   &lt;dbl&gt;
+## 1   -0.232   0.105</code></pre>
+<pre><code>## # A tibble: 2 × 2
+##   estimate p.value
+##      &lt;dbl&gt;   &lt;dbl&gt;
+## 1    0.3     0.286
+## 2   -0.464   0.105</code></pre>
+<pre><code>## # A tibble: 2 × 2
+##    estimate p.value
+##       &lt;dbl&gt;   &lt;dbl&gt;
+## 1 -9.06e-17   1    
+## 2 -2.32e- 1   0.105</code></pre>
+<pre><code>## # A tibble: 5 × 2
+##    estimate p.value
+##       &lt;dbl&gt;   &lt;dbl&gt;
+## 1 -2.32e- 1   0.105
+## 2  3   e- 1   0.286
+## 3 -4.64e- 1   0.105
+## 4 -9.06e-17   1    
+## 5 -2.32e- 1   0.105</code></pre>
+<p>Notes: 1. The <em>p-value</em> for Pearson Correlation and that for the <em>slope</em>
+in the linear model is the same ( 0.1053 ). Which means we cannot reject
+the NULL hypothesis of “no relationship”.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Here is the relationship between the slope and correlation:</li>
+</ol>
+<p><span class="math display">\[
+Slope\ \beta_1 = \frac{sd_y}{sd_x} * r
+\]</span></p>
+<p>When both x and y have the same standard deviation, the slope and
+correlation are the same. Here, since x has twice the <code>sd</code> of y, the
+ratio of <strong>slope</strong> = -0.4635533 to <strong>r</strong> = -0.2317767 is
+0.5. Hence a linear model using <code>scale()</code> for both variables will show
+slope = <strong>r</strong>.</p>
+<p>Slope_Scaled: -0.2317767 = Correlation: -0.2317767</p>
+</div>
+<div id="example" class="section level3">
+<h3>Example</h3>
+<p>We choose to look at the <code>gpa_study_hours</code> dataset. It has two numeric
+columns <code>gpa</code> and <code>study_hours</code>:</p>
+<pre><code>## Rows: 193
+## Columns: 2
+## $ gpa         &lt;dbl&gt; 4.000, 3.800, 3.930, 3.400, 3.200, 3.520, 3.680, 3.400, 3.700, 3.750, 3.300, 3.425, 3.795, 3.830, 3.300, 3.7…
+## $ study_hours &lt;dbl&gt; 10, 25, 45, 10, 4, 10, 24, 40, 10, 10, 30, 7, 15, 60, 10, 10, 6, 20, 8, 30, 35, 12, 6, 20, 10, 14, 10, 10, 3…</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Pearson_example_1-1.png" width="672" /></p>
+<p>Hmm…not normally distributed, and the relationship is also not linear,
+and there is some evidence of heterscedasticity, so Pearson correlation
+would not be the best idea here.</p>
+<pre><code>## 
+## Call:
+## lm(formula = gpa ~ study_hours, data = gpa_study_hours)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -0.95130 -0.19456  0.03879  0.21708  0.73872 
+## 
+## Coefficients:
+##             Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept) 3.527997   0.037424  94.272   &lt;2e-16 ***
+## study_hours 0.003328   0.001794   1.855   0.0652 .  
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 0.2837 on 191 degrees of freedom
+## Multiple R-squared:  0.01769,    Adjusted R-squared:  0.01255 
+## F-statistic:  3.44 on 1 and 191 DF,  p-value: 0.06517</code></pre>
+<pre><code>## 
+##  Pearson&#39;s product-moment correlation
+## 
+## data:  gpa and study_hours
+## t = 1.8548, df = 191, p-value = 0.06517
+## alternative hypothesis: true correlation is not equal to 0
+## 95 percent confidence interval:
+##  -0.008383868  0.269196552
+## sample estimates:
+##       cor 
+## 0.1330138</code></pre>
+<pre><code>## # A tibble: 1 × 14
+##   parameter1  parameter2 effectsize       estim…¹ conf.…² conf.low conf.…³ stati…⁴ df.er…⁵ p.value method n.obs conf.…⁶ expression
+##   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;list&gt;    
+## 1 study_hours gpa        Pearson correla…   0.133    0.95 -0.00838   0.269    1.85     191  0.0652 Pears…   193 normal  &lt;language&gt;
+## # … with abbreviated variable names ¹​estimate, ²​conf.level, ³​conf.high, ⁴​statistic, ⁵​df.error, ⁶​conf.method</code></pre>
+<p>The correlation estimate is <span class="math inline">\(0.133\)</span>; the <code>p-value</code> is 0.065 and the
+confidence interval includes 0. Hence we fail to reject the NULL
+hypothesis that <code>study_hours</code> and <code>gpa</code> have no relationship.</p>
+<p>We can use a later package <code>ggstaplot</code> to plot this:</p>
+<pre><code>## Registered S3 method overwritten by &#39;ggside&#39;:
+##   method from   
+##   +.gg   ggplot2</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Pearson_example_3-1.png" width="672" /></p>
+</div>
+</div>
+<div id="spearman-correlation" class="section level2">
+<h2>Spearman Correlation</h2>
+<div id="model-1" class="section level3">
+<h3>Model</h3>
+<p>In some cases the <strong>LINE</strong> assumptions may not hold. Nonlinear
+relationships, non-normally distributed data ( with large outliers ) and
+working with <em>ordinal</em> rather than continuous data: these situations
+necessitate the use of Spearman’s <em>ranked</em> correlation scores.
+(<strong>Ranked</strong>, not <strong>sign-ranked</strong>.)</p>
+<p><span class="math display">\[
+rank(y) = \beta_0 + \beta_1 * rank(x) \\
+H_0: \beta_1 = 0
+\]</span></p>
+<p>Spearman correlation = Pearson correlation using the rank of the data
+observations. Let’s check how this holds for a our x and y data:</p>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;
+## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_Plot-1.png" width="672" /></p>
+<p>Slopes are almost identical, ~ 0.25.</p>
+</div>
+<div id="code-1" class="section level3">
+<h3>Code</h3>
+<pre><code>## # A tibble: 4 × 2
+##   estimate  p.value
+##      &lt;dbl&gt;    &lt;dbl&gt;
+## 1   -0.227 1.13e- 1
+## 2   -0.227 1.14e- 1
+## 3   31.3   9.11e-10
+## 4   -0.227 1.14e- 1</code></pre>
+<p>Notes:</p>
+<ol style="list-style-type: decimal">
+<li><p>When ranks are used, the slope of the linear model (<span class="math inline">\(\beta_1\)</span>) has
+the same value as the correlation coefficient ( <span class="math inline">\(\rho\)</span> ).</p></li>
+<li><p>Note that the slope from the linear model now has an intuitive
+interpretation: <strong>the number of ranks y changes for each change in
+rank of x</strong>. ( Ranks are “independent” of <code>sd</code> )</p></li>
+</ol>
+</div>
+<div id="example-1" class="section level3">
+<h3>Example</h3>
+<p>We examine the <code>cars93</code> data, where the numeric variables of interest
+are <code>weight</code> and <code>price</code>.</p>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_example_1-1.png" width="672" /></p>
+<p>Let us try a Spearman Correlation score for these variables, since the
+data are not linearly related and the variance of <code>price</code> also is not
+constant over <code>weight</code></p>
+<pre><code>## Warning in cor.test.default(x, y, ...): Cannot compute exact p-value with ties</code></pre>
+<pre><code>## # A tibble: 1 × 5
+##   estimate statistic  p.value method                          alternative
+##      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;                           &lt;chr&gt;      
+## 1    0.883     3074. 1.07e-18 Spearman&#39;s rank correlation rho two.sided</code></pre>
+<pre><code>## 
+## Call:
+## lm(formula = rank(price) ~ rank(weight), data = cars93)
+## 
+## Residuals:
+##      Min       1Q   Median       3Q      Max 
+## -20.0676  -3.0135   0.7815   3.6926  20.4099 
+## 
+## Coefficients:
+##              Estimate Std. Error t value Pr(&gt;|t|)    
+## (Intercept)   3.22074    2.05894   1.564    0.124    
+## rank(weight)  0.88288    0.06514  13.554   &lt;2e-16 ***
+## ---
+## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
+## 
+## Residual standard error: 7.46 on 52 degrees of freedom
+## Multiple R-squared:  0.7794, Adjusted R-squared:  0.7751 
+## F-statistic: 183.7 on 1 and 52 DF,  p-value: &lt; 2.2e-16</code></pre>
+<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_example_2-1.png" width="672" /></p>
+<p>We see that using ranks of the <code>price</code> variable, we obtain a Spearman’s
+<span class="math inline">\(\rho = 0.882\)</span> with a <code>p-value</code> that is very small. Hence we are able to
+reject the NULL hypothesis and state that there is a relationship
+between these two variables. The <strong>linear</strong> relationship is evaluated as
+a correlation of <code>0.882</code>.</p>
+</div>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+<p>Hopefully, interpreting Statistical Tests in terms of the Linear Model has benefits of improved intuitive understanding.</p>
+</div>
+</div>
