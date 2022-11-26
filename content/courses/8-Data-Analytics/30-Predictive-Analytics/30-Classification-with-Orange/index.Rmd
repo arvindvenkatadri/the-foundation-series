@@ -261,4 +261,5 @@ We will create a Random Forest Model for this dataset, and compare with the Desi
 
 4. *data.tree* sample applications, Christoph Glur, 2020-07-31. <https://cran.r-project.org/web/packages/data.tree/vignettes/applications.html>
 
+5. https://ryjohnson09.netlify.app/post/caret-and-tidymodels/
 

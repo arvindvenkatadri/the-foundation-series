@@ -70,7 +70,7 @@ The Course will culminate in a full **Business Analytics Workflow** that include
 
 1.  **Orange Data Mining** <https://orangedatamining.com/> Orange is a FOSS visual point-and-click software for Data Mining and ML, developed at the University of Slovenia, Ljubljana.
 
-{{< youtube HXjnDIgGDuI >}} 
+{{< youtube HXjnDIgGDuI >}}
 
 <br>
 

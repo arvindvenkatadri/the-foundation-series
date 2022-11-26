@@ -160,9 +160,9 @@ Download the Radiant Workflow statefile by clicking the icon above, and upload/o
 
 ```{r, echo=FALSE}
 download_file(
-  path = "files/distributions.txt",
-  output_extension = ".ows",
-  output_name = "Radiant Workflow",
+  path = "files/distributions.rda",
+  output_extension = ".rda",
+  output_name = "radiant-distributions",
   button_label = "Download Radiant Workflow",
   button_type = "danger",
   has_icon = TRUE,
@@ -199,10 +199,6 @@ download_file(
 - We can split all these plots on the basis of another Qualitative variable.(Ridge Plots are already split)
 
 
-## Conclusion
-
-Histograms and Frequency Density Plots are good intuitive choices to describe Quant variables. They are especially useful when we slie/facet them using other Qual variables. 
-
 ## Your Turn
 
 1. Try one of these datasets (download and unzip this file)  
@@ -215,13 +211,14 @@ download_file(path = "data/qdd-data.zip",
               has_icon = TRUE,
               icon = "fa fa-save",
               self_contained = FALSE)
-# banned %>% download_this(output_name = "banned",output_extension = ".csv", button_label = "Banned Books data", button_type = "default", icon = "fa fa-save")
+
 ```
 
 
 1. A dataset from calmcode.io <https://calmcode.io/datasets.html>  
 1. Old Faithful Data in R
 
+`inspect` the dataset in each case and develop a set of Questions, that can be answered by appropriate stat measures, or by using a chart to show the distribution.
 
 ## References
 

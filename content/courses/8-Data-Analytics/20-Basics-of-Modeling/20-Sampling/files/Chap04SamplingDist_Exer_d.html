@@ -1,0 +1,112 @@
+---
+title: "Chapter 4 Sampling Distribution-Exercises"
+author: "Chihara-Hesterberg"
+date: "December 2018"
+output: html_document
+---
+
+
+
+<p>###Exercise 4</p>
+<pre class="r"><code>pop &lt;- c(3, 5, 6, 6, 8, 11, 13, 15, 19, 20)
+N &lt;- 10^4
+Xbar &lt;- numeric(N)
+
+for (i in 1:N)
+{
+ samp &lt;- sample(pop, 4, replace = TRUE)
+ Xbar[i] &lt;- mean(samp)
+}
+
+ggplot() + geom_histogram(aes(Xbar), bins = 10)</code></pre>
+<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/Chap04SamplingDist_Exer_d_files/figure-html/unnamed-chunk-1-1.png" width="50%" /></p>
+<pre class="r"><code>mean(Xbar &lt; 11)</code></pre>
+<pre><code>## [1] 0.549</code></pre>
+<p>###Exercise 6</p>
+<pre class="r"><code>Recidivism &lt;- read.csv(&quot;http://sites.google.com/site/chiharahesterberg/data2/Recidivism.csv&quot;)
+ N &lt;- 10^4
+ phat &lt;- numeric(N)
+ n &lt;- 25
+
+ for (i in 1:N)
+ {
+  samp &lt;- sample(Recidivism$Recid, n)
+  phat[i] &lt;- mean(samp == &quot;Yes&quot;)
+ }
+
+#c)  change n &lt;- 250</code></pre>
+<p>###Exercise 19
+X1,X2,..X10 ~ N(20, 8^2), Y1, Y2,..Y15 ~ N(16,7^2)
+W = X + Y</p>
+<pre class="r"><code> W &lt;- numeric(1000)
+ set.seed(0)
+    for (i in 1:1000)
+    {
+       x &lt;- rnorm(10, 20, 8)  #draw 10 from N(20, 8^2)
+       y &lt;- rnorm(15, 16, 7)  #draw 15 from N(16, 7^2)
+       W[i] &lt;- mean(x) + mean(y) #save sum of means
+    }
+
+ ggplot() + geom_histogram(aes(W), bins = 12)</code></pre>
+<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/Chap04SamplingDist_Exer_d_files/figure-html/unnamed-chunk-3-1.png" width="50%" /></p>
+<pre class="r"><code> mean(W &lt; 40)</code></pre>
+<pre><code>## [1] 0.9</code></pre>
+<p>###Exercise 22</p>
+<pre class="r"><code>X &lt;- runif(1000, 40, 60)
+Y &lt;- runif(1000, 45, 80)
+
+total &lt;- X + Y
+
+ggplot() + geom_histogram(aes(total), bins = 12)</code></pre>
+<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/Chap04SamplingDist_Exer_d_files/figure-html/unnamed-chunk-4-1.png" width="50%" /></p>
+<p>###Exercise 33
+Finite population simulation</p>
+<pre class="r"><code>N &lt;- 400 # population size
+n &lt;- 5 # sample size
+
+finpop &lt;- rexp(N, 1/10) # Create a finite pop. of size N=400 from
+# Exp(1/10)
+ggplot() + geom_histogram(aes(finpop), bins = 12) # distribution of your finite pop.</code></pre>
+<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/Chap04SamplingDist_Exer_d_files/figure-html/unnamed-chunk-5-1.png" width="50%" /></p>
+<pre class="r"><code>mean(finpop) # mean (mu) of your pop.</code></pre>
+<pre><code>## [1] 10.52696</code></pre>
+<pre class="r"><code>sd(finpop) # stdev (sigma) of your pop.</code></pre>
+<pre><code>## [1] 10.98211</code></pre>
+<pre class="r"><code>sd(finpop)/sqrt(n) # theoretical standard error of sampling</code></pre>
+<pre><code>## [1] 4.911349</code></pre>
+<pre class="r"><code># dist. of mean(x), with replacement
+sd(finpop)/sqrt(n) * sqrt((N-n)/(N-1)) # without replacement</code></pre>
+<pre><code>## [1] 4.886669</code></pre>
+<pre class="r"><code>Xbar &lt;- numeric(1000)
+for (i in 1:1000)
+{
+x &lt;- sample(finpop, n) # Random sample of size n (w/o replacement)
+Xbar[i] &lt;- mean(x) # Find mean of sample, store in my.means
+}
+
+ggplot() + geom_histogram(aes(Xbar), bins = 12)</code></pre>
+<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/Chap04SamplingDist_Exer_d_files/figure-html/unnamed-chunk-5-2.png" width="50%" /></p>
+<pre class="r"><code>df &lt;- data.frame(Xbar)
+ggplot(df, aes(sample=Xbar)) + stat_qq() + stat_qq_line()</code></pre>
+<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/Chap04SamplingDist_Exer_d_files/figure-html/unnamed-chunk-5-3.png" width="50%" /></p>
+<pre class="r"><code>mean(Xbar)</code></pre>
+<pre><code>## [1] 10.75019</code></pre>
+<pre class="r"><code>sd(Xbar) # estimated standard error of sampling</code></pre>
+<pre><code>## [1] 5.102043</code></pre>
+<pre class="r"><code>             # distribution</code></pre>
+<p>###Exercise 34</p>
+<pre class="r"><code>W &lt;- numeric(1000)
+for (i in 1:1000)
+{
+x &lt;- rnorm(20, 25, 7)
+W[i] &lt;- var(x)
+}
+mean(W)</code></pre>
+<pre><code>## [1] 49.46759</code></pre>
+<pre class="r"><code>var(W)</code></pre>
+<pre><code>## [1] 247.7439</code></pre>
+<pre class="r"><code>ggplot() + geom_histogram(aes(W), bins = 10)</code></pre>
+<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/Chap04SamplingDist_Exer_d_files/figure-html/unnamed-chunk-6-1.png" width="50%" /></p>
+<pre class="r"><code>df &lt;- data.frame(W)
+ggplot(df, aes(sample = W)) + stat_qq() + stat_qq_line()</code></pre>
+<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/Chap04SamplingDist_Exer_d_files/figure-html/unnamed-chunk-6-2.png" width="50%" /></p>
