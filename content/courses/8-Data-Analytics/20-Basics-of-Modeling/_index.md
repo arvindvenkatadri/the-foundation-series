@@ -81,12 +81,12 @@ science, medicine, government, and commerce -- is **how you can
 legitimately draw conclusions about interventions from models based on
 data collected without performing these interventions.**
 
-## The Intent of Modelling
+### The Intent of Modelling
 
 From Daniel T. Kaplan's book:
 
-1.  Statistics is about variation. Describing and interpreting variation
-    is a major goal of statistics.
+1.  Statistics is about **variation**. Describing and interpreting
+    variation is a major goal of statistics.
 
 2.  You can create empirical, mathematical descriptions not only of a
     single trait or variable but also of the relationships between two
@@ -139,6 +139,22 @@ From Daniel T. Kaplan's book:
     actually possible to remove the dependence on identified subjective
     beliefs by intervening in the system under study experimentally.
 
+### Types of Models
+
+Let us look at the famous dataset pertaining to Francis Galton's work on
+the heights of children and the heights of their parents. We can create
+4 kinds of models based on the variables in that dataset.
+
+Our method in this set of modules is to take the modern view that *all*
+these models can be viewed from a standpoint of the *Linear Model*, also
+called *Linear Regression* \$ y = \beta_1 \times x + \beta_0 \$ . For
+example, it is relatively straightforward to imagine Plot B (Quant vs
+Quant ) as an example of a Linear Model. We will try to work up to the
+intuition that this model can be used to understand all the models in
+the Figure.
+
+![](Models.png)
+
 # References
 
 1.  Tihamér von Ghyczy, *The Fruitful Flaws of Strategy Metaphors*.
@@ -146,13 +162,17 @@ From Daniel T. Kaplan's book:
     <https://hbr.org/2003/09/the-fruitful-flaws-of-strategy-metaphors>
 
 2.  Daniel T. Kaplan, *Statistical Models (second edition)*. Available
-    online <https://dtkaplan.github.io/SM2-bookdown/>
+    online. <https://dtkaplan.github.io/SM2-bookdown/>
 
-3.  Daniel T. Kaplan and Frank Shaw, *Statistical Modeling:
+3.  Daniel T. Kaplan, *Compact Introduction to Classical
+    Inference*, 2020. Available Online.
+    <https://dtkaplan.github.io/CompactInference/>
+
+4.  Daniel T. Kaplan and Frank Shaw, *Statistical Modeling:
     Computational Technique*. Available online
     <https://www.mosaic-web.org/go/SM2-technique/>
 
-4.  Jonas Kristoffer Lindeløv, Common statistical tests are linear
+5.  Jonas Kristoffer Lindeløv, Common statistical tests are linear
     models (or: how to teach stats)
     <https://lindeloev.github.io/tests-as-linear/>
 
