@@ -15,8 +15,16 @@ library(ggplot2)
 ##Exercises
 
 ###Exercise 7
+LaGuardia Airport (LGA) is one of three major airports that serves the
+New York City metropolitan area. In 2008, over 23 million passengers and
+over 375 000 planes flew in or out of LGA. United Airlines and American
+Airlines are two major airlines that schedule services at LGA. The data set
+FlightDelays contains information on all 4029 departures of these two
+airlines from LGA during May and June 2009.
+
 ```{r}
 FlightDelays <- read.csv("http://sites.google.com/site/chiharahesterberg/data2/FlightDelays.csv")
+```
 
 N<-10^4-1
 UA.Delay <- FlightDelays %>% filter(Carrier == "UA") %>% pull(Delay)

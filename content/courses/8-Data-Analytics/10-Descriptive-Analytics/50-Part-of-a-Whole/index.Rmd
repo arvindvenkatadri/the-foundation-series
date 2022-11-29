@@ -7,6 +7,7 @@ weight: 50
 summary: "Slices, Portions, Counts, and Aggregates of Data"
 tags:
 - Pie Charts
+- Fan Charts
 - Mosaic Charts
 - Venn Diagrams
 - Tree Charts and Dendrograms
@@ -35,7 +36,7 @@ url_video: ""
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(blogdown)
-
+library(plotrix) # Fan, Parliament
 ```
 
 ## An Example

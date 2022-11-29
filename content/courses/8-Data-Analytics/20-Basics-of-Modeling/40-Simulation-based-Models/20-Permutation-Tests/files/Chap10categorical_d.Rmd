@@ -56,6 +56,7 @@ str(GSS2002)
 df <- GSS2002 %>% 
        select(Education, DeathPenalty) %>% 
        filter(!is.na(Education) & !is.na(DeathPenalty))
+dim(df)
 
 Education <- pull(df, Education)
 DeathPenalty <- pull(df, DeathPenalty)

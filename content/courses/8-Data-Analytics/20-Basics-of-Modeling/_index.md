@@ -90,8 +90,8 @@ From Daniel T. Kaplan's book:
 
 2.  You can create empirical, mathematical descriptions not only of a
     single trait or variable but also of the relationships between two
-    or more traits. Empirical means based on measurements, data,
-    observations.
+    or more traits. (Empirical means based on measurements, data,
+    observations.)
 
 3.  Models let you split variation into components: "explained" versus
     "unexplained." How to measure the size of these components and how
@@ -153,7 +153,18 @@ Quant ) as an example of a Linear Model. We will try to work up to the
 intuition that this model can be used to understand all the models in
 the Figure.
 
-![](Models.png)
+## Degrees of Freedom
+
+## Effect Size
+
+An *effect size* tells how the output of a model changes when a simple
+change is made to the input.
+
+Effect sizes always involve two variables: a response variable and a
+single explanatory variable. Effect size is always about a *model*. The
+model might have one explanatory variable or many explanatory variables.
+Each explanatory variable will have its own effect size, so a model with
+multiple explanatory variables will have multiple effect sizes.
 
 # References
 

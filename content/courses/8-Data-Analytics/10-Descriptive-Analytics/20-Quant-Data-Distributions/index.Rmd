@@ -204,7 +204,7 @@ download_file(
 1. Try one of these datasets (download and unzip this file)  
 
 ```{r,echo=FALSE}
-download_file(path = "data/qdd-data.zip",
+download_file(path = "files/data/qdd-data.zip",
               output_name = "qdd-data",
               button_label = "Download .zip file of data",
               button_type = "danger",

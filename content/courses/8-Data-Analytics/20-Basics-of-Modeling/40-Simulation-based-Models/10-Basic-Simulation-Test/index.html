@@ -2,7 +2,7 @@
 title: 'Simulation Tests'
 author: "Arvind Venkatadri"
 subtitle: "What is meant by a Simulation Test"
-date: "2022-11-25"
+date: "2022-11-27"
 view: 2
 type: page
 weight: 10
@@ -70,10 +70,10 @@ url_video: ""
 </blockquote>
 <pre><code>## heads
 ##    0    1    2    3    4    5    6    7    8    9   10 
-##    5   92  442 1166 2057 2435 2057 1131  501  103   11</code></pre>
+##    8  121  463 1167 2036 2410 2064 1197  446   79    9</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
-<p>So what do we conclude? It is possible that the lady could get 9 or 10 correct just by guessing, but it is not very likely (it only happened in about 3% of our simulations). So one of two things must be true:
-• The lady got unusually "lucky”, or
+<p>So what do we conclude? It is possible that the lady could get 9 or 10 correct just by guessing, but it is not very likely (it only happened in about 3% of our simulations). So one of two things must be true:<br />
+• The lady got unusually "lucky”, or<br />
 • The lady is not just guessing</p>
 </div>
 </div>
@@ -91,58 +91,21 @@ url_video: ""
 </div>
 <div id="workflow-in-orange" class="section level2">
 <h2>Workflow in Orange</h2>
+<a onclick="fetch(&#39;data:text/x-markdown;base64,LS0tDQp0aXRsZTogInNpbXVsYXRpb24iDQphdXRob3I6ICJBcnZpbmQgVmVua2F0YWRyaSINCmRhdGU6ICdgciBTeXMuRGF0ZSgpYCcNCm91dHB1dDoNCiAgaHRtbF9kb2N1bWVudDoNCiAgICB0aGVtZTogZmxhdGx5DQogICAgdG9jOiBUUlVFDQogICAgdG9jX2Zsb2F0OiBUUlVFDQogICAgdG9jX2RlcHRoOiAyDQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogICAgbnVtYmVyX3NlY3Rpb25zOiBUUlVFDQogICAgY29kZV9mb2xkaW5nOiBoaWRlDQogICAgY29kZV9kb3dubG9hZDogVFJVRQ0KZWRpdG9yX29wdGlvbnM6IA0KICBtYXJrZG93bjogDQogICAgd3JhcDogNzINCi0tLQ0KDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkNCmxpYnJhcnkobW9zYWljKQ0KbGlicmFyeShtb3NhaWNEYXRhKQ0KYGBgDQoNCiMgSW50cm9kdWN0aW9uDQoNCkluIHRoaXMgbW9kdWxlIHdlIHdpbGwgdXNlIHNpbXVsYXRpb24gdG8gc29sdmUgc2V2ZXJhbCBwcm9ibGVtcyBpbiBCdXNpbmVzcyBEZWNpc2lvbiBNYWtpbmcuIA0KDQoNCiMjIENhc2UgU3R1ZHktMQ0KDQo=&#39;).then(res =&gt; res.blob()).then(blob =&gt; {&#10;      const downloadURL = window.URL.createObjectURL(blob);&#10;      const a = document.createElement(&#39;a&#39;);&#10;      document.body.appendChild(a);&#10;      a.href = downloadURL;&#10;      a.download = &#39;simulation.Rmd&#39;; a.click();&#10;      window.URL.revokeObjectURL(downloadURL);&#10;      document.body.removeChild(a);&#10;    });">
+<button class="btn btn-danger" output_extension=".ows"><i class="fa fa-save"></i> Download simulation Workflow for Orange</button>
+</a>
 </div>
 <div id="workflow-in-radiant" class="section level2">
 <h2>Workflow in Radiant</h2>
+<a onclick="fetch(&#39;data:text/x-markdown;base64,LS0tDQp0aXRsZTogInNpbXVsYXRpb24iDQphdXRob3I6ICJBcnZpbmQgVmVua2F0YWRyaSINCmRhdGU6ICdgciBTeXMuRGF0ZSgpYCcNCm91dHB1dDoNCiAgaHRtbF9kb2N1bWVudDoNCiAgICB0aGVtZTogZmxhdGx5DQogICAgdG9jOiBUUlVFDQogICAgdG9jX2Zsb2F0OiBUUlVFDQogICAgdG9jX2RlcHRoOiAyDQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogICAgbnVtYmVyX3NlY3Rpb25zOiBUUlVFDQogICAgY29kZV9mb2xkaW5nOiBoaWRlDQogICAgY29kZV9kb3dubG9hZDogVFJVRQ0KZWRpdG9yX29wdGlvbnM6IA0KICBtYXJrZG93bjogDQogICAgd3JhcDogNzINCi0tLQ0KDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkNCmxpYnJhcnkobW9zYWljKQ0KbGlicmFyeShtb3NhaWNEYXRhKQ0KYGBgDQoNCiMgSW50cm9kdWN0aW9uDQoNCkluIHRoaXMgbW9kdWxlIHdlIHdpbGwgdXNlIHNpbXVsYXRpb24gdG8gc29sdmUgc2V2ZXJhbCBwcm9ibGVtcyBpbiBCdXNpbmVzcyBEZWNpc2lvbiBNYWtpbmcuIA0KDQoNCiMjIENhc2UgU3R1ZHktMQ0KDQo=&#39;).then(res =&gt; res.blob()).then(blob =&gt; {&#10;      const downloadURL = window.URL.createObjectURL(blob);&#10;      const a = document.createElement(&#39;a&#39;);&#10;      document.body.appendChild(a);&#10;      a.href = downloadURL;&#10;      a.download = &#39;simulation.Rmd&#39;; a.click();&#10;      window.URL.revokeObjectURL(downloadURL);&#10;      document.body.removeChild(a);&#10;    });">
+<button class="btn btn-danger" output_extension=".Rmd"><i class="fa fa-save"></i> Download simulation Workflow for Radiant</button>
+</a>
 </div>
 <div id="workflow-in-r" class="section level2">
 <h2>Workflow in R</h2>
 <p>In R, the easiest way to perform Simulation Tests is to use a package called <code>mosaic</code>. See <a href="http://www.mosaic-web.org/">Project MOSAIC</a>.</p>
 <p>Please download the embedded file linked below and upload into RStudio.Cloud.</p>
-<style type="text/css">
-/* from https://ianlunn.github.io/Hover/ */
-.hvr-sweep-to-left {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-.hvr-sweep-to-left:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: #2098D1;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 100% 50%;
-  transform-origin: 100% 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-.hvr-sweep-to-left:hover, .hvr-sweep-to-left:focus, .hvr-sweep-to-left:active {
-  color: white;
-}
-.hvr-sweep-to-left:hover:before, .hvr-sweep-to-left:focus:before, .hvr-sweep-to-left:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-</style>
-<a onclick="fetch(&#39;data:text/x-markdown;base64,LS0tDQp0aXRsZTogInNpbXVsYXRpb24iDQphdXRob3I6ICJBcnZpbmQgVmVua2F0YWRyaSINCmRhdGU6ICdgciBTeXMuRGF0ZSgpYCcNCm91dHB1dDogaHRtbF9kb2N1bWVudA0KLS0tDQoNCmBgYHtyIHNldHVwLCBpbmNsdWRlPUZBTFNFfQ0Ka25pdHI6Om9wdHNfY2h1bmskc2V0KGVjaG8gPSBUUlVFKQ0KbGlicmFyeShtb3NhaWMpDQpsaWJyYXJ5KG1vc2FpY0RhdGEpDQpgYGANCg0KIyMgUiBNYXJrZG93bg0KDQpUaGlzIGlzIGFuIFIgTWFya2Rvd24gZG9jdW1lbnQuIE1hcmtkb3duIGlzIGEgc2ltcGxlIGZvcm1hdHRpbmcgc3ludGF4IGZvciBhdXRob3JpbmcgSFRNTCwgUERGLCBhbmQgTVMgV29yZCBkb2N1bWVudHMuIEZvciBtb3JlIGRldGFpbHMgb24gdXNpbmcgUiBNYXJrZG93biBzZWUgPGh0dHA6Ly9ybWFya2Rvd24ucnN0dWRpby5jb20+Lg0KDQpXaGVuIHlvdSBjbGljayB0aGUgKipLbml0KiogYnV0dG9uIGEgZG9jdW1lbnQgd2lsbCBiZSBnZW5lcmF0ZWQgdGhhdCBpbmNsdWRlcyBib3RoIGNvbnRlbnQgYXMgd2VsbCBhcyB0aGUgb3V0cHV0IG9mIGFueSBlbWJlZGRlZCBSIGNvZGUgY2h1bmtzIHdpdGhpbiB0aGUgZG9jdW1lbnQuIFlvdSBjYW4gZW1iZWQgYW4gUiBjb2RlIGNodW5rIGxpa2UgdGhpczoNCg0KYGBge3IgY2Fyc30NCnN1bW1hcnkoY2FycykNCmBgYA0KDQojIyBJbmNsdWRpbmcgUGxvdHMNCg0KWW91IGNhbiBhbHNvIGVtYmVkIHBsb3RzLCBmb3IgZXhhbXBsZToNCg0KYGBge3IgcHJlc3N1cmUsIGVjaG89RkFMU0V9DQpwbG90KHByZXNzdXJlKQ0KYGBgDQoNCk5vdGUgdGhhdCB0aGUgYGVjaG8gPSBGQUxTRWAgcGFyYW1ldGVyIHdhcyBhZGRlZCB0byB0aGUgY29kZSBjaHVuayB0byBwcmV2ZW50IHByaW50aW5nIG9mIHRoZSBSIGNvZGUgdGhhdCBnZW5lcmF0ZWQgdGhlIHBsb3QuDQo=&#39;).then(res =&gt; res.blob()).then(blob =&gt; {&#10;      const downloadURL = window.URL.createObjectURL(blob);&#10;      const a = document.createElement(&#39;a&#39;);&#10;      document.body.appendChild(a);&#10;      a.href = downloadURL;&#10;      a.download = &#39;simulation.Rmd&#39;; a.click();&#10;      window.URL.revokeObjectURL(downloadURL);&#10;      document.body.removeChild(a);&#10;    });">
+<a onclick="fetch(&#39;data:text/x-markdown;base64,LS0tDQp0aXRsZTogInNpbXVsYXRpb24iDQphdXRob3I6ICJBcnZpbmQgVmVua2F0YWRyaSINCmRhdGU6ICdgciBTeXMuRGF0ZSgpYCcNCm91dHB1dDoNCiAgaHRtbF9kb2N1bWVudDoNCiAgICB0aGVtZTogZmxhdGx5DQogICAgdG9jOiBUUlVFDQogICAgdG9jX2Zsb2F0OiBUUlVFDQogICAgdG9jX2RlcHRoOiAyDQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogICAgbnVtYmVyX3NlY3Rpb25zOiBUUlVFDQogICAgY29kZV9mb2xkaW5nOiBoaWRlDQogICAgY29kZV9kb3dubG9hZDogVFJVRQ0KZWRpdG9yX29wdGlvbnM6IA0KICBtYXJrZG93bjogDQogICAgd3JhcDogNzINCi0tLQ0KDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkNCmxpYnJhcnkobW9zYWljKQ0KbGlicmFyeShtb3NhaWNEYXRhKQ0KYGBgDQoNCiMgSW50cm9kdWN0aW9uDQoNCkluIHRoaXMgbW9kdWxlIHdlIHdpbGwgdXNlIHNpbXVsYXRpb24gdG8gc29sdmUgc2V2ZXJhbCBwcm9ibGVtcyBpbiBCdXNpbmVzcyBEZWNpc2lvbiBNYWtpbmcuIA0KDQoNCiMjIENhc2UgU3R1ZHktMQ0KDQo=&#39;).then(res =&gt; res.blob()).then(blob =&gt; {&#10;      const downloadURL = window.URL.createObjectURL(blob);&#10;      const a = document.createElement(&#39;a&#39;);&#10;      document.body.appendChild(a);&#10;      a.href = downloadURL;&#10;      a.download = &#39;simulation.Rmd&#39;; a.click();&#10;      window.URL.revokeObjectURL(downloadURL);&#10;      document.body.removeChild(a);&#10;    });">
 <button class="btn btn-danger" output_extension=".Rmd"><i class="fa fa-save"></i> Download simulation code in R</button>
 </a>
 </div>
@@ -153,6 +116,7 @@ url_video: ""
 <h2>References</h2>
 <p>[^1]. R.A. Fisher. <em>Statistical Methods for Research Workers</em>. Oliver &amp; Boyd, 1925</p>
 <ol style="list-style-type: decimal">
+<li><p>Laura Chihara, Tim Hesterberg, <em>Mathematical Statistics with Resampling and R</em>, Wiley, 2019.</p></li>
 <li><p><a href="https://timesofindia.indiatimes.com/sports/cricket/icc-mens-t20-world-cup/in-numbers-virat-kohli-and-his-strange-luck-with-the-coin-toss/articleshow/87538443.cms" class="uri">https://timesofindia.indiatimes.com/sports/cricket/icc-mens-t20-world-cup/in-numbers-virat-kohli-and-his-strange-luck-with-the-coin-toss/articleshow/87538443.cms</a></p></li>
 <li><p>D. Salsburg. <em>The Lady Tasting Tea: How statistics revolutionized science in the twentieth century.</em> W.H. Freeman, New York, 2001</p></li>
 </ol>

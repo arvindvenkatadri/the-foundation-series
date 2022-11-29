@@ -105,7 +105,7 @@ Recall that:
 
 -   The optimum in an LP problem is found **on** the boundary, at one of
     the vertices
--   At each of these vertices on or more constraints ($C1::C_n$) is
+-   At each of these vertices one or more constraints ($C1::C_n$) is
     *tight*, i.e. there is no slack.
 
 ## Procedure
@@ -154,7 +154,7 @@ $$
     $$ As in Step 2, we substitute this equation $\hat C3$ into the
     other two constraints, $C1$ and $C2$: $$
     \begin{cases}
-    C1: -3\times \frac{90 - 10x_2}{9} + 2x_2 = 3 \ => x_2 = 6.18\ Point\ G\\
+    C1: -3\times \frac{90 - 10x_2}{9} + 2x_2 = 3 \ => x_2 = 6.18\ Point\ K\\
      {\mathbf{ \color{lightgreen}{C2}: 2\times \frac{90 - 10x_2}{9}+ 4x_2 = 27 => x_2 = 3.93\ \color{lightgreen}{Point\ C}}}
     \end{cases}
     $$ As before we choose the smaller of the two intercepts, so
@@ -177,7 +177,7 @@ $$
     other constraint, the only remaining $C1$: $$
     {\mathbf C1: -3\times \frac{27 - 4x_2}{2} + 2x_2 = 3 \ => x_2 = 5.44\ Point\ D\\}
     $$ Calculating for $x_1$, we get point $C(2.63, 5.44)$. At this
-    point the objective function has improved to: $$
+    point the objective function has ~~improved~~ decreased to: $$
     7.75\times 2.63 + 10\times 5.44 = 74.8\ at\ Point\ D
     $$ Since this value for the Objective function is **smaller** than
     that at the previous point, our search terminates and we decide that
