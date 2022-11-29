@@ -74,12 +74,13 @@ Let us get an actual experience of TRIZ methods with these short videos:
 ## A TRIZ Workflow
 
 We have seen  
+
 - How to examine a Situation  
 - Use the Ishikawa Diagram to find Knobs and Settings
 - Find one or more Administrative Contradictions  
 - State the Ideal Final Result  
-- Convert the AC into a TC with 39 TRIZ Parameters 
-- (Convert the AC into a PC)
+- Convert the AC into a TC with 39 TRIZ Parameters  
+- (Convert the AC into a PC)  
 
 Now we will use the TC and find out solutions for it using what is called the **Contradiction Matrix**. Here is a workflow presentation below:  
 

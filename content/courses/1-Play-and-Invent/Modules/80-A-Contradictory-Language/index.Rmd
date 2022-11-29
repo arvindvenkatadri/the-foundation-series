@@ -167,19 +167,21 @@ Some examples:
 - TRIZ Inventive Principles: `Asymmetry`, `Parameter Change` and `The Other Way Around`. 
 
 So the task is:  
+
 - Take your *Administrative Contradiction (AC)*  
-- Convert "each side" (i.e terms) of the AC into a TRIZ *Technical Contradiction* by using a pair of the *48 TRIZ Parameters*. 
-- Make sure that you are able to justify to yourself the **metaphorical connection** between the terms of AC and the chosen pair of TRIZ Parameters. For example, *"Loss of substance"* could mean *"loss of money"*!! Write this down, for both sides of your AC.  
+- Convert "each side" (i.e terms) of the AC into a TRIZ *Technical Contradiction* by using a pair of the *48 TRIZ Parameters*.   
+- Make sure that you are able to justify to yourself the **metaphorical connection** between the terms of AC and the chosen pair of TRIZ Parameters. For example, *"Loss of substance"* could mean *"loss of money"*!! Write this down, for both sides of your AC.    
 - We may be able to also create a *Physical Contradiction* at this time, when we are examining the Ishikawa knobs.
 
 ## Some Contradiction Examples
 
 *TC Examples*:  
-- Increasing the power of an engine (positive improvement) requires an increase in the size of the engine (negative effect). So, an inventor considers increasing the power partially in order to reduce the negative effect (compromise solution). 
+
+- Increasing the power of an engine (positive improvement) requires an increase in the size of the engine (negative effect). So, an inventor considers increasing the power partially in order to reduce the negative effect (compromise solution).  
 - To increase the speed of an airplane, a new and more powerful engine is installed. This increases the weight of the airplane so the wings can no longer support it during takeoff. Increasing the wing size produces more drag, slowing the airplane down.
 
 
-```{r,echo=FALSE, eval=FALSE}
+```{r,echo=FALSE, eval=FALSE,warning=FALSE}
 library(ggplot2)
 library(ggtext)
 eq = function(x){(x-25)*(x-25)}
@@ -274,7 +276,7 @@ ggplot(data, aes(x = x)) +
     axis.text.y = element_blank(),
     axis.text.x = element_blank(),
     axis.title = element_text(size = 18),
-    axis.line = element_line(arrow = arrow(), size = 1),
+    axis.line = element_line(arrow = arrow(), linewidth = 1),
     panel.grid = element_blank(),
     
     plot.title = element_text(
@@ -294,6 +296,7 @@ ggplot(data, aes(x = x)) +
 
 ```
 *PC Examples*:  
+
 - Landing gear must be present on an airplane in order to land and takeoff. It should not be present during flight because of an increase in air drag. The physical contradiction is that **the landing gear must be both present and absent**. This contradiction is resolved by separating the requirements in time — make the landing gear retractable.   
 
 - For high water diving, water must be “hard” to support the diver and “soft” so as not to injure the diver. The physical contradiction: **The water must be hard and soft at the same time**. This contradiction is resolved by separating the requirements in space: Saturate the water with air bubbles — the pool contains both air and water.   
