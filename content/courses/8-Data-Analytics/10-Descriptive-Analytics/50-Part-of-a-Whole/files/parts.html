@@ -1,0 +1,421 @@
+---
+title: "Part of a Whole in R"
+author: "Arvind Venkatadri"
+date: "2022-12-02"
+output:
+  html_document:
+    theme: flatly
+    toc: TRUE
+    toc_float: TRUE
+    toc_depth: 2
+    df_print: paged
+    number_sections: TRUE
+    code_folding: hide
+    code_download: TRUE
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>We will create Data Visualizations in R to show Parts ofa Whole. As always, we will consistently use the <a href="https://mosaic-web.org"><strong>Project Mosaic</strong></a>
+ecosystem of packages in R (<code>mosaic</code>, <code>mosaicData</code> and <code>ggformula</code>).
+Some specialized plots ( e.g. Fan Plots) may require us to load other R Packages. These will be introduced appropriately.</p>
+<div id="note" class="illustration" style="background: beige">
+<p>Recall the standard method for all commands from the <code>mosaic</code> package:</p>
+<p>goal( y ~ x | z, data = mydata, …)</p>
+</div>
+<div id="case-study--1-greenhouse-gas-by-industry" class="section level2">
+<h2>Case Study -1: Greenhouse Gas by Industry</h2>
+<p>I have downloaded this data from Our World in Data: <a href="https://ourworldindata.org/ghg-emissions-by-sector" class="uri">https://ourworldindata.org/ghg-emissions-by-sector</a></p>
+<p>Let us inspect import this data and inspect it:</p>
+<pre class="r"><code>ghg &lt;- readxl::read_xlsx(&quot;data/Global-GHG-Emissions-by-sector-based-on-WRI-2020.xlsx&quot;)
+inspect(ghg)
+#&gt; 
+#&gt; categorical variables:  
+#&gt;         name     class levels  n missing                                  distribution
+#&gt; 1 Sub-sector character     29 29       0 Agricultural Soils (3.4%) ...                
+#&gt; 
+#&gt; quantitative variables:  
+#&gt;                                           name   class min  Q1 median  Q3  max     mean       sd  n missing
+#&gt; 1 Share of global greenhouse gas emissions (%) numeric 0.1 1.3    1.9 4.1 11.9 3.448276 3.370314 29       0</code></pre>
+<p>Hmm…The names of the columns are bit unwieldy, so let’s clean them up:</p>
+<pre class="r"><code>ghg &lt;- readxl::read_xlsx(&quot;data/Global-GHG-Emissions-by-sector-based-on-WRI-2020.xlsx&quot;) %&gt;% 
+  janitor::clean_names() %&gt;% 
+  dplyr::rename(&quot;share&quot; = share_of_global_greenhouse_gas_emissions_percent) %&gt;% 
+  mutate(sub_sector = as_factor(sub_sector))
+inspect(ghg)
+#&gt; 
+#&gt; categorical variables:  
+#&gt;         name  class levels  n missing                                  distribution
+#&gt; 1 sub_sector factor     29 29       0 Road (3.4%), Aviation (3.4%) ...             
+#&gt; 
+#&gt; quantitative variables:  
+#&gt;    name   class min  Q1 median  Q3  max     mean       sd  n missing
+#&gt; 1 share numeric 0.1 1.3    1.9 4.1 11.9 3.448276 3.370314 29       0</code></pre>
+<p>This is a simple pre-aggregated dataset, with one categorical column and one numerical column, perfectly suited to plotting Pies and Fans. We will use this variable to plot a Pie chart and the much better Fan chart.</p>
+<pre class="r"><code>pie(ghg$share,labels = ghg$sub_sector,main = &quot;Greenhouse Emissions by Industry&quot;)</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-4-1.png" width="672" />
+Clearly this is messy…we will take the top 8 industries by emission and <code>lump</code> the rest into an <code>other</code> category:</p>
+<pre class="r"><code>
+ghg &lt;- ghg %&gt;% mutate(sub_sector = fct_lump(sub_sector, prop = 0.1))
+ghg
+#&gt; # A tibble: 29 × 2
+#&gt;   sub_sector share
+#&gt;   &lt;fct&gt;      &lt;dbl&gt;
+#&gt; 1 Other       11.9
+#&gt; 2 Other        1.9
+#&gt; 3 Other        0.4
+#&gt; 4 Other        0.3
+#&gt; # … with 25 more rows
+pie(ghg$share,labels = ghg$sub_sector,main = &quot;Greenhouse Emissions by Industry&quot;)</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<div id="stat-summaries" class="section level3">
+<h3>Stat Summaries</h3>
+<p>As Stigler said, <strong>summaries</strong> are the first thing to look at in data.
+Let us tabulate some quick stat summaries of the important variables in
+<code>Galton</code>:</p>
+<pre class="r"><code>favstats(~ height, data = Galton)
+#&gt;  min Q1 median   Q3 max     mean       sd   n missing
+#&gt;   56 64   66.5 69.7  79 66.76069 3.582918 898       0
+favstats(~ height | sex, data = Galton)
+#&gt;   sex min   Q1 median   Q3  max     mean       sd   n missing
+#&gt; 1   F  56 62.5   64.0 65.5 70.5 64.11016 2.370320 433       0
+#&gt; 2   M  60 67.5   69.2 71.0 79.0 69.22882 2.631594 465       0</code></pre>
+<p>Q.1 How many families in the data for each value of <code>nkids</code>?</p>
+<pre class="r"><code>tally(~ nkids, data = Galton)
+#&gt; nkids
+#&gt;   1   2   3   4   5   6   7   8   9  10  11  15 
+#&gt;  32  40  66 116 140 114 112 128  63  40  32  15</code></pre>
+<p>Q.2. What is the break-up by <code>sex</code> of the child?</p>
+<pre class="r"><code>tally(~ nkids | sex, data = Galton)
+#&gt;      sex
+#&gt; nkids  F  M
+#&gt;    1  15 17
+#&gt;    2  18 22
+#&gt;    3  31 35
+#&gt;    4  48 68
+#&gt;    5  61 79
+#&gt;    6  57 57
+#&gt;    7  61 51
+#&gt;    8  61 67
+#&gt;    9  32 31
+#&gt;    10 24 16
+#&gt;    11 17 15
+#&gt;    15  8  7</code></pre>
+</div>
+<div id="distribution-plots" class="section level3">
+<h3>Distribution Plots</h3>
+<p>What Questions might we have, that we could answer with a Distribution?</p>
+<p>Q.1 How many families based on the number of children?</p>
+<pre class="r"><code>
+# Convert the tally into a dataframe. See the difference!
+family_count &lt;- tally( ~ nkids | sex, data = Galton) %&gt;% 
+  as_tibble() %&gt;% 
+  
+  # Convert nkids from char to int
+  mutate( nkids = as.integer(nkids))
+family_count
+#&gt; # A tibble: 24 × 3
+#&gt;   nkids sex       n
+#&gt;   &lt;int&gt; &lt;chr&gt; &lt;int&gt;
+#&gt; 1     1 F        15
+#&gt; 2     2 F        18
+#&gt; 3     3 F        31
+#&gt; 4     4 F        48
+#&gt; # … with 20 more rows
+gf_col(n ~ nkids | sex, data = family_count, fill = ~ sex, ylab = &quot;Number of Families&quot;, xlab = &quot;Number of Kids / Family&quot;)</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p>Q.2: How are the children’s heights distributed?</p>
+<pre class="r"><code>gf_histogram(~ height, data = Galton) %&gt;% 
+  gf_vline(xintercept = mean(Galton$height))</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p>Q.3: Is there a difference in height distributions between Male and Female children?</p>
+<pre class="r"><code>measures &lt;- favstats(~ height | sex, data = Galton)
+measures
+#&gt;   sex min   Q1 median   Q3  max     mean       sd   n missing
+#&gt; 1   F  56 62.5   64.0 65.5 70.5 64.11016 2.370320 433       0
+#&gt; 2   M  60 67.5   69.2 71.0 79.0 69.22882 2.631594 465       0
+
+gf_histogram(~ height | sex, data = Galton) %&gt;% 
+  gf_vline(xintercept = ~ mean, data = measures)</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p>Q.4: Are Mothers generally shorter than fathers?</p>
+<pre class="r"><code>gf_density(~ father, data = Galton, fill = &quot;blue&quot;, alpha = 0.3) %&gt;% 
+  gf_density( ~ mother, data = Galton, fill = &quot;red&quot;, alpha = 0.3, xlab = &quot;Heights&quot;)
+#&gt; Warning: `stat(density)` was deprecated in ggplot2 3.4.0.
+#&gt; ℹ Please use `after_stat(density)` instead.</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-12-1.png" width="672" /></p>
+<p>Q.5: Are heights of children different based on the number of kids in the family? For Male and Female children?</p>
+<pre class="r"><code>gf_boxplot(height ~ sex | nkids, data = Galton)</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p>Q.6: Does the <strong>mean</strong> height of children in a family vary with the number of children in the family? ( family size)</p>
+<pre class="r"><code>mean( height ~ sex | nkids, data = Galton) %&gt;% as_tibble() # not very inspiring!
+#&gt; # A tibble: 36 × 1
+#&gt;   value
+#&gt;   &lt;dbl&gt;
+#&gt; 1  64.3
+#&gt; 2  68.8
+#&gt; 3  63.9
+#&gt; 4  68.8
+#&gt; # … with 32 more rows
+by_sex_nkids &lt;- favstats( height ~ sex + nkids, data = Galton)
+by_sex_nkids # much better!
+#&gt;    sex.nkids  min     Q1 median     Q3  max     mean       sd  n missing
+#&gt; 1        F.1 60.0 62.600  64.00 65.600 69.5 64.32667 2.423535 15       0
+#&gt; 2        M.1 64.5 67.000  69.00 70.000 75.0 68.84706 2.631330 17       0
+#&gt; 3        F.2 57.0 62.250  64.50 65.425 68.0 63.92222 2.753726 18       0
+#&gt; 4        M.2 66.0 67.125  68.75 70.925 73.0 68.83182 2.075798 22       0
+#&gt; 5        F.3 60.0 63.000  64.50 67.100 70.5 64.89677 2.650344 31       0
+#&gt; 6        M.3 64.0 68.000  70.50 71.750 73.0 69.66286 2.589354 35       0
+#&gt; 7        F.4 60.0 63.000  64.50 66.000 69.2 64.45000 2.535703 48       0
+#&gt; 8        M.4 63.0 67.000  69.00 71.000 73.5 69.05441 2.500115 68       0
+#&gt; 9        F.5 60.0 62.500  64.00 65.500 68.0 63.97213 2.004173 61       0
+#&gt; 10       M.5 64.0 68.500  70.00 71.500 78.0 69.94684 2.477428 79       0
+#&gt; 11       F.6 60.5 63.000  64.50 66.000 70.5 64.59298 2.281906 57       0
+#&gt; 12       M.6 62.5 67.700  69.70 72.000 76.5 69.63158 2.798479 57       0
+#&gt; 13       F.7 56.0 62.000  64.00 65.200 69.0 63.65902 2.309933 61       0
+#&gt; 14       M.7 60.0 68.000  70.00 70.700 79.0 69.37255 2.940141 51       0
+#&gt; 15       F.8 57.5 62.000  63.50 66.000 70.0 63.95574 2.547190 61       0
+#&gt; 16       M.8 64.5 67.000  69.00 70.500 74.0 69.02687 2.483923 67       0
+#&gt; 17       F.9 59.0 62.000  64.00 65.000 69.0 63.94375 2.326140 32       0
+#&gt; 18       M.9 63.0 68.000  69.20 70.200 73.0 68.69677 2.702281 31       0
+#&gt; 19      F.10 61.0 63.000  65.00 65.000 66.0 64.18750 1.538015 24       0
+#&gt; 20      M.10 63.0 64.925  67.50 69.250 75.0 67.54375 3.178672 16       0
+#&gt; 21      F.11 62.0 63.000  63.70 66.000 69.2 64.32353 1.964857 17       0
+#&gt; 22      M.11 66.5 68.250  69.00 70.500 73.0 69.41333 1.818110 15       0
+#&gt; 23      F.15 57.0 59.500  61.50 63.250 65.0 61.25000 2.815772  8       0
+#&gt; 24      M.15 65.0 65.600  66.00 66.750 68.0 66.24286 1.014655  7       0</code></pre>
+<pre class="r"><code>gf_col(mean ~ sex.nkids, data = by_sex_nkids)</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p>Hmm…not a <em>very</em> informative plot…</p>
+</div>
+</div>
+<div id="case-study-2-dataset-from-nhanes" class="section level2">
+<h2>Case Study-2: Dataset from <code>NHANES</code></h2>
+<p>Let us try the <code>NHANES</code> dataset. Try <code>help(NHANES)</code> in your Console.</p>
+<pre class="r"><code>data(&quot;NHANES&quot;)
+names(NHANES)
+#&gt;  [1] &quot;ID&quot;               &quot;SurveyYr&quot;         &quot;Gender&quot;           &quot;Age&quot;              &quot;AgeDecade&quot;        &quot;AgeMonths&quot;       
+#&gt;  [7] &quot;Race1&quot;            &quot;Race3&quot;            &quot;Education&quot;        &quot;MaritalStatus&quot;    &quot;HHIncome&quot;         &quot;HHIncomeMid&quot;     
+#&gt; [13] &quot;Poverty&quot;          &quot;HomeRooms&quot;        &quot;HomeOwn&quot;          &quot;Work&quot;             &quot;Weight&quot;           &quot;Length&quot;          
+#&gt; [19] &quot;HeadCirc&quot;         &quot;Height&quot;           &quot;BMI&quot;              &quot;BMICatUnder20yrs&quot; &quot;BMI_WHO&quot;          &quot;Pulse&quot;           
+#&gt; [25] &quot;BPSysAve&quot;         &quot;BPDiaAve&quot;         &quot;BPSys1&quot;           &quot;BPDia1&quot;           &quot;BPSys2&quot;           &quot;BPDia2&quot;          
+#&gt; [31] &quot;BPSys3&quot;           &quot;BPDia3&quot;           &quot;Testosterone&quot;     &quot;DirectChol&quot;       &quot;TotChol&quot;          &quot;UrineVol1&quot;       
+#&gt; [37] &quot;UrineFlow1&quot;       &quot;UrineVol2&quot;        &quot;UrineFlow2&quot;       &quot;Diabetes&quot;         &quot;DiabetesAge&quot;      &quot;HealthGen&quot;       
+#&gt; [43] &quot;DaysPhysHlthBad&quot;  &quot;DaysMentHlthBad&quot;  &quot;LittleInterest&quot;   &quot;Depressed&quot;        &quot;nPregnancies&quot;     &quot;nBabies&quot;         
+#&gt; [49] &quot;Age1stBaby&quot;       &quot;SleepHrsNight&quot;    &quot;SleepTrouble&quot;     &quot;PhysActive&quot;       &quot;PhysActiveDays&quot;   &quot;TVHrsDay&quot;        
+#&gt; [55] &quot;CompHrsDay&quot;       &quot;TVHrsDayChild&quot;    &quot;CompHrsDayChild&quot;  &quot;Alcohol12PlusYr&quot;  &quot;AlcoholDay&quot;       &quot;AlcoholYear&quot;     
+#&gt; [61] &quot;SmokeNow&quot;         &quot;Smoke100&quot;         &quot;Smoke100n&quot;        &quot;SmokeAge&quot;         &quot;Marijuana&quot;        &quot;AgeFirstMarij&quot;   
+#&gt; [67] &quot;RegularMarij&quot;     &quot;AgeRegMarij&quot;      &quot;HardDrugs&quot;        &quot;SexEver&quot;          &quot;SexAge&quot;           &quot;SexNumPartnLife&quot; 
+#&gt; [73] &quot;SexNumPartYear&quot;   &quot;SameSex&quot;          &quot;SexOrientation&quot;   &quot;PregnantNow&quot;</code></pre>
+<div id="stat-summaries-1" class="section level3">
+<h3>Stat Summaries</h3>
+<pre class="r"><code>mosaic::inspect(NHANES)
+#&gt; 
+#&gt; categorical variables:  
+#&gt;                name  class levels     n missing                                  distribution
+#&gt; 1          SurveyYr factor      2 10000       0 2009_10 (50%), 2011_12 (50%)                 
+#&gt; 2            Gender factor      2 10000       0 female (50.2%), male (49.8%)                 
+#&gt; 3         AgeDecade factor      8  9667     333  40-49 (14.5%),  0-9 (14.4%) ...             
+#&gt; 4             Race1 factor      5 10000       0 White (63.7%), Black (12%) ...               
+#&gt; 5             Race3 factor      6  5000    5000 White (62.7%), Black (11.8%) ...             
+#&gt; 6         Education factor      5  7221    2779 Some College (31.4%) ...                     
+#&gt; 7     MaritalStatus factor      6  7231    2769 Married (54.6%), NeverMarried (19.1%) ...    
+#&gt; 8          HHIncome factor     12  9189     811 more 99999 (24.2%) ...                       
+#&gt; 9           HomeOwn factor      3  9937      63 Own (64.7%), Rent (33.1%) ...                
+#&gt; 10             Work factor      3  7771    2229 Working (59.4%), NotWorking (36.6%) ...      
+#&gt; 11 BMICatUnder20yrs factor      4  1274    8726 NormWeight (63.2%), Obese (17.3%) ...        
+#&gt; 12          BMI_WHO factor      4  9603     397 18.5_to_24.9 (30.3%) ...                     
+#&gt; 13         Diabetes factor      2  9858     142 No (92.3%), Yes (7.7%)                       
+#&gt; 14        HealthGen factor      5  7539    2461 Good (39.2%), Vgood (33.3%) ...              
+#&gt; 15   LittleInterest factor      3  6667    3333 None (76.5%), Several (16.9%) ...            
+#&gt; 16        Depressed factor      3  6673    3327 None (78.6%), Several (15.1%) ...            
+#&gt; 17     SleepTrouble factor      2  7772    2228 No (74.6%), Yes (25.4%)                      
+#&gt; 18       PhysActive factor      2  8326    1674 Yes (55.8%), No (44.2%)                      
+#&gt; 19         TVHrsDay factor      7  4859    5141 2_hr (26.2%), 1_hr (18.2%) ...               
+#&gt; 20       CompHrsDay factor      7  4863    5137 0_to_1_hr (29%), 0_hrs (22.1%) ...           
+#&gt; 21  Alcohol12PlusYr factor      2  6580    3420 Yes (79.2%), No (20.8%)                      
+#&gt; 22         SmokeNow factor      2  3211    6789 No (54.3%), Yes (45.7%)                      
+#&gt; 23         Smoke100 factor      2  7235    2765 No (55.6%), Yes (44.4%)                      
+#&gt; 24        Smoke100n factor      2  7235    2765 Non-Smoker (55.6%), Smoker (44.4%)           
+#&gt; 25        Marijuana factor      2  4941    5059 Yes (58.5%), No (41.5%)                      
+#&gt; 26     RegularMarij factor      2  4941    5059 No (72.4%), Yes (27.6%)                      
+#&gt; 27        HardDrugs factor      2  5765    4235 No (81.5%), Yes (18.5%)                      
+#&gt; 28          SexEver factor      2  5767    4233 Yes (96.1%), No (3.9%)                       
+#&gt; 29          SameSex factor      2  5768    4232 No (92.8%), Yes (7.2%)                       
+#&gt; 30   SexOrientation factor      3  4842    5158 Heterosexual (95.8%), Bisexual (2.5%) ...    
+#&gt; 31      PregnantNow factor      3  1696    8304 No (92.7%), Yes (4.2%) ...                   
+#&gt; 
+#&gt; quantitative variables:  
+#&gt;               name   class      min        Q1    median        Q3        max         mean           sd     n missing
+#&gt; 1               ID integer 51624.00 56904.500 62159.500 67039.000  71915.000 6.194464e+04 5.871167e+03 10000       0
+#&gt; 2              Age integer     0.00    17.000    36.000    54.000     80.000 3.674210e+01 2.239757e+01 10000       0
+#&gt; 3        AgeMonths integer     0.00   199.000   418.000   624.000    959.000 4.201239e+02 2.590431e+02  4962    5038
+#&gt; 4      HHIncomeMid integer  2500.00 30000.000 50000.000 87500.000 100000.000 5.720617e+04 3.302028e+04  9189     811
+#&gt; 5          Poverty numeric     0.00     1.240     2.700     4.710      5.000 2.801844e+00 1.677909e+00  9274     726
+#&gt; 6        HomeRooms integer     1.00     5.000     6.000     8.000     13.000 6.248918e+00 2.277538e+00  9931      69
+#&gt; 7           Weight numeric     2.80    56.100    72.700    88.900    230.700 7.098180e+01 2.912536e+01  9922      78
+#&gt; 8           Length numeric    47.10    75.700    87.000    96.100    112.200 8.501602e+01 1.370503e+01   543    9457
+#&gt; 9         HeadCirc numeric    34.20    39.575    41.450    42.925     45.400 4.118068e+01 2.311483e+00    88    9912
+#&gt; 10          Height numeric    83.60   156.800   166.000   174.500    200.400 1.618778e+02 2.018657e+01  9647     353
+#&gt; 11             BMI numeric    12.88    21.580    25.980    30.890     81.250 2.666014e+01 7.376579e+00  9634     366
+#&gt; 12           Pulse integer    40.00    64.000    72.000    82.000    136.000 7.355973e+01 1.215542e+01  8563    1437
+#&gt; 13        BPSysAve integer    76.00   106.000   116.000   127.000    226.000 1.181550e+02 1.724817e+01  8551    1449
+#&gt; 14        BPDiaAve integer     0.00    61.000    69.000    76.000    116.000 6.748006e+01 1.435480e+01  8551    1449
+#&gt; 15          BPSys1 integer    72.00   106.000   116.000   128.000    232.000 1.190902e+02 1.749636e+01  8237    1763
+#&gt; 16          BPDia1 integer     0.00    62.000    70.000    76.000    118.000 6.827826e+01 1.378078e+01  8237    1763
+#&gt; 17          BPSys2 integer    76.00   106.000   116.000   128.000    226.000 1.184758e+02 1.749133e+01  8353    1647
+#&gt; 18          BPDia2 integer     0.00    60.000    68.000    76.000    118.000 6.766455e+01 1.441978e+01  8353    1647
+#&gt; 19          BPSys3 integer    76.00   106.000   116.000   126.000    226.000 1.179292e+02 1.717719e+01  8365    1635
+#&gt; 20          BPDia3 integer     0.00    60.000    68.000    76.000    116.000 6.729874e+01 1.495839e+01  8365    1635
+#&gt; 21    Testosterone numeric     0.25    17.700    43.820   362.410   1795.600 1.978980e+02 2.265045e+02  4126    5874
+#&gt; 22      DirectChol numeric     0.39     1.090     1.290     1.580      4.030 1.364865e+00 3.992581e-01  8474    1526
+#&gt; 23         TotChol numeric     1.53     4.110     4.780     5.530     13.650 4.879220e+00 1.075583e+00  8474    1526
+#&gt; 24       UrineVol1 integer     0.00    50.000    94.000   164.000    510.000 1.185161e+02 9.033648e+01  9013     987
+#&gt; 25      UrineFlow1 numeric     0.00     0.403     0.699     1.221     17.167 9.792946e-01 9.495143e-01  8397    1603
+#&gt; 26       UrineVol2 integer     0.00    52.000    95.000   171.750    409.000 1.196759e+02 9.016005e+01  1478    8522
+#&gt; 27      UrineFlow2 numeric     0.00     0.475     0.760     1.513     13.692 1.149372e+00 1.072948e+00  1476    8524
+#&gt; 28     DiabetesAge integer     1.00    40.000    50.000    58.000     80.000 4.842289e+01 1.568050e+01   629    9371
+#&gt; 29 DaysPhysHlthBad integer     0.00     0.000     0.000     3.000     30.000 3.334838e+00 7.400700e+00  7532    2468
+#&gt; 30 DaysMentHlthBad integer     0.00     0.000     0.000     4.000     30.000 4.126493e+00 7.832971e+00  7534    2466
+#&gt; 31    nPregnancies integer     1.00     2.000     3.000     4.000     32.000 3.026882e+00 1.795341e+00  2604    7396
+#&gt; 32         nBabies integer     0.00     2.000     2.000     3.000     12.000 2.456954e+00 1.315227e+00  2416    7584
+#&gt; 33      Age1stBaby integer    14.00    19.000    22.000    26.000     39.000 2.264968e+01 4.772509e+00  1884    8116
+#&gt; 34   SleepHrsNight integer     2.00     6.000     7.000     8.000     12.000 6.927531e+00 1.346729e+00  7755    2245
+#&gt; 35  PhysActiveDays integer     1.00     2.000     3.000     5.000      7.000 3.743513e+00 1.836358e+00  4663    5337
+#&gt; 36   TVHrsDayChild integer     0.00     1.000     2.000     3.000      6.000 1.938744e+00 1.434431e+00   653    9347
+#&gt; 37 CompHrsDayChild integer     0.00     0.000     1.000     6.000      6.000 2.197550e+00 2.516667e+00   653    9347
+#&gt; 38      AlcoholDay integer     1.00     1.000     2.000     3.000     82.000 2.914123e+00 3.182672e+00  4914    5086
+#&gt; 39     AlcoholYear integer     0.00     3.000    24.000   104.000    364.000 7.510165e+01 1.030337e+02  5922    4078
+#&gt; 40        SmokeAge integer     6.00    15.000    17.000    19.000     72.000 1.782662e+01 5.326660e+00  3080    6920
+#&gt; 41   AgeFirstMarij integer     1.00    15.000    16.000    19.000     48.000 1.702283e+01 3.895010e+00  2891    7109
+#&gt; 42     AgeRegMarij integer     5.00    15.000    17.000    19.000     52.000 1.769107e+01 4.806103e+00  1366    8634
+#&gt; 43          SexAge integer     9.00    15.000    17.000    19.000     50.000 1.742870e+01 3.716551e+00  5540    4460
+#&gt; 44 SexNumPartnLife integer     0.00     2.000     5.000    12.000   2000.000 1.508507e+01 5.784643e+01  5725    4275
+#&gt; 45  SexNumPartYear integer     0.00     1.000     1.000     1.000     69.000 1.342330e+00 2.782688e+00  4928    5072</code></pre>
+<p>Again, lots of data from <code>inspect</code>, about the Quant and Qual variables. Spend a little time looking through the output of <code>inspect</code>.
+Which variables could have been data <em>given</em> by each respondent, and which ones could have been <em>measured</em> data variables? Why do you think so?<br />
+Why is there so much <em>missing</em> data? Which variable are the most affected by this?</p>
+<pre class="r"><code>tally(Education ~ Work, data = NHANES)
+#&gt;                 Work
+#&gt; Education        Looking NotWorking Working &lt;NA&gt;
+#&gt;   8th Grade           13        249     188    1
+#&gt;   9 - 11th Grade      39        438     411    0
+#&gt;   High School         52        579     886    0
+#&gt;   Some College        88        792    1387    0
+#&gt;   College Grad        72        474    1552    0
+#&gt;   &lt;NA&gt;                47        315     189 2228</code></pre>
+</div>
+<div id="distribution-plots-1" class="section level3">
+<h3>Distribution Plots</h3>
+<p>Q.1. What is the distribution of Physical Activity Days, across Gender? Across Education?</p>
+<pre class="r"><code>gf_histogram(data = NHANES, ~ PhysActiveDays | Gender)
+#&gt; Warning: Removed 5337 rows containing non-finite values (`stat_bin()`).</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<pre class="r"><code>gf_histogram(data = NHANES, ~ PhysActiveDays | Education)
+#&gt; Warning: Removed 5337 rows containing non-finite values (`stat_bin()`).</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-19-2.png" width="672" /></p>
+<p>Q.1. How are people Ages distributed across levels of Education?</p>
+<pre class="r"><code>gf_boxplot(Age ~ Education, data = NHANES)</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-20-1.png" width="672" />
+Q.2. How is Education distributed over Race?</p>
+<pre class="r"><code>gf_histogram()
+#&gt; gf_histogram() uses 
+#&gt;     * a formula with shape ~x or y ~ . or y ~ x. 
+#&gt;     * geom:  bar 
+#&gt;     * stat:  bin 
+#&gt;     * position:  stack 
+#&gt;     * key attributes:  bins = 25, binwidth, alpha = 0.5, color, fill, group, linetype, size 
+#&gt; Note:  y may be stat(density) or stat(count) or stat(ndensity) or stat(ncount), but see gf_dhistogram().
+#&gt; 
+#&gt; For more information, try ?gf_histogram</code></pre>
+<p>Q.3 What is the distribution of people’s BMI, split by Gender? By Race1?</p>
+<pre class="r"><code>gf_histogram(~ BMI | Gender, data = NHANES)
+#&gt; Warning: Removed 366 rows containing non-finite values (`stat_bin()`).</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<pre class="r"><code>gf_histogram(~ BMI | Race1 + Race3, data = NHANES)
+#&gt; Warning: Removed 366 rows containing non-finite values (`stat_bin()`).</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-22-2.png" width="672" /></p>
+</div>
+</div>
+<div id="case-study-3-a-complete-example" class="section level2">
+<h2>Case Study-3: A complete example</h2>
+<p>Here is a dataset from Jeremy Singer-Vine’s blog, <a href="https://www.data-is-plural.com/">Data Is Plural</a>. This is a list of all books banned in schools across the US.</p>
+<pre class="r"><code>banned &lt;- readxl::read_xlsx(path = &quot;data/banned.xlsx&quot;,
+                            sheet = &quot;Sorted by Author &amp; Title&quot;)
+banned
+#&gt; # A tibble: 1,586 × 10
+#&gt;   Author                 Title              `Type of Ban`                    Secon…¹ Illus…² Trans…³ State Distr…⁴ Date …⁵ Origi…⁶
+#&gt;   &lt;chr&gt;                  &lt;chr&gt;              &lt;chr&gt;                            &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt; &lt;chr&gt;   &lt;chr&gt;   &lt;chr&gt;  
+#&gt; 1 Àbíké-Íyímídé, Faridah Ace of Spades      Banned from Libraries and Class… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    Flor… Indian… 44501   Admini…
+#&gt; 2 Acevedo, Elizabeth     Clap When You Land Banned from Classrooms           &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    Penn… Centra… 44440   Admini…
+#&gt; 3 Acevedo, Elizabeth     The Poet X         Banned from Libraries            &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    Flor… Indian… 44501   Admini…
+#&gt; 4 Acevedo, Elizabeth     The Poet X         Banned from Libraries and Class… &lt;NA&gt;    &lt;NA&gt;    &lt;NA&gt;    New … Marlbo… 44593   Admini…
+#&gt; # … with 1,582 more rows, and abbreviated variable names ¹​`Secondary Author(s)`, ²​`Illustrator(s)`, ³​`Translator(s)`, ⁴​District,
+#&gt; #   ⁵​`Date of Challenge/Removal`, ⁶​`Origin of Challenge`
+
+names(banned)
+#&gt;  [1] &quot;Author&quot;                    &quot;Title&quot;                     &quot;Type of Ban&quot;               &quot;Secondary Author(s)&quot;      
+#&gt;  [5] &quot;Illustrator(s)&quot;            &quot;Translator(s)&quot;             &quot;State&quot;                     &quot;District&quot;                 
+#&gt;  [9] &quot;Date of Challenge/Removal&quot; &quot;Origin of Challenge&quot;</code></pre>
+<p>Clearly the variables are <em>all</em> Qualitative, except perhaps for <em>Date of Challenge/Removal, (which in this case has been badly mangled by Excel)
+So we need to make <strong>counts</strong> based on the </em>levels* of the Qual variables and plot Bar/Column charts.</p>
+<p>Let us quickly make some Stat Summaries:</p>
+<pre class="r"><code>mosaic::inspect(banned)
+#&gt; 
+#&gt; categorical variables:  
+#&gt;                         name     class levels    n missing                                  distribution
+#&gt; 1                     Author character    797 1586       0 Kobabe, Maia (1.9%) ...                      
+#&gt; 2                      Title character   1145 1586       0 Gender Queer: A Memoir (1.9%) ...            
+#&gt; 3                Type of Ban character      4 1586       0 Banned Pending Investigation (46.1%) ...     
+#&gt; 4        Secondary Author(s) character     61   98    1488 Cast, Kristin (12.2%) ...                    
+#&gt; 5             Illustrator(s) character    192  364    1222 Aly, Hatem (4.7%) ...                        
+#&gt; 6              Translator(s) character      9   10    1576 Mlawer, Teresa (20%) ...                     
+#&gt; 7                      State character     26 1586       0 Texas (45%), Pennsylvania (28.8%) ...        
+#&gt; 8                   District character     86 1586       0 Central York (27.8%) ...                     
+#&gt; 9  Date of Challenge/Removal character     15 1586       0 44440 (28.8%), 44531 (28.3%) ...             
+#&gt; 10       Origin of Challenge character      2 1586       0 Administrator (95.6%) ...</code></pre>
+<p>Let us try to answer this question: <em>What is the count of banned books by type and by US state?</em></p>
+<pre class="r"><code>banned_by_state &lt;- banned %&gt;% group_by(State) %&gt;% summarise(total = n()) %&gt;% ungroup()
+banned_by_state
+#&gt; # A tibble: 26 × 2
+#&gt;   State    total
+#&gt;   &lt;chr&gt;    &lt;int&gt;
+#&gt; 1 Alaska       1
+#&gt; 2 Arkansas     1
+#&gt; 3 Florida    204
+#&gt; 4 Georgia     13
+#&gt; # … with 22 more rows
+
+banned %&gt;% group_by(State, `Type of Ban`) %&gt;% summarise(count = n()) %&gt;% ungroup() %&gt;% left_join(., banned_by_state, by = c(&quot;State&quot; = &quot;State&quot;)) %&gt;% 
+ #  pivot_wider(.,id_cols = State,
+ #              names_from = `Type of Ban`,
+ #              values_from = count) %&gt;% janitor::clean_names() %&gt;% 
+ #  replace_na(list(banned_from_libraries_and_classrooms = 0,
+ #                  banned_from_libraries = 0,
+ #                  banned_pending_investigation = 0,
+ #                  banned_from_classrooms = 0)) %&gt;% 
+ # mutate(total = sum(across(where(is.integer)))) %&gt;%
+ggplot(aes(x = reorder(State, total), y = count, fill = `Type of Ban`)) + geom_col() + coord_flip()
+#&gt; `summarise()` has grouped output by &#39;State&#39;. You can override using the `.groups` argument.</code></pre>
+<p><img src="/courses/8-Data-Analytics/10-Descriptive-Analytics/50-Part-of-a-Whole/files/parts_files/figure-html/unnamed-chunk-24-1.png" width="672" /></p>
+</div>
+<div id="case-study--4-dataset-from-ragsdales-book" class="section level2">
+<h2>Case Study -4: Dataset from Ragsdale’s book</h2>
+<div id="stat-summaries-2" class="section level3">
+<h3>Stat Summaries</h3>
+<p>#Conclusion</p>
+</div>
+</div>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<ol style="list-style-type: decimal">
+<li><p><a href="https://awagaman.people.amherst.edu/stat230/Stat230CodeCompilationExampleCodeUsingNHANES.pdf" class="uri">https://awagaman.people.amherst.edu/stat230/Stat230CodeCompilationExampleCodeUsingNHANES.pdf</a></p></li>
+<li></li>
+</ol>
+</div>

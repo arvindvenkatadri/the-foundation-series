@@ -1,92 +1,40 @@
 ---
-title: "Chapter 4 Sampling Distributions"
-author: "Chihara-Hesterberg"
-date:  "November 2018"
-output: html_document
+title: "Sampling"
+author: "Arvind Venkatadri"
+date: '2022-12-02'
+output:
+  html_document:
+    theme: flatly
+    toc: TRUE
+    toc_float: TRUE
+    toc_depth: 2
+    df_print: paged
+    number_sections: TRUE
+    code_folding: hide
+    code_download: TRUE
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 
 
-<p>###Example 4.2: Sampling distribution from Exp(1/15)</p>
-<pre class="r"><code>Xbar &lt;- numeric(1000)
-#set.seed(300)
-for (i in 1:1000)
-{
-  x &lt;- rexp(100, rate = 1/15)
-  Xbar[i] &lt;- mean(x)
-}
-
-ggplot() + geom_histogram(aes(Xbar), bins = 15) + xlab(&quot;means&quot;)</code></pre>
-<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/sampling_files/figure-html/unnamed-chunk-1-1.png" width="50%" /></p>
-<pre class="r"><code>df &lt;- data.frame(Xbar)
-ggplot(df, aes(sample=Xbar)) + stat_qq() + stat_qq_line()</code></pre>
-<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/sampling_files/figure-html/unnamed-chunk-1-2.png" width="50%" /></p>
-<pre class="r"><code>mean(Xbar)</code></pre>
-<pre><code>## [1] 14.96154</code></pre>
-<pre class="r"><code>sd(Xbar)</code></pre>
-<pre><code>## [1] 1.471874</code></pre>
-<p>###Example 4.3: Sampling Dist from Unif[0,1]</p>
-<pre class="r"><code>maxY &lt;- numeric(1000)
-#set.seed(100)
-for (i in 1:1000)
- {
-   y &lt;- runif(12)        #draw random sample of size 12
-   maxY[i] &lt;- max(y)     #find max, save in position i
- }
-
-ggplot() + geom_histogram(aes(maxY), binwidth=.05, center=.975) + xlab(&quot;maximums&quot;) </code></pre>
-<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/sampling_files/figure-html/unnamed-chunk-2-1.png" width="50%" /></p>
-<p>To create a histogram with a density curve imposed, we will need to create a data frame that holds the <tt>‘maxY’</tt> variable. We also create a function for the density curve <span class="math inline">\(f(x)=12x^{11}\)</span>.</p>
-<pre class="r"><code>df &lt;- data.frame(maxY)
-myfun &lt;- function(x){12*x^{11}}
-
-ggplot(df) + geom_histogram(aes(maxY, y = stat(density)), binwidth=.05, center=.975) +xlab(&quot;maximums&quot;) + stat_function(fun = myfun)</code></pre>
-<pre><code>## Warning: `stat(density)` was deprecated in ggplot2 3.4.0.
-## ℹ Please use `after_stat(density)` instead.</code></pre>
-<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/sampling_files/figure-html/unnamed-chunk-3-1.png" width="50%" /></p>
-<p>###Example 4.6 Sum of Poisson random variables</p>
-<pre class="r"><code>X &lt;- rpois(10^4, 5)   #Draw 10^4 values from Pois(5)
-Y &lt;- rpois(10^4, 12)   #Draw 10^4 values from Pois(12)
-W &lt;- X + Y
-
-df1 &lt;- data.frame(W)
-df2 &lt;- data.frame(x=2:35, y = dpois(2:35,17))
-ggplot(df1, aes(W)) + geom_histogram(aes(y=stat(density)), bins=12) + geom_line(data=df2, aes(x=x, y=y), colour = &quot;red&quot;)</code></pre>
-<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/sampling_files/figure-html/unnamed-chunk-4-1.png" width="50%" /></p>
-<pre class="r"><code>mean(W)</code></pre>
-<pre><code>## [1] 17.0126</code></pre>
-<pre class="r"><code>var(W)</code></pre>
-<pre><code>## [1] 17.09335</code></pre>
-<p>###Example 4.7
-Sampling distribution simulation
-Sample of size 30 from gamma r=5, lambda=2</p>
-<pre class="r"><code>#set.seed(10)
-Xbar &lt;- numeric(1000)
-for (i in 1:1000)
-  {
-    x &lt;- rgamma(30, shape = 5, rate = 2)
-    Xbar[i] &lt;- mean(x)
-  }
-
-ggplot() + geom_histogram(aes(Xbar), bins=15) + labs(title = &quot;Distribution of means&quot;)</code></pre>
-<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/sampling_files/figure-html/unnamed-chunk-5-1.png" width="50%" /></p>
-<pre class="r"><code>ggplot() + stat_qq(aes(sample = Xbar)) </code></pre>
-<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/sampling_files/figure-html/unnamed-chunk-5-2.png" width="50%" /></p>
-<pre class="r"><code>#If you want a line, then
-df &lt;- data.frame(Xbar)
-ggplot(df, aes(sample = Xbar)) + stat_qq() + stat_qq_line()</code></pre>
-<p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/20-Sampling/files/sampling_files/figure-html/unnamed-chunk-5-3.png" width="50%" /></p>
-<pre class="r"><code>mean(Xbar)</code></pre>
-<pre><code>## [1] 2.49284</code></pre>
-<pre class="r"><code>sd(Xbar)</code></pre>
-<pre><code>## [1] 0.2065966</code></pre>
-<pre class="r"><code>sum(Xbar &gt; 3)/1000</code></pre>
-<pre><code>## [1] 0.011</code></pre>
-<pre class="r"><code>#alternatively
-mean(Xbar &gt; 3)</code></pre>
-<pre><code>## [1] 0.011</code></pre>
-<p>###Example 4.11 R Note</p>
-<pre class="r"><code>dbinom(25, 120, .3)</code></pre>
-<pre><code>## [1] 0.006807598</code></pre>
-<pre class="r"><code>pbinom(25, 120, .3)</code></pre>
-<pre><code>## [1] 0.0159137</code></pre>
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>Continuing to treat the <code>NHANES</code> dataset as a <strong>population</strong>, We will try to replicate the process of sampling and CLT for another variable in the NHANES variable, <code>AlcoholYear</code>.</p>
+<div id="summary-for-alcoholyear-population" class="section level2">
+<h2>Summary for <code>AlcoholYear</code> population</h2>
+</div>
+<div id="sampling-alcoholyear" class="section level2">
+<h2>Sampling <code>AlcoholYear</code></h2>
+</div>
+<div id="distribution-and-qq-plot-for-the-sample" class="section level2">
+<h2>Distribution and QQ Plot for the sample</h2>
+</div>
+<div id="estimating-population-mean-and-confidence-interval-using-the-sample" class="section level2">
+<h2>Estimating Population Mean and Confidence Interval using the Sample</h2>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+</div>
+</div>

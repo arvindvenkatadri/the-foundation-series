@@ -88,7 +88,7 @@ Let us tabulate some quick stat summaries of the important variables in
 `Galton`:
 
 ```{r}
-favstats(~ `Product line`, data = Galton)
+favstats(~ height, data = Galton)
 favstats(~ height | sex, data = Galton)
 
 ```

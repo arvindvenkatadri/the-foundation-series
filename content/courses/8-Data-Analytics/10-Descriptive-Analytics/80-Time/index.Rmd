@@ -34,12 +34,262 @@ url_video: ""
 ---
 
 ![](featured.jpg)
+This material has been drawn largely from Andrew Heiss' tutorial on Time Series Analysis.
+
+## Load libraries and data
+
+Libraries for time series and forecasting stuff. You have to load *a ton* of these to get the ecosystem of time series packages working.
 
 ```{r setup, include=FALSE}
+
 knitr::opts_chunk$set(echo = TRUE)
 library(blogdown)
+library(tidyverse)
+library(lubridate)  # Deal with dates
+library(tibbletime)  # Add cool time-based filtering functions
+library(timetk)  # Convert data frames to time series-specific objects
+library(forecast)  # Make forecasts and decompose time series
+library(zoo)  # Another time series package
+library(sweep)  # Convert forecasted objects into data frames (like broom, but for forecasts)
+library(prophet)  # Facebook's Bayesian forecasting algorithm
 
 ```
+
+
+
+```{r Read_in_Data}
+births_2000_2014 <- read_csv("data/US_births_2000-2014_SSA.csv")
+
+# This data goes up to 2003, but the previous data starts at 2000, so we'll
+# remove 2000-2003 from here
+births_1994_1999 <- read_csv("data/US_births_1994-2003_CDC_NCHS.csv") %>% 
+  filter(year < 2000)
+```
+
+We need to manipulate this data a little after we combine these two datasets. Right now, there is a column for year, month, and day, but we need to make this an actual date, so we paste these numbers together with paste0(), and then use ymd() to parse the date as an actual date. The as_tbl_time() function at the end of the chain makes it so we can do cool filtering and summarizing and grouping with the *time column* in this data frame:
+
+```{r Data_munging}
+births_clean <- bind_rows(births_1994_1999, births_2000_2014) %>% 
+  mutate(date = paste0(year, "-", month, "-", date_of_month)) %>% 
+  mutate(date = ymd(date)) %>% 
+  select(date, births) %>% 
+  as_tbl_time(index = date)
+```
+
+## Explore data
+
+Since this data frame is time-enabled (with as_tbl_time), we can do cool things with it, like this:
+```{r Filtering_by_time}
+# Only include rows from January 2000 to June 30, 2000
+births_clean %>% 
+  filter_time("2000-01" ~ "2000-06-30")
+```
+```{r Changing_Periodicity_of_tbl_time}
+# Only include rows from 2010 to 2014, and then only select the first day of
+# each month
+births_clean %>% 
+  filter_time("2010-01-01" ~ "2014-12-31") %>% 
+  as_period("monthly", side = "start")
+```
+
+Let’s create a month-based time series where we calculate the average number of births per month. Then we’ll plot it with a loess line:
+```{r}
+births_monthly <- births_clean %>% 
+  collapse_by("monthly", side = "start") %>% 
+  group_by(date) %>% 
+  summarise(avg_births = mean(births))
+
+ggplot(births_monthly, aes(x = date, y = avg_births)) +
+  geom_line() + 
+  geom_smooth(method = "loess") +
+  theme_minimal()
+```
+
+We can also calculate a rolling average where we take the mean of every month’s previous twelve months. We use the rollify() function, which works a little strangely—it’s actually a *function generator* (meaning it’ll take some function, like mean, and make it work on the previous 12 periods).
+
+# Here we define a bunch of rolling mean functions. These don't do anything
+# yet—once you feed them some data, they'll calculate the mean of the past
+# number of periods given in `window`
+
+```{r}
+rolling_6 <- rollify(mean, window = 6)
+rolling_12 <- rollify(mean, window = 12)
+rolling_24 <- rollify(mean, window = 24)
+
+births_monthly_with_means <- births_monthly %>% 
+  mutate(past_6 = rolling_6(avg_births),
+         past_12 = rolling_12(avg_births),
+         past_24 = rolling_24(avg_births))
+
+# Make this long so we can plot all these rolling averages at the same time
+births_monthly_long <- births_monthly_with_means %>% 
+  gather(key = window_size, value = value, c(past_6, past_12, past_24))
+
+ggplot(births_monthly_long, aes(x = date, y = avg_births)) +
+  geom_line(alpha = 0.25) + 
+  geom_line(aes(y = value, color = window_size), size = 0.75) + 
+  theme_minimal()
+```
+
+They’re all a little different! A 6-month window still shows some seasonality, while the 12- and 24-month windows are much smoother.
+
+## Decompose trends
+
+We can decompose this time series and extract the trend and seasonality. But first, we have to convert our nice data frame into a **strange time series-enabled object with the ts() function**. To make life easier, we use the tk_ts() function here, which is part of the **timetk package**, which allows us to more easily convert our tidy data into time series data.
+
+Here we add a new column that is time series-enabled:
+```{r Converting_to_Time_Series_Object}
+births_months_ts <- births_monthly %>% 
+  mutate(births_ts = tk_ts(avg_births, start = c(1994, 1), frequency = 12))
+
+# births_ts looks identical to avg_births, but it's not; it has metadata about
+# periods and start dates and things like that
+births_months_ts
+```
+
+Now we can decompose this with the stl() function (which stands for “seasonal, trend, and irregular, with loess”). s.window is set to periodic because the help file and every example I found online said to do that.
+
+```{r Decomposing_trends}
+births_decomposed <- stl(births_months_ts$births_ts, s.window = "periodic")
+
+# Look at the first few rows
+head(births_decomposed$time.series)
+
+# Cool! It extracted the seasonal part, the trend part, and left us with some unexplained variation.
+
+# We can use autoplot() (which comes with the forecast library) to plot all of these at once.
+
+# autoplot uses ggplot behind the scenes, so you can still add regular layers to
+# it, like theme_minimal()
+autoplot(births_decomposed) +
+  theme_minimal()
+  
+# Or, we can extract each of these decomposed parts and plot them on our own (I prefer doing this, since I have more control over the data)
+
+# You can extract each part of the decomposed time series with these functions
+seasonal(births_decomposed)
+trendcycle(births_decomposed)
+remainder(births_decomposed)
+```
+
+```{r }
+# Or even better, do it all at once in a data frame
+births_decomposed_nice <- births_decomposed$time.series %>% 
+  tk_tbl()  # Convert the weird time series object back to a data frame
+
+# Combine the extracted parts with the original monthly data
+births_with_decomposition <- births_monthly %>% 
+  bind_cols(births_decomposed_nice)
+
+# Yay!
+births_with_decomposition
+
+```
+
+We can make this data long, which will let us make facets for each of the parts:
+
+```{r}
+births_decomposed_long <- births_with_decomposition %>% 
+  gather(variation_type, value, c(avg_births, seasonal, trend, remainder)) %>% 
+  mutate(variation_type = factor(variation_type, 
+                                 levels = c("avg_births", "trend", "seasonal", "remainder"),
+                                 ordered = TRUE))
+
+ggplot(births_decomposed_long, aes(x = date, y = value)) +
+  geom_line() +
+  theme_minimal() +
+  facet_wrap(~ variation_type, ncol = 1, scales = "free_y")
+```
+
+ 
+## Forecasting
+
+We can also use past trends and seasonality in the data to make predictions about the future using the forecast package. Here we use an auto ARIMA model to guess at the trend in the time series (there are a billion other ways to estimate this model—take Dr. Nelson’s forecasting class to learn those). Then we use that model to forecast a few periods into the future.
+
+```{r ARIMA}
+births_arima <- auto.arima(births_months_ts$births_ts)
+
+# Use the model to forecast 12 months into the future
+births_forecast <- forecast(births_arima, h = 12)
+
+# Plot the forecast. Again, we can use autoplot.
+autoplot(births_forecast) +
+  theme_minimal()
+```
+
+We're fairly limited in what we can actually tweak when using autoplot(), so instead we can convert the forecast object to a data frame and use ggplot() like normal
+
+```{r Plotting Forecast with ggplot}
+# Get data out of this weird births_forecast object
+births_forecast_tidy <- sw_sweep(births_forecast, timekit_idx = TRUE, rename_index = "date")
+tail(births_forecast_tidy)  # Look at the last few rows of this forecast
+
+# For whatever reason, the date column here is a special type of variable called
+# "yearmon", which ggplot doesn't know how to deal with (like, we can't zoom in
+# on the plot with coord_cartesian). We use zoo::as.Date() to convert the
+# yearmon variable into a regular date
+births_forecast_tidy_real_date <- births_forecast_tidy %>% 
+  mutate(actual_date = zoo::as.Date(date, frac = 1))
+
+# Plot this puppy!
+ggplot(births_forecast_tidy_real_date, aes(x = actual_date, y = value, color = key)) +
+  geom_ribbon(aes(ymin = lo.95, ymax = hi.95), 
+              fill = "#3182bd", color = NA) +
+  geom_ribbon(aes(ymin = lo.80, ymax = hi.80, fill = key), 
+              fill = "#deebf7", color = NA, alpha = 0.8) +
+  geom_line(size = 1) + 
+  geom_point(size = 0.5) +
+  labs(x = NULL, y = "Births") +
+  scale_y_continuous(labels = scales::comma) +
+  # Zoom in on 2012-2016
+  coord_cartesian(xlim = ymd(c("2012-01-01", "2016-01-01"))) +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+  
+## Bayesian forecasting with Prophet
+
+Finally, we’ll use Facebook’s open source Bayesian forecasting algorithm to make a similar forecast. The prophet() function requires that the date column be named ds and the main outcome variable (here births) be named y. I don’t know why. So we rename those columns, feed the data frame through prophet(), then make an empty data frame for the future periods we’ll predict, and then use predict() to use the prophet model to make predictions for the empty future data frame.
+
+```{r Prophet}
+births_prophetized <- births_monthly %>% 
+  select(ds = date, y = avg_births)
+
+prophet_model <- prophet(births_prophetized)
+
+## Disabling weekly seasonality. Run prophet with weekly.seasonality=TRUE to override this.
+
+## Disabling daily seasonality. Run prophet with daily.seasonality=TRUE to override this.
+
+## Initial log joint probability = -2.43379
+## Optimization terminated normally: 
+##   Convergence detected: relative gradient magnitude is below tolerance
+
+future_dates <- make_future_dataframe(prophet_model, periods = 36, freq = "month")
+prophet_predict <- predict(prophet_model, future_dates)
+
+# The plot() function for prophet objects uses ggplot behind the scenes, so we
+# can add ggplot layers like normal
+plot(prophet_model, prophet_predict) + 
+  theme_minimal() + 
+  # Zoom in on 2008-2018 
+  # I only figured out this as.POSIXct thing because R was complaining when I
+  # did ymd() like I did above
+  coord_cartesian(xlim = as.POSIXct(c("2008-01-01", "2018-01-01")))
+  
+  
+  # We can also decompose this time series, but here we only get the yearly
+# effects
+#
+# Even though both these plots are ggplot objects, for whatever reason we can't
+# actually add additional layers like theme_minimal. Oh well.
+#
+# There's probably a way to extract each of these parts out like we did with the
+# forecast library, but I don't want to dig around in the prophet documentation,
+# so I won't ¯\_(ツ)_/¯
+prophet_plot_components(prophet_model, prophet_predict) 
+```
+
 
 ## A Workflow in Orange
 
@@ -48,3 +298,44 @@ library(blogdown)
 
 
 ## A Workflow in R
+
+
+
+
+
+## Required Reading
+
+1. Chapter 8 in Alberto Cairo, * The Truthful Art *
+2. [The Nuclear Threat—The Shadow Peace, part 1](http://www.fallen.io/shadow-peace/1/)
+3. [11 Ways to Visualize Changes Over Time – A Guide](https://flowingdata.com/2010/01/07/11-ways-to-visualize-changes-over-time-a-guide/)
+
+#### Some Short Blog Posts
+
+A bunch of (really) short blog posts:
+
+1. [What a Hundred Million Calls to 311 Reveal About New York](https://www.wired.com/2010/11/ff_311_new_york/) (just look at the picture; you don’t need to read this unless you’re really curious about trends in 311 calls)
+2. [A century of ocean shipping animated](https://flowingdata.com/2012/04/12/a-century-of-ocean-shipping-animated/)
+3. [What is seasonal adjustment and why is it used?](http://junkcharts.typepad.com/junk_charts/2010/11/what-is-seasonal-adjustment-and-why-is-it-used.html)
+4. [The start-at-zero rule](http://junkcharts.typepad.com/junk_charts/2005/09/the_startatzero.html)
+5. [Keeping one’s appetite after touring the sausage factory](http://junkcharts.typepad.com/numbersruleyourworld/2011/02/keeping-ones-appetite-after-touring-the-sausage-factory.html)
+6. [How Common is Your Birthday? This Visualization Might Surprise You](http://thedailyviz.com/2016/09/17/how-common-is-your-birthday-dailyviz/)
+
+## Recommended Reading
+
+1.  [The Fallen of World War II](http://www.fallen.io/ww2/)
+2.  [Visualizing Statistical Mix Effects and Simpson’s Paradox](https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42901.pdf)
+3.  [How To Fix a Toilet (And Other Things We Couldn’t Do Without Search)](http://how-to-fix-a-toilet.com/)
+
+## Forecasting and decomposition
+
+We ran out of time for this in class, but really all I did was copy/paste from the examples and vignettes at these websites and adapt them to this births data from the CDC:
+
+  + [tibbletime](https://github.com/business-science/tibbletime)
+  + [This whole series of tutorials on tibbletime](https://www.business-science.io/code-tools/2017/10/26/demo_week_tibbletime.html)
+  + [timetk](https://github.com/business-science/timetk)
+  + [This tutorial on sweep](https://www.business-science.io/code-tools/2017/07/09/sweep-0-1-0.html)
+  + [Facebook’s Prophet library for forecasting](https://facebook.github.io/prophet/docs/quick_start.html#r-api)
+  + [Rob Hyndman’s Forecasting: Principles and Practice](https://otexts.org/fpp2/)
+  
+  
+  

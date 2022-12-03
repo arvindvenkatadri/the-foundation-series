@@ -2,7 +2,7 @@
 title: "\U0001F578 Time Series"
 subtitle: "Time Series"
 author: "Arvind Venkatadri"
-date: "2022-11-14"
+date: "2022-12-02"
 weight: 80
 summary: "Trends, Seasons, and Changes over time"
 tags:
@@ -35,7 +35,411 @@ url_video: ""
 
 
 
-<p><img src="featured.jpg" /></p>
+<p><img src="featured.jpg" />
+This material has been drawn largely from Andrew Heiss’ tutorial on Time Series Analysis.</p>
+<div id="load-libraries-and-data" class="section level2">
+<h2>Load libraries and data</h2>
+<p>Libraries for time series and forecasting stuff. You have to load <em>a ton</em> of these to get the ecosystem of time series packages working.</p>
+<pre class="r"><code>births_2000_2014 &lt;- read_csv(&quot;data/US_births_2000-2014_SSA.csv&quot;)</code></pre>
+<pre><code>## Rows: 5479 Columns: 5
+## ── Column specification ──────────────────────────────────────────────────────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## dbl (5): year, month, date_of_month, day_of_week, births
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<pre class="r"><code># This data goes up to 2003, but the previous data starts at 2000, so we&#39;ll
+# remove 2000-2003 from here
+births_1994_1999 &lt;- read_csv(&quot;data/US_births_1994-2003_CDC_NCHS.csv&quot;) %&gt;% 
+  filter(year &lt; 2000)</code></pre>
+<pre><code>## Rows: 3652 Columns: 5
+## ── Column specification ──────────────────────────────────────────────────────────────────────────────────────────────────────────
+## Delimiter: &quot;,&quot;
+## dbl (5): year, month, date_of_month, day_of_week, births
+## 
+## ℹ Use `spec()` to retrieve the full column specification for this data.
+## ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+<p>We need to manipulate this data a little after we combine these two datasets. Right now, there is a column for year, month, and day, but we need to make this an actual date, so we paste these numbers together with paste0(), and then use ymd() to parse the date as an actual date. The as_tbl_time() function at the end of the chain makes it so we can do cool filtering and summarizing and grouping with the <em>time column</em> in this data frame:</p>
+<pre class="r"><code>births_clean &lt;- bind_rows(births_1994_1999, births_2000_2014) %&gt;% 
+  mutate(date = paste0(year, &quot;-&quot;, month, &quot;-&quot;, date_of_month)) %&gt;% 
+  mutate(date = ymd(date)) %&gt;% 
+  select(date, births) %&gt;% 
+  as_tbl_time(index = date)</code></pre>
+</div>
+<div id="explore-data" class="section level2">
+<h2>Explore data</h2>
+<p>Since this data frame is time-enabled (with as_tbl_time), we can do cool things with it, like this:</p>
+<pre class="r"><code># Only include rows from January 2000 to June 30, 2000
+births_clean %&gt;% 
+  filter_time(&quot;2000-01&quot; ~ &quot;2000-06-30&quot;)</code></pre>
+<pre><code>## # A time tibble: 182 × 2
+## # Index:         date
+##    date       births
+##    &lt;date&gt;      &lt;dbl&gt;
+##  1 2000-01-01   9083
+##  2 2000-01-02   8006
+##  3 2000-01-03  11363
+##  4 2000-01-04  13032
+##  5 2000-01-05  12558
+##  6 2000-01-06  12466
+##  7 2000-01-07  12516
+##  8 2000-01-08   8934
+##  9 2000-01-09   7949
+## 10 2000-01-10  11668
+## # … with 172 more rows</code></pre>
+<pre class="r"><code># Only include rows from 2010 to 2014, and then only select the first day of
+# each month
+births_clean %&gt;% 
+  filter_time(&quot;2010-01-01&quot; ~ &quot;2014-12-31&quot;) %&gt;% 
+  as_period(&quot;monthly&quot;, side = &quot;start&quot;)</code></pre>
+<pre><code>## # A time tibble: 60 × 2
+## # Index:         date
+##    date       births
+##    &lt;date&gt;      &lt;dbl&gt;
+##  1 2010-01-01   7871
+##  2 2010-02-01  11445
+##  3 2010-03-01  11984
+##  4 2010-04-01  11994
+##  5 2010-05-01   7911
+##  6 2010-06-01  12591
+##  7 2010-07-01  13181
+##  8 2010-08-01   7370
+##  9 2010-09-01  13409
+## 10 2010-10-01  13141
+## # … with 50 more rows</code></pre>
+<p>Let’s create a month-based time series where we calculate the average number of births per month. Then we’ll plot it with a loess line:</p>
+<pre class="r"><code>births_monthly &lt;- births_clean %&gt;% 
+  collapse_by(&quot;monthly&quot;, side = &quot;start&quot;) %&gt;% 
+  group_by(date) %&gt;% 
+  summarise(avg_births = mean(births))
+
+ggplot(births_monthly, aes(x = date, y = avg_births)) +
+  geom_line() + 
+  geom_smooth(method = &quot;loess&quot;) +
+  theme_minimal()</code></pre>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>We can also calculate a rolling average where we take the mean of every month’s previous twelve months. We use the rollify() function, which works a little strangely—it’s actually a <em>function generator</em> (meaning it’ll take some function, like mean, and make it work on the previous 12 periods).</p>
+</div>
+<div id="here-we-define-a-bunch-of-rolling-mean-functions.-these-dont-do-anything" class="section level1">
+<h1>Here we define a bunch of rolling mean functions. These don’t do anything</h1>
+</div>
+<div id="yetonce-you-feed-them-some-data-theyll-calculate-the-mean-of-the-past" class="section level1">
+<h1>yet—once you feed them some data, they’ll calculate the mean of the past</h1>
+</div>
+<div id="number-of-periods-given-in-window" class="section level1">
+<h1>number of periods given in <code>window</code></h1>
+<pre class="r"><code>rolling_6 &lt;- rollify(mean, window = 6)
+rolling_12 &lt;- rollify(mean, window = 12)
+rolling_24 &lt;- rollify(mean, window = 24)
+
+births_monthly_with_means &lt;- births_monthly %&gt;% 
+  mutate(past_6 = rolling_6(avg_births),
+         past_12 = rolling_12(avg_births),
+         past_24 = rolling_24(avg_births))
+
+# Make this long so we can plot all these rolling averages at the same time
+births_monthly_long &lt;- births_monthly_with_means %&gt;% 
+  gather(key = window_size, value = value, c(past_6, past_12, past_24))
+
+ggplot(births_monthly_long, aes(x = date, y = avg_births)) +
+  geom_line(alpha = 0.25) + 
+  geom_line(aes(y = value, color = window_size), size = 0.75) + 
+  theme_minimal()</code></pre>
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.</code></pre>
+<pre><code>## Warning: Removed 39 rows containing missing values (`geom_line()`).</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>They’re all a little different! A 6-month window still shows some seasonality, while the 12- and 24-month windows are much smoother.</p>
+<div id="decompose-trends" class="section level2">
+<h2>Decompose trends</h2>
+<p>We can decompose this time series and extract the trend and seasonality. But first, we have to convert our nice data frame into a <strong>strange time series-enabled object with the ts() function</strong>. To make life easier, we use the tk_ts() function here, which is part of the <strong>timetk package</strong>, which allows us to more easily convert our tidy data into time series data.</p>
+<p>Here we add a new column that is time series-enabled:</p>
+<pre class="r"><code>births_months_ts &lt;- births_monthly %&gt;% 
+  mutate(births_ts = tk_ts(avg_births, start = c(1994, 1), frequency = 12))
+
+# births_ts looks identical to avg_births, but it&#39;s not; it has metadata about
+# periods and start dates and things like that
+births_months_ts</code></pre>
+<pre><code>## # A time tibble: 252 × 3
+## # Index:         date
+##    date       avg_births births_ts
+##    &lt;date&gt;          &lt;dbl&gt;     &lt;dbl&gt;
+##  1 1994-01-01     10345.    10345.
+##  2 1994-02-01     10762.    10762.
+##  3 1994-03-01     10959.    10959.
+##  4 1994-04-01     10580.    10580.
+##  5 1994-05-01     10655.    10655.
+##  6 1994-06-01     10991.    10991.
+##  7 1994-07-01     11157.    11157.
+##  8 1994-08-01     11360.    11360.
+##  9 1994-09-01     11307.    11307.
+## 10 1994-10-01     10651.    10651.
+## # … with 242 more rows</code></pre>
+<p>Now we can decompose this with the stl() function (which stands for “seasonal, trend, and irregular, with loess”). s.window is set to periodic because the help file and every example I found online said to do that.</p>
+<pre class="r"><code>births_decomposed &lt;- stl(births_months_ts$births_ts, s.window = &quot;periodic&quot;)
+
+# Look at the first few rows
+head(births_decomposed$time.series)</code></pre>
+<pre><code>##           seasonal    trend   remainder
+## Jan 1994 -451.9350 10944.27 -147.010706
+## Feb 1994 -192.3067 10923.01   30.975569
+## Mar 1994 -193.8057 10901.75  251.280333
+## Apr 1994 -298.9887 10881.71   -2.987806
+## May 1994 -151.4014 10861.67  -55.589677
+## Jun 1994  131.7005 10842.76   16.775290</code></pre>
+<pre class="r"><code># Cool! It extracted the seasonal part, the trend part, and left us with some unexplained variation.
+
+# We can use autoplot() (which comes with the forecast library) to plot all of these at once.
+
+# autoplot uses ggplot behind the scenes, so you can still add regular layers to
+# it, like theme_minimal()
+autoplot(births_decomposed) +
+  theme_minimal()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Decomposing_trends-1.png" width="672" /></p>
+<pre class="r"><code># Or, we can extract each of these decomposed parts and plot them on our own (I prefer doing this, since I have more control over the data)
+
+# You can extract each part of the decomposed time series with these functions
+seasonal(births_decomposed)</code></pre>
+<pre><code>##             Jan        Feb        Mar        Apr        May        Jun        Jul        Aug        Sep        Oct        Nov
+## 1994 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 1995 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 1996 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 1997 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 1998 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 1999 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2000 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2001 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2002 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2003 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2004 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2005 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2006 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2007 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2008 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2009 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2010 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2011 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2012 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2013 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+## 2014 -451.93503 -192.30674 -193.80569 -298.98870 -151.40142  131.70054  388.13559  537.43035  635.59301   28.88323 -248.05321
+##             Dec
+## 1994 -185.25190
+## 1995 -185.25190
+## 1996 -185.25190
+## 1997 -185.25190
+## 1998 -185.25190
+## 1999 -185.25190
+## 2000 -185.25190
+## 2001 -185.25190
+## 2002 -185.25190
+## 2003 -185.25190
+## 2004 -185.25190
+## 2005 -185.25190
+## 2006 -185.25190
+## 2007 -185.25190
+## 2008 -185.25190
+## 2009 -185.25190
+## 2010 -185.25190
+## 2011 -185.25190
+## 2012 -185.25190
+## 2013 -185.25190
+## 2014 -185.25190</code></pre>
+<pre class="r"><code>trendcycle(births_decomposed)</code></pre>
+<pre><code>##           Jan      Feb      Mar      Apr      May      Jun      Jul      Aug      Sep      Oct      Nov      Dec
+## 1994 10944.27 10923.01 10901.75 10881.71 10861.67 10842.76 10823.85 10804.34 10784.82 10768.27 10751.73 10748.72
+## 1995 10745.71 10743.81 10741.91 10734.03 10726.15 10710.10 10694.04 10677.87 10661.69 10647.07 10632.46 10621.07
+## 1996 10609.67 10607.39 10605.11 10611.28 10617.45 10625.66 10633.87 10636.82 10639.77 10643.28 10646.79 10650.96
+## 1997 10655.12 10650.70 10646.28 10638.22 10630.16 10631.30 10632.45 10643.37 10654.29 10669.43 10684.57 10702.16
+## 1998 10719.75 10738.89 10758.03 10771.17 10784.32 10788.06 10791.79 10791.37 10790.95 10792.35 10793.75 10801.63
+## 1999 10809.50 10821.47 10833.43 10841.53 10849.63 10864.05 10878.46 10909.94 10941.41 10982.15 11022.88 11064.58
+## 2000 11106.27 11146.63 11186.98 11227.78 11268.58 11297.34 11326.10 11335.40 11344.69 11348.54 11352.39 11350.84
+## 2001 11349.29 11340.86 11332.43 11315.07 11297.71 11278.44 11259.16 11246.22 11233.28 11225.22 11217.16 11213.76
+## 2002 11210.37 11212.62 11214.88 11217.83 11220.77 11224.10 11227.43 11234.59 11241.74 11256.92 11272.10 11290.29
+## 2003 11308.47 11327.45 11346.43 11364.98 11383.52 11396.51 11409.50 11415.36 11421.23 11423.95 11426.67 11425.04
+## 2004 11423.41 11417.69 11411.97 11413.45 11414.94 11423.50 11432.06 11439.48 11446.89 11456.94 11466.98 11482.79
+## 2005 11498.61 11512.90 11527.19 11533.99 11540.79 11548.61 11556.43 11571.16 11585.89 11601.06 11616.23 11639.20
+## 2006 11662.17 11698.69 11735.21 11778.22 11821.22 11858.83 11896.44 11923.96 11951.48 11968.61 11985.75 11993.86
+## 2007 12001.98 12002.46 12002.93 12001.49 12000.05 12001.16 12002.26 12002.01 12001.77 11994.14 11986.51 11966.82
+## 2008 11947.14 11920.57 11894.00 11859.54 11825.08 11787.47 11749.86 11720.27 11690.67 11669.21 11647.75 11628.24
+## 2009 11608.72 11589.42 11570.12 11549.00 11527.88 11497.58 11467.29 11428.67 11390.06 11349.96 11309.87 11267.49
+## 2010 11225.11 11187.85 11150.58 11131.03 11111.48 11104.25 11097.01 11086.29 11075.58 11062.60 11049.61 11045.90
+## 2011 11042.19 11038.89 11035.59 11023.21 11010.84 10995.89 10980.94 10967.74 10954.55 10938.32 10922.09 10908.18
+## 2012 10894.28 10892.24 10890.21 10903.03 10915.86 10930.26 10944.66 10950.60 10956.54 10950.82 10945.11 10929.68
+## 2013 10914.26 10896.08 10877.90 10869.16 10860.42 10870.37 10880.31 10898.94 10917.57 10932.73 10947.90 10957.36
+## 2014 10966.82 10972.89 10978.96 10982.92 10986.88 10991.47 10996.07 11001.65 11007.22 11013.88 11020.54 11027.88</code></pre>
+<pre class="r"><code>remainder(births_decomposed)</code></pre>
+<pre><code>##              Jan         Feb         Mar         Apr         May         Jun         Jul         Aug         Sep         Oct
+## 1994 -147.010706   30.975569  251.280333   -2.987806  -55.589677   16.775290  -55.143363   18.653445 -112.984318 -146.448453
+## 1995  -99.806674  -12.433656   48.762459 -131.075675  216.963212  151.703668  -86.276055   98.801345    6.153852  -30.408953
+## 1996  -19.575751   -9.462968   -5.464318  107.543584   40.662916 -139.861193  112.249357   -2.735744  -63.762944  177.705736
+## 1997   29.424646  -46.218813  -90.801846  135.099699  177.080415  -34.105391  157.027332 -241.381755 -169.884553  -96.474882
+## 1998   33.476880  121.668631   62.745693  186.414179   28.983342  -16.723373   66.879839 -208.286778   19.586226  -86.071904
+## 1999  -61.376043   -1.730838  100.345760   20.426917 -100.614904   77.620551   17.660558 -112.818755   69.961985 -269.740982
+## 2000  240.471041  219.681584  226.954857 -150.223386  107.017328  167.593939 -226.138876   -5.311746 -114.254671  -10.716654
+## 2001  147.130085  -83.587957    1.537838  -19.949990  166.234903 -156.606632  -96.364046  131.929998 -202.603003   95.964858
+## 2002  127.763244   47.897441 -138.850332   90.796888   54.858764 -241.401085  125.076952   47.629592  -20.630834   92.841561
+## 2003  -12.570699   35.890049 -101.851449  123.711842  132.879036  -98.743071  145.465179 -132.758846  153.881481  180.524840
+## 2004  -33.506962 -144.419686  148.896059  188.167383 -191.017605  140.668937  -33.743197 -304.809394   14.014568  -32.657211
+## 2005 -160.287360  -74.519570  122.135835   33.666835  -43.067079  205.557206 -228.562344   35.507636  123.649495 -302.168221
+## 2006  -49.716957   80.582531  152.790370 -326.327724  -27.854819  129.968370 -237.960878  254.708543  119.729415   56.859004
+## 2007   79.664400   33.315332   -6.286675 -269.803458    5.896566  -16.655981   24.477744  246.202167 -211.560670   82.526017
+## 2008  177.958852  111.531569 -232.967579  150.917698  -66.094198 -138.169579  142.873569  -30.407240  127.901035   25.129783
+## 2009  -93.079552   71.526942   -3.057292  144.053336  -91.610629   91.381209  192.674372 -198.522361  230.815152   10.153426
+## 2010 -188.661378  -52.931667  122.194876  139.192175 -229.402322   62.920336 -206.178262 -180.918414  151.728368  -66.737161
+## 2011 -111.387448  -63.477727  -53.429240 -150.058136 -192.758398  260.309818  -83.884080  243.018791   98.593543 -221.008841
+## 2012  -98.438476  -70.212059 -111.790543 -266.779587    6.766455  -35.794681    5.010024  302.325605 -114.363278  309.744195
+## 2013   97.421632 -172.270798 -244.448886  -75.272516   28.656145 -239.799888  102.361534   75.853486 -163.967629  144.349691
+## 2014  129.046027  -34.191934 -260.410944   60.371761   19.493853 -200.508772  147.273800  -53.079853   40.415793   69.201578
+##              Nov         Dec
+## 1994  142.894717  -23.207331
+## 1995  -23.841873 -275.492423
+## 1996  -85.507526  -63.480965
+## 1997 -193.782637  106.802757
+## 1998 -104.325955  154.465390
+## 1999 -265.197935 -129.293295
+## 2000  312.128668   -7.007461
+## 2001   73.430346 -232.928214
+## 2002 -178.083041  -78.487901
+## 2003 -299.014820   71.309799
+## 2004  193.041755  100.490360
+## 2005   37.892336  -11.365277
+## 2006  194.838908 -111.483032
+## 2007  239.375921 -162.120526
+## 2008 -436.199756  160.852003
+## 2009 -220.248307  103.697030
+## 2010  231.240099  244.090563
+## 2011  196.195004   -5.770939
+## 2012  279.808435 -150.044384
+## 2013   38.724852  176.246989
+## 2014 -150.654796  116.274723</code></pre>
+<pre class="r"><code># Or even better, do it all at once in a data frame
+births_decomposed_nice &lt;- births_decomposed$time.series %&gt;% 
+  tk_tbl()  # Convert the weird time series object back to a data frame
+
+# Combine the extracted parts with the original monthly data
+births_with_decomposition &lt;- births_monthly %&gt;% 
+  bind_cols(births_decomposed_nice)
+
+# Yay!
+births_with_decomposition</code></pre>
+<pre><code>## # A time tibble: 252 × 6
+## # Index:         date
+##    date       avg_births index     seasonal  trend remainder
+##    &lt;date&gt;          &lt;dbl&gt; &lt;yearmon&gt;    &lt;dbl&gt;  &lt;dbl&gt;     &lt;dbl&gt;
+##  1 1994-01-01     10345. Jan 1994    -452.  10944.   -147.  
+##  2 1994-02-01     10762. Feb 1994    -192.  10923.     31.0 
+##  3 1994-03-01     10959. Mar 1994    -194.  10902.    251.  
+##  4 1994-04-01     10580. Apr 1994    -299.  10882.     -2.99
+##  5 1994-05-01     10655. May 1994    -151.  10862.    -55.6 
+##  6 1994-06-01     10991. Jun 1994     132.  10843.     16.8 
+##  7 1994-07-01     11157. Jul 1994     388.  10824.    -55.1 
+##  8 1994-08-01     11360. Aug 1994     537.  10804.     18.7 
+##  9 1994-09-01     11307. Sep 1994     636.  10785.   -113.  
+## 10 1994-10-01     10651. Oct 1994      28.9 10768.   -146.  
+## # … with 242 more rows</code></pre>
+<p>We can make this data long, which will let us make facets for each of the parts:</p>
+<pre class="r"><code>births_decomposed_long &lt;- births_with_decomposition %&gt;% 
+  gather(variation_type, value, c(avg_births, seasonal, trend, remainder)) %&gt;% 
+  mutate(variation_type = factor(variation_type, 
+                                 levels = c(&quot;avg_births&quot;, &quot;trend&quot;, &quot;seasonal&quot;, &quot;remainder&quot;),
+                                 ordered = TRUE))
+
+ggplot(births_decomposed_long, aes(x = date, y = value)) +
+  geom_line() +
+  theme_minimal() +
+  facet_wrap(~ variation_type, ncol = 1, scales = &quot;free_y&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="forecasting" class="section level2">
+<h2>Forecasting</h2>
+<p>We can also use past trends and seasonality in the data to make predictions about the future using the forecast package. Here we use an auto ARIMA model to guess at the trend in the time series (there are a billion other ways to estimate this model—take Dr. Nelson’s forecasting class to learn those). Then we use that model to forecast a few periods into the future.</p>
+<pre class="r"><code>births_arima &lt;- auto.arima(births_months_ts$births_ts)
+
+# Use the model to forecast 12 months into the future
+births_forecast &lt;- forecast(births_arima, h = 12)
+
+# Plot the forecast. Again, we can use autoplot.
+autoplot(births_forecast) +
+  theme_minimal()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/ARIMA-1.png" width="672" /></p>
+<p>We’re fairly limited in what we can actually tweak when using autoplot(), so instead we can convert the forecast object to a data frame and use ggplot() like normal</p>
+<pre class="r"><code># Get data out of this weird births_forecast object
+births_forecast_tidy &lt;- sw_sweep(births_forecast, timekit_idx = TRUE, rename_index = &quot;date&quot;)
+tail(births_forecast_tidy)  # Look at the last few rows of this forecast</code></pre>
+<pre><code>## # A tibble: 6 × 7
+##   date      key       value  lo.80  lo.95  hi.80  hi.95
+##   &lt;yearmon&gt; &lt;chr&gt;     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+## 1 Jul 2015  forecast 11518. 11200. 11032. 11835. 12003.
+## 2 Aug 2015  forecast 11558. 11229. 11055. 11886. 12060.
+## 3 Sep 2015  forecast 11707. 11370. 11191. 12045. 12223.
+## 4 Oct 2015  forecast 11022. 10669. 10482. 11374. 11561.
+## 5 Nov 2015  forecast 10756. 10387. 10191. 11125. 11320.
+## 6 Dec 2015  forecast 10885. 10501. 10298. 11268. 11472.</code></pre>
+<pre class="r"><code># For whatever reason, the date column here is a special type of variable called
+# &quot;yearmon&quot;, which ggplot doesn&#39;t know how to deal with (like, we can&#39;t zoom in
+# on the plot with coord_cartesian). We use zoo::as.Date() to convert the
+# yearmon variable into a regular date
+births_forecast_tidy_real_date &lt;- births_forecast_tidy %&gt;% 
+  mutate(actual_date = zoo::as.Date(date, frac = 1))
+
+# Plot this puppy!
+ggplot(births_forecast_tidy_real_date, aes(x = actual_date, y = value, color = key)) +
+  geom_ribbon(aes(ymin = lo.95, ymax = hi.95), 
+              fill = &quot;#3182bd&quot;, color = NA) +
+  geom_ribbon(aes(ymin = lo.80, ymax = hi.80, fill = key), 
+              fill = &quot;#deebf7&quot;, color = NA, alpha = 0.8) +
+  geom_line(size = 1) + 
+  geom_point(size = 0.5) +
+  labs(x = NULL, y = &quot;Births&quot;) +
+  scale_y_continuous(labels = scales::comma) +
+  # Zoom in on 2012-2016
+  coord_cartesian(xlim = ymd(c(&quot;2012-01-01&quot;, &quot;2016-01-01&quot;))) +
+  theme_minimal() +
+  theme(legend.position = &quot;bottom&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Plotting%20Forecast%20with%20ggplot-1.png" width="672" /></p>
+</div>
+<div id="bayesian-forecasting-with-prophet" class="section level2">
+<h2>Bayesian forecasting with Prophet</h2>
+<p>Finally, we’ll use Facebook’s open source Bayesian forecasting algorithm to make a similar forecast. The prophet() function requires that the date column be named ds and the main outcome variable (here births) be named y. I don’t know why. So we rename those columns, feed the data frame through prophet(), then make an empty data frame for the future periods we’ll predict, and then use predict() to use the prophet model to make predictions for the empty future data frame.</p>
+<pre class="r"><code>births_prophetized &lt;- births_monthly %&gt;% 
+  select(ds = date, y = avg_births)
+
+prophet_model &lt;- prophet(births_prophetized)</code></pre>
+<pre><code>## Disabling weekly seasonality. Run prophet with weekly.seasonality=TRUE to override this.</code></pre>
+<pre><code>## Disabling daily seasonality. Run prophet with daily.seasonality=TRUE to override this.</code></pre>
+<pre class="r"><code>## Disabling weekly seasonality. Run prophet with weekly.seasonality=TRUE to override this.
+
+## Disabling daily seasonality. Run prophet with daily.seasonality=TRUE to override this.
+
+## Initial log joint probability = -2.43379
+## Optimization terminated normally: 
+##   Convergence detected: relative gradient magnitude is below tolerance
+
+future_dates &lt;- make_future_dataframe(prophet_model, periods = 36, freq = &quot;month&quot;)
+prophet_predict &lt;- predict(prophet_model, future_dates)
+
+# The plot() function for prophet objects uses ggplot behind the scenes, so we
+# can add ggplot layers like normal
+plot(prophet_model, prophet_predict) + 
+  theme_minimal() + 
+  # Zoom in on 2008-2018 
+  # I only figured out this as.POSIXct thing because R was complaining when I
+  # did ymd() like I did above
+  coord_cartesian(xlim = as.POSIXct(c(&quot;2008-01-01&quot;, &quot;2018-01-01&quot;)))</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Prophet-1.png" width="672" /></p>
+<pre class="r"><code>  # We can also decompose this time series, but here we only get the yearly
+# effects
+#
+# Even though both these plots are ggplot objects, for whatever reason we can&#39;t
+# actually add additional layers like theme_minimal. Oh well.
+#
+# There&#39;s probably a way to extract each of these parts out like we did with the
+# forecast library, but I don&#39;t want to dig around in the prophet documentation,
+# so I won&#39;t ¯\_(ツ)_/¯
+prophet_plot_components(prophet_model, prophet_predict) </code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Prophet-2.png" width="672" /></p>
+</div>
 <div id="a-workflow-in-orange" class="section level2">
 <h2>A Workflow in Orange</h2>
 </div>
@@ -44,4 +448,45 @@ url_video: ""
 </div>
 <div id="a-workflow-in-r" class="section level2">
 <h2>A Workflow in R</h2>
+</div>
+<div id="required-reading" class="section level2">
+<h2>Required Reading</h2>
+<ol style="list-style-type: decimal">
+<li>Chapter 8 in Alberto Cairo, * The Truthful Art *</li>
+<li><a href="http://www.fallen.io/shadow-peace/1/">The Nuclear Threat—The Shadow Peace, part 1</a></li>
+<li><a href="https://flowingdata.com/2010/01/07/11-ways-to-visualize-changes-over-time-a-guide/">11 Ways to Visualize Changes Over Time – A Guide</a></li>
+</ol>
+<div id="some-short-blog-posts" class="section level4">
+<h4>Some Short Blog Posts</h4>
+<p>A bunch of (really) short blog posts:</p>
+<ol style="list-style-type: decimal">
+<li><a href="https://www.wired.com/2010/11/ff_311_new_york/">What a Hundred Million Calls to 311 Reveal About New York</a> (just look at the picture; you don’t need to read this unless you’re really curious about trends in 311 calls)</li>
+<li><a href="https://flowingdata.com/2012/04/12/a-century-of-ocean-shipping-animated/">A century of ocean shipping animated</a></li>
+<li><a href="http://junkcharts.typepad.com/junk_charts/2010/11/what-is-seasonal-adjustment-and-why-is-it-used.html">What is seasonal adjustment and why is it used?</a></li>
+<li><a href="http://junkcharts.typepad.com/junk_charts/2005/09/the_startatzero.html">The start-at-zero rule</a></li>
+<li><a href="http://junkcharts.typepad.com/numbersruleyourworld/2011/02/keeping-ones-appetite-after-touring-the-sausage-factory.html">Keeping one’s appetite after touring the sausage factory</a></li>
+<li><a href="http://thedailyviz.com/2016/09/17/how-common-is-your-birthday-dailyviz/">How Common is Your Birthday? This Visualization Might Surprise You</a></li>
+</ol>
+</div>
+</div>
+<div id="recommended-reading" class="section level2">
+<h2>Recommended Reading</h2>
+<ol style="list-style-type: decimal">
+<li><a href="http://www.fallen.io/ww2/">The Fallen of World War II</a></li>
+<li><a href="https://static.googleusercontent.com/media/research.google.com/en//pubs/archive/42901.pdf">Visualizing Statistical Mix Effects and Simpson’s Paradox</a></li>
+<li><a href="http://how-to-fix-a-toilet.com/">How To Fix a Toilet (And Other Things We Couldn’t Do Without Search)</a></li>
+</ol>
+</div>
+<div id="forecasting-and-decomposition" class="section level2">
+<h2>Forecasting and decomposition</h2>
+<p>We ran out of time for this in class, but really all I did was copy/paste from the examples and vignettes at these websites and adapt them to this births data from the CDC:</p>
+<ul>
+<li><a href="https://github.com/business-science/tibbletime">tibbletime</a></li>
+<li><a href="https://www.business-science.io/code-tools/2017/10/26/demo_week_tibbletime.html">This whole series of tutorials on tibbletime</a></li>
+<li><a href="https://github.com/business-science/timetk">timetk</a></li>
+<li><a href="https://www.business-science.io/code-tools/2017/07/09/sweep-0-1-0.html">This tutorial on sweep</a></li>
+<li><a href="https://facebook.github.io/prophet/docs/quick_start.html#r-api">Facebook’s Prophet library for forecasting</a></li>
+<li><a href="https://otexts.org/fpp2/">Rob Hyndman’s Forecasting: Principles and Practice</a></li>
+</ul>
+</div>
 </div>

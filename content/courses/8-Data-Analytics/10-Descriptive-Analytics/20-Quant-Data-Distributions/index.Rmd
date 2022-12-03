@@ -174,12 +174,13 @@ download_file(
 ## A Workflow in R
 
 Download the RMarkdown tutorial file by clicking the icon above and open it in RStudio or rstudio.cloud.
+
 ```{r, echo=FALSE}
 download_file(
   path = "files/distributions.Rmd",
   output_extension = ".Rmd",
-  output_name = "R Markdown Workflow",
-  button_label = "Download Orange Workflow",
+  output_name = "distributions",
+  button_label = "Download RMArkdown Workflow",
   button_type = "danger",
   has_icon = TRUE,
   icon = "fa fa-save",
