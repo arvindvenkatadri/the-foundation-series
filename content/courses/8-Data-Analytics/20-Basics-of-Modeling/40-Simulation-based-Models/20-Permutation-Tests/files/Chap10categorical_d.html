@@ -66,8 +66,9 @@ str(GSS2002)</code></pre>
 <pre class="r"><code>df &lt;- GSS2002 %&gt;% 
        select(Education, DeathPenalty) %&gt;% 
        filter(!is.na(Education) &amp; !is.na(DeathPenalty))
-
-Education &lt;- pull(df, Education)
+dim(df)</code></pre>
+<pre><code>## [1] 1307    2</code></pre>
+<pre class="r"><code>Education &lt;- pull(df, Education)
 DeathPenalty &lt;- pull(df, DeathPenalty)
 
 table(Education, DeathPenalty)</code></pre>
@@ -154,7 +155,7 @@ ggplot() + geom_histogram(aes(result)) +
 <pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="/courses/8-Data-Analytics/20-Basics-of-Modeling/40-Simulation-based-Models/20-Permutation-Tests/files/Chap10categorical_d_files/figure-html/unnamed-chunk-5-1.png" width="50%" /></p>
 <pre class="r"><code>(sum(result &gt;= observedChi2) + 1)/(N + 1)</code></pre>
-<pre><code>## [1] 3e-04</code></pre>
+<pre><code>## [1] 2e-04</code></pre>
 <p>Optional: Create a histogram with the density curve
 imposed onto the histogram. The <tt>ggplot()</tt> command will require a data frame which contains the variable of interest.</p>
 <pre class="r"><code>df &lt;- data.frame(result)
@@ -172,14 +173,14 @@ ggplot(df) + geom_histogram(aes(result, y = stat(density))) +
 ##  Pearson&#39;s Chi-squared test with simulated p-value (based on 9999 replicates)
 ## 
 ## data:  Education and DeathPenalty
-## X-squared = 23.451, df = NA, p-value = 1e-04</code></pre>
+## X-squared = 23.451, df = NA, p-value = 2e-04</code></pre>
 <pre class="r"><code>mat &lt;- table(Education, DeathPenalty)
 chisq.test(mat, simulate.p.value = TRUE, B = 10^4-1)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test with simulated p-value (based on 9999 replicates)
 ## 
 ## data:  mat
-## X-squared = 23.451, df = NA, p-value = 3e-04</code></pre>
+## X-squared = 23.451, df = NA, p-value = 2e-04</code></pre>
 <p>###Example 10.2</p>
 <pre class="r"><code>mat &lt;- rbind(c(42, 50), c(30, 87))
 chisq.test(mat)</code></pre>
