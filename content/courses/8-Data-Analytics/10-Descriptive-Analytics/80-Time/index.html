@@ -1,13 +1,17 @@
 ---
-title: "\U0001F578 Time Series"
+title: "\U0001F554 Time Series"
 subtitle: "Time Series"
 author: "Arvind Venkatadri"
-date: "2022-12-02"
+date: "2022-12-05"
 weight: 80
 summary: "Trends, Seasons, and Changes over time"
 tags:
 - Time Series
-- Trends
+- Trends and Seasons
+- Exponential Models
+- AR
+- MA
+- ARIMA
 - Line Graphs
 - CandleStick Graphs
 - Heatmap Graphs ( over time)
@@ -35,8 +39,7 @@ url_video: ""
 
 
 
-<p><img src="featured.jpg" />
-This material has been drawn largely from Andrew Heiss’ tutorial on Time Series Analysis.</p>
+<p>This material has been drawn largely from Andrew Heiss’ tutorial on Time Series Analysis.</p>
 <div id="load-libraries-and-data" class="section level2">
 <h2>Load libraries and data</h2>
 <p>Libraries for time series and forecasting stuff. You have to load <em>a ton</em> of these to get the ecosystem of time series packages working.</p>
@@ -119,16 +122,8 @@ ggplot(births_monthly, aes(x = date, y = avg_births)) +
   theme_minimal()</code></pre>
 <pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
-<p>We can also calculate a rolling average where we take the mean of every month’s previous twelve months. We use the rollify() function, which works a little strangely—it’s actually a <em>function generator</em> (meaning it’ll take some function, like mean, and make it work on the previous 12 periods).</p>
-</div>
-<div id="here-we-define-a-bunch-of-rolling-mean-functions.-these-dont-do-anything" class="section level1">
-<h1>Here we define a bunch of rolling mean functions. These don’t do anything</h1>
-</div>
-<div id="yetonce-you-feed-them-some-data-theyll-calculate-the-mean-of-the-past" class="section level1">
-<h1>yet—once you feed them some data, they’ll calculate the mean of the past</h1>
-</div>
-<div id="number-of-periods-given-in-window" class="section level1">
-<h1>number of periods given in <code>window</code></h1>
+<p>We can also calculate a rolling average where we take the mean of every month’s previous twelve months. We use the <code>rollify()</code> function, which works a little strangely—it’s actually a <em>function generator</em> (meaning it’ll take some function, like mean, and make it work on the previous 12 periods).</p>
+<p>Here we define a bunch of rolling mean functions. These don’t do anything yet—once you feed them some data, they’ll calculate the mean of the past number of periods given in <code>window</code> argument.</p>
 <pre class="r"><code>rolling_6 &lt;- rollify(mean, window = 6)
 rolling_12 &lt;- rollify(mean, window = 12)
 rolling_24 &lt;- rollify(mean, window = 24)
@@ -151,9 +146,10 @@ ggplot(births_monthly_long, aes(x = date, y = avg_births)) +
 <pre><code>## Warning: Removed 39 rows containing missing values (`geom_line()`).</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>They’re all a little different! A 6-month window still shows some seasonality, while the 12- and 24-month windows are much smoother.</p>
+</div>
 <div id="decompose-trends" class="section level2">
 <h2>Decompose trends</h2>
-<p>We can decompose this time series and extract the trend and seasonality. But first, we have to convert our nice data frame into a <strong>strange time series-enabled object with the ts() function</strong>. To make life easier, we use the tk_ts() function here, which is part of the <strong>timetk package</strong>, which allows us to more easily convert our tidy data into time series data.</p>
+<p>We can decompose this time series and extract the trend and seasonality. But first, we have to convert our nice data frame into a <strong>strange time series-enabled object with the ts() function</strong>. To make life easier, we use the <code>tk_ts()</code> function here, which is part of the <strong>timetk package</strong>, which allows us to more easily convert our tidy data into time series data.</p>
 <p>Here we add a new column that is time series-enabled:</p>
 <pre class="r"><code>births_months_ts &lt;- births_monthly %&gt;% 
   mutate(births_ts = tk_ts(avg_births, start = c(1994, 1), frequency = 12))
@@ -176,7 +172,7 @@ births_months_ts</code></pre>
 ##  9 1994-09-01     11307.    11307.
 ## 10 1994-10-01     10651.    10651.
 ## # … with 242 more rows</code></pre>
-<p>Now we can decompose this with the stl() function (which stands for “seasonal, trend, and irregular, with loess”). s.window is set to periodic because the help file and every example I found online said to do that.</p>
+<p>Now we can decompose this with the <code>stats::stl()</code> function (which stands for “seasonal, trend, and irregular, with loess”). <code>s.window</code> is set to periodic because the help file and every example I found online said to do that.</p>
 <pre class="r"><code>births_decomposed &lt;- stl(births_months_ts$births_ts, s.window = &quot;periodic&quot;)
 
 # Look at the first few rows
@@ -363,7 +359,7 @@ births_forecast &lt;- forecast(births_arima, h = 12)
 autoplot(births_forecast) +
   theme_minimal()</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/ARIMA-1.png" width="672" /></p>
-<p>We’re fairly limited in what we can actually tweak when using autoplot(), so instead we can convert the forecast object to a data frame and use ggplot() like normal</p>
+<p>We’re fairly limited in what we can actually tweak when using <code>autoplot()</code>, so instead we can convert the forecast object to a data frame and use ggplot() like normal:</p>
 <pre class="r"><code># Get data out of this weird births_forecast object
 births_forecast_tidy &lt;- sw_sweep(births_forecast, timekit_idx = TRUE, rename_index = &quot;date&quot;)
 tail(births_forecast_tidy)  # Look at the last few rows of this forecast</code></pre>
@@ -488,5 +484,4 @@ prophet_plot_components(prophet_model, prophet_predict) </code></pre>
 <li><a href="https://facebook.github.io/prophet/docs/quick_start.html#r-api">Facebook’s Prophet library for forecasting</a></li>
 <li><a href="https://otexts.org/fpp2/">Rob Hyndman’s Forecasting: Principles and Practice</a></li>
 </ul>
-</div>
 </div>

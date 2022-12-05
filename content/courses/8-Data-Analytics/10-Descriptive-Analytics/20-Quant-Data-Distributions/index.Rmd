@@ -1,5 +1,5 @@
 ---
-title: "\U0001F576 Graphing Numerical Data - Distributions"
+title: "\U0001F4CA Distributions"
 subtitle: "Distributions"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
@@ -29,7 +29,7 @@ links:
 #   name: Radiant Workflow
 #   url: "labs/Data-Analytics/distributions.Rmd"
 slides: ""
-url_code: ""
+url_code: "/files/distributions.html"
 url_pdf: ""
 url_slides: ""
 url_video: ""
@@ -37,6 +37,7 @@ url_video: ""
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+library(fontawesome)
 library(blogdown)
 library(tidyverse)
 library(mosaic)

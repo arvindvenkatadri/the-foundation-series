@@ -1,5 +1,5 @@
 ---
-title: "\U0001F578 Graphing Numerical Data - Correlations"
+title: "\U0001F4CE Correlations"
 subtitle: "Correlations"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"

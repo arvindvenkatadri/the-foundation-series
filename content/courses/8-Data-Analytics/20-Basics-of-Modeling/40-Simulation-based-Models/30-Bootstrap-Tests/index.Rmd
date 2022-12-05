@@ -1,11 +1,11 @@
 ---
-title: 'Bootstrap Tests'
+title: "Bootstrap"
+subtitle: "An implementation in R Markdown"
 author: "Arvind Venkatadri"
-subtitle: ""
 date: "`r Sys.Date()`"
 view: 2
 type: page
-weight: 20
+weight: 40
 summary: ""
 output:
   html_document:
@@ -14,20 +14,15 @@ output:
     toc: true
     code_folding: true
 tags:
-- Bootstrap Sampling
-- Replacement
+- Bootstrap
 - Monte Carlo Simulation
 - Random Number Generation
 - Distributions
-image:
-  caption: Photo by rawpixel on Unsplash
-  focal_point: Smart
-external_link: ""
 links:
 - icon: book
   icon_pack: fa
-  name: notes
-  url: ""
+  name: lab
+  url: "/labs/Data-Analytics/bootstrap.html"
 - icon: file-powerpoint
   icon_pack: fa
   name: slides
@@ -42,11 +37,7 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
-
 ## Introduction
-
-
-
 
 
 ## Datasets

@@ -42,3 +42,7 @@ In the following set of Modules we will see how different geometries lend themse
 ## References
 
 1.  <https://awagaman.people.amherst.edu/stat230/Stat230CodeCompilationExampleCodeUsingNHANES.pdf>
+
+1. Kyle W. Brown, *R-Gallery-Book*. <https://www.kyle-w-brown.com/R-Gallery/
+
+

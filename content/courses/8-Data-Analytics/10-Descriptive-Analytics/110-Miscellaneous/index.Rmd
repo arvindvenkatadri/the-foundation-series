@@ -1,5 +1,5 @@
 ---
-title: "\U0001F533 Miscellaneous Graphs and Tools "
+title: "\U0001F4DA Miscellaneous Graphs and Tools "
 author: "Arvind Venkatadri"
 weight: 110
 subtitle: "Miscellaneous Graphs and Tools"
@@ -23,9 +23,9 @@ links:
 #   name: 
 #   url: https://twitter.com/arvind_v
 slides: ""
-url_code: "https://schoolofdata.org/handbook/courses/what-is-data/"
+url_code: ""
 url_pdf: ""
-url_slides: "slides/new/index.html"
+url_slides: ""
 url_video: ""
 ---
 
@@ -36,6 +36,15 @@ library(blogdown)
 ```
 
 ## What other free tools are there on the web?
+
+
+### RAWGraphs.io
+<https://rawgraphs.io>
+
+
+### DataWrapper
+<https://datawrapper.de>
+
 
 ### Palladio
 
@@ -50,10 +59,17 @@ library(blogdown)
 <https://www.visme.co/chart-maker/>
 
 
+### Flourish + Figma 
+<https://flourish.studio/>
+<https://www.figma.com/>
 
-### References
 
-1. Flourish + Figma <https://inside.mediahack.co.za/getting-started-with-flourish-figma-to-create-beautiful-custom-charts-34e4efb8fd3d> 
+
+
+## References
+
+1. *Getting started with Flourish & Figma to create beautiful custom charts*, 
+<https://inside.mediahack.co.za/getting-started-with-flourish-figma-to-create-beautiful-custom-charts-34e4efb8fd3d> 
 
 1. Flowing Data Chart Types <https://flowingdata.com/chart-types/>  
 
@@ -82,6 +98,8 @@ library(blogdown)
 <https://datastudio.google.com/s/quUUlgosF4U> 
 
 <iframe width="800" height="800" src="https://datastudio.google.com/embed/reporting/eb2fea55-8eeb-440f-9c56-e8278266a368/page/vZWQB" frameborder="0" style="border:0" allowfullscreen></iframe>  
+
+
 
 ## Papers
 

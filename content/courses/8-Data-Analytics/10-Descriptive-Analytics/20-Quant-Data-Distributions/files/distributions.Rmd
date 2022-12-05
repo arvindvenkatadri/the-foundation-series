@@ -3,8 +3,8 @@ title: "Distributions in R"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 output:
-  html_document:
-    theme: flatly
+  rmdformats::readthedown:
+    highlight: kate
     toc: TRUE
     toc_float: TRUE
     toc_depth: 2
@@ -263,16 +263,20 @@ ggplot(aes(x = reorder(State, total), y = count, fill = `Type of Ban`)) + geom_c
 
 
 ## Case Study -4: Dataset from Ragsdale's book
+
+
+
+
 ### Stat Summaries
 
 
-#Conclusion
+# Conclusion
 
 
 
 # References
 
-1. https://awagaman.people.amherst.edu/stat230/Stat230CodeCompilationExampleCodeUsingNHANES.pdf
+1. A detailed analysis of the NHANES dataset, <https://awagaman.people.amherst.edu/stat230/Stat230CodeCompilationExampleCodeUsingNHANES.pdf>
 
 1. 
 

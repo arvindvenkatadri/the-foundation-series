@@ -38,10 +38,24 @@ links:
 
 
 ```{r setup, include=FALSE}
+
 library(blogdown)
 library(tidyverse)
+
+# Obtaining geospatial data from Open Street Map
+library(osmdata)
+library(osmplotr)
+
+# Processing geospatial data
+library(sf)
+library(sfheaders)
+
+# Plotting maps in R
+library(ggplot2)
+library(tmap)
 library(leaflet)
 library(mapview)
+
 ```
 
 
@@ -59,7 +73,7 @@ Maps That Will Change The Way You See The World:(https://www.youtube.com/watch?v
 
 
 ## A Workflow in Radiant
-Radiant does not support map-making. 
+Radiant does not support map-making. We need to do it one of the many many ways available in R directly!
 
 ## A Workflow in R
 

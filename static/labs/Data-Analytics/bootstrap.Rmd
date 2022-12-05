@@ -1,0 +1,21 @@
+---
+title: "Bootstrap"
+subtitle: "Bootstrap Statistics in R" # only for html output
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    code_download: true
+bibliography: skeleton.bib
+link-citations: yes
+---
+
+```{r setup, include=FALSE}
+library(rmdformats)
+library(tufte)
+# invalidate cache when the tufte version changes
+knitr::opts_chunk$set(cache.extra = packageVersion('tufte'))
+options(htmltools.dir.version = FALSE)
+```
+

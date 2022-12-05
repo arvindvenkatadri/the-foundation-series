@@ -1,5 +1,5 @@
 ---
-title: "\U0001F5FA Ratings and Rankings"
+title: "\U0001F58F Ratings and Rankings"
 subtitle: "Ranking"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
