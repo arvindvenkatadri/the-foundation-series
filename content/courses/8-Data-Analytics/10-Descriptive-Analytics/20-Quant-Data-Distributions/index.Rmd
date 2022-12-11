@@ -36,7 +36,7 @@ url_video: ""
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
 library(fontawesome)
 library(blogdown)
 library(tidyverse)
