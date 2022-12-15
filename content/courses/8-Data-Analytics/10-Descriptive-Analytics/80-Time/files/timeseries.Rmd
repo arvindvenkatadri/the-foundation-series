@@ -61,8 +61,6 @@ glimpse(walmart_sales_weekly)
 
 ```
 
-
-
 The data is described as:
 
 > A tibble: 9,743 x 3
@@ -88,12 +86,14 @@ The data is described as:
 > -   `Unemployment` Numeric. The unemployment rate in the region.
 
 Very cool to know that `mosaic::inspect()` identifies `date` variables
-separately! 
+separately!
 
-NOTE:
-1. This is still a `data.frame`, with a time-oriented variable of course,
-and not yet a time-series object. Note that this data frame has the YMD columns repeated for each `Dept`.
-2. The `Date` column has repeated entries for each `Dept`! To deal with this repetition, we will always need to split the `Weekly_Sales` by the `Dept` column before we plot or analyze. 
+NOTE: 1. This is still a `data.frame`, with a time-oriented variable of
+course, and not yet a time-series object. Note that this data frame has
+the YMD columns repeated for each `Dept`. 2. The `Date` column has
+repeated entries for each `Dept`! To deal with this repetition, we will
+always need to split the `Weekly_Sales` by the `Dept` column before we
+plot or analyze.
 
 Since our sales are *weekly*, we will convert Date to `yearweek` format:
 
@@ -113,13 +113,11 @@ walmart_time
 
 ```
 
-
-
-
 ### Basic Time Series Plots
 
-The easiest way is to use `autoplot` from the `feasts` package. You may need to specify the actual measured variable, if there is more than one numerical column:
-
+The easiest way is to use `autoplot` from the `feasts` package. You may
+need to specify the actual measured variable, if there is more than one
+numerical column:
 
 ```{r feasts-basic-plot}
 
@@ -176,8 +174,6 @@ walmart_time %>%
                    .smooth = FALSE) # Only 4 points per graph
 
 ```
-
-
 
 Clearly the "unfortunate"
 [Dept#13](https://u.osu.edu/vanzandt/2019/04/12/is-13-really-that-unlucky/)
@@ -248,7 +244,9 @@ time series that can be described using an additive model, it is common
 to use a **smoothing method**, such as calculating the *simple moving
 average of the time series*.
 
-`timetk` has the ability to achieve this: Let us plot the `trend`, `seasonal`, `cyclic` and `irregular` aspects of `Weekly_Sales` for Dept 38:
+`timetk` has the ability to achieve this: Let us plot the `trend`,
+`seasonal`, `cyclic` and `irregular` aspects of `Weekly_Sales` for Dept
+38:
 
 ```{r decompose-time-series}
 
@@ -260,7 +258,6 @@ walmart_time %>%
 
 We can do this for **all** `Dept` using `fable` and `fabletools`:
 
-
 ```{r Decomposing_trends}
 
 walmart_decomposed <- 
@@ -270,14 +267,13 @@ walmart_decomposed <-
   # filter(Dept == "38") %>% 
   # 
 
-  fabletools::model(stl = STL(Weekly_Sales))
+fabletools::model(stl = STL(Weekly_Sales))
 
 fabletools::components(walmart_decomposed)
 
 autoplot(components((walmart_decomposed)))
 
 ```
-
 
 ## Case Study-2: Dataset from `nycflights13`
 
@@ -303,12 +299,12 @@ mosaic::inspect(flights)
 
 ```
 
-
 We have *time-related* columns; Apart from `year, month, day` we have
 `time_hour`; and time-event numerical data such as `arr_delay` (arrival
 delay) and `dep_delay` (departure delay). We also have categorical data
-such as `carrier, origin, dest`, `flight` and `tailnum` of the aircraft. It is
-also a large dataset containing 330K entries. Enough to play with!!
+such as `carrier, origin, dest`, `flight` and `tailnum` of the aircraft.
+It is also a large dataset containing 330K entries. Enough to play
+with!!
 
 Let us replace the `NA`s in `arr_delay` and `dep_delay` with zeroes for
 now, and convert it into a time-series object with `tsibble`:
@@ -428,22 +424,22 @@ ggformula::gf_tile(origin ~ month, fill = ~ mean_monthly_delay,
 
 ```
 
-
 # Conclusion
 
-We can plot most of the common Time Series Plots with the help of the **tidyverts** packages: ( `tsibble`, `feast`, `fable` and `fabletools`) , along with `timetk` and `ggformula`. 
+We can plot most of the common Time Series Plots with the help of the
+**tidyverts** packages: ( `tsibble`, `feast`, `fable` and `fabletools`)
+, along with `timetk` and `ggformula`.
 
-There are other plot packages to investigate,
-such as [dygraphs](https://rstudio.github.io/dygraphs/index.html)
+There are other plot packages to investigate, such as
+[dygraphs](https://rstudio.github.io/dygraphs/index.html)
 
-Recall that we have used the `tsibble` format for the data.
-There are other formats such as `ts`, `xts` and others which are meant
-for time series analysis. But for our present purposes, we are able to
-do things with the capabilities of `timetk`.
+Recall that we have used the `tsibble` format for the data. There are
+other formats such as `ts`, `xts` and others which are meant for time
+series analysis. But for our present purposes, we are able to do things
+with the capabilities of `timetk`.
 
 # References
 
 1.  Rob J Hyndman and George Athanasopoulos, *Forecasting:
     Principles and Practice (3rd ed)*, Available Online
     <https://otexts.com/fpp3/>
-

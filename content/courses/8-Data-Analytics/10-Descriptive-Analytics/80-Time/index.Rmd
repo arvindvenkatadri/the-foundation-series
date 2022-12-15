@@ -41,7 +41,10 @@ library(lubridate)  # Deal with dates
 
 library(mosaic)
 
-
+library(tsibble)
+library(tsibbledata)
+library(fable)
+library(fabletools)
 library(timetk)  # Convert data frames to time series-specific objects
 library(forecast)  # Make forecasts and decompose time series
 
@@ -108,23 +111,30 @@ births_ts <- births_2000_2014 %>%
   mutate(date = lubridate::make_date(year = year,
                                      month = month,
                                      day = date_of_month)) %>%
-  select(date, births, year, month, date_of_month,day_of_week) %>% 
-  timetk::tk_ts()
+  
+  # drop year month day since we have date
+  select(date, births, date_of_month,day_of_week) %>% 
+   as_tsibble(index = date, # Time Variable
+             key = births)
+
+births_ts
 
 births_ts %>%
-  summarise_by_time(.data = ., .date_var = date, .by = "month", mean = mean(births)) 
-
-%>%  # month of March!!
-  timetk::plot_time_series(.date_var = date,
-                           .value = births,
+  index_by(month = ~ yearmonth(.)) %>% 
+  # Absolutely need this to take time averages
+  # Naming this `month2` since we already have a month column
+  summarise(mean_births = mean(births, na.rm = TRUE)) %>% 
+  timetk::plot_time_series(.date_var = month,
+                           .value = mean_births,
                           .smooth = FALSE,
                              .title = "Births in the US over Time")
+  
 
 ```
 
 
 
-Hmm...a bit dense. Maybe some aggregation can help.....can we try to plot box plots over time (Candle-Stick Plots)?
+Hmm...can we try to plot box plots over time (Candle-Stick Plots)?
 
 
 
@@ -147,18 +157,42 @@ Are there trends over the years, or seasonal cycles in the births data?
 
 
 ```{r,echo=FALSE,message=FALSE}
+
+
 births_ts %>% 
 timetk::plot_stl_diagnostics(.date_var = date,
                              .value = births)
 
+```
+
+
+
+```{r}
+
+
+births_decomposed <- births_ts %>% 
+  fabletools::model(stl = STL(births))
+
+fabletools::components(births_decomposed)
+
+autoplot(components(births_decomposed))
 
 ```
+
+
+
+
+
+
+
 
 
 How about a heatmap? We can cook up a categorical variable based on the number of births (low, fine, high) and use that to create a heatmap:
 
 
 ```{r,echo=FALSE}
+
+
 library(ggformula)
 
 births_2000_2014 %>%  
