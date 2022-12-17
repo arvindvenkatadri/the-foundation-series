@@ -61,4 +61,5 @@ All possible !!
 
 1. Lovelace et al, [Geocomputation in R](https://geocompr.robinlovelace.net/adv-map.html)
 
+<script src="https://gist.github.com/arvindvenkatadri/8ad8cb44833bfc27419f9f3e765dccca.js"></script>
 

@@ -1,35 +1,22 @@
 ---
 title: "\U0001F554 Time Series"
-subtitle: "Time Series"
-author: "Arvind Venkatadri"
+author: Arvind Venkatadri
 date: "`r Sys.Date()`"
-weight: 80
-summary: "Trends, Seasons, and Changes over time"
 tags:
-- Time Series
-- Line Graphs
-- CandleStick Graphs
-- Heatmap Graphs (over time)
+  - CandleStick Graphs
+  - Heatmap Graphs (over time)
+  - Line Graphs
+  - Time Series
+subtitle: Time Series
+weight: 80
+summary: Trends, Seasons, and Changes over time
 image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
-external_link: ""
-links:
-# - icon: linkedin
-#   icon_pack: fab
-#   name: 
-#   url: https://linkedin.com/arvindvenkatadri
-# - icon: twitter
-#   icon_pack: fab
-#   name: 
-#   url: https://twitter.com/arvind_v
 slides: ""
 url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
-editor_options: 
-  markdown: 
+editor_options:
+  markdown:
     wrap: 72
 ---
 
@@ -37,6 +24,7 @@ editor_options:
 
 knitr::opts_chunk$set(echo = TRUE, fig.cap = c(5,4))
 library(tidyverse)
+library(magrittr)
 library(lubridate)  # Deal with dates
 
 library(mosaic)
@@ -45,6 +33,7 @@ library(tsibble)
 library(tsibbledata)
 library(fable)
 library(fabletools)
+library(feasts) # Feature Extraction and Statistics for Time Series.
 library(timetk)  # Convert data frames to time series-specific objects
 library(forecast)  # Make forecasts and decompose time series
 
@@ -114,20 +103,22 @@ births_ts <- births_2000_2014 %>%
   
   # drop year month day since we have date
   select(date, births, date_of_month,day_of_week) %>% 
-   as_tsibble(index = date, # Time Variable
+  tsibble::as_tsibble(index = date, # Time Variable
              key = births)
 
 births_ts
 
 births_ts %>%
-  index_by(month = ~ yearmonth(.)) %>% 
+  index_by(month = ~ yearmonth(.)) %>% # Grouping by month
   # Absolutely need this to take time averages
-  # Naming this `month2` since we already have a month column
   summarise(mean_births = mean(births, na.rm = TRUE)) %>% 
+# This creates a column called **month** 
+# And another called **mean_births**
+
   timetk::plot_time_series(.date_var = month,
                            .value = mean_births,
-                          .smooth = FALSE,
-                             .title = "Births in the US over Time")
+                           .smooth = FALSE,
+                           .title = "Births in the US over Time")
   
 
 ```
@@ -140,7 +131,9 @@ Hmm...can we try to plot box plots over time (Candle-Stick Plots)?
 
 ```{r, echo=FALSE,message=FALSE}
 
-births_ts %>% plot_time_series_boxplot(.date_var = date, 
+births_ts %>% 
+  # No need to summarise, since we want boxplots per year / month
+  plot_time_series_boxplot(.date_var = date, 
                                        .value = births,
                                        .period = "year",
                                        .title = "CandleStick Plot for US Births")
@@ -167,11 +160,13 @@ timetk::plot_stl_diagnostics(.date_var = date,
 
 
 
-```{r}
+```{r, eval = FALSE}
 
 
-births_decomposed <- births_ts %>% 
-  fabletools::model(stl = STL(births))
+births_decomposed <- 
+  stl(births_ts$births, s.window = "periodic")
+
+  fabletools::model(stl = STL())
 
 fabletools::components(births_decomposed)
 

@@ -106,6 +106,12 @@ ggplot(data = .,
           "stratified by demographics and survival")
 ```
 
+Here is another example of a Sankey Diagram:This diagram show how energy is converted or transmitted before being consumed or lost: supplies are on the left, and demands are on the right. Data: Department of Energy & Climate Change via Tom Counsell
+
+<iframe width="100%" height="684" frameborder="0"
+  src="https://observablehq.com/embed/@d3/sankey?cells=chart"></iframe>
+  
+  
 ## Datesets
 TBD link here to .zip file
 

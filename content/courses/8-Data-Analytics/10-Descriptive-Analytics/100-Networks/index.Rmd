@@ -36,6 +36,17 @@ library(blogdown)
 
 ```
 
+
+## What kind Network graphs will we make?
+
+Here is a network map of the characters in Victor Hugo's `Les Miserables`:
+
+<iframe width="100%" height="676" frameborder="0"
+  src="https://observablehq.com/embed/@d3/force-directed-graph-canvas?cells=chart"></iframe>
+  
+
+
+
 ## A Workflow in Orange
 
 
