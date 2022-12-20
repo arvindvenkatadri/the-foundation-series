@@ -123,7 +123,7 @@ Alice laughed. “There’s no use trying,” she said: “one can’t believe i
 ]
 ---
 
-## TRIZ Workflow: Story#1: Meat Transportation
+## TRIZ Workflow: Story #1: Meat Transportation
 
 
 .pull-left[
@@ -147,7 +147,7 @@ The art of inventing is the ability to remove barriers to Ideality in order to q
 
 ---
 
-## TRIZ Workflow: Story#2: Red Adair and Oil Well Fires
+## TRIZ Workflow: Story #2: Red Adair and Oil Well Fires
 
 .pull-left[An oil well in Saudi Arabia exploded and caught fire.
 The result was a blazing inferno that consumed an enormous quantity of oil each day. After initial efforts to extinguish it failed, famed firefighter Red Adair was called in. Red knew that the fire could be put out if a huge amount of fire retardant foam could be dumped on the base of the well. 
@@ -173,7 +173,7 @@ Excessive Action**
 ]
 
 ---
-## TRIZ Workflow: Case Study#2: Spotify Ad
+## TRIZ Workflow: Case Study #1: Spotify Ad
 
 .pull-left[
 - **AC**: I want to chill, but Mom wants me to take her veggie shopping. I have to put up with waste of time and possibly boredom. 
@@ -201,7 +201,7 @@ Solution:
 
 ---
 
-## TRIZ Workflow: Case Study #3
+## TRIZ Workflow: Case Study #2
 ### Wildlife Crossings Key to Highway Safety in Banff
 
 .pull-left[
@@ -220,7 +220,7 @@ But as park visitation increased, traffic volume surged—and so did highway-rel
 
 ---
 
-### TRIZ Workflow: Case Study #3: Wildlife Crossings in Banff
+### TRIZ Workflow: Case Study #2: Wildlife Crossings in Banff
 .pull-left[
 - **AC**: We want to drive at high speed, but not kill migrating wild animals (or endanger our vehicles). 
 
@@ -247,7 +247,7 @@ But as park visitation increased, traffic volume surged—and so did highway-rel
 
 ---
 
-### TRIZ Workflow: Case Study #3: Wildlife Crossings in Banff
+### TRIZ Workflow: Case Study #2: Wildlife Crossings in Banff
 
 .pull-left[
 Inventive Principles:
@@ -277,7 +277,7 @@ NOTE: The IFR embodies a **PC** !! So **Separation Principles** suggest "separat
 
 ---
 
-### TRIZ Workflow: Case Study #4: Bike Lane
+### TRIZ Workflow: Case Study #3: Bike Lane
 
 .pull-left[
 Very Similar Considerations!!
@@ -306,7 +306,7 @@ Very Similar Considerations!!
 
 ---
 
-## TRIZ Workflow: Case Study #5: Arc of the Diver
+## TRIZ Workflow: Case Study #4: Arc of the Diver
 
 .pull-left[
 - AC: When diving, the water may hurt the diver if they do not land properly. 
@@ -330,7 +330,7 @@ This contradiction is resolved by **Separating** the requirements **in space**: 
 
 ---
 
-### TRIZ Workflow: Case Study #6: Plastics in the Water
+### TRIZ Workflow: Case Study #5: Plastics in the Water
 .pull-left[
 - **AC**: 
   - Plastics are polluting the oceans
@@ -348,7 +348,7 @@ knitr::include_graphics("https://ourworldindata.org/uploads/2021/04/Plastic-rive
 
 
 ---
-### TRIZ Workflow: Case Study #6: Plastics in the Water
+### TRIZ Workflow: Case Study #5: Plastics in the Water
 .pull-left[
 - **AC**: Plastics are polluting the oceans, they are impossible to retrieve from there; 80% of all ocean plastics come from ~1600 rivers!
 
@@ -375,13 +375,13 @@ Inventive Principles:
 
 ---
 
-## TRIZ Workflow: Case Study  #6: The Great Bubble Barrier
+## TRIZ Workflow: Case Study  #5: The Great Bubble Barrier
 
 <center><iframe width="950" height="500" src="https://www.youtube.com/embed/n_KwF-gf0S0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 ---
 
-## TRIZ Workflow: Case Study #7: Bus Strikes in Japan
+## TRIZ Workflow: Case Study #6: Bus Strikes in Japan
 
 .pull-left[
 - Drivers "need" to protest against their Employers
@@ -395,14 +395,13 @@ Inventive Principles:
 
 .pull-right[
 <iframe src="https://giphy.com/embed/xT9KVti6uOede1cYZq" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/filmeditor-horror-friday-the-13th-xT9KVti6uOede1cYZq">via GIPHY</a></p>
-
 ]
 
 
 .footnote[http://www.darrellmann.com/mini-case-study-strike/]
 
 ---
-## TRIZ Workflow: Case Study #7: Bus Strikes in Japan
+## TRIZ Workflow: Case Study #6: Bus Strikes in Japan
 
 .pull-left[
 ![](images/japan-bus-0-800x504.png)
@@ -426,7 +425,7 @@ Inventive Principles:
 ]
 ---
 
-## TRIZ Workflow: Case Study #7: Bus Strikes in Japan
+## TRIZ Workflow: Case Study #6: Bus Strikes in Japan
 
 .pull-left[
 
@@ -453,6 +452,90 @@ Solution:
 
 ---
 
+
+.pull-left[
+
+![](images/Lawrence.jpg)
+
+
+]
+
+.pull-right[
+## TRIZ Workflow: Case Study #7: Lawrence of Arabia
+- Lawrence of Arabia was a famous historical figure
+- He is said to have united the warring Arab tribes and made them fight against the Turkish forces
+- One key event in that war was the taking of the post of Aqaba, which is in modern-day Jordan
+
+]
+
+---
+## TRIZ Workflow: Case Study #7: Lawrence of Arabia
+
+<center><iframe src="https://www.google.com/maps/d/embed?mid=1S7HsEtlbpmbIdrI3n8v-SA9pxaU&hl=en_US&ehbc=2E312F" width="950" height="500"></iframe></center>
+
+---
+## TRIZ Workflow: Case Study #7: Lawrence of Arabia
+
+<center><iframe width="950" height="500" src="https://www.youtube.com/embed/K34S8q76gDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+---
+
+## TRIZ Workflow: Case Study #7: Lawrence of Arabia
+
+<center><iframe width="950" height="500" src="https://www.youtube.com/embed/5ZQSpMiaaxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+---
+
+### TRIZ Workflow: Case Study #7: Lawrence of Arabia
+.pull-left[
+- **AC**: We need to supply the Arab army via Aqaba port. Aquaba has huge guns and they will sink the ships in that narrow gulf. 
+
+- **Knobs**: Guns? Ships? Port? Width of the Gulf? Time of Attack? Duration of Attack?
+
+- **IFR**: We need to attack and take Aqaba port with ships that are not sinkable.
+
+- **TC**: 
+  - **TC1**: Increase *Stability of Objects Composition*(13) and not worsen *Duration of Action of a Moving Object*(15) 
+  
+- **PC**: The Ships must be near Aqaba and near the guns but not be near enough to shoot. (They must be near and not near at the same time)
+]
+
+.pull-right[
+Inventive Principles:
+- TC1: 13(The Other Way Around !!), 27(Cheap Short Living Objects), 10 (Prior Action), 35(Parameter Change) .....
+  - IP10: Prior Action? How? Lawrence and Ali are far from Aqaba and cannot do anything "in advance"...Hmm...Lawrence and Ali must **recruit the Howeitat "in advance" of their attack **!!
+  - IP27: Cheap Short Living Objects? What objects? Not men, not guns? Wait....**CAMELS**!!
+  - IP35: Parameter Change? What parameter can Lawrence change? Timing, Date..? Wait... **DIRECTION**!!
+  - IP13: The Other Way Around? How? Not attack by sea? Wait...**ATTACK BY LAND**!!
+
+---
+
+### TRIZ Workflow: Case Study #7: Lawrence of Arabia
+
+Solution:
+- 10 (Prior Action): Get hold of the Howeitat tribe to unite with them and fight
+
+- 27 (Cheap Short Living Objects: Attack with Camels! 
+
+This was really inspired from Lawrence's reading and knowledge of the Koran, and his statement to Feisal in the tent scene is very telling!
+- 35(Parameter Change) and 13 (The Other Way Around): Change *the direction of the attack!* Attack by land!! `r emojifont::emoji("leftwards_arrow_with_hook")` So the "ships are near the guns, but because the guns point seaward, the "ships" cannot be sunk!
+
+- SO: With the landward attack on camels, with the Howeitat in company, Lawrence and Ali were able to brush aside the flimsy defences at Aqaba and take it!
+
+AND...Camels are the **Ship of the Desert!** `r emoji("camel")` `r emoji("ship")`, so that the attack **was** with **ships**!!
+
+
+
+
+---
+
+### TRIZ Workflow: Case Study #7: Lawrence of Arabia - Solution in Action!
+
+<center><iframe width="950" height="500" src="https://www.youtube.com/embed/lChJz2DSpsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+
+
+---
+
 .pull-left[
 ![](https://roundlearning.files.wordpress.com/2017/10/dartagnan-musketeers.jpg)
 
@@ -464,10 +547,11 @@ Maurice Leloir (1851-1940)
 # Thanks!
 
 ## Slides made 
-###with 
+### with 
 ## `r anicon::faa("r-project", animate="vertical")` 
 ### via the R packages:<br>
 
 &#x2694;&#xFE0F; [**xaringan**](https://github.com/yihui/xaringan)<br> +<br/>&#x1F60E; 
 &#x2718;[**gadenbuie/xaringanExtra**](https://github.com/gadenbuie/xaringanExtra)<br><br/>
+&#x1F389;[**Emi Tanaka's anicon package**](https://emitanaka.org/anicon/)
 ]

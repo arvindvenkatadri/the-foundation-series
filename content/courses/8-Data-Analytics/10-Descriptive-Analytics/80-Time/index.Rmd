@@ -163,10 +163,9 @@ timetk::plot_stl_diagnostics(.date_var = date,
 ```{r, eval = FALSE}
 
 
-births_decomposed <- 
-  stl(births_ts$births, s.window = "periodic")
-
-  fabletools::model(stl = STL())
+births_decomposed <- births_ts %>% 
+  fabletools::model(STL(births ~ season(period = "month"))) 
+  
 
 fabletools::components(births_decomposed)
 
