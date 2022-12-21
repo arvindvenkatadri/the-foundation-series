@@ -10,6 +10,7 @@ tags:
   - 48 TRIZ Parameters
   - Inventive Principles
   - Creativity Systems Model
+  - Making Metaphors
 summary: 'The Attack on Aqaba: A TRIZ Analysis'
 authors: []
 external_link: ''
@@ -56,6 +57,7 @@ Here is the map of the events that are unfolding in the movie at this time.[^1]
 
 <center><iframe src="https://www.google.com/maps/d/embed?mid=1S7HsEtlbpmbIdrI3n8v-SA9pxaU&hl=en_US&ehbc=2E312F" width="950" height="500"></iframe></center>
 
+<br>
 
 Lawrence encounters Ali in dramatic fashion at the Masturah Well, on the way to meet Feisal, and his Arab guide is shot by Ali, a direct experience for Lawrence of inter-tribe rivalry in Arabia. (Ali is a Harith, and Tafas the guide was a Hashemi). Lawrence peremptorily rejects an offer of help from Ali, and finds his way alone to Wadi Safra, where Feisal is camped. He is met by Col. Brighton as he nears the camp. Both enter camp just in time to witness another bombing raid by Turkish airplanes. 
 
@@ -126,7 +128,7 @@ ss.ceDiag(effect,causes.head,causes, main ="The Taking of Aqaba",ss.col = c("", 
 
 ```
 
-Turning the *knobs/parameters* in the Ishikawa Diagram, it seems that if the British allies attack Aqaba, they may win, BUT they will lose a few warships. If the Arabs want to attack, they are too small in mumber and have no warships, and hence their chances of success are very slim. Herein lies the Contradiction, which we can now specify as an [**Administrative Contradiction(AC)**](https://altshuller.ru/world/eng/triz6.asp) in *plain English*: 
+Turning the *knobs/parameters* in the Ishikawa Diagram, it seems that if the British allies attack Aqaba, they may win, BUT they may lose a few warships. If the Arabs want to attack, they are too small in number and have no warships, and hence their chances of success are very slim. Herein lies the Contradiction, which we can now specify as an [**Administrative Contradiction(AC)**](https://altshuller.ru/world/eng/triz6.asp) in *plain English*: 
 
 > <center>**AC**: The Arabs need the British to supply them via Aqaba port. Aqaba has huge guns and they will sink the British ships in that narrow gulf if they try a naval attack. So the Arabs need to take Aqaba without losing British ships.</center>
 
@@ -136,22 +138,22 @@ Next, based on this Contradiction and the inspection of the Ishikawa Diagram abo
 
 Note how the tone of this IFR is like a "eat my cake and have it too". Very typical for IFRs, this impossible-sounding tone!
 
-Let us take the AC and convert it into a *Technical Contradiction(TC)*. We will look at the **48 TRIZ Parameters** in the [**Contradiction Matrix (PDF)**](/pdf/TRIZ/ContradictionMatrix2003.pdf) and see which Parameter we want to improve, while not worsening another. Here is what we can attempt, stating the Contradiction both ways[^2]:
+Let us take the AC and convert it into a *Technical Contradiction(TC)*. We will look at the *48 TRIZ Parameters* in the [*TRIZ Contradiction Matrix* **(PDF)**](/pdf/TRIZ/ContradictionMatrix2003.pdf) and see which Parameter we want to improve, while not worsening another. Here is what we can attempt, stating the Contradiction both ways[^2]:
 
-> **- TC 1**: Increase *Duration of Action of a Moving Object* (12)  and not worsen *Stability of Objects Composition* (21)  
-**- TC 2**: Increase *Stability of Objects Composition* (21)  and not worsen *Duration of Action of a Moving Object* (12)  
+> **- TC 1**: Increase `Duration of Action of a Moving Object` (12)  and not worsen `Stability of Objects Composition` (21)  
+**- TC 2**: Increase `Stability of Objects Composition` (21)  and not worsen `Duration of Action of a Moving Object` (12)  
 
 
 
-Here we choose these Parameters based on our IFR that the guns at Aqaba should not affect the Arab attack at all. 
+Here we choose these Parameters based on our IFR that the guns at Aqaba should not affect the Arab attack at all. The Parameters chosen from the TRIZ Matrix can be thought of as **metaphors** for the knobs that lie within our AC. Going from the AC to the TC is an act of *making metaphors*. We could easily have chosen the Parameter `Power(18)` or `Illumination Intensity(23)` to "metaphorize" the effectiveness of the attack, if our imaginations run in that direction. There is here a considerable flexibility and possibility for imaginative interpretations of the AC, but using the **language of TRIZ**. 
 
-We could even stretch to making a *Physical Contradiction(PC)* happen:
+We could even stretch to making a *Physical Contradiction(PC)*[^3] happen:
   
 > <center>**PC**: The Ships must be near the guns but not be near enough to be shot at. (They must be near and not near at the same time)</center>
 
 ## Solving the Technical Contradiction
 
-Let us take the TC into the Contradiction Matrix and arrive at the TRIZ Inventive Principles. Here they are from the figure below:
+Let us take the both the TC-s into the Contradiction Matrix and arrive at the list of TRIZ Inventive Principles. Here is the Matrix solution for TC-1 in the figure below:
 
 ```{r, echo = FALSE}
 
@@ -159,14 +161,14 @@ knitr::include_graphics("matrix.png")
 
 ```
 
-The Inventive Principles are:  
+The Inventive Principles are:(TC1) 
 
 1. IP 13 (The Other Way Around)   
 2. IP 35 (Parameter Change)    
 3. IP 24 (Intermediary)    
 4. IP 40 (Composite Materials)   
 
-and
+and (TC2)
 
 5. IP 10 (Preliminary Action)   
 6. IP 5 (Merging) 
@@ -175,17 +177,17 @@ and
   
 
 
-How are we to apply these Inventive Principles?  
+How are we to apply these Inventive Principles? Here again is an imaginative exercise as we map these **Generalized Solutions** back into the Problem at hand:
 
   - **IP 13: The Other Way Around**. How? Not attack by sea? Wait...**ATTACK BY LAND**!! Change the **DIRECTION** of Attack! So attack from the other side, the land side!! (We could retrospectively add this parameter to the Ishikawa Diagram too). Will this work? Yes, the guns can't turn around !!
   
-  - **IP 35: Parameter Change**. But "ships" on land??  Note, *the desert is an ocean into which no oar is dipped*. Sand and Water are both **Resources** in the problem.  So a different kind of ocean and therefore a different kind of ship. At a stretch, we can say the warships of the British Navy are being substituted with the use of ....Camels!! And, metaphorically speaking, it is *still* an attack using ships....*The Ships of the Desert*!! Parameter Change. 
+  - **IP 35: Parameter Change**. But "ships" on land??  Note, *the desert is an ocean into which no oar is dipped*. Sand and Water are both **Resources** in the problem, as we have duly noted in the Ishikawa Diagram.  So a different kind of ocean and therefore a different kind of ship? At a stretch, we can say the warships of the British Navy are being substituted with the use of ....Camels!! And, metaphorically speaking, it is *still* an attack using ships....*The Ships of the Desert*!! Parameter Change. 
   
   - **IP 10: Prior Action**. How? Lawrence and Ali are far from Aqaba and cannot do anything "in advance". What could this be? 
   
   - **IP 5: Merging**. However, on the way to Aqaba, Lawrence and Ali must **recruit the Howeitat tribe "in advance" of their attack **!! As Lawrence tells Ali, *If 50 men came out of the Nefud Desert, they might be 50 men other men would join*. This is in accordance with what IP 10 is suggesting, to get other tribes to join in, *in advance* of the attack. 
   
-  - **IP 40: Composite Materials**. What object within the situation can we reconstitute with smaller pieces of different types? The British Army...so more than one army? Yes! The Tribes need to unite into one *composite* army.  
+  - **IP 40: Composite Materials**. What object within the situation can we reconstitute with smaller pieces of different types? The British Army...so an army made up of pieces? Yes! The Tribes need to unite into one *composite* army.  
   And, instead of large warships, the Arabs switch to a *composite* force with camels...
   
   
@@ -197,7 +199,15 @@ Here is the final solution in action !!
 
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/lChJz2DSpsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
+<br>
 I hope that was a much fun to read as it was for me to write it up !! 
+
+## Points to Ponder
+
+- Do we each of us need a Dryden to vouch for us and help us get access to the Field?
+- Does TRIZ work in both mundane and industrial contexts? (Yes of course!)
+- Can we just take the 40 Inventive Principles directly and throw them at every Problem, without necessarily going through the process of creating Contradictions and IFR? Hipple's book has a remark in this direction.
+
 
 ## References
 
@@ -212,5 +222,7 @@ I hope that was a much fun to read as it was for me to write it up !!
 [^1]: I was not able to ascertain who is the author of this map. I would be happy to write to obtain permission and use it with acknowledgement. 
 
 [^2]: The Contradiction Matrix is by and large symmetric, but there are a few places where it is not, so stating the Contradiction both ways allows us to access a slightly larger set of Inventive Principles from two cells of the Matrix.
+
+[^3]: Arriving at *Physical Contradictions* is not always easy! If we can, then there are a very crisp set of **TRIZ Separation Principles** that we can apply to solve the Problem.
 
 
