@@ -45,4 +45,6 @@ In the following set of Modules we will see how different geometries lend themse
 
 1. Kyle W. Brown, *R-Gallery-Book*. <https://www.kyle-w-brown.com/R-Gallery/
 
+1. Descriptive Analytics @ University of Cincinnatti Business Analytics <http://uc-r.github.io/descriptive>
 
+1. 

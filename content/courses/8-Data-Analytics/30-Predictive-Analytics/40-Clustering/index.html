@@ -1,0 +1,82 @@
+---
+title: ML - Clustering
+subtitle: 
+date: "2022-12-23"
+external_link: ""
+image:
+  caption: Photo by <a href="https://unsplash.com/@maddibazzocco?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maddi Bazzocco</a> on <a href="https://unsplash.com/s/photos/groceries?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  focal_point: Smart
+weight: 40
+links:
+# - icon: twitter
+#   icon_pack: fab
+#   name: Follow
+#   url: https://twitter.com/arvind_v
+slides:
+summary: We will look at the basic models for Clustering of Data.
+tags:
+- Machine Learning
+- Orange
+- kNN Algorithm
+- k Means Algorithm
+# url_code: "code/course-related/example/example.html"
+# url_pdf: ""
+# url_slides: "slides/new/index.html"
+# url_video: ""
+---
+
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>Quoting from <a href="http://baoqiang.org/?p=579" class="uri">http://baoqiang.org/?p=579</a></p>
+<div id="k-nearest-neighbour-and-k-means-clustering" class="section level3">
+<h3>k-Nearest-Neighbour and K-Means clustering</h3>
+<p>These two are arguably the two commonly used cluster methods. One of the reasons is that they are easy to use and also somehow straightforward.
+So how do they work?</p>
+<p><strong>k-Nearest-Neighbour</strong>:
+Provide N n-dimension entries with known associated classes for each
+entry, the number of classes is k, that is,
+<span class="math display">\[
+\{\vec{x_i}, y_i\} ,\ \vec{x_i} \in\ {\Re^{n}}\ , y_i\ = \{c_1,...c_k\},
+i = 1...N
+\]</span></p>
+<p>For a new entry <span class="math inline">\(\vec{v_j}\)</span>, to which class should it belong? We need use
+a distance measure to get the k closest entries of the new entry
+, the final decision is <em>simple majority vote</em> based the
+closest k neighbors. The distance metric could be euclidean or other
+similar ones.</p>
+<iframe width="100%" height="735" frameborder="0" src="https://observablehq.com/embed/16bc2b3dcb13d1cd@289?cells=viewof+numTrain%2Cviewof+k%2CPlot">
+</iframe>
+<p><strong>K-means</strong>:
+Given N n-dimension entries and classify them in k classes. At first, we <em>randomly</em> choose k entries and assign them to k clusters. They are the
+seed classes. Then we calculate the distance between each entry and each class. Each entry will be assigned into one class in terms of the its distance to each class, i.e., assign the entry to its closest class.
+After the assignment is complete, we then calculate the centroid of each class based on their new members. After the centroid calculation, we go
+back to the distance calculation and therefore new round classification.
+We stop the iteration when there is convergence,i.e,, no new centroid
+and classification.</p>
+<p>The two methods are all <em>semi-supervised learning algorithms</em> because they
+do need we provide the number of clusters prior the clustering.</p>
+<iframe width="100%" height="853" frameborder="0" src="https://observablehq.com/embed/ab4e983a61997013?cells=viewof+seed%2Cviewof+spread%2Cviewof+num_centroids%2Cviewof+selection%2Cviewof+stepslider">
+</iframe>
+</div>
+</div>
+<div id="workflow-using-orange" class="section level2">
+<h2>Workflow using Orange</h2>
+</div>
+<div id="workflow-using-radiant" class="section level2">
+<h2>Workflow using Radiant</h2>
+</div>
+<div id="workflow-using-r" class="section level2">
+<h2>Workflow using R</h2>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+</div>
+<div id="references" class="section level2">
+<h2>References</h2>
+<ol style="list-style-type: decimal">
+<li><p>K-means Cluster Analysis. <a href="https://uc-r.github.io/">UC Business Analytics R Programming Guide</a> <a href="https://uc-r.github.io/kmeans_clustering#optimal" class="uri">https://uc-r.github.io/kmeans_clustering#optimal</a></p></li>
+<li><p>Thean C Lim. Clustering: k-means, k-means ++ and gganimate. <a href="https://theanlim.rbind.io/post/clustering-k-means-k-means-and-gganimate/" class="uri">https://theanlim.rbind.io/post/clustering-k-means-k-means-and-gganimate/</a></p></li>
+</ol>
+</div>

@@ -1,6 +1,6 @@
 ---
 title: "\U0001F9ED Predictive Analytics"
-date: "2021-01-24"
+date: "`r Sys.Date()`"
 linkTitle: Predictive Analytics
 summary: ""
 weight: 30
@@ -16,3 +16,11 @@ image:
 ## Introduction
 
 We will use Orange Data Mining to understand some basic Machine Learning algorithms to derive predictions from our data. 
+
+
+
+## References
+
+1. Predictive Analytics at University of Cincinatti. <http://uc-r.github.io/predictive> 
+
+1. 

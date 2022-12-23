@@ -200,7 +200,7 @@ Here is the final solution in action !!
 <center><iframe width="560" height="315" src="https://www.youtube.com/embed/lChJz2DSpsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
 
 <br>
-I hope that was a much fun to read as it was for me to write it up !! 
+I hope that was as much fun to read as it was for me to write it up !! 
 
 ## Points to Ponder
 

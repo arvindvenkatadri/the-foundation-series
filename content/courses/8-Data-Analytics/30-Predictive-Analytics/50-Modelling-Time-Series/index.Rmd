@@ -1,5 +1,6 @@
 ---
-title: \U0001F554 Modelling Time Series
+title: "\U0001F554 Modelling Time Series"
+author: "Arvind Venkatadri"
 subtitle: 
 date: "`r Sys.Date()`"
 external_link: ""
@@ -31,9 +32,14 @@ knitr::opts_chunk$set(echo = FALSE,message = FALSE, warning = FALSE)
 library(fontawesome)
 library(blogdown)
 library(tidyverse)
+library(lubridate)
 library(mosaic)
 library(downloadthis)
 
+library(tsibble)
+library(feasts)
+library(fable)
+library(sweep) # Tidy forecast Model objects
 library(timetk)
 library(forecast)
 library(prophet)
@@ -313,10 +319,12 @@ We're fairly limited in what we can actually tweak when using
 frame and use ggplot() like normal:
 
 ```{r Plotting Forecast with ggplot}
-library(sweep) # Tidy forecast Model objects
+
 # Get data out of this weird sales95_forecast object
 sales95_forecast
-sales95_forecast_tidy <- sweep::sw_sweep(sales95_forecast, fitted = TRUE, timetk_idx = TRUE)
+sales95_forecast_tidy <- sweep::sw_sweep(sales95_forecast, 
+                                         fitted = TRUE, 
+                                         timetk_idx = TRUE)
 
 sales95_forecast_tidy
 
