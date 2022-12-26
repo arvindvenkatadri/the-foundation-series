@@ -47,4 +47,4 @@ In the following set of Modules we will see how different geometries lend themse
 
 1. Descriptive Analytics @ University of Cincinnatti Business Analytics <http://uc-r.github.io/descriptive>
 
-1. 
+1. Data Viz Glossary. <https://observablehq.com/embed/@a10k/data-visualization-glossary?cell=*>
