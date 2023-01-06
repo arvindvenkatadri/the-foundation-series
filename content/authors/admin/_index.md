@@ -1,7 +1,6 @@
 ---
 title: "Arvind Venkatadri"
-bio: My research interests are Complexity Science, TRIZ, Literature, Indian Classical
-  Music, and Computing with R.
+bio: My research interests are Complexity Science, Creativity and Innovation, Problem Solving withTRIZ, Literature, Indian Classical Music, and Computing with R.
 email: arvind.venkatadri@gmail.com
 highlight_name: no
 education:

@@ -27,6 +27,18 @@ date_format: Jan 2006
 
 experience:
 
+  - title: Adjunct Professor
+    company: Dayanand Sagar University
+    company_url: 'https://www.dsu.edu.in/'
+    location: Bangalore, India
+    date_start: '2022-07-25'
+    date_end: ''
+    description: |2-
+        
+        * Teaching courses in the School of Commerce and Management Studies
+        * Creativity and Innovation with TRIZ
+        * Business Data Analytics 
+
   - title: Faculty Member
     company: Srishti Manipal Institute of Art, Design, and Technology
     company_url: 'https://srishtimanipalinstitute.in/'
