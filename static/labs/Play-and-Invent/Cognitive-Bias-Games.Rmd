@@ -67,6 +67,7 @@ come this bias?
 ## Bias #3 Priming {.tabset .tabset-pills}
 
 ### Game
+You will be given a small questionnaire [**PDF**](./Priming Exercises.pdf), with a single multiple-choice question. Please enter your answer at the appropriate location.
 
 ### Intepretation
 
