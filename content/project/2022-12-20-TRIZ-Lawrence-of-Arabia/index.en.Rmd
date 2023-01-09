@@ -221,8 +221,12 @@ I hope that was as much fun to read as it was for me to write it up !!
 
 [^1]: I was not able to ascertain who is the author of this map. I would be happy to write to obtain permission and use it with acknowledgement. 
 
-[^2]: The Contradiction Matrix is by and large symmetric, but there are a few places where it is not, so stating the Contradiction both ways allows us to access a slightly larger set of Inventive Principles from two cells of the Matrix.
+[^2]: The Contradiction Matrix is not quite symmetric, so stating the
+    Contradiction both ways allows us to access a slightly larger set of
+    Inventive Principles from two cells of the Matrix.
 
-[^3]: Arriving at *Physical Contradictions* is not always easy! If we can, then there are a very crisp set of **TRIZ Separation Principles** that we can apply to solve the Problem.
+[^3]: Arriving at *Physical Contradictions* is not always easy! If we
+    can, then there are a very crisp set of **TRIZ Separation
+    Principles** that we can apply to solve the Problem.
 
 
