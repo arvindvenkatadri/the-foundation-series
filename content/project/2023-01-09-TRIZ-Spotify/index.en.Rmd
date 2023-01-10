@@ -18,7 +18,7 @@ tags:
 - Creativity Systems Model
 - Making Metaphors
 - Spotify
-summary: Bhangra Pop and Getting the Veggies
+summary: Punjabi Pop and Getting the Veggies
 authors: []
 external_link: ''
 image:
@@ -186,7 +186,7 @@ Diagram above, we are now ready to define a TRIZ *Ideal Final Result*:
 > bored.</center>
 
 Note again the impossible sounding way of expressing the IFR! One needs
-practice, like the Queen in Alice in Wonderland, who could think of *six
+practice, like the Queen in Alice in Wonderland, who could think of *Six
 Impossible Things before Breakfast* ! Also note there could be other
 ways of specifying the IFR. See below, section [Alternative Ideas for
 IFR].
@@ -222,6 +222,9 @@ which is aimed squarely at one of the *Assumptions* in the Problem, that
 the YM simply has to go. Again, if the IFR is formulated differently we
 could obtain a very different set of AC and PC. See below, section
 [Alternative Ideas for IFR].
+
+In a future post, we will deal with using the *PC* and the *TRIZ
+Separation Principles* to solve Problems.
 
 ## Solving the Technical Contradiction
 
@@ -283,7 +286,7 @@ hand:
     Play Music !!🔉 🤣
 -   **14(Spheroidality)**: Wear "spherical" headphones!!🎧! Create a
     "sound sphere"! This is a long shot!!
--   **35(LocalQuality)**: also indicates the creation of a "local"
+-   **3(Local Quality)**: also indicates the creation of a "local"
     cocoon around the YM, but needs to be combined with *18(Mechanical
     Vibration)* to truly arrive at the musical solution!
 
@@ -316,9 +319,9 @@ We note in passing that there is more than one way of formulating the
 
 Clearly these are at least as good as the one we have chosen, sounding
 nicely "impossible" in their own right! The point is that in the
-analysis of the Problem, we do need to ask *Who has the Problem* and the
-IFR needs to stem from there. These alternative IFRs could well be the
-[**Voice of (another)
+analysis of the Problem, we do need to ask *Who has the Problem,* as we
+did*,* and the IFR needs to stem from there. These alternative IFRs
+could well be the [**Voice of (another)
 Customer**](https://www.mit.edu/~hauser/Papers/Gaskin_Griffin_Hauser_et_al%20VOC%20Encyclopedia%202011.pdf).
 
 If there is any interesting situation that could be analyzed with TRIZ,
