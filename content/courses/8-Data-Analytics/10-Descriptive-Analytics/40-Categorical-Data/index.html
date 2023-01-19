@@ -1,0 +1,723 @@
+---
+title: "\U0001F433 Visualizing Categorical Data"
+author: "Arvind Venkatadri"
+date: "2023-01-19"
+linkTitle: Visualizing Categorical Data
+weight: 40
+links:
+- icon: circle
+  icon_pack: fas
+  name: Orange Tutorial
+  url: "labs/Data-Analytics/categorical.ows"
+- icon: sun
+  icon_pack: fas
+  name: Radiant
+  url: "labs/Data-Analytics/categorical.rda"
+- icon: "r-project"
+  icon_pack: fab
+  name: R Tutorial
+  url: "labs/Data-Analytics/categorical.html"
+- icon: "table"
+  icon_pack: fas
+  name: Making Tables in R
+  url: "labs/Data-Analytics/tables.html"
+- icon: database
+  icon_pack: fas
+  name: Sample Datasets
+  url: "labs/Data-Analytics/data/cat-data.zip"
+tags:
+- Proportions
+- Frequency Tables
+- Contingency Tables
+- Numerical Data in Groups
+- Margins
+- Likert Scale data
+- Bar Plots (for Contingency Tables)
+- Mosaic Plots
+- Balloon Plots
+- Correspondence Analysis
+output:
+  html_document:
+    toc_float: yes
+    theme: flatly
+    highlight: tango
+    toc: yes
+    code_folding: show
+    code_download: yes
+    number_sections: yes
+    df-print: paged
+---
+
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
+
+
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>To recall, a categorical <strong>variable</strong> is one for which the possible
+measured or assigned values consist of a discrete set of categories,
+which may be <code>ordered</code> or <code>unordered</code>. Some typical examples are:</p>
+<ul>
+<li>Gender, with categories “Male,” “Female.”</li>
+<li>Marital status, with categories “Never married,” “Married,”
+“Separated,” “Divorced,” “Widowed.”</li>
+<li>Fielding position (in <del>baseball</del> cricket), with categories
+“Slips,”Cover “,”Mid-off “Deep Fine Leg”, “Close-in”, “Deep”…</li>
+<li>Side effects (in a pharmacological study), with categories “None,”
+“Skin rash,” “Sleep disorder,” “Anxiety,” . . ..</li>
+<li>Political attitude, with categories “Left,” “Center,” “Right.”</li>
+<li>Party preference (in India), with categories “BJP” “Congress,”
+“AAP,” “TMC.”…</li>
+<li>Treatment outcome, with categories “no improvement,” “some
+improvement,” or “marked improvement.”</li>
+<li>Age, with categories “0–9,” “10–19,” “20–29,” “30–39,” . . . .</li>
+<li>Number of children, with categories 0, 1, 2, . . . .</li>
+</ul>
+<p>As these examples suggest, categorical variables differ in the number of
+categories: we often distinguish binary variables (or dichotomous
+variables) such as Gender from those with more than two categories
+(called polytomous variables).</p>
+<p>{{% youtube "7NhNeADL8fA" %}}</p>
+</div>
+<div id="categorical-data" class="section level2">
+<h2>Categorical Data</h2>
+<p>From the <code>{vcd package}</code> vignette:</p>
+<blockquote>
+<p>The first thing you need to know is that categorical data can be
+represented in <strong>three different forms in R</strong>, and it is sometimes
+necessary to convert from one form to another, for carrying out
+statistical tests, fitting models or visualizing the results.</p>
+</blockquote>
+<ul>
+<li>Case Data</li>
+<li>Frequency Data</li>
+<li>Cross-Tabular Count Data</li>
+</ul>
+<p>Let us first see examples of each.</p>
+<div id="case-form" class="section level3">
+<h3>Case Form</h3>
+<p>Containing <em>individual observations</em> with one or more <strong>categorical</strong>
+factors, used as classifying variables. The total number of observations
+is <code>nrow(X)</code>, and the number of variables is <code>ncol(X)</code>.</p>
+<pre class="r"><code>names(Arthritis)</code></pre>
+<pre><code>## [1] &quot;ID&quot;        &quot;Treatment&quot; &quot;Sex&quot;       &quot;Age&quot;       &quot;Improved&quot;</code></pre>
+<pre class="r"><code>class(Arthritis)</code></pre>
+<pre><code>## [1] &quot;data.frame&quot;</code></pre>
+<pre class="r"><code>glimpse(Arthritis)</code></pre>
+<pre><code>## Rows: 84
+## Columns: 5
+## $ ID        &lt;int&gt; 57, 46, 77, 17, 36, 23, 75, 39, 33, 55, 30, 5, 63, 83, 66, 4…
+## $ Treatment &lt;fct&gt; Treated, Treated, Treated, Treated, Treated, Treated, Treate…
+## $ Sex       &lt;fct&gt; Male, Male, Male, Male, Male, Male, Male, Male, Male, Male, …
+## $ Age       &lt;int&gt; 27, 29, 30, 32, 46, 58, 59, 59, 63, 63, 64, 64, 69, 70, 23, …
+## $ Improved  &lt;ord&gt; Some, None, None, Marked, Marked, Marked, None, Marked, None…</code></pre>
+<p>From Michael Friendly <a href="/pdf/DataAnalytics/Michael-Friendly-DDAS.pdf">Discrete Data Analysis and
+Visualization</a> :</p>
+<blockquote>
+<p>In many circumstances, data is recorded on each individual or
+experimental unit. Data in this form is called case data, or data in
+case form.</p>
+</blockquote>
+<table class=" lightable-classic-2" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:case-form-data">Table 1: </span>Arthritis Treatments and Effects (first 6 entries)
+</caption>
+<thead>
+<tr>
+<th style="text-align:right;">
+ID
+</th>
+<th style="text-align:left;">
+Treatment
+</th>
+<th style="text-align:left;">
+Sex
+</th>
+<th style="text-align:right;">
+Age
+</th>
+<th style="text-align:left;">
+Improved
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+57
+</td>
+<td style="text-align:left;">
+Treated
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+27
+</td>
+<td style="text-align:left;">
+Some
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:left;">
+Treated
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+29
+</td>
+<td style="text-align:left;">
+None
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+77
+</td>
+<td style="text-align:left;">
+Treated
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+30
+</td>
+<td style="text-align:left;">
+None
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+17
+</td>
+<td style="text-align:left;">
+Treated
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+32
+</td>
+<td style="text-align:left;">
+Marked
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+36
+</td>
+<td style="text-align:left;">
+Treated
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+46
+</td>
+<td style="text-align:left;">
+Marked
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+23
+</td>
+<td style="text-align:left;">
+Treated
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+58
+</td>
+<td style="text-align:left;">
+Marked
+</td>
+</tr>
+</tbody>
+</table>
+<p>The <code>Arthritis</code> data set has three factors and two integer* variables.
+One of the three factors <code>Improved</code> is an <strong>ordered factor</strong>.</p>
+<ol style="list-style-type: decimal">
+<li>ID</li>
+<li>Treatment: a factor; Placebo or Treated</li>
+<li>Sex: a factor, M / F</li>
+<li>Age: integer</li>
+<li>Improved: <strong>Ordinal factor</strong>; None &lt; Some &lt; Marked</li>
+</ol>
+</div>
+<div id="frequency-data" class="section level3">
+<h3>Frequency Data</h3>
+<p>Data in frequency form has already been tabulated, by counting over the
+(combinations of ) categories of the table variables. When the data are
+in <strong>case form</strong>, we can always trace any observation back to its
+individual identifier or data record, since each row is a unique
+observation or <em>case</em>; the reverse is rarely possible.</p>
+<p>Frequency Data is usually a data frame, with columns of categorical
+variables and at least one column containing <code>frequency</code> or <code>count</code>
+information.</p>
+<pre class="r"><code>str(GSS)</code></pre>
+<pre><code>## &#39;data.frame&#39;:	6 obs. of  3 variables:
+##  $ sex  : Factor w/ 2 levels &quot;female&quot;,&quot;male&quot;: 1 2 1 2 1 2
+##  $ party: Factor w/ 3 levels &quot;dem&quot;,&quot;indep&quot;,..: 1 1 2 2 3 3
+##  $ count: num  279 165 73 47 225 191</code></pre>
+<pre class="r"><code>GSS %&gt;% 
+  kbl(caption = &quot;General Social Survey&quot;,centering = TRUE) %&gt;%
+  kable_classic_2(html_font = &quot;Cambria&quot;, full_width = F,)</code></pre>
+<table class=" lightable-classic-2" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:unnamed-chunk-1">Table 2: </span>General Social Survey
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+sex
+</th>
+<th style="text-align:left;">
+party
+</th>
+<th style="text-align:right;">
+count
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+female
+</td>
+<td style="text-align:left;">
+dem
+</td>
+<td style="text-align:right;">
+279
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+male
+</td>
+<td style="text-align:left;">
+dem
+</td>
+<td style="text-align:right;">
+165
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+female
+</td>
+<td style="text-align:left;">
+indep
+</td>
+<td style="text-align:right;">
+73
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+male
+</td>
+<td style="text-align:left;">
+indep
+</td>
+<td style="text-align:right;">
+47
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+female
+</td>
+<td style="text-align:left;">
+rep
+</td>
+<td style="text-align:right;">
+225
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+male
+</td>
+<td style="text-align:left;">
+rep
+</td>
+<td style="text-align:right;">
+191
+</td>
+</tr>
+</tbody>
+</table>
+<p>Respondents in the GSS survey were classified by <code>sex</code> and <code>party</code>
+identification.</p>
+</div>
+<div id="table-form" class="section level3">
+<h3>Table form</h3>
+<blockquote>
+<p>Table Form Data can be a <code>matrix</code>, <code>array</code> or <code>table object</code>, whose
+elements are the frequencies in an <strong>n-way table</strong>. The variable names
+(factors) and their levels are given by <code>dimnames(X)</code>.</p>
+</blockquote>
+<pre class="r"><code>HairEyeColor
+class(HairEyeColor)</code></pre>
+<pre><code>## , , Sex = Male
+## 
+##        Eye
+## Hair    Brown Blue Hazel Green
+##   Black    32   11    10     3
+##   Brown    53   50    25    15
+##   Red      10   10     7     7
+##   Blond     3   30     5     8
+## 
+## , , Sex = Female
+## 
+##        Eye
+## Hair    Brown Blue Hazel Green
+##   Black    36    9     5     2
+##   Brown    66   34    29    14
+##   Red      16    7     7     7
+##   Blond     4   64     5     8
+## 
+## [1] &quot;table&quot;</code></pre>
+<p><code>HairEyeColor</code> is a “two-way” table, consisting of <strong>two tables</strong>, one
+for <code>Sex = Female</code> and the other for <code>Sex = Male</code>. The total number of
+observations is <code>sum(X)</code>. The number of dimensions of the table is
+<code>length(dimnames(X))</code>, and the table sizes are given by
+<code>sapply(dimnames(X), length)</code>. The data looks like a n-dimensional cube
+and needs n-way tables to represent.</p>
+<pre class="r"><code>sum(HairEyeColor)
+dimnames(HairEyeColor)
+sapply(dimnames(HairEyeColor), length)</code></pre>
+<pre><code>## [1] 592
+## $Hair
+## [1] &quot;Black&quot; &quot;Brown&quot; &quot;Red&quot;   &quot;Blond&quot;
+## 
+## $Eye
+## [1] &quot;Brown&quot; &quot;Blue&quot;  &quot;Hazel&quot; &quot;Green&quot;
+## 
+## $Sex
+## [1] &quot;Male&quot;   &quot;Female&quot;
+## 
+## Hair  Eye  Sex 
+##    4    4    2</code></pre>
+<p>We may need to convert the (multiple) tables into a data frame:</p>
+<pre class="r"><code>## Convert the two tables into a data frame
+HairEyeColor %&gt;% 
+  as_tibble() %&gt;% # Convert
+  head() %&gt;% # Take first few rows to show
+  kbl(caption = &quot;Hair Eye and Color (First 6 Entries)&quot;) %&gt;% 
+  kable_classic_2(html_font = &quot;Cambria&quot;, full_width = F)</code></pre>
+<table class=" lightable-classic-2" style="font-family: Cambria; width: auto !important; margin-left: auto; margin-right: auto;">
+<caption>
+<span id="tab:tables-to-data-frame">Table 3: </span>Hair Eye and Color (First 6 Entries)
+</caption>
+<thead>
+<tr>
+<th style="text-align:left;">
+Hair
+</th>
+<th style="text-align:left;">
+Eye
+</th>
+<th style="text-align:left;">
+Sex
+</th>
+<th style="text-align:right;">
+n
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Black
+</td>
+<td style="text-align:left;">
+Brown
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+32
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brown
+</td>
+<td style="text-align:left;">
+Brown
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+53
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Red
+</td>
+<td style="text-align:left;">
+Brown
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+10
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Blond
+</td>
+<td style="text-align:left;">
+Brown
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+3
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Black
+</td>
+<td style="text-align:left;">
+Blue
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+11
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Brown
+</td>
+<td style="text-align:left;">
+Blue
+</td>
+<td style="text-align:left;">
+Male
+</td>
+<td style="text-align:right;">
+50
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="what-sort-of-plots-can-we-make-for-categorical-data" class="section level2">
+<h2>What sort of Plots can we make for Categorical Data?</h2>
+<p>We have already seen bar plots, which allow us to plot counts of categorical data. However, if there are a large number* of categorical variables or if thecategorical variables have many levels, the bar plot is not adequate.</p>
+<p>From Michael Friendly:</p>
+<blockquote>
+<p>The familiar techniques for displaying raw data are often
+disappointing when applied to categorical data. The simple
+scatterplot, for example, widely used to show the relation between
+quantitative response and predictors, when applied to discrete
+variables, gives a display of the category combinations, with all
+identical values overplotted, and no representation of their
+frequency.</p>
+</blockquote>
+<blockquote>
+<p>Instead, frequencies of categorical variables are often best
+represented graphically using <strong>areas</strong> rather than as <strong>position
+along a scale</strong>. Using the visual attribute:</p>
+</blockquote>
+<p><span class="math display">\[\pmb{area \sim frequency}\]</span></p>
+<blockquote>
+<p>allows creating novel graphical displays of frequency data for special
+circumstances.</p>
+</blockquote>
+<p>Let us not look at some sample plots that embody this “area-frequency*
+principle.</p>
+<div id="mosaic-plots" class="section level3">
+<h3>Mosaic Plots</h3>
+<p>A mosaicplot is basically an area-proportional visualization of (typically observed) frequencies, consisting of tiles (corresponding to the cells) created by vertically and horizontally splitting a rectangle recursively. Thus, the area of each tile is proportional to the corresponding cell entry given the dimensions of previous splits.</p>
+<pre class="r"><code>art &lt;- vcd::structable(~ Treatment + Improved, data = Arthritis)
+art</code></pre>
+<pre><code>##           Improved None Some Marked
+## Treatment                          
+## Placebo              29    7      7
+## Treated              13    7     21</code></pre>
+<pre class="r"><code>p1 &lt;- vcd::mosaic(art, gp = shading_max, split_vertical = TRUE)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/mosaic-plot-using-vcd-1.png" width="672" /></p>
+</div>
+<div id="balloon-plots" class="section level3">
+<h3>Balloon Plots</h3>
+<pre class="r"><code>housetasks &lt;- read.delim(
+  system.file(&quot;demo-data/housetasks.txt&quot;, package = &quot;ggpubr&quot;),
+  row.names = 1
+  )
+head(housetasks, 4)</code></pre>
+<pre><code>##            Wife Alternating Husband Jointly
+## Laundry     156          14       2       4
+## Main_meal   124          20       5       4
+## Dinner       77          11       7      13
+## Breakfeast   82          36      15       7</code></pre>
+<pre class="r"><code>ggballoonplot(housetasks, fill = &quot;value&quot;)+
+  scale_fill_viridis_c(option = &quot;C&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/balloon-plot-using-ggpubr-1.png" width="672" /></p>
+<pre class="r"><code>df &lt;- as.data.frame(HairEyeColor)
+ggballoonplot(df, x = &quot;Hair&quot;, y = &quot;Eye&quot;, size = &quot;Freq&quot;,
+              fill = &quot;Freq&quot;, facet.by = &quot;Sex&quot;,
+              ggtheme = theme_bw()) +
+  scale_fill_viridis_c(option = &quot;C&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="plots-for-likert-data" class="section level3">
+<h3>Plots for Likert Data</h3>
+<p>In many business situations, we perform surveys to get Likert scale
+data, where several respondents rate a product or a service on a scale
+of <code>Very much like</code>, <code>somewhat like</code>, <code>neutral</code>, <code>Dislike</code> and
+<code>Very much dislike</code>. Such data may look for example as follows:</p>
+<pre class="r"><code>data(efc)
+head(efc, 20)</code></pre>
+<pre><code>##    c12hour e15relat e16sex e17age e42dep c82cop1 c83cop2 c84cop3 c85cop4
+## 1       16        2      2     83      3       3       2       2       2
+## 2      148        2      2     88      3       3       3       3       3
+## 3       70        1      2     82      3       2       2       1       4
+## 4      168        1      2     67      4       4       1       3       1
+## 5      168        2      2     84      4       3       2       1       2
+## 6       16        2      2     85      4       2       2       3       3
+## 7      161        1      1     74      4       4       2       4       1
+## 8      110        4      2     87      4       3       2       2       1
+## 9       28        2      2     79      4       3       2       3       2
+## 10      40        2      2     83      4       3       2       1       2
+## 11     100        1      1     68      4       3       4       4       4
+## 12      25        8      2     97      3       3       3       3       1
+## 13      25        2      2     80      4       3       2       2       2
+## 14      24        1      2     75      3       3       2       4       4
+## 15      56        2      2     82      3       2       3       3       3
+## 16      20        2      2     89      3       4       2       1       3
+## 17      25        1      1     80      1       3       2       1       2
+## 18     126        1      1     72      3       4       2       1       2
+## 19     168        2      1     94      3       3       2       1       2
+## 20     118        1      1     79      4       3       2       4       2
+##    c86cop5 c87cop6 c88cop7 c89cop8 c90cop9 c160age c161sex c172code c175empl
+## 1        1       1       2       3       3      56       2        2        1
+## 2        4       1       3       2       2      54       2        2        1
+## 3        1       1       1       4       3      80       1        1        0
+## 4        1       1       1       2       4      69       1        2        0
+## 5        2       2       1       4       4      47       2        2        0
+## 6        3       2       2       1       1      56       1        2        1
+## 7        1       2       4       1       4      61       2        2        0
+## 8        1       1       2       3       3      67       2        2        0
+## 9        2       1       3       1       3      59       2       NA        0
+## 10       1       1       1       1       3      49       2        2        0
+## 11       4       4       4       1       1      66       2        2        0
+## 12       3       1       4       3       1      47       2        2        1
+## 13       2       1       2       4       4      58       2        3        0
+## 14       1       1       2       4       4      75       1        1        0
+## 15       2       2       1       1       1      49       2        3        1
+## 16       3       1       2       1       3      56       2        2        0
+## 17       1       1       2       4       4      75       2        2        0
+## 18       1       1       2       3       3      70       2        2        0
+## 19       2       1       3       1       4      52       1        3        1
+## 20       1       3       3       2       2      48       2        3        1
+##    barthtot neg_c_7 pos_v_4 quol_5 resttotn tot_sc_e n4pstu nur_pst
+## 1        75      12      12     14        0        4      0      NA
+## 2        75      20      11     10        4        0      0      NA
+## 3        35      11      13      7        0        1      2       2
+## 4         0      10      15     12        2        0      3       3
+## 5        25      12      15     19        2        1      2       2
+## 6        60      19       9      8        1        3      2       2
+## 7         5      15      13     20        0        0      3       3
+## 8        35      11      14     20        0        1      1       1
+## 9        15      15      13      8        0        2      3       3
+## 10        0      10      13     15        1        1      3       3
+## 11       25      28       9      1        1        1      3       3
+## 12       85      18       8     19        1        1      1       1
+## 13       15      13      14     12        0        3      3       3
+## 14       70      18      14      8        0        0      1       1
+## 15       NA      16       9      8        3        3      0      NA
+## 16        0      13      14      6        0        2      0      NA
+## 17       95      11      15     16        0        2      0      NA
+## 18       55      11      13     14        0        0      2       2
+## 19       55      13      13     15        3        1      1       1
+## 20       45      17      12     10        0        7      2       2</code></pre>
+<p><code>efc</code> is a German data set from a European study on family care of older people. Following a common protocol, data were collected from national samples of approximately 1,000 family carers (i.e. caregivers) per country and clustered into comparable subgroups to facilitate cross-national analysis. One of the <em>research questions</em> in <a href="https://doi.org/10.1093/geront/48.6.752"><strong>this EUROFAM study</strong></a> was:</p>
+<blockquote>
+<p>What are the main difficulties carers experience accessing the services
+used?
+What prevents carers from accessing unused
+supports that they need?
+What causes them to stop using still-needed services?</p>
+</blockquote>
+<p>We will select the variables from the <code>efc</code> data set that related to <em>coping</em> (on part of care-givers) and plot their responses after inspecting them:</p>
+<pre class="r"><code>efc %&gt;% select(dplyr::contains(&quot;cop&quot;)) %&gt;% str()</code></pre>
+<pre><code>## &#39;data.frame&#39;:	908 obs. of  9 variables:
+##  $ c82cop1: num  3 3 2 4 3 2 4 3 3 3 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;do you feel you cope well as caregiver?&quot;
+##   ..- attr(*, &quot;labels&quot;)= Named num [1:4] 1 2 3 4
+##   .. ..- attr(*, &quot;names&quot;)= chr [1:4] &quot;never&quot; &quot;sometimes&quot; &quot;often&quot; &quot;always&quot;
+##  $ c83cop2: num  2 3 2 1 2 2 2 2 2 2 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;do you find caregiving too demanding?&quot;
+##   ..- attr(*, &quot;labels&quot;)= Named num [1:4] 1 2 3 4
+##   .. ..- attr(*, &quot;names&quot;)= chr [1:4] &quot;Never&quot; &quot;Sometimes&quot; &quot;Often&quot; &quot;Always&quot;
+##  $ c84cop3: num  2 3 1 3 1 3 4 2 3 1 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;does caregiving cause difficulties in your relationship with your friends?&quot;
+##   ..- attr(*, &quot;labels&quot;)= Named num [1:4] 1 2 3 4
+##   .. ..- attr(*, &quot;names&quot;)= chr [1:4] &quot;Never&quot; &quot;Sometimes&quot; &quot;Often&quot; &quot;Always&quot;
+##  $ c85cop4: num  2 3 4 1 2 3 1 1 2 2 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;does caregiving have negative effect on your physical health?&quot;
+##   ..- attr(*, &quot;labels&quot;)= Named num [1:4] 1 2 3 4
+##   .. ..- attr(*, &quot;names&quot;)= chr [1:4] &quot;Never&quot; &quot;Sometimes&quot; &quot;Often&quot; &quot;Always&quot;
+##  $ c86cop5: num  1 4 1 1 2 3 1 1 2 1 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;does caregiving cause difficulties in your relationship with your family?&quot;
+##   ..- attr(*, &quot;labels&quot;)= Named num [1:4] 1 2 3 4
+##   .. ..- attr(*, &quot;names&quot;)= chr [1:4] &quot;Never&quot; &quot;Sometimes&quot; &quot;Often&quot; &quot;Always&quot;
+##  $ c87cop6: num  1 1 1 1 2 2 2 1 1 1 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;does caregiving cause financial difficulties?&quot;
+##   ..- attr(*, &quot;labels&quot;)= Named num [1:4] 1 2 3 4
+##   .. ..- attr(*, &quot;names&quot;)= chr [1:4] &quot;Never&quot; &quot;Sometimes&quot; &quot;Often&quot; &quot;Always&quot;
+##  $ c88cop7: num  2 3 1 1 1 2 4 2 3 1 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;do you feel trapped in your role as caregiver?&quot;
+##   ..- attr(*, &quot;labels&quot;)= Named num [1:4] 1 2 3 4
+##   .. ..- attr(*, &quot;names&quot;)= chr [1:4] &quot;Never&quot; &quot;Sometimes&quot; &quot;Often&quot; &quot;Always&quot;
+##  $ c89cop8: num  3 2 4 2 4 1 1 3 1 1 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;do you feel supported by friends/neighbours?&quot;
+##   ..- attr(*, &quot;labels&quot;)= Named num [1:4] 1 2 3 4
+##   .. ..- attr(*, &quot;names&quot;)= chr [1:4] &quot;never&quot; &quot;sometimes&quot; &quot;often&quot; &quot;always&quot;
+##  $ c90cop9: num  3 2 3 4 4 1 4 3 3 3 ...
+##   ..- attr(*, &quot;label&quot;)= chr &quot;do you feel caregiving worthwhile?&quot;
+##   ..- attr(*, &quot;labels&quot;)= Named num [1:4] 1 2 3 4
+##   .. ..- attr(*, &quot;names&quot;)= chr [1:4] &quot;never&quot; &quot;sometimes&quot; &quot;often&quot; &quot;always&quot;</code></pre>
+<p>The <code>cop</code>ing related variables have responses on the Likert Scale <code>(1,2,3,4)</code> which correspong to <code>(never, sometimes, often, always)</code>, <strong>and</strong> each variable also has a <code>label</code> defining each variable. We can plot this data using the <code>plot_likert</code> function from package <code>sjPlot</code>:</p>
+<pre class="r"><code>efc %&gt;% select(dplyr::contains(&quot;cop&quot;)) %&gt;% 
+  sjPlot::plot_likert(title = &quot;Caregiver Survey from EUROFAM&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<p>So there we are with Categorical data ! There are a few other plots with this type of data, which are useful in very specialized circumstances. One example of this is the <code>agreement plot</code> which captures the agreement between two (sets) of evaluators, on ratings given on a shared ordinal scale to a set of items. An example from the field of medical diagnosis is the opinions of two specialists on a common set of patients.</p>
+</div>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+</div>
+<div id="references" class="section level2">
+<h2>References</h2>
+<ol style="list-style-type: decimal">
+<li><a href="https://cran.r-project.org/web/packages/vcd/vignettes/strucplot.pdf" class="uri">https://cran.r-project.org/web/packages/vcd/vignettes/strucplot.pdf</a></li>
+</ol>
+</div>

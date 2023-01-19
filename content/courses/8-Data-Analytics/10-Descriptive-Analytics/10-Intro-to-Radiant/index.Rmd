@@ -39,7 +39,7 @@ library(blogdown)
 ## Introduction to Radiant
 
 **Radiant** is an open-source platform-independent browser-based
-interface for business analytics in R.
+interface for business analytics in R. It was created at the [Rady School of Management](https://rady.ucsd.edu/) at the University of San Diego, USA, by [Prof. Vincent R. Nijs](https://rady.ucsd.edu/faculty-research/faculty/vincent-nijs.html) and his students. 
 
 Key features
 
@@ -68,10 +68,12 @@ You can download and install Radiant from here:
 
 <https://radiant-rstats.github.io/docs/install.html>
 
-NOTE: - this automatically installs R, RStudio, and Radiant on your
+NOTE:   
+- this automatically installs R, RStudio, and Radiant on your
 machine. This is going to be convenient when we start working in R
-too! - It also installs Latex, which allows us to create crisp PDF
-reports of our analyses.
+too!   
+- It also installs Latex, which allows us to create crisp PDF
+reports of our analyses.  
 
 ```{r}
 

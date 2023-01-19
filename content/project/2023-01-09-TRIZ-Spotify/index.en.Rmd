@@ -15,6 +15,7 @@ tags:
 - 48 TRIZ Parameters
 - Ideal Final Result
 - Inventive Principles
+- Design Thinking
 - Creativity Systems Model
 - Making Metaphors
 - Spotify
@@ -54,7 +55,7 @@ The recent series of ads by Spotify have been very well received, by the
 ad industry as well. There have been several of these ads, each with a
 solid little story and a great punch line. There is one popular one that
 I have selected here, featuring a Mother shopping for veggies, while her
-son *watches* (and "listens") to her bargaining with the shopkeeper.
+son watches (and "listens") to her bargaining with the shopkeeper.
 Here I take just that highly effective ad and interpret it from a *TRIZ*
 viewpoint.
 
@@ -89,8 +90,8 @@ Several authors have taken a Game View of life. James P Carse's famous
 book titled *Finite and Infinite Games* [**speaks
 of**](https://fs.blog/finite-and-infinite-games/) Play, Types of Games,
 Rules, Winning and our own aims in the Game itself. A similar
-articulation is, in my opinion, that of [Mihaly
-Csikszentlmihalyi](https://en.wikipedia.org/wiki/Mihaly_Csikszentmihalyi)
+articulation is, in my opinion, that of [**Mihaly
+Csikszentlmihalyi**](https://en.wikipedia.org/wiki/Mihaly_Csikszentmihalyi)
 in his concept of Flow, shown here below:
 
 ![From
@@ -154,7 +155,7 @@ causes[2] <- list(c("Veggies", "Bike", "Dirt", "Noise", "Smell", "Time", "Fuel")
 
 causes[3] <- list(c("Want Good Food!", "Driving", "Wimping Out of this Errand", "I Love Mom!"))
 
-causes[4] <- list(c("Home Sweet Home","Noisy Marketplace"))
+causes[4] <- list(c("Home Sweet Home","Noisy Marketplace", "The Road"))
 
 causes[5] <- list(c("Me", "Mom", "Shopkeeper(s)"))
 causes[6] <- list(c("Bike", "Shelves", "Weighing Scales"))
@@ -185,7 +186,7 @@ Diagram above, we are now ready to define a TRIZ *Ideal Final Result*:
 > <center>**IFR**: The YM must go to the Market and not be
 > bored.</center>
 
-Note again the impossible sounding way of expressing the IFR! One needs
+Note again the impossible-sounding way of expressing the IFR! One needs
 practice, like the Queen in Alice in Wonderland, who could think of *Six
 Impossible Things before Breakfast* ! Also note there could be other
 ways of specifying the IFR. See below, section [Alternative Ideas for
@@ -211,7 +212,8 @@ lie within our AC. Going from the AC to the TC is an act of *making
 metaphors*. We could easily have chosen the Parameter `Noise(29)` as the
 "metaphoric thing" to avoid, but the current IFR doesn't quite support
 that. There is here a considerable flexibility and possibility for
-imaginative interpretations of the AC, but using the *language of TRIZ*.
+imaginative interpretations of the AC, but using the *language of TRIZ*,
+the 48 Parameters.
 
 We could also formulate a *Physical Contradiction(PC)*[^2]:
 
@@ -240,9 +242,9 @@ knitr::include_graphics("matrix.png")
 
 <br>
 
-The two squares for the TC1 have been circled in red, solving TC-1.
+The two squares for solutions to TC1 have been circled in red.
 
-The Inventive Principles are:(TC1, TC2, both ways)
+The Inventive Principles are (TC1, TC2, both ways)
 
 1.  1(Segmentation)
 
@@ -257,6 +259,7 @@ The Inventive Principles are:(TC1, TC2, both ways)
 6.  10(Prior Action)
 
 7.  36(Phase Transitions)
+
 
     and with TC2:
 
@@ -293,13 +296,14 @@ hand:
 One could make decent interpretations of **2(Taking Out/Separation)**,
 and **24(Intermediary)**, but we are already there! The rest are perhaps
 (at least to me!) not very evocative, unless **37(Thermal Expansion)**
-means "throw a temper tantrum at Mom"? Never! So there you have it! The
-[**Cinderella song**](https://www.youtube.com/watch?v=NwdQx2P_ytk)
+means "throw a temper tantrum at Mom"? Never! 
+
+So there you have it! The [**Cinderella song**](https://www.youtube.com/watch?v=NwdQx2P_ytk)
 played on Spotify becomes not just a *noise canceller* but actually
 seems to substitute the very conversation between Mom and the vendor.
 And the YM has successfully attained Flow ! And the IFR too, since with
-the music in his head, he is effectively "in the marketplace *and* not
-in the marketplace *at the same time*!
+the music in his head, he is effectively *in* the marketplace and *not
+in* the marketplace *at the same time*!
 
 And I attained Flow in writing this!!
 
@@ -321,8 +325,7 @@ Clearly these are at least as good as the one we have chosen, sounding
 nicely "impossible" in their own right! The point is that in the
 analysis of the Problem, we do need to ask *Who has the Problem,* as we
 did*,* and the IFR needs to stem from there. These alternative IFRs
-could well be the [**Voice of (another)
-Customer**](https://www.mit.edu/~hauser/Papers/Gaskin_Griffin_Hauser_et_al%20VOC%20Encyclopedia%202011.pdf).
+could well be the [**Voice of (another) Customer**](https://www.mit.edu/~hauser/Papers/Gaskin_Griffin_Hauser_et_al%20VOC%20Encyclopedia%202011.pdf). All the [**Empathy** related tools](https://designthinking.ideo.com/blog/a-lesson-in-empathy) in *Design Thinking* would help you do that. But to proceed beyond that initial problem definition, TRIZ is a great tool and helps define what *iterative* solutions you might try!
 
 If there is any interesting situation that could be analyzed with TRIZ,
 please send me a DM! Thanks !

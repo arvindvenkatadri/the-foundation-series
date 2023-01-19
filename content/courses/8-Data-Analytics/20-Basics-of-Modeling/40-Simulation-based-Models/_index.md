@@ -1,9 +1,10 @@
 ---
-title: "\U0001F9ED Simulations"
+title: "\U0001F9ED Simulation Based Models"
+subtitle: "Using Simulations and Random Number Generation in Stat Tests"
 date: "`r Sys.Date()`"
 linkTitle: Simulations
 summary: ""
-weight: 30
+weight: 40
 type: book
 image:
   caption: ""

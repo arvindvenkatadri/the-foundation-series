@@ -1,0 +1,56 @@
+---
+title: "\U0001F433 Data Tables in R"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+
+tags:
+- Proportions
+- Frequency Tables
+- Contingency Tables
+- Numerical Data in Groups
+- Margins
+- Likert Scale data
+- Bar Plots (for Contingency Tables)
+- Mosaic Plots
+- Balloon Plots
+- Correspondence Analysis
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    toc_float: TRUE
+    toc_depth: 2
+    df_print: paged
+    number_sections: TRUE
+    code_folding: hide
+    code_download: TRUE
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup,include=TRUE}
+knitr::opts_chunk$set(echo = TRUE,message = FALSE,fig.align = "center",fig.height = "4", fig.width = 5)
+library(tidyverse)
+library(vcd)
+library(vcdExtra)
+library(gt)
+library(gtExtras)
+library(gtsummary)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+## References
+
+1. Albert Rapp, *Creating Beautiful Tables with `{gt}`*, <https://gt.albert-rapp.de/>
+
+1. 

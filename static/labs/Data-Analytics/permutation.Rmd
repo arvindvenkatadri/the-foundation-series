@@ -3,10 +3,18 @@ title: "Bootstrap Tutorial"
 subtitle: "An implementation in R Markdown"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
-output: 
-  tint::tintHtml:
-bibliography: skeleton.bib
-link-citations: yes
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    toc_float: TRUE
+    toc_depth: 2
+    df_print: paged
+    number_sections: TRUE
+    code_folding: hide
+    code_download: TRUE
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}

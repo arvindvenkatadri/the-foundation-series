@@ -35,6 +35,14 @@ knitr::opts_chunk$set(echo = TRUE)
 library(blogdown)
 
 ```
+## Introduction
+
+What is a network?
+
+`r blogdown::shortcode("youtube", "DrhhdekP1ZQ")`
+
+## What is Network Data?
+
 
 
 ## What kind Network graphs will we make?
@@ -45,12 +53,11 @@ Here is a network map of the characters in Victor Hugo's `Les Miserables`:
   src="https://observablehq.com/embed/@d3/force-directed-graph-canvas?cells=chart"></iframe>
   
 
+## Conclusion
 
 
-## A Workflow in Orange
 
 
-## A Workflow in Radiant
+## References
 
 
-## A Workflow in R

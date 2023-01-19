@@ -1,0 +1,61 @@
+---
+title: "Using FlexDashboard in R"
+date: "`r Sys.Date()`"
+subtitle: "Making Business Presentations using Flexdashboards in R"
+author: Arvind Venkatadri
+weight: 20
+featured: no
+image:
+  placement: 2
+  caption: 'Image credit: [**Alice In Wonderland dot Net**](https://www.alice-in-wonderland.net/)'
+  focal_point: ""
+  preview_only: true
+projects: []
+output: 
+  html_document:
+    code_download: TRUE
+    toc_float: true
+    theme: united
+    toc: true
+    code_folding: true
+links:
+- icon: flask
+  icon_pack: fas
+  name: lab
+  url: /labs/Data-Analytics/flexdashboard-example.html
+# - icon: magic
+#   icon_pack: fas
+#   name: slides
+#   url: /slides/R-for-Artists/07-networks/07-Networks-in-R.html
+---
+
+![](featured.jpg)
+
+
+## Introduction
+
+Now that we have gotten a handle on @Descriptive Analytics, @Predictive Analytics, @ Modelling, @Statistical Analysis, and @Optimization, it is time to put all that work together in a convincing poster/presentation!
+
+There are many ways of doing this, of course. We will be following a very intuitive `package` in R, called `flexdashboard`. This package allows us to make Posters that include code, analysis, description, and of course pictures to weave a convincing story for upper management!
+
+## An Example
+
+```{r echo=FALSE}
+knitr::include_app("https://testing-apps.shinyapps.io/flexdashboard-ggplotly-examples/")
+
+```
+
+Flexdashboards are created using just another format of RMarkdown. So let's look at the lab above and modify that to suit our own needs. There are also many other formats and even R graph types that we can use in flexdashboard. Do look at the examples later !
+
+
+## References
+
+1. Flexdashboard Basics <https://rstudio.github.io/flexdashboard/articles/flexdashboard.html>
+
+
+1. Flexdashboard Examples <https://rstudio.github.io/flexdashboard/articles/examples.html>
+
+1. Shannon Haymond,*Create laboratory business intelligence dashboards for free using R: A tutorial using the flexdashboard package*, Journal of Mass Spectrometry and Advances in the Clinical Lab, Volume 23, 2022,Pages 39-43, ISSN 2667-145X, <https://doi.org/10.1016/j.jmsacl.2021.12.002>.
+
+1. 
+

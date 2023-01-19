@@ -1,6 +1,6 @@
 ---
 title: "\U0001F4CE Correlations"
-subtitle: "Correlations"
+subtitle: "How one variable changes with another"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 weight: 30
@@ -15,19 +15,23 @@ image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
 external_link: ""
-# links:
-# - icon: lemon
-#   icon_pack: fa
-#   name: Orange Workflow
-#   url: "/labs/Data-Analytics/correlation.ows"
-# - icon: file-code
-#   icon_pack: fa
-#   name: Rmarkdown code
-#   url: "labs/Data-Analytics/correlation.Rmd"
-# - icon: cubes
-#   icon_pack: fa
-#   name: Radiant Workflow
-#   url: "labs/Data-Analytics/correlation.Rmd"
+links:
+- icon: circle
+  icon_pack: fas
+  name: Orange Tutorial
+  url: "labs/Data-Analytics/correlations.ows"
+- icon: sun
+  icon_pack: fas
+  name: Radiant
+  url: "labs/Data-Analytics/correlations.rda"
+- icon: r-project
+  icon_pack: fab
+  name: R Tutorial
+  url: "labs/Data-Analytics/correlations.html"
+- icon: database
+  icon_pack: fas
+  name: Sample Datasets
+  url: "labs/Data-Analytics/data/qdd-data.zip"
 slides: ""
 url_code: ""
 url_pdf: ""

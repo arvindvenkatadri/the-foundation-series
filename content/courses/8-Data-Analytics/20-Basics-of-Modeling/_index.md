@@ -72,7 +72,7 @@ think that lowering the white blood cell count by bleeding a patient
 will make the patient better?
 
 To anticipate correctly the effects of an intervention you need to get
-the direction of cause and effect correct in your models. But for a
+**the direction of cause and effect** correct in your models. But for a
 model used for classification or prediction, it may be unnecessary to
 represent causation correctly. Instead, other issues, e.g., the
 reliability of data, can be the most important. One of the thorniest
@@ -89,16 +89,16 @@ From Daniel T. Kaplan's book:
     variation is a major goal of statistics.
 
 2.  You can create empirical, mathematical descriptions not only of a
-    single trait or variable but also of the relationships between two
+    single trait or variable but also of the relationships **between** two
     or more traits. (Empirical means based on measurements, data,
     observations.)
 
-3.  Models let you split variation into components: "explained" versus
-    "unexplained." How to measure the size of these components and how
+3.  Models let you split variation into components: **"explained"** versus
+    **"unexplained."** How to measure the size of these components and how
     to compare them to one another is a central aspect of statistical
     methodology. Indeed, this provides a definition of statistics:
 
-    Statistics is the explanation of variation in the context of what
+    > Statistics is the explanation of variation in the context of what
     remains unexplained.
 
 4.  By collecting data in ways that require care but are quite feasible,
@@ -143,7 +143,9 @@ From Daniel T. Kaplan's book:
 
 Let us look at the famous dataset pertaining to Francis Galton's work on
 the heights of children and the heights of their parents. We can create
-4 kinds of models based on the variables in that dataset.
+4 kinds of models based on the *types of variables* in that dataset.
+
+![](models.png)
 
 Our method in this set of modules is to take the modern view that *all*
 these models can be viewed from a standpoint of the *Linear Model*, also
@@ -154,6 +156,8 @@ intuition that this model can be used to understand all the models in
 the Figure.
 
 ## Degrees of Freedom
+
+TBD
 
 ## Effect Size
 
@@ -187,4 +191,3 @@ multiple explanatory variables will have multiple effect sizes.
     models (or: how to teach stats)
     <https://lindeloev.github.io/tests-as-linear/>
 
-------------------------------------------------------------------------

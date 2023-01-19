@@ -16,20 +16,24 @@ image:
   focal_point: Smart
 external_link: ""
 links:
-# - icon: lemon
-#   icon_pack: fa
-#   name: Orange Workflow
-#   url: "/labs/Data-Analytics/distribution.ows"
-# - icon: file-code
-#   icon_pack: fa
-#   name: Rmarkdown code
-#   url: "labs/Data-Analytics/distributions.Rmd"
-# - icon: cubes
-#   icon_pack: fa
-#   name: Radiant Workflow
-#   url: "labs/Data-Analytics/distributions.Rmd"
+- icon: circle
+  icon_pack: fas
+  name: Orange Tutorial
+  url: "labs/Data-Analytics/distributions.ows"
+- icon: sun
+  icon_pack: fas
+  name: Radiant
+  url: "labs/Data-Analytics/distributions.rda"
+- icon: r-project
+  icon_pack: fab
+  name: R Tutorial
+  url: "labs/Data-Analytics/distributions.html"
+- icon: database
+  icon_pack: fas
+  name: Sample Datasets
+  url: "labs/Data-Analytics/data/qdd-data.zip"
 slides: ""
-url_code: "/files/distributions.html"
+url_code: ""
 url_pdf: ""
 url_slides: ""
 url_video: ""
@@ -37,11 +41,10 @@ url_video: ""
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
-library(fontawesome)
 library(blogdown)
 library(tidyverse)
-library(mosaic)
 library(downloadthis)
+library(mosaic)
 library(palmerpenguins)
 library(patchwork)
 # #remotes::install_github("R-CoderDotCom/ridgeline@main")
@@ -135,59 +138,12 @@ p8 <- p + geom_density_2d(aes(x = hwy, y = cty))+ labs(title = "2D Density Plot"
 ## A Workflow in Orange
 
 How does one visualize Distributions in Orange?
+
 ```{r}
 blogdown::shortcode("youtube", "kKg22hjgFBI")
 ```
 
-Download the Orange Workflow file by clicking the icon below, and open it in Orange.
 
-```{r, echo=FALSE}
-download_file(
-  path = "files/distributions.ows",
-  output_extension = ".ows",
-  output_name = "Orange Workflow",
-  button_label = "Download Orange Workflow",
-  button_type = "danger",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
-```
-
-
-## A Workflow in Radiant
-
-Download the Radiant Workflow statefile by clicking the icon above, and upload/open it in Radiant. You need to start radiant from the `Add-In` menu in RStudio.
-
-```{r, echo=FALSE}
-download_file(
-  path = "files/distributions.rda",
-  output_extension = ".rda",
-  output_name = "radiant-distributions",
-  button_label = "Download Radiant Workflow",
-  button_type = "danger",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
-```
-
-## A Workflow in R
-
-Download the RMarkdown tutorial file by clicking the icon above and open it in RStudio or rstudio.cloud.
-
-```{r, echo=FALSE}
-download_file(
-  path = "files/distributions.Rmd",
-  output_extension = ".Rmd",
-  output_name = "distributions",
-  button_label = "Download RMArkdown Workflow",
-  button_type = "danger",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
-```
 
 ## Conclusion
 
@@ -209,7 +165,7 @@ download_file(
 download_file(path = "files/data/qdd-data.zip",
               output_name = "qdd-data",
               button_label = "Download .zip file of data",
-              button_type = "danger",
+              button_type = "info",
               has_icon = TRUE,
               icon = "fa fa-save",
               self_contained = FALSE)

@@ -1,0 +1,160 @@
+---
+title: "Sampling"
+author: "Arvind Venkatadri"
+date: '`r Sys.Date()`'
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    toc_float: TRUE
+    toc_depth: 2
+    df_print: paged
+    number_sections: TRUE
+    code_folding: hide
+    code_download: TRUE
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE)
+library(tidyverse)
+library(mosaic)
+library(mosaicData)
+
+library(NHANES)
+library(cowplot)
+
+```
+
+# Introduction
+
+Continuing to treat the `NHANES` dataset as a **population**, We will
+try to replicate the process of sampling and CLT for another variable in
+the NHANES variable, `AlcoholYear`.
+
+## Summary for `AlcoholYear` population
+
+```{r, summary-alcohol-year}
+
+# Summary of `alcohol-year`
+# 
+
+```
+
+## Sampling `AlcoholYear`
+
+```{r, sampling-alcohol-year}
+
+# Sampling `alcohol-year`
+# Varying samples size and sample count
+# 
+
+```
+
+## Distribution and QQ Plot for the sample
+
+```{r, qq-alcohol-year}
+# qq-alcohol-year
+# 
+# 
+```
+
+## Estimating Population Mean and Confidence Interval using the Sample
+
+```{r, mean-and-confint}
+# mean and confidence intervals for various sample sizes
+```
+
+## Case Study #2
+
+Let us look at video game data from the University of Berkeley {Stats
+Lab](
+
+[Stat Labs Data Page](https://www.stat.berkeley.edu/users/statlabs/labs.html):
+
+```{r}
+library(tidyverse)
+video_games <- read_csv("./data/video-data.csv")
+mosaic::inspect(video_games)
+```
+
+
++------------+--------------------------------------------------------+
+| Variable   |  Description                                           |
++============+========================================================+
+|  time      |  Time spent playing video games in week prior to       |
+|            | survey in hours.                                       |
++------------+--------------------------------------------------------+
+|  like      |  Like to play video games\                             |
+|            |  1=Never played, 2=Very much, 3=Somewhat, 4=Not        |
+|            | really, 5=Not at all                                   |
++------------+--------------------------------------------------------+
+|  where     |  Where play video games\                               |
+|            |  1=Arcade, 2=Home on a system, 3=Home on a computer    |
+|            | 4=Home on computer and system, 5=Arcade and            |
+|            | Home(system or computer) 6=Arcade and home (both       |
+|            | system and computer)                                   |
++------------+--------------------------------------------------------+
+|  freq      |  How often play video games\                           |
+|            |  1=Daily, 2=Weekly, 3=Monthly, 4=Semesterly            |
++------------+--------------------------------------------------------+
+|  busy      |  Play if busy\                                         |
+|            |   0=no, 1=yes                                          |
++------------+--------------------------------------------------------+
+|  educ      |  Is playing video games educational?\                  |
+|            |   0=no, 1=yes                                          |
++------------+--------------------------------------------------------+
+|  sex       |  Sex\                                                  |
+|            |   0=female, 1=male                                     |
++------------+--------------------------------------------------------+
+|  age       |  Age in years                                          |
++------------+--------------------------------------------------------+
+|  home      |  Computer at home\                                     |
+|            |   0=no, 1=yes                                          |
++------------+--------------------------------------------------------+
+|  math      |  Hate math\                                            |
+|            |   0=no, 1=yes                                          |
++------------+--------------------------------------------------------+
+|  work      |  Hours worked for pay in the week prior to survey      |
++------------+--------------------------------------------------------+
+|  own       |  Own PC\                                               |
+|            |   0=no, 1=yes                                          |
++------------+--------------------------------------------------------+
+|  cdrom     |  Owned PC has a CDROM\                                 |
+|            |   0=no, 1=yes                                          |
++------------+--------------------------------------------------------+
+|  email     |  HAve email account\                                   |
+|            |   0=no, 1=yes                                          |
++------------+--------------------------------------------------------+
+|  grade     |  Grade expect in course\                               |
+|            |   4=A, 3=B, 2=C, 1=D, 0=F                              |
++------------+--------------------------------------------------------+
+
+## Sampling `time`
+
+```{r sampling-time}
+
+```
+
+## Distribution and QQ Plot for the sample
+
+```{r dist-qq-time}
+
+```
+
+## Estimating Population Mean and Confidence Interval using the Sample
+
+```{r popmean-confint-time}
+
+```
+
+
+
+## Conclusion
+Write up some comments here on your learnings on:\
+- Sampling
+- CLT
+
+
+
