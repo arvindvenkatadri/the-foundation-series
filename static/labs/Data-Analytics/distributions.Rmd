@@ -1,7 +1,8 @@
 ---
 title: "Distributions in R"
 author: "Arvind Venkatadri"
-date: "`r Sys.Date()`"
+date: 22/Nov/2022
+lastmod: "`r Sys.Date()`"
 output:
   rmdformats::readthedown:
     highlight: kate

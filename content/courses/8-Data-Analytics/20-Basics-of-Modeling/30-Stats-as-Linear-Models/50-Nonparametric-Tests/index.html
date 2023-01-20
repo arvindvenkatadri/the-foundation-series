@@ -1,7 +1,7 @@
 ---
-title: "Nonparametric Tests"
+title: "\U0001F3DA \U0001F515 Nonparametric Tests"
 author: "Arvind Venkatadri"
-date: "2022-11-14"
+date: "2023-01-20"
 output:
   html_document:
     toc_float: yes
@@ -304,7 +304,7 @@ lm(y ~ 1 + x, data = mydata_wide) %&gt;%
 ## x           -0.46355    0.28081 -1.6507   0.1053
 ## 
 ## Residual standard error: 1.9657 on 48 degrees of freedom
-## Multiple R-squared:  0.05372,    Adjusted R-squared:  0.034006 
+## Multiple R-squared:  0.05372,	Adjusted R-squared:  0.034006 
 ## F-statistic:  2.725 on 1 and 48 DF,  p-value: 0.10532</code></pre>
 <p>Since the <em>p-value</em> is &gt;=0.05, we <em>fail to reject the NULL Hypothesis
 that there is no relationship between x and y</em>.</p>
@@ -410,8 +410,8 @@ columns <code>gpa</code> and <code>study_hours</code>:</p>
 <pre class="r"><code>glimpse(gpa_study_hours)</code></pre>
 <pre><code>## Rows: 193
 ## Columns: 2
-## $ gpa         &lt;dbl&gt; 4.000, 3.800, 3.930, 3.400, 3.200, 3.520, 3.680, 3.400, 3.700, 3.750, 3.300, 3.425, 3.795, 3.830, 3.300, 3.7…
-## $ study_hours &lt;dbl&gt; 10, 25, 45, 10, 4, 10, 24, 40, 10, 10, 30, 7, 15, 60, 10, 10, 6, 20, 8, 30, 35, 12, 6, 20, 10, 14, 10, 10, 3…</code></pre>
+## $ gpa         &lt;dbl&gt; 4.000, 3.800, 3.930, 3.400, 3.200, 3.520, 3.680, 3.400, 3.…
+## $ study_hours &lt;dbl&gt; 10, 25, 45, 10, 4, 10, 24, 40, 10, 10, 30, 7, 15, 60, 10, …</code></pre>
 <pre class="r"><code># Checks for Normal/Symmetric distributions
 p1 &lt;- ggplot(gpa_study_hours) + geom_histogram(aes(gpa))
 p2 &lt;- ggplot(gpa_study_hours) + geom_histogram(aes(study_hours))
@@ -441,12 +441,12 @@ lm(gpa ~ study_hours, data = gpa_study_hours) %&gt;% summary()</code></pre>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 0.2837 on 191 degrees of freedom
-## Multiple R-squared:  0.01769,    Adjusted R-squared:  0.01255 
+## Multiple R-squared:  0.01769,	Adjusted R-squared:  0.01255 
 ## F-statistic:  3.44 on 1 and 191 DF,  p-value: 0.06517</code></pre>
 <pre class="r"><code># Other ways using other packages
 mosaic::cor_test(gpa ~ study_hours, data = gpa_study_hours)</code></pre>
 <pre><code>## 
-##  Pearson&#39;s product-moment correlation
+## 	Pearson&#39;s product-moment correlation
 ## 
 ## data:  gpa and study_hours
 ## t = 1.8548, df = 191, p-value = 0.06517
@@ -460,10 +460,15 @@ mosaic::cor_test(gpa ~ study_hours, data = gpa_study_hours)</code></pre>
                             x = study_hours, 
                             y = gpa)</code></pre>
 <pre><code>## # A tibble: 1 × 14
-##   parameter1  parameter2 effectsize       estim…¹ conf.…² conf.low conf.…³ stati…⁴ df.er…⁵ p.value method n.obs conf.…⁶ expression
-##   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;list&gt;    
-## 1 study_hours gpa        Pearson correla…   0.133    0.95 -0.00838   0.269    1.85     191  0.0652 Pears…   193 normal  &lt;language&gt;
-## # … with abbreviated variable names ¹​estimate, ²​conf.level, ³​conf.high, ⁴​statistic, ⁵​df.error, ⁶​conf.method</code></pre>
+##   parameter1  parameter2 effectsize          estimate conf.level conf.low
+##   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+## 1 study_hours gpa        Pearson correlation    0.133       0.95 -0.00838
+##   conf.high statistic df.error p.value method              n.obs conf.method
+##       &lt;dbl&gt;     &lt;dbl&gt;    &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;               &lt;int&gt; &lt;chr&gt;      
+## 1     0.269      1.85      191  0.0652 Pearson correlation   193 normal     
+##   expression
+##   &lt;list&gt;    
+## 1 &lt;language&gt;</code></pre>
 <p>The correlation estimate is <span class="math inline">\(0.133\)</span>; the <code>p-value</code> is 0.065 and the
 confidence interval includes 0. Hence we fail to reject the NULL
 hypothesis that <code>study_hours</code> and <code>gpa</code> have no relationship.</p>
@@ -513,8 +518,8 @@ p2 &lt;- mydata_wide %&gt;%
   ggtitle(&quot; Spearman Ranked Correlation\n and Linear Models&quot;)
 
 patchwork::wrap_plots(p1,p2, nrow = 1, guides = &quot;collect&quot;)</code></pre>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;
-## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;
+## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_Plot-1.png" width="672" /></p>
 <p>Slopes are almost identical, ~ 0.25.</p>
 </div>
@@ -557,7 +562,7 @@ are <code>weight</code> and <code>price</code>.</p>
   ggplot(aes(weight, price)) + 
   geom_point() + geom_smooth(method = &quot;lm&quot;, se = FALSE, lty = 2) + 
   labs(title = &quot;Car Weight and Car Price have a nonlinear relationship&quot;)</code></pre>
-<pre><code>## `geom_smooth()` using formula &#39;y ~ x&#39;</code></pre>
+<pre><code>## `geom_smooth()` using formula = &#39;y ~ x&#39;</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_example_1-1.png" width="672" /></p>
 <p>Let us try a Spearman Correlation score for these variables, since the
 data are not linearly related and the variance of <code>price</code> also is not
@@ -586,7 +591,7 @@ lm(rank(price) ~ rank(weight), data = cars93) %&gt;% summary()</code></pre>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 7.46 on 52 degrees of freedom
-## Multiple R-squared:  0.7794, Adjusted R-squared:  0.7751 
+## Multiple R-squared:  0.7794,	Adjusted R-squared:  0.7751 
 ## F-statistic: 183.7 on 1 and 52 DF,  p-value: &lt; 2.2e-16</code></pre>
 <pre class="r"><code># Stats Plot
 ggstatsplot::ggscatterstats(data = cars93, x = weight, 
@@ -643,7 +648,7 @@ the mean is other than zero, we can use the
 t1 &lt;- t.test(y, mu = 0, alternative = &quot;two.sided&quot;)
 print(t1)</code></pre>
 <pre><code>## 
-##  One Sample t-test
+## 	One Sample t-test
 ## 
 ## data:  y
 ## t = 1.0607, df = 49, p-value = 0.294
@@ -716,7 +721,7 @@ H_0: \beta_0 = 0
 w1 &lt;- wilcox.test(y)
 w1</code></pre>
 <pre><code>## 
-##  Wilcoxon signed rank test with continuity correction
+## 	Wilcoxon signed rank test with continuity correction
 ## 
 ## data:  y
 ## V = 754, p-value = 0.2628
@@ -735,7 +740,7 @@ w2</code></pre>
 w3 &lt;- t.test(signed_rank(y))
 w3</code></pre>
 <pre><code>## 
-##  One Sample t-test
+## 	One Sample t-test
 ## 
 ## data:  signed_rank(y)
 ## t = 1.1277, df = 49, p-value = 0.265
@@ -817,7 +822,7 @@ t2 &lt;- t.test(y2, y, paired = TRUE, mu = 0,
              alternative = &quot;two.sided&quot;)
 t2</code></pre>
 <pre><code>## 
-##  Paired t-test
+## 	Paired t-test
 ## 
 ## data:  y2 and y
 ## t = 0.54264, df = 49, p-value = 0.5898
@@ -871,7 +876,7 @@ signed-ranks of the <strong>pairwise differences</strong> y2- y.</p>
 w4 &lt;- wilcox.test(y, y2, paired = TRUE)
 w4</code></pre>
 <pre><code>## 
-##  Wilcoxon signed rank test with continuity correction
+## 	Wilcoxon signed rank test with continuity correction
 ## 
 ## data:  y and y2
 ## V = 608, p-value = 0.7795
@@ -896,7 +901,7 @@ lm4 %&gt;% summary()</code></pre>
 t4 &lt;- t.test(signed_rank(y2-y), mu = 0 , alternative = &quot;two.sided&quot;)
 t4</code></pre>
 <pre><code>## 
-##  One Sample t-test
+## 	One Sample t-test
 ## 
 ## data:  signed_rank(y2 - y)
 ## t = 0.28214, df = 49, p-value = 0.779
@@ -960,7 +965,7 @@ mydata_wide_new %&gt;%
                 limits = c(0,1)) +
   annotate(&quot;text&quot;, x = 0, y = 1.5, label = &quot;Difference in means \n equals slope in linear model&quot;) </code></pre>
 <pre><code>## Warning: Continuous limits supplied to discrete scale.
-## Did you mean `limits = factor(...)` or `scale_*_continuous()`?</code></pre>
+## ℹ Did you mean `limits = factor(...)` or `scale_*_continuous()`?</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/Independent_Data_Plots-1.png" width="672" /></p>
 <pre class="r"><code># Need to use `glue` here to add more annotations
 # Math annotation on graphs</code></pre>
@@ -1031,16 +1036,20 @@ in means. <img src="t-distribution.png" alt="t-distribution curves" /></p>
 t5 &lt;- t.test(y2, y, var.equal = TRUE)
 t5 %&gt;% tidy() </code></pre>
 <pre><code>## # A tibble: 1 × 10
-##   estimate estimate1 estimate2 statistic p.value parameter conf.low conf.high method            alternative
-##      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;             &lt;chr&gt;      
-## 1      0.2       0.5       0.3     0.566   0.573        98   -0.502     0.902 Two Sample t-test two.sided</code></pre>
+##   estim…¹ estim…² estim…³ stati…⁴ p.value param…⁵ conf.…⁶ conf.…⁷ method alter…⁸
+##     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  
+## 1     0.2     0.5     0.3   0.566   0.573      98  -0.502   0.902 Two S… two.si…
+## # … with abbreviated variable names ¹​estimate, ²​estimate1, ³​estimate2,
+## #   ⁴​statistic, ⁵​parameter, ⁶​conf.low, ⁷​conf.high, ⁸​alternative</code></pre>
 <pre class="r"><code># Welch test when variances are not equal
 t6 &lt;- t.test(y2,y, var.equal = FALSE)
 t6 %&gt;% tidy()</code></pre>
 <pre><code>## # A tibble: 1 × 10
-##   estimate estimate1 estimate2 statistic p.value parameter conf.low conf.high method                  alternative
-##      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;chr&gt;                   &lt;chr&gt;      
-## 1      0.2       0.5       0.3     0.566   0.573      90.9   -0.502     0.902 Welch Two Sample t-test two.sided</code></pre>
+##   estim…¹ estim…² estim…³ stati…⁴ p.value param…⁵ conf.…⁶ conf.…⁷ method alter…⁸
+##     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  
+## 1     0.2     0.5     0.3   0.566   0.573    90.9  -0.502   0.902 Welch… two.si…
+## # … with abbreviated variable names ¹​estimate, ²​estimate1, ³​estimate2,
+## #   ⁴​statistic, ⁵​parameter, ⁶​conf.low, ⁷​conf.high, ⁸​alternative</code></pre>
 <pre class="r"><code># Linear Model with Dummy variable
 # lm(value ~ 1 + group, data = mydata_long_y) # also works
 lm6 &lt;- lm(value ~ 1 + I(group == &quot;y2&quot;), data = mydata_long_y)
@@ -1118,9 +1127,10 @@ H_0 : \beta_1 = 0
 w5 &lt;- wilcox.test(y2,y, paired = FALSE)
 w5 %&gt;% tidy()</code></pre>
 <pre><code>## # A tibble: 1 × 4
-##   statistic p.value method                                            alternative
-##       &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;                                             &lt;chr&gt;      
-## 1      1264   0.926 Wilcoxon rank sum test with continuity correction two.sided</code></pre>
+##   statistic p.value method                                            alternat…¹
+##       &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;                                             &lt;chr&gt;     
+## 1      1264   0.926 Wilcoxon rank sum test with continuity correction two.sided 
+## # … with abbreviated variable name ¹​alternative</code></pre>
 <pre class="r"><code># As Linear model
 lm5 &lt;- lm(rank(value) ~ 1 + I(group == &quot;y2&quot;), 
           data = mydata_long_y)
@@ -1198,8 +1208,13 @@ P_anova1 = ggplot(D_anova1, aes(x=x, y=y)) +
       bquote(beta[0]*&quot;+&quot;*beta[1]*&quot;, &quot;*beta[0]*&quot;+&quot;*beta[2]*&quot;, etc. (group 2, 3, ... means)&quot;)
     )
   )</code></pre>
-<pre><code>## Warning: `fun.y` is deprecated. Use `fun` instead.</code></pre>
+<pre><code>## Warning: The `fun.y` argument of `stat_summary()` is deprecated as of ggplot2 3.3.0.
+## ℹ Please use the `fun` argument instead.</code></pre>
+<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
+## ℹ Please use `linewidth` instead.</code></pre>
 <pre class="r"><code>P_anova1</code></pre>
+<pre><code>## Warning: The dot-dot notation (`..y..`) was deprecated in ggplot2 3.4.0.
+## ℹ Please use `after_stat(y)` instead.</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/Visualizing_One_way_ANOVA-1.png" width="672" /></p>
 </div>
 <div id="code-10" class="section level3">

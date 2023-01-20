@@ -1,7 +1,7 @@
 ---
 title: "\U0001F9ED Basics of Statistical Modeling"
-date: "2021-11-09"
-linkTitle: Statistical Modeling
+date: "2022-11-09"
+lastmod: "`r Sys.Date()`"
 summary: ""
 weight: 20
 type: book

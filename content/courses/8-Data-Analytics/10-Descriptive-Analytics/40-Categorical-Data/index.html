@@ -1,8 +1,9 @@
 ---
-title: "\U0001F433 Visualizing Categorical Data"
+title: "\U0001F3F5 Visualizing Categorical Data"
 author: "Arvind Venkatadri"
-date: "2023-01-19"
-linkTitle: Visualizing Categorical Data
+date: 15/Jan/2023
+lastmod: "2023-01-20"
+summary: "Visualizing Categorical Data"
 weight: 40
 links:
 - icon: circle
@@ -556,14 +557,17 @@ principle.</p>
 <div id="mosaic-plots" class="section level3">
 <h3>Mosaic Plots</h3>
 <p>A mosaicplot is basically an area-proportional visualization of (typically observed) frequencies, consisting of tiles (corresponding to the cells) created by vertically and horizontally splitting a rectangle recursively. Thus, the area of each tile is proportional to the corresponding cell entry given the dimensions of previous splits.</p>
+<p>The <code>vcd::mosaic()</code> function needs the data in <em>contingency table</em> form. We will use <code>vcd::structable()</code> function to construct one:</p>
 <pre class="r"><code>art &lt;- vcd::structable(~ Treatment + Improved, data = Arthritis)
 art</code></pre>
 <pre><code>##           Improved None Some Marked
 ## Treatment                          
 ## Placebo              29    7      7
 ## Treated              13    7     21</code></pre>
-<pre class="r"><code>p1 &lt;- vcd::mosaic(art, gp = shading_max, split_vertical = TRUE)</code></pre>
+<pre class="r"><code>vcd::mosaic(art, gp = shading_max)</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/mosaic-plot-using-vcd-1.png" width="672" /></p>
+<pre class="r"><code>### Or
+### vcd::mosaic(structable(~ Treatment + Improved, data = Arthritis), gp = shading_max, split_vertical = TRUE)</code></pre>
 </div>
 <div id="balloon-plots" class="section level3">
 <h3>Balloon Plots</h3>

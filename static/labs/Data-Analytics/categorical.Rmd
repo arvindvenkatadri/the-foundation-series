@@ -1,0 +1,105 @@
+---
+title: "Categorical Data in R"
+author: "Arvind Venkatadri"
+date: "`r Sys.Date()`"
+output:
+  rmdformats::readthedown:
+    highlight: kate
+    toc_float: TRUE
+    toc_depth: 2
+    df_print: paged
+    number_sections: TRUE
+    code_folding: hide
+    code_download: TRUE
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=TRUE}
+
+library(tidyverse)
+library(vcd)
+library(vcdExtra)
+library(sjPlot)
+library(ggmosaic)
+
+```
+
+
+# Introduction
+
+Let us play with some categorical ( or predominantly categorical ) datasets in R and se how we can analyze and plot them.
+
+
+## The `titanic` dataset
+
+```{r}
+data("titanic")
+titanic
+
+```
+
+### `titanic` Mosaic Plot
+
+```{r titanic-mosaic-plot}
+
+```
+
+
+
+### `titanic` Balloon Plot
+
+
+
+
+
+### `hippocorpus` dataset
+
+```{r, echo=FALSE,message=FALSE}
+library(downloadthis)
+  download_this(
+    path = "./data/hippoCorpusV2.csv",
+    output_name = "hippocorpus",
+    output_extension = ".csv",
+    button_label = "Download data as csv",
+    button_type = "info",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+
+```
+
+
+This is a dataset from [Kaggle](https://www.kaggle.com/datasets/saurabhshahane/hippocorpus?select=hippoCorpusV2.csv) and is based on Reference 2.
+
+> Hippocorpus is dataset of 6854 English diary like short stories about recalled and imagined events. Using a crowdsourcing framework the respective owners of this datasets collected recalled stories and summaries from workers, then provided these collected summaries to other workers who write imagined stories. Months later dataset creators collected a retold version of the recalled stories from the subset of recalled authors.
+Dataset contains author demographics (age, gender, race), their openness to experience, as well as some variables regarding the author's relationship to the event (e.g., how personal the event is, how often they tell its story, etc.)
+
+Apart from metadata pertaining to each respondent, there are 4 *Likert Scale* variables:
+
+- `distracted`: How distracted were you while writing your story? (5-point Likert)
+- `draining`: How taxing/draining was writing for you emotionally? (5-point Likert)
+- `frequency`: How often do you think about or talk about this event? (5-point Likert)
+- `importance`: How impactful, important, or personal is this story/this event to you? (5-point Likert). Plot these using the package `sjPlot`. 
+Can you also try a `ggplot`?
+
+```{r hippocorpus-likert}
+
+
+```
+
+
+
+# Conclusion
+
+
+
+# References
+
+1. A detailed analysis of the NHANES dataset, <https://awagaman.people.amherst.edu/stat230/Stat230CodeCompilationExampleCodeUsingNHANES.pdf>
+
+1. Maarten Sap, Eric Horvitz, Yejin Choi, Noah A. Smith, and James Pennebaker (2020) _Recollection versus Imagination: Exploring Human Memory and Cognition via Neural Language Models._ ACL.
+
+
+

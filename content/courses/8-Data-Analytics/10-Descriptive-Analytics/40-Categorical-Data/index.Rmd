@@ -1,8 +1,9 @@
 ---
-title: "\U0001F433 Visualizing Categorical Data"
+title: "\U0001F3F5 Visualizing Categorical Data"
 author: "Arvind Venkatadri"
-date: "`r Sys.Date()`"
-linkTitle: Visualizing Categorical Data
+date: 15/Jan/2023
+lastmod: "`r Sys.Date()`"
+summary: "Visualizing Categorical Data"
 weight: 40
 links:
 - icon: circle
@@ -241,11 +242,16 @@ principle.
 
 A mosaicplot is basically an area-proportional visualization of (typically observed) frequencies, consisting of tiles (corresponding to the cells) created by vertically and horizontally splitting a rectangle recursively. Thus, the area of each tile is proportional to the corresponding cell entry given the dimensions of previous splits.
 
+The `vcd::mosaic()` function needs the data in *contingency table* form. We will use `vcd::structable()` function to construct one:
+
 ```{r mosaic-plot-using-vcd}
 
 art <- vcd::structable(~ Treatment + Improved, data = Arthritis)
 art
-p1 <- vcd::mosaic(art, gp = shading_max, split_vertical = TRUE)
+vcd::mosaic(art, gp = shading_max)
+
+### Or
+### vcd::mosaic(structable(~ Treatment + Improved, data = Arthritis), gp = shading_max, split_vertical = TRUE)
  
 
 ```

@@ -1,8 +1,7 @@
 ---
-title: "\U0001F409 Intro to Orange"
+title: "\U0001F34A Intro to Orange"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
-linkTitle: Intro to Orange
 summary: Using A Visual drag and drop tool called Orange
 view: 2
 weight: 10

@@ -1,7 +1,8 @@
 ---
-title: "Correlations"
+title: "\U0001F350 Stat Tests for Correlations"
 author: "Arvind Venkatadri"
-date: "2022-11-25"
+date: Nov 22, 2022
+lastmod: "2023-01-20"
 output:
   html_document:
     toc_float: yes
@@ -172,8 +173,8 @@ Slope\ \beta_1 = \frac{sd_y}{sd_x} * r
 <p>See the example below: We choose to look at the <code>gpa_study_hours</code> dataset. It has two numeric columns <code>gpa</code> and <code>study_hours</code>:</p>
 <pre><code>## Rows: 193
 ## Columns: 2
-## $ gpa         &lt;dbl&gt; 4.000, 3.800, 3.930, 3.400, 3.200, 3.520, 3.680, 3.400, 3.700, 3.750, 3.300, 3.425, 3.795, 3.830, 3.300, 3.7…
-## $ study_hours &lt;dbl&gt; 10, 25, 45, 10, 4, 10, 24, 40, 10, 10, 30, 7, 15, 60, 10, 10, 6, 20, 8, 30, 35, 12, 6, 20, 10, 14, 10, 10, 3…</code></pre>
+## $ gpa         &lt;dbl&gt; 4.000, 3.800, 3.930, 3.400, 3.200, 3.520, 3.680, 3.400, 3.…
+## $ study_hours &lt;dbl&gt; 10, 25, 45, 10, 4, 10, 24, 40, 10, 10, 30, 7, 15, 60, 10, …</code></pre>
 <p>We can plot this:</p>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/Pearson_example_3-1.png" width="672" /></p>
 <p>Hmm…not normally distributed, and there is a sort of increasing relationship, however is it linear? And there is some evidence of heteroscedasticity, so the LINE assumptions are clearly in violation. Pearson correlation would not be the best idea here.</p>
@@ -273,7 +274,7 @@ constant over <code>weight</code></p>
 ## Signif. codes:  0 &#39;***&#39; 0.001 &#39;**&#39; 0.01 &#39;*&#39; 0.05 &#39;.&#39; 0.1 &#39; &#39; 1
 ## 
 ## Residual standard error: 7.46 on 52 degrees of freedom
-## Multiple R-squared:  0.7794, Adjusted R-squared:  0.7751 
+## Multiple R-squared:  0.7794,	Adjusted R-squared:  0.7751 
 ## F-statistic: 183.7 on 1 and 52 DF,  p-value: &lt; 2.2e-16</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_example_2-1.png" width="672" /></p>
 <p>We see that using ranks of the <code>price</code> variable, we obtain a Spearman’s
@@ -296,10 +297,15 @@ a correlation of <code>0.882</code>.</p>
 ##      &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
 ## 1    0.133  0.0652 -0.00838     0.269</code></pre>
 <pre><code>## # A tibble: 1 × 14
-##   parameter1  parameter2 effectsize       estim…¹ conf.…² conf.low conf.…³ stati…⁴ df.er…⁵ p.value method n.obs conf.…⁶ expression
-##   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;  &lt;int&gt; &lt;chr&gt;   &lt;list&gt;    
-## 1 study_hours gpa        Pearson correla…   0.133    0.95 -0.00838   0.269    1.85     191  0.0652 Pears…   193 normal  &lt;language&gt;
-## # … with abbreviated variable names ¹​estimate, ²​conf.level, ³​conf.high, ⁴​statistic, ⁵​df.error, ⁶​conf.method</code></pre>
+##   parameter1  parameter2 effectsize          estimate conf.level conf.low
+##   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;
+## 1 study_hours gpa        Pearson correlation    0.133       0.95 -0.00838
+##   conf.high statistic df.error p.value method              n.obs conf.method
+##       &lt;dbl&gt;     &lt;dbl&gt;    &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;               &lt;int&gt; &lt;chr&gt;      
+## 1     0.269      1.85      191  0.0652 Pearson correlation   193 normal     
+##   expression
+##   &lt;list&gt;    
+## 1 &lt;language&gt;</code></pre>
 </div>
 </div>
 <div id="references" class="section level1">

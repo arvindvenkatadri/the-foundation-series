@@ -1,7 +1,8 @@
 ---
-title: ML - Classification
+title: "\U0001F523 ML - Classification"
 subtitle: 
-date: "`r Sys.Date()`"
+date: 12/July/2022
+lastmod: "`r Sys.Date()`"
 external_link: ""
 image:
   caption: Photo by rawpixel on Unsplash

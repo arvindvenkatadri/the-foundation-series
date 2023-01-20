@@ -1,7 +1,7 @@
 ---
 title: "\U0001F9ED Statistical Models and Tests"
-date: "`r Sys.Date()`"
-linkTitle: Statistical Tests as Linear Models
+date: 14/Nov/2022
+lastmod: "`r Sys.Date()`"
 summary: ""
 weight: 30
 type: book
@@ -24,38 +24,86 @@ In this set of modules we will explore Sampling, Summary Statistics,
 Statistical Tests for data.
 
 ## The Big Ideas in Stats
-Steven Stigler is the author of the book "*The Seven Pillars of Statistical Wisdom*". The Big Ideas in Statistics from that book are:
 
-1. Aggregation
-> The first pillar I will call Aggregation, although it could just as well be given the nineteenth-century name, “The Combination of Observations,” or even reduced to the simplest example, taking a mean. Those simple names are misleading, in that I refer to an idea that is now old but was truly revolutionary in an earlier day—and it still is so today, whenever it reaches into a new area of application. How is it revolutionary? By stipulating that, given a number of observations, you can actually gain information by **throwing information away**! In taking a simple arithmetic mean, we discard the individuality of the measures, subsuming them to one summary.
+Steven Stigler is the author of the book "*The Seven Pillars of
+Statistical Wisdom*". The Big Ideas in Statistics from that book are:
 
-1. Information
-> In the early eighteenth century it was discovered that in many situations the **amount of information** in a set of data was only proportional to the **square root** of the number n of observations, not the number n itself. 
+1.  Aggregation
 
-1. Likelihood
-> By the name I give to the third pillar, Likelihood, I mean the calibration of inferences with the use of probability. The simplest form for this is in **significance testing** and the common **P-value**, but as the name “Likelihood” hints, there is a wealth of associated methods, many related to parametric families or to Fisherian or Bayesian inference. 
+    > The first pillar I will call Aggregation, although it could just
+    > as well be given the nineteenth-century name, "The Combination of
+    > Observations," or even reduced to the simplest example, taking a
+    > mean. Those simple names are misleading, in that I refer to an
+    > idea that is now old but was truly revolutionary in an earlier
+    > day---and it still is so today, whenever it reaches into a new
+    > area of application. How is it revolutionary? By stipulating that,
+    > given a number of observations, you can actually gain information
+    > by **throwing information away**! In taking a simple arithmetic
+    > mean, we discard the individuality of the measures, subsuming them
+    > to one summary.
 
-1. Intercomparison
->It represents what was also once a radical idea and is now commonplace: that statistical comparisons do not need to be made with respect to an exterior standard but can often be made in terms **interior to the data** themselves. The most commonly encountered examples of intercomparisons are Student’s **t-tests** and the tests of the **analysis of variance**.
+2.  Information
 
-1. Regression
->I call the fifth pillar Regression, after Galton’s revelation of 1885, explained in terms of the bivariate normal distribution. Galton arrived at this by attempting to devise a mathematical framework for Charles Darwin’s theory of natural selection, overcoming what appeared to Galton to be an intrinsic **contradiction in the theory**: selection required increasing diversity, in contradiction to the appearance of the population stability needed for the definition of species.
+    > In the early eighteenth century it was discovered that in many
+    > situations the **amount of information** in a set of data was only
+    > proportional to the **square root** of the number n of
+    > observations, not the number n itself.
 
-1. Design of Experiments and Observations
->The sixth pillar is Design, as in “Design of Experiments,” but conceived of more broadly, as an  ideal that can discipline our thinking in even observational settings.Starting in the late nineteenth century, a new understanding of the topic appeared, as Charles S. Peirce and then Fisher discovered the extraordinary role **randomization** could play in inference. 
+3.  Likelihood
 
-1. Residuals
->The most common appearances in Statistics are our model diagnostics (**plotting residuals**), but more important is the way we explore high-dimensional spaces by fitting and comparing **nested models**. 
+    > By the name I give to the third pillar, Likelihood, I mean the
+    > calibration of inferences with the use of probability. The
+    > simplest form for this is in **significance testing** and the
+    > common **P-value**, but as the name "Likelihood" hints, there is a
+    > wealth of associated methods, many related to parametric families
+    > or to Fisherian or Bayesian inference.
 
+4.  Intercomparison
+
+    > It represents what was also once a radical idea and is now
+    > commonplace: that statistical comparisons do not need to be made
+    > with respect to an exterior standard but can often be made in
+    > terms **interior to the data** themselves. The most commonly
+    > encountered examples of intercomparisons are Student's **t-tests**
+    > and the tests of the **analysis of variance**.
+
+5.  Regression
+
+    > I call the fifth pillar Regression, after Galton's revelation of
+    > 1885, explained in terms of the bivariate normal distribution.
+    > Galton arrived at this by attempting to devise a mathematical
+    > framework for Charles Darwin's theory of natural selection,
+    > overcoming what appeared to Galton to be an intrinsic
+    > **contradiction in the theory**: selection required increasing
+    > diversity, in contradiction to the appearance of the population
+    > stability needed for the definition of species.
+
+6.  Design of Experiments and Observations
+
+    > The sixth pillar is Design, as in "Design of Experiments," but
+    > conceived of more broadly, as an ideal that can discipline our
+    > thinking in even observational settings.Starting in the late
+    > nineteenth century, a new understanding of the topic appeared, as
+    > Charles S. Peirce and then Fisher discovered the extraordinary
+    > role **randomization** could play in inference.
+
+7.  Residuals
+
+    > The most common appearances in Statistics are our model
+    > diagnostics (**plotting residuals**), but more important is the
+    > way we explore high-dimensional spaces by fitting and comparing
+    > **nested models**.
 
 ## Pedagogical Notes
 
-Two ideas will make this set of modules a little different from more conventional introductory statistics courses:
+Two ideas will make this set of modules a little different from more
+conventional introductory statistics courses:
 
-- The use of *Linear Models* as the basis for understanding *all* statistics measures and tests.
+-   The use of *Linear Models* as the basis for understanding *all*
+    statistics measures and tests.
 
-- The use of Simulations, rather than formulae, to calculate Statistics and perform Statistical Tests. 
-
+-   The use of Simulations, rather than formulae, to calculate
+    Statistics and perform Statistical Tests.
 
 ## The Linear Model Approach
 
@@ -113,34 +161,29 @@ The *relationship* is based upon the parameter $\beta_1$ being non-zero.
 Accordingly, in fitting a linear model, we follow the process as
 follows:
 
-1.  Make the following hypotheses: $$
-    y = \beta_0 + \beta_1 \times x\\
-    $$ $$
-    NULL\\ Hypothesis\\ H_0 =\> x\\ and\\ y\\ are\\ unrelated.\\ (\beta_1 =
-    0)
+1.  Make the following hypotheses:
+
+    $$
+    y = \beta_1 *x + \beta_0\\
+    Null\ Hypothesis\ H_0\ => \beta_1 = 0\\
+    Alternative\ Hypothesis\ H_a => \beta_1 \ne 0\\
+    x\ and\ y\ are\ linearly\ related\\
     $$
 
-$$
-y = \beta_0 + \beta_1 \times x\\\\
-$$ $$
-Alternate\\ Hypothesis\\ H_1 =\> x\\ and\\ y\\ are\\ linearly\\
-related\\ (\beta_1 \ne 0)
-$$
+2.  We "assume" that $H_0$ is true.
 
-1.  We "assume" that $H_0$ is true.
+3.  We calculate $\beta_1$.
 
-2.  We calculate $\beta_1$.
+4.  We then find probability **p** that \[$\beta_1 = Estimated\ Value$\]
+    **when the NULL Hypothesis** is **assumed** TRUE. This is the
+    **p-value**.
 
-3.  We then find probability **p** that
-    \[$\beta_1 = Estimated\\ Value$\] **when the NULL Hypothesis** is
-    **assumed** TRUE. This is the **p-value**.
-
-4.  If that probability is **p \> 0.05**, we say we "cannot reject"
+5.  If that probability is **p \> 0.05**, we say we "cannot reject"
     $H_0$ and there is unlikely to be significant linear relationship.
 
-5.  However, if **p \<= 0.05** can we reject the NULL hypothesis, and
+6.  However, if **p \<= 0.05** can we reject the NULL hypothesis, and
     say that there could be a significant linear relationship,because
-    $\beta_1 = Estimated\\ Value$ by mere chance under $H_0$ is very
+    $\beta_1 = Estimated\ Value$ by mere chance under $H_0$ is very
     small.
 
 In the following set of modules, all statistical test will be posed
@@ -162,39 +205,28 @@ we wish to estimate will be of course, either a $\beta_0$ or a $\beta_1$
 
 ![](images/ols_assumptions.png)
 
-
-## The Stats by Simulation Approach
-To Be Written up
-
-
-`Two.Proportions <- do(999) * diffprop(y ~ shuffle(x), data = Data)`
-`Two.Means <- do(999) * diffmean(y ~ shuffle(x), data = Data)`
-`Linear.model <- do(999) * lm(y ~ shuffle(x) + a, data = Data)`
-`Two.Way.Table <- do(999) * chisq(y ~ shuffle(x), data = Data)`
-
-
-
-
 ## References
 
 1.  *Common statistical tests are linear models (or: how to teach
     stats)* by [Jonas Kristoffer
     Lindeløv](https://lindeloev.github.io/tests-as-linear/)
 
-1.  CheatSheet
+2.  CheatSheet
     <https://lindeloev.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf>
 
-1.  *Common statistical tests are linear models: a work through* by
+3.  *Common statistical tests are linear models: a work through* by
     [Steve Doogue](https://steverxd.github.io/Stat_tests/)
-    
-1. Russ Poldrack. *Statistical Thinking for the 21st Century*, Chapter 8 *Chapter 8 Resampling and simulation*. <https://statsthinking21.github.io/statsthinking21-core-site/resampling-and-simulation.html>
 
-1.  [Jeffrey Walker "Elements of Statistical Modeling for Experimental
+4.  Russ Poldrack. *Statistical Thinking for the 21st Century*, Chapter
+    8 *Chapter 8 Resampling and simulation*.
+    <https://statsthinking21.github.io/statsthinking21-core-site/resampling-and-simulation.html>
+
+5.  [Jeffrey Walker "Elements of Statistical Modeling for Experimental
     Biology"](https://www.middleprofessor.com/files/applied-biostatistics_bookdown/_book/)
 
-1.  Text: Diez, David M & Barr, Christopher D & Çetinkaya-Rundel, Mine:
+6.  Text: Diez, David M & Barr, Christopher D & Çetinkaya-Rundel, Mine:
     [OpenIntro Statistics](https://www.openintro.org/book/os/)
 
-1.  Modern Statistics with R: From wrangling and exploring data to
+7.  Modern Statistics with R: From wrangling and exploring data to
     inference and predictive modelling by [Måns
     Thulin](http://www.modernstatisticswithr.com/)

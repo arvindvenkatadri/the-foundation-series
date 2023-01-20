@@ -1,7 +1,8 @@
 ---
-title: "Correlations"
+title: "\U0001F350 Stat Tests for Correlations"
 author: "Arvind Venkatadri"
-date: "`r Sys.Date()`"
+date: Nov 22, 2022
+lastmod: "`r Sys.Date()`"
 output:
   html_document:
     toc_float: yes

@@ -1,10 +1,9 @@
 ---
-title: "\U0001F409 Introduction to Orange"
+title: "\U0001F7E0 Introduction to Orange"
 author: "Arvind Venkatadri"
-date: "`r Sys.Date()`"
-linkTitle: Intro to Orange
+date: 22/July/2022
+lastmod: "`r Sys.Date()`"
 summary: Using A Visual drag and drop tool called Orange
-view: 2
 weight: 05
 tags:
 - Qual Variables and Quant Variables

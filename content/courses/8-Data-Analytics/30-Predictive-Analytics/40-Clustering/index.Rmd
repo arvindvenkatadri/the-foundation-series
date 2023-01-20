@@ -1,7 +1,8 @@
 ---
-title: ML - Clustering
+title: " \U0001F5EB ML - Clustering"
 subtitle: 
-date: "`r Sys.Date()`"
+date: 11/July/2022
+lastmod: "`r Sys.Date()`"
 external_link: ""
 image:
   caption: Photo by <a href="https://unsplash.com/@maddibazzocco?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maddi Bazzocco</a> on <a href="https://unsplash.com/s/photos/groceries?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

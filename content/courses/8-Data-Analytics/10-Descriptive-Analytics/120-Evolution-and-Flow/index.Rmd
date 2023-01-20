@@ -1,5 +1,5 @@
 ---
-title: "\U0001F578 Evolution and Flow"
+title: "\U0001F30A Evolution and Flow"
 subtitle: "Changes in Information over space and time"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"

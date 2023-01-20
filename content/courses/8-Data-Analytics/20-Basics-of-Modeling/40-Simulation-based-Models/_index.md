@@ -1,8 +1,8 @@
 ---
-title: "\U0001F9ED Simulation Based Models"
+title: "\U0001F3B2 Simulation Based Models"
 subtitle: "Using Simulations and Random Number Generation in Stat Tests"
-date: "`r Sys.Date()`"
-linkTitle: Simulations
+date: 10/Nov/2022
+lastmod: "`r Sys.Date()`"
 summary: ""
 weight: 40
 type: book

@@ -1,5 +1,5 @@
 ---
-title: ML - Regression
+title: "\U0001F362 ML - Regression"
 subtitle: ""
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
@@ -18,22 +18,25 @@ tags:
 - Trend Line
 - Francis Galton
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: Paul Klee
   focal_point: Smart
-external_link: ""
 links:
-- icon: book
-  icon_pack: fa
-  name: notes
-  url: ""
-- icon: file-powerpoint
-  icon_pack: fa
-  name: slides
-  url: ""
-- icon: registered
-  icon_pack: fa
-  name: installation
-  url: ""
+- icon: circle
+  icon_pack: fas
+  name: Orange Tutorial
+  url: "labs/Data-Analytics/regression.ows"
+- icon: sun
+  icon_pack: fas
+  name: Radiant
+  url: "labs/Data-Analytics/regression.rda"
+- icon: r-project
+  icon_pack: fab
+  name: R Tutorial
+  url: "labs/Data-Analytics/regression.html"
+- icon: database
+  icon_pack: fas
+  name: Sample Datasets
+  url: "labs/Data-Analytics/data/ml-data.zip"
 slides: ""
 url_code: ""
 url_pdf: ""

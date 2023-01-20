@@ -1,7 +1,8 @@
 ---
-date: "`r Sys.Date()`"
-title: "Populations, Samples, Statistics, and Inference"
+lastmod: "`r Sys.Date()`"
+title: "\U0001F46A Populations, Samples, Statistics, and Inference"
 author: "Arvind Venkatadri"
+date: 12/Jan/2023
 external_link: ""
 weight: 20
 df_print: paged
