@@ -171,9 +171,8 @@ ss.ceDiag(effect,causes.head,causes, main ="Me, Mom, and the Market",ss.col = c(
 Turning the *knobs/parameters* in the Ishikawa Diagram, it seems that if
 the YM goes to the market with Mom, he would most likely get bored, but
 would please Mom. If he doesn't go, then he chills at home, but Mom is
-going to justifiably furious. Herein lies the *Contradiction*, which we
-can now specify as an [**Administrative
-Contradiction(AC)**](https://altshuller.ru/world/eng/triz6.asp) in
+going to be justifiably furious. Herein lies the *Contradiction*, which we
+can now specify as an [**Administrative Contradiction(AC)**](https://altshuller.ru/world/eng/triz6.asp) in
 *plain English*:
 
 > <center>**AC**: The YM wants to chill at home but Mom wants him to

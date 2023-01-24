@@ -2,7 +2,7 @@
 title: "\U0001F3F5 Visualizing Categorical Data"
 author: "Arvind Venkatadri"
 date: 15/Jan/2023
-lastmod: "2023-01-20"
+lastmod: "2023-01-24"
 summary: "Visualizing Categorical Data"
 weight: 40
 links:
@@ -36,6 +36,7 @@ tags:
 - Bar Plots (for Contingency Tables)
 - Mosaic Plots
 - Balloon Plots
+- Pie Charts
 - Correspondence Analysis
 output:
   html_document:
@@ -112,8 +113,7 @@ is <code>nrow(X)</code>, and the number of variables is <code>ncol(X)</code>.</p
 ## $ Sex       &lt;fct&gt; Male, Male, Male, Male, Male, Male, Male, Male, Male, Male, …
 ## $ Age       &lt;int&gt; 27, 29, 30, 32, 46, 58, 59, 59, 63, 63, 64, 64, 69, 70, 23, …
 ## $ Improved  &lt;ord&gt; Some, None, None, Marked, Marked, Marked, None, Marked, None…</code></pre>
-<p>From Michael Friendly <a href="/pdf/DataAnalytics/Michael-Friendly-DDAS.pdf">Discrete Data Analysis and
-Visualization</a> :</p>
+<p>From Michael Friendly <a href="/pdf/DataAnalytics/Michael-Friendly-DDAS.pdf">Discrete Data Analysis and Visualization</a> :</p>
 <blockquote>
 <p>In many circumstances, data is recorded on each individual or
 experimental unit. Data in this form is called case data, or data in
@@ -529,6 +529,11 @@ Male
 </table>
 </div>
 </div>
+<div id="creating-contingency-tables" class="section level2">
+<h2>Creating Contingency Tables</h2>
+<p>Most plots for Categorical Data ( as we shall see ) require that the data be converted into a <em>Contigency Table</em>; even Statistical tests for Proportions ( the $ ^2 $ test ) need Contingency Tables. The <em>Frequency Table</em> we encountered earlier is very close to being a full-fledged Contingency Table.</p>
+<p>In this section we understand how to make Contingency Tables from each of the three forms.</p>
+</div>
 <div id="what-sort-of-plots-can-we-make-for-categorical-data" class="section level2">
 <h2>What sort of Plots can we make for Categorical Data?</h2>
 <p>We have already seen bar plots, which allow us to plot counts of categorical data. However, if there are a large number* of categorical variables or if thecategorical variables have many levels, the bar plot is not adequate.</p>
@@ -718,10 +723,16 @@ What causes them to stop using still-needed services?</p>
 </div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
+<p>How are these bar plots different from histograms?
+Why don’t “regular” plots simply work for Categorical data?
+Discuss!</p>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>
 <ol style="list-style-type: decimal">
-<li><a href="https://cran.r-project.org/web/packages/vcd/vignettes/strucplot.pdf" class="uri">https://cran.r-project.org/web/packages/vcd/vignettes/strucplot.pdf</a></li>
+<li><p>Using the <code>strcplot</code> command from <code>vcd</code>, <a href="https://cran.r-project.org/web/packages/vcd/vignettes/strucplot.pdf" class="uri">https://cran.r-project.org/web/packages/vcd/vignettes/strucplot.pdf</a></p></li>
+<li><p>Creating Frequency Tables with <code>vcd</code>, <a href="https://cran.r-project.org/web/packages/vcdExtra/vignettes/A_creating.html" class="uri">https://cran.r-project.org/web/packages/vcdExtra/vignettes/A_creating.html</a></p></li>
+<li><p>Creating mosaic plots with <code>vcd</code>, <a href="https://cran.r-project.org/web/packages/vcdExtra/vignettes/D_mosaics.html" class="uri">https://cran.r-project.org/web/packages/vcdExtra/vignettes/D_mosaics.html</a></p></li>
+<li></li>
 </ol>
 </div>

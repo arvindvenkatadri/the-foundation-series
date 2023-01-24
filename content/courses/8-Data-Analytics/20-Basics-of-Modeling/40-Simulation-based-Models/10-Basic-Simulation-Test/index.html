@@ -2,7 +2,7 @@
 title: "\U0000221D Simulation Tests"
 author: "Arvind Venkatadri"
 subtitle: "What is meant by a Simulation Test"
-date: "2023-01-20"
+date: "2023-01-24"
 view: 2
 type: page
 weight: 10
@@ -19,23 +19,10 @@ tags:
 - Distributions
 - Generating Parallel Worlds
 
-image: 
-  caption: ""
+image:
+  caption: Photo by rawpixel on Unsplash
   focal_point: Smart
 external_link: ""
-links:
-- icon: book
-  icon_pack: fa
-  name: notes
-  url: ""
-- icon: file-powerpoint
-  icon_pack: fa
-  name: slides
-  url: ""
-- icon: registered
-  icon_pack: fa
-  name: installation
-  url: ""
 slides: ""
 url_code: ""
 url_pdf: ""
@@ -43,7 +30,6 @@ url_slides: ""
 url_video: ""
 ---
 
-<script src="{{< blogdown/postref >}}index_files/font-awesome/js/script.js"></script>
 
 
 <p><img src="https://static.toiimg.com/thumb/msid-87538433,imgsize-178704,width-400,resizemode-4/87538433.jpg" /><!-- --></p>
@@ -52,7 +38,7 @@ url_video: ""
 <blockquote>
 <p>There is a famous story about a lady who claimed that tea with milk tasted different depending on whether the milk was added to the tea or the tea added to the milk. The story is famous because of the setting in which she made this claim. She was attending a party in Cambridge, England, in the 1920s. Also in attendance were a number of university dons and their wives. The scientists in attendance scoffed at the woman and her claim. What, after all, could be the difference?</p>
 <p>All the scientists but one, that is. Rather than simply dismiss the woman’s claim, he proposed that they decide how one should test the claim. The tenor of the conversation changed at this suggestion, and the scientists began to discuss how the claim should be tested. Within a few minutes cups of tea with milk had been prepared and presented to the woman for tasting.</p>
-<p>At this point, you may be wondering who the innovative scientist was and what the results of the experiment were. The scientist was R. A. Fisher, who first described this situation as a pedagogical example in his 1925 book on statistical methodology[^1]. Fisher developed statistical methods that are among the most important and widely used methods to this day, and most of his applications were biological.</p>
+<p>At this point, you may be wondering who the innovative scientist was and what the results of the experiment were. The scientist was R. A. Fisher, who first described this situation as a pedagogical example in his 1925 book on statistical methodology<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a>. Fisher developed statistical methods that are among the most important and widely used methods to this day, and most of his applications were biological.</p>
 </blockquote>
 <div id="game" class="section level3">
 <h3>Game</h3>
@@ -72,7 +58,7 @@ url_video: ""
 </blockquote>
 <pre><code>## heads
 ##    0    1    2    3    4    5    6    7    8    9   10 
-##   16   86  448 1174 2080 2496 2005 1157  441   85   12</code></pre>
+##    9  106  463 1178 2024 2438 2080 1198  410   86    8</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 <p>So what do we conclude? It is possible that the lady could get 9 or 10 correct just by guessing, but it is not very likely (it only happened in about 3% of our simulations). So one of two things must be true:<br />
 • The lady got unusually "lucky”, or<br />
@@ -85,41 +71,28 @@ url_video: ""
 <p>We then <strong>assume</strong> the Lady is guessing <em>and</em> somehow <strong>by chance</strong> able to guess correctly. This would be our….<strong>NULL Hypothesis</strong>. This is our (conservative) <em>belief</em> about the <strong>Real World</strong>.</p>
 <p>We then <em>randomly generate</em> many <strong>Parallel Counterfactual Worlds</strong>, where we repeat the experiment many many times, each time calculating the <em>test statistic</em>, under the <em>assumption</em> of the NULL Hypothesis is TRUE.</p>
 <p>We see how often our <em>Parallel Worlds</em> can mimic or exceed <em>Real World</em> measurement of the the <em>test statistic</em> by comparison. If this is common (i.e. probability is high) we say we cannot reject the NULL Hypothesis (and the Lady is lucky). If the occurrence is rare, as in our case, we say we have reason to reject the NULL Hypothesis and reason to believe an underlying pattern (and Lady’s ability is beyond <strong>Question</strong> !)</p>
-<p>This is the essence of the <strong>Simulation Method</strong> in statistical modelling. Take one more look at the picture from Allen Downey’s blog, below:</p>
+<p>This is the essence of the <strong>Simulation Method</strong> in statistical modelling. Take one more look at the picture from Allen Downey’s blog<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, below:</p>
 <p><img src="images/One-Test.png" /></p>
-</div>
-<div id="datasets" class="section level2">
-<h2>Datasets</h2>
-</div>
-<div id="workflow-in-orange" class="section level2">
-<h2>Workflow in Orange</h2>
-<a onclick="fetch(&#39;data:text/x-markdown;base64,LS0tDQp0aXRsZTogInNpbXVsYXRpb24iDQphdXRob3I6ICJBcnZpbmQgVmVua2F0YWRyaSINCmRhdGU6ICdgciBTeXMuRGF0ZSgpYCcNCm91dHB1dDoNCiAgaHRtbF9kb2N1bWVudDoNCiAgICB0aGVtZTogZmxhdGx5DQogICAgdG9jOiBUUlVFDQogICAgdG9jX2Zsb2F0OiBUUlVFDQogICAgdG9jX2RlcHRoOiAyDQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogICAgbnVtYmVyX3NlY3Rpb25zOiBUUlVFDQogICAgY29kZV9mb2xkaW5nOiBoaWRlDQogICAgY29kZV9kb3dubG9hZDogVFJVRQ0KZWRpdG9yX29wdGlvbnM6IA0KICBtYXJrZG93bjogDQogICAgd3JhcDogNzINCi0tLQ0KDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkNCmxpYnJhcnkobW9zYWljKQ0KbGlicmFyeShtb3NhaWNEYXRhKQ0KYGBgDQoNCiMgSW50cm9kdWN0aW9uDQoNCkluIHRoaXMgbW9kdWxlIHdlIHdpbGwgdXNlIHNpbXVsYXRpb24gdG8gc29sdmUgc2V2ZXJhbCBwcm9ibGVtcyBpbiBCdXNpbmVzcyBEZWNpc2lvbiBNYWtpbmcuIA0KDQoNCiMjIENhc2UgU3R1ZHktMQ0KDQo=&#39;).then(res =&gt; res.blob()).then(blob =&gt; {&#10;      const downloadURL = window.URL.createObjectURL(blob);&#10;      const a = document.createElement(&#39;a&#39;);&#10;      document.body.appendChild(a);&#10;      a.href = downloadURL;&#10;      a.download = &#39;simulation.Rmd&#39;; a.click();&#10;      window.URL.revokeObjectURL(downloadURL);&#10;      document.body.removeChild(a);&#10;    });">
-<button class="btn btn-danger" output_extension=".ows"><i class="fa fa-save"></i> Download simulation Workflow for Orange</button>
-</a>
-</div>
-<div id="workflow-in-radiant" class="section level2">
-<h2>Workflow in Radiant</h2>
-<a onclick="fetch(&#39;data:text/x-markdown;base64,LS0tDQp0aXRsZTogInNpbXVsYXRpb24iDQphdXRob3I6ICJBcnZpbmQgVmVua2F0YWRyaSINCmRhdGU6ICdgciBTeXMuRGF0ZSgpYCcNCm91dHB1dDoNCiAgaHRtbF9kb2N1bWVudDoNCiAgICB0aGVtZTogZmxhdGx5DQogICAgdG9jOiBUUlVFDQogICAgdG9jX2Zsb2F0OiBUUlVFDQogICAgdG9jX2RlcHRoOiAyDQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogICAgbnVtYmVyX3NlY3Rpb25zOiBUUlVFDQogICAgY29kZV9mb2xkaW5nOiBoaWRlDQogICAgY29kZV9kb3dubG9hZDogVFJVRQ0KZWRpdG9yX29wdGlvbnM6IA0KICBtYXJrZG93bjogDQogICAgd3JhcDogNzINCi0tLQ0KDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkNCmxpYnJhcnkobW9zYWljKQ0KbGlicmFyeShtb3NhaWNEYXRhKQ0KYGBgDQoNCiMgSW50cm9kdWN0aW9uDQoNCkluIHRoaXMgbW9kdWxlIHdlIHdpbGwgdXNlIHNpbXVsYXRpb24gdG8gc29sdmUgc2V2ZXJhbCBwcm9ibGVtcyBpbiBCdXNpbmVzcyBEZWNpc2lvbiBNYWtpbmcuIA0KDQoNCiMjIENhc2UgU3R1ZHktMQ0KDQo=&#39;).then(res =&gt; res.blob()).then(blob =&gt; {&#10;      const downloadURL = window.URL.createObjectURL(blob);&#10;      const a = document.createElement(&#39;a&#39;);&#10;      document.body.appendChild(a);&#10;      a.href = downloadURL;&#10;      a.download = &#39;simulation.Rmd&#39;; a.click();&#10;      window.URL.revokeObjectURL(downloadURL);&#10;      document.body.removeChild(a);&#10;    });">
-<button class="btn btn-danger" output_extension=".Rmd"><i class="fa fa-save"></i> Download simulation Workflow for Radiant</button>
-</a>
-</div>
-<div id="workflow-in-r" class="section level2">
-<h2>Workflow in R</h2>
-<p>In R, the easiest way to perform Simulation Tests is to use a package called <code>mosaic</code>. See <a href="http://www.mosaic-web.org/">Project MOSAIC</a>.</p>
-<p>Please download the embedded file linked below and upload into RStudio.Cloud.</p>
-<a onclick="fetch(&#39;data:text/x-markdown;base64,LS0tDQp0aXRsZTogInNpbXVsYXRpb24iDQphdXRob3I6ICJBcnZpbmQgVmVua2F0YWRyaSINCmRhdGU6ICdgciBTeXMuRGF0ZSgpYCcNCm91dHB1dDoNCiAgaHRtbF9kb2N1bWVudDoNCiAgICB0aGVtZTogZmxhdGx5DQogICAgdG9jOiBUUlVFDQogICAgdG9jX2Zsb2F0OiBUUlVFDQogICAgdG9jX2RlcHRoOiAyDQogICAgZGZfcHJpbnQ6IHBhZ2VkDQogICAgbnVtYmVyX3NlY3Rpb25zOiBUUlVFDQogICAgY29kZV9mb2xkaW5nOiBoaWRlDQogICAgY29kZV9kb3dubG9hZDogVFJVRQ0KZWRpdG9yX29wdGlvbnM6IA0KICBtYXJrZG93bjogDQogICAgd3JhcDogNzINCi0tLQ0KDQpgYGB7ciBzZXR1cCwgaW5jbHVkZT1GQUxTRX0NCmtuaXRyOjpvcHRzX2NodW5rJHNldChlY2hvID0gVFJVRSkNCmxpYnJhcnkobW9zYWljKQ0KbGlicmFyeShtb3NhaWNEYXRhKQ0KYGBgDQoNCiMgSW50cm9kdWN0aW9uDQoNCkluIHRoaXMgbW9kdWxlIHdlIHdpbGwgdXNlIHNpbXVsYXRpb24gdG8gc29sdmUgc2V2ZXJhbCBwcm9ibGVtcyBpbiBCdXNpbmVzcyBEZWNpc2lvbiBNYWtpbmcuIA0KDQoNCiMjIENhc2UgU3R1ZHktMQ0KDQo=&#39;).then(res =&gt; res.blob()).then(blob =&gt; {&#10;      const downloadURL = window.URL.createObjectURL(blob);&#10;      const a = document.createElement(&#39;a&#39;);&#10;      document.body.appendChild(a);&#10;      a.href = downloadURL;&#10;      a.download = &#39;simulation.Rmd&#39;; a.click();&#10;      window.URL.revokeObjectURL(downloadURL);&#10;      document.body.removeChild(a);&#10;    });">
-<button class="btn btn-danger" output_extension=".Rmd"><i class="fa fa-save"></i> Download simulation code in R</button>
-</a>
 </div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>
-<p>[^1]. R.A. Fisher. <em>Statistical Methods for Research Workers</em>. Oliver &amp; Boyd, 1925</p>
 <ol style="list-style-type: decimal">
 <li><p>Laura Chihara, Tim Hesterberg, <em>Mathematical Statistics with Resampling and R</em>, Wiley, 2019.</p></li>
-<li><p><a href="https://timesofindia.indiatimes.com/sports/cricket/icc-mens-t20-world-cup/in-numbers-virat-kohli-and-his-strange-luck-with-the-coin-toss/articleshow/87538443.cms" class="uri">https://timesofindia.indiatimes.com/sports/cricket/icc-mens-t20-world-cup/in-numbers-virat-kohli-and-his-strange-luck-with-the-coin-toss/articleshow/87538443.cms</a></p></li>
+<li><p>Daniel Kaplan, <em>Statistical Modelling</em>, Available free on the web. <a href="https://dtkaplan.github.io/SM2-bookdown/" class="uri">https://dtkaplan.github.io/SM2-bookdown/</a></p></li>
+<li><p>Russell A. Poldrack, <em>Statistical Thinking for the 21st Century</em>. Available free on the web. <a href="https://statsthinking21.github.io/statsthinking21-core-site/" class="uri">https://statsthinking21.github.io/statsthinking21-core-site/</a></p></li>
+<li><p>Mine Çetinkaya-Rundel &amp; Johanna Hardin, <em>An Introduction to Modern Statistics</em>, Available free on the web. <a href="https://www.openintro.org/book/ims/" class="uri">https://www.openintro.org/book/ims/</a>.</p></li>
+<li><p><em>Start Teaching Stats with R</em>, by the Mosaic Project. All about the <code>mosaic</code> package in R. Available free on the web. <a href="https://github.com/ProjectMOSAIC/LittleBooks/raw/master/Starting/MOSAIC-StartTeaching.pdf" class="uri">https://github.com/ProjectMOSAIC/LittleBooks/raw/master/Starting/MOSAIC-StartTeaching.pdf</a></p></li>
 <li><p>D. Salsburg. <em>The Lady Tasting Tea: How statistics revolutionized science in the twentieth century.</em> W.H. Freeman, New York, 2001</p></li>
+<li><p><a href="https://timesofindia.indiatimes.com/sports/cricket/icc-mens-t20-world-cup/in-numbers-virat-kohli-and-his-strange-luck-with-the-coin-toss/articleshow/87538443.cms" class="uri">https://timesofindia.indiatimes.com/sports/cricket/icc-mens-t20-world-cup/in-numbers-virat-kohli-and-his-strange-luck-with-the-coin-toss/articleshow/87538443.cms</a></p></li>
+</ol>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>R.A. Fisher. <em>Statistical Methods for Research Workers</em>. Oliver &amp; Boyd, 1925<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Allen Downey, <em>There is still only one test</em>, <a href="https://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html" class="uri">https://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html</a><a href="#fnref2" class="footnote-back">↩︎</a></p></li>
 </ol>
 </div>

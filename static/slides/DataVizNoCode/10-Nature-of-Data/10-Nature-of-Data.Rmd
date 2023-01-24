@@ -426,7 +426,7 @@ ggplot(Night, aes(x = factor(Date), y = Deaths, fill = Cause)) +
     # set scale so area ~ Deaths
     scale_y_sqrt() +
     # A coxcomb plot = bar chart + polar coordinates
-    coord_polar(start = 3 * pi / 2) +
+    coord_polar(start = 3 * pi / 2) + 
     ggtitle("Causes of Mortality in the Army in the East") +
     xlab("") + facet_grid(~ Regime) + theme_minimal() + theme(axis.text = element_text(size = 3), 
       axis.title = element_text(size = 8),                          legend.text = element_text(size = 6))
@@ -629,7 +629,7 @@ p1 + p2
 ### - Hypotheses leads us to define *Questions*
 ### - Questions lead to *Variables*
 ### - Questions *with* Variables lead to *Graphs*
-### - With Graphs, we can write *Stories* ( Next Time!!)
+### - With Graphs, we can write *Stories* that can create Business!
 
 ---
 class: hidden

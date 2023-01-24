@@ -5,6 +5,7 @@ lastmod: "`r Sys.Date()`"
 summary: ""
 weight: 30
 type: book
+draft: true
 image:
   caption: ""
   focal_point: "smart"
@@ -199,7 +200,8 @@ we wish to estimate will be of course, either a $\beta_0$ or a $\beta_1$
 2.  **I**: Errors are **independent** (across observations)
 
 3.  **N**: y is $\color{red}{normally}$ distributed at each "level" of
-    x.
+
+    x\.
 
 4.  **E**: equal variance at all levels of x. No *heteroscedasticity*.
 

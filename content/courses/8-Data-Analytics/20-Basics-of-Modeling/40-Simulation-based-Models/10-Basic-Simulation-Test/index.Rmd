@@ -19,23 +19,10 @@ tags:
 - Distributions
 - Generating Parallel Worlds
 
-image: 
-  caption: ""
+image:
+  caption: Photo by rawpixel on Unsplash
   focal_point: Smart
 external_link: ""
-links:
-- icon: book
-  icon_pack: fa
-  name: notes
-  url: ""
-- icon: file-powerpoint
-  icon_pack: fa
-  name: slides
-  url: ""
-- icon: registered
-  icon_pack: fa
-  name: installation
-  url: ""
 slides: ""
 url_code: ""
 url_pdf: ""
@@ -47,7 +34,7 @@ url_video: ""
 knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
 library(mosaic)
 library(mosaicData)
-library(downloadthis)
+
 ```
 
 ```{r, echo=FALSE}
@@ -60,7 +47,7 @@ knitr::include_graphics("https://static.toiimg.com/thumb/msid-87538433,imgsize-1
 >
 > All the scientists but one, that is. Rather than simply dismiss the woman's claim, he proposed that they decide how one should test the claim. The tenor of the conversation changed at this suggestion, and the scientists began to discuss how the claim should be tested. Within a few minutes cups of tea with milk had been prepared and presented to the woman for tasting.
 >
-> At this point, you may be wondering who the innovative scientist was and what the results of the experiment were. The scientist was R. A. Fisher, who first described this situation as a pedagogical example in his 1925 book on statistical methodology[^1]. Fisher developed statistical methods that are among the most important and widely used methods to this day, and most of his applications were biological.
+> At this point, you may be wondering who the innovative scientist was and what the results of the experiment were. The scientist was R. A. Fisher, who first described this situation as a pedagogical example in his 1925 book on statistical methodology^[R.A. Fisher. *Statistical Methods for Research Workers*. Oliver & Boyd, 1925]. Fisher developed statistical methods that are among the most important and widely used methods to this day, and most of his applications were biological.
 
 ### Game
 
@@ -85,9 +72,11 @@ Back to the Lady who drank Tea !!
 > So here's the plan. We'll flip 10 coins. We'll call the heads correct guesses and the tails incorrect guesses.
 
 ```{r,echo = FALSE}
+
 random_ladies <- do(10000) * rflip(10)
 tally(~ heads, data = random_ladies)
 histogram(x = ~ heads, data = random_ladies,width = 1, type = "percent")
+
 ```
 
 So what do we conclude? It is possible that the lady could get 9 or 10 correct just by guessing, but it is not very likely (it only happened in about 3% of our simulations). So one of two things must be true:  
@@ -104,72 +93,35 @@ We then *randomly generate* many **Parallel Counterfactual Worlds**, where we re
 
 We see how often our *Parallel Worlds* can mimic or exceed *Real World* measurement of the the *test statistic* by comparison. If this is common (i.e. probability is high) we say we cannot reject the NULL Hypothesis (and the Lady is lucky). If the occurrence is rare, as in our case, we say we have reason to reject the NULL Hypothesis and reason to believe an underlying pattern (and Lady's ability is beyond **Question** !)
 
-This is the essence of the **Simulation Method** in statistical modelling. Take one more look at the picture from Allen Downey's blog, below:
+This is the essence of the **Simulation Method** in statistical modelling. Take one more look at the picture from Allen Downey's blog^[Allen Downey, *There is still only one test*, <https://allendowney.blogspot.com/2016/06/there-is-still-only-one-test.html>], below:
 
 ![](images/One-Test.png)
-
-## Datasets
-
-## Workflow in Orange
-
-```{r,echo=FALSE}
-download_file(path = "files/simulation.Rmd",
-              output_name = "simulation",
-              output_extension = ".ows",
-              button_label = "Download simulation Workflow for Orange",
-              button_type = "danger",
-              has_icon = TRUE,
-              icon = "fa fa-save",
-              self_contained = FALSE)
-# banned %>% download_this(output_name = "banned",output_extension = ".csv", button_label = "Banned Books data", button_type = "default", icon = "fa fa-save")
-```
-
-
-
-## Workflow in Radiant
-
-
-```{r,echo=FALSE}
-download_file(path = "files/simulation.Rmd",
-              output_name = "simulation",
-              output_extension = ".Rmd",
-              button_label = "Download simulation Workflow for Radiant",
-              button_type = "danger",
-              has_icon = TRUE,
-              icon = "fa fa-save",
-              self_contained = FALSE)
-# banned %>% download_this(output_name = "banned",output_extension = ".csv", button_label = "Banned Books data", button_type = "default", icon = "fa fa-save")
-```
-
-## Workflow in R
-
-In R, the easiest way to perform Simulation Tests is to use a package called `mosaic`. See [Project MOSAIC](http://www.mosaic-web.org/).
-
-Please download the embedded file linked below and upload into RStudio.Cloud. 
-
-```{r,echo=FALSE}
-download_file(path = "files/simulation.Rmd",
-              output_name = "simulation",
-              output_extension = ".Rmd",
-              button_label = "Download simulation code in R",
-              button_type = "danger",
-              has_icon = TRUE,
-              icon = "fa fa-save",
-              self_contained = FALSE)
-# banned %>% download_this(output_name = "banned",output_extension = ".csv", button_label = "Banned Books data", button_type = "default", icon = "fa fa-save")
-```
-
 
 
 ## Conclusion
 
+
+
+
+
 ## References
 
-[^1]. R.A. Fisher. *Statistical Methods for Research Workers*. Oliver & Boyd, 1925
 
 1. Laura Chihara, Tim Hesterberg, *Mathematical Statistics with Resampling and R*, Wiley, 2019. 
+
+1. Daniel Kaplan, *Statistical Modelling*, Available free on the web. <https://dtkaplan.github.io/SM2-bookdown/>
+
+
+1. Russell A. Poldrack, *Statistical Thinking for the 21st Century*. Available free on the web. <https://statsthinking21.github.io/statsthinking21-core-site/> 
+
+
+1. Mine Çetinkaya-Rundel & Johanna Hardin, *An Introduction to Modern Statistics*, Available free on the web. <https://www.openintro.org/book/ims/>.
+
+
+1. *Start Teaching Stats with R*, by the Mosaic Project. All about the `mosaic` package in R. Available free on the web. <https://github.com/ProjectMOSAIC/LittleBooks/raw/master/Starting/MOSAIC-StartTeaching.pdf> 
+
+1. D. Salsburg. *The Lady Tasting Tea: How statistics revolutionized science in the twentieth century.* W.H. Freeman, New York, 2001
 
 
 1. <https://timesofindia.indiatimes.com/sports/cricket/icc-mens-t20-world-cup/in-numbers-virat-kohli-and-his-strange-luck-with-the-coin-toss/articleshow/87538443.cms>
 
-2.  D. Salsburg. *The Lady Tasting Tea: How statistics revolutionized science in the twentieth century.* W.H. Freeman, New York, 2001

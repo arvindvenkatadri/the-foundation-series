@@ -1,0 +1,218 @@
+---
+title: "\U0001F0CF Permutation Test for Two Proportions"
+author: "Arvind Venkatadri"
+date: 10/Nov/2022
+subtitle: "Test Proportions"
+lastmod: "2023-01-24"
+view: 2
+type: page
+weight: 30
+summary: ""
+output:
+  html_document:
+    toc_float: true
+    toc: true
+    code_folding: hide
+tags:
+- Permutation
+- Monte Carlo Simulation
+- Random Number Generation
+- Distributions
+- Generating Parallel Worlds
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+external_link: ""
+links:
+- icon: circle
+  icon_pack: fas
+  name: Orange Tutorial
+  url: "labs/Data-Analytics/proportions.ows"
+- icon: sun
+  icon_pack: fas
+  name: Radiant
+  url: "labs/Data-Analytics/proportions.rda"
+- icon: r-project
+  icon_pack: fab
+  name: R Tutorial
+  url: "labs/Data-Analytics/proportions.html"
+- icon: database
+  icon_pack: fas
+  name: Sample Datasets
+  url: "labs/Data-Analytics/data/sim-data.zip"
+slides: ""
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>We saw from the diagram created by Allen Downey that <em>there is only one
+test</em>! We will now use this philosophy to develop a technique that
+allows us to mechanize several <em>Statistical Models</em> in that way, with
+nearly identical code.</p>
+<p>We will use two packages in R, <code>mosaic</code> and the relatively new <code>infer</code>
+package, to develop our intuition for what are called <strong>permutation</strong>
+based statistical tests.</p>
+</div>
+<div id="testing-for-two-or-more-proportions" class="section level1">
+<h1>Testing for Two or More Proportions</h1>
+<p>Let us try a dataset with Qualitative / Categorical data. This is the
+General Social Survey GSS dataset, and we have people with different
+levels of <code>Education</code> stating their opinion on the <code>Death Penalty</code>. We
+want to know if these two Categorical variables have a correlation, i.e.
+can the opinions in favour of the <code>Death Penalty</code> be explained by the
+<code>Education</code> level?</p>
+<p>Since data is Categorical ( both variables ), we need to take <code>counts</code>
+in a table, and then implement a <code>chi-square test</code>. In the test, we will
+permute the <code>Education</code> variable to see if we can see how significant
+its <em>effect size</em> is.</p>
+<pre><code>## 
+## categorical variables:  
+##             name  class levels    n missing
+## 1         Region factor      7 2765       0
+## 2         Gender factor      2 2765       0
+## 3           Race factor      3 2765       0
+## 4      Education factor      5 2760       5
+## 5        Marital factor      5 2765       0
+## 6       Religion factor     13 2746      19
+## 7          Happy factor      3 1369    1396
+## 8         Income factor     24 1875     890
+## 9       PolParty factor      8 2729      36
+## 10      Politics factor      7 1331    1434
+## 11     Marijuana factor      2  851    1914
+## 12  DeathPenalty factor      2 1308    1457
+## 13        OwnGun factor      3  924    1841
+## 14        GunLaw factor      2  916    1849
+## 15 SpendMilitary factor      3 1324    1441
+## 16     SpendEduc factor      3 1343    1422
+## 17      SpendEnv factor      3 1322    1443
+## 18      SpendSci factor      3 1266    1499
+## 19        Pres00 factor      5 1749    1016
+## 20      Postlife factor      2 1211    1554
+##                                     distribution
+## 1  North Central (24.7%) ...                    
+## 2  Female (55.6%), Male (44.4%)                 
+## 3  White (79.1%), Black (14.8%) ...             
+## 4  HS (53.8%), Bachelors (16.1%) ...            
+## 5  Married (45.9%), Never Married (25.6%) ...   
+## 6  Protestant (53.2%), Catholic (24.5%) ...     
+## 7  Pretty happy (57.3%) ...                     
+## 8  40000-49999 (9.1%) ...                       
+## 9  Ind (19.3%), Not Str Dem (18.9%) ...         
+## 10 Moderate (39.2%), Conservative (15.8%) ...   
+## 11 Not legal (64%), Legal (36%)                 
+## 12 Favor (68.7%), Oppose (31.3%)                
+## 13 No (65.5%), Yes (33.5%) ...                  
+## 14 Favor (80.5%), Oppose (19.5%)                
+## 15 About right (46.5%) ...                      
+## 16 Too little (73.9%) ...                       
+## 17 Too little (60%) ...                         
+## 18 About right (49.7%) ...                      
+## 19 Bush (50.6%), Gore (44.7%) ...               
+## 20 Yes (80.5%), No (19.5%)                      
+## 
+## quantitative variables:  
+##   name   class min  Q1 median   Q3  max mean       sd    n missing
+## 1   ID integer   1 692   1383 2074 2765 1383 798.3311 2765       0</code></pre>
+<p>Note how <em>all</em> variables are Categorical !! <code>Education</code> has five <code>levels</code>:</p>
+<pre><code>##   Education    n
+## 1   Left HS  400
+## 2        HS 1485
+## 3    Jr Col  202
+## 4 Bachelors  443
+## 5  Graduate  230
+## 6      &lt;NA&gt;    5</code></pre>
+<pre><code>##   DeathPenalty    n
+## 1        Favor  899
+## 2       Oppose  409
+## 3         &lt;NA&gt; 1457</code></pre>
+<p>Let us drop NA entries in <code>Education</code> and <code>Death Penalty</code>. And set up a table for the chi-square test.</p>
+<pre><code>## [1] 1307    2</code></pre>
+<pre><code>## # A tibble: 10 × 5
+##    Education DeathPenalty count edu_count edu_prop
+##    &lt;fct&gt;     &lt;fct&gt;        &lt;int&gt;     &lt;int&gt;    &lt;dbl&gt;
+##  1 Bachelors Favor          135       206    0.655
+##  2 Bachelors Oppose          71       206    0.345
+##  3 Graduate  Favor           64       114    0.561
+##  4 Graduate  Oppose          50       114    0.439
+##  5 Jr Col    Favor           71        87    0.816
+##  6 Jr Col    Oppose          16        87    0.184
+##  7 HS        Favor          511       711    0.719
+##  8 HS        Oppose         200       711    0.281
+##  9 Left HS   Favor          117       189    0.619
+## 10 Left HS   Oppose          72       189    0.381</code></pre>
+<div id="sec-table-plots" class="section level2 tabset tabset-pills">
+<h2>Table Plots</h2>
+<p>We can plot a heatmap-like <code>mosaic chart</code> for this table.</p>
+<div id="using-ggplot" class="section level3 active">
+<h3>Using <code>ggplot</code></h3>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+<div id="using-ggmosaic" class="section level3">
+<h3>Using <code>ggmosaic</code></h3>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/mosaic-plot-1.png" width="672" style="display: block; margin: auto;" /></p>
+</div>
+</div>
+<div id="section" class="section level2 unnumbered">
+<h2 class="unnumbered"></h2>
+<div id="observed-statistic-the-x2-metric" class="section level3">
+<h3>Observed Statistic: the X^2 metric</h3>
+<p>When there are multiple proportions involved, the X^2 test is what is
+used.</p>
+<p>Let us now perform the base <code>chisq test</code>: We need a <code>table</code> and then the
+<code>chisq</code> test:</p>
+<pre><code>##             Education
+## DeathPenalty Left HS  HS Jr Col Bachelors Graduate
+##       Favor      117 511     71       135       64
+##       Oppose      72 200     16        71       50</code></pre>
+<pre><code>## X.squared 
+##  23.45093</code></pre>
+<pre><code>## 
+## 	Pearson&#39;s Chi-squared test
+## 
+## data:  tally(DeathPenalty ~ Education, data = gss2002)
+## X-squared = 23.451, df = 4, p-value = 0.0001029</code></pre>
+<p>What would our Hypotheses be?</p>
+<p>$$ H_0: Education Does Not affect Votes on Death Penalty\<br />
+H_a: Education affects Votes on Death Penalty<br />
+</p>
+<p>$$</p>
+<p>We should now repeat the test with permutations on <code>Education</code>:</p>
+<pre><code>##                X.squared df   p.value                     method alternative
+## X-squared...1  1.1268272  4 0.8899928 Pearson&#39;s Chi-squared test          NA
+## X-squared...2  6.1348278  4 0.1893030 Pearson&#39;s Chi-squared test          NA
+## X-squared...3 10.1774328  4 0.0375426 Pearson&#39;s Chi-squared test          NA
+## X-squared...4  3.9776503  4 0.4090390 Pearson&#39;s Chi-squared test          NA
+## X-squared...5  3.9712187  4 0.4099150 Pearson&#39;s Chi-squared test          NA
+## X-squared...6  0.3383714  4 0.9872044 Pearson&#39;s Chi-squared test          NA
+##                                                                   data .row
+## X-squared...1 tally(DeathPenalty ~ shuffle(Education), data = gss2002)    1
+## X-squared...2 tally(DeathPenalty ~ shuffle(Education), data = gss2002)    1
+## X-squared...3 tally(DeathPenalty ~ shuffle(Education), data = gss2002)    1
+## X-squared...4 tally(DeathPenalty ~ shuffle(Education), data = gss2002)    1
+## X-squared...5 tally(DeathPenalty ~ shuffle(Education), data = gss2002)    1
+## X-squared...6 tally(DeathPenalty ~ shuffle(Education), data = gss2002)    1
+##               .index
+## X-squared...1      1
+## X-squared...2      2
+## X-squared...3      3
+## X-squared...4      4
+## X-squared...5      5
+## X-squared...6      6</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre><code>##  prop_TRUE 
+## 0.00019998</code></pre>
+<p>The <code>p-value</code> is well below our threshold of $0.05%, so we would
+conclude that <code>Education</code> has a significant effect on <code>DeathPenalty</code>
+opinion!</p>
+</div>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+</div>
+</div>

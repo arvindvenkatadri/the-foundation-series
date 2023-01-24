@@ -12,8 +12,7 @@ type: book
 tags: 
   - Descriptive, Predictive, and Prescriptive Analytics
   - Regression, Classification, and Clustering
-  - No Code 
-  - FOSS 
+  - FOSS software
   - Business Workflow based on Data
 ---
 
@@ -74,7 +73,7 @@ The Course will culminate in a full **Business Analytics Workflow** that include
 
 <br>
 
-1.  **Radiant -- Business analytics using R and Shiny** <https://radiant-rstats.github.io/docs/index.html>
+2.  **Radiant -- Business analytics using R and Shiny** <https://radiant-rstats.github.io/docs/index.html>
 
 Radiant is a FOSS platform-independent browser-based interface for business analytics in R, developed at the University of San Diego. The application is based on the Shiny package and can be run using R, or in your browser with no installation required.
 
@@ -82,6 +81,6 @@ Radiant is a FOSS platform-independent browser-based interface for business anal
 
 <br>
 
-1.  **R** <https://cran.r-project.org/> and **RStudio** <https://posit.co/>
+3.  **R** <https://cran.r-project.org/> and **RStudio** <https://posit.co/>
 
 R is a freely available language and environment for statistical computing and graphics which provides a wide variety of statistical and graphical techniques: linear and nonlinear modelling, statistical tests, time series analysis, classification, clustering, etc. RStudio is an integrated development environment (IDE) for R and Python.

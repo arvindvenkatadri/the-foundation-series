@@ -36,6 +36,7 @@ tags:
 - Bar Plots (for Contingency Tables)
 - Mosaic Plots
 - Balloon Plots
+- Pie Charts
 - Correspondence Analysis
 output:
   html_document:
@@ -124,8 +125,7 @@ glimpse(Arthritis)
 
 ```
 
-From Michael Friendly [Discrete Data Analysis and
-Visualization](/pdf/DataAnalytics/Michael-Friendly-DDAS.pdf) :
+From Michael Friendly [Discrete Data Analysis and Visualization](/pdf/DataAnalytics/Michael-Friendly-DDAS.pdf) :
 
 > In many circumstances, data is recorded on each individual or
 > experimental unit. Data in this form is called case data, or data in
@@ -211,6 +211,13 @@ HairEyeColor %>%
   kable_classic_2(html_font = "Cambria", full_width = F)
 
 ```
+
+## Creating Contingency Tables
+
+Most plots for Categorical Data ( as we shall see ) require that the data be converted into a *Contigency Table*; even Statistical tests for Proportions ( the $ \chi^2 $ test ) need Contingency Tables. The *Frequency Table* we encountered earlier is very close to being a full-fledged Contingency Table. 
+
+In this section we understand how to make Contingency Tables from each of the three forms.
+
 
 ## What sort of Plots can we make for Categorical Data?
 
@@ -320,6 +327,20 @@ So there we are with Categorical data ! There are a few other plots with this ty
 
 ## Conclusion
 
+How are these bar plots different from histograms? 
+Why don't "regular" plots simply work for Categorical data?
+Discuss!
+
+
 ## References
 
-1.  <https://cran.r-project.org/web/packages/vcd/vignettes/strucplot.pdf>
+1. Using the `strcplot` command from `vcd`, <https://cran.r-project.org/web/packages/vcd/vignettes/strucplot.pdf>
+
+1. Creating Frequency Tables with `vcd`, <https://cran.r-project.org/web/packages/vcdExtra/vignettes/A_creating.html>
+
+1. Creating mosaic plots with `vcd`, <https://cran.r-project.org/web/packages/vcdExtra/vignettes/D_mosaics.html>
+
+1. 
+
+
+

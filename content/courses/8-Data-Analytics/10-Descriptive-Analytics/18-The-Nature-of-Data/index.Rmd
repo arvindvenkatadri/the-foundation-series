@@ -31,10 +31,10 @@ links:
   icon_pack: fa
   name: slides
   url: "slides/DataVizNoCode/10-Nature-of-Data/10-Nature-of-Data.html"
-- icon: registered
-  icon_pack: fa
-  name: installation
-  url: "slides/DataAnalytics/radiant-installation.html"
+# - icon: registered
+#   icon_pack: fa
+#   name: installation
+#   url: "slides/DataAnalytics/radiant-installation.html"
 slides: ""
 url_code: ""
 url_pdf: ""
