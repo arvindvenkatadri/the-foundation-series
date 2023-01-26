@@ -21,23 +21,99 @@ In this set of modules we will explore Data, understand what types of
 data variables there are, and the kinds of statistical tests and
 visualizations we can create with them.
 
+## The Big Ideas in Stats
+
+Steven Stigler is the author of the book "*The Seven Pillars of
+Statistical Wisdom*". The Big Ideas in Statistics from that book are:
+
+1.  Aggregation
+
+    > The first pillar I will call Aggregation, although it could just
+    > as well be given the nineteenth-century name, "The Combination of
+    > Observations," or even reduced to the simplest example, taking a
+    > mean. Those simple names are misleading, in that I refer to an
+    > idea that is now old but was truly revolutionary in an earlier
+    > day---and it still is so today, whenever it reaches into a new
+    > area of application. How is it revolutionary? By stipulating that,
+    > given a number of observations, you can actually gain information
+    > by **throwing information away**! In taking a simple arithmetic
+    > mean, we discard the individuality of the measures, subsuming them
+    > to one summary.
+
+2.  Information
+
+    > In the early eighteenth century it was discovered that in many
+    > situations the **amount of information** in a set of data was only
+    > proportional to the **square root** of the number n of
+    > observations, not the number n itself.
+
+3.  Likelihood
+
+    > By the name I give to the third pillar, Likelihood, I mean the
+    > calibration of inferences with the use of probability. The
+    > simplest form for this is in **significance testing** and the
+    > common **P-value**, but as the name "Likelihood" hints, there is a
+    > wealth of associated methods, many related to parametric families
+    > or to Fisherian or Bayesian inference.
+
+4.  Intercomparison
+
+    > It represents what was also once a radical idea and is now
+    > commonplace: that statistical comparisons do not need to be made
+    > with respect to an exterior standard but can often be made in
+    > terms **interior to the data** themselves. The most commonly
+    > encountered examples of intercomparisons are Student's **t-tests**
+    > and the tests of the **analysis of variance**.
+
+5.  Regression
+
+    > I call the fifth pillar Regression, after Galton's revelation of
+    > 1885, explained in terms of the bivariate normal distribution.
+    > Galton arrived at this by attempting to devise a mathematical
+    > framework for Charles Darwin's theory of natural selection,
+    > overcoming what appeared to Galton to be an intrinsic
+    > **contradiction in the theory**: selection required increasing
+    > diversity, in contradiction to the appearance of the population
+    > stability needed for the definition of species.
+
+6.  Design of Experiments and Observations
+
+    > The sixth pillar is Design, as in "Design of Experiments," but
+    > conceived of more broadly, as an ideal that can discipline our
+    > thinking in even observational settings.Starting in the late
+    > nineteenth century, a new understanding of the topic appeared, as
+    > Charles S. Peirce and then Fisher discovered the extraordinary
+    > role **randomization** could play in inference.
+
+7.  Residuals
+
+    > The most common appearances in Statistics are our model
+    > diagnostics (**plotting residuals**), but more important is the
+    > way we explore high-dimensional spaces by fitting and comparing
+    > **nested models**.
+
+In our work with Statistical Models, we will be working with all except
+Idea 6 above.
+
 ## What is a Statistical Model?
 
-> "Modeling" is a process of asking questions. "Statistical" refers in
-> part to data -- the statistical models you will construct will be
-> rooted in data. But it refers also to a distinctively modern idea:
-> that *you can measure what you don't know and that doing so
-> contributes to your understanding.*
->
-> The conclusions you reach from data depend on the specific questions
-> you ask.
->
-> The word "modeling" highlights that your goals, your beliefs, and your
-> current state of knowledge all influence your analysis of data.
->
-> Similarly, in statistical modeling, you examine your data to see
-> whether they are consistent with the hypotheses that frame your
-> understanding of the system under study.
+From Daniel Kaplan's book:
+
+"Modeling" is a process of **asking questions**. "Statistical" refers in
+part to data -- the statistical models you will construct will be rooted
+in data. But it refers also to a distinctively modern idea: that *you
+can measure what you don't know and that doing so contributes to your
+understanding.*
+
+The conclusions you reach from data depend on the **specific questions**
+you ask.
+
+The word "modeling" highlights that **your goals, your beliefs, and your
+current state of knowledge** all influence your analysis of data.
+
+Similarly, in statistical modeling, you examine your data to see whether
+they are consistent with the **hypotheses that frame your understanding
+of the system** under study.
 
 ## Uses and Types of Statistical Models
 
@@ -89,17 +165,18 @@ From Daniel T. Kaplan's book:
     variation is a major goal of statistics.
 
 2.  You can create empirical, mathematical descriptions not only of a
-    single trait or variable but also of the relationships **between** two
-    or more traits. (Empirical means based on measurements, data,
+    single trait or variable but also of the relationships **between**
+    two or more traits. (Empirical means based on measurements, data,
     observations.)
 
-3.  Models let you split variation into components: **"explained"** versus
-    **"unexplained."** How to measure the size of these components and how
-    to compare them to one another is a central aspect of statistical
-    methodology. Indeed, this provides a definition of statistics:
+3.  Models let you split variation into components: **"explained"**
+    versus **"unexplained."** How to measure the size of these
+    components and how to compare them to one another is a central
+    aspect of statistical methodology. Indeed, this provides a
+    definition of statistics:
 
     > Statistics is the explanation of variation in the context of what
-    remains unexplained.
+    > remains unexplained.
 
 4.  By collecting data in ways that require care but are quite feasible,
     you can estimate how reliable your descriptions are, e.g., whether
@@ -190,4 +267,3 @@ multiple explanatory variables will have multiple effect sizes.
 5.  Jonas Kristoffer Lindeløv, Common statistical tests are linear
     models (or: how to teach stats)
     <https://lindeloev.github.io/tests-as-linear/>
-

@@ -1,8 +1,8 @@
 ---
-title: "\U0001F9ED Statistical Models and Tests"
+title: "\U0001F9ED Classical Statistical Models and Tests"
 date: 14/Nov/2022
 lastmod: "`r Sys.Date()`"
-summary: ""
+summary: "Using the Linear Model Idea to motivate Classical Stats Tests"
 weight: 30
 type: book
 draft: true
@@ -24,76 +24,6 @@ editor_options:
 In this set of modules we will explore Sampling, Summary Statistics,
 Statistical Tests for data.
 
-## The Big Ideas in Stats
-
-Steven Stigler is the author of the book "*The Seven Pillars of
-Statistical Wisdom*". The Big Ideas in Statistics from that book are:
-
-1.  Aggregation
-
-    > The first pillar I will call Aggregation, although it could just
-    > as well be given the nineteenth-century name, "The Combination of
-    > Observations," or even reduced to the simplest example, taking a
-    > mean. Those simple names are misleading, in that I refer to an
-    > idea that is now old but was truly revolutionary in an earlier
-    > day---and it still is so today, whenever it reaches into a new
-    > area of application. How is it revolutionary? By stipulating that,
-    > given a number of observations, you can actually gain information
-    > by **throwing information away**! In taking a simple arithmetic
-    > mean, we discard the individuality of the measures, subsuming them
-    > to one summary.
-
-2.  Information
-
-    > In the early eighteenth century it was discovered that in many
-    > situations the **amount of information** in a set of data was only
-    > proportional to the **square root** of the number n of
-    > observations, not the number n itself.
-
-3.  Likelihood
-
-    > By the name I give to the third pillar, Likelihood, I mean the
-    > calibration of inferences with the use of probability. The
-    > simplest form for this is in **significance testing** and the
-    > common **P-value**, but as the name "Likelihood" hints, there is a
-    > wealth of associated methods, many related to parametric families
-    > or to Fisherian or Bayesian inference.
-
-4.  Intercomparison
-
-    > It represents what was also once a radical idea and is now
-    > commonplace: that statistical comparisons do not need to be made
-    > with respect to an exterior standard but can often be made in
-    > terms **interior to the data** themselves. The most commonly
-    > encountered examples of intercomparisons are Student's **t-tests**
-    > and the tests of the **analysis of variance**.
-
-5.  Regression
-
-    > I call the fifth pillar Regression, after Galton's revelation of
-    > 1885, explained in terms of the bivariate normal distribution.
-    > Galton arrived at this by attempting to devise a mathematical
-    > framework for Charles Darwin's theory of natural selection,
-    > overcoming what appeared to Galton to be an intrinsic
-    > **contradiction in the theory**: selection required increasing
-    > diversity, in contradiction to the appearance of the population
-    > stability needed for the definition of species.
-
-6.  Design of Experiments and Observations
-
-    > The sixth pillar is Design, as in "Design of Experiments," but
-    > conceived of more broadly, as an ideal that can discipline our
-    > thinking in even observational settings.Starting in the late
-    > nineteenth century, a new understanding of the topic appeared, as
-    > Charles S. Peirce and then Fisher discovered the extraordinary
-    > role **randomization** could play in inference.
-
-7.  Residuals
-
-    > The most common appearances in Statistics are our model
-    > diagnostics (**plotting residuals**), but more important is the
-    > way we explore high-dimensional spaces by fitting and comparing
-    > **nested models**.
 
 ## Pedagogical Notes
 

@@ -3,7 +3,7 @@ title: "\U0001F0CF Permutation Test for Two Means"
 author: "Arvind Venkatadri"
 date: 10/Nov/2022
 subtitle: ""
-lastmod: "2023-01-24"
+lastmod: "2023-01-26"
 view: 2
 type: page
 weight: 20
@@ -116,7 +116,7 @@ give an effect as large as that observed in the data, in the absence of any real
 <code>sample()</code>. When used without additional arguments, this will permute
 its first argument.</p>
 <pre class="r"><code>shuffle(1:10)</code></pre>
-<pre><code>##  [1]  2  9  8  6  7  1  5  3 10  4</code></pre>
+<pre><code>##  [1]  8  9  3  2  4  1  6  7  5 10</code></pre>
 <p>Applying shuffle() to an <em>explanatory variable</em> in a model allows us to
 test the null hypothesis that the explanatory variable has, in fact, no
 explanatory power. This idea can be used to test</p>
@@ -166,15 +166,15 @@ H_0: _M = _F\</p>
 $$</p>
 <p>Note that we have a <strong>two-sided</strong> test: we want to check for differences in mean order value, <em>either way</em>. So we perform a Permutation Test to check: we create a <strong>null distribution</strong> of the differences in mean by a <code>shuffle</code> operation on <code>gender</code>:</p>
 <pre><code>##     diffmean
-## 1 -2.2666667
-## 2  0.2666667
-## 3 -1.4666667
-## 4 -1.2000000
-## 5  1.8666667
-## 6  0.6666667</code></pre>
+## 1  0.9333333
+## 2  1.8666667
+## 3 -2.2666667
+## 4  2.0000000
+## 5  2.8000000
+## 6 -2.8000000</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-6-2.png" width="672" style="display: block; margin: auto;" /></p>
 <pre><code>##   prop_TRUE 
-## 0.002997003</code></pre>
+## 0.001998002</code></pre>
 <p>The <span class="math inline">\(\color{red}{red\ line}\)</span> shows the actual measured mean difference
 in Hot Wings consumption. The probability that our Permutation
 distribution is able to equal or exceed that number is <span class="math inline">\(0.001998002\)</span> and
@@ -237,15 +237,15 @@ per Swimmer basis. There are 12 swimmers and therefore 12 paired records.</p>
 <p>$$</p>
 <pre><code>##  [1]  1  1  1  1  1  1 -1 -1 -1 -1 -1 -1</code></pre>
 <pre><code>##         mean
-## 1  15.283333
-## 2 -12.275000
-## 3  17.516667
-## 4  -4.216667
-## 5  -7.700000
-## 6   1.250000</code></pre>
+## 1  -9.583333
+## 2 -17.816667
+## 3  -1.791667
+## 4 -12.883333
+## 5  17.191667
+## 6   8.050000</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-9-1.png" width="672" style="display: block; margin: auto;" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-9-2.png" width="672" style="display: block; margin: auto;" /></p>
 <pre><code>## prop_TRUE 
-## 0.1274487</code></pre>
+## 0.1294487</code></pre>
 <p>Hmm…so by generating 100000 shufflings of score differences, with polarities, it does appear that we can not only obtain the current observed difference but even surpass it frequently. So it does seem that there is no difference in means between SemiFinal and Final swimming scores.</p>
 </div>
 <div id="walmart-vs-target" class="section level3">
@@ -307,13 +307,13 @@ us check the mean difference in prices:</p>
 the two store names:</p>
 <pre><code>##  [1]  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
 ## [26] -1 -1 -1 -1 -1</code></pre>
-<pre><code>##           mean
-## 1 -0.178000000
-## 2  0.130666667
-## 3 -0.074000000
-## 4  0.120000000
-## 5  0.138666667
-## 6  0.009333333</code></pre>
+<pre><code>##          mean
+## 1  0.05600000
+## 2  0.19133333
+## 3 -0.10600000
+## 4  0.11133333
+## 5 -0.00200000
+## 6 -0.01533333</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-13-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre><code>## [1] 0</code></pre>
 <p>Does not seem to be any significant difference in prices…</p>
@@ -380,15 +380,15 @@ the two store names:</p>
 ## 29    2.18    24       oz
 ## 30    1.97    32       oz</code></pre>
 <pre><code>## [1] -0.1558621</code></pre>
-<pre><code>##           mean
-## 1  0.026206897
-## 2  0.002068966
-## 3  0.040689655
-## 4 -0.013793103
-## 5  0.057931034
-## 6  0.169655172</code></pre>
+<pre><code>##          mean
+## 1 -0.04551724
+## 2 -0.07103448
+## 3  0.10344828
+## 4  0.10137931
+## 5  0.02689655
+## 6 -0.10344828</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-14-1.png" width="672" style="display: block; margin: auto;" /></p>
-<pre><code>## [1] 0.01569</code></pre>
+<pre><code>## [1] 0.01605</code></pre>
 </div>
 </div>
 <div id="conclusion" class="section level2">
