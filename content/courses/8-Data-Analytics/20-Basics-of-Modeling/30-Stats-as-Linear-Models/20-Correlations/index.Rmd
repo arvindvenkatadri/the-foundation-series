@@ -3,6 +3,7 @@ title: "\U0001F350 Stat Tests for Correlations"
 author: "Arvind Venkatadri"
 date: Nov 22, 2022
 lastmod: "`r Sys.Date()`"
+weight: 20
 output:
   html_document:
     toc_float: yes
@@ -12,19 +13,34 @@ output:
     code_folding: show
     code_download: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
-    latex_engine: xelatex
+df_print: paged
+links:
+- icon: circle
+  icon_pack: fas
+  name: Orange Tutorial
+  url: "labs/Data-Analytics/correlations.ows"
+- icon: sun
+  icon_pack: fas
+  name: Radiant
+  url: "labs/Data-Analytics/correlations.rda"
+- icon: r-project
+  icon_pack: fab
+  name: R Tutorial
+  url: "labs/Data-Analytics/correlations.html"
+- icon: database
+  icon_pack: fas
+  name: Sample Datasets
+  url: "labs/Data-Analytics/data/qdd-data.zip"
 keywords: Statistics ; Tests; p-value; Feynman Technique
 abstract: This module is intended to assist with making statistically significant insights that drive business decisions. This document deals with the basics of stats. The method followed is that of Jonas Lindoloev, wherein every stat test is treated as a linear model `y = mx + c`.
-editor_options: 
+editor_options:
   chunk_output_type: inline
-  markdown: 
+  markdown:
     wrap: 72
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE,warning = FALSE, message = FALSE, fig.align = "centre", scipen = 1, digits = 3, fig.width = 7, fig.height = 5)
+knitr::opts_chunk$set(echo = TRUE,warning = FALSE, message = FALSE, fig.align = "center", scipen = 1, digits = 3, fig.width = 7, fig.height = 5)
 # CRAN Packages
 library(tidyverse)
 library(broom)
@@ -46,20 +62,16 @@ library(easystats)
 
 ```
 
-## The Linear Model
 
-The premise here is that **many common statistical tests are special cases of the linear model**. A **linear model** estimates the relationship between dependent variable or "response" variable ($y$) and an explanatory variable or "predictor" ($x$). It is assumed that the relationship is **linear**. $\beta_0$ is the *intercept* and $\beta_1$ is the slope of the linear fit, that **predicts** the value of y based the value of x. 
+# Tests for Correlation
 
-$$
-y = \beta_0 + \beta_1 *x
-$$ 
+Correlation **r** is a measure of *strength* and *direction* of *linear association* between two variables. **r** is between $[-1,+1]$, with $0$ implying no association/correlation.
 
-
+From this definition, the *linear model* lends itself in a straightforward way as a model to interpret *correlation*. Intuitively, the slope of the linear model could be related to the correlation between y and x.
 
 
 ## The Correlation Test
 
-TBD: Some introductory text here on Correlation itself)
 
 One of the basic Questions we would have of our data is:
 Does some variable depend upon another in some way?
@@ -70,35 +82,32 @@ A **Correlation Test** is designed to answer exactly this question.
 Let us now see how a Correlation Test can be re-formulated as
 a Linear Model + Hypothesis Test.
 
-### Some Toy Data
 
-Most examples in this exposition are based on three "imaginary" samples,
-$x, y1, y2$. Each is normally distributed and made up of 50 observations. The means and the sds are, respectively:
+Now we look at the numbers, using some toy data first and then a real dataset.
 
 
-```{r data_genr}
+```{r data_genr, echo=FALSE}
 rnorm_fixed  <- function(N, mu = 0, sd = 1) {
   scale(rnorm(N))* sd + mu
 }
-params <- tibble(mu = c(0, 0.3, 0.5), sd = c(1,2,1.5))
-params 
 ```
 
-```{r toy_data}
-set.seed(40) # for replication
+```{r toy_data, echo=FALSE}
+#set.seed(123456) # for replication
+n = 500
 
 # Data as vectors ( for t.tests etc)
-x <- rnorm_fixed(50, mu = 0.0, sd = 1) #explanatory
-y1 <- rnorm_fixed(50, mu = 0.3, sd = 2) # dependent #1
-y2 <- rnorm_fixed(50, mu = 0.5, sd = 1.5) # dependent #2
+x <- rnorm_fixed(n, mu = 0.0, sd = 1) #explanatory
+y <- rnorm_fixed(n, mu = 0.3, sd = 2) # dependent #1
+y2 <- rnorm_fixed(n, mu = 0.5, sd = 1.5) # dependent #2
 
 # Make a tibble with all variables
-mydata_wide <- tibble(x = x, y1 = y1, y2 = y2)
+mydata_wide <- tibble(x = x, y = y, y2 = y2)
 
 # Long form data
 mydata_long <- 
   mydata_wide %>%
-  pivot_longer(., cols = c(x,y1,y2), 
+  pivot_longer(., cols = c(x,y,y2), 
                names_to = "group", 
                values_to = "value")
 
@@ -106,42 +115,16 @@ mydata_long <-
 mydata_long_y <- 
   mydata_wide %>% 
   select(-x) %>% 
-  pivot_longer(., cols = c(y1,y2), 
+  pivot_longer(., cols = c(y,y2), 
                names_to = "group", 
                values_to = "value")
+mydata_wide
+mydata_long
+mydata_long_y
 ```
 
-Let us look at our toy data in three ways:
+## Pearson Correlation {.tabset .tabset-pills}
 
-1. All three variables:
-
-```{r} 
-mydata_wide 
-```
-
-2. Variables stacked and labelled
-(Note: `group` is now a Qual variable !!)
-
-```{r}
-mydata_long 
-```
-
-3. Same as 2, but only for the dependent `y` variables:
-
-```{r}
-mydata_long_y 
-```
-
-
-# Tests for Correlation
-
-Correlation **r** is a measure of *strength* and *direction* of *linear association* between two variables. **r** is between $[-1,+1]$, with $0$ implying no association/correlation.
-
-From this definition, the *linear model* lends itself in a straightforward way as a model to interpret *correlation*. Intuitively, the slope of the linear model could be related to the correlation between y and x.
-
-Now we look at the numbers.
-
-## Pearson Correlation
 
 ### Model
 
@@ -157,20 +140,52 @@ H_a: Alternate\ Hypothesis\ => \beta_1 \ne 0\\
 $$
 
 
+
+### Code
+
 ```{r Pearson_Correlation}
-# Pearson (built-in test)
-cor <- cor.test(y1,x,method = "pearson") %>% 
-  broom::tidy() %>% mutate(term = "Pearson Correlation r") %>% select(term, estimate, p.value) 
-cor 
+#Pearson (0built-in test)
+cor <- cor.test(y,x,method = "pearson") %>% 
+  broom::tidy() %>% select(estimate, p.value)
 
+#Linear Model
+lin <- lm(y ~ 1 + x, data = mydata_wide) %>% 
+  broom::tidy() %>% select(estimate, p.value)
 
+# Scaled linear model
+lin_scl <- lm(scale(y) ~ 1 + scale(x), data = mydata_wide) %>% 
+  broom::tidy() %>% select(estimate, p.value)
+
+print(cor)
+print(lin)
+print(lin_scl)
+rbind(cor, lin, lin_scl) %>% print()
 ```
+
+Notes:\
+1. The *p-value* for Pearson Correlation and for the *slope* in the
+linear model is the same ( 0.1053 ). Which means we cannot reject the
+NULL hypothesis of "no relationship".
+
+2.  Here is the relationship between the slope and correlation:
+
+$$
+Slope\ \beta_1 = \frac{sd_y}{sd_x} * r
+$$
+
+When both x and y have the same standard deviation, the slope and
+correlation are the same. Here, since x has twice the `sd` of y, the
+ratio of **slope** = `r lin$estimate[2]` to **r** = `r cor$estimate` is
+0.5. Hence a linear model using `scale()` for both variables will show
+slope = **r**.
+
+Slope_Scaled: `r lin_scl$estimate[2]` = Correlation: `r cor$estimate`
 
 Using the *linear model* method we get:
 
 ```{r}
 # Linear Model
-lin <- lm(y1 ~ 1 + x, data = mydata_wide) %>% 
+lin <- lm(y ~ 1 + x, data = mydata_wide) %>% 
   broom::tidy() %>% mutate(term = c("beta_0", "beta_1")) %>% select(term, estimate, p.value)
 lin 
 
@@ -184,7 +199,7 @@ Let us **scale** the variables to within `{-1, +1}` : (subtract the mean and div
 
 ```{r}
 # Scaled linear model
-lin_scl <- lm(scale(y1) ~ 1 + scale(x), data = mydata_wide) %>% 
+lin_scl <- lm(scale(y) ~ 1 + scale(x), data = mydata_wide) %>% 
   broom::tidy() %>% mutate(term = c("beta_0", "beta_1")) %>% select(term, estimate, p.value) %>% select(term, estimate, p.value)
 lin_scl 
 
@@ -213,7 +228,12 @@ Slope_Scaled: `r lin_scl$estimate[2]` = Correlation: `r cor$estimate`
 
 TBD
 
-## Spearman Correlation
+
+
+
+
+
+## Spearman Correlation {.tabset .tabset-pills}
 
 ### Model
 
@@ -269,7 +289,7 @@ Hence we fail to reject the NULL hypothesis that `study_hours` and `gpa` have no
 Should we use another test, that does not **need** the LINE assumptions?
 
 
-## "Signed Rank" Values
+### "Signed Rank" Values
 
 Most statistical tests use the **actual values** of the data variables.
 However, in some *non-parametric* statistical tests, the data are used
@@ -290,7 +310,6 @@ signed_rank <- function(x) {sign(x) * rank(abs(x))}
 
 ```
 
-## Plotting Original and Signed Rank Data
 
 Let us see how this might work by comparing data and its signed-rank version...A quick set of plots:
 
@@ -334,7 +353,7 @@ How about associations between data? Do ranks reflect well what the data might?
 
 ```{r Spearman_Plot}
 # Plot the data
-p1 <- ggplot(mydata_wide, aes(x, y1)) + 
+p1 <- ggplot(mydata_wide, aes(x, y)) + 
   geom_point() +
   geom_smooth(method = "lm") +
   ggtitle(" Pearson Correlation\n and Linear Models")
@@ -342,7 +361,7 @@ p1 <- ggplot(mydata_wide, aes(x, y1)) +
 # Plot ranked data
 p2 <- mydata_wide %>% 
   mutate(x_rank = rank(x),
-         y_rank = rank(y1)) %>%
+         y_rank = rank(y)) %>%
   ggplot(.,aes(x_rank, y_rank)) + 
   geom_point(shape = 15, size = 2) +
   geom_smooth(method = "lm") + 
@@ -353,9 +372,9 @@ patchwork::wrap_plots(p1,p2, nrow = 1, guides = "collect")
 ```
 
 
-The slopes are almost identical, $0.25$ for both original data and ranked data for $y1\sim x$. So maybe *ranked* and even *sign_ranked* data could work, and if it can work despite LINE assumptions not being satisfied, that would be nice!
+The slopes are almost identical, $0.25$ for both original data and ranked data for $y\sim x$. So maybe *ranked* and even *sign_ranked* data could work, and if it can work despite LINE assumptions not being satisfied, that would be nice!
 
-## How does Sign-Rank data work?
+### How does Sign-Rank data work?
 
 TBD: need to add some explanation here.
 
@@ -377,7 +396,7 @@ $$
 
 ```{r Spearman_Correlation}
 # Spearman
-cor1 <- cor.test(x,y1, method = "spearman") %>% 
+cor1 <- cor.test(x,y, method = "spearman") %>% 
   broom::tidy() %>% mutate(term = "Spearman Correlation ") %>% select(term, estimate, p.value)
 cor1
 
@@ -385,7 +404,7 @@ cor1
 
 ```{r}
 # Pearson using ranks
-cor2 <- cor.test(rank(y1), rank(x), method = "pearson") %>% 
+cor2 <- cor.test(rank(y), rank(x), method = "pearson") %>% 
 broom::tidy() %>% select(estimate, p.value)
 cor2
 ```
@@ -393,7 +412,7 @@ cor2
 
 ```{r}
 # Linear Models using rank
-cor3 <- lm(rank(y1) ~ 1 + rank(x),data = mydata_wide) %>% 
+cor3 <- lm(rank(y) ~ 1 + rank(x),data = mydata_wide) %>% 
   broom::tidy() %>% select(estimate, p.value)
 cor3
 ```
@@ -440,17 +459,6 @@ $\rho = 0.882$ with a `p-value` that is very small. Hence we are able to
 reject the NULL hypothesis and state that there is a relationship
 between these two variables. The **linear** relationship is evaluated as
 a correlation of `0.882`.
-
-
-
-
-## Correlations in Orange
-
-
-## Correlations in Radiant
-
-
-## Correlations in R
 
 
 ```{r}

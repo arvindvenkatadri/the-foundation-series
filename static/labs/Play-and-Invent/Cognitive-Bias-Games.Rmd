@@ -23,7 +23,7 @@ In this Module, we will acquaint ourselves with a few of our Cognitive Biases, i
 # Goals
 
 At the end of this Lab/Games session, we should:  
-- know the types and nture of our Cognitive Biases  
+- know the types and nature of our Cognitive Biases  
 - Be able to slow down out decision making  
 - Be able to consider all parameters and aspects before arriving at our
 decision.

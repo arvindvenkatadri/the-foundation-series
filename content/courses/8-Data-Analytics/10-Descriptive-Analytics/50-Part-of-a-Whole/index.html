@@ -2,7 +2,7 @@
 title: "\U0001F355 Parts of a Whole"
 subtitle: "Parts of a Whole"
 author: "Arvind Venkatadri"
-date: "2022-12-23"
+date: "2023-01-27"
 weight: 50
 summary: "Slices, Portions, Counts, and Aggregates of Data"
 tags:
@@ -13,20 +13,29 @@ tags:
   - Tree Maps/Dendrograms
   - Parliament/Waffle Charts
   - Circular Packing
+  - Pyramid Plots
 
 image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
 external_link: ""
 links:
-# - icon: linkedin
-#   icon_pack: fab
-#   name: 
-#   url: https://linkedin.com/arvindvenkatadri
-# - icon: twitter
-#   icon_pack: fab
-#   name: 
-#   url: https://twitter.com/arvind_v
+- icon: circle
+  icon_pack: fas
+  name: Orange Tutorial
+  url: "labs/Data-Analytics/parts.ows"
+- icon: sun
+  icon_pack: fas
+  name: Radiant
+  url: "labs/Data-Analytics/parts.rda"
+- icon: r-project
+  icon_pack: fab
+  name: R Tutorial
+  url: "labs/Data-Analytics/parts.html"
+- icon: database
+  icon_pack: fas
+  name: Sample Datasets
+  url: "labs/Data-Analytics/data/qdd-data.zip"
 slides: ""
 url_code: ""
 url_pdf: ""
@@ -36,26 +45,34 @@ url_video: ""
 
 
 
-<div id="an-example" class="section level2">
-<h2>An Example</h2>
-<p>What influences love at first sight? (Or, at least, love in the first four minutes?)</p>
-<p>This dataset was compiled by Columbia Business School professors Ray Fisman and Sheena Iyengar for their paper <a href="https://www0.gsb.columbia.edu/mygsb/faculty/research/pubfiles/866/racialPreferences.pdf"><strong>Gender Differences in Mate Selection: Evidence From a Speed Dating Experiment</strong></a>.</p>
-<p>Data was gathered from participants in experimental speed dating events from 2002-2004. During the events, the attendees would have a four minute “first date” with every other participant of the opposite sex. At the end of their four minutes, participants were asked if they would like to see their date again. They were also asked to rate their date on six attributes: Attractiveness, Sincerity, Intelligence, Fun, Ambition, and Shared Interests.</p>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>So let us start with “eating humble pie”: <sub>creating</sub> discussing a Pie chart first.</p>
+<p>A <code>pie chart</code> is a circle divided into sectors that each represent a proportion of the whole. It is often used to show percentage, where the sum of the sectors equals 100%. The problem is that humans are pretty bad at reading angles. This ubiquitous chart is much vilified in the industry and <code>bar charts</code> that we have seen earlier, are viewed as better options. However do read this spirited defense of pie charts here. <a href="https://speakingppt.com/why-tufte-is-flat-out-wrong-about-pie-charts/" class="uri">https://speakingppt.com/why-tufte-is-flat-out-wrong-about-pie-charts/</a></p>
+<p>On the other hand, pie charts are ubiquitous in business circles, so there is an attractive alternative, called a <code>fan chart</code> which we will explore here.</p>
+<p>We will try to depict here the interesting ones such as the <code>dendrogram</code>, the <code>parliament plot</code>, the <code>waffle plot</code>, and the <code>circle packing</code> chart.</p>
+<div id="fan-plot" class="section level3">
+<h3>Fan Plot</h3>
+<p>Base R has a simple <code>pie</code> command that does the job.</p>
+<pre class="r"><code>pie.sales &lt;- c(0.12, 0.3, 0.26, 0.16, 0.04, 0.12)
+labels &lt;- c(&quot;Blueberry&quot;, &quot;Cherry&quot;,
+    &quot;Apple&quot;, &quot;Boston Cream&quot;, &quot;Other&quot;, &quot;Vanilla Cream&quot;)
+pie(x = pie.sales, labels = labels,col =  grDevices::hcl.colors(palette= &quot;Plasma&quot;, n = 6)) # default colours</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" />
+The <code>fan plot</code> displays numerical values as arcs of <strong>overlapping sectors</strong>. This allows for more effective comparison:</p>
+<pre class="r"><code>plotrix::fan.plot(x = pie.sales, labels = labels,
+                  col = grDevices::hcl.colors(palette= &quot;Plasma&quot;, n = 6),
+                  shrink = 0.03, # How much to shrink each successive sector
+                  label.radius = 1.15,
+                  main = &quot;Fan Plot of Ice Cream Flavours&quot;,
+                  ticks = 360,
+                  max.span = pi)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>
-<div id="what-is-the-story-here" class="section level2">
-<h2>What is the Story here?</h2>
-<ol style="list-style-type: decimal">
-<li>Do people prefer to date someone from their own <em>race</em>?</li>
-<li>Is that different for men and women?</li>
-<li>Does physical attractiveness help to overcome age differences?</li>
-</ol>
 </div>
-<div id="a-workflow-in-orange" class="section level2">
-<h2>A Workflow in Orange</h2>
-</div>
-<div id="a-workflow-in-radiant" class="section level2">
-<h2>A Workflow in Radiant</h2>
-</div>
-<div id="a-workflow-in-r" class="section level2">
-<h2>A Workflow in R</h2>
+<div id="parliament-and-waffle-charts" class="section level2">
+<h2>Parliament and Waffle Charts</h2>
+<pre class="r"><code>parts &lt;- c(80, 30, 20, 10)
+waffle(parts, rows=8)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
 </div>

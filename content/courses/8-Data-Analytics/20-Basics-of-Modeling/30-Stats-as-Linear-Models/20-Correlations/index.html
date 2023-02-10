@@ -2,7 +2,8 @@
 title: "\U0001F350 Stat Tests for Correlations"
 author: "Arvind Venkatadri"
 date: Nov 22, 2022
-lastmod: "2023-01-20"
+lastmod: "2023-01-29"
+weight: 20
 output:
   html_document:
     toc_float: yes
@@ -12,106 +13,91 @@ output:
     code_folding: show
     code_download: yes
     number_sections: yes
-  pdf_document:
-    toc: yes
-    latex_engine: xelatex
+df_print: paged
+links:
+- icon: circle
+  icon_pack: fas
+  name: Orange Tutorial
+  url: "labs/Data-Analytics/correlations.ows"
+- icon: sun
+  icon_pack: fas
+  name: Radiant
+  url: "labs/Data-Analytics/correlations.rda"
+- icon: r-project
+  icon_pack: fab
+  name: R Tutorial
+  url: "labs/Data-Analytics/correlations.html"
+- icon: database
+  icon_pack: fas
+  name: Sample Datasets
+  url: "labs/Data-Analytics/data/qdd-data.zip"
 keywords: Statistics ; Tests; p-value; Feynman Technique
 abstract: This module is intended to assist with making statistically significant insights that drive business decisions. This document deals with the basics of stats. The method followed is that of Jonas Lindoloev, wherein every stat test is treated as a linear model `y = mx + c`.
-editor_options: 
+editor_options:
   chunk_output_type: inline
-  markdown: 
+  markdown:
     wrap: 72
 ---
 
 
 
-<div id="the-linear-model" class="section level2">
-<h2>The Linear Model</h2>
-<p>The premise here is that <strong>many common statistical tests are special cases of the linear model</strong>. A <strong>linear model</strong> estimates the relationship between dependent variable or “response” variable (<span class="math inline">\(y\)</span>) and an explanatory variable or “predictor” (<span class="math inline">\(x\)</span>). It is assumed that the relationship is <strong>linear</strong>. <span class="math inline">\(\beta_0\)</span> is the <em>intercept</em> and <span class="math inline">\(\beta_1\)</span> is the slope of the linear fit, that <strong>predicts</strong> the value of y based the value of x.</p>
-<p><span class="math display">\[
-y = \beta_0 + \beta_1 *x
-\]</span></p>
-</div>
+<div id="tests-for-correlation" class="section level1">
+<h1>Tests for Correlation</h1>
+<p>Correlation <strong>r</strong> is a measure of <em>strength</em> and <em>direction</em> of <em>linear association</em> between two variables. <strong>r</strong> is between <span class="math inline">\([-1,+1]\)</span>, with <span class="math inline">\(0\)</span> implying no association/correlation.</p>
+<p>From this definition, the <em>linear model</em> lends itself in a straightforward way as a model to interpret <em>correlation</em>. Intuitively, the slope of the linear model could be related to the correlation between y and x.</p>
 <div id="the-correlation-test" class="section level2">
 <h2>The Correlation Test</h2>
-<p>TBD: Some introductory text here on Correlation itself)</p>
 <p>One of the basic Questions we would have of our data is:
 Does some variable depend upon another in some way?
 Does <span class="math inline">\(y\)</span> depend upon <span class="math inline">\(x\)</span>?</p>
 <p>A <strong>Correlation Test</strong> is designed to answer exactly this question.</p>
 <p>Let us now see how a Correlation Test can be re-formulated as
 a Linear Model + Hypothesis Test.</p>
-<div id="some-toy-data" class="section level3">
-<h3>Some Toy Data</h3>
-<p>Most examples in this exposition are based on three “imaginary” samples,
-<span class="math inline">\(x, y1, y2\)</span>. Each is normally distributed and made up of 50 observations. The means and the sds are, respectively:</p>
-<pre><code>## # A tibble: 3 × 2
-##      mu    sd
-##   &lt;dbl&gt; &lt;dbl&gt;
-## 1   0     1  
-## 2   0.3   2  
-## 3   0.5   1.5</code></pre>
-<p>Let us look at our toy data in three ways:</p>
-<ol style="list-style-type: decimal">
-<li>All three variables:</li>
-</ol>
-<pre><code>## # A tibble: 50 × 3
-##     x[,1] y1[,1] y2[,1]
-##     &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
-##  1  0.427  1.98   0.103
-##  2  0.444  1.27  -0.281
-##  3 -0.828 -0.944  0.624
-##  4 -0.799  0.103  5.43 
-##  5 -0.323  2.19   0.168
-##  6 -1.24   0.192 -0.549
-##  7 -1.36   4.81   0.309
-##  8  1.62   1.55  -0.990
-##  9 -0.292  3.36  -0.172
-## 10 -1.25   1.92  -0.158
-## # … with 40 more rows</code></pre>
-<ol start="2" style="list-style-type: decimal">
-<li>Variables stacked and labelled
-(Note: <code>group</code> is now a Qual variable !!)</li>
-</ol>
-<pre><code>## # A tibble: 150 × 2
+<p>Now we look at the numbers, using some toy data first and then a real dataset.</p>
+<pre><code>## # A tibble: 500 × 3
+##      x[,1]  y[,1] y2[,1]
+##      &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;
+##  1  0.570  -0.788 -0.748
+##  2  1.12    1.27   3.36 
+##  3  1.90    0.486 -2.54 
+##  4 -0.862  -4.22   1.09 
+##  5 -0.798  -0.589  1.66 
+##  6 -1.66    2.66   2.30 
+##  7 -0.0842  2.04   0.858
+##  8  1.08   -0.628  1.82 
+##  9  0.783  -0.272  1.14 
+## 10  0.708   2.10   1.61 
+## # … with 490 more rows</code></pre>
+<pre><code>## # A tibble: 1,500 × 2
 ##    group value[,1]
 ##    &lt;chr&gt;     &lt;dbl&gt;
-##  1 x         0.427
-##  2 y1        1.98 
-##  3 y2        0.103
-##  4 x         0.444
-##  5 y1        1.27 
-##  6 y2       -0.281
-##  7 x        -0.828
-##  8 y1       -0.944
-##  9 y2        0.624
-## 10 x        -0.799
-## # … with 140 more rows</code></pre>
-<ol start="3" style="list-style-type: decimal">
-<li>Same as 2, but only for the dependent <code>y</code> variables:</li>
-</ol>
-<pre><code>## # A tibble: 100 × 2
+##  1 x         0.570
+##  2 y        -0.788
+##  3 y2       -0.748
+##  4 x         1.12 
+##  5 y         1.27 
+##  6 y2        3.36 
+##  7 x         1.90 
+##  8 y         0.486
+##  9 y2       -2.54 
+## 10 x        -0.862
+## # … with 1,490 more rows</code></pre>
+<pre><code>## # A tibble: 1,000 × 2
 ##    group value[,1]
 ##    &lt;chr&gt;     &lt;dbl&gt;
-##  1 y1        1.98 
-##  2 y2        0.103
-##  3 y1        1.27 
-##  4 y2       -0.281
-##  5 y1       -0.944
-##  6 y2        0.624
-##  7 y1        0.103
-##  8 y2        5.43 
-##  9 y1        2.19 
-## 10 y2        0.168
-## # … with 90 more rows</code></pre>
+##  1 y        -0.788
+##  2 y2       -0.748
+##  3 y         1.27 
+##  4 y2        3.36 
+##  5 y         0.486
+##  6 y2       -2.54 
+##  7 y        -4.22 
+##  8 y2        1.09 
+##  9 y        -0.589
+## 10 y2        1.66 
+## # … with 990 more rows</code></pre>
 </div>
-</div>
-<div id="tests-for-correlation" class="section level1">
-<h1>Tests for Correlation</h1>
-<p>Correlation <strong>r</strong> is a measure of <em>strength</em> and <em>direction</em> of <em>linear association</em> between two variables. <strong>r</strong> is between <span class="math inline">\([-1,+1]\)</span>, with <span class="math inline">\(0\)</span> implying no association/correlation.</p>
-<p>From this definition, the <em>linear model</em> lends itself in a straightforward way as a model to interpret <em>correlation</em>. Intuitively, the slope of the linear model could be related to the correlation between y and x.</p>
-<p>Now we look at the numbers.</p>
-<div id="pearson-correlation" class="section level2">
+<div id="pearson-correlation" class="section level2 tabset tabset-pills">
 <h2>Pearson Correlation</h2>
 <div id="model" class="section level3">
 <h3>Model</h3>
@@ -124,27 +110,88 @@ H_0: Null\ Hypothesis\ =&gt; \beta_1 = 0\\\
 H_a: Alternate\ Hypothesis\ =&gt; \beta_1 \ne 0\\
 \end{aligned}
 \]</span></p>
-<pre><code>## # A tibble: 1 × 3
-##   term                  estimate p.value
-##   &lt;chr&gt;                    &lt;dbl&gt;   &lt;dbl&gt;
-## 1 Pearson Correlation r   -0.232   0.105</code></pre>
+</div>
+<div id="code" class="section level3">
+<h3>Code</h3>
+<pre class="r"><code>#Pearson (0built-in test)
+cor &lt;- cor.test(y,x,method = &quot;pearson&quot;) %&gt;% 
+  broom::tidy() %&gt;% select(estimate, p.value)
+
+#Linear Model
+lin &lt;- lm(y ~ 1 + x, data = mydata_wide) %&gt;% 
+  broom::tidy() %&gt;% select(estimate, p.value)
+
+# Scaled linear model
+lin_scl &lt;- lm(scale(y) ~ 1 + scale(x), data = mydata_wide) %&gt;% 
+  broom::tidy() %&gt;% select(estimate, p.value)
+
+print(cor)</code></pre>
+<pre><code>## # A tibble: 1 × 2
+##   estimate p.value
+##      &lt;dbl&gt;   &lt;dbl&gt;
+## 1  -0.0528   0.239</code></pre>
+<pre class="r"><code>print(lin)</code></pre>
+<pre><code>## # A tibble: 2 × 2
+##   estimate  p.value
+##      &lt;dbl&gt;    &lt;dbl&gt;
+## 1    0.300 0.000853
+## 2   -0.106 0.239</code></pre>
+<pre class="r"><code>print(lin_scl)</code></pre>
+<pre><code>## # A tibble: 2 × 2
+##    estimate p.value
+##       &lt;dbl&gt;   &lt;dbl&gt;
+## 1  1.05e-17   1    
+## 2 -5.28e- 2   0.239</code></pre>
+<pre class="r"><code>rbind(cor, lin, lin_scl) %&gt;% print()</code></pre>
+<pre><code>## # A tibble: 5 × 2
+##    estimate  p.value
+##       &lt;dbl&gt;    &lt;dbl&gt;
+## 1 -5.28e- 2 0.239   
+## 2  3.00e- 1 0.000853
+## 3 -1.06e- 1 0.239   
+## 4  1.05e-17 1       
+## 5 -5.28e- 2 0.239</code></pre>
+<p><a href="Notes:\" class="uri">Notes:\</a>
+1. The <em>p-value</em> for Pearson Correlation and for the <em>slope</em> in the
+linear model is the same ( 0.1053 ). Which means we cannot reject the
+NULL hypothesis of “no relationship”.</p>
+<ol start="2" style="list-style-type: decimal">
+<li>Here is the relationship between the slope and correlation:</li>
+</ol>
+<p><span class="math display">\[
+Slope\ \beta_1 = \frac{sd_y}{sd_x} * r
+\]</span></p>
+<p>When both x and y have the same standard deviation, the slope and
+correlation are the same. Here, since x has twice the <code>sd</code> of y, the
+ratio of <strong>slope</strong> = -0.1055065 to <strong>r</strong> = -0.0527532 is
+0.5. Hence a linear model using <code>scale()</code> for both variables will show
+slope = <strong>r</strong>.</p>
+<p>Slope_Scaled: -0.0527532 = Correlation: -0.0527532</p>
 <p>Using the <em>linear model</em> method we get:</p>
+<pre class="r"><code># Linear Model
+lin &lt;- lm(y ~ 1 + x, data = mydata_wide) %&gt;% 
+  broom::tidy() %&gt;% mutate(term = c(&quot;beta_0&quot;, &quot;beta_1&quot;)) %&gt;% select(term, estimate, p.value)
+lin </code></pre>
 <pre><code>## # A tibble: 2 × 3
-##   term   estimate p.value
-##   &lt;chr&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-## 1 beta_0    0.3     0.286
-## 2 beta_1   -0.464   0.105</code></pre>
+##   term   estimate  p.value
+##   &lt;chr&gt;     &lt;dbl&gt;    &lt;dbl&gt;
+## 1 beta_0    0.300 0.000853
+## 2 beta_1   -0.106 0.239</code></pre>
 <p>Why are <span class="math inline">\(r\)</span> and <span class="math inline">\(\beta_1\)</span> different, though the <code>p-value</code> is suspiciously the same!?</p>
 <p>Did we miss a factor of <span class="math inline">\(\frac{-0.463}{-0.231} = 2\)</span> somewhere…??</p>
 <p>Let us <strong>scale</strong> the variables to within <code>{-1, +1}</code> : (subtract the mean and divide by sd) and re-do the Linear Model with <strong>scaled</strong> versions <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>:</p>
+<pre class="r"><code># Scaled linear model
+lin_scl &lt;- lm(scale(y) ~ 1 + scale(x), data = mydata_wide) %&gt;% 
+  broom::tidy() %&gt;% mutate(term = c(&quot;beta_0&quot;, &quot;beta_1&quot;)) %&gt;% select(term, estimate, p.value) %&gt;% select(term, estimate, p.value)
+lin_scl </code></pre>
 <pre><code>## # A tibble: 2 × 3
 ##   term    estimate p.value
 ##   &lt;chr&gt;      &lt;dbl&gt;   &lt;dbl&gt;
-## 1 beta_0 -9.06e-17   1    
-## 2 beta_1 -2.32e- 1   0.105</code></pre>
+## 1 beta_0  1.05e-17   1    
+## 2 beta_1 -5.28e- 2   0.239</code></pre>
 <p>So we conclude:</p>
 <ol style="list-style-type: decimal">
-<li><p><strong>When both x and y have the same standard deviation, the slope from the linear model and the Pearson correlation are the same</strong>. Here, since x has twice the <code>sd</code> of y, the ratio of <strong>slope</strong> = -0.4635533 to <strong>r</strong> = -0.2317767 is 0.5.</p></li>
+<li><p><strong>When both x and y have the same standard deviation, the slope from the linear model and the Pearson correlation are the same</strong>. Here, since x has twice the <code>sd</code> of y, the ratio of <strong>slope</strong> = -0.1055065 to <strong>r</strong> = -0.0527532 is 0.5.</p></li>
 <li><p>There is this relationship between the <strong>slope in the linear model</strong> and <strong>Pearson correlation</strong>:</p></li>
 </ol>
 <p><span class="math display">\[
@@ -154,7 +201,7 @@ Slope\ \beta_1 = \frac{sd_y}{sd_x} * r
 <ol start="2" style="list-style-type: decimal">
 <li>Hence a linear model using <code>scale()</code> for both variables will show slope = <strong>r</strong>.</li>
 </ol>
-<p>Slope_Scaled: -0.2317767 = Correlation: -0.2317767</p>
+<p>Slope_Scaled: -0.0527532 = Correlation: -0.0527532</p>
 <ol start="3" style="list-style-type: decimal">
 <li>Finally, the <em>p-value</em> for Pearson Correlation and that for the <em>slope</em> in the linear model is the same (<span class="math inline">\(0.1053\)</span>). Which means we cannot reject the NULL hypothesis of “no relationship”.</li>
 </ol>
@@ -164,21 +211,37 @@ Slope\ \beta_1 = \frac{sd_y}{sd_x} * r
 <p>TBD</p>
 </div>
 </div>
-<div id="spearman-correlation" class="section level2">
+<div id="spearman-correlation" class="section level2 tabset tabset-pills">
 <h2>Spearman Correlation</h2>
 <div id="model-1" class="section level3">
 <h3>Model</h3>
 <p>In some cases the <strong>LINE</strong> assumptions may not hold.</p>
 <p>Nonlinear relationships, non-normally distributed data ( with large <strong>outliers</strong> ) and working with <em>ordinal</em> rather than continuous data: these situations necessitate the use of Spearman’s <em>ranked</em> correlation scores. (<strong>Ranked</strong>, not <strong>sign-ranked</strong>.).</p>
 <p>See the example below: We choose to look at the <code>gpa_study_hours</code> dataset. It has two numeric columns <code>gpa</code> and <code>study_hours</code>:</p>
+<pre class="r"><code>glimpse(gpa_study_hours)</code></pre>
 <pre><code>## Rows: 193
 ## Columns: 2
 ## $ gpa         &lt;dbl&gt; 4.000, 3.800, 3.930, 3.400, 3.200, 3.520, 3.680, 3.400, 3.…
 ## $ study_hours &lt;dbl&gt; 10, 25, 45, 10, 4, 10, 24, 40, 10, 10, 30, 7, 15, 60, 10, …</code></pre>
 <p>We can plot this:</p>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/Pearson_example_3-1.png" width="672" /></p>
+<pre class="r"><code>ggplot(gpa_study_hours, aes(x = study_hours, y = gpa)) + geom_point() + geom_smooth() + theme_minimal()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Pearson_example_3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># ggstatsplot::ggscatterstats(data = gpa_study_hours, 
+#                             x = study_hours, 
+#                             y = gpa,
+#                             marginal = TRUE,
+#                             title = &quot;GPA vs Study Hours&quot;)</code></pre>
 <p>Hmm…not normally distributed, and there is a sort of increasing relationship, however is it linear? And there is some evidence of heteroscedasticity, so the LINE assumptions are clearly in violation. Pearson correlation would not be the best idea here.</p>
 <p>Let us quickly try it anyway, using a Linear Model for the <strong>scaled</strong> <code>gpa</code> and <code>study_hours</code> variables, from where we get:</p>
+<pre class="r"><code># Pearson Correlation as Linear Model
+model_gpa &lt;-
+  lm(scale(gpa) ~ 1 + scale(study_hours), data = gpa_study_hours)
+
+model_gpa %&gt;%
+  broom::tidy() %&gt;% 
+  mutate(term = c(&quot;beta_0&quot;, &quot;beta_1&quot;)) %&gt;% 
+  cbind(confint(model_gpa) %&gt;%                                              as_tibble()) %&gt;%  
+  select(term, estimate, p.value, `2.5 %`, `97.5 %`)</code></pre>
 <pre><code>##     term     estimate    p.value        2.5 %    97.5 %
 ## 1 beta_0 3.047040e-16 1.00000000 -0.141087199 0.1410872
 ## 2 beta_1 1.330138e-01 0.06517072 -0.008440359 0.2744679</code></pre>
@@ -187,9 +250,8 @@ Slope\ \beta_1 = \frac{sd_y}{sd_x} * r
 <p>Hence we fail to reject the NULL hypothesis that <code>study_hours</code> and <code>gpa</code> have no relationship. But can this be right?</p>
 <p>Should we use another test, that does not <strong>need</strong> the LINE assumptions?</p>
 </div>
-</div>
-<div id="signed-rank-values" class="section level2">
-<h2>“Signed Rank” Values</h2>
+<div id="signed-rank-values" class="section level3">
+<h3>“Signed Rank” Values</h3>
 <p>Most statistical tests use the <strong>actual values</strong> of the data variables.
 However, in some <em>non-parametric</em> statistical tests, the data are used
 in <strong>rank-transformed</strong> sense/order. (In some cases the <strong>signed-rank</strong>
@@ -201,18 +263,60 @@ of the data values is used instead of the data itself.)</p>
 smallest number has <em>rank = 1</em> and so on. This gives is <strong>ranked data</strong>.</p></li>
 <li><p>Give each of the ranks the sign of the original observation ( + or -). This gives us <strong>signed</strong> ranked data.</p></li>
 </ol>
-</div>
-<div id="plotting-original-and-signed-rank-data" class="section level2">
-<h2>Plotting Original and Signed Rank Data</h2>
+<pre class="r"><code>signed_rank &lt;- function(x) {sign(x) * rank(abs(x))}</code></pre>
 <p>Let us see how this might work by comparing data and its signed-rank version…A quick set of plots:</p>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/data_plots-1.png" width="672" /></p>
+<pre class="r"><code>p1 &lt;- ggplot(mydata_long,aes(x = group, y = value)) +
+  geom_jitter(width = 0.02, height = 0,aes(colour = group), size = 4) +
+  geom_segment(data = mydata_wide, aes(y = 0, yend = 0, 
+                                       x = .75, 
+                                       xend = 1.25 )) + 
+  geom_text(aes(x = 1, y = 0.5, label = &quot;0&quot;)) +
+  geom_segment(data = mydata_wide, aes(y = 0.3, yend = 0.3, 
+                                       x = 1.75 , 
+                                       xend = 2.25 )) + 
+  geom_text(aes(x = 2, y = 0.6, label = &quot;0.3&quot;)) +
+  geom_segment(data = mydata_wide, aes(y = 0.5, yend = 0.5, 
+                                       x = 2.75, 
+                                       xend = 3.25 )) + 
+  geom_text(aes(x = 3, y = 0.8, label = &quot;0.5&quot;)) +
+  labs(title = &quot;Original Data&quot;, subtitle = &quot;Black Lines show Means&quot;) +
+  ylab(&quot;Response Variable&quot;)
+
+p2 &lt;- mydata_long %&gt;% 
+  group_by(group) %&gt;% 
+  mutate( s_value = signed_rank(value)) %&gt;% 
+  ggplot(., aes(x = group, y = s_value)) + 
+  geom_jitter(width = 0.02, height = 0,aes(colour = group), size = 4) + 
+  stat_summary(fun = &quot;mean&quot;, geom = &quot;point&quot;, colour = &quot;red&quot;, 
+               size = 8) + 
+  labs(title = &quot;Signed Rank of Data&quot;, subtitle = &quot;Red Points are means of Ranks!&quot;) +
+  ylab(&quot;Signed Rank of Response Variable&quot;)
+
+patchwork::wrap_plots(p1,p2, nrow = 1, guides = &quot;collect&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/data_plots-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>So the means of the <strong>ranks</strong> three separate variables seem to be in the same order as the means of the data variables themselves.</p>
 <p>How about associations between data? Do ranks reflect well what the data might?</p>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_Plot-1.png" width="672" /></p>
-<p>The slopes are almost identical, <span class="math inline">\(0.25\)</span> for both original data and ranked data for <span class="math inline">\(y1\sim x\)</span>. So maybe <em>ranked</em> and even <em>sign_ranked</em> data could work, and if it can work despite LINE assumptions not being satisfied, that would be nice!</p>
+<pre class="r"><code># Plot the data
+p1 &lt;- ggplot(mydata_wide, aes(x, y)) + 
+  geom_point() +
+  geom_smooth(method = &quot;lm&quot;) +
+  ggtitle(&quot; Pearson Correlation\n and Linear Models&quot;)
+
+# Plot ranked data
+p2 &lt;- mydata_wide %&gt;% 
+  mutate(x_rank = rank(x),
+         y_rank = rank(y)) %&gt;%
+  ggplot(.,aes(x_rank, y_rank)) + 
+  geom_point(shape = 15, size = 2) +
+  geom_smooth(method = &quot;lm&quot;) + 
+  ggtitle(&quot; Spearman Ranked Correlation\n and Linear Models&quot;)
+
+patchwork::wrap_plots(p1,p2, nrow = 1, guides = &quot;collect&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_Plot-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The slopes are almost identical, <span class="math inline">\(0.25\)</span> for both original data and ranked data for <span class="math inline">\(y\sim x\)</span>. So maybe <em>ranked</em> and even <em>sign_ranked</em> data could work, and if it can work despite LINE assumptions not being satisfied, that would be nice!</p>
 </div>
-<div id="how-does-sign-rank-data-work" class="section level2">
-<h2>How does Sign-Rank data work?</h2>
+<div id="how-does-sign-rank-data-work" class="section level3">
+<h3>How does Sign-Rank data work?</h3>
 <p>TBD: need to add some explanation here.</p>
 <p>Spearman correlation = Pearson correlation using the rank of the data
 observations. Let’s check how this holds for a our x and y1 data:</p>
@@ -225,21 +329,34 @@ H_0: Null\ Hypothesis\ =&gt; \beta_1 = 0\\\
 H_a: Alternate\ Hypothesis\ =&gt; \beta_1 \ne 0\\
 \end{aligned}
 \]</span></p>
-<div id="code" class="section level3">
+</div>
+<div id="code-1" class="section level3">
 <h3>Code</h3>
+<pre class="r"><code># Spearman
+cor1 &lt;- cor.test(x,y, method = &quot;spearman&quot;) %&gt;% 
+  broom::tidy() %&gt;% mutate(term = &quot;Spearman Correlation &quot;) %&gt;% select(term, estimate, p.value)
+cor1</code></pre>
 <pre><code>## # A tibble: 1 × 3
 ##   term                    estimate p.value
 ##   &lt;chr&gt;                      &lt;dbl&gt;   &lt;dbl&gt;
-## 1 &quot;Spearman Correlation &quot;   -0.227   0.113</code></pre>
+## 1 &quot;Spearman Correlation &quot;  -0.0321   0.474</code></pre>
+<pre class="r"><code># Pearson using ranks
+cor2 &lt;- cor.test(rank(y), rank(x), method = &quot;pearson&quot;) %&gt;% 
+broom::tidy() %&gt;% select(estimate, p.value)
+cor2</code></pre>
 <pre><code>## # A tibble: 1 × 2
 ##   estimate p.value
 ##      &lt;dbl&gt;   &lt;dbl&gt;
-## 1   -0.227   0.114</code></pre>
+## 1  -0.0321   0.474</code></pre>
+<pre class="r"><code># Linear Models using rank
+cor3 &lt;- lm(rank(y) ~ 1 + rank(x),data = mydata_wide) %&gt;% 
+  broom::tidy() %&gt;% select(estimate, p.value)
+cor3</code></pre>
 <pre><code>## # A tibble: 2 × 2
 ##   estimate  p.value
 ##      &lt;dbl&gt;    &lt;dbl&gt;
-## 1   31.3   9.11e-10
-## 2   -0.227 1.14e- 1</code></pre>
+## 1 259.     1.36e-65
+## 2  -0.0321 4.74e- 1</code></pre>
 <p>Notes:</p>
 <ol style="list-style-type: decimal">
 <li><p>When ranks are used, the slope of the linear model (<span class="math inline">\(\beta_1\)</span>) has the same value as the Spearman correlation coefficient ( <span class="math inline">\(\rho\)</span> ).</p></li>
@@ -250,14 +367,21 @@ H_a: Alternate\ Hypothesis\ =&gt; \beta_1 \ne 0\\
 <h3>Example</h3>
 <p>We examine the <code>cars93</code> data, where the numeric variables of interest
 are <code>weight</code> and <code>price</code>.</p>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_example_1-1.png" width="672" /></p>
+<pre class="r"><code>cars93 %&gt;% 
+  ggplot(aes(weight, price)) + 
+  geom_point() + geom_smooth(method = &quot;lm&quot;, se = FALSE, lty = 2) + 
+  labs(title = &quot;Car Weight and Car Price have a nonlinear relationship&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_example_1-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>Let us try a Spearman Correlation score for these variables, since the
 data are not linearly related and the variance of <code>price</code> also is not
 constant over <code>weight</code></p>
+<pre class="r"><code>cor.test(cars93$price, cars93$weight, method = &quot;spearman&quot;) %&gt;% broom::tidy()</code></pre>
 <pre><code>## # A tibble: 1 × 5
 ##   estimate statistic  p.value method                          alternative
 ##      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt; &lt;chr&gt;                           &lt;chr&gt;      
 ## 1    0.883     3074. 1.07e-18 Spearman&#39;s rank correlation rho two.sided</code></pre>
+<pre class="r"><code># Using linear Model
+lm(rank(price) ~ rank(weight), data = cars93) %&gt;% summary()</code></pre>
 <pre><code>## 
 ## Call:
 ## lm(formula = rank(price) ~ rank(weight), data = cars93)
@@ -276,26 +400,27 @@ constant over <code>weight</code></p>
 ## Residual standard error: 7.46 on 52 degrees of freedom
 ## Multiple R-squared:  0.7794,	Adjusted R-squared:  0.7751 
 ## F-statistic: 183.7 on 1 and 52 DF,  p-value: &lt; 2.2e-16</code></pre>
-<p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_example_2-1.png" width="672" /></p>
+<pre class="r"><code># Stats Plot
+ggstatsplot::ggscatterstats(data = cars93, x = weight, 
+                            y = price,
+                            type = &quot;nonparametric&quot;,
+                            title = &quot;Cars93: Weight vs Price&quot;,
+                            subtitle = &quot;Spearman Correlation&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_example_2-1.png" width="672" style="display: block; margin: auto;" /></p>
 <p>We see that using ranks of the <code>price</code> variable, we obtain a Spearman’s
 <span class="math inline">\(\rho = 0.882\)</span> with a <code>p-value</code> that is very small. Hence we are able to
 reject the NULL hypothesis and state that there is a relationship
 between these two variables. The <strong>linear</strong> relationship is evaluated as
 a correlation of <code>0.882</code>.</p>
-</div>
-</div>
-<div id="correlations-in-orange" class="section level2">
-<h2>Correlations in Orange</h2>
-</div>
-<div id="correlations-in-radiant" class="section level2">
-<h2>Correlations in Radiant</h2>
-</div>
-<div id="correlations-in-r" class="section level2">
-<h2>Correlations in R</h2>
+<pre class="r"><code># Other ways using other packages
+mosaic::cor_test(gpa ~ study_hours, data = gpa_study_hours) %&gt;% broom:: tidy() %&gt;% select(estimate, p.value, conf.low, conf.high)</code></pre>
 <pre><code>## # A tibble: 1 × 4
 ##   estimate p.value conf.low conf.high
 ##      &lt;dbl&gt;   &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
 ## 1    0.133  0.0652 -0.00838     0.269</code></pre>
+<pre class="r"><code>statsExpressions::corr_test(data = gpa_study_hours, 
+                            x = study_hours, 
+                            y = gpa)</code></pre>
 <pre><code>## # A tibble: 1 × 14
 ##   parameter1  parameter2 effectsize          estimate conf.level conf.low
 ##   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;
@@ -306,6 +431,7 @@ a correlation of <code>0.882</code>.</p>
 ##   expression
 ##   &lt;list&gt;    
 ## 1 &lt;language&gt;</code></pre>
+</div>
 </div>
 </div>
 <div id="references" class="section level1">

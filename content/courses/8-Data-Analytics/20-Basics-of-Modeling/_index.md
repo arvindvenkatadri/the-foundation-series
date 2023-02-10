@@ -6,7 +6,7 @@ summary: ""
 weight: 20
 type: book
 image:
-  caption: ""
+  caption: "Photo by Mikael Blomkvist: https://www.pexels.com/photo/laptop-beside-a-ceramic-vase-6483626/"
   focal_point: "smart"
 editor_options: 
   markdown: 
@@ -224,13 +224,14 @@ the heights of children and the heights of their parents. We can create
 
 ![](models.png)
 
-Our method in this set of modules is to take the modern view that *all*
-these models can be viewed from a standpoint of the *Linear Model*, also
-called *Linear Regression* \$ y = \beta_1 \times x + \beta_0 \$ . For
-example, it is relatively straightforward to imagine Plot B (Quant vs
-Quant ) as an example of a Linear Model. We will try to work up to the
-intuition that this model can be used to understand all the models in
-the Figure.
+Our method in this set of modules is to take **the modern view that
+*all* these models can be viewed from a standpoint of the *Linear
+Model*, also called *Linear Regression* \$ y = \beta_1 \times x +
+\beta_0 \$** . For example, it is relatively straightforward to imagine
+Plot B (Quant vs Quant ) as an example of a Linear Model, with the
+dependent variable modelled as $y$ and the independent one as $x$. We
+will try to work up to the intuition that this model can be used to
+understand all the models in the Figure.
 
 ## Degrees of Freedom
 

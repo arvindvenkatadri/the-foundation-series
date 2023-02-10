@@ -13,20 +13,29 @@ tags:
   - Tree Maps/Dendrograms
   - Parliament/Waffle Charts
   - Circular Packing
+  - Pyramid Plots
 
 image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
 external_link: ""
 links:
-# - icon: linkedin
-#   icon_pack: fab
-#   name: 
-#   url: https://linkedin.com/arvindvenkatadri
-# - icon: twitter
-#   icon_pack: fab
-#   name: 
-#   url: https://twitter.com/arvind_v
+- icon: circle
+  icon_pack: fas
+  name: Orange Tutorial
+  url: "labs/Data-Analytics/parts.ows"
+- icon: sun
+  icon_pack: fas
+  name: Radiant
+  url: "labs/Data-Analytics/parts.rda"
+- icon: r-project
+  icon_pack: fab
+  name: R Tutorial
+  url: "labs/Data-Analytics/parts.html"
+- icon: database
+  icon_pack: fas
+  name: Sample Datasets
+  url: "labs/Data-Analytics/data/qdd-data.zip"
 slides: ""
 url_code: ""
 url_pdf: ""
@@ -37,30 +46,52 @@ url_video: ""
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(blogdown)
-library(plotrix) # Fan, Parliament
+library(plotrix) # Fan, Pyramid Chart
+library(ggparliament) # Parliament Chart
+library(waffle) # What it says!
+
 ```
 
-## An Example
+## Introduction
 
-What influences love at first sight? (Or, at least, love in the first four minutes?) 
+So let us start with "eating humble pie": ~creating~ discussing a Pie chart first.
 
-This dataset was compiled by Columbia Business School professors Ray Fisman and Sheena Iyengar for their paper [**Gender Differences in Mate Selection: Evidence From a Speed Dating Experiment**](https://www0.gsb.columbia.edu/mygsb/faculty/research/pubfiles/866/racialPreferences.pdf). 
+A `pie chart` is a circle divided into sectors that each represent a proportion of the whole. It is often used to show percentage, where the sum of the sectors equals 100%. The problem is that humans are pretty bad at reading angles.  This ubiquitous chart is much vilified in the industry and  `bar charts` that we have seen earlier, are viewed as better options. However do read this spirited defense of pie charts here. <https://speakingppt.com/why-tufte-is-flat-out-wrong-about-pie-charts/>
 
-Data was gathered from participants in experimental speed dating events from 2002-2004. During the events, the attendees would have a four minute "first date" with every other participant of the opposite sex. At the end of their four minutes, participants were asked if they would like to see their date again. They were also asked to rate their date on six attributes: Attractiveness, Sincerity, Intelligence, Fun, Ambition, and Shared Interests.
+On the other hand, pie charts are ubiquitous in business circles, so there is an attractive alternative, called a `fan chart` which we will explore here. 
+
+We will try to depict here the interesting ones such as the `dendrogram`, the `parliament plot`, the `waffle plot`, and the `circle packing` chart. 
+
+### Fan Plot
+
+Base R has a simple `pie` command that does the job.
+
+```{r}
+pie.sales <- c(0.12, 0.3, 0.26, 0.16, 0.04, 0.12)
+labels <- c("Blueberry", "Cherry",
+    "Apple", "Boston Cream", "Other", "Vanilla Cream")
+pie(x = pie.sales, labels = labels,col =  grDevices::hcl.colors(palette= "Plasma", n = 6)) # default colours
+
+```
+The `fan plot` displays numerical values as arcs of **overlapping sectors**. This allows for more effective comparison: 
+
+```{r,echo=TRUE}
+plotrix::fan.plot(x = pie.sales, labels = labels,
+                  col = grDevices::hcl.colors(palette= "Plasma", n = 6),
+                  shrink = 0.03, # How much to shrink each successive sector
+                  label.radius = 1.15,
+                  main = "Fan Plot of Ice Cream Flavours",
+                  ticks = 360,
+                  max.span = pi)
 
 
-## What is the Story here?
+```
 
-1. Do people prefer to date someone from their own *race*? 
-1. Is that different for men and women?
-1. Does physical attractiveness help to overcome age differences?  
+## Parliament and Waffle Charts
 
+```{r}
+parts <- c(80, 30, 20, 10)
+waffle(parts, rows=8)
 
-## A Workflow in Orange
-
-
-## A Workflow in Radiant
-
-
-## A Workflow in R
+```
 

@@ -22,8 +22,36 @@ editor_options:
 # Introduction
 
 In this set of modules we will explore Sampling, Summary Statistics,
-Statistical Tests for data.
+Statistical Tests for data. As we discussed earlier, the purpose of
+these tests is that we want to estimate **P**opulation **P**arameters,
+using **S**ample **S**tatistics.
 
+## So What Do Statistical Models Yield?
+
+Each of the Statistical Models we will explore give access to the
+following numbers: these are estimates of the *Parameters* of the
+Population that underlies the particular *Sample* that we are
+processing:
+
+1.  **Point Estimate**: This is a **statistic** that we compute from the
+    *Sample*. We wish to know how good an estimate this *point estimate*
+    is of the *Population parameter*. E.g. We may take the *mean* of the
+    sample values, and want know if this is a good estimate of the
+    *population mean*.
+
+2.  **Standard Error (SE)**: This is a measure of how much uncertainty
+    remains in *point estimate*.
+
+3.  **Confidence Intervals (CI)**: Usually we state that the *point
+    estimate* is within $\pm something$ of the population parameter, at
+    a certain level of **confidence**, say 90% or 95%. These CI are
+    derived from our computation of the SE.
+
+4.  **p-Value**: This is a computed measure that tells us how likely the
+    *point estimate* is, under our skeptical assumption of the NULL
+    Hypothesis. For instance, we may assume that the population mean is
+    $0$ under the NULL Hypothesis and then assess the *p-value* of a
+    sample-mean of say $0.04$ for example.
 
 ## Pedagogical Notes
 
@@ -33,8 +61,11 @@ conventional introductory statistics courses:
 -   The use of *Linear Models* as the basis for understanding *all*
     statistics measures and tests.
 
--   The use of Simulations, rather than formulae, to calculate
+-   The use of *Simulations*, rather than formulae, to calculate
     Statistics and perform Statistical Tests.
+
+We will present the *Simulation* approach in a separate set of modules.
+Let us quickly appreciate the *Linear Model* approach.
 
 ## The Linear Model Approach
 
@@ -62,7 +93,7 @@ cases of the linear model** . So what *is* the linear model?
 
 A **linear model** estimates the relationship between dependent variable
 or "response" variable ($y$) and an explanatory variable or "predictor"
-($x$).(It is also possible that there is more than one explanatory
+($x$). (It is also possible that there is more than one explanatory
 variable: this is **multiple regression**. We will get there later). It
 is assumed that the relationship is **linear**:
 
@@ -71,7 +102,7 @@ $$
 $$
 
 $\beta_0$ is the *intercept* and $\beta_1$ is the *slope* of the linear
-fit, that **predicts** the value of y based the value of x. Each
+fit, that **predicts** the value of $y$ based the value of $x$. Each
 prediction leaves a small "residual" error between the actual and
 predicted values. $\beta_0$ and $\beta_1$ are calculated based on
 minimizing the **sum of square**s of these residuals, and hence this
@@ -79,7 +110,7 @@ method is called "ordinary least squares" regression. The net *area* of
 all the shaded squares is minimized in the calculation of $\beta_0$ and
 $\beta_1$.
 
-### Linear Models as Hypothesis Tests
+### Using Linear Models for Hypothesis Tests
 
 Using Linear Models for Stats Models is based on the idea of **Testing
 of Hypotheses**. The Hypothesis Testing method typically defines a
@@ -88,32 +119,39 @@ relationship**" between the variables at hand, explanatory and
 responses. The ***Alternative Hypothesis*** typically states that there
 *is* a relationship between the variables.
 
-The *relationship* is based upon the parameter $\beta_1$ being non-zero.
-Accordingly, in fitting a linear model, we follow the process as
-follows:
+We will use this one formulaic model for many diverse purposes:
+estimation on single population means, comparison of two separate
+population means, estimating a proportion, and comparing proportions
+across populations. These are common business tasks that use statistics
+tests.
+
+For instance, we can model the *relationship* between two population
+means as follows: is the parameter $\beta_1$ non-zero? Accordingly, in
+fitting a linear model, we follow the process as follows:
 
 1.  Make the following hypotheses:
 
-    $$
-    y = \beta_1 *x + \beta_0\\
-    Null\ Hypothesis\ H_0\ => \beta_1 = 0\\
-    Alternative\ Hypothesis\ H_a => \beta_1 \ne 0\\
-    x\ and\ y\ are\ linearly\ related\\
-    $$
+    $$y = \beta_0 + \beta_1 *x$$
+
+    $$Null\ Hypothesis\ H_0\ => \beta_1 = 0$$
+
+    $$Alternative\ Hypothesis\ H_a => \beta_1 \ne 0$$
+
+    $$x\ and\ y\ are\ linearly\ related$$
 
 2.  We "assume" that $H_0$ is true.
 
-3.  We calculate $\beta_1$.
+3.  We calculate $\beta_1$. This is our *point estimate.*
 
-4.  We then find probability **p** that \[$\beta_1 = Estimated\ Value$\]
+4.  We then find how likely it is that \[$\beta_1 = Point\ Estimate\$\]
     **when the NULL Hypothesis** is **assumed** TRUE. This is the
     **p-value**.
 
 5.  If that probability is **p \> 0.05**, we say we "cannot reject"
     $H_0$ and there is unlikely to be significant linear relationship.
 
-6.  However, if **p \<= 0.05** can we reject the NULL hypothesis, and
-    say that there could be a significant linear relationship,because
+6.  However, if **p \<= 0.05** we may reject the NULL hypothesis, and
+    say that there could be a significant linear relationship, because
     $\beta_1 = Estimated\ Value$ by mere chance under $H_0$ is very
     small.
 
@@ -136,6 +174,12 @@ we wish to estimate will be of course, either a $\beta_0$ or a $\beta_1$
 4.  **E**: equal variance at all levels of x. No *heteroscedasticity*.
 
 ![](images/ols_assumptions.png)
+
+When these conditions are met, we use standard stats teststhat assume
+these conditions as *parameters*. Hence these tests are called
+**Parametric Tests**. When they are not met, we can use very similar
+tests for our purposes. These are called, naturally, **Non-parametric
+Tests**, which we will examine in due course.
 
 ## References
 

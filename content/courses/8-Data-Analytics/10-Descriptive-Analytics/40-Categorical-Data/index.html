@@ -2,7 +2,7 @@
 title: "\U0001F3F5 Visualizing Categorical Data"
 author: "Arvind Venkatadri"
 date: 15/Jan/2023
-lastmod: "2023-01-24"
+lastmod: "2023-01-26"
 summary: "Visualizing Categorical Data"
 weight: 40
 links:
@@ -39,9 +39,11 @@ tags:
 - Pie Charts
 - Correspondence Analysis
 output:
-  html_document:
+  rmdformats::downcute:
+    self_contained: true
+    default_style: "light"
+    downcute_theme: "default"
     toc_float: yes
-    theme: flatly
     highlight: tango
     toc: yes
     code_folding: show
@@ -529,14 +531,9 @@ Male
 </table>
 </div>
 </div>
-<div id="creating-contingency-tables" class="section level2">
-<h2>Creating Contingency Tables</h2>
-<p>Most plots for Categorical Data ( as we shall see ) require that the data be converted into a <em>Contigency Table</em>; even Statistical tests for Proportions ( the $ ^2 $ test ) need Contingency Tables. The <em>Frequency Table</em> we encountered earlier is very close to being a full-fledged Contingency Table.</p>
-<p>In this section we understand how to make Contingency Tables from each of the three forms.</p>
-</div>
 <div id="what-sort-of-plots-can-we-make-for-categorical-data" class="section level2">
 <h2>What sort of Plots can we make for Categorical Data?</h2>
-<p>We have already seen bar plots, which allow us to plot counts of categorical data. However, if there are a large number* of categorical variables or if thecategorical variables have many levels, the bar plot is not adequate.</p>
+<p>We have already seen bar plots, which allow us to plot counts of categorical data. However, if there are a large number* of categorical variables or if the categorical variables have many levels, the bar plot is not adequate.</p>
 <p>From Michael Friendly:</p>
 <blockquote>
 <p>The familiar techniques for displaying raw data are often
@@ -561,7 +558,7 @@ circumstances.</p>
 principle.</p>
 <div id="mosaic-plots" class="section level3">
 <h3>Mosaic Plots</h3>
-<p>A mosaicplot is basically an area-proportional visualization of (typically observed) frequencies, consisting of tiles (corresponding to the cells) created by vertically and horizontally splitting a rectangle recursively. Thus, the area of each tile is proportional to the corresponding cell entry given the dimensions of previous splits.</p>
+<p>A mosaic plot is basically an area-proportional visualization of (typically observed) frequencies, consisting of tiles (corresponding to the cells) created by vertically and horizontally splitting a rectangle recursively. Thus, the area of each tile is proportional to the corresponding cell entry given the dimensions of previous splits.</p>
 <p>The <code>vcd::mosaic()</code> function needs the data in <em>contingency table</em> form. We will use <code>vcd::structable()</code> function to construct one:</p>
 <pre class="r"><code>art &lt;- vcd::structable(~ Treatment + Improved, data = Arthritis)
 art</code></pre>
@@ -719,6 +716,7 @@ What causes them to stop using still-needed services?</p>
   sjPlot::plot_likert(title = &quot;Caregiver Survey from EUROFAM&quot;)</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p>So there we are with Categorical data ! There are a few other plots with this type of data, which are useful in very specialized circumstances. One example of this is the <code>agreement plot</code> which captures the agreement between two (sets) of evaluators, on ratings given on a shared ordinal scale to a set of items. An example from the field of medical diagnosis is the opinions of two specialists on a common set of patients.</p>
+<p>We can also do what is called “Correspondence Analysis” with Categorical Data, but that topic must remain for an advanced course.</p>
 </div>
 </div>
 <div id="conclusion" class="section level2">
@@ -733,6 +731,5 @@ Discuss!</p>
 <li><p>Using the <code>strcplot</code> command from <code>vcd</code>, <a href="https://cran.r-project.org/web/packages/vcd/vignettes/strucplot.pdf" class="uri">https://cran.r-project.org/web/packages/vcd/vignettes/strucplot.pdf</a></p></li>
 <li><p>Creating Frequency Tables with <code>vcd</code>, <a href="https://cran.r-project.org/web/packages/vcdExtra/vignettes/A_creating.html" class="uri">https://cran.r-project.org/web/packages/vcdExtra/vignettes/A_creating.html</a></p></li>
 <li><p>Creating mosaic plots with <code>vcd</code>, <a href="https://cran.r-project.org/web/packages/vcdExtra/vignettes/D_mosaics.html" class="uri">https://cran.r-project.org/web/packages/vcdExtra/vignettes/D_mosaics.html</a></p></li>
-<li></li>
 </ol>
 </div>

@@ -5,7 +5,7 @@ date: 2023/16/01
 lastmod: "`r Sys.Date()`"
 output:
   rmdformats::readthedown:
-    highlight: kate
+    highlight: tango
     toc_float: TRUE
     toc_depth: 3
     df_print: paged
@@ -17,24 +17,152 @@ editor_options:
     wrap: 72
 ---
 
-```{r setup, include=TRUE,results='hold'}
-knitr::opts_chunk$set(message = FALSE, echo = FALSE)
-library(tidyverse)
-library(vcd)
-library(vcdExtra)
-library(sjPlot)
-library(ggmosaic)
-library(ggpubr)
-
-#install.packages("openintro")
-library(openintro)
-
-```
-
 # Introduction
 
 Let us play with some categorical ( or predominantly categorical )
-datasets in R and se how we can analyze and plot them.
+datasets in R and see how we can analyze and plot them.
+
+First we will learn how to make Contingency Tables with any of the three forms. This will be useful in arriving at a common form of Table to go with plotting.
+
+Then we will use `vcd`, `mosaic`, `ggplot` and `ggpubr` to make several plots for Categorical Datasets. 
+
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(message = FALSE, echo = TRUE)
+library(tidyverse)
+library(vcd) #COntingency Tables and Plots
+library(vcdExtra) # Datasets
+library(sjPlot) # Likert Plots
+library(mosaic) # Data Analysis and Plots
+library(ggmosaic) # Mosaic Plots
+library(ggpubr) # Balloon Plots
+
+#install.packages("openintro")
+library(openintro) # More Datasets
+
+```
+
+
+# Creating Contingency Tables {.tabset .tabset-pills}
+
+Most plots for Categorical Data ( as we shall see ) require that the data be converted into a *Contingency Table*; even Statistical tests for Proportions ( the $ X^2 $ test ) need Contingency Tables. The *Frequency Table* we encountered earlier is very close to being a full-fledged Contingency Table. ( needs to add row and column margin counts )
+
+In this section we understand how to make Contingency Tables from each of the three forms.
+
+## Using base R
+
+```{r}
+Arthritis
+
+#One Way Table ( one variable )
+table(Arthritis$Treatment)
+table(Arthritis$Treatment) %>% prop.table()
+table(Arthritis$Treatment) %>% addmargins()
+```
+
+
+```{r}
+
+# Two-Way Table ( two variables )
+table(Arthritis$Treatment, Arthritis$Improved) %>% prop.table() 
+table(Arthritis$Treatment, Arthritis$Improved) %>% addmargins() # Contingency Table!!
+
+```
+
+We can use **table()** and **xtabs()** to generate multi-dimensional tables too ( More than 2D ) These will be printed out as a series of 2D tables, one for each value of the "third" parameter. 
+
+We can also **ftable()** to print these out in an attractive manner.
+
+```{r}
+
+mytable <- table(Arthritis$Treatment, Arthritis$Sex, Arthritis$Improved)
+mytable
+ftable(mytable)
+ftable(mytable) %>% addmargins()
+
+```
+
+
+## Using the `vcd` package
+
+The `vcd` ( Visualize Categorical Data ) package by Michael Friendly has a convenient function to create Contingency Tables: `structable()`; this function produces a ‘flat’ representation of a high-dimensional contingency table constructed by recursive splits (similar to the construction of mosaic charts/graphs).
+
+The arguments of `structable` are:  
+
+- a formula ($y + p \sim x + z $ ) which shows which variables are to be included as *columns* and *rows* respectively on a table  
+- a `data` argument, which can indicate a `data frame`
+
+
+```{r}
+vcd::structable(data = Arthritis, Treatment ~ Improved)
+vcd::structable(data = Arthritis, Treatment ~ Improved + Sex)
+
+
+# HairEyeColor is in multiple table form
+# structable flattens these into one, as for a mosaic chart
+HairEyeColor
+vcd::structable(HairEyeColor)
+
+## UCBAdmissions is already in Frequency Form i.e. a Contingency Table
+#`structable` tends to render flat tables, of the kind that can be thought of as a "text representation" of the `vcd::mosaic` plot
+UCBAdmissions
+vcd::structable(UCBAdmissions)
+
+```
+
+
+## Using the `mosaic` package
+
+I think this is the simplest and most elegant way of obtaining Contingency Tables:
+
+```{r}
+# One Way Table
+tally( ~ substance, data = HELPrct)
+
+# Two Way Tables
+tally( ~ substance + sex , data = HELPrct)
+tally( ~ substance | sex , data = HELPrct)
+
+tally( sex ~ substance, data = HELPrct)
+tally(~ sex |substance, data = HELPrct)
+
+```
+
+
+```{r,highlight=TRUE}
+
+# Adding Margins
+tally( ~ substance + sex , data = HELPrct, format = 'count', margins = TRUE) # Ta Da!
+tally( ~ substance + sex , data = HELPrct, format = 'percent', margins = TRUE)
+
+```
+
+### Using the `tidyverse`
+
+
+```{r}
+diamonds %>% group_by(cut, clarity) %>% dplyr::summarise( count = n())
+
+# We need to pivot this "wide" to obtain a Contingency Table
+
+diamonds %>% 
+  group_by(cut, clarity) %>% 
+  dplyr::summarise( count = n()) %>% 
+  pivot_wider(id_cols = cut, names_from = clarity, values_from = count) %>% 
+  
+  # Now add the row and column totals using the `janitor` package
+  janitor::adorn_totals(where = c("row", "col")) %>%
+  
+  # Recovert to tibble since janitor gives a "tabyl" format ( which can be useful )
+  as_tibble()
+
+```
+
+
+
+Now that we have Contingency Tables, we can plot these:
+
+# Plotting Categorical Data
 
 ## The `titanic` dataset
 
@@ -48,6 +176,10 @@ titanic
 ### `titanic` Bar Plots
 
 ```{r titanic-bar-plot}
+# Use dplyr and ggplot
+
+
+
 
 ```
 
@@ -59,11 +191,18 @@ titanic
 ```{r titanic-mosaic-plot}
 # Try the mosaic package and the ggmosaic package
 
+
+
+
 ```
 
 ### `titanic` Balloon Plot
 
 ```{r titanic-balloon-plot}
+# use ggpubr
+
+
+
 
 ```
 
@@ -123,7 +262,7 @@ Scale* variables:
 
 Pick one of the fairly large Categorical datasets that are built into `vcdExtra`: type `data(package = "vcdExtra")` in your Console.
 
-Create:
+Create:  
 - Contingency Table
 - A Bar Plot
 - A Mosaic Plot
