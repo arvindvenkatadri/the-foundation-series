@@ -10,7 +10,7 @@ output:
     toc_depth: 2
     df_print: paged
     number_sections: TRUE
-    code_folding: hide
+    code_folding: show
     code_download: TRUE
 editor_options: 
   markdown: 
@@ -266,12 +266,6 @@ banned %>% group_by(State, `Type of Ban`) %>% summarise(count = n()) %>% ungroup
 ggplot(aes(x = reorder(State, total), y = count, fill = `Type of Ban`)) + geom_col() + coord_flip()
 
 ```
-
-## Case Study -4: Dataset from Ragsdale's book
-
-### Stat Summaries
-
-# Conclusion
 
 # References
 

@@ -9,7 +9,7 @@ output:
     toc_depth: 2
     df_print: paged
     number_sections: TRUE
-    code_folding: hide
+    code_folding: show
     code_download: TRUE
 editor_options: 
   markdown: 
@@ -18,13 +18,13 @@ editor_options:
 
 # Introduction
 
-We will craate Tables for Correlations, and graphs for Correlations in
+We will create Tables for Correlations, and graphs for Correlations in
 R. As always, we will consistently use the [**Project
 Mosaic**](https://mosaic-web.org) ecosystem of packages in R (`mosaic`,
 `mosaicData` and `ggformula`).
 
 ```{r, echo = FALSE, message = FALSE, include=TRUE}
-knitr::opts_chunk$set(collapse = T, comment = "#>", echo = TRUE)
+knitr::opts_chunk$set(collapse = T, comment = "#>", echo = TRUE, fig.align = "center",fig.height = 4, fig.width = 6)
 options(tibble.print_min = 4L, tibble.print_max = 4L)
 library(mosaic) # package for stats, simulations, and basic plots
 library(mosaicData) # package containing datasets
@@ -37,7 +37,7 @@ library(corrplot) # For Correlogram plots
 ::: {#note .illustration style="background: beige"}
 Note the standard method for all commands from the `mosaic` package:
 
-goal( y \~ x \| z, data = mydata, ...)
+`goal( y ~ x | z, data = mydata, …)`
 :::
 
 ## Case Study -1: Dataset from `mosaicData`
@@ -130,15 +130,19 @@ galton_correlogram
 
 ```
 
-Clearly `height` is positvely correlated to `father` and `mother`;
+Clearly `height` is positively correlated to `father` and `mother`;
 interestingly, `height` is negatively correlated ( slightly) with
 `nkids`.
 
 Q.2: Let us confirm with a test:
 
+`height ~ father`:
+
 ```{r}
 mosaic::cor_test(height ~ father, data = Galton)
 ```
+
+`height ~ mother`:
 
 ```{r}
 mosaic::cor_test(height ~ mother, data = Galton)
@@ -146,12 +150,19 @@ mosaic::cor_test(height ~ mother, data = Galton)
 
 Q.3 What does this correlation look when split by `sex` of Child?
 
+`Sons ~ Parents`
+
 ```{r}
 
 # For the sons
 cor_test(height ~ father, data = Galton %>% filter(sex == "M"))
 cor_test(height ~ mother, data = Galton %>% filter(sex == "M"))
 
+```
+
+`Daughters ~ Parents`
+
+```{r}
 # For the daughters
 cor_test(height ~ father, data = Galton %>% filter(sex == "F"))
 cor_test(height ~ mother, data = Galton %>% filter(sex == "F"))
@@ -163,18 +174,32 @@ Regression Lines? Can we recreate Galton's famous diagram?
 
 ```{r}
 # For the sons
-gf_point(height ~ father, data = Galton %>% filter(sex == "M")) %>% gf_smooth(method = "lm")
-gf_point(height ~ mother, data = Galton %>% filter(sex == "M")) %>% gf_smooth(method = "lm")
+gf_point(height ~ father, 
+         data = Galton %>% filter(sex == "M")) %>% 
+  gf_smooth(method = "lm")
+
+gf_point(height ~ mother, 
+         data = Galton %>% filter(sex == "M")) %>% 
+  gf_smooth(method = "lm")
 
 # For the daughters
-gf_point(height ~ father, data = Galton %>% filter(sex == "F")) %>% gf_smooth(method = "lm")
-gf_point(height ~ mother, data = Galton %>% filter(sex == "F")) %>% gf_smooth(method = "lm")
+gf_point(height ~ father, 
+         data = Galton %>% filter(sex == "F")) %>% 
+  gf_smooth(method = "lm")
+
+gf_point(height ~ mother, 
+         data = Galton %>% filter(sex == "F")) %>% 
+  gf_smooth(method = "lm")
 ```
 
-An approximation to Galton's famous plot (see Wikipedia):
+An approximation to [Galton's famous
+plot](https://en.wikipedia.org/wiki/Regression_toward_the_mean):
 
 ```{r}
-gf_point(height ~ (father + mother)/2, data = Galton) %>% gf_smooth(method = "lm") %>% gf_density_2d(n = 8) %>% gf_abline(slope = 1)
+gf_point(height ~ (father + mother)/2, data = Galton) %>% 
+  gf_smooth(method = "lm") %>% 
+  gf_density_2d(n = 8) %>% 
+  gf_abline(slope = 1)
 ```
 
 How would you interpret this plot?
@@ -187,7 +212,7 @@ We will "live code" this in class!
 
 We have a decent Correlations related *workflow* in R:\
 
--   load the dataset
+-   Load the dataset
 -   `inspect` the dataset, identify Quant and Qual variables
 -   Develop Pair-Wise plots + Correlations using `GGally::ggpairs()`
 -   Develop Correlogram `corrplot::corrplot`
@@ -195,3 +220,10 @@ We have a decent Correlations related *workflow* in R:\
 -   Plot scatter plots using `gf_point` if needed.
 -   Add extra lines using `gf_abline()` to compare hypotheses that you
     may have.
+
+## Reference
+
+1.  <https://en.wikipedia.org/wiki/Regression_toward_the_mean>
+
+2.  The Farnam Street Blog. *Regression Toward the Mean: An Introduction
+    with Examples.* <https://fs.blog/regression-to-the-mean/>

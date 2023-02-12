@@ -39,22 +39,22 @@ library(SixSigma)
 
 # Introduction
 
-Here we go with another of my *TRIZ Chronicles*! The earlier editions
-are here: [Lawrence of
-Arabia](https://arvindvenkatadri.com/project/2022-12-20-triz-lawrence-of-arabia/)
+Here we go with another of my *TRIZ Chronicles* ! The earlier editions
+are here: [**Lawrence of
+Arabia**](https://arvindvenkatadri.com/project/2022-12-20-triz-lawrence-of-arabia/ "https://arvindvenkatadri.com/project/2022-12-20-triz-lawrence-of-arabia/")
 and
-[Spotify](https://arvindvenkatadri.com/project/2023-01-09-triz-spotify/).
+[**Spotify**](https://arvindvenkatadri.com/project/2023-01-09-triz-spotify/ "https://arvindvenkatadri.com/project/2023-01-09-triz-spotify/").
 
 This is another piece stems from my teaching a course on Creative
 Thinking and Problem Solving based on TRIZ, titled *Play and Invent*,
-over the past 8 years or more at the [Srishti Manipal Institute of Art,
-Design, and Technology, Bangalore
-INDIA.](https://srishtimanipalinstitute.in)
+over the past 8 years or more at the [**Srishti Manipal Institute of
+Art, Design, and Technology, Bangalore
+INDIA.**](https://srishtimanipalinstitute.in)
 
 # Rivers of Plastic
 
-According to [Our World in
-Data](https://ourworldindata.org/ocean-plastics):
+According to [**Our World in
+Data**](https://ourworldindata.org/ocean-plastics)**:**
 
 Previous research suggested that only a handful of rivers transports
 almost all of the plastic to the sea -- new research suggests this is
@@ -78,8 +78,8 @@ not the case.
 > It is estimated that 81% of ocean plastics come from Asian rivers. The
 > Philippines alone contribute around one-third of the global total.
 > Since the number of contributing rivers is much higher than previously
-> thought, we will need *global efforts* to improve waste management and
-> plastic collection rather than targeting only a few of the largest
+> thought, we will need ***global efforts*** to improve waste management
+> and plastic collection rather than targeting only a few of the largest
 > rivers.
 >
 > The latest research, which was just published in Science Advances,
@@ -134,9 +134,9 @@ another aspect of TRIZ, namely the **Separation Principles** this time.
 For a TRIZ workflow, we proceed as
 [**before**](https://arvindvenkatadri.com/project/2022-12-20-triz-lawrence-of-arabia/):
 
--   First, using the method described in [*Open Source
-    TRIZ*](https://www.youtube.com/watch?v=cah0OhCH55k), we identify
-    *knobs* or *parameters* within the situation
+-   First, using the method described in [**Open Source
+    TRIZ**](https://www.youtube.com/watch?v=cah0OhCH55k)**,** we
+    identify *knobs* or *parameters* within the situation
 
 -   We see how turning these could lead to identifying a Statement /
     Cause for a Problem in the form of a *Contradiction*.
@@ -186,36 +186,37 @@ ss.ceDiag(effect,causes.head,causes, main ="~Smoke~ Plastics on the Water",ss.co
 ```
 
 Each of the above terms in the Ishikawa can be a **knob** for us.
-[Turning the *knobs/parameters* in the Ishikawa
-Diagram](https://www.youtube.com/watch?v=cah0OhCH55k), we try to improve
-a certain Parameter or we try to reduce its effect. In doing so we could
-construct several alternative **Problem Descriptions**. ( Of course not
-all Parameters may be accessible in a given situation )
+[**Turning the *knobs/parameters* in the Ishikawa
+Diagram**](https://www.youtube.com/watch?v=cah0OhCH55k), we try to
+improve a certain Parameter or we try to reduce its effect. In doing so
+we could construct several alternative **Problem Descriptions**. ( Of
+course not all Parameters may be accessible in a given situation )
 
 -   We want to deal with the (hopefully) smaller quantities of plastic
     closer to source, rather than the much larger quantities as we get
     nearer and into the high seas.
 
--   Clearly we want the rivers to flow and give us our sense of [beauty,
-    serenity and movement, and
-    poetry](https://etc.usf.edu/lit2go/105/the-wind-in-the-willows/1795/the-open-road/),
+-   Clearly we want the rivers to flow and give us our sense of
+    [**beauty, serenity and movement, and
+    poetry**](https://etc.usf.edu/lit2go/105/the-wind-in-the-willows/1795/the-open-road/ "The Wind in the Willows by Kenneth Grahame"),
     but the same flow should not transport plastics downstream.
 
 -   We also want the plastic, if we can stop it from floating onward, to
     be "accessible" and be easily gathered from the stream.
 
--   So a simple dam or [weir-like](https://en.wikipedia.org/wiki/Weir)
-    structure, or a net could work, but would possibly ruin our sense of
-    beauty. For example, we could consider stopping the flow of water in
-    places with weirs, but then that could make the location ugly and be
-    a hindrance to recreation and transportation. The presence of
-    plastics in the water could also alter the colour of the water.
+-   So a simple dam or
+    [**weir-like**](https://en.wikipedia.org/wiki/Weir) structure, or a
+    net could work, but would possibly ruin our sense of beauty. For
+    example, we could consider stopping the flow of water in places with
+    weirs, but then that could make the location ugly and be a hindrance
+    to recreation and transportation. The presence of plastics in the
+    water could also alter the colour of the water.
 
 -   Finally, we are interested in preserving dissolved oxygen in the
     water. We want to prevent *other organic decaying material*
-    accumulating around the plastic and increasing the [Biological
+    accumulating around the plastic and increasing the [**Biological
     Oxygen
-    Demand](https://www.usgs.gov/special-topics/water-science-school/science/biological-oxygen-demand-bod-and-water).
+    Demand**](https://www.usgs.gov/special-topics/water-science-school/science/biological-oxygen-demand-bod-and-water)**.**
     Not to mention the smell.
 
 So many problems !!
@@ -243,7 +244,7 @@ More on this in just a bit!
 
 Let us take our AC and convert it into a *Technical Contradiction(TC)*,
 keeping this IFR in mind. We will look at the *48 TRIZ Parameters* in
-the [*TRIZ Contradiction Matrix*
+the [**TRIZ Contradiction Matrix**
 **(PDF)**](/pdf/TRIZ/ContradictionMatrix2003.pdf) and see which
 Parameter we want to improve, while not worsening another. Here is what
 we can obtain. We will analyze the Contradiction both ways[^2]:
@@ -256,26 +257,27 @@ we can obtain. We will analyze the Contradiction both ways[^2]:
 
 Here we choose these Parameters based on our IFR, which also reflects
 that we choose the make the **river** our focus. We want to increase the
-`volume` of the **stationary** **plastic**, while not worsening the
-`harmful effects` acting on the **river**. Note how the IFR is included
-here, in using the word **stationary** for the object: the plastic must
-**not** flow, while the river **must**.
+`volume` of the stationary plastic **in the river**, while not worsening
+the `harmful effects` acting on the **river**. Note how the IFR is
+included here, in using the word **stationary** for the object: the
+plastic must **not** flow, while the river **must**.
 
-As stated in my previous articles ( [Lawrence of
-Arabia](https://arvindvenkatadri.com/project/2022-12-20-triz-lawrence-of-arabia/)
+As stated in my previous articles ( [**Lawrence of
+Arabia**](https://arvindvenkatadri.com/project/2022-12-20-triz-lawrence-of-arabia/)
 and
-[Spotif](https://arvindvenkatadri.com/project/2023-01-09-triz-spotify/)y
+[**Spotif**](https://arvindvenkatadri.com/project/2023-01-09-triz-spotify/)**y**
 ), there is considerable flexibility and possibility for imaginative
 interpretations of the AC, using the *language of TRIZ*, the **48
-Parameters**. Parameters chosen from the TRIZ Matrix can be thought of
-as *metaphors* for the knobs that lie within our AC; Going from the AC
-to the TC is an act of *making metaphors*. We could easily have chosen
-the Parameter `Amount of Substance (10)` i.e. the plastic on the river,
-as the "metaphoric thing" to improve but the current IFR speaks of the
+Parameters** in the Contradiction Matrix. Parameters chosen from the
+TRIZ Matrix can be thought of as *metaphors* for the knobs that lie
+within our AC; Going from the AC to the TC is an act of *making
+metaphors*. We could easily have chosen the Parameter
+`Amount of Substance (10)` i.e. the plastic *on the river*, as the
+"metaphoric thing" to improve but the current IFR speaks of the
 **river**. Or we could choose `Aesthetics and Appearance (39)` as our
 target, leading to different solutions perhaps, but in a focussed
-manner. TRIZ tends to [focus our attention](v) like no other method that
-I know of.
+manner. TRIZ tends to [**focus our attention**](v) like no other method
+that I know of.
 
 We could also formulate a *Physical Contradiction(PC)*[^3]:
 
@@ -322,8 +324,8 @@ Inventive Principles! Viewing these Inventive Principles as we
 *Generalized Solutions* we try to map these back into the Problem at
 hand:
 
--   **(39)Inert Atmosphere**: Hmm...what can be inert in the river? What
-    could "inert" mean here? The river should be inert...so must not
+-   **(39)Inert Atmosphere**: Hmm...what can be inert in the River? What
+    could "inert" mean here? The River should be inert...so must not
     flow! OK, so a place where it must be still, perhaps!!
 -   **24(Intermediary)**: OK, something between the River and the
     Plastic. But...we don't want nets or dams or weirs...then what? Need
@@ -338,7 +340,7 @@ So (breathlessly): we create bubbles in the water and use them as an
 *Intermediary* to create waves/barriers that nudge the Plastic where we
 want it it to be, for collection. And of course bubbles are both *Inert*
 **and** *Atmosphere*, literally! And they are *Cheap* and *Short-Lived*
-so we need to regenerate them *Periodically !* We can periodically
+so we need to regenerate them *Periodically!* We can periodically
 *sweep* the river with a broom made of bubbles and not seriously disturb
 any other activity. Waah TRIZ, waah!
 
@@ -350,32 +352,34 @@ the River flows **horizontally** but the barrier we need to create is
 were) and give us the benefit of purifying the water too, as fountains
 do!!
 
-So there you have it! It seems that Going Dutch, even with bubbles, is a
-good idea !
+So there you have it! It seems that [**Going
+Dutch**](https://thegreatbubblebarrier.com/ "The Great Bubble Barrier")
+even with bubbles, is a good idea !
 
 ## Using TRIZ Separation Principles
 
 As Hipple explains, there is frequently an underlying **physical**
 parameter, such as *length*, *breadth*, *weight*, or *energy, or speed*
-for example that lies at the root of our *Technical Contradiction*. We
-need the River to flow all the time, but do we want flow *everywhere, at
-all locations on the river?* This is a sort of Physical Contradiction,
-and our solutions such as **(39)Inert Atmosphere** and
-**24(Intermediary)** seem to suggest that we can partition our
-river-flow in **physical Space.**
+for example that lies at the root of our *Technical Contradiction*.
 
-TRIZ offers us a smaller and more easily "memorizable" set of metaphoric
-solutions in the form of **Separation Principles**. Here they are:
+Our IFR states that we want the Plastics to not flow, and the River to
+flow at the same time. But the Plastics are
+[**in**](https://christophertyler.org/CWTyler/AlicePDFs/13treacle.pdf "The Treacle Well ( Alice in Wonderland )")
+the River! This is a sort of a Physical Contradiction!
+
+Can we make the River "less of a River" in places? Can we make
+**separate** zones in the River that flow and not flow, and allow us to
+harvest the plastic?Indeed,our Inventive Principles such as **(39)Inert
+Atmosphere** and **24(Intermediary)** suggest such a "spatial"
+separation. So we are applying SEPARATION in SPACE here, to solve a
+Physical Contradiction related to "time". TRIZ offers us a smaller and
+more easily "memorizable" set of metaphoric solutions in the form of
+**Separation Principles**. Here they are:
 
 -   [Separation in Time]{.smallcaps}
 -   [Separation in Space]{.smallcaps}
 -   [Separation on Condition]{.smallcaps}
 -   [Separation between Parts and the Whole]{.smallcaps}
-
-Our IFR states that we want the Plastics to be in the River and not in
-the River at the same time. Can we make the River "less of a River" in
-places? Can we make **separate** zones in the River don't flow and allow
-us to harvest the plastic? So we are applying SEPARATION in SPACE here.
 
 Note that while these *Separation Principles* are just a handful to
 memorize, they are in my opinion, a little harder to apply straightway.
