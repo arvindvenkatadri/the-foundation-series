@@ -49,12 +49,12 @@ This is another piece stems from my teaching a course on Creative
 Thinking and Problem Solving based on TRIZ, titled *Play and Invent*,
 over the past 8 years or more at the [**Srishti Manipal Institute of
 Art, Design, and Technology, Bangalore
-INDIA.**](https://srishtimanipalinstitute.in)
+INDIA.**](https://srishtimanipalinstitute.in "https://srishtimanipalinstitute.in")
 
 # Rivers of Plastic
 
 According to [**Our World in
-Data**](https://ourworldindata.org/ocean-plastics)**:**
+Data**](https://ourworldindata.org/ocean-plastics "Our World in Data")**:**
 
 Previous research suggested that only a handful of rivers transports
 almost all of the plastic to the sea -- new research suggests this is
@@ -132,11 +132,11 @@ another aspect of TRIZ, namely the **Separation Principles** this time.
 ## A TRIZ Analysis of the Amsterdam Bubble Barrier
 
 For a TRIZ workflow, we proceed as
-[**before**](https://arvindvenkatadri.com/project/2022-12-20-triz-lawrence-of-arabia/):
+[**before**](https://arvindvenkatadri.com/project/2022-12-20-triz-lawrence-of-arabia/ "https://arvindvenkatadri.com/project/2022-12-20-triz-lawrence-of-arabia/"):
 
 -   First, using the method described in [**Open Source
-    TRIZ**](https://www.youtube.com/watch?v=cah0OhCH55k)**,** we
-    identify *knobs* or *parameters* within the situation
+    TRIZ**](https://www.youtube.com/watch?v=cah0OhCH55k "Open Source TRIZ on YouTube")**,**
+    we identify *knobs* or *parameters* within the situation
 
 -   We see how turning these could lead to identifying a Statement /
     Cause for a Problem in the form of a *Contradiction*.
@@ -187,10 +187,11 @@ ss.ceDiag(effect,causes.head,causes, main ="~Smoke~ Plastics on the Water",ss.co
 
 Each of the above terms in the Ishikawa can be a **knob** for us.
 [**Turning the *knobs/parameters* in the Ishikawa
-Diagram**](https://www.youtube.com/watch?v=cah0OhCH55k), we try to
-improve a certain Parameter or we try to reduce its effect. In doing so
-we could construct several alternative **Problem Descriptions**. ( Of
-course not all Parameters may be accessible in a given situation )
+Diagram**](https://www.youtube.com/watch?v=cah0OhCH55k "Open Source TRIZ on Youtube"),
+we try to improve a certain Parameter or we try to reduce its effect. In
+doing so we could construct several alternative **Problem
+Descriptions**. ( Of course not all Parameters may be accessible in a
+given situation )
 
 -   We want to deal with the (hopefully) smaller quantities of plastic
     closer to source, rather than the much larger quantities as we get
@@ -205,26 +206,26 @@ course not all Parameters may be accessible in a given situation )
     be "accessible" and be easily gathered from the stream.
 
 -   So a simple dam or
-    [**weir-like**](https://en.wikipedia.org/wiki/Weir) structure, or a
-    net could work, but would possibly ruin our sense of beauty. For
-    example, we could consider stopping the flow of water in places with
-    weirs, but then that could make the location ugly and be a hindrance
-    to recreation and transportation. The presence of plastics in the
-    water could also alter the colour of the water.
+    [**weir-like**](https://en.wikipedia.org/wiki/Weir "Weir on Wikipedia")
+    structure, or a net could work, but would possibly ruin our sense of
+    beauty. For example, we could consider stopping the flow of water in
+    places with weirs, but then that could make the location ugly and be
+    a hindrance to recreation and transportation. The presence of
+    plastics in the water could also alter the colour of the water.
 
 -   Finally, we are interested in preserving dissolved oxygen in the
     water. We want to prevent *other organic decaying material*
     accumulating around the plastic and increasing the [**Biological
     Oxygen
-    Demand**](https://www.usgs.gov/special-topics/water-science-school/science/biological-oxygen-demand-bod-and-water)**.**
+    Demand**](https://www.usgs.gov/special-topics/water-science-school/science/biological-oxygen-demand-bod-and-water "https://www.usgs.gov/special-topics/water-science-school/science/biological-oxygen-demand-bod-and-water")**.**
     Not to mention the smell.
 
 So many problems !!
 
 With all this discussion, we can state at least one of our Problems as
 an [**Administrative
-Contradiction(AC)**](https://altshuller.ru/world/eng/triz6.asp) in
-*plain English*:
+Contradiction(AC)**](https://altshuller.ru/world/eng/triz6.asp "https://altshuller.ru/world/eng/triz6.asp")
+in *plain English*:
 
 > <center>**AC**: We wish to pull out plastics from the **river**
 > without interrupting other human activities (economic / recreational /
@@ -244,7 +245,8 @@ More on this in just a bit!
 
 Let us take our AC and convert it into a *Technical Contradiction(TC)*,
 keeping this IFR in mind. We will look at the *48 TRIZ Parameters* in
-the [**TRIZ Contradiction Matrix**
+the [**TRIZ**
+](/pdf/TRIZ/ContradictionMatrix2003.pdf)[**Contradiction**](/pdf/TRIZ/ContradictionMatrix2003.pdf "Download PDF of TRIZ Contradiction Matrix 2003")[**Matrix**
 **(PDF)**](/pdf/TRIZ/ContradictionMatrix2003.pdf) and see which
 Parameter we want to improve, while not worsening another. Here is what
 we can obtain. We will analyze the Contradiction both ways[^2]:
@@ -263,10 +265,10 @@ included here, in using the word **stationary** for the object: the
 plastic must **not** flow, while the river **must**.
 
 As stated in my previous articles ( [**Lawrence of
-Arabia**](https://arvindvenkatadri.com/project/2022-12-20-triz-lawrence-of-arabia/)
+Arabia**](https://arvindvenkatadri.com/project/2022-12-20-triz-lawrence-of-arabia/ "Lawrence of Arabia: A TRIZ Analysis")
 and
-[**Spotif**](https://arvindvenkatadri.com/project/2023-01-09-triz-spotify/)**y**
-), there is considerable flexibility and possibility for imaginative
+[**Spotify**](https://arvindvenkatadri.com/project/2023-01-09-triz-spotify/ "TRIZ Analysis of a Recent Spotify Ad")),
+there is considerable flexibility and possibility for imaginative
 interpretations of the AC, using the *language of TRIZ*, the **48
 Parameters** in the Contradiction Matrix. Parameters chosen from the
 TRIZ Matrix can be thought of as *metaphors* for the knobs that lie
@@ -276,8 +278,9 @@ metaphors*. We could easily have chosen the Parameter
 "metaphoric thing" to improve but the current IFR speaks of the
 **river**. Or we could choose `Aesthetics and Appearance (39)` as our
 target, leading to different solutions perhaps, but in a focussed
-manner. TRIZ tends to [**focus our attention**](v) like no other method
-that I know of.
+manner. TRIZ tends to [**focus our
+attention**](https://scholar.princeton.edu/sites/default/files/kahneman/files/attention_hi_quality.pdf "Daniel Kahneman")
+like no other method that I know of.
 
 We could also formulate a *Physical Contradiction(PC)*[^3]:
 
