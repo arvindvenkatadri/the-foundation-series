@@ -64,6 +64,11 @@ library(blogdown)
 <https://www.figma.com/>
 
 
+### DisplayR
+<https://www.displayr.com/dashboard-examples/>
+
+###
+
 
 
 ## References

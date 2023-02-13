@@ -40,8 +40,6 @@ library(forecast)  # Make forecasts and decompose time series
 # devtools::install_github("FinYang/tsdl")
 library(tsdl) # Time Series Data Library from Rob Hyndman
 
-# Don't install this if you are a student !! ;-D
-library(downloadthis)
 
 ```
 
@@ -206,13 +204,14 @@ payment methods.  Strongly seasonal for both, with seasonal variation increasing
 Let us read and inspect in the US births data from 2000 to 2014. Download this data by clicking on the icon below, and saving the downloaded file in a sub-folder called `data` inside your project:
 
 ```{r echo=FALSE}
-
+# Don't install this if you are a student !! ;-D
+library(downloadthis)
 download_file(
   path = "data/US_births_2000-2014_SSA.csv",
   output_extension = ".csv",
   output_name = "US_births_2000-2014_SSA",
   button_label = "Download US Births Data",
-  button_type = "danger",
+  button_type = "info",
   has_icon = TRUE,
   icon = "fa fa-save",
   self_contained = FALSE
@@ -354,42 +353,6 @@ births_2000_2014 %>%
 ```
 
 
-## A Workflow in Orange
-
-Download the Orange Workflow file by clicking the icon below, and open
-it in Orange.
-
-```{r, echo=FALSE, eval=FALSE}
-download_file(
-  path = "files/timeseries.ows",
-  output_extension = ".ows",
-  output_name = "orange-timeseries",
-  button_label = "Download Orange Workflow",
-  button_type = "danger",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
-```
-
-## A Workflow in Radiant
-
-Download the Radiant Workflow statefile by clicking the icon above, and
-upload/open it in Radiant. You need to start radiant from the `Add-In`
-menu in RStudio.
-
-```{r, echo=FALSE,eval=FALSE}
-download_file(
-  path = "files/timeseries.rda",
-  output_extension = ".rda",
-  output_name = "radiant-timeseries",
-  button_label = "Download Radiant Workflow",
-  button_type = "danger",
-  has_icon = TRUE,
-  icon = "fa fa-save",
-  self_contained = FALSE
-)
-```
 
 ## A Workflow in R
 
@@ -397,11 +360,13 @@ Download the RMarkdown tutorial file by clicking the icon above and open
 it in RStudio or rstudio.cloud.
 
 ```{r, echo=FALSE}
+# Don't install this if you are a student !! ;-D
+library(downloadthis)
 download_file(
   path = "files/timeseries.Rmd",
   output_extension = ".Rmd",
   output_name = "r-timeseries",
-  button_label = "Download RMArkdown Workflow",
+  button_label = "Download RMarkdown Workflow",
   button_type = "danger",
   has_icon = TRUE,
   icon = "fa fa-save",

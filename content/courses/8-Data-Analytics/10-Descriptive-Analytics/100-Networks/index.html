@@ -1,8 +1,9 @@
 ---
 title: "\U0001F578 Networks"
-subtitle: "Networks"
+subtitle: "How Things Connect and Work Together"
 author: "Arvind Venkatadri"
-date: "2023-01-18"
+date: 12/July/2022
+lastmod: "2023-02-13"
 weight : 100
 summary: "Networks and Connections and what happens over them"
 tags:
@@ -12,15 +13,16 @@ tags:
 - Arc Diagrams
 image:
   placement: 2
-  caption: 'Image credit: [**Alice In Wonderland dot Net**](https://www.alice-in-wonderland.net/)'
+  caption: Photo by <a href="https://unsplash.com/@designedbyflores?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Omar Flores</a> on <a href="https://unsplash.com/photos/MOO6k3RaiwE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
   focal_point: ""
   preview_only: true
 projects: []
 links:
-# - icon: flask
-#   icon_pack: fas
-#   name: lab
-#   url: https://r-for-artists.netlify.app/labs/06-Grammar-of-Maps.html
+- icon: flask
+  icon_pack: fas
+  name: lab
+  url: /labs/R-for-Artists/07-networks/07-Grammar-of-Networks.html
 #   
 # - icon: magic
 #   icon_pack: fas
@@ -30,24 +32,60 @@ links:
 
 
 
-<p><img src="featured.jpg" /></p>
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
 <p>What is a network?</p>
+<p>Network graphs show relationships between entities: what sort they are,
+how strong they are, and even of they change over time.</p>
+<p>We will examine data structures pertaining both to the <em>entities</em> and
+the <em>relationships</em> between them and look at the data <em>object</em> that can
+combine these aspects together. Then we will see how these are plotted,
+what the <em>structure</em> of the plot looks like. There are also <em>metrics</em>
+that we can calculate for the network, based on its structure. We will
+of course examine geometric metaphors that can represent various classes
+of entities and their relationships.</p>
+<p>Network graphs can be rendered both as static and interactive and we
+will examine R packages that render both kinds of plots.</p>
+<p>There is a another kind of structure: one that combines <em>spatial</em> and
+<em>network</em> data in one. We will defer that for a future module !</p>
 <p>{{% youtube "DrhhdekP1ZQ" %}}</p>
 </div>
-<div id="what-is-network-data" class="section level2">
-<h2>What is Network Data?</h2>
+<div id="packages-that-we-will-need" class="section level2">
+<h2>Packages that we will need</h2>
+<pre class="r"><code>knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+
+library(tidygraph) # Creating Graph objects and analyzing them
+library(ggraph) # Plotting graphs with various layout options
+library(graphlayouts) # More layout options
+library(igraphdata) # Sample graph datasets
+
+library(sand) # Statistical Analysis of Graph Data</code></pre>
 </div>
 <div id="what-kind-network-graphs-will-we-make" class="section level2">
 <h2>What kind Network graphs will we make?</h2>
-<p>Here is a network map of the characters in Victor Hugo’s <code>Les Miserables</code>:</p>
+<p>Here is a network map of the characters in Victor Hugo’s
+<a href="https://www.gutenberg.org/files/135/135-h/135-h.htm"><code>Les Miserables</code></a>:</p>
 <iframe width="100%" height="676" frameborder="0" src="https://observablehq.com/embed/@d3/force-directed-graph-canvas?cells=chart">
 </iframe>
+<p>And this:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
 </div>
 <div id="conclusion" class="section level2">
 <h2>Conclusion</h2>
+<p>We see that Networks reveal <em>Structure</em> of relationships between entities, their types and strengths, and also reveal behavioural aspects as to which entities or relationships are important which are peripheral to the overall network.</p>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>
+<ol style="list-style-type: decimal">
+<li><p><a href="http://hadley.nz/">Hadley Wickham</a>, <a href="https://djnavarro.net/">Danielle
+Navarro</a>, and <a href="https://www.data-imaginist.com/">Thomas Lin
+Pedersen</a>, <em>ggplot2: Elegant Graphics for Data Analysis</em>.<a href="https://ggplot2-book.org/networks.html" class="uri">https://ggplot2-book.org/networks.html</a></p></li>
+<li><p>Omar Lizardo and Isaac Jilbert, <em>Social Networks: An Introduction</em>.
+<a href="https://bookdown.org/omarlizardo/_main/" class="uri">https://bookdown.org/omarlizardo/_main/</a></p></li>
+<li><p>Mark Hoffman, <em>Methods for Network Analysis.</em>
+<a href="https://bookdown.org/markhoff/social_network_analysis/" class="uri">https://bookdown.org/markhoff/social_network_analysis/</a></p></li>
+<li><p>Eric D. Kolaczyk and Gábor Csárdi. <em>Statistical Analysis of Network Data with R, 2nd
+Edition</em>.<a href="https://github.com/kolaczyk/sand" class="uri">https://github.com/kolaczyk/sand</a></p></li>
+</ol>
 </div>

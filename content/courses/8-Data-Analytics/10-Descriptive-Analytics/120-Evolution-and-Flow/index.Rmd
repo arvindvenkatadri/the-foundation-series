@@ -2,7 +2,8 @@
 title: "\U0001F30A Evolution and Flow"
 subtitle: "Changes in Information over space and time"
 author: "Arvind Venkatadri"
-date: "`r Sys.Date()`"
+date: 01/Feb/2023
+lastmod: "`r Sys.Date()`"
 weight: 120
 summary: "Changes in Information over space and time"
 tags:
@@ -11,26 +12,25 @@ tags:
 - Alluvial Plots
 - Sankey Diagrams
 - Chord Diagrams
-- Waterfall Plots
-- Bump Charts
+
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: Photo by ArtHouse Studio (https://www.pexels.com/photo/river-delta-and-majestic-mountain-landscape-4337896/)
   focal_point: Smart
 
 external_link: ""
 links:
-- icon: circle
-  icon_pack: fas
-  name: Orange Tutorial
-  url: "labs/Data-Analytics/distributions.ows"
+# - icon: circle
+#   icon_pack: fas
+#   name: Orange Tutorial
+#   url: "labs/Data-Analytics/distributions.ows"
 # - icon: sun
 #   icon_pack: fas
 #   name: Radiant
 #   url: "labs/Data-Analytics/distributions.rda"
-- icon: r-project
-  icon_pack: fab
-  name: R Tutorial
-  url: "labs/Data-Analytics/evolutionstions.html"
+# - icon: r-project
+#   icon_pack: fab
+#   name: R Tutorial
+#   url: "labs/Data-Analytics/evolutions.html"
 # - icon: database
 #   icon_pack: fas
 #   name: Sample Datasets
@@ -42,39 +42,74 @@ url_slides: ""
 url_video: ""
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-library(blogdown)
+
+# Introduction
+
+What do we mean by "evolution" here?
+We mean data that changes in *category* or *membership* over *time* or *space*. The dataset may contain only categories and the time and space parameters may be implicit.
+
+A visual example: what does the graph below depict?
+
+<iframe width="100%" height="684" frameborder="0"
+  src="https://observablehq.com/embed/@d3/sankey?cells=chart"></iframe>
+  
+
+This diagram show how energy is converted or transmitted before being consumed or lost: supplies are on the left, and demands are on the right. (Data: UK Department of Energy & Climate Change via Tom Counsell)
+
+An example in words: Students opting for different courses during a semester at college. What axes would you include in your plot?
+
+
+# Packages that we will need
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+
 library(tidyverse)
 library(patchwork)
 library(ggstream) # stream plots in R
 library(ggalluvial)
 
-
-```
-
-## Introduction
-
-What do we mean by "evolution" here?
-We mean data that changes in *category* or *membership* over *time* or *space*. The dataset may contain only categories and the time and space parameters may be implicit.
-For example: what does the graph below depict?
-
-
-```{r, echo=FALSE}
-
 ```
 
 
 
-## What Time Evolution Charts can we plot?
+
+## Time Evolution Charts
 
 In these cases, the x-axis is typically *time*...and we chart the variable of another Quant variable with respect to time, using a *line* geometry. 
 
-Let is take a healthcare budget dataset from[Our World in Data](https://ourworldindata.org/grapher/public-health-expenditure-share-GDP-OWID): We will plot graphs for 5 countries (India, China, Brazil, Russia, Canada )
+Let is take a healthcare budget dataset from[Our World in Data](https://ourworldindata.org/grapher/public-health-expenditure-share-GDP-OWID): We will plot graphs for 5 countries (India, China, Brazil, Russia, Canada ). Download this data by clicking the button below and save into your Project folder.
 
-```{r charts, echo=FALSE, warning=FALSE,message=FALSE}
+
+
+
+
+```{r read-data, echo=TRUE, warning=FALSE,message=FALSE}
 health <-
   read_csv("data/public-health-expenditure-share-GDP-OWID.csv")
+
+```
+
+
+```{r,echo=FALSE}
+library(downloadthis)
+health %>%
+  download_this(
+    output_name = "mtcars dataset",
+    output_extension = ".csv",
+    button_label = "Download data as csv",
+    button_type = "info",
+    has_icon = TRUE,
+    icon = "fa fa-save"
+  )
+
+```
+
+
+
+
+```{r plot-data}
+
 health_filtered <- health %>%
   filter(Entity %in% c(
     "India",
@@ -84,15 +119,28 @@ health_filtered <- health %>%
     "Russia",
     "Sweden"
   ))
+
+
 p1 <- ggplot(health_filtered,
-         aes(x = Year, y = public_health_expenditure_pc_gdp, colour = Entity)) + geom_line() + labs(y = "Healthcare Budget\n as % of GDP")
+         aes(x = Year, 
+             y = public_health_expenditure_pc_gdp, 
+             colour = Entity)) + 
+  geom_line() + 
+  labs(y = "Healthcare Budget\n as % of GDP")
 
 p2 <-  
   ggplot(health_filtered,
-         aes(x = Year, y = public_health_expenditure_pc_gdp, fill = Entity)) + geom_area()+ labs(y = "Healthcare Budget\n as % of GDP")
+         aes(x = Year, 
+             y = public_health_expenditure_pc_gdp, 
+             fill = Entity)) + geom_area() + 
+  labs(y = "Healthcare Budget\n as % of GDP")
 
 
-p1 / p2 + plot_layout(nrow = 2) + plot_annotation(title = "Line and Area Charts to show Evolution (over Time )",subtitle = "", tag_levels = 'A') & theme_minimal()
+p1 / p2 + plot_layout(nrow = 2) + 
+  plot_annotation(title = "Line and Area Charts to show Evolution (over Time )",
+                  subtitle = "", 
+                  tag_levels = 'A') & 
+  theme_minimal()
 
 ```
 
@@ -110,6 +158,8 @@ Sankeys are best used when you want to show a many-to-many mapping between two d
 knitr::include_graphics("images/sankey.png")
 
 ```
+
+Let us look at the famous Titanic Dataset:
 
 ```{r more-charts, echo=FALSE, warning=FALSE,message=FALSE}
 library(ggalluvial)
@@ -129,19 +179,34 @@ ggplot(data = .,
           "stratified by demographics and survival")
 ```
 
-Here is another example of a Sankey Diagram:This diagram show how energy is converted or transmitted before being consumed or lost: supplies are on the left, and demands are on the right. Data: Department of Energy & Climate Change via Tom Counsell
 
-<iframe width="100%" height="684" frameborder="0"
-  src="https://observablehq.com/embed/@d3/sankey?cells=chart"></iframe>
-  
-  
 
 
 ## Conclusion
+
+Evolution can be over *time*, or over *space/categories/affiliations* or *both*, where the time part is implicit in the way the categories are depicted. 
+
+
+## Your Turn
+
+1. Head off to the [International Energy Agency's](https://www.iea.org/data-and-statistics/data-sets) webpage for free Energy related datasets. Plot Sankey and Time Graphs for a dataset of your choice. 
+
+1. Download the *Chinese Companies' Cashflow* Dataset from [**Kaggle.com**](https://www.kaggle.com/datasets/franciscofeng/chinese-companies-cash-flow). Choose a few companies from the list and plot *time evolution* and *Sankey Diagrams* for their various cash flows.
 
 
 
 ## References
 
+1. *MINARD’S MAPS AND SANKEY’S DIAGRAMS*, <https://www.studioalicino.it/en/blog/minard’s-maps-and-sankey’s-diagrams>
+
+1. Data-to-Viz Sankey Diagram Page <https://www.data-to-viz.com/graph/sankey.html>
+
 1. Global Migration, <https://download.gsb.bund.de/BIB/global_flow/>
  A good example of the use of a Chord Diagram.
+
+1. EuroStat Energy Flow Diagram Tool. <https://ec.europa.eu/eurostat/web/energy/energy-flow-diagrams>
+
+1. Internation Energy Agency. India https://www.iea.org/sankey/#?c=India&s=Balance
+
+1. Sankey Diagrams in Excel: 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Ckc7X0Gg-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>

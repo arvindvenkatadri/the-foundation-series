@@ -1,51 +1,243 @@
 ---
 title: "\U0001F58F Ratings and Rankings"
-subtitle: "Ranking"
+subtitle: "On what Basis do we compare and grade things? How do we represent that?"
 author: "Arvind Venkatadri"
-date: "2022-12-05"
-weight : 60
-summary: "Comparisons between observations and between variables"
+dat: 13/Feb/2023
+lastmod: "2023-02-13"
+order : 60
+abstract: "On what Basis do we compare and grade things? How do we represent that?"
+summary: "On what Basis do we compare and grade things? How do we represent that?"
 tags:
 - Bar Chart
 - Lollipop Chart
 - Radar Chart
 - Word Cloud
 - Bump Chart
-
-featured: no
 image:
-  placement: 2
-  caption: 'Image credit: [**Alice In Wonderland dot Net**](https://www.alice-in-wonderland.net/)'
-  focal_point: ""
-  preview_only: true
-projects: []
-output:
-  html_document:
-    toc_float: true
-    theme: flatly
-    toc: true
-    code_folding: true
-links:
-# - icon: flask
+  caption: Photo by <a href="https://unsplash.com/@floschmaezz?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Florian Schmetz</a> on <a href="https://unsplash.com/photos/fbCtFV3FkfE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
+  focal_point: Smart
+external_link: ""
+# links:
+# - icon: circle
 #   icon_pack: fas
-#   name: lab
-#   url: https://r-for-artists.netlify.app/labs/06-Grammar-of-Maps.html
-#   
-# - icon: magic
+#   name: Orange Tutorial
+#   url: "labs/Data-Analytics/correlations.ows"
+# - icon: sun
 #   icon_pack: fas
-#   name: Introduction Slides
-#   url: https://r-for-artists.netlify.app/slides/06-Spatial-Data-in-R.html
+#   name: Radiant
+#   url: "labs/Data-Analytics/correlations.rda"
+# - icon: r-project
+#   icon_pack: fab
+#   name: R Tutorial
+#   url: "labs/Data-Analytics/correlations.html"
+# - icon: database
+#   icon_pack: fas
+#   name: Sample Datasets
+#   url: "labs/Data-Analytics/data/qdd-data.zip"
+slides: ""
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
 ---
 
 
 
-<p><img src="featured.jpg" /></p>
-<div id="a-workflow-in-orange" class="section level2">
-<h2>A Workflow in Orange</h2>
+<div id="setup-the-packages" class="section level1">
+<h1>Setup the Packages</h1>
+<pre class="r"><code>knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse) # includes ggplot for plotting
+
+library(ggbump) # Bump Charts
+
+library(ggiraphExtra) # Radar, Spine, Donut and Donut-Pie combo charts !!
+
+# install.packages(&quot;devtools&quot;)
+# devtools::install_github(&quot;ricardo-bion/ggradar&quot;)
+library(ggradar) # Radar Plots</code></pre>
 </div>
-<div id="a-workflow-in-radiant" class="section level2">
-<h2>A Workflow in Radiant</h2>
+<div id="what-graphs-are-we-going-to-see-today" class="section level1">
+<h1>What graphs are we going to see today?</h1>
+<p>When we wish to compare the size of things and rank them, there are
+quite a few ways to do it.</p>
+<p>Bar Charts and Lollipop Charts are immediately obvious when we wish to
+rank things on <em>one</em> aspect or parameter.</p>
+<p>When we wish to rank the same set of objects against <strong>multiple</strong>
+aspects or parameters, then we can use Bump Charts and Radar Charts.</p>
+<div id="lollipop-charts" class="section level2">
+<h2>Lollipop Charts</h2>
+<pre class="r"><code># Sample data set
+set.seed(1)
+df1 &lt;- tibble(x = LETTERS[1:10],
+                 y = sample(20:35, 10, replace = TRUE))
+df1</code></pre>
+<pre><code>## # A tibble: 10 × 2
+##    x         y
+##    &lt;chr&gt; &lt;int&gt;
+##  1 A        28
+##  2 B        23
+##  3 C        26
+##  4 D        20
+##  5 E        21
+##  6 F        32
+##  7 G        26
+##  8 H        30
+##  9 I        33
+## 10 J        21</code></pre>
+<pre class="r"><code>ggplot(df1) + 
+  geom_segment(aes(x = x, xend = x, y = 0, yend = y)) + 
+  geom_point(aes(x = x, y = y, colour = x), size = 5)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p>We can flip this horizontally <em>and</em> reorder the <span class="math inline">\(x\)</span> categories in order
+of decreasing ( or increasing ) <span class="math inline">\(y\)</span>, using <code>forcats::fct_reorder</code>:</p>
+<pre class="r"><code>ggplot(df1) + 
+  geom_segment(aes(x = fct_reorder(x, -y), # in decreasing order of y
+                   xend = fct_reorder(x, -y), 
+                   y = 0, 
+                   yend = y)) + 
+  geom_point(aes(x = x, y = y, colour = x), size = 5) +
+  coord_flip() + 
+  xlab(&quot;Group&quot;) +
+  ylab(&quot;&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
 </div>
-<div id="a-workflow-in-r" class="section level2">
-<h2>A Workflow in R</h2>
+<div id="bump-charts" class="section level2">
+<h2>Bump Charts</h2>
+<p>Bump Charts track the ranking of several objects based on <em>other</em>
+parameters, such as time/month or even category. We can think of this a
+a <em>Basis</em> for ranking. For instance, what is the opinion score of a set
+of products across various categories of users:</p>
+<pre class="r"><code>year &lt;- rep(2019:2021, 4)
+position &lt;- c(4, 2, 2, 3, 1, 4, 2, 3, 1, 1, 4, 3)
+product &lt;- c(&quot;A&quot;, &quot;A&quot;, &quot;A&quot;,
+            &quot;B&quot;, &quot;B&quot;, &quot;B&quot;, 
+            &quot;C&quot;, &quot;C&quot;, &quot;C&quot;,
+            &quot;D&quot;, &quot;D&quot;, &quot;D&quot;)
+
+df2 &lt;- tibble(x = year,
+                 y = position,
+                 group = product)
+
+df2</code></pre>
+<pre><code>## # A tibble: 12 × 3
+##        x     y group
+##    &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;
+##  1  2019     4 A    
+##  2  2020     2 A    
+##  3  2021     2 A    
+##  4  2019     3 B    
+##  5  2020     1 B    
+##  6  2021     4 B    
+##  7  2019     2 C    
+##  8  2020     3 C    
+##  9  2021     1 C    
+## 10  2019     1 D    
+## 11  2020     4 D    
+## 12  2021     3 D</code></pre>
+<p>We need to use a new package called, what else, <code>ggbump</code> to create our
+<code>Bump Charts</code>:</p>
+<pre class="r"><code>library(ggbump)
+
+ggplot(df2) +
+  geom_bump(aes(x = x, y = y, color = group)) +
+  geom_point(aes(x = x, y = y, color = group), size = 6) +
+  theme_minimal() +
+  xlab(&quot;Time&quot;) +
+  ylab(&quot;Product Rank&quot;) +
+  scale_color_brewer(palette = &quot;RdBu&quot;) # Change Colour Scale</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/bump-1-1.png" width="672" /></p>
+<p>We can add labels along the “bump lines” and remove the legend
+altogether:</p>
+<pre class="r"><code>ggplot(df2) +
+  geom_bump(aes(x = x, y = y, color = group)) +
+  geom_point(aes(x = x, y = y, color = group), size = 6) +
+  theme_minimal() +
+  scale_color_brewer(palette = &quot;RdBu&quot;) + # Change Colour Scale
+# Same as before up to her
+# Add the labels at start and finish
+
+  geom_text(data = df2 %&gt;% filter(x == min(x)),
+            aes(x = x - 0.1, label = group, y = y),
+            size = 5, hjust = 1) +
+  geom_text(data = df2 %&gt;% filter(x == max(x)),
+            aes(x = x + 0.1, label = group, y = y),
+            size = 5, hjust = 0) +
+  xlab(&quot;Time&quot;) +
+  ylab(&quot;Product Rank&quot;) +
+  theme(legend.position = &quot;none&quot;)</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/bump-2-1.png" width="672" /></p>
+</div>
+<div id="radar-charts" class="section level2">
+<h2>Radar Charts</h2>
+<p>The same data can be plotted on a roughly circular set of axes, with the
+radial distance defining the rank against each axes.</p>
+<p>Of course, we can use <code>ggradar</code>, which is at this time (Feb 2023) a
+development version and not yet part of CRAN. We will still try it, and
+another package <code>ggiraphExtra</code> which IS a part of CRAN.</p>
+<pre class="r"><code>#library(ggradar)
+
+set.seed(4)
+df3 &lt;- tibble(Product = c(&quot;G1&quot;, &quot;G2&quot;, &quot;G3&quot;),
+              Power = runif(3), 
+              Cost = runif(3),
+              Harmony = runif(3),
+              Style = runif(3),
+              Size = runif(3),
+              Manufacturability = runif(3),
+              Durability = runif(3),
+              Universality = runif(3))
+df3</code></pre>
+<pre><code>## # A tibble: 3 × 9
+##   Product   Power  Cost Harmony  Style  Size Manufacturability Durabil…¹ Unive…²
+##   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;             &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
+## 1 G1      0.586   0.277   0.724 0.0731 0.100             0.455     0.962   0.997
+## 2 G2      0.00895 0.814   0.906 0.755  0.954             0.971     0.762   0.506
+## 3 G3      0.294   0.260   0.949 0.286  0.416             0.584     0.715   0.490
+## # … with abbreviated variable names ¹​Durability, ²​Universality</code></pre>
+<pre class="r"><code>ggradar::ggradar(plot.data = df3,
+                 axis.label.size = 3, # Titles of Params
+                 grid.label.size = 4, # Score Values/Circles
+                 group.point.size = 3,# Product Points Sizes
+                 group.line.width = 1, # Product Line Widths
+                 fill = TRUE, # fill the radar polygons
+                 fill.alpha = 0.3, # Not too dark, Arvind
+                 legend.title = &quot;Product&quot;) +
+  theme_void()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/using%20ggradar-1.png" width="672" /></p>
+<p>From the <code>ggiraphExtra</code> website:</p>
+<blockquote>
+<p>Package <code>ggiraphExtra</code> contains many useful functions for exploratory
+plots. These functions are made by both ‘ggplot2’ and ‘ggiraph’
+packages. You can make a static ggplot or an interactive ggplot by
+setting the parameter interactive=TRUE.</p>
+</blockquote>
+<pre class="r"><code># library(ggiraphExtra)
+
+ggiraphExtra::ggRadar(data = df3,
+        aes(colour = Product),
+        rescale = FALSE,
+          )  + # recale = TRUE makes it look different...try!!
+  theme_minimal()</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/using%20ggiraphExtra-1.png" width="672" /></p>
+<p>Both render very similar-looking radar charts and the syntax is not too
+intimidating!!</p>
+</div>
+<div id="your-turn" class="section level2">
+<h2>Your Turn</h2>
+<ol style="list-style-type: decimal">
+<li>Take the <code>HELPrct</code> dataset from our well used <code>mosaicData</code> package.
+Plot ranking charts using each of the public health issues that you
+can see in that dataset. What choice will you make for the the axes?</li>
+<li>Try the <code>SaratogaHouses</code> dataset also from <code>mosaicData</code>.</li>
+</ol>
+</div>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+<ol style="list-style-type: decimal">
+<li>Keon-Woong Moon, R Package <code>ggiraphExtra</code>,
+<a href="https://cran.r-project.org/web/packages/ggiraphExtra/vignettes/introduction.html" class="uri">https://cran.r-project.org/web/packages/ggiraphExtra/vignettes/introduction.html</a></li>
+</ol>
 </div>
