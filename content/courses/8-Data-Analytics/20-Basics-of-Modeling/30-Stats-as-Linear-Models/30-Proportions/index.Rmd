@@ -61,15 +61,18 @@ library(easystats)
 
 ```
 
+# Independence of Categorical Variables
 
-
-### Independence of Categorical Variables
-
-R provides for several tests of independence of **CATEGORICAL** variables.
-These are the chi-square, Fisher exact and Cochran-Mantel- Haenszel tests.
+R provides for several tests of independence of **CATEGORICAL**
+variables. These are the chi-square, Fisher exact and Cochran-Mantel-
+Haenszel tests.
 
 #### Pearson Chi-Square Test
-Chi square test needs a frequency table to be created first and works on two variables in the Table to decide if they are independent or not. *A crosstable is needed since the variables are categorical and need counts or scores to check for their independence.*
+
+Chi square test needs a frequency table to be created first and works on
+two variables in the Table to decide if they are independent or not. *A
+crosstable is needed since the variables are categorical and need counts
+or scores to check for their independence.*
 
 ```{r Chi Square Test}
 myxtable <- xtabs(data = Arthritis,formula = ~ Treatment + Improved)
@@ -81,65 +84,78 @@ stats::chisq.test(myxtable) # Checks if variables are independent. So P value ne
 stats::chisq.test(myxtable2)
 
 ```
-Since the p-value of the Pearson Chisquare Test is very small, the variables Treatment and Improved are NOT independent and are therefore related. 
 
-With Improved and Sex, there is no dependence. Here the p-value is more than 5% so it is likely that these variables are independent. 
+Since the p-value of the Pearson Chisquare Test is very small, the
+variables Treatment and Improved are NOT independent and are therefore
+related.
 
-#### Fisher Exact Test
+With Improved and Sex, there is no dependence. Here the p-value is more
+than 5% so it is likely that these variables are independent.
 
-The Fisher exact test uses a Contingency Table, as with a Pearson ChiSquare Test. 
+## Fisher Exact Test
+
+The Fisher exact test uses a Contingency Table, as with a Pearson
+ChiSquare Test.
 
 ```{r Fisher Exact Test}
 stats::fisher.test(myxtable)
 stats::fisher.test(myxtable2)
 ```
- - Treatment + Improved: The p-value is much smaller than 5% so these two variables are NOT independent. Hence Treatment and Improved are dependent. 
- -Treatment + Sex: p-value is pretty high, so Treatment and Sex are independent.
 
-#### Cochran-Mantel-Haenszel Test
+-   Treatment + Improved: The p-value is much smaller than 5% so these
+    two variables are NOT independent. Hence Treatment and Improved are
+    dependent. -Treatment + Sex: p-value is pretty high, so Treatment
+    and Sex are independent.
 
-Another test for Independence is the Cochran-Mantel-Haenszel test: This test uses a *3D Contingency Table* and checks for the null hypothesis that *the first two variables are independent at every stratum of the third*. So we choose:
+## Cochran-Mantel-Haenszel Test
 
- - Treatment + Improved vs Sex
- 
+Another test for Independence is the Cochran-Mantel-Haenszel test: This
+test uses a *3D Contingency Table* and checks for the null hypothesis
+that *the first two variables are independent at every stratum of the
+third*. So we choose:
+
+-   Treatment + Improved vs Sex
+
 ```{r Cochran-Mantel-Haenszel Test}
 myxtable3 <- xtabs(data = Arthritis, ~ Treatment + Improved + Sex)
 stats::mantelhaen.test(myxtable3)
 
 ```
 
-Hence Treatment and Improved are NOT independent across all values of Sex. Hence, Treated individuals reported improvement more often than those receiving Placebos, after controlling for Sex. 
+Hence Treatment and Improved are NOT independent across all values of
+Sex. Hence, Treated individuals reported improvement more often than
+those receiving Placebos, after controlling for Sex.
 
-#### Associations between categorical variables
+## Associations between categorical variables
 
-When Tests for Independence fail and the variables are NOT independent, we need to explore **the extent of the association.** 
+When Tests for Independence fail and the variables are NOT independent,
+we need to explore **the extent of the association.**
 
 The *vcd* package allows us to look at these aspects:
 
-  - "phi" coefficient
-  - Contingency coefficient
-  - Cramer's V ( for a 2D table) ## Phew !!!
-  
-We know Treatment and Improved are NOT independent, so lets look at these cat-variables:
-  
+-   "phi" coefficient
+-   Contingency coefficient
+-   Cramer's V ( for a 2D table) \## Phew !!!
+
+We know Treatment and Improved are NOT independent, so lets look at
+these cat-variables:
+
 ```{r  Measures of Associations between variables }
 vcd::assocstats(myxtable)
 vcd::assocstats(myxtable2)
 ```
-Larger magnitudes mean larger associations. But I can't tell in absolute terms what is a "good number".
 
-I wonder why the Phi Coefficient is NA: oh, it is computed only for 2 x 2 tables !!
+Larger magnitudes mean larger associations. But I can't tell in absolute
+terms what is a "good number".
 
-
+I wonder why the Phi Coefficient is NA: oh, it is computed only for 2 x
+2 tables !!
 
 ## A Workflow in Orange
 
-
 ## A Workflow in Radiant
 
-
 ## A Workflow in R
-
 
 # References
 
@@ -156,7 +172,6 @@ I wonder why the Phi Coefficient is NA: oh, it is computed only for 2 x 2 tables
 6.  Modern Statistics with R: From wrangling and exploring data to
     inference and predictive modelling by [Måns
     Thulin](http://www.modernstatisticswithr.com/)
-
 
 # Structure of this document
 
@@ -390,8 +405,8 @@ that there is no relationship between x and y*.
 
 1.  **L**: $\color{blue}{linear}$ relationship
 2.  **I**: Errors are **independent** (across observations)
-3.  **N**: y is $\color{red}{normally}$ distributed at each "level"
-    of x.
+3.  **N**: y is $\color{red}{normally}$ distributed at each "level" of
+    x.  
 4.  **E**: equal variance at all levels of x. No *heteroscedasticity*.
     ![OLS Assumptions](ols_assumptions.png)
 

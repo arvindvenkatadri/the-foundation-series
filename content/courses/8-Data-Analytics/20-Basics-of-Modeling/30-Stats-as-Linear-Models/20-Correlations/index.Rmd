@@ -62,29 +62,29 @@ library(easystats)
 
 ```
 
-
 # Tests for Correlation
 
-Correlation **r** is a measure of *strength* and *direction* of *linear association* between two variables. **r** is between $[-1,+1]$, with $0$ implying no association/correlation.
+Correlation **r** is a measure of *strength* and *direction* of *linear
+association* between two variables. **r** is between $[-1,+1]$, with $0$
+implying no association/correlation.
 
-From this definition, the *linear model* lends itself in a straightforward way as a model to interpret *correlation*. Intuitively, the slope of the linear model could be related to the correlation between y and x.
-
+From this definition, the *linear model* lends itself in a
+straightforward way as a model to interpret *correlation*. Intuitively,
+the slope of the linear model could be related to the correlation
+between y and x.
 
 ## The Correlation Test
 
+One of the basic Questions we would have of our data is: Does some
+variable depend upon another in some way? Does $y$ depend upon $x$?
 
-One of the basic Questions we would have of our data is:
-Does some variable depend upon another in some way?
-Does $y$ depend upon $x$?
+A **Correlation Test** is designed to answer exactly this question.
 
-A **Correlation Test** is designed to answer exactly this question. 
-   
-Let us now see how a Correlation Test can be re-formulated as
-a Linear Model + Hypothesis Test.
+Let us now see how a Correlation Test can be re-formulated as a Linear
+Model + Hypothesis Test.
 
-
-Now we look at the numbers, using some toy data first and then a real dataset.
-
+Now we look at the numbers, using some toy data first and then a real
+dataset.
 
 ```{r data_genr, echo=FALSE}
 rnorm_fixed  <- function(N, mu = 0, sd = 1) {
@@ -125,7 +125,6 @@ mydata_long_y
 
 ## Pearson Correlation {.tabset .tabset-pills}
 
-
 ### Model
 
 The model for Pearson Correlation tests is exactly the Linear Model:
@@ -138,8 +137,6 @@ H_0: Null\ Hypothesis\ => \beta_1 = 0\\\
 H_a: Alternate\ Hypothesis\ => \beta_1 \ne 0\\
 \end{aligned}
 $$
-
-
 
 ### Code
 
@@ -162,10 +159,10 @@ print(lin_scl)
 rbind(cor, lin, lin_scl) %>% print()
 ```
 
-Notes:\
-1. The *p-value* for Pearson Correlation and for the *slope* in the
-linear model is the same ( 0.1053 ). Which means we cannot reject the
-NULL hypothesis of "no relationship".
+[[Notes:\\\\](Notes:\\){.uri}]([Notes:\\](Notes:\){.uri}){.uri} 1. The
+*p-value* for Pearson Correlation and for the *slope* in the linear
+model is the same ( 0.1053 ). Which means we cannot reject the NULL
+hypothesis of "no relationship".
 
 2.  Here is the relationship between the slope and correlation:
 
@@ -191,11 +188,14 @@ lin
 
 ```
 
-Why are $r$ and $\beta_1$ different, though the `p-value` is suspiciously the same!? 
+Why are $r$ and $\beta_1$ different, though the `p-value` is
+suspiciously the same!?
 
 Did we miss a factor of $\frac{-0.463}{-0.231} = 2$ somewhere...??
 
-Let us **scale** the variables to within `{-1, +1}` : (subtract the mean and divide by sd) and re-do the Linear Model with **scaled** versions $x$ and $y$:
+Let us **scale** the variables to within `{-1, +1}` : (subtract the mean
+and divide by sd) and re-do the Linear Model with **scaled** versions
+$x$ and $y$:
 
 ```{r}
 # Scaled linear model
@@ -207,41 +207,47 @@ lin_scl
 
 So we conclude:
 
-1. **When both x and y have the same standard deviation, the slope from the linear model and the Pearson correlation are the same**. Here, since x has twice the `sd` of y, the ratio of **slope** = `r lin$estimate[2]` to **r** = `r cor$estimate` is 0.5. 
+1.  **When both x and y have the same standard deviation, the slope from
+    the linear model and the Pearson correlation are the same**. Here,
+    since x has twice the `sd` of y, the ratio of **slope** =
+    `r lin$estimate[2]` to **r** = `r cor$estimate` is 0.5.
 
-1. There is this relationship between the **slope in the linear model** and **Pearson correlation**:
+2.  There is this relationship between the **slope in the linear model**
+    and **Pearson correlation**:
 
 $$
 Slope\ \beta_1 = \frac{sd_y}{sd_x} * r
 $$
 
-The slope is usually much more interpretable and informative than the correlation coefficient.
+The slope is usually much more interpretable and informative than the
+correlation coefficient.
 
-2. Hence a linear model using `scale()` for both variables will show slope = **r**.
+2.  Hence a linear model using `scale()` for both variables will show
+    slope = **r**.
 
 Slope_Scaled: `r lin_scl$estimate[2]` = Correlation: `r cor$estimate`
 
-3. Finally, the *p-value* for Pearson Correlation and that for the *slope* in the linear model is the same ($0.1053$). Which means we cannot reject the NULL hypothesis of "no relationship".
-
+3.  Finally, the *p-value* for Pearson Correlation and that for the
+    *slope* in the linear model is the same ($0.1053$). Which means we
+    cannot reject the NULL hypothesis of "no relationship".
 
 ### Example
 
 TBD
 
-
-
-
-
-
 ## Spearman Correlation {.tabset .tabset-pills}
 
 ### Model
 
-In some cases the **LINE** assumptions may not hold. 
+In some cases the **LINE** assumptions may not hold.
 
-Nonlinear relationships, non-normally distributed data ( with large **outliers** ) and working with *ordinal* rather than continuous data: these situations necessitate the use of Spearman's *ranked* correlation scores. (**Ranked**, not **sign-ranked**.). 
+Nonlinear relationships, non-normally distributed data ( with large
+**outliers** ) and working with *ordinal* rather than continuous data:
+these situations necessitate the use of Spearman's *ranked* correlation
+scores. (**Ranked**, not **sign-ranked**.).
 
-See the example below: We choose to look at the `gpa_study_hours` dataset. It has two numeric columns `gpa` and `study_hours`:
+See the example below: We choose to look at the `gpa_study_hours`
+dataset. It has two numeric columns `gpa` and `study_hours`:
 
 ```{r gpa_study_hours}
 glimpse(gpa_study_hours)
@@ -261,10 +267,13 @@ ggplot(gpa_study_hours, aes(x = study_hours, y = gpa)) + geom_point() + geom_smo
 
 ```
 
+Hmm...not normally distributed, and there is a sort of increasing
+relationship, however is it linear? And there is some evidence of
+heteroscedasticity, so the LINE assumptions are clearly in violation.
+Pearson correlation would not be the best idea here.
 
-Hmm...not normally distributed, and there is a sort of increasing relationship, however is it linear? And there is some evidence of heteroscedasticity, so the LINE assumptions are clearly in violation. Pearson correlation would not be the best idea here. 
-
-Let us quickly try it anyway, using a Linear Model for the **scaled** `gpa` and `study_hours` variables, from where we get: 
+Let us quickly try it anyway, using a Linear Model for the **scaled**
+`gpa` and `study_hours` variables, from where we get:
 
 ```{r Pearson_example_1}
 
@@ -282,12 +291,12 @@ model_gpa %>%
 ```
 
 The correlation estimate is $0.133$; the `p-value` is $0.065$ (and the
-`confidence interval` includes $0$). 
+`confidence interval` includes $0$).
 
-Hence we fail to reject the NULL hypothesis that `study_hours` and `gpa` have no relationship. But can this be right? 
+Hence we fail to reject the NULL hypothesis that `study_hours` and `gpa`
+have no relationship. But can this be right?
 
 Should we use another test, that does not **need** the LINE assumptions?
-
 
 ### "Signed Rank" Values
 
@@ -298,20 +307,22 @@ of the data values is used instead of the data itself.)
 
 **Signed Rank** is calculated as follows:
 
-1. Take the absolute value of each observation in a sample
+1.  Take the absolute value of each observation in a sample
 
-2. Place the <u>*ranks*</u> in order of (absolute magnitude). The
-smallest number has *rank = 1* and so on. This gives is **ranked data**. 
+2.  Place the <u>*ranks*</u> in order of (absolute magnitude). The
+    smallest number has *rank = 1* and so on. This gives is **ranked
+    data**.
 
-3. Give each of the ranks the sign of the original observation ( + or -). This gives us **signed** ranked data. 
+3.  Give each of the ranks the sign of the original observation ( + or
+    -). This gives us **signed** ranked data.
 
 ```{r signed_rank_function}
 signed_rank <- function(x) {sign(x) * rank(abs(x))}
 
 ```
 
-
-Let us see how this might work by comparing data and its signed-rank version...A quick set of plots:
+Let us see how this might work by comparing data and its signed-rank
+version...A quick set of plots:
 
 ```{r data_plots}
 p1 <- ggplot(mydata_long,aes(x = group, y = value)) +
@@ -345,11 +356,11 @@ patchwork::wrap_plots(p1,p2, nrow = 1, guides = "collect")
 
 ```
 
-So the means of the **ranks** three separate variables seem to be in the same order as the means of the data variables themselves.
+So the means of the **ranks** three separate variables seem to be in the
+same order as the means of the data variables themselves.
 
-How about associations between data? Do ranks reflect well what the data might? 
-
-
+How about associations between data? Do ranks reflect well what the data
+might?
 
 ```{r Spearman_Plot}
 # Plot the data
@@ -371,8 +382,10 @@ patchwork::wrap_plots(p1,p2, nrow = 1, guides = "collect")
 
 ```
 
-
-The slopes are almost identical, $0.25$ for both original data and ranked data for $y\sim x$. So maybe *ranked* and even *sign_ranked* data could work, and if it can work despite LINE assumptions not being satisfied, that would be nice!
+The slopes are almost identical, $0.25$ for both original data and
+ranked data for $y\sim x$. So maybe *ranked* and even *sign_ranked* data
+could work, and if it can work despite LINE assumptions not being
+satisfied, that would be nice!
 
 ### How does Sign-Rank data work?
 
@@ -409,7 +422,6 @@ broom::tidy() %>% select(estimate, p.value)
 cor2
 ```
 
-
 ```{r}
 # Linear Models using rank
 cor3 <- lm(rank(y) ~ 1 + rank(x),data = mydata_wide) %>% 
@@ -417,12 +429,14 @@ cor3 <- lm(rank(y) ~ 1 + rank(x),data = mydata_wide) %>%
 cor3
 ```
 
-
 Notes:
 
-1. When ranks are used, the slope of the linear model ($\beta_1$) has the same value as the Spearman correlation coefficient ( $\rho$ ).
-    
-1. Note that the slope from the linear model now has an intuitive interpretation: **the number of ranks y changes for each change in rank of x**. ( Ranks are "independent" of `sd` )
+1.  When ranks are used, the slope of the linear model ($\beta_1$) has
+    the same value as the Spearman correlation coefficient ( $\rho$ ).
+
+2.  Note that the slope from the linear model now has an intuitive
+    interpretation: **the number of ranks y changes for each change in
+    rank of x**. ( Ranks are "independent" of `sd` )
 
 ### Example
 
@@ -460,13 +474,11 @@ reject the NULL hypothesis and state that there is a relationship
 between these two variables. The **linear** relationship is evaluated as
 a correlation of `0.882`.
 
-
 ```{r}
 # Other ways using other packages
 mosaic::cor_test(gpa ~ study_hours, data = gpa_study_hours) %>% broom:: tidy() %>% select(estimate, p.value, conf.low, conf.high)
 
 ```
-
 
 ```{r}
 
@@ -477,20 +489,24 @@ statsExpressions::corr_test(data = gpa_study_hours,
 
 # References
 
-1.  *Common statistical tests are linear models (or: how to teach stats)* by [Jonas Kristoffer Lindeløv](https://lindeloev.github.io/tests-as-linear/)
+1.  *Common statistical tests are linear models (or: how to teach
+    stats)* by [Jonas Kristoffer
+    Lindeløv](https://lindeloev.github.io/tests-as-linear/)
 
-1.  [CheatSheet](https://lindeloev.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf)
+2.  [CheatSheet](https://lindeloev.github.io/tests-as-linear/linear_tests_cheat_sheet.pdf)
 
-1.  *Common statistical tests are linear models: a work through* by [Steve Doogue](https://steverxd.github.io/Stat_tests/)
+3.  *Common statistical tests are linear models: a work through* by
+    [Steve Doogue](https://steverxd.github.io/Stat_tests/)
 
-1.  [Jeffrey Walker "Elements of Statistical Modeling for Experimental Biology"](https://www.middleprofessor.com/files/applied-biostatistics_bookdown/_book/)
+4.  [Jeffrey Walker "Elements of Statistical Modeling for Experimental
+    Biology"](https://www.middleprofessor.com/files/applied-biostatistics_bookdown/_book/)
 
-1.  Diez, David M & Barr, Christopher D & Çetinkaya-Rundel, Mine:
+5.  Diez, David M & Barr, Christopher D & Çetinkaya-Rundel, Mine:
     [OpenIntro Statistics](https://www.openintro.org/book/os/)
-    
-1.  Modern Statistics with R: From wrangling and exploring data to inference and predictive modelling by [Måns Thulin](http://www.modernstatisticswithr.com/)
 
-1. [Jeffrey Walker "A linear-model-can-be-fit-to-data-with-continuous-discrete-or-categorical-x-variables"](https://www.middleprofessor.com/files/applied-biostatistics_bookdown/_book/intro-linear-models.html#a-linear-model-can-be-fit-to-data-with-continuous-discrete-or-categorical-x-variables)
-    
+6.  Modern Statistics with R: From wrangling and exploring data to
+    inference and predictive modelling by [Måns
+    Thulin](http://www.modernstatisticswithr.com/)
 
-    
+7.  [Jeffrey Walker "A
+    linear-model-can-be-fit-to-data-with-continuous-discrete-or-categorical-x-variables"](https://www.middleprofessor.com/files/applied-biostatistics_bookdown/_book/intro-linear-models.html#a-linear-model-can-be-fit-to-data-with-continuous-discrete-or-categorical-x-variables)

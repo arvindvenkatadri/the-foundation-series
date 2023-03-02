@@ -12,11 +12,8 @@ tags:
 - Tree Diagrams
 - Arc Diagrams
 image:
-  placement: 2
-  caption: Photo by <a href="https://unsplash.com/@designedbyflores?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Omar Flores</a> on <a href="https://unsplash.com/photos/MOO6k3RaiwE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
+  caption: Photo by Omar Flores on Unsplash
   focal_point: ""
-  preview_only: true
 projects: []
 links:
 - icon: flask
@@ -28,6 +25,7 @@ links:
 #   icon_pack: fas
 #   name: Introduction Slides
 #   url: https://r-for-artists.netlify.app/slides/06-Spatial-Data-in-R.html
+
 ---
 
 
@@ -139,7 +137,7 @@ karate %>%
   scale_edge_width(range = c(0.1, 4)) +
   scale_edge_colour_manual(values = c("yellow", "pink", "lightblue", "grey")) +
   theme_graph() +   
-  labs(title = "Zachary's Karate Club Membership Network") +
+  # labs(title = "Zachary's Karate Club Membership Network") +
   theme(legend.position = "none", title = element_text(size = 6))
 
 

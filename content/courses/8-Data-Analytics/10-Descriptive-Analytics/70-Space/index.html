@@ -1,21 +1,19 @@
 ---
 title: "\U0001F5FA Maps"
-subtitle: "Maps"
+subtitle: "Working with Spatial Data"
 author: "Arvind Venkatadri"
-date: "2022-12-16"
+date: "2023-02-13"
 weight : 70
-summary: "Geospatial Data and how it varies based on location"
+summary: ""
 tags:
 - Maps
 - Cartograms
 - Chloropleth Maps
-
 featured: no
 image:
   placement: 2
-  caption: 
+  caption: "Photo by Monstera:(https://www.pexels.com/photo/creative-string-artwork-of-world-map-7411910/)"
   focal_point: ""
-  preview_only: true
 projects: []
 output:
   html_document:
@@ -24,15 +22,15 @@ output:
     toc: true
     code_folding: true
 links:
-# - icon: flask
-#   icon_pack: fas
-#   name: lab
-#   url: https://r-for-artists.netlify.app/labs/06-Grammar-of-Maps.html
-#   
-# - icon: magic
-#   icon_pack: fas
-#   name: Introduction Slides
-#   url: https://r-for-artists.netlify.app/slides/06-Spatial-Data-in-R.html
+- icon: flask
+  icon_pack: fas
+  name: Spatial Data and Maps
+  url: /labs/R-for-Artists/06-spatial/06-Grammar-of-Maps.html
+
+- icon: magic
+  icon_pack: fas
+  name: Interactive Maps
+  url: /labs/R-for-Artists/06-spatial/PlayingwithLeaflet.html
 ---
 
 
@@ -40,30 +38,20 @@ links:
 <div id="introduction" class="section level1">
 <h1>Introduction</h1>
 <p>First; let us watch a short, noisy video on maps:</p>
-<p>Maps That Will Change The Way You See The World:(<a href="https://www.youtube.com/watch?v=YH2sAbXv7p4" class="uri">https://www.youtube.com/watch?v=YH2sAbXv7p4</a>)</p>
+<p>Maps That Will Change The Way You See The World:</p>
 <p>{{% youtube "YH2sAbXv7p4" %}}</p>
-<div id="what-kind-of-maps-will-we-make" class="section level2">
-<h2>What kind of maps will we make?</h2>
-<div id="chlorpleth" class="section level3">
-<h3>Chlorpleth</h3>
+</div>
+<div id="what-kind-of-maps-will-we-make" class="section level1">
+<h1>What kind of maps will we make?</h1>
+<div id="chorpleth" class="section level2">
+<h2>Chorpleth</h2>
 <iframe width="100%" height="536" frameborder="0" src="https://observablehq.com/embed/2930afc559123cab?cells=chart">
 </iframe>
 </div>
-<div id="bubble-map" class="section level3">
-<h3>Bubble Map</h3>
+<div id="bubble-map" class="section level2">
+<h2>Bubble Map</h2>
 <iframe width="100%" height="665" frameborder="0" src="https://observablehq.com/embed/9e3c148cb813bfbc?cells=chart">
 </iframe>
-</div>
-</div>
-<div id="a-workflow-in-orange" class="section level2">
-<h2>A Workflow in Orange</h2>
-</div>
-<div id="a-workflow-in-radiant" class="section level2">
-<h2>A Workflow in Radiant</h2>
-<p>Radiant does not support map-making. We need to do it one of the many many ways available in R directly!</p>
-</div>
-<div id="a-workflow-in-r" class="section level2">
-<h2>A Workflow in R</h2>
 <div id="animal-and-bird-migration" class="section level3">
 <h3>1. Animal and Bird Migration</h3>
 <ol style="list-style-type: decimal">

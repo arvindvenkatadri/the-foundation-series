@@ -135,4 +135,8 @@ knitr::include_graphics("images/Ratio Interval Ordinal Nominal.PNG")
 
 ```
 
+## References and Reading
+
+1. Datasets Have Worldviews,<https://pair.withgoogle.com/explorables/dataset-worldviews/>
+
 

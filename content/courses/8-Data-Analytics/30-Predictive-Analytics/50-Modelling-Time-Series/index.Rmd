@@ -167,60 +167,77 @@ library(nomnoml)
 
 
 ```{nomnoml}
+# background: lightyellow
+# stroke: black
+# lineWidth: 3
+# font: Calibri
+# fontSize: 16
+# padding: 8
+# spacing: 40
+# body: bold
+# title: bold
+# .coeff: fill=#8f8 visual=ellipse
+# .mult: fill=hotpink visual=ellipse
+# .weight: fill=dodgerblue visual=ellipse
+# .note: fill=#fe3
 [<start>st]->[<input>input]
-[<input> input]->[<package> Time  Series|Decomposition]
-[<package> Time  Series|Decomposition]->[<component> Mean/Level]
-[<package> Time  Series|Decomposition]->[<component> Slope/Trend]
-[<package> Time  Series|Decomposition]->[<component> Seasonal]
+[<input> input]->[<package> Time  Series]
+[<package> Time  Series]->[<choice>Decomposition]
+[<choice>Decomposition]->[<transceiver> Mean/Level]
+[<choice>Decomposition]->[<transceiver> Slope/Trend]
+[<choice>Decomposition]->[<transceiver> Seasonal]
 
 //Simple Exponential Smoothing
-[<component> Mean/Level]->[Delay A1]
-[Delay A1]->[Delay A2]
-[Delay A2]->[Delay A3]
-[Delay A3]...->...[Delay AN]
-[Delay A1]->[<state> A1]
-[Delay A2]->[<state> A2]
-[Delay A3]->[<state> A3]
-[Delay AN]->[<state> AN]
-[<state> AN]---([<note> $$alpha(1-alpha)^i$$]
+[<component> Mean/Level]->[<state> Delay A1]
 
-[<state> A1]->[<state> Add1]
-[<state> A2]->[<state> Add1]
-[<state> A3]->[<state> Add1]
-[<state> AN]->[<state> Add1]
-[<state> Add1]->[<end> Output]
+[<state> Delay A1]->[<state> Delay A2]
+[<state> Delay A2]->[<state> Delay A3]
+[<state> Delay A3]...->...[<state> Delay AN]
+[<state> Delay A1]->[<coeff> A1]
+[<state> Delay A2]->[<coeff> A2]
+[<state> Delay A3]->[<coeff> A3]
+[<state> Delay AN]->[<coeff> AN]
+[<coeff> AN]---([<note> alpha(1-alpha)^i]
+
+
+[<coeff> A1]->[<coeff> Add1]
+[<coeff> A2]->[<coeff> Add1]
+[<coeff> A3]->[<coeff> Add1]
+[<coeff> AN]->[<coeff> Add1]
+[<coeff> Add1]->[<end> Output]
 
 //Holt 
-[<component> Slope/Trend]->[Delay B1]
-[Delay B1]->[Delay B2]
-[Delay B2]->[Delay B3]
-[Delay B3]...->...[Delay BN]
-[Delay B1]->[<state> B1]
-[Delay B2]->[<state> B2]
-[Delay B3]->[<state> B3]
-[Delay BN]->[<state> BN]
-[<state> BN]---([<note> $$beta(1-beta)^i$$]
-[<state> B1]->[<state> Add2]
-[<state> B2]->[<state> Add2]
-[<state> B3]->[<state> Add2]
-[<state> BN]->[<state> Add2]
-[<state> Add2]->[<end> Output]
+[<component> Slope/Trend]->[<state> Delay B1]
+[<state> Delay B1]->[<state> Delay B2]
+[<state> Delay B2]->[<state> Delay B3]
+[<state> Delay B3]...->...[<state> Delay BN]
+[<state> Delay B1]->[<mult> B1]
+[<state> Delay B2]->[<mult> B2]
+[<state> Delay B3]->[<mult> B3]
+[<state> Delay BN]->[<mult> BN]
+[<mult> BN]---([<note> beta(1-beta)^i]
+[<mult> B1]->[<mult> Add2]
+[<mult> B2]->[<mult> Add2]
+[<mult> B3]->[<mult> Add2]
+[<mult> BN]->[<mult> Add2]
+[<mult> Add2]->[<end> Output]
 
 // Holt Winters
-[<component> Seasonal]->[Delay C1]
-[Delay C1]->[Delay C2]
-[Delay C2]->[Delay C3]
-[Delay C3]...->...[Delay CN]
-[Delay C1]->[<state> C1]
-[Delay C2]->[<state> C2]
-[Delay C3]->[<state> C3]
-[Delay CN]->[<state> CN]
-[<state> CN]---([<note> $$gamma(1-gamma)^i$$]
-[<state> C1]->[<state> Add3]
-[<state> C2]->[<state> Add3]
-[<state> C3]->[<state> Add3]
-[<state> CN]->[<state> Add3]
-[<state> Add3]->[<end> Output]
+[<component> Seasonal]->[<state> Delay C1]
+[<state> Delay C1]->[<state> Delay C2]
+[<state> Delay C2]->[<state> Delay C3]
+[<state> Delay C3]...->...[<state> Delay CN]
+[<state> Delay C1]->[<weight> C1]
+[<state> Delay C2]->[<weight> C2]
+[<state> Delay C3]->[<weight> C3]
+[<state> Delay CN]->[<weight> CN]
+[<weight> CN]---([<note> gamma(1-gamma)^i]
+[<weight> C1]->[<weight> Add3]
+[<weight> C2]->[<weight> Add3]
+[<weight> C3]->[<weight> Add3]
+[<weight> CN]->[<weight> Add3]
+[<weight> Add3]->[<end> Output]
+
 
 // Final Output
 [<end> Output]->[<receiver> Forecast]
@@ -239,7 +256,7 @@ The idea behind **triple exponential smoothing**, or the *Holt-Winters Smoothing
 All three models use **memory**: at each time instant in the Time Series, a set of past values, along with the present sample is used to make a prediction of the relevant parameter ( level / slope / seasonal). These are then added together to make the **forecast**.
 
 The memory in each case controlled by a parameter: `alpha` for the estimate of the level 
-`beta` for the slope estimate, and `gamma` for the seasonal component estimate at the current time point. All these parameters are between `0` and `1`. The model takes a **weighted average** of past values of each parameter. The weights are derived in the form of $\alpha(1-\alpha)^i$, where $i$ defines how old the sample is compared to the present one, thus forming a set of weights that decrease *exponentially* with delay. Values of $\alpha, \beta. \gamma$ that are close to 0 mean that significant weightage is placed on observations in the past.(Memory is "stronger").To express this in mathematical notation we now need three equations: one for level, one for the trend and one to combine the level and trend to get the expected $\hat y$ .
+`beta` for the slope estimate, and `gamma` for the seasonal component estimate at the current time point. All these parameters are between `0` and `1`. The model takes a **weighted average** of past values of each parameter. The weights are derived in the form of $\alpha(1-\alpha)^i$, where $i$ defines how old the sample is compared to the present one, thus forming a set of weights that decrease *exponentially* with <delay> Delay. Values of $\alpha, \beta. \gamma$ that are close to 0 mean that significant weightage is placed on observations in the past.(Memory is "stronger").To express this in mathematical notation we now need three equations: one for level, one for the trend and one to combine the level and trend to get the expected $\hat y$ .
 
 To make forecasts using simple exponential smoothing in R, we can use the `HoltWinters()` function in R, or the `forecast::ets()` function from `forecasts`. This latter function s more powerful. 
 

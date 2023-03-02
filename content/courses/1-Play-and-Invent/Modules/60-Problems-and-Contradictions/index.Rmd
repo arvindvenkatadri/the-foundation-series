@@ -33,6 +33,9 @@ library(blogdown)
 library(hugodown)
 ```
 
+
+![](chesterton-riddle.jpeg)
+
 Let us take our first step into the world of TRIZ. What did you think of immediately when you saw the first picture on this page?
 
 In TRIZ, the fundamental way of looking at an Inventive Design Problem is to discover and propose **Contradictions**. These are rendered in as **simple** and **stark** a language as possible...the starker the better!
