@@ -10,7 +10,7 @@ output:
     toc_float: TRUE
     toc_depth: 2
     number_sections: TRUE
-    code_folding: hide
+    code_folding: show
     code_download: TRUE
     df_print: paged
 editor_options: 

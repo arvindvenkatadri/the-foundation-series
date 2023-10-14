@@ -96,15 +96,24 @@ and
 Here is a dataset from Jeremy Singer-Vine's blog, [Data Is Plural](https://www.data-is-plural.com/). This is a list of all books banned in schools across the US. 
 
 ```{r, echo=FALSE}
-banned <- readxl::read_xlsx(path = "banned.xlsx",
-                            sheet = "Sorted by Author & Title")
+banned <- readxl::read_xlsx(path = "./banned.xlsx",
+                            sheet = "Sorted by Author & Title") %>%
+  janitor::clean_names()
 
-banned %>% download_this(output_name = "banned",output_extension = ".csv", button_label = "Banned Books data", button_type = "default", icon = "fa fa-save")
+banned
+banned %>% download_this(output_name = "banned", output_extension = ".csv", button_label = "Banned Books data", button_type = "default", icon = "fa fa-save")
 
 ``` 
 ```{r}
-banned_by_state <- banned %>% group_by(State) %>% summarise(total = n())
-banned %>% group_by(State, `Type of Ban`) %>% summarise(count = n()) %>%
+banned_by_state <- banned %>% 
+  group_by(state) %>% 
+  summarise(total = n())
+banned_by_state
+
+banned %>% 
+  group_by(state, type_of_ban) %>% 
+  summarise(count = n()) %>%
+  slice_max(order_by = count,n = 10) %>%
  #  pivot_wider(.,id_cols = State,
  #              names_from = `Type of Ban`,
  #              values_from = count) %>% janitor::clean_names() %>% 
@@ -113,7 +122,8 @@ banned %>% group_by(State, `Type of Ban`) %>% summarise(count = n()) %>%
  #                  banned_pending_investigation = 0,
  #                  banned_from_classrooms = 0)) %>% 
  # mutate(total = sum(across(where(is.integer)))) %>%
-ggplot(aes(x = reorder(State, banned_by_state$total), y = count, fill = `Type of Ban`)) + geom_col() + coord_flip()
+ggplot(aes(x = reorder(state, count), y = count, fill = type_of_ban)) + geom_col() + labs(title = "Banned Books by Type across the US") + xlab("State") + coord_flip() + theme_classic()
+
 ```
 
 

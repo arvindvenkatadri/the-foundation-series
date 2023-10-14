@@ -414,6 +414,7 @@ ggplot(Night, aes(x = Date, y = Deaths, colour = Cause)) +
 ---
 
 ## Nightingale's famous Coxcomb or Rose Plot
+
 ```{r, echo=FALSE, out.height="450px", out.width="850px", fig.align='center'}
 ggplot(Night, aes(x = factor(Date), y = Deaths, fill = Cause)) +
     # do it as a stacked bar chart first
