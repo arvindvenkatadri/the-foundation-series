@@ -1,24 +1,26 @@
 ---
-date: "`r Sys.Date()`"
 title: "TRIZ - Problems and Contradictions"
-linkTitle: TRIZ - Problems and Contradictions
-external_link: ""
+date: "`r Sys.Date()`"
+linkTitle: "TRIZ - Problems and Contradictions"
+output: word_document
 weight: 60
 view: 2
 image:
-  caption: Photo by <a href="https://unsplash.com/@etiennegirardet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Etienne Girardet</a> on <a href="https://unsplash.com/s/photos/contradiction?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  caption: Photo by <a href="https://unsplash.com/@etiennegirardet?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Etienne
+    Girardet</a> on <a href="https://unsplash.com/s/photos/contradiction?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
-slides: ""
-summary: 
+slides: ''
+summary: null
 tags:
 - Problem Spotting
 - Contradictions in Daily Life
 - Aspects and Knobs
 - Ishikawa Fishbone Diagram
-url_code: ""
-url_pdf: ""
-url_slides: ""
-url_video: ""
+url_code: ''
+url_pdf: ''
+url_slides: ''
+url_video: ''
+external_link: ''
 ---
 
 

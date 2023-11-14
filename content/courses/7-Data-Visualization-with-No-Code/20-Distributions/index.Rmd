@@ -104,6 +104,8 @@ banned
 banned %>% download_this(output_name = "banned", output_extension = ".csv", button_label = "Banned Books data", button_type = "default", icon = "fa fa-save")
 
 ``` 
+
+
 ```{r}
 banned_by_state <- banned %>% 
   group_by(state) %>% 
