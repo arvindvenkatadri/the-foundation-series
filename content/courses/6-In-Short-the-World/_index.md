@@ -1,8 +1,8 @@
 ---
 date: "2021-12-28"
-linkTitle: In Short, the World
+linkTitle: Literary Jukebox - In Short, the World
 summary: The Real and the Imagined in World Literature
-title: "\U0001F5FA In Short, the World"
+title: "\U0001F5FA Literary Jukebox - In Short, the World"
 view: 2
 weight: 6
 type: book

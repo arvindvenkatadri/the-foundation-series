@@ -20,14 +20,16 @@ library(blogdown)
 
 ### Story
 
-We will read this terrifying story by this great Writer. 
-
-<u>[**A Choice of Butchers**](/pdf/ISTW/A-Choice-of-Butchers.pdf)</u>
+We will read this terrifying story by this great Writer. <u>[**The Hitchhiking Game**](/pdf/ISTW/MilanKundera-hitchhiking.pdf)</u>
 
 
 # Themes
 
-
+- Young Love
+- Games and Teasing
+- Ego and Pain
+- Rules in the Game
+- Consents
 
 
 ### Notes and References
@@ -59,7 +61,7 @@ I shall no longer maintain hopes of compassion from you
 Nor shall you gaze at me with your deceptive glances.   
 ***na mere dil ki dhaDkan laDkhaDaaye merii baato.n me.n***  
 My heart shall no longer tremble when I speak,   
-***na zaahir ho tumhaari kashm-kash ka raaz nazaro.n se***
+***na zaahir ho tumhaari kashm-kash ka raaz nazaro.n se***.  
 Nor shall your glances reveal the secret of your torment.  
 
 ***tumhe.n bhii koii uljhan roktii hai pesh-qadmii se***  

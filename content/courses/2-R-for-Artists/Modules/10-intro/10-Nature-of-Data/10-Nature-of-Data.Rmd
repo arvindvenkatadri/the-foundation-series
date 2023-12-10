@@ -1,7 +1,7 @@
 ---
-title: "The Nature of Data"
-subtitle: "Understanding Human Experience, Experiments, and Where Data comes from" 
-author: "Arvind Venkatadri"
+title: The Nature of Data
+subtitle: Understanding Human Experience, Experiments, and Data
+author: Arvind Venkatadri
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
@@ -16,7 +16,7 @@ output:
       highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
-      ratio: "16:9"
+      ratio: 16:9
 ---
 
 ```{r setup, include=FALSE,warning=FALSE}
@@ -44,7 +44,7 @@ today <- format(Sys.Date(),
                 format="%B %d %Y")
 library(xaringanthemer)
 library(xaringanExtra)
-library(xaringanBuilder)
+#library(xaringanBuilder)
 library(renderthis)
 library(tidyverse)
 library(patchwork)
