@@ -2,7 +2,7 @@ title: The Foundation Series
 baseurl: 'https://the-foundation-series.netlify.app'
 copyright: ''
 theme: starter-hugo-academic
-enableGitInfo: false
+enableGitInfo: true
 defaultContentLanguage: en
 hasCJKLanguage: false
 defaultContentLanguageInSubdir: false

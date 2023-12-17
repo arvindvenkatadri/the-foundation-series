@@ -295,6 +295,7 @@ ggplot(data, aes(x = x)) +
 # curve(eq, 0, 50) also works
 
 ```
+
 *PC Examples*:  
 
 - Landing gear must be present on an airplane in order to land and takeoff. It should not be present during flight because of an increase in air drag. The physical contradiction is that **the landing gear must be both present and absent**. This contradiction is resolved by separating the requirements in time — make the landing gear retractable.   
@@ -309,7 +310,7 @@ Here is Albert Einstein speaking on **The Language of Science**. The transcript 
 
 One quote from this short reading seems very apposite here:
 
-> "The supernational character of scientific concepts and scientific language is due to the fact that they have been set up by the best brains of all countries and all times. In solitude, and yet in cooperative effort as regards the final effect, they created the spiritual tools for the technical revolutions which have transformed the life of mankind in the last centuries. Their system of concepts has served as a guide in the bewildering chaos of perceptions so that we learned to grasp general truths from particular observations."
+> "The super-national character of scientific concepts and scientific language is due to the fact that they have been set up by the best brains of all countries and all times. In solitude, and yet in cooperative effort as regards the final effect, they created the spiritual tools for the technical revolutions which have transformed the life of mankind in the last centuries. Their system of concepts has served as a guide in the bewildering chaos of perceptions so that we learned to grasp general truths from particular observations."
 
 `r blogdown::shortcode("youtube", "iEtQ-gQ0Bq8")`
 

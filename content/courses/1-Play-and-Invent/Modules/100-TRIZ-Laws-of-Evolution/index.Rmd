@@ -30,6 +30,12 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
+```{r setup, include=FALSE}
+library(tidyverse)
+devtools::install_github("ricardo-bion/ggradar")
+library(ggradar) # Radar Plots
+
+```
 
 
 ```{r,echo=FALSE, eval=FALSE, fig.align='center',fig.alt="Photo by Suzanne D. Williams on unsplash"}

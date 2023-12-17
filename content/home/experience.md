@@ -82,6 +82,7 @@ experience:
         * Financial Management; Donor Management
         * Interfacing with Government Department of Public Instruction
         * Volunteer Programmes and Community Outreach
+        * Funded by MSDF, Robert Bosch, ING Vysya, UWI, Juniper Networks, LEGO Foundation
   
   
   - title: Systems Design Manager
@@ -96,6 +97,8 @@ experience:
         * GPS, Wi-Fi, FM and, Advanced Radio Architectures
         * Modelling 
         * First Silicon Testing
+        * Field Problem Analysis
+        * Patent Creation
         
   - title: Technical Manager
     company: Wipro Technologies, India
@@ -108,6 +111,7 @@ experience:
         * Design Consultancy on Electronics Hardware and Software Designs
         * Systems Modelling 
         * Analog Design and RF Design
+        * Boards, FPGAs, Software
         * ATM / IP / SDH / PDH / Wi-Fi
         * Pre-Sales
     

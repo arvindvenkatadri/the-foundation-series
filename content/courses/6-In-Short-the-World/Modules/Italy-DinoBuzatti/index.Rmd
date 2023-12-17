@@ -1,64 +1,49 @@
 ---
-title: "Italy-Primo Levi"
-subtitle: "Hydrogen"
+title: "Italy-Dino Buzzati"
+subtitle: "The Falling Girl"
 output: html_document
-date: 2022-03-02
-weight: 5
+date: 2023-12-13
+weight: 1
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(blogdown)
+library(emoji)
 ```
 
-## Italy: Primo Levi
 
+![](http://dinobuzzati.it/img/img01.jpg)
 
-![](https://media.newyorker.com/photos/590970e98b51cf59fc4226b1/master/w_1920,c_limit/150928_r27011.jpg)
-
-> Levi, a 23-year old chemist, was arrested in December 1943 and transported to Auschwitz in February 1944. There he remained until the camp was liberated on 27 January 1945. He arrived back home in Turin in October, unrecognisable to the concierge who had seen him only a couple of years earlier.
-
-
+> Dino was a curious man, fascinated by news. He looked to the future with passion and interest, and although it is often believed the opposite was open to change. Sometimes, even, he predicted them, as he did with the cell phones of which in a story, baptizing them "teletini", he had imagined diffusion and use.
+This is why the new technologies that have enriched our lives today would also enrich its own. And Dino would have fun surfing the Internet, tweeting, photographing on Instagram. For this reason he would be proud of "his" site which is now beginning to take its first steps.  
+- Almerina Buzzati @ http://dinobuzzati.it
 
 ### Story
 
-**Hydrogen** from Primo Levi's collection *The Periodic Table* <https://archive.org/download/ThePeriodicTable-PrimoLevi/periodic-primo.pdf>
+[**The Falling Girl** PDF](The_Falling_Girl.pdf)
 
 
 ### Themes  
-- Epiphany  
-- Curiosity, the Desire to Know, and Perseverance  
-- Rule Breaking  
-- "Other Worldliness"  
-- Metaphors: Describing an idea using vocabulary from another domain 
+  - Beauty and Other Values in Society
+  - Classes in Society
+  - Ambition and Competition
+  - Fear of Missing Out (#FOMO)
+  - Surreal
+  - "Inversion of Scale"
 
 
 ### Additional Material  
 
-1. Extract from [**“The key to the highest truths”: Primo Levi and the beauty of chemistry**](https://www.varsity.co.uk/science/19837)  
-
-  > Nonetheless, reading Levi’s writing over lockdown, I was reminded that he also witnessed chemistry’s most detestable side at Auschwitz, as part of the Chemical Kommando transporting magnesium chloride, and at the IG-Farben laboratory. Despite this, Levi never lost sight of the beauty of chemistry: for me, found in the sublimation of brilliant emerald-green crystals of nickelocene; in the jagged, imperfect trace of an action potential on the electromyograph; in the faint rainbow of lines emitted by potassium under a sodium discharge lamp. If Levi were to observe us in these practical classes, complete with our rash deductions, amateurish mistakes and shattered glassware, I like to think he would be pleased.
-
-1. <https://www.theguardian.com/books/2017/apr/22/primo-levi-auschwitz-if-this-is-a-man-memoir-70-years>  
-
-1. A Student Reflection on Primo Levi's ** Hydrogen **: <https://ocw.mit.edu/courses/literature/21l-325-small-wonders-staying-alive-spring-2007/assignments/periodic2.pdf>
-
-
  
 ### Song for the Story !!
 
-Alastair Ian Stewart (born 5 September 1945) is a Scottish singer-songwriter and folk-rock musician who rose to prominence as part of the British folk revival in the 1960s and 1970s. He developed a unique style of combining folk-rock songs with delicately woven tales of characters and events from history.
+Waheeda Rehman in "Guide" `r emoji::emoji("red_heart")` !! Waah! Dino Buzzati should have watched this!! He would have approved!!
 
-`r blogdown::shortcode("youtube", "klsTowdcEsk")`
+`r blogdown::shortcode("youtube", "_ji8jZjk56c")`
 
 ### Notes and References  
 
-1. The last story in **The Periodic Table**, titled *Carbon* is also a fantastic metaphoric journey of a single Carbon atom. Read it!! It has been described as the most accessible piece of science writing!   
-
-1. More Holocaust Reading:
-  * Tadeuscz Borowski's **"Postal Indiscretions"** is a series of letters written from a concentration camp.  
-  * His short story, **This Way for the Gas, Ladies and Gentlemen**  is also a harrowing read. [**Weblink to PDF**](https://www.pelister.org/courses/topics/borowski/this-way-for-gas.pdf)  
-  * The World of Tadeuscz Borowski's Auschwitz <https://www.nybooks.com/daily/2021/09/12/the-world-of-tadeusz-borowskis-auschwitz/>
 
   
 

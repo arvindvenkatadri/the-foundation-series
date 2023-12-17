@@ -1,6 +1,6 @@
 ---
 title: "Arvind Venkatadri"
-bio: My research interests are Complexity Science, Creativity and Innovation, Problem Solving withTRIZ, Literature, Indian Classical Music, and Computing with R.
+bio: My research interests are Complexity Science, Creativity and Innovation, Problem Solving with TRIZ, Literature, Indian Classical Music, and Computing with R.
 email: arvind.venkatadri@gmail.com
 highlight_name: no
 education:
@@ -41,4 +41,4 @@ social:
 superuser: yes
 ---
 
-Teaching Complexity Science, Problem Solving using TRIZ, Reading Short Stories in English, and the use of R and FOSS Software for Data Visualization, Statistical Inference, and Machine Learning.
+Teaching Complexity Science, Problem Solving using TRIZ, Reading Short Stories in English, R/RStudio and FOSS Software for Data Visualization, Statistical Inference, and Machine Learning.

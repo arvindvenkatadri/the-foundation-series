@@ -13,7 +13,6 @@ library(blogdown)
 
 ## Italy: Primo Levi
 
-
 ![](https://media.newyorker.com/photos/590970e98b51cf59fc4226b1/master/w_1920,c_limit/150928_r27011.jpg)
 
 > Levi, a 23-year old chemist, was arrested in December 1943 and transported to Auschwitz in February 1944. There he remained until the camp was liberated on 27 January 1945. He arrived back home in Turin in October, unrecognisable to the concierge who had seen him only a couple of years earlier.
@@ -47,13 +46,13 @@ library(blogdown)
  
 ### Song for the Story !!
 
-Alastair Ian Stewart (born 5 September 1945) is a Scottish singer-songwriter and folk-rock musician who rose to prominence as part of the British folk revival in the 1960s and 1970s. He developed a unique style of combining folk-rock songs with delicately woven tales of characters and events from history.
+Alastair("Al") Ian Stewart (born 5 September 1945) is a Scottish singer-songwriter and folk-rock musician who rose to prominence as part of the British folk revival in the 1960s and 1970s. He developed a unique style of combining folk-rock songs with delicately woven tales of characters and events from history.
 
 `r blogdown::shortcode("youtube", "klsTowdcEsk")`
 
 ### Notes and References  
 
-1. The last story in **The Periodic Table**, titled *Carbon* is also a fantastic metaphoric journey of a single Carbon atom. Read it!! It has been described as the most accessible piece of science writing!   
+1. The last story in **The Periodic Table**, titled **Carbon**[ PDF](https://www.arvindguptatoys.com/arvindgupta/periodic-primo.pdf) is also a fantastic metaphoric journey of a single Carbon atom. Read it!! It has been described as the most accessible piece of science writing!   
 
 1. More Holocaust Reading:
   * Tadeuscz Borowski's **"Postal Indiscretions"** is a series of letters written from a concentration camp.  

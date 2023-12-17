@@ -38,7 +38,7 @@ knitr::include_graphics("featured.jpg")
 
 ```
 
-# Introduction
+## Introduction
 
 In the previous Module on **Problems and Contradictions** we understood how to identify an **Administrative Contradiction** in everyday situations. This is the first and most important step in the TRIZ Problem Solving Method. 
 
@@ -133,7 +133,7 @@ What does this graph represent?
 Let us pretend we are part of this graph and see where our Problem Formulating Skills take us!
 
 
-# Discussion
+## Discussion
 
 - Problems and Contradictions
 - All Available Resources 

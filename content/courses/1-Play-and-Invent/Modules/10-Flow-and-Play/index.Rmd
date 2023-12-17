@@ -29,6 +29,8 @@ knitr::include_graphics("featured.jpg")
 
 ```{r include=FALSE}
 library(blogdown)
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr) # Embed multimedia in HTML files
 ```
 
 ## Introduction
