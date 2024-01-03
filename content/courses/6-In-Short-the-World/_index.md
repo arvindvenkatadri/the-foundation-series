@@ -49,8 +49,6 @@ The students will be required to do:
 a) A Reflective Piece of Writing about the Story that was read in class.  
 b) A Creative Piece of Writing on a choice of topics to be announced after reading each story in class.  
 
-{{< list_children >}} 
-
 ## References
 
 1. Neumann, Bonnie H., Ed.; McDonnell, Helen M., Ed., *Teaching the Short Story: A Guide to Using Stories from around the World*. National Council of Teachers of English, Urbana, IL,USA. ISBN-0-8141-1947-6  

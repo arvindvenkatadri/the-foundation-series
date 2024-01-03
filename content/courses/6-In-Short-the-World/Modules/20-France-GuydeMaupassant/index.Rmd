@@ -1,0 +1,124 @@
+---
+title: "France - Guy de Maupassant"
+subtitle: "Boule de Suif"
+output: html_document
+date: 2021-12-28
+lastmod: "`r Sys.Date()`"
+weight: 20
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+```
+
+## Guy de Maupassant
+
+![](https://upload.wikimedia.org/wikipedia/commons/1/19/Maupassant_2.jpg)
+
+> 
+
+
+## Story
+
+We will read Maupassant's short short story, <u>[**Boule de Suif**](/pdf/ISTW/BouleDeSuif-Maupassant.pdf)</u> 
+
+### A Youtube discussion on this story
+
+`r blogdown::shortcode("youtube", "zZtoLsWsECA")`
+
+
+## Themes
+
+- Women and Objectification
+- Being Fat
+- Prejudice
+- False Gratitude?
+- Scapegoat Mechanism
+- Network Effects: Reputations, Rumours, and Viral Trends
+- "Convenience"
+
+  
+## Additional Material
+
+1. The Collected Works of Guy de Maupassant <https://www.gutenberg.org/files/21327/21327-h/21327-h.htm>
+
+### Notes and References  
+
+1. Rene Girard's Mimetic Theory and the Scapegoat: <https://violenceandreligion.com/mimetic-theory/>
+
+2. Frear, G. L. (1992). *René Girard on Mimesis, Scapegoats, and Ethics*. The Annual of the Society of Christian Ethics, 12, 115–133. http://www.jstor.org/stable/23559770 [^1]
+
+3. The Network Effects Bible. <https://www.nfx.com/post/network-effects-bible>
+
+4. **The Beauty of Fat Women**: Leonard Nimoy ("Mr Spock") and his Full Body Project:
+<https://www.theguardian.com/artanddesign/gallery/2015/mar/03/the-full-body-project-by-leonard-nimoy-in-pictures> 
+
+> Leonard Nimoy, who died February 27,2015 at the age of 83, was beloved by fans for his distinctive portrayal of Mr. Spock on Star Trek. Those fans may not have known that Nimoy, through his work as a photographer, also championed women who did not conform to Hollywood's ideal of physical perfection. [see also <http://mashable.com/2015/02/26/body-positivity-get-involved> ] In 2007, Nimoy published The Full Body Project, a collection of photos featuring nude women of many shapes and sizes. Nimoy's previous book of photographs captured images of nude women as well, though the models' slim bodies hewed closely to the conventional standards of beauty. The inspiration for The Fully Body Project struck when a full-figured woman approached Nimoy and asked if he might photograph her and her friends.
+
+Listen to Leonard Nimoy discuss this project on NPR:
+
+<iframe src="https://www.npr.org/player/embed/15912659/15912667" width="100%" height="290" frameborder="0" scrolling="no" title="NPR embedded audio player"></iframe>
+4. It Ain't Over until the Fat Lady Sings: <https://knowyourphrase.com/aint-over-until-the-fat-lady-sings>
+
+5. *Is it all about Hips?* <http://bollynatyam.com/books/>
+```{r, echo=FALSE, out.height="50%", out.width="50%"}
+knitr::include_graphics("book_cover_temp_website.jpg")
+```
+<https://www.youtube.com/embed/ByAbV-MKDgs?si=PU26bRl2sXOynWpL>
+
+
+## Videos/Songs for the Story
+
+1. A Network Effects Song!
+
+Song: Kuchh Toh Log Kahenge\
+Singer: Kishore Kumar\
+Music: R. D. Burman\
+Film: Amar Prem (1972)\
+
+<https://www.youtube.com/embed/OK6Hux4spNM?si=x5KHgiH-4Zmvk0KD>
+
+Kuchh to log kahenge logon ka kaam hai kehnaa
+Chhodo bekaar ki baaton mein kaheen beet na jaaye rainaa
+
+Kuchh reet jagat ki aisi hai har ek subah ki shaam hui..
+Tu kaun hai tera naam hai kya sita bhi yahaan badnaam huyi
+Phir kyon sansaar ki baaton se, bheeg gaye tere naina
+
+Kuchh to log kahenge, logon kaa kaam hai kehna
+Chhodo bekaar ki baaton mein kaheen beet na jaaye rainaa
+
+Hum ko jo taane dete hain, ham khoye hain in rang-raliyon mein
+Hum ne un ko bhi chhup chhup ke aate dekhaa in galiyon mein
+Ye sach hai jhoothi baat nahi tum bolo ye sach hai na
+
+Kuchh to log kahenge logon kaa kaam hai kehna
+Chhodo bekaar kee baaton mein kaheen beet na jaaye raina
+
+<br>
+
+2. A Woman From Berlin
+
+Between April 20th and June 22nd of 1945 the anonymous author of *A Woman in Berlin* wrote about life within the falling city as it was sacked by the Russian Army. Fending off the boredom and deprivation of hiding, the author records her experiences, observations and meditations in this stark and vivid diary. Accounts of the bombing, the rapes, the rationing of food and the overwhelming terror of death are rendered in the dispassionate, though determinedly optimistic prose of a woman fighting for survival amidst the horror and inhumanity of war. This diary was first published in America in 1954 in an English translation and in Britain in 1955. A German language edition was published five years later in Geneva and was met with tremendous controversy. In 2003, over forty years later, it was republished in Germany to critical acclaim - and more controversy. This diary has been unavailable since the 1960s and is now newly translated into English. A Woman in Berlin is an astonishing and deeply affecting account. 
+
+It has also been made into a movie. <https://www.theguardian.com/film/2009/nov/26/anonyma-a-woman-in-berlin>. 
+Here is the trailer:
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/xEZxcSf9HwM?si=RjKW33TpuFjZont7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+## Writing Prompts
+
+1.
+
+1.
+
+1.
+
+
+[^1]:You should be able to log in to <u>[**JSTOR**](https://jstor.org)</u> from campus. 
+
+

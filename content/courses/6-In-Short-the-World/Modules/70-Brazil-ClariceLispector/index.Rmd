@@ -1,0 +1,43 @@
+---
+title: "Brazil-Clarice Lispector"
+author: "Arvind V"
+date: "2024-01-03"
+output: html_document
+weight: 60
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Clarice Lispector
+![](lossy-page1-682px-Clarice_Lispector,_1972.tif.jpg)
+Another woman, another Jew, and born in Ukraine.....Clarice Lispector.
+
+## Story
+
+We will read her story, "Beauty and the Beast, or, The Wound too Great", p. 291 in the [Oxford Anthology of the Brazilian Short Story, edited by K. David Jackson](Oxford Anthology of the Brazilian Short St - Jackson, K. David.pdf). 
+
+## Themes
+- Beauty and Ugliness
+- Body as Power
+- Ephiphany
+- Where, When, and from Whom do We Learn?
+- Religion as "Lived Life" (Practical Spirituality)
+- Metaphors
+- Materialism...
+
+## Additional Material
+
+
+### Notes and References 
+
+
+## Song for the Story
+
+
+## Writing Prompts
+
+
+https://www.newyorker.com/books/page-turner/the-true-glamour-of-clarice-lispector
+

@@ -1,0 +1,49 @@
+---
+title: "Japan - Hisaye Yamamoto"
+subtitle: "Seventeen Syllables"
+author: "Arvind V"
+date: 02/Jan/2024
+lastmod: "`r Sys.Date()`"
+output: html_document
+weight: 30
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Hisaye Yamamoto
+
+![](Hisaye-Yamamoto.jpeg)
+
+From https://encyclopedia.densho.org/Hisaye_Yamamoto/
+
+>Southern California [Nisei](https://encyclopedia.densho.org/Nisei/) writer of short stories Hisaye Yamamoto (1921–2011) was among the first Japanese American writers to win national renown after World War II. Yamamoto's upbringing in an immigrant farming community and her incarceration in a World War II U.S. government prison camp formed the basis for some of her best-known stories, notable for their sensitive portrayal of the emotionally and artistically constricted lives of [Issei](https://encyclopedia.densho.org/Issei/) women and intergenerational family dynamics. Oblique, often deadpan in delivery and told with quiet humor and bracing candor, they reveal the love affairs, madness, psychic and physical brutality that lay beneath the placid surface of Issei and Nisei life. The subject matter, precision and grace of Yamamoto's works have led critics to compare her to short story masters Katherine Mansfield, Flannery O'Connor, and Grace Paley.
+
+## Story
+
+We will read Yamamoto's story [Seventeen Syllables](HisayeYamamoto - 17 syllables.docx)
+
+## Themes
+- Intergenerational Conflict
+- Living as an Expat
+- First Love 
+- Teenage Romance
+
+## Additional Material
+
+
+### Notes and References 
+
+
+## Song for the Story
+
+
+
+## Writing Prompts
+
+
+
