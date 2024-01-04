@@ -19,8 +19,6 @@ library(blogdown)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/1/19/Maupassant_2.jpg)
 
-> 
-
 
 ## Story
 
@@ -73,31 +71,40 @@ knitr::include_graphics("book_cover_temp_website.jpg")
 
 ## Videos/Songs for the Story
 
-1. A Network Effects Song!
+1. First, A Song that is all about Network Effects !!!
 
 Song: Kuchh Toh Log Kahenge\
 Singer: Kishore Kumar\
 Music: R. D. Burman\
 Film: Amar Prem (1972)\
 
-<https://www.youtube.com/embed/OK6Hux4spNM?si=x5KHgiH-4Zmvk0KD>
+<https://www.youtube.com/watch?v=OK6Hux4spNM>
 
-Kuchh to log kahenge logon ka kaam hai kehnaa
-Chhodo bekaar ki baaton mein kaheen beet na jaaye rainaa
+Hindi Lyrics | English Translation
+-------------|--------------------
+Kuch toh log kahenge	|People will say something or the other
+Logon ka kaam hai kehna	| It's the job of people to say something
+Chhodo bekaar ki baaton mein |	Forget all these useless things
+Kahin beet na jaaye raina	| Or else our night will end just around them
+Kuch toh log kahenge |	People will say something or the other
+------ | -------
+Kuch reet jagat ki aisi hai(2) |	Some traditions of the world are such that
+Har ek subah ki shaam huyi(2) | Every morning has had an evening
+Tu kaun hai, tera naam hai kya| Who are you and what's your name
+Sita bhi yahan badnaam huyi |Even Goddess Sita has been defamed here
+Phir kyun sansaar ki baaton se | Then why with these conversations of the world
+Bheeg gaye tere naina | Have your eyes become bedewed
+Kuch toh log kahenge | People will say something or the other
+---------- | ------------
+Humko joh taane dete hai(2) |	Those who taunt us saying that
+Hum khoye hai in rangraliyon mein(2) |	We're lost in this debauchery
+Humne unko bhi chup chupke | Secretly I've also seen them
+Aate dekha in galiyon mein| Coming in these streets
+Yeh sach hai jhoothi baat nahi | This is the truth and not a lie
+Tum bolo yeh sach hai na | You tell me, isn't this the truth?
+Kuch toh log kahenge | People will say something or the other
+... | ...
 
-Kuchh reet jagat ki aisi hai har ek subah ki shaam hui..
-Tu kaun hai tera naam hai kya sita bhi yahaan badnaam huyi
-Phir kyon sansaar ki baaton se, bheeg gaye tere naina
-
-Kuchh to log kahenge, logon kaa kaam hai kehna
-Chhodo bekaar ki baaton mein kaheen beet na jaaye rainaa
-
-Hum ko jo taane dete hain, ham khoye hain in rang-raliyon mein
-Hum ne un ko bhi chhup chhup ke aate dekhaa in galiyon mein
-Ye sach hai jhoothi baat nahi tum bolo ye sach hai na
-
-Kuchh to log kahenge logon kaa kaam hai kehna
-Chhodo bekaar kee baaton mein kaheen beet na jaaye raina
 
 <br>
 
@@ -112,11 +119,9 @@ Here is the trailer:
 
 ## Writing Prompts
 
-1.
-
-1.
-
-1.
+1. When You Did Nothing to Prevent Something
+1. Acts of Commission vs Acts of Omission: Which Regret is easier?
+1. My Big Fat Friend
 
 
 [^1]:You should be able to log in to <u>[**JSTOR**](https://jstor.org)</u> from campus. 

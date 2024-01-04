@@ -1,0 +1,93 @@
+---
+title: "\U0001F579 Still More Games !!"
+subtitle: "Which Stranger Am I Talking with Today?"
+author: "Arvind V."
+date: 2024-01-04
+lastmod: "`r Sys.Date()`"
+image:
+  caption: Photo by rawpixel on Unsplash
+  focal_point: Smart
+weight: 30
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+
+```{r include=FALSE}
+library(blogdown)
+```
+
+## Introduction
+
+So, would you wear a veshti/kurta/angavastram, or silk paavade to college?
+
+When you want someone to *search the internet*, what do you tell them
+do? 
+
+How do you show someone that you agree with what they are doing at
+that moment? Even if you don't know them?
+
+How do you know where the exit is in a public place?
+
+Where would you stage a protest? How would you get other people to join in?
+
+What does "less than three" mean?!!??
+
+In the module on [Game Theory](), we saw how we all are engaged in *adversarial and transactional Games* with many other people, most of 
+whom are strangers to us [The Prisoner's Dilemma](). But as remarked before, the Human Species is perhaps unique in that we are able to <u>[cooperate with strangers](https://fee.org/media/4316/547_42.pdf)</u>!! So we are not always adversaries or enemies, and we are able to obtain ***unspoken agreement and correspondence with strangers***.
+
+What use would this be? Would it be a Design Tool? How?
+
+Today, we will study **Coordination Games** and **Schelling Focus Points**, and see how these concepts can help create better designs, businesses, and maybe, art.
+
+## The Stag Hunt
+
+A brief Introduction to the [**Stag Hunt Game.**](https://www.heretical.com/pound/staghunt.html)
+
+ <br> `r blogdown::shortcode("youtube", "QQHPDLfbIK4")` <br>
+
+
+## Coordination Games and Schelling Focus Points 
+
+ <br> `r blogdown::shortcode("youtube", "CFOQquw6hig")` <br>
+
+
+ <br> `r blogdown::shortcode("youtube", "oDsePkuaL9Q")` <br>
+
+
+Focal points can be used in Coordination Games: these are activities where people's actions tend to organize into Patterns based on specific default options. These actions could be 
+
+a) Conversation
+
+b) Dress
+
+c) Travel / Meeting
+
+d) Location
+
+e) Attention
+
+### Additional Readings on Schelling Points
+
+a) https://mindyourdecisions.com/blog/2008/04/01/focal-points-or-schelling-points-how-we-naturally-organize-in-games-of-coordination/
+
+b) https://medium.com/@richlitt/using-schelling-points-to-perform-better-973243efd989
+
+### The Game of the Polygons
+
+Let us explore, sadly, the `dark side` of Game Theory. Where our own agent-like actions lead to bad outcomes in Society...
+
+Always?
+
+Not if we...choose wisely !!
+
+
+Let us play **The Game of the Polygons** [(web link)](https://ncase.me/polygons/)
+
+
+### Another Dark Side of...
+
+Why are Petrol Stations located next to each other? Here is the **Hotelling's Phenomenon**, explained. 
+
+ <br> `r blogdown::shortcode("youtube", "u4cKzGj58q4")` <br>
