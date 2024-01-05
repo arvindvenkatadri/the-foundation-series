@@ -101,7 +101,7 @@ Director : Shekhar Kapoor\
 `r embedr::embed_audio("old_Masoom-Do Naina Aur Ek Kahani.mp3")`
 
 | Hindi Lyrics                                         | English Translation                                              |
-|-----------------------------------|-------------------------------------|
+|------------------------------------------------------|------------------------------------------------------------------|
 | Do naina aur ek kahanee(2)                           | Two eyes and one story,                                          |
 | thoda sa badal, thoda sa panee aur ek kahanee(2)     | some clouds, some water, and a story                             |
 | ------                                               | ------                                                           |

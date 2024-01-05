@@ -38,7 +38,7 @@ was so popular in Soviet Russia !!
 `r embedr::embed_audio("Kehta-Hai-Joker-Saara-Zamana.mp3")`
 
 | Hindi Lyrics                               | English Translation                           |
-|--------------------------------------------|-----------------------------------------------|
+|-----------------------------------|-------------------------------------|
 | Kehta hai joker saara jamaana              | Says the Joker, to the whole World            |
 | Aadhi haqikat aadha fasana                 | Half truth, Half Story                        |
 | Chashma utaaro phir yaaro dekho            | Remove your specs, and then see, my friends   |

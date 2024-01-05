@@ -1,0 +1,40 @@
+---
+title: "Sweden-Lars Gustaffsson"
+subtitle: "Greatness Strikes Where it Pleases"
+output: html_document
+date: 2023-12-13
+lastmod: " `r Sys.Date()`"
+weight: 120
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+library(emoji)
+```
+
+## Lars Gustafsson
+
+
+
+### Story
+
+We will read <u>[Greatness Strikes Where It Pleases](LArs Gustafsson - Greatness Strikes Where it Pleases.docx)</u>
+
+### Themes
+
+- Being "Different"
+- Sensorial Learning
+- Siblings and Families
+
+## Notes and References
+
+### Song for the Story !!
+
+
+## Writing Prompts
+
+

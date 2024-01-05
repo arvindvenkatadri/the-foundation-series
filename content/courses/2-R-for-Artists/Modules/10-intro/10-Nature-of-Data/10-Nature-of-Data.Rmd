@@ -1,7 +1,7 @@
 ---
-title: The Nature of Data
-subtitle: Understanding Human Experience, Experiments, and Data
-author: Arvind Venkatadri
+title: "The Nature of Data"
+subtitle: "Understanding Human Experience, Experiments, and Data"
+author: "Arvind V."
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:

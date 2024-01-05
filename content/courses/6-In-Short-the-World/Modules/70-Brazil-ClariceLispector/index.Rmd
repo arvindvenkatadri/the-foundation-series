@@ -3,7 +3,7 @@ title: "Brazil-Clarice Lispector"
 author: "Arvind V"
 date: "2024-01-03"
 output: html_document
-weight: 60
+weight: 70
 ---
 
 ```{r setup, include=FALSE}
