@@ -10,8 +10,55 @@ editor_options:
 ---
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
+knitr::opts_chunk$set(echo = FALSE)
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr) # Embed multimedia in HTML files
 ```
 
 ## Maxim Gorky
 
+## Story
+
+We will read Gorky's story <u>[The
+Clown.](Maxim%20Gorky%20-%20The%20Clown.docx)</u>
+
+## Themes
+
+## Additional Material
+
+### Notes and References
+
+### Song for the Story
+
+Perhaps, after listening to this song, we will understand why Raj Kapoor
+was so popular in Soviet Russia !!
+
+<https://youtu.be/OXPmxcFgXvY>
+
+`r embedr::embed_audio("Kehta-Hai-Joker-Saara-Zamana.mp3")`
+
+| Hindi Lyrics                               | English Translation                           |
+|--------------------------------------------|-----------------------------------------------|
+| Kehta hai joker saara jamaana              | Says the Joker, to the whole World            |
+| Aadhi haqikat aadha fasana                 | Half truth, Half Story                        |
+| Chashma utaaro phir yaaro dekho            | Remove your specs, and then see, my friends   |
+| duniya nahi hai chehra purana              | The World is Old, the Face is New             |
+| kehta hai joker...                         | Says the Joker...                             |
+| -----                                      | -----                                         |
+| ( Apne pe hans kar jag ko hansaya          | He laughs at Himself to make the World laugh  |
+| Ban ke tamasha mele main aaya ) (x2)       | Becoming a Show, he Gomes to this gathering   |
+| mele main aaya                             | Comes to this Gathering                       |
+| (hindu na mulsim, poorab na pashchim) (x2) | Not Hindu not Muslim, nor East nor West       |
+| Mazhub hai apna, hansna hansaana           | My religion is to laugh and make others laugh |
+| kehta hai joker ...                        | Says the Joker...                             |
+| ------                                     | -----                                         |
+| (Dhakke pe dhakka, rele pe rela            | Pushing and Shoving all around                |
+| Hai bheed itni, par dil akela ) (x2)       | Such a Crowd, but the Heart is Lonely         |
+| par dil akela                              | but the Heart is Lonely                       |
+| (gam jab sataye, seeti bazana ) (x2)       | When Sadness troubles you, Whistle!!          |
+| par maskhare se dil mat lagana             | But never Become Attached to Joker / Humour!  |
+| kehta hai joker ...                        | Says the Joker...                             |
+| chasma utaro ...                           | Remove your specs,....                        |
+| kehta hai joker ...                        | Says the Joker...                             |
+
+## Writing Prompts
