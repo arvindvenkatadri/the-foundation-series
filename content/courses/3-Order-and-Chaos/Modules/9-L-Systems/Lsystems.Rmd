@@ -1,12 +1,12 @@
 ---
-title: " \U0001F332 L-Systems and Kolams"
+title: " \U0001F332 Algorithmic Trees, L-Systems and Kolams"
 date: "2021-08-12"
 summary: Investigating simple repetitive algorithms to create organic looking structures
 tags:
 - Algorithmic Trees
 - Lindenmayer Systems
 type: page
-weight: 20
+weight: 100
 links:
 slides: 
 url_code: ""

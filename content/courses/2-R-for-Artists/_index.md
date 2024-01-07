@@ -4,7 +4,7 @@ linkTitle: R for Artists
 summary: An introductory course on data and visualization in R.
 title: "\U0001F4CA R for Artists"
 type: book
-weight: 1
+weight: 20
 view: 2
 
 ---

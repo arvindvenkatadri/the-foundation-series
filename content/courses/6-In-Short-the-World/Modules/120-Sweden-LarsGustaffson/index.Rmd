@@ -18,23 +18,29 @@ library(emoji)
 
 ## Lars Gustafsson
 
+![](470px-Lars_Gustafsson_in_2012.jpg)
 
+To be Written Up. 
 
 ### Story
 
-We will read <u>[Greatness Strikes Where It Pleases](LArs Gustafsson - Greatness Strikes Where it Pleases.docx)</u>
+We will read <u>[Greatness Strikes Where It Pleases.](LArs Gustafsson - Greatness Strikes Where it Pleases.docx)</u>
 
 ### Themes
 
 - Being "Different"
 - Sensorial Learning
 - Siblings and Families
+- Schools and Institutions
 
 ## Notes and References
 
 ### Song for the Story !!
+A terrific comment on education itself!!
 
+`r blogdown:::shortcode("youtube", "vD7HJcpJD9U")`
 
 ## Writing Prompts
-
+1.
+1.
 

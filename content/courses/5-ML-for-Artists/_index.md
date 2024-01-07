@@ -4,7 +4,7 @@ author: "Arvind Venkatadri"
 linkTitle: Machine Learning for Artists
 summary: Obtain an Intuitive Understanding the Basic Algorithms of Machine Learning and applying them to Creative Art/Design Projects
 view: 2
-weight: 5
+weight: 50
 type: book
 ---
 

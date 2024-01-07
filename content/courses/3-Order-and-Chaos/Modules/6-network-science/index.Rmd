@@ -20,7 +20,7 @@ Do you think your friends have more friends than you have? Do you think that you
 
 Anyways...
 
-{{< video "https://vimeo.com/191074419" >}}
+`r blogdown::shortcode("vimeo", "191074419")`
 
 ## Activities
 

@@ -1,7 +1,7 @@
 ---
 title: "TRIZ: A Very Contradictory Problem-Solving Method"
 subtitle: "A Introduction and Workflow for Students"
-author: "Arvind Venkatadri"
+author: "Arvind V."
 date: '`r Sys.Date()`'
 output:
   xaringan::moon_reader:

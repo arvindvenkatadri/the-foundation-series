@@ -4,6 +4,9 @@ author: "Arvind V"
 date: "2024-01-03"
 output: html_document
 weight: 70
+editor_options: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include=FALSE}
@@ -11,33 +14,88 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Clarice Lispector
-![](lossy-page1-682px-Clarice_Lispector,_1972.tif.jpg)
-Another woman, another Jew, and born in Ukraine.....Clarice Lispector.
+
+![](lossy-page1-682px-Clarice_Lispector,_1972.tif.jpg) A Woman, a Jew,
+and one born in Ukraine, and one of Brazil's greatest
+writers.....Clarice Lispector.
 
 ## Story
 
-We will read her story, "Beauty and the Beast, or, The Wound too Great", p. 291 in the [Oxford Anthology of the Brazilian Short Story, edited by K. David Jackson](Oxford Anthology of the Brazilian Short St - Jackson, K. David.pdf). 
+We will read her story, "Beauty and the Beast, or, The Wound too Great",
+p. 291 in the <u>[Oxford Anthology of the Brazilian Short Story, edited
+by K. David
+Jackson](Oxford%20Anthology%20of%20the%20Brazilian%20Short%20St%20-%20Jackson,%20K.%20David.pdf).
+</u>
 
 ## Themes
-- Beauty and Ugliness
-- Body as Power
-- Ephiphany
-- Where, When, and from Whom do We Learn?
-- Religion as "Lived Life" (Practical Spirituality)
-- Metaphors
-- Materialism...
+
+-   Beauty and Ugliness
+-   Body as Power
+-   Ephiphany
+-   Where, When, and from Whom do We Learn?
+-   Religion as "Lived Life" (Practical Spirituality)
+-   Metaphors
+-   Materialism...
 
 ## Additional Material
 
+### Notes and References
 
-### Notes and References 
+1.  <https://www.newyorker.com/books/page-turner/the-true-glamour-of-clarice-lispector>
 
+2.  Suryakant Tripathi "Nirala". 1923. *Bhikshuk*.
+    <http://kavitakosh.org>
+
+वह आता--
+
+दो टूक कलेजे को करता, पछताता पथ पर आता।
+
+पेट पीठ दोनों मिलकर हैं एक,
+
+चल रहा लकुटिया टेक,
+
+मुट्ठी भर दाने को —भूख मिटाने को
+
+मुँह फटी पुरानी झोली का फैलाता —
+
+दो टूक कलेजे के करता पछताता पथ पर आता।
+
+साथ दो बच्चे भी हैं सदा हाथ फैलाए,
+
+बाएँ से वे मलते हुए पेट को चलते,
+
+और दाहिना दया दृष्टि-पाने की ओर बढ़ाए।
+
+भूख से सूख ओठ जब जाते
+
+दाता-भाग्य विधाता से क्या पाते?
+
+घूँट आँसुओं के पीकर रह जाते।
+
+चाट रहे जूठी पत्तल वे सभी सड़क पर खड़े हुए,
+
+और झपट लेने को उनसे कुत्ते भी हैं अड़े हुए !
+
+**ठहरो ! अहो मेरे हृदय में है अमृत, मैं सींच दूँगा**
+
+**अभिमन्यु जैसे हो सकोगे तुम**
+
+**तुम्हारे दुख मैं अपने हृदय में खींच लूँगा।**
+
+-   Suryakant Tripathi "Nirala"
 
 ## Song for the Story
 
+The roles are the reversed in this song are they? But that is possibly
+what we saw in the story...who *is* the beggar?
+
+<u><https://youtu.be/IUqQyJUmgDM></u>
+
+
+Another not un-related song, is <u>[this one by England Dan Seals and John Ford Coley](https://youtu.be/f1E-Z6_BCiE)</u>, especially if you think the lady had a boyfriend earlier. 
 
 ## Writing Prompts
 
-
-https://www.newyorker.com/books/page-turner/the-true-glamour-of-clarice-lispector
-
+1.  On Growing Older by 5 years in 5 minutes
+2.  On How Others seem to Define Us
+3.  Something using Metaphors(TBD)!!

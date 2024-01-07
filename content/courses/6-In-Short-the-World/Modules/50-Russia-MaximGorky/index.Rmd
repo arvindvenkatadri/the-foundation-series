@@ -17,6 +17,16 @@ library(embedr) # Embed multimedia in HTML files
 
 ## Maxim Gorky
 
+![](https://upload.wikimedia.org/wikipedia/commons/f/f5/Maxim_Gorky.jpg)
+
+> Maxim Gorky (born March 16 [March 28, New Style], 1868, Nizhny Novgorod, Russia—died June 14, 1936) Russian short-story writer and novelist who first attracted attention with his naturalistic and sympathetic stories of tramps and social outcasts and later wrote other stories, novels, and plays, including his famous The Lower Depths.
+
+>(He) was a Russian author considered the father of Soviet revolutionary literature and founder of the doctrine of socialist realism. After having a difficult childhood, he roamed across the Russian empire, frequently changing jobs for about fifteen years before he became a successful writer. The experiences he had during those fifteen years deeply influenced his writing. Initially, he wrote stories mainly based on the lives of tramps and social outcasts, and he became known for his naturalistic style of writing. One of his greatest works is ‘The Mother,’ which Lenin praised as “a very timely book.” 
+
+>Gorky was deeply associated with fellow Russian writers, Anton Chekhov and Leo Tolstoy and later wrote memoirs on them. Gorky was not only a great writer but also an influential figure in the political thinking. He was active with the emerging Marxist social-democrat movement. Initially a Bolshevik supporter, he became a critic when Vladimir Lenin seized power. However, later Gorky served as a Soviet advocate and headed the Union of Soviet Writers. His life was marked with a number of politically forced and sometimes self-imposed exiles.
+
+> He was nominated five times for the Nobel Prize in Literature.
+
 ## Story
 
 We will read Gorky's story <u>[The
@@ -24,9 +34,20 @@ Clown.](Maxim%20Gorky%20-%20The%20Clown.docx)</u>
 
 ## Themes
 
+- Being Pretentious and Being genuine
+- Humour as way to examine Life
+- The Bystander Effect
+- Risk Taking for the Benefit of Society
+- Hating Oneself for Cowardice?
+- Envy / Jealousy and Anger
+
 ## Additional Material
 
 ### Notes and References
+
+1. Hingley, Ronald Francis. "Maxim Gorky". Encyclopedia Britannica, 30 Nov. 2023, https://www.britannica.com/biography/Maxim-Gorky. Accessed 6 January 2024.
+
+2. Guzeva, Alexandra. Russia Beyond, March 28, 2018. *5 reasons why Soviet writer Maxim Gorky is so great*. <https://www.rbth.com/arts/327885-why-soviet-writer-gorky-great>. Accessed 6 January 2024.
 
 ### Song for the Story
 

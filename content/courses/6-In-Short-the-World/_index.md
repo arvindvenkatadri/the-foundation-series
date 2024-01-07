@@ -4,7 +4,7 @@ linkTitle: Literary Jukebox - In Short, the World
 summary: The Real and the Imagined in World Literature
 title: "\U0001F5FA Literary Jukebox - In Short, the World"
 view: 2
-weight: 6
+weight: 30
 type: book
 image:
   caption: "Photo by <a href=\"https://unsplash.com/@chrislawton?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Chris Lawton</a> on <a href=\"https://unsplash.com/s/photos/globe-book?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText\">Unsplash</a>"

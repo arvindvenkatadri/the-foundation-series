@@ -4,7 +4,7 @@ date: "2021-08-10"
 linkTitle: Order and Chaos 
 summary: A study of Mathematical Models in Real Life
 view: 2
-weight: 3
+weight: 30
 type: book
 image:
   placement: 3

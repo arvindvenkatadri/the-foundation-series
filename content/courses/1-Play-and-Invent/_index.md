@@ -4,7 +4,7 @@ date: "2021-01-24"
 linkTitle: Play and Invent
 summary: "Using Metaphors and Analogic Thinking techniques like TRIZ to solve Inventive Problems"
 view: 2
-weight: 1
+weight: 150
 type: book
 image:
   caption: ""

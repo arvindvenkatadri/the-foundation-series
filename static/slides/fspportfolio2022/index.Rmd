@@ -479,7 +479,7 @@ A visual ML tool from Univ of Ljubljana, Slovenia
 .row[
 .content.nopadding[]
 .img-fill[
-![](https://orangedatamining.com/screenshots/images/tree-explorative.thumb.png)
+![](https://orangedatamining.com/screenshots/tree-explorative.png)
 ]
 ]
 ]
