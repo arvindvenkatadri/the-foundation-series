@@ -61,15 +61,55 @@ Why are Petrol Stations located next to each other? Here is the
 
 
 
-## Viral Trends
+## Viral Trends..With a Song?
 
-TBD
+A Song that is all about Network Effects !!!
+
+Song: Kuchh Toh Log Kahenge\
+Singer: Kishore Kumar\
+Music: R. D. Burman\
+Film: Amar Prem (1972)\
+
+<https://www.youtube.com/watch?v=OK6Hux4spNM>
+
+Hindi Lyrics | English Translation
+-------------|--------------------
+Kuch toh log kahenge	|People will say something or the other
+Logon ka kaam hai kehna	| It's the job of people to say something
+Chhodo bekaar ki baaton mein |	Forget all these useless things
+Kahin beet na jaaye raina	| Or else our night will end just around them
+Kuch toh log kahenge |	People will say something or the other
+------ | -------
+Kuch reet jagat ki aisi hai(2) |	Some traditions of the world are such that
+Har ek subah ki shaam huyi(2) | Every morning has had an evening
+Tu kaun hai, tera naam hai kya| Who are you and what's your name
+Sita bhi yahan badnaam huyi |Even Goddess Sita has been defamed here
+Phir kyun sansaar ki baaton se | Then why with these conversations of the world
+Bheeg gaye tere naina | Have your eyes become bedewed
+Kuch toh log kahenge | People will say something or the other
+---------- | ------------
+Humko joh taane dete hai(2) |	Those who taunt us saying that
+Hum khoye hai in rangraliyon mein(2) |	We're lost in this debauchery
+Humne unko bhi chup chupke | Secretly I've also seen them
+Aate dekha in galiyon mein| Coming in these streets
+Yeh sach hai jhoothi baat nahi | This is the truth and not a lie
+Tum bolo yeh sach hai na | You tell me, isn't this the truth?
+Kuch toh log kahenge | People will say something or the other
+... | ...
 
 
+<br>
 
+
+## Conclusions
+
+- Individual Actions Matter
+- Correlations between Individual Actions can create "standing waves" or "echoes" on the fabric of society.
+  * Whatsapp "echo chambers"
+  * Popularity of Memes, Songs, Ads, and Products
 
 ## References
 
 1. Henderson, Ron. 12 June 2022. *Luxury Beliefs are Status Symbols: The struggle for distinction*. <https://www.robkhenderson.com/p/status-symbols-and-the-struggle-for?utm_campaign=post&utm_medium=web> Accessed 07 Jan 2024.
 
-2. 
+3. The Network Effects Bible. <https://www.nfx.com/post/network-effects-bible>

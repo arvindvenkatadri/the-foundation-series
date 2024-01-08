@@ -9,6 +9,8 @@ weight: 200
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(blogdown)
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr) # Embed multimedia in HTML files
 ```
 
 ## Zimbabwe: Petina Gappah
@@ -17,7 +19,7 @@ library(blogdown)
 
 
 
-> Petina Gappah is an Geneva-based international trade lawyer who has written poignant, humane and funny collection of stories about her home country, Zimbabwe. Her first collection of stories, * An Elegy for Easterly*  was a winner of the Guardian First Book Award in 2009. Gappah's collection of 13 stories, *An Elegy for Easterly*, tells of the lives of people, rich and poor, caught up in events over which they have little control.
+> Petina Gappah is an Geneva-based international trade lawyer who has written poignant, humane and funny collection of stories about her home country, Zimbabwe. Her first collection of stories, *An Elegy for Easterly*  was a winner of the Guardian First Book Award in 2009. Gappah's collection of 13 stories, *An Elegy for Easterly*, tells of the lives of people, rich and poor, caught up in events over which they have little control.
 
 
 ### Story
@@ -27,6 +29,7 @@ library(blogdown)
 
 2. Petina Gappah **reads** her own story <u>[**Weblink to audio**](https://www.theguardian.com/books/audio/2009/jan/26/pettina-gappah-dancing-champion)</u>
 
+
 ### Themes
   - Poverty
   - Unemployment
@@ -34,20 +37,25 @@ library(blogdown)
   - Silliness of High-Ranking Officials
   - Music, Dance and pursuits of common people
   - Humour !!
-  
+
+## Notes and References 
+
 ### Additional Material
 
-1. <u>[I've written a very Zimbabwean story](https://www.theguardian.com/books/2015/sep/05/petina-gappah-interview-ive-written-very-zimbabwean-story)</u>
+1. The Guardian. 5 Sept 2015. Interview with Pettina Gappah. <u>[I've written a very Zimbabwean story](https://www.theguardian.com/books/2015/sep/05/petina-gappah-interview-ive-written-very-zimbabwean-story)</u>
 
  
-### Song for the Story !!
+### Song for the Story!
 
 Billy Joel's *Allentown* from his album *The Nylon Curtain*:   
 
-`r blogdown::shortcode("youtube", "ZV2jvngnvqg")`
+`r blogdown::shortcode("youtube", "BHnJp0oyOxs")`
 
 
-### Notes and References  
+## Writing Prompts
+1. Humour as our "last refuge"
+2. A encounter with a Government Department
+
 
 
  

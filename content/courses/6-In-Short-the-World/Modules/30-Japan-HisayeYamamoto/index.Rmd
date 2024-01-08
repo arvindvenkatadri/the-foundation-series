@@ -94,8 +94,8 @@ Movie/Album: Gateway Of India (1957)\
 | *Dil vahi dil jo dil me ja baithe*   | *That is a Heart, that Resides in a Heart*                 |
 | *Do Ghadi...*                        | *Two Moments...*                                           |
 | *----*                               | *-----*                                                    |
-| *Ek dil hi tha gham gusaar apna*     | *The Heart was my One Solace*                              |
-| *meharbaan khaas raazdaar apna*      | *My Patron, my Confidant...*                               |
+| *Ek dil hi tha gham gusaar  (2)*     | *The Heart was my One Solace*                              |
+| *meharbaan khaas raazdaar apna (2)*      | *My Patron, my Confidant...*                               |
 | *ghair ka kyun use banaa baithe*     | *Why Did I Give it Away to a Stranger !!*                  |
 | *Do Ghadi...*                        | *Two Moments...*                                           |
 | ----                                 | ----                                                       |
@@ -110,7 +110,7 @@ Movie/Album: Gateway Of India (1957)\
 
 2.  A Rant in GenZ language about almost anything (please create a Glossary in an Appendix!)
 
-3.  Getting "used" to Dad's / Mom's taste in Music
+3.  Getting "(ab)used" to Dad's / Mom's taste in Music
 
 4.  The communication between parents and child in "Seventeen Syllables"
     and in <u>[Grace Paley's "The Loudest Voice"](http://www.loa.org/images/pdf/Paley_Loudest_Voice.pdf)</u>.

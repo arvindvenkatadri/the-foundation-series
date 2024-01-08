@@ -36,7 +36,7 @@ Discussion: `Nodes, Links, Link Directionality, Connected and Disconnected Netwo
 
 This is a game "invented" by Alberto-Laszlo Barabasi, a Network Science pioneer and expert, who has written a wonderful, and wonderfully acessible, book on Network Science, available online <http://networksciencebook.com/>
 
-1.  Please take a coin in your hand. ( A rupee coin is good!)
+1.  Please take a coin in your hand. (A rupee coin is good!)
 2.  Find a potential new friend in the classroom. Both of you toss your coins.
 3.  If the coins show two Heads or two Tails, introduce yourselves, make small talk, exchange classroom and college gossip. 2 Minutes!
 4.  Make a note of your new friends initials.

@@ -1,0 +1,44 @@
+---
+title: "USA-Carson McCullers"
+subtitle: "A Rock. A Tree. A Cloud."
+output: html_document
+date: 2023-12-13
+lastmod: " `r Sys.Date()`"
+weight: 190
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+library(emoji)
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr) # Embed multimedia in HTML files
+```
+
+## Carson McCullers
+![](CarsonMcCullers.jpeg)
+
+
+### Story
+
+[**A Rock. A Tree. A Cloud** PDF](Carson McCullers_A_Tree _ A Rock _ A Cloud.pdf)
+
+### Themes
+
+- What we might call weirdness in some people...wrongly!!
+- How to Know someone has Figured it All Out
+- How to Live
+- 
+
+## Notes and References
+
+### Song for the Story !!
+
+
+## Writing Prompts
+
+1.
+
