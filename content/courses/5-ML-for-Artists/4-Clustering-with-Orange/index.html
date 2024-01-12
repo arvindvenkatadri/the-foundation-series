@@ -25,6 +25,99 @@ tags:
 
 
 
-<div id="introduction" class="section level3">
-<h3>Introduction</h3>
+<div id="introduction" class="section level2">
+<h2>Introduction</h2>
+<p>We saw that Regression and Classification always had a <em>target variable</em>, which we wanted the algorithm to match, with as high an accuracy as possible.</p>
+<p>What if we don’t <strong>have</strong> a target variable? What kind of situation would that be? Would it be commonplace?</p>
+</div>
+<div id="game-1-sushi-anyone" class="section level2">
+<h2>Game-1: Sushi, anyone?</h2>
+<p>Let us play a version of an HR game, which we will call <em>Making Sushi</em>. I am going to call out some “choices”, something you might want to do, or not, and you will need to move to a specific location in the room based upon your Yes/No answer.</p>
+<div id="observations-1" class="section level3">
+<h3>Observations-1</h3>
+<ul>
+<li>On what basis did you move?
+<ul>
+<li>Distance/Proximity/Similarity ( “That’s me!”)</li>
+</ul></li>
+<li>What were the so-called “observations” in the data? <strong>You</strong>!!</li>
+<li>Each of you started in “your own cluster” and joined one as soon as you saw Proximity.</li>
+</ul>
+<p>Contrary to what you might think, this was an example of <strong>top-down Clustering</strong>, sort of, since I was calling out (central control) the basis for cluster formation. Each Observation could move of course into <em>any</em> cluster, as long as it maximized the Proximity.</p>
+</div>
+</div>
+<div id="game-2" class="section level2">
+<h2>Game-2:</h2>
+<p>TBD</p>
+<div id="observations-2" class="section level3">
+<h3>Observations-2</h3>
+<p>TBD</p>
+</div>
+</div>
+<div id="so-what-is-clustering-good-for-then" class="section level2">
+<h2>So what <strong>is</strong> Clustering good for then?</h2>
+<ul>
+<li>Clustering is used in many diverse fields.
+<ul>
+<li>genes -&gt; diseases; drugs -&gt; diseases</li>
+<li>customers -&gt; tastes, products</li>
+<li>food -&gt; nutrients.</li>
+</ul></li>
+<li>There is no target variable! Just groupings of existing data.</li>
+<li>New data can also be clustered based on the groupings discovered in Clustering.</li>
+</ul>
+<p>Sometimes we just want to <em>mine</em> the data: Are there any patterns, or groupings in there?</p>
+</div>
+<div id="how-does-one-use-proximity-for-clustering" class="section level2">
+<h2>How Does one Use Proximity for Clustering?</h2>
+<p>Here are two interactives to understand how to <strong>create</strong> clusters with <strong>training data</strong>.</p>
+<iframe width="100%" height="853" frameborder="0" src="https://observablehq.com/embed/ab4e983a61997013?cells=viewof+seed%2Cviewof+spread%2Cviewof+num_centroids%2Cviewof+selection%2Cviewof+stepslider">
+</iframe>
+</iframe>
+<p><iframe width="100%" height="500" frameborder="0" src="https://observablehq.com/embed/5f5821f1971c7749?cell=*"</p>
+</iframe>
+</div>
+<div id="cluster-prediction-for-new-data" class="section level2">
+<h2>Cluster Prediction for New Data</h2>
+<p>TBD: Is this classification or clustering !!!</p>
+<p>Click on any part of the canvas below and see how the Clustering algorithm decides the cluster for the point based on the nearest neighbours.</p>
+<p><iframe width="100%" height="735" frameborder="0" src="https://observablehq.com/embed/16bc2b3dcb13d1cd@289?cells=viewof+numTrain%2Cviewof+k%2CPlot"</p>
+</iframe>
+<p>Algorithm to <strong>create</strong> clusters (training ):</p>
+<ul>
+<li>Cluster Assignment
+<ul>
+<li>Select the number of Clusters you “need”. (Not simple!!)</li>
+<li>Set random start points for the clusters</li>
+<li>Calculate Proximity of each point to the “start points”</li>
+<li>Assign Cluster to each point based on highest proximity (smallest distance)</li>
+</ul></li>
+<li>Centroid Update
+<ul>
+<li>Aha! Recalculate Cluster Centers based on centroid of cluster.</li>
+</ul></li>
+<li>Repeat.</li>
+</ul>
+<p>To predict:</p>
+<ul>
+<li>simply calculate distance to the <code>k</code> nearest neighbours<br />
+</li>
+<li>Take majority vote based on <strong>their</strong> cluster identification</li>
+</ul>
+</div>
+<div id="clustering-using-orange" class="section level2">
+<h2>Clustering Using Orange</h2>
+<p>Let us first do this interactively! Fire up Orange Data Mining and open this file. <u><a href="interactive-KMeans.ows"><strong>Interactive k-Means</strong></a></u></p>
+</div>
+<div id="conclusion" class="section level2">
+<h2>Conclusion</h2>
+</div>
+<div id="references" class="section level2">
+<h2>References</h2>
+<ol style="list-style-type: decimal">
+<li><p>K-means Cluster Analysis. <a href="https://uc-r.github.io/">UC Business Analytics R Programming Guide</a> <a href="https://uc-r.github.io/kmeans_clustering#optimal" class="uri">https://uc-r.github.io/kmeans_clustering#optimal</a></p></li>
+<li><p>Thean C Lim. Clustering: k-means, k-means ++ and gganimate. <a href="https://theanlim.rbind.io/post/clustering-k-means-k-means-and-gganimate/" class="uri">https://theanlim.rbind.io/post/clustering-k-means-k-means-and-gganimate/</a></p></li>
+<li><p><a href="https://www.datacamp.com/tutorial/hierarchical-clustering-R" class="uri">https://www.datacamp.com/tutorial/hierarchical-clustering-R</a></p></li>
+<li><p><a href="https://www.datacamp.com/tutorial/k-means-clustering-r" class="uri">https://www.datacamp.com/tutorial/k-means-clustering-r</a></p></li>
+</ol>
 </div>

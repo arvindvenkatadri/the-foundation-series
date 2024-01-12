@@ -112,4 +112,7 @@ Kuch toh log kahenge | People will say something or the other
 
 1. Henderson, Ron. 12 June 2022. *Luxury Beliefs are Status Symbols: The struggle for distinction*. <https://www.robkhenderson.com/p/status-symbols-and-the-struggle-for?utm_campaign=post&utm_medium=web> Accessed 07 Jan 2024.
 
-3. The Network Effects Bible. <https://www.nfx.com/post/network-effects-bible>
+1. The Network Effects Bible. <https://www.nfx.com/post/network-effects-bible>
+
+1. Mitchell Resnick. * Beyond the Centralized Mindset*. <https://web.media.mit.edu/~mres/papers/JLS/JLS-1.0.html>
+

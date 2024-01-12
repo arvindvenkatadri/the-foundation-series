@@ -4,7 +4,7 @@ subtitle:
 date: "2021-08-09"
 external_link: ""
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: Photo from unsplash.com
   focal_point: Smart
 weight: 2
 links:
@@ -30,6 +30,10 @@ tags:
 library(DiagrammeR)
 library(tidyverse)
 library(palmerpenguins)
+#devtools::install_github('paulofelipe/D3plusR')
+#https://d3plus.org/?path=/docs/introduction--documentation
+#https://github.com/d3plus/d3plus/wiki/Visualizations
+library(D3plusR)
 ```
 
 ## A Childhood Game
@@ -46,12 +50,13 @@ Have you played a Childhood Game called **20 Questions**? Someone has a "target"
 ## Twenty Questions Game as a Play with Data...
 
 Assuming we think of a 20Q Target as say, celebrity singer like Taylor Swift, or a cartoon character like Thomas the Tank Engine, what would an underlying "data structure" look like? We would ask Questions for instance in the following order to find the target of Taylor Swift:  
-- Human?(Yes)  
-- Living?(Yes)  
-- Male?(No)  
-- Celebrity?(Yes)  
-- Music?(Yes)  
-- USA?(Yes)
+
+  - Human?(Yes)  
+  - Living?(Yes)  
+  - Male?(No)  
+  - Celebrity?(Yes)  
+  - Music?(Yes)  
+  - USA?(Yes)
 
 Oh...Taylor Swift!!!
 
@@ -108,7 +113,7 @@ B->D[color = blue,label = yes]; B->E[color = red,label = no]
 ")
 ```
 
-Each Question we ask, based on one of the Feature columns, begets a Yes/NO answer and we turn the left or right accordingly. When we arrive at the leaf, we should be in a position to *guess* the answer !
+Each Question we ask, based on one of the Feature columns, begets a Yes/No answer and we turn the left or right accordingly. When we arrive at the leaf, we should be in a position to *guess* the answer !
 
 
 
@@ -127,23 +132,20 @@ When we look at the FEATURE columns, We would need to formulate questions based 
 
 - *"Is the *bill_length_mm* greater than 45mm?"* considers the entire *bill_length_mm* FEATURE column
 - Is the *sex* female?  considers the entire *sex* column
-
-If the specific **FEATURE** column is a **Numerical** (N) variable, the question would use some "thresholding" as shown in the question above, to convert the Numerical Variable into a Categorical variable. 
-
-If a specific **FEATURE** column is a **Categorical** (C) variable, the question would be like a *filter* operation in Excel. 
+- If the specific **FEATURE** column is a **Numerical** (N) variable, the question would use some "thresholding" as shown in the question above, to convert the Numerical Variable into a Categorical variable.
+- If a specific **FEATURE** column is a **Categorical** (C) variable, the question would be like a *filter* operation in Excel. 
 
 Either way, we end up answering with a **smaller and smaller subset of rows in the dataset**, to which the questions are answered with a Yes. It is as if we played **many** 20 Questions games in parallel, ***since there are so many simultaneous "answers"***! 
 
-Once we exhaust **all** the FEATURE columns, then what remains is a subset (i.e. rows)  of the original dataset and we read off the TARGET column, which should now contain a set of identical entries, e.g. "Adelie". Thus we can extend a *single-target* 20Q game to a **multiple-target** one using a larger dataset. ( Note how the multiple targets are all the same: "Adelie", or "Gentoo", or "Chinstrap")
+Once we exhaust **all** the FEATURE columns, then what remains is a subset (i.e. rows)  of the original dataset and we read off the TARGET column, which should now contain a set of identical entries, e.g. "Adelie". Thus we can extend a *single-target* 20Q game to a **multiple-target** one using a larger dataset. (Note how the multiple targets are all the same: "Adelie", or "Gentoo", or "Chinstrap")
 
-This forms the basic intuition for a Machine Learning Algorithm called a **Decision Tree**.
-
+This forms the basic intuition for a Machine Learning Algorithm called a **Decision Tree**. Note that the tree is plotted **inverted**: trunk on top and the leaves below. <u>[Only God can make a tree.](https://www.poetryfoundation.org/poetrymagazine/poems/12744/trees)</u>
 
 ### Decision Tree in Orange
 
 Let us visualize this Decision Tree in Orange. Look at the now famous `penguins` dataset, available here:
 
-<https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv>
+<u><https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv></u>
 
 We see that there are three `species` of penguins, that live on three `islands`. The measurements for each penguin are `flipper_length_mm`, `bill_length_mm`, `bill_depth_mm`, and  `body_mass_g`. 
 
@@ -184,11 +186,17 @@ How good are the Predictions? What is the **Classification Error Rate**?
 
 ## How Many Trees do we Need? Enter the Random Forest!
 
-Check all your individual Decision Trees: do they ask the same Questions? Do they fork in the same way? Yes, they all seem to use the same set of parameters to reach the target. So they are capable of being "biased" and make the **same mistakes**. So we ask: Does it help to use more than one tree, if all the questions/forks in the Trees are similar?
+Check all your individual Decision Trees: 
+
+- do they ask the same Questions? 
+- Do they fork pretty much in the same way? 
+
+Yes, they all seem to use the same set of parameters to reach the target. So they are capable of being "biased" and make the **same mistakes**. So we ask: Does it help to use more than one tree, if all the questions/forks in the Trees are similar?
 
 No...we need different Trees to be able to **ask different questions**, based on different **variables** or **features** in the data. That will make the Trees as different as possible and so...unbiased. This is what we also saw when we played 20Q: offbeat questions opened up some avenues for predicting the answer/target. 
 
-A forest of such trees is called ~~**the Wild Wood**~~ **a Random Forest** ! 
+A forest of such trees is called <u>[~~**the Wild Wood**~~](https://youtu.be/zE0uAfAuZ08)</u> **a Random Forest** ! 
+
 
 
 ## An Introduction to Random Forests
@@ -197,7 +205,7 @@ In the Random Forest method, we do as follows:
 
 1. Split the dataset into `training` and `test` subsets (70::30 proportion is very common). Keep aside the `testing` dataset for final testing.
 2. Decide on a number of trees, say 100-500 in the forest. 
-2. Take the training dataset and repeatedly sample some of the rows in it. Rows can be **repeated** too; this is called **bootstrap sampling**.
+2. Take the training dataset and repeatedly sample some of the rows in it. Rows can be **repeated** too; this is called `bootstrap sampling`.
 3. Give this sampled training set to each tree. Each tree develops a question from this dataset, in a **random fashion**, using a **randomly chosen** variable. 
 E.g. with `penguins`, if our target is `species`, then some trees will will use `island`, some others will use `body_mass_g` and some others may use `bill_length_mm`.
 4. Each tree will "grow its questions" in a unique way !!  Since the questions are possibly based on a different variable at each time, the trees will grow in very different ways. 
@@ -240,18 +248,48 @@ What are the variables?
         - Value 1: > 50% diameter narrowing  
         (in any major vessel: attributes 59 through 68 are vessels)
 
-We will create a Random Forest Model for this dataset, and compare with the Desision Tree for the same dataset. 
+We will create a Random Forest Model for this dataset, and compare with the Decision Tree for the same dataset. 
 
+
+## Are Random Forests an Example of Complexity?
+
+Does The Random Forest somehow embody the "4A"s of Complexity? (Agents, Actions, Again, Aggregate)? Can we try to interpret the algorithm as such? Here goes:
+
+- Each little *tree* in the Random Forest is an independent **Agent**
+- Each agent-tree has a vocabulary of **Actions**
+     * to choose randomly a *subset* of variables from the big dataset
+     * To independently vote using their choice of variables
+- And the "votes" are **Aggregated** to decide the final prediction
+- Which is greater (better, accurate with higher confidence) than each individual Agent-Trees
+- <u>[Do it **Again**](https://youtu.be/jmdiKePVUy8)</u> when presented with fresh data
+
+Not bad, is it, as a metaphor for Random Forests?
 
 ## How good is my Random Forest?
+There are good few metrics to state the performance of our Random Forest. We should know these:
 
-1. Classification Error  
-2. Gini Impurity  
-3. Cross Entropy  
+1. `Classification Error` : How many mismatches? Simple enough.
+2. `Gini Impurity`: Each Group may end up mis-classifying observations from *any* of the other groups. The Gini Impurity index measures the variance across all groups. If there are $M$ groups identified from what are actually $K$ classes, then $p_{mk}$ defines the proportion of `k-class` observations that are actually in `Group-m`. The Gini Impurity is defined as:
+
+$$
+G = \sum_{k=1}^{K} ~ p_{mk} * (1 - p_{mk})
+$$
+(Very similar to the formula for variance of a binary variable).
+
+A little examination of the formula will show that when any proportion $p_{mk}$ is either very high or very low, then the Gini index is small. A small $p_{mk}$ means that each leaf is highly "pure"; a large one means that we have labels completely the other way around or swapped!!
+
+A small Gini index is a good thing!
+
+3. `Cross Entropy`  
+In line with Claude Shannon's idea of `information entropy`, we can define the Cross-entropy as:
+
+$$
+D = \sum_{k=1}^{K} p_{mk} * log(p_{mk})
+$$
+Again, this tells us how much a particular group has members from another class...so a small Cross-Entropy is a good thing. 
 
 
 ## References
-
 
 1. https://towardsdatascience.com/data-science-made-easy-data-modeling-and-prediction-using-orange-f451f17061fa
 
