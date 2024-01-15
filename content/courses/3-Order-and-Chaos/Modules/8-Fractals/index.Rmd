@@ -1,0 +1,64 @@
+---
+title: "\U0001F335 Fractals"
+date: "2021-01-24"
+type: page
+weight: 120
+links:
+slides: 
+summary: An exploration of fractal shape and fractal math!
+tags:
+- fractals
+- Iterated Functions
+- Siepinski
+- Mandelbrot
+- Julia
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+```{r, echo=FALSE,message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+library(emoji)
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr) # Embed multimedia in HTML files
+```
+
+## Introduction
+
+Let us listen to the late great Benoit Mandelbrot, on the **Art of Roughness**.
+
+`r blogdown::shortcode("youtube", "wQTnVEXAtBY")`
+
+
+## A Little ( just a little?) of Maths...
+
+### What am $i$?
+Dude, what's the square root of -1?? `r emoji::emoji("scream_cat")` `r emoji::emoji("scream_cat")` `r emoji::emoji("scream_cat")`
+
+What can you do repeatedly to arrive at $[-1, 0]$?
+
+Complex Planes: 
+
+`r blogdown::shortcode("youtube", "t75gXyWJNpA")`
+
+### Julia, and Julia, and still more Julia....
+
+Julia Set: https://www.youtube.com/watch?v=2AZYZ-L8m9Q
+
+`r blogdown::shortcode("youtube", "2AZYZ-L8m9Q")`
+
+
+### Jewellery Shopping with Mandelbrot
+Ever gone shopping for jewellery? How is the place organized? 
+
+How Mandelbrot Set is generated: https://www.youtube.com/watch?v=8ma6cV6fw24
+
+`r blogdown::shortcode("youtube", "8ma6cV6fw24")`
+
+Menger Sponge: https://blogs.scientificamerican.com/roots-of-unity/a-few-of-my-favorite-spaces-the-menger-sponge/
+
+Use XaOS to make Mandelbrot and Julia fractals.
+

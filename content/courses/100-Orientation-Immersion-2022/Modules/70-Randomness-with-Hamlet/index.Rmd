@@ -422,14 +422,9 @@ Experiment and make a comic out of it:
 
 ### Fun Stuff: Words Belong Hamlet
 
-Hamlet's *To be or not to be* in Pidgin English - Video on Twitter!
+Hamlet's *To be or not to be* in Pidgin English - Video on FB
 
-```{r echo=FALSE}
-blogdown::shortcode("tweet", 
-                    user = "bbcnewspidgin", 
-                    id = "1108724221784530945")
-                    
-```
+<https://m.facebook.com/bbcnewspidgin/posts/1024712457734480/?comment_tracking=%7B%22tn%22%3A%22O%22%7D>
 
 To be or Not to be, in [Tok
 Pisin](https://www.hawaii.edu/satocenter/langnet/definitions/tokpisin.html):

@@ -13,26 +13,32 @@ tags:
 - Strategy
 - Algorithm for Altruism?
 - Regret, Reward, Risk, Retribution
+- Nash Equilibrium
 
 ---
 
 ```{r include=FALSE}
 library(blogdown)
+library(tidyverse)
+library(huxtable)
+library(knitr)
+library(kableExtra)
+library(emoji)
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr) # Embed multimedia in HTML files
 ```
 
 ## Introduction
 We read The Three Musketeers, and also saw a brief video from Squid Game. Let us further contemplate the actions of the characters. 
 
-### Discussion-2
+### Discussion-1: Structure
 
-Are there COSTs to ACTIONs? Who decides?
+The Game consists of:
 
--   Players
--   Payoffs
--   Game Matrix
--   Strategies
-
-How does one minimize costs and maximize rewards?
+-   Rational *Players*
+-   Numerical *Payoffs*
+-   Arranged in a Game *Payoff Matrix*
+-   Player *Strategies* to navigate the Matrix
 
 What strategies are possible as a bowler in Cricket? As a batsman? What strategies are **permitted**? By whom?
 
@@ -42,11 +48,22 @@ knitr::include_graphics("rishabh.jpg")
 
 ## The Game of Trust
 
-And finally, let us **play** a Game,  on the <u>[**Game of Trust Website**](https://ncase.me/trust)</u> !
+So, let us **play** a Game,  on the <u>[**Game of Trust Website**](https://ncase.me/trust)</u> ! Please pair up on one laptop to play this.
 
-## Robert Axelrod's Study on Cooperation
+### Discussion-2: Nature
 
-This is a famous study of the Iterated Prisoners' Dilemma by Robert Axelrod, **The Evolution of Cooperation**. [(PDF)](Axelrod-Hamilton.pdf). We will read just a we bit of it in class. 
+- **Strategies** in PD define what actions you will take in response to actions others might take. 
+- We saw quite a few strategies here
+- The *best strategy* is one that **survives**!
+- Survival is everything. That is what D'Artagnan and the Three Musketeers were also basing their actions on!
+  * Read more about this idea in this possibly illegal copy of <u>[**Nassim Nicholas Taleb, "Skin in the Game"**.](https://philosophiatopics.files.wordpress.com/2018/10/skin-in-the-game-nassim-nicholas-taleb.pdf)</u>
+  * Or you can <u>[**watch Taleb speak**](https://youtu.be/uv6KLbkvua8?feature=shared)</u>
+- We will encounter *Survival* again soon!
+
+  
+## Reading: Robert Axelrod's Study on Cooperation
+
+This is a famous study of the Iterated Prisoners' Dilemma by Robert Axelrod, <u>[**The Evolution of Cooperation** (PDF)](Axelrod-Hamilton.pdf)</u>. We will read just a wee bit of it in class. 
 
 And here is Robert Axelrod on the **RadioLab Podcast**
 
@@ -64,27 +81,71 @@ picture-in-picture" loading="lazy">
 
 </iframe>
 
+<br>
 Transcript: <u><https://www.wnycstudios.org/podcasts/radiolab/segments/104010-one-good-deed-deserves-another></u>
+
+### Nash Equilibrium and Dominant Strategy in PD
+
+Are there COSTs to ACTIONs? Who decides?
+
+How does one ACT to minimize costs and maximize rewards? Remember, we are all **Agents**, with our own vocabulary of **Actions** which we might use **Again** and again, and experience an **Aggregate** outcome in society. 
+
+The **Payoff Matrix** in PD is:
+
+```{r, echo=FALSE}
+data <- tibble::tibble(P = c("C", "D"),
+                       C = c("(R=3,R=3)", "(S=0,T=5)"),
+                       D = c("(T=5,S=0)", "(P=1,P=1)")) %>% tibble::column_to_rownames(var = "P")
+data %>% 
+  kableExtra::kbl(centering = TRUE)
+
+```
+
+where:
+$$
+Temptation > Reward > Punishment > S\\\
+$$
+$$
+R > (S + T)/2
+$$
+The first condition ensures that Temptation (to D) is always stronger than the Reward(for C); and the second ensures that you cannot mutually agree to alternate between C and D and have a higher net reward !! (<u> [Can you Game Game Theory ? That's a Cabal !! ](https://www.quora.com/Who-is-responsible-for-repairing-roads-if-they-are-damaged-by-heavy-vehicles-Who-can-we-complain-to-if-our-roads-are-damaged)</u>)
+
+Wherever you "are" on the matrix, you can **always** improve your situation by defecting!! "D" is your **best move**, your **"Dominant Strategy"**, because that is how the matrix is stacked. And if both players do that, then we end up at the bottom-right cell, which says "(D,D)", where the game stays forever, in state called the **"Nash Equilibrium"**. \
+While just a little thought, even hesitation, could have led us "(C, C)"...An altruistic decision to "C" first could tip the scales in favour of "(C,C)". 
+
+Sigh.
 
 ## SouthWest Airlines: A Case Study
 
-The story of Southwest Airlines' **Early Bird Check-In**<u>[(Weblink)](https://mindyourdecisions.com/blog/2013/03/05/southwest-airlines-boarding-and-game-theory/)</u>
+OK, so how does PD show up in a real-world context? Here is a business story: The story of Southwest Airlines' <u>[**Early Bird Check-In**.](https://mindyourdecisions.com/blog/2013/03/05/southwest-airlines-boarding-and-game-theory/)</u>
+
+What could be the passengers' strategy?
+
 
 ## Hotelling's Phenomenon: A Case Study
 
-Why are Hotels and Petrol Pumps located next to each other?
-<u>[(Weblink)](https://mindyourdecisions.com/blog/2008/03/25/game-theory-tuesdays-hotelling%e2%80%99s-game-or-why-gas-stations-have-competitors-nearby/)</u>
-Here is the **Hotelling's Phenomenon**, explained. 
+Why are Hotels and Petrol Pumps located next to each other? Here is the <u>[**Hotelling's Phenomenon**, explained.](https://mindyourdecisions.com/blog/2008/03/25/game-theory-tuesdays-hotelling%e2%80%99s-game-or-why-gas-stations-have-competitors-nearby/)</u>
 
  <br> `r blogdown::shortcode("youtube", "u4cKzGj58q4")` <br>
 
-## What are the Assumptions in Game Theory?
+## What are the Assumptions in **Prisoners' Dilemma**?
 
 -   That gains and pains can be **quantified**
 -   Rationality
--   Players have identical and opposed aims (Symmetry)
+-   Players have identical and opposed aims i.e. **Adverserial Symmetry**.
 -   In most cases, the game is **zero-sum**
 -   Some form of spoke/unspoken agreement as to what may and may not be done ( i.e Rules of the Game )
+
+## <u>[Wait, But Why?](https://waitbutwhy.com)</u>
+
+- So, the PD matrix is loaded towards "D". ;-(
+- "Defect" is the **Dominant Strategy**
+- Societal Outcomes will then be ....horrible. This is the **Nash Equilibrium** in PD. 
+- OK, so public behaviour can be influenced by individual decisions to **first C, and then respond**?
+- But is it always **zero sum**? Can it be non-adverserial?
+- Are there other Strategies? Other Games even?
+
+We'll see.
 
 
 ## References
@@ -104,13 +165,29 @@ Here is the **Hotelling's Phenomenon**, explained.
 
 ## Game Theory Pop Music, Movie Clip, and TV ad Playlist !!
 
-1.  Chris de Burgh: Don't Pay the Ferryman! <u><https://www.youtube.com/watch?v=Q-a5TAL-IXs></u>
 
-2.  Abba: The Name of the Game <u><https://www.youtube.com/watch?v=T5Qf_7HM1cM></u>
+1.  Chris de Burgh: Don't Pay the Ferryman!
+    <u><https://www.youtube.com/watch?v=Q-a5TAL-IXs></u>
 
-3.  Bachchan vs Warsi: Want a Pepsi - Tit for Tat <u><https://www.youtube.com/watch?v=gc6QZcxbMZE></u>
+2.  Abba: The Name of the Game
+    <u><https://www.youtube.com/watch?v=T5Qf_7HM1cM></u>
 
-4.  The Princess Bride - Battle of Wits - Which Strategy to Use here? (Asymmetric Information) <u><https://www.youtube.com/watch?v=rMz7JBRbmNo></u>
+3.  Bachchan vs Warsi: Want a Pepsi - Tit for Tat
+    <u><https://www.youtube.com/watch?v=gc6QZcxbMZE></u>
 
-5.  The Gods Must be Crazy (Brinkmanship) <u><https://www.youtube.com/watch?v=9LvViKftRnA></u>
+4.  The Princess Bride - Battle of Wits - Which Strategy to Use here?
+    (Asymmetric Information)
+    <u><https://www.youtube.com/watch?v=rMz7JBRbmNo></u>
+
+5.  The Gods Must be Crazy (Brinkmanship)
+    <u><https://www.youtube.com/watch?v=9LvViKftRnA></u>
+    
+6. L.A. Confidential <u><https://criticalcommons.org/embed?m=pBXsAUvh9></u>
+
+
+## Activity-2
+
+Take a walk in the nearest urban area this weekend. Unobtrusively, observe what people are doing. Note these down when they seem to be visible examples of "Cooperate" or "Defect". For or Against whom?
+
+No pictures. 
 

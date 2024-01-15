@@ -29,11 +29,10 @@ library(embedr) # Embed multimedia in HTML files
 > own. And Dino would have fun surfing the Internet, tweeting,
 > photographing on Instagram. For this reason he would be proud of "his"
 > site which is now beginning to take its first steps.\
-> - Almerina Buzzati \@ <http://dinobuzzati.it>
+> - Almerina Buzzati \@ <u><http://dinobuzzati.it></u>
 
 ### Story
-
-[**The Falling Girl** PDF](The_Falling_Girl.pdf)
+We will read Buzzati's surreal story, <u>[**The Falling Girl** PDF](The_Falling_Girl.pdf)</u>
 
 ### Themes
 
@@ -48,8 +47,8 @@ library(embedr) # Embed multimedia in HTML files
 
 ### Song for the Story !!
 
-Waheeda Rehman, the "**Falling Girl**" in
-["Guide"](https://www.imdb.com/title/tt0059246/)
+Waheeda Rehman, the stunning "**Falling Girl**" in
+<u>["Guide"](https://www.imdb.com/title/tt0059246/)</u>
 `r emoji::emoji("red_heart")` !! Waah! Dino Buzzati should have watched
 this!! He would have approved!!
 
@@ -64,10 +63,8 @@ Lyrics and Translation: <https://www.filmyquotes.com/songs/1245>
 | Ho koi na roko dil ki udaan ko                | Please no one stop the flight of the heart      |
 | Dil woh chala aa aa aa                        | There goes my heart flying...                   |
 | ---------------                               | ---------------                                 |
-| Aaj phir jeene ki tamanna hai                 | Today, I have a desire to live again            |
-| Aaj phir marne ka irada hai                   | Today, I have an intention to die again!        |
-| Aaj phir jeene ki tamanna hai                 | Today, I have a desire to live again            |
-| Aaj phir marne ka irada hai                   | Today, I have an intention to die again!        |
+| Aaj phir jeene ki tamanna hai(2)              | Today, I have a desire to live again            |
+| Aaj phir marne ka irada hai(2)                | Today, I have an intention to die again!        |
 | ----------------                              | ----------------                                |
 | Apne hi bas mein nahi main(2)                 | I don't have any control over myself            |
 | Dil hai kahin toh hoon kahin main(2)          | My heart is somewhere and I'm somewhere else    |
@@ -84,14 +81,12 @@ Lyrics and Translation: <https://www.filmyquotes.com/songs/1245>
 | Ho phool hi phool zindagi bahaar hai          | There is spring and flowers everywhere          |
 | Tay kar liya aa aa aa                         | Hence I've decided that...                      |
 | -----------------                             | ---------------------                           |
-| Aaj phir jeene ki tamanna hai                 | Today, I have a desire to live again            |
-| Aaj phir marne ka irada hai                   | Today, I have an intention to die again!        |
-| Aaj phir jeene ki tamanna hai                 | Today, I have a desire to live again            |
-| Aaj phir marne ka irada hai                   | Today, I have an intention to die again!        |
+| Aaj phir jeene ki tamanna hai(2)              | Today, I have a desire to live again            |
+| Aaj phir marne ka irada hai(2)                | Today, I have an intention to die again!        |
 
 ## Writing Prompts
 
-1.  On Taking a Chance
+1.  On Comparing this Falling Girl with another very Famous One
 2.  On Looking in the Mirror 25 Years from Now
 3.  A Letter from my 60-year-old self to me at 18-years-old
 4.  On saying "Anyways" and "My Bad": Trying to Be Different in the Same

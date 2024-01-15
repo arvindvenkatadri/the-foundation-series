@@ -6,7 +6,7 @@ output: html_document
 weight: 50
 external_link: ""
 image:
-  caption: Photo by rawpixel on Unsplash
+  caption: Made on Snazzy Maps
   focal_point: Smart
 links:
 slides: 
@@ -27,8 +27,12 @@ editor_options:
     wrap: 72
 ---
 
-```{r include=FALSE}
+```{r echo=FALSE,message=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
 library(blogdown)
+library(emoji)
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr) # Embed multimedia in HTML files
 ```
 
 

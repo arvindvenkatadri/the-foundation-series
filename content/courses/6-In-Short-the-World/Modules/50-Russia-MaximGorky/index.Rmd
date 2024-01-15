@@ -19,11 +19,32 @@ library(embedr) # Embed multimedia in HTML files
 
 ![](https://upload.wikimedia.org/wikipedia/commons/f/f5/Maxim_Gorky.jpg)
 
-> Maxim Gorky (born March 16 [March 28, New Style], 1868, Nizhny Novgorod, Russia—died June 14, 1936) Russian short-story writer and novelist who first attracted attention with his naturalistic and sympathetic stories of tramps and social outcasts and later wrote other stories, novels, and plays, including his famous The Lower Depths.
+> Maxim Gorky (born March 16 [March 28, New Style], 1868, Nizhny
+> Novgorod, Russia—died June 14, 1936) Russian short-story writer and
+> novelist who first attracted attention with his naturalistic and
+> sympathetic stories of tramps and social outcasts and later wrote
+> other stories, novels, and plays, including his famous The Lower
+> Depths.
 
->(He) was a Russian author considered the father of Soviet revolutionary literature and founder of the doctrine of socialist realism. After having a difficult childhood, he roamed across the Russian empire, frequently changing jobs for about fifteen years before he became a successful writer. The experiences he had during those fifteen years deeply influenced his writing. Initially, he wrote stories mainly based on the lives of tramps and social outcasts, and he became known for his naturalistic style of writing. One of his greatest works is ‘The Mother,’ which Lenin praised as “a very timely book.” 
+> (He) was a Russian author considered the father of Soviet
+> revolutionary literature and founder of the doctrine of socialist
+> realism. After having a difficult childhood, he roamed across the
+> Russian empire, frequently changing jobs for about fifteen years
+> before he became a successful writer. The experiences he had during
+> those fifteen years deeply influenced his writing. Initially, he wrote
+> stories mainly based on the lives of tramps and social outcasts, and
+> he became known for his naturalistic style of writing. One of his
+> greatest works is ‘The Mother,’ which Lenin praised as “a very timely
+> book.”
 
->Gorky was deeply associated with fellow Russian writers, Anton Chekhov and Leo Tolstoy and later wrote memoirs on them. Gorky was not only a great writer but also an influential figure in the political thinking. He was active with the emerging Marxist social-democrat movement. Initially a Bolshevik supporter, he became a critic when Vladimir Lenin seized power. However, later Gorky served as a Soviet advocate and headed the Union of Soviet Writers. His life was marked with a number of politically forced and sometimes self-imposed exiles.
+> Gorky was deeply associated with fellow Russian writers, Anton Chekhov
+> and Leo Tolstoy and later wrote memoirs on them. Gorky was not only a
+> great writer but also an influential figure in the political thinking.
+> He was active with the emerging Marxist social-democrat movement.
+> Initially a Bolshevik supporter, he became a critic when Vladimir
+> Lenin seized power. However, later Gorky served as a Soviet advocate
+> and headed the Union of Soviet Writers. His life was marked with a
+> number of politically forced and sometimes self-imposed exiles.
 
 > He was nominated five times for the Nobel Prize in Literature.
 
@@ -34,27 +55,30 @@ Clown.](Maxim%20Gorky%20-%20The%20Clown.docx)</u>
 
 ## Themes
 
-- Being Pretentious and Being genuine
-- Humour as way to examine Life
-- The Bystander Effect
-- Risk Taking for the Benefit of Society
-- Hating Oneself for Cowardice?
-- Envy / Jealousy and Anger
+-   Being Pretentious and Being genuine
+-   Humour as way to examine Life
+-   The Bystander Effect
+-   Risk Taking for the Benefit of Society
+-   Hating Oneself for Cowardice?
+-   Envy / Jealousy and Anger
 
 ## Additional Material
 
 ### Notes and References
 
-1. Hingley, Ronald Francis. "Maxim Gorky". Encyclopedia Britannica, 30 Nov. 2023, https://www.britannica.com/biography/Maxim-Gorky. Accessed 6 January 2024.
+1.  Hingley, Ronald Francis. "Maxim Gorky". Encyclopedia Britannica, 30
+    Nov. 2023, <u><https://www.britannica.com/biography/Maxim-Gorky></u>. Accessed 6 January 2024.
 
-2. Guzeva, Alexandra. Russia Beyond, March 28, 2018. *5 reasons why Soviet writer Maxim Gorky is so great*. <https://www.rbth.com/arts/327885-why-soviet-writer-gorky-great>. Accessed 6 January 2024.
+2.  Guzeva, Alexandra. Russia Beyond, March 28, 2018. *5 reasons why
+    Soviet writer Maxim Gorky is so great*.
+    <u><https://www.rbth.com/arts/327885-why-soviet-writer-gorky-great></u>. Accessed 6 January 2024.
 
 ### Song for the Story
 
 Perhaps, after listening to this song, we will understand why Raj Kapoor
 was so popular in Soviet Russia !!
 
-<https://youtu.be/OXPmxcFgXvY>
+<u><https://youtu.be/OXPmxcFgXvY></u>
 
 `r embedr::embed_audio("Kehta-Hai-Joker-Saara-Zamana.mp3")`
 
@@ -63,13 +87,13 @@ was so popular in Soviet Russia !!
 | Kehta hai joker saara jamaana              | Says the Joker, to the whole World            |
 | Aadhi haqikat aadha fasana                 | Half truth, Half Story                        |
 | Chashma utaaro phir yaaro dekho            | Remove your specs, and then see, my friends   |
-| duniya nahi hai chehra purana              | The World is Old, the Face is New             |
+| duniya nahi hai chehra purana              | The World is New, the Face is Old             |
 | kehta hai joker...                         | Says the Joker...                             |
 | -----                                      | -----                                         |
 | ( Apne pe hans kar jag ko hansaya          | He laughs at Himself to make the World laugh  |
-| Ban ke tamasha mele main aaya ) (x2)       | Becoming a Show, he Gomes to this gathering   |
+| Ban ke tamasha mele main aaya ) (x2)       | Becoming a Show, he Comes to this gathering   |
 | mele main aaya                             | Comes to this Gathering                       |
-| (hindu na mulsim, poorab na pashchim) (x2) | Not Hindu not Muslim, nor East nor West       |
+| (hindu na muslim, poorab na pashchim) (x2) | Not Hindu not Muslim, nor East nor West       |
 | Mazhub hai apna, hansna hansaana           | My religion is to laugh and make others laugh |
 | kehta hai joker ...                        | Says the Joker...                             |
 | ------                                     | -----                                         |
@@ -83,3 +107,9 @@ was so popular in Soviet Russia !!
 | kehta hai joker ...                        | Says the Joker...                             |
 
 ## Writing Prompts
+
+1.  On being funny at the "wrong time"
+2.  On a conversation with Management
+3.  On being a bystander
+4.  A discussion of jobs and professions that seem to take risks for the
+    benefit of society

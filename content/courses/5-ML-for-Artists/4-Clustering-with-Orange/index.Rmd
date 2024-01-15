@@ -122,3 +122,7 @@ Let us first do this interactively! Fire up Orange Data Mining and open this fil
 3.  <https://www.datacamp.com/tutorial/hierarchical-clustering-R>
 
 4.  <https://www.datacamp.com/tutorial/k-means-clustering-r>
+
+5. Michele Coscia. 2019. *Who will Cluster the Cluster Makers?* <https://www.michelecoscia.com/?p=1709> Accessed 12 Jan 2024. 
+
+

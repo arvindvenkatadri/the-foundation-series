@@ -1,0 +1,142 @@
+---
+title: "\U0001F579 A Random Walk with Hamlet"
+author: "Arvind Venkatadri"
+date: 2021-12-11
+weight: 70
+external_link: ""
+image:
+  caption: Tom und Nicki Löschner on Pixabay
+  focal_point: Smart
+links:
+slides: 
+summary: 
+tags:
+- Hamlet
+- PPDAC Workflow
+- Design of Experiments
+- Sampling
+- Randomization
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r include=FALSE}
+library(blogdown)
+library(tidyverse)
+library(mosaic)
+```
+
+## Seeing Data
+
+Let us first examine the street traffic data we have gathered for any
+"model-like" pattern! We will use a tool called, ah..umm..ahem..
+er....**WTFcsv**. Let us first quickly see what this tool offers us!
+
+<br> `r blogdown::shortcode("vimeo", "150216437")` <br>
+
+Let us import our data into the <u>[**WTFcsv**
+tool](https://databasic.io/en/wtfcsv/)</u> and see what patterns lurk
+beneath our data!
+
+### Discussion-1
+
+-   So everything random is not really random?
+-   Does seeing a pattern make it "not random"?
+
+## Is Randomness a Design Tool?
+
+![Photo by Sharath G. from Pexels](pexels-sharath-g-4418675.jpg)
+
+1.  Do you remember plucking mangoes from the trees in your childhood
+    gardens?
+2.  Did you happen to be the youngest in the group?
+3.  Did you have run home to get the salt + chilly powder?
+4.  Why did you trust your friends not to eat off the best mangoes in
+    your absence? ;-D
+5.  Were you used to being the "*denner*" in every game? Or the last
+    person to bat or bowl or whatever was the cool thing in the game...
+6.  Or did you do that "bat numbers" thing?
+7.  Why did you trust your friends? ;-D
+
+So can we use **Randomness** in Design? With *intent*?
+
+And is <u>[this](https://www.jacksonpollock.org)</u> the use of **randomness** in Art?
+
+### Pedagogical Vandalism
+
+Let us throw some chalk pieces on the floor at random and see what
+happens!!
+
+1.  Was that a completely "mad" thing to do, throwing stuff on the
+    floor? Or was it an act of *Pedagogical Vandalism*?
+
+2.  Is Randomness just too much to handle or comprehend?
+
+3.  Or can we "tame" it in some way, and put it to use in Art, Design,
+    and Tech?
+
+4.  Have we been doing this all along? Have we been <u>[*holding
+    infinity in the palm of our
+    hands*](https://www.poetryfoundation.org/poems/43650/auguries-of-innocence)</u>,
+    in the हाथ कीे लकीरे?
+
+5.  What **diagrams or thought experiments** can we create to do this?
+
+6.  WHY would this be a good idea? Is there a very **Human Motivation**
+    behind this desire we might have? 
+    
+7. Could this song indicate what our situation might be?
+
+      <u><https://www.youtube.com/watch?v=qan0Y9hXpPQ></u>
+    
+      <u><https://www.filmyquotes.com/songs/1381></u>
+
+7.  Or let's ask <u>[this lady](https://wyldnetworks.com/blog/hedy-lamarr-frequency-hopping-spread-spectrum)</u> here.
+![](Hedy-Lamarr-and-the-Frequency-Hopping-Spread-Spectrum.jpg)
+
+## <u>[Wait, But Why?](https://waitbutwhy.com)</u>
+
+-   Randomness can help create fairness?
+-   Visibly?
+-   *Generate Randomness* to make things fair? How?
+-   What does that even mean, "generate randomness"?
+-  If something is random-random, how can it be fair "every time"?
+- What does <u>[**"every time"**](https://web.archive.org/web/20190302202830id_/http://pdfs.semanticscholar.org/a931/ac1b3ef11235d4516f341b3b5bd8b1ee330e.pdf)</u> even mean?
+
+We'll see.
+
+### References
+
+1.  Seeing Probability Theory:
+    <u><https://seeing-theory.brown.edu/basic-probability/index.html></u> A Superb visual website to see patterns in theory! Go and play there
+    with Hamlet!
+
+2.  Penguin Press @ Medium. *Abraham Wald and the Missing Bullet Holes*. <u>[**(Web
+    Link)**](https://medium.com/@penguinpress/an-excerpt-from-how-not-to-be-wrong-by-jordan-ellenberg-664e708cfc3d)</u>
+
+3.  R. J. MacKay and R. W. Oldford. <u>[**Scientific Method, Statistical Method and the Speed of Light**](https://projecteuclid.org/euclid.ss/1009212817)</u>
+
+4.  <u>[The Man Who Invented Modern Probability - Andrei Kolmogorov](https://getpocket.com/explore/item/the-man-who-invented-modern-probability)</u>
+
+5.  Tim C. Hesterberg (2015) What Teachers Should Know About the
+    Bootstrap: Resampling in the Undergraduate Statistics Curriculum,
+    The American Statistician, 69:4, 371-386, DOI:
+    10.1080/00031305.2015.1089789
+    
+6. Robert Scholz. May 1982. <u>[**The Origin of Spread Spectrum Communications**](https://web.archive.org/web/20190302202830id_/http://pdfs.semanticscholar.org/a931/ac1b3ef11235d4516f341b3b5bd8b1ee330e.pdf)</u>
+
+7. Emma Neeson. 04 March 2023. <u>[**Hedy Lamarr and the Frequency Hopping Spread Spectrum: The mother of Wi-Fi**.](https://wyldnetworks.com/blog/hedy-lamarr-frequency-hopping-spread-spectrum)</u>
+
+8. Karan Kashyap, *Calculating the Value of Pi: A Monte Carlo Simulation*,
+    <https://www.cantorsparadise.com/calculating-the-value-of-pi-using-random-numbers-a-monte-carlo-simulation-d4b80dc12bdf>
+
+### Fun Stuff
+
+Hamlet's *To be or not to be* in Pidgin English:
+
+<https://m.facebook.com/bbcnewspidgin/posts/1024712457734480/?comment_tracking=%7B%22tn%22%3A%22O%22%7D>

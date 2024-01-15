@@ -2,7 +2,7 @@
 title: "\U0001F579 How Must I Play?"
 author: "Arvind V."
 date: 2021-12-11
-lastmod: "2024-01-04"
+lastmod: "2024-01-15"
 image:
   caption: Photo by Markus Spiske on Unsplash
   focal_point: Smart
@@ -13,35 +13,51 @@ tags:
 - Strategy
 - Algorithm for Altruism?
 - Regret, Reward, Risk, Retribution
+- Nash Equilibrium
 
 ---
 
+<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
+<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
 
 <div id="introduction" class="section level2">
 <h2>Introduction</h2>
 <p>We read The Three Musketeers, and also saw a brief video from Squid Game. Let us further contemplate the actions of the characters.</p>
-<div id="discussion-2" class="section level3">
-<h3>Discussion-2</h3>
-<p>Are there COSTs to ACTIONs? Who decides?</p>
+<div id="discussion-1-structure" class="section level3">
+<h3>Discussion-1: Structure</h3>
+<p>The Game consists of:</p>
 <ul>
-<li>Players</li>
-<li>Payoffs</li>
-<li>Game Matrix</li>
-<li>Strategies</li>
+<li>Rational <em>Players</em></li>
+<li>Numerical <em>Payoffs</em></li>
+<li>Arranged in a Game <em>Payoff Matrix</em></li>
+<li>Player <em>Strategies</em> to navigate the Matrix</li>
 </ul>
-<p>How does one minimize costs and maximize rewards?</p>
 <p>What strategies are possible as a bowler in Cricket? As a batsman? What strategies are <strong>permitted</strong>? By whom?</p>
 <p><img src="rishabh.jpg" width="350px" height="450px" /></p>
 </div>
 </div>
 <div id="the-game-of-trust" class="section level2">
 <h2>The Game of Trust</h2>
-<p>And finally, let us <strong>play</strong> a Game, on the <u><a href="https://ncase.me/trust"><strong>Game of Trust Website</strong></a></u> !</p>
+<p>So, let us <strong>play</strong> a Game, on the <u><a href="https://ncase.me/trust"><strong>Game of Trust Website</strong></a></u> ! Please pair up on one laptop to play this.</p>
+<div id="discussion-2-nature" class="section level3">
+<h3>Discussion-2: Nature</h3>
+<ul>
+<li><strong>Strategies</strong> in PD define what actions you will take in response to actions others might take.</li>
+<li>We saw quite a few strategies here</li>
+<li>The <em>best strategy</em> is one that <strong>survives</strong>!</li>
+<li>Survival is everything. That is what D’Artagnan and the Three Musketeers were also basing their actions on!
+<ul>
+<li>Read more about this idea in this possibly illegal copy of <u><a href="https://philosophiatopics.files.wordpress.com/2018/10/skin-in-the-game-nassim-nicholas-taleb.pdf"><strong>Nassim Nicholas Taleb, “Skin in the Game”</strong>.</a></u></li>
+<li>Or you can <u><a href="https://youtu.be/uv6KLbkvua8?feature=shared"><strong>watch Taleb speak</strong></a></u></li>
+</ul></li>
+<li>We will encounter <em>Survival</em> again soon!</li>
+</ul>
 </div>
-<div id="robert-axelrods-study-on-cooperation" class="section level2">
-<h2>Robert Axelrod’s Study on Cooperation</h2>
-<p>This is a famous study of the Iterated Prisoners’ Dilemma by Robert Axelrod, <strong>The Evolution of Cooperation</strong>. <a href="Axelrod-Hamilton.pdf">(PDF)</a>. We will read just a we bit of it in class.</p>
+</div>
+<div id="reading-robert-axelrods-study-on-cooperation" class="section level2">
+<h2>Reading: Robert Axelrod’s Study on Cooperation</h2>
+<p>This is a famous study of the Iterated Prisoners’ Dilemma by Robert Axelrod, <u><a href="Axelrod-Hamilton.pdf"><strong>The Evolution of Cooperation</strong> (PDF)</a></u>. We will read just a wee bit of it in class.</p>
 <p>And here is Robert Axelrod on the <strong>RadioLab Podcast</strong></p>
 <iframe frameborder="0" scrolling="no" height="130" width="100%" src="https://www.wnyc.org/widgets/ondemand_player/wnycstudios/#file=/audio/json/104010/&amp;share=1">
 </iframe>
@@ -50,28 +66,95 @@ tags:
 picture-in-picture" loading="lazy">
 </iframe>
 </iframe>
-<p>Transcript: <u><a href="https://www.wnycstudios.org/podcasts/radiolab/segments/104010-one-good-deed-deserves-another" class="uri">https://www.wnycstudios.org/podcasts/radiolab/segments/104010-one-good-deed-deserves-another</a></u></p>
+<p><br>
+Transcript: <u><a href="https://www.wnycstudios.org/podcasts/radiolab/segments/104010-one-good-deed-deserves-another" class="uri">https://www.wnycstudios.org/podcasts/radiolab/segments/104010-one-good-deed-deserves-another</a></u></p>
+<div id="nash-equilibrium-and-dominant-strategy-in-pd" class="section level3">
+<h3>Nash Equilibrium and Dominant Strategy in PD</h3>
+<p>Are there COSTs to ACTIONs? Who decides?</p>
+<p>How does one ACT to minimize costs and maximize rewards? Remember, we are all <strong>Agents</strong>, with our own vocabulary of <strong>Actions</strong> which we might use <strong>Again</strong> and again, and experience an <strong>Aggregate</strong> outcome in society.</p>
+<p>The <strong>Payoff Matrix</strong> in PD is:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:left;">
+C
+</th>
+<th style="text-align:left;">
+D
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+C
+</td>
+<td style="text-align:left;">
+(R=3,R=3)
+</td>
+<td style="text-align:left;">
+(T=5,S=0)
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+D
+</td>
+<td style="text-align:left;">
+(S=0,T=5)
+</td>
+<td style="text-align:left;">
+(P=1,P=1)
+</td>
+</tr>
+</tbody>
+</table>
+<p>where:
+<span class="math display">\[
+Temptation &gt; Reward &gt; Punishment &gt; S\\\
+\]</span>
+<span class="math display">\[
+R &gt; (S + T)/2
+\]</span>
+The first condition ensures that Temptation (to D) is always stronger than the Reward(for C); and the second ensures that you cannot mutually agree to alternate between C and D and have a higher net reward !! (<u> <a href="https://www.quora.com/Who-is-responsible-for-repairing-roads-if-they-are-damaged-by-heavy-vehicles-Who-can-we-complain-to-if-our-roads-are-damaged">Can you Game Game Theory ? That’s a Cabal !!</a></u>)</p>
+<p>Wherever you “are” on the matrix, you can <strong>always</strong> improve your situation by defecting!! “D” is your <strong>best move</strong>, your <strong>“Dominant Strategy”</strong>, because that is how the matrix is stacked. And if both players do that, then we end up at the bottom-right cell, which says “(D,D)”, where the game stays forever, in state called the <strong>“Nash Equilibrium”</strong>.<br />
+While just a little thought, even hesitation, could have led us “(C, C)”…An altruistic decision to “C” first could tip the scales in favour of “(C,C)”.</p>
+<p>Sigh.</p>
+</div>
 </div>
 <div id="southwest-airlines-a-case-study" class="section level2">
 <h2>SouthWest Airlines: A Case Study</h2>
-<p>The story of Southwest Airlines’ <strong>Early Bird Check-In</strong><u><a href="https://mindyourdecisions.com/blog/2013/03/05/southwest-airlines-boarding-and-game-theory/">(Weblink)</a></u></p>
+<p>OK, so how does PD show up in a real-world context? Here is a business story: The story of Southwest Airlines’ <u><a href="https://mindyourdecisions.com/blog/2013/03/05/southwest-airlines-boarding-and-game-theory/"><strong>Early Bird Check-In</strong>.</a></u></p>
+<p>What could be the passengers’ strategy?</p>
 </div>
 <div id="hotellings-phenomenon-a-case-study" class="section level2">
 <h2>Hotelling’s Phenomenon: A Case Study</h2>
-<p>Why are Hotels and Petrol Pumps located next to each other?
-<u><a href="https://mindyourdecisions.com/blog/2008/03/25/game-theory-tuesdays-hotelling%e2%80%99s-game-or-why-gas-stations-have-competitors-nearby/">(Weblink)</a></u>
-Here is the <strong>Hotelling’s Phenomenon</strong>, explained.</p>
+<p>Why are Hotels and Petrol Pumps located next to each other? Here is the <u><a href="https://mindyourdecisions.com/blog/2008/03/25/game-theory-tuesdays-hotelling%e2%80%99s-game-or-why-gas-stations-have-competitors-nearby/"><strong>Hotelling’s Phenomenon</strong>, explained.</a></u></p>
 <p><br> {{% youtube "u4cKzGj58q4" %}} <br></p>
 </div>
-<div id="what-are-the-assumptions-in-game-theory" class="section level2">
-<h2>What are the Assumptions in Game Theory?</h2>
+<div id="what-are-the-assumptions-in-prisoners-dilemma" class="section level2">
+<h2>What are the Assumptions in <strong>Prisoners’ Dilemma</strong>?</h2>
 <ul>
 <li>That gains and pains can be <strong>quantified</strong></li>
 <li>Rationality</li>
-<li>Players have identical and opposed aims (Symmetry)</li>
+<li>Players have identical and opposed aims i.e. <strong>Adverserial Symmetry</strong>.</li>
 <li>In most cases, the game is <strong>zero-sum</strong></li>
 <li>Some form of spoke/unspoken agreement as to what may and may not be done ( i.e Rules of the Game )</li>
 </ul>
+</div>
+<div id="wait-but-why" class="section level2">
+<h2><u><a href="https://waitbutwhy.com">Wait, But Why?</a></u></h2>
+<ul>
+<li>So, the PD matrix is loaded towards “D”. ;-(</li>
+<li>“Defect” is the <strong>Dominant Strategy</strong></li>
+<li>Societal Outcomes will then be ….horrible. This is the <strong>Nash Equilibrium</strong> in PD.</li>
+<li>OK, so public behaviour can be influenced by individual decisions to <strong>first C, and then respond</strong>?</li>
+<li>But is it always <strong>zero sum</strong>? Can it be non-adverserial?</li>
+<li>Are there other Strategies? Other Games even?</li>
+</ul>
+<p>We’ll see.</p>
 </div>
 <div id="references" class="section level2">
 <h2>References</h2>
@@ -87,10 +170,22 @@ Here is the <strong>Hotelling’s Phenomenon</strong>, explained.</p>
 <div id="game-theory-pop-music-movie-clip-and-tv-ad-playlist" class="section level2">
 <h2>Game Theory Pop Music, Movie Clip, and TV ad Playlist !!</h2>
 <ol style="list-style-type: decimal">
-<li><p>Chris de Burgh: Don’t Pay the Ferryman! <u><a href="https://www.youtube.com/watch?v=Q-a5TAL-IXs" class="uri">https://www.youtube.com/watch?v=Q-a5TAL-IXs</a></u></p></li>
-<li><p>Abba: The Name of the Game <u><a href="https://www.youtube.com/watch?v=T5Qf_7HM1cM" class="uri">https://www.youtube.com/watch?v=T5Qf_7HM1cM</a></u></p></li>
-<li><p>Bachchan vs Warsi: Want a Pepsi - Tit for Tat <u><a href="https://www.youtube.com/watch?v=gc6QZcxbMZE" class="uri">https://www.youtube.com/watch?v=gc6QZcxbMZE</a></u></p></li>
-<li><p>The Princess Bride - Battle of Wits - Which Strategy to Use here? (Asymmetric Information) <u><a href="https://www.youtube.com/watch?v=rMz7JBRbmNo" class="uri">https://www.youtube.com/watch?v=rMz7JBRbmNo</a></u></p></li>
-<li><p>The Gods Must be Crazy (Brinkmanship) <u><a href="https://www.youtube.com/watch?v=9LvViKftRnA" class="uri">https://www.youtube.com/watch?v=9LvViKftRnA</a></u></p></li>
+<li><p>Chris de Burgh: Don’t Pay the Ferryman!
+<u><a href="https://www.youtube.com/watch?v=Q-a5TAL-IXs" class="uri">https://www.youtube.com/watch?v=Q-a5TAL-IXs</a></u></p></li>
+<li><p>Abba: The Name of the Game
+<u><a href="https://www.youtube.com/watch?v=T5Qf_7HM1cM" class="uri">https://www.youtube.com/watch?v=T5Qf_7HM1cM</a></u></p></li>
+<li><p>Bachchan vs Warsi: Want a Pepsi - Tit for Tat
+<u><a href="https://www.youtube.com/watch?v=gc6QZcxbMZE" class="uri">https://www.youtube.com/watch?v=gc6QZcxbMZE</a></u></p></li>
+<li><p>The Princess Bride - Battle of Wits - Which Strategy to Use here?
+(Asymmetric Information)
+<u><a href="https://www.youtube.com/watch?v=rMz7JBRbmNo" class="uri">https://www.youtube.com/watch?v=rMz7JBRbmNo</a></u></p></li>
+<li><p>The Gods Must be Crazy (Brinkmanship)
+<u><a href="https://www.youtube.com/watch?v=9LvViKftRnA" class="uri">https://www.youtube.com/watch?v=9LvViKftRnA</a></u></p></li>
+<li><p>L.A. Confidential <u><a href="https://criticalcommons.org/embed?m=pBXsAUvh9" class="uri">https://criticalcommons.org/embed?m=pBXsAUvh9</a></u></p></li>
 </ol>
+</div>
+<div id="activity-2" class="section level2">
+<h2>Activity-2</h2>
+<p>Take a walk in the nearest urban area this weekend. Unobtrusively, observe what people are doing. Note these down when they seem to be visible examples of “Cooperate” or “Defect”. For or Against whom?</p>
+<p>No pictures.</p>
 </div>

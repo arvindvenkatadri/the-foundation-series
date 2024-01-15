@@ -1,0 +1,762 @@
+---
+title: "\U0001F579 Eating Mangoes with Hamlet"
+author: "Arvind Venkatadri"
+date: "2024-01-15"
+weight: 75
+external_link: ""
+image:
+  caption: Tom und Nicki Löschner on Pixabay
+  focal_point: Smart
+links:
+slides: 
+summary: 
+tags:
+- Hamlet
+- Hypothesis
+- Design of Experiments
+- PPDAC Workflow
+- Sampling
+- Randomization
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+
+
+<div id="hamlet-is-also-yeah-i-mean-like-us-random" class="section level2">
+<h2>Hamlet is also, yeah, I mean,… like us! Random!!</h2>
+<p>{{% youtube "EmjWIMMtjDc" %}}
+<br></p>
+<p>Let us read the famous nunnery scene from <u><a href="https://www.nosweatshakespeare.com/quotes/hamlet-to-be-or-not-to-be/"><strong>Hamlet: To be or Not to
+be</strong>…</a></u></p>
+<p><strong>Hamlet’s ‘To Be Or Not To Be’ Speech, Act 3 Scene 1</strong></p>
+<blockquote>
+<p>To be, or not to be: that is the question:<br />
+Whether ’tis nobler in the mind to suffer<br />
+The slings and arrows of outrageous fortune,<br />
+Or to take arms against a sea of troubles,<br />
+And by opposing end them? To die: to sleep;<br />
+No more; and by a sleep to say we end<br />
+The heart-ache and the thousand natural shocks<br />
+That flesh is heir to, ’tis a consummation<br />
+Devoutly to be wish’d. To die, to sleep;<br />
+To sleep: perchance to dream: ay, there’s the rub;<br />
+For in that sleep of death what dreams may come<br />
+When we have shuffled off this mortal coil,<br />
+Must give us pause: there’s the respect<br />
+That makes calamity of so long life;<br />
+For who would bear the whips and scorns of time,<br />
+The oppressor’s wrong, the proud man’s contumely,<br />
+The pangs of despised love, the law’s delay,<br />
+The insolence of office and the spurns<br />
+That patient merit of the unworthy takes,<br />
+When he himself might his quietus make<br />
+With a bare bodkin? who would fardels bear,<br />
+To grunt and sweat under a weary life,<br />
+But that the dread of something after death,<br />
+The undiscover’d country from whose bourn<br />
+No traveller returns, puzzles the will<br />
+And makes us rather bear those ills we have<br />
+Than fly to others that we know not of?<br />
+Thus conscience does make cowards of us all;<br />
+And thus the native hue of resolution<br />
+Is sicklied o’er with the pale cast of thought,<br />
+And enterprises of great pith and moment<br />
+With this regard their currents turn awry,<br />
+And lose the name of action.–Soft you now!<br />
+The fair Ophelia! Nymph, in thy orisons<br />
+Be all my sins remember’d.<br />
+</p>
+</blockquote>
+<p>What was Hamlet’s problem? How did he solve that problem?</p>
+</div>
+<div id="suppose-we-were-hamlet." class="section level2">
+<h2>Suppose we were Hamlet….</h2>
+<p>What would we want to know?</p>
+<ul>
+<li>Who is our friend?</li>
+<li>What is the chance that we will survive?</li>
+<li>Who killed Dad?</li>
+</ul>
+<p>Did Hamlet have an idea, any suspicion, that he might have wanted to
+prove? Yes, he did, and that is why he <em>feigned madness</em>, so people
+would open up and tell him things, in an unguarded way. So there was
+<u><a href="http://www.shakespeare-online.com/plays/hamlet/antichamlet.html"><strong>craft in his
+madness</strong></a>!!</u><br />
+</p>
+<p><u><a href="https://youtu.be/kaOIxll4LCA"><strong>Hakuna Matata, Dude!!</strong></a></u></p>
+<div id="a-hypothesis-worthy-of-hamlet" class="section level3">
+<h3>A Hypothesis worthy of Hamlet</h3>
+<p>If we wanted to know the truth of something, some guess, a hunch, or a
+<strong>Hypothesis</strong> that we had, then we would need to conduct an
+“Experiment”, rather like Hamlet did, without quite going or <strong>feigning
+madness</strong> of course. But there is a <strong>Madness to/in the Method</strong>, as we
+will see…</p>
+<div class="float">
+<img src="https://www.statsref.com/HTML/ppdac.png" alt="“Design of Experiments - A Workflow: A Madness in the Method”" />
+<div class="figcaption">“Design of Experiments - A Workflow: A Madness in the
+Method”</div>
+</div>
+<p>From
+<u><a href="https://www.statsref.com/HTML/?statistics__statistical_analys.html"><strong>StatsRef</strong></a></u>
+:</p>
+<blockquote>
+<p>The PPDAC summary table suggests a relatively linear flow from problem
+definition/Hypothesis through to conclusions — this is typically not
+the case. It is often better to see the process as cyclical, with a
+series of feedback loops. A summary of a revised PPDAC approach is
+shown in the diagram below. As can be seen, although the clockwise
+sequence (1→5) applies as the principal flow, each stage may and often
+will feed back to the previous stage.</p>
+</blockquote>
+<blockquote>
+<p>In addition, it may well be beneficial to examine the process in the
+reverse direction, starting with Problem definition and then examining
+expectations as to the format and structure of the Conclusions
+(without pre-judging the outcomes!). This procedure then continues,
+step-by-step, in an anti-clockwise manner (e→a) determining the
+implications of these expectations for each stage of the process.</p>
+</blockquote>
+</div>
+</div>
+<div id="design-of-experiments" class="section level2">
+<h2>Design of Experiments</h2>
+<p>Let us pretend we are Hamlet and design a simple experiment to find out
+some “truth” (highly probable idea) that is important to us.</p>
+<p>For example:</p>
+<p>Let us consider the <strong>Short Term Memory(STM)</strong> of Foundation Students:
+(Or , we could use the <strong>Guilford Divergent Thinking Test for Alternative Uses</strong> as our vehicle for testing similar Hypotheses.)</p>
+<div id="hypothesis-design" class="section level3">
+<h3>Hypothesis Design</h3>
+<p>What Hypothesis could be make? What do we have a hunch about?</p>
+<ul>
+<li>STM scores are significantly different between students of Design
+and those of Art (;-O)</li>
+<li>STM is much better for those who use Windows as compared to those who use Macs</li>
+<li>Any other factors, not related to types of individuals, but more
+like parameters of STM itself, such as:
+<ul>
+<li>Word complexity (Syllables per Word)</li>
+<li>No of Words</li>
+<li>Exposure Time and Recall Time</li>
+</ul></li>
+<li>Students who speak their Mother Tongue fluently score better in
+Divergent Thinking Scores (Fluency, Flexibility, Elaboration,
+Originality)</li>
+<li>There is a significant difference in Guilford Scores between
+students from “small towns” and those from metros.</li>
+</ul>
+</div>
+<div id="factors-in-hypothesis" class="section level3">
+<h3>Factors in Hypothesis</h3>
+<p>In each of these Hypotheses, we can see that there are <em>binary</em> (Yes/No)
+(two-valued) parameters that are part of the test: <code>Art vs Design</code>,<code>Windows vs Mac</code>, <code>Speaks Mother Tongue or Not</code>, <code>Small Town vs Metro</code>,
+<code>Long vs Short List of Words</code>, <code>Short vs Long Words</code> and
+<code>Long vs Short Exposure</code>.</p>
+<p>If we want our experiment to be <strong>fair</strong> we must have:</p>
+<ul>
+<li>Devise a test tool for each combination of binary parameters (<em>Test
+Type</em>)</li>
+<li>the <strong>same number</strong> of subjects for each Test Type</li>
+<li><strong>randomly</strong> select the people as <em>respondents</em> each Test Type</li>
+</ul>
+<p>We will choose one of these questions, or a similar one, and use the
+<strong>PPDAC Method</strong> to proceed with our Experiment. This paper by Lawrence
+to guide our Hypothesis Testing and the Design of our Experiment:</p>
+<p><u><a href="Lawrence%20-%20A%20Design%20of%20Experiments%20Workshop%20as%20an%20Introduction%20to%20Statistics.pdf"><strong>Lawrence - A Design of Experiments Workshop as an Introduction to
+Statistics - PDF</strong></a>.</u></p>
+<p>This is the paper describing a simple <em>Design of Experiments</em> workshop
+in class much like ours. We will try to mimic as much of this as we can.
+Do read through this in the evening today in preparation for our
+experiment.</p>
+</div>
+<div id="data-analysis-1-comparison-of-stm-histograms-using-excel-and-wtfcsv" class="section level3">
+<h3>Data Analysis-1: Comparison of STM Histograms using Excel and WTFcsv</h3>
+<p>Once our test/survey is complete, let us collate all the data for all tests
+using Excel. (This is for the STM Hypothesis; we can adapt this
+spreadsheet for any other hypothesis test with categorical factors and
+scores.)</p>
+<ol style="list-style-type: decimal">
+<li>Download this <u><a href="STM.xlsx"><strong>spreadsheet</strong></a></u> and save as your own
+<em>named</em> local copy.</li>
+<li>Enter the data from all tests on the first sheet titled “RawData”
+(the one with the warning)</li>
+<li><strong>Duplicate this data</strong> on the sheet titled “Data Duplicated”. <strong>Do
+not touch</strong> the “RawData” sheet again. Good Practice!!</li>
+<li>For each of the <em>factors</em> under consideration, we will need to stack
+up STM scores from <span class="math inline">\(2^3 = 8\)</span> tests, i.e. eight columns.</li>
+<li>If we have three two-valued, categorical factors, we will get three
+sets of stacked scores, each from a (shuffled) set of the tests.</li>
+<li>Half the scores in these stacked columns will pertain to one <em>level</em>
+of the factor, and the other half of the scores will pertain to the
+other level. (This should remind you of the Karnaugh Map you may
+have learnt in your digital logic courses in school.). See example
+below: it shows how we can stack up the scores from <em>4</em> tests for
+each <em>level</em> of the parameter <em>p1</em>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:center;">
+scores
+</th>
+<th style="text-align:center;">
+test
+</th>
+<th style="text-align:center;">
+p1
+</th>
+<th style="text-align:center;">
+p2
+</th>
+<th style="text-align:center;">
+p3
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+A
+</td>
+<td style="text-align:center;">
+True
+</td>
+<td style="text-align:center;">
+Long
+</td>
+<td style="text-align:center;">
+Big
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+B
+</td>
+<td style="text-align:center;">
+True
+</td>
+<td style="text-align:center;">
+Long
+</td>
+<td style="text-align:center;">
+Small
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+C
+</td>
+<td style="text-align:center;">
+True
+</td>
+<td style="text-align:center;">
+Short
+</td>
+<td style="text-align:center;">
+Big
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+D
+</td>
+<td style="text-align:center;">
+True
+</td>
+<td style="text-align:center;">
+Short
+</td>
+<td style="text-align:center;">
+Small
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+E
+</td>
+<td style="text-align:center;">
+False
+</td>
+<td style="text-align:center;">
+Long
+</td>
+<td style="text-align:center;">
+Big
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+F
+</td>
+<td style="text-align:center;">
+False
+</td>
+<td style="text-align:center;">
+Long
+</td>
+<td style="text-align:center;">
+Small
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+G
+</td>
+<td style="text-align:center;">
+False
+</td>
+<td style="text-align:center;">
+Short
+</td>
+<td style="text-align:center;">
+Big
+</td>
+</tr>
+<tr>
+<td style="text-align:center;">
+20
+</td>
+<td style="text-align:center;">
+H
+</td>
+<td style="text-align:center;">
+False
+</td>
+<td style="text-align:center;">
+Short
+</td>
+<td style="text-align:center;">
+Small
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<ol style="list-style-type: decimal">
+<li>We will set up each of these <em>two stacked-score columns</em> in Col A on
+separate sheets, similar to the one shown in the sheet titled
+“Permutation Test”. One sheet for each two-valued parameter.</li>
+<li>Create <em>paired</em> Histograms for each of the two stacked-score columns
+using WTFcsv, or Excel itself if you are confident. Ensure that
+there are <em>TWO</em> Histograms: one for each value of the factor under
+consideration.</li>
+<li>Inspection of the shapes and locations of these paired Histograms
+may give you an idea whether the factor under consideration has any
+effect on STM scores or none.</li>
+</ol>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+<ol start="4" style="list-style-type: decimal">
+<li>Save these 6 histograms as PNG files on your machines and use them
+along with <em>Comic Generator</em> (discussed below) to tell the story of
+your Hypothesis Testing.</li>
+</ol>
+</div>
+<div id="computing-parallel-worlds-the-permutation-test" class="section level3">
+<h3>Computing Parallel Worlds: The Permutation Test</h3>
+<p>What is we cannot trust our eyes to compare the pair-wise Histograms?</p>
+<p>If there was considerable overlap?</p>
+<p>Is there a better way? Yes by playing another Childhood Game, with <strong>a
+deck of cards</strong> !!!</p>
+<div id="before-we-play-with-cards-some-background" class="section level4">
+<h4>Before we play with cards, some background</h4>
+<p>From: Tim C. Hesterberg (2015) <em>What Teachers Should Know About the
+Bootstrap: Resampling in the Undergraduate Statistics Curriculum</em>, The
+American Statistician, 69:4, 371-386, DOI: 10.1080/00031305.2015.1089789</p>
+<blockquote>
+<p>Student B. R. was annoyed by TV commercials. He suspected that there
+were more commercials in the “basic” TV channels, the ones that come
+with a cable TV subscription, than in the “extended” channels you pay
+extra for. To check this, he collected the data shown in Table 1. He
+measured an average of 9.21 minutes of commercials per half hour in
+the basic channels, vs only 6.87 minutes in the extended channels.
+This seems to support his hypothesis. But there is not much
+data—perhaps the difference was just random. The poor guy could only
+stand to watch 20 random half hours of TV. Actually, he didn’t even do
+that—he got his girlfriend to watch half of it. (Are you as appalled
+by the deluge of commercials as I am? This is per half-hour!)</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:right;">
+basic
+</th>
+<th style="text-align:right;">
+extended
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:right;">
+6.950
+</td>
+<td style="text-align:right;">
+3.383
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10.013
+</td>
+<td style="text-align:right;">
+7.800
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10.620
+</td>
+<td style="text-align:right;">
+9.416
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10.150
+</td>
+<td style="text-align:right;">
+4.660
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8.583
+</td>
+<td style="text-align:right;">
+5.360
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+7.620
+</td>
+<td style="text-align:right;">
+7.630
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8.233
+</td>
+<td style="text-align:right;">
+4.950
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+10.350
+</td>
+<td style="text-align:right;">
+8.013
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+11.016
+</td>
+<td style="text-align:right;">
+7.800
+</td>
+</tr>
+<tr>
+<td style="text-align:right;">
+8.516
+</td>
+<td style="text-align:right;">
+9.580
+</td>
+</tr>
+</tbody>
+</table>
+<pre><code>## [1] 2.3459</code></pre>
+<blockquote>
+<p>The average difference in ad times between the two sets of TV channels
+is 2.34.</p>
+</blockquote>
+<blockquote>
+<p>How easy would it be for a difference of 2.34 minutes to occur just by
+chance? To answer this, we suppose there really is no difference
+between the two groups, that “basic” and “extended” are just labels.
+So what would happen if we assign labels randomly? How often would a
+difference like 2.34 occur?</p>
+<p>We’ll pool all twenty observations, <strong>randomly</strong> pick 10 of them to
+label “basic” and label the rest “extended”, and compute the
+difference in means between the two groups. We’ll repeat that many
+times, say ten thousand, to get the <em>permutation distribution</em> shown
+in Figure 1.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+channel
+</th>
+<th style="text-align:right;">
+times
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+basic
+</td>
+<td style="text-align:right;">
+6.950
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+extended
+</td>
+<td style="text-align:right;">
+3.383
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+basic
+</td>
+<td style="text-align:right;">
+10.013
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+extended
+</td>
+<td style="text-align:right;">
+7.800
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+basic
+</td>
+<td style="text-align:right;">
+10.620
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+extended
+</td>
+<td style="text-align:right;">
+9.416
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+basic
+</td>
+<td style="text-align:right;">
+10.150
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+extended
+</td>
+<td style="text-align:right;">
+4.660
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+basic
+</td>
+<td style="text-align:right;">
+8.583
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+extended
+</td>
+<td style="text-align:right;">
+5.360
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+basic
+</td>
+<td style="text-align:right;">
+7.620
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+extended
+</td>
+<td style="text-align:right;">
+7.630
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+basic
+</td>
+<td style="text-align:right;">
+8.233
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+extended
+</td>
+<td style="text-align:right;">
+4.950
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+basic
+</td>
+<td style="text-align:right;">
+10.350
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+extended
+</td>
+<td style="text-align:right;">
+8.013
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+basic
+</td>
+<td style="text-align:right;">
+11.016
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+extended
+</td>
+<td style="text-align:right;">
+7.800
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+basic
+</td>
+<td style="text-align:right;">
+8.516
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+extended
+</td>
+<td style="text-align:right;">
+9.580
+</td>
+</tr>
+</tbody>
+</table>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
+<blockquote>
+<p>The observed statistic 2.34 is also shown; the fraction of the
+distribution to the right of that value (≥ 2.34) is the probability
+that random labeling would give a difference that large. In this case,
+the probability of this value ( area coloured in green ) is &lt; 0.005.</p>
+<p>It would be rare for a difference this large to occur by chance. We
+have randomly tried “all possible chances” and are <em>hardly able to
+achieve similar,</em> and the rarer something is, the more likely that
+there is an underlying truth.</p>
+<p>And therefore we conclude there is a real difference between the
+groups and that ad time is different between <code>basic</code> and <code>extended</code> TV
+channels.</p>
+</blockquote>
+</div>
+</div>
+<div id="data-analysis-2-creating-parallel-worlds" class="section level3">
+<h3>Data Analysis-2: Creating Parallel Worlds</h3>
+<ol style="list-style-type: decimal">
+<li>We will execute on Permutation Test on one sheet step by step and
+decide whether that factor had a significant <em>effect</em> on STM scores.</li>
+<li>We <strong>pretend</strong> that there is no difference in scores whether the
+factor is chosen on way or another.</li>
+<li>We <strong>mechanize this pretence</strong> by lumping “both kinds” of scores
+together and shuffle them and divide them, <strong>randomly</strong> into two
+groups, and take the difference in scores.</li>
+<li>We can do this, like we did with our Monte Carlo experiment, many
+many times and calculate difference in scores each time. (It is like
+inventing many parallel worlds)</li>
+<li>If we look at the way these <strong>randomly computed</strong> scores are
+distributed and <strong>compare</strong> with the one measurement we did see, we
+can decide whether Mother Nature is up to something, or we are able
+to mimic the Mom.</li>
+<li>If we are <strong>not</strong> able to mimic Mom, then <strong>Mom always knows</strong> and
+we bow to her and ascribe a significance to the factor under
+consideration. Else, nope.</li>
+<li>Replicate this test for the other (binary) factors.</li>
+</ol>
+<p>Apropos: how could we do this for non-binary factors …??!!!</p>
+</div>
+<div id="making-a-data-comic-out-of-our-experiment" class="section level3">
+<h3>Making a Data Comic out of our Experiment</h3>
+<p>What have been our Conclusions with the Experiment? Let us take our
+Experiment and make a comic out of it:</p>
+<p><strong>Data Comic Generator from Gramener</strong>
+<a href="https://gramener.com/comicgen">(<strong>Weblink</strong>)</a></p>
+<p><br> {{% youtube "E_2hdZuugI8" %}} <br></p>
+</div>
+<div id="references" class="section level3">
+<h3>References</h3>
+<ol style="list-style-type: decimal">
+<li>Mahashweta Devi, <em>The Why Why Girl</em>,
+<u><a href="https://www.tulikabooks.com/picture-books/the-why-why-girl-english.html" class="uri">https://www.tulikabooks.com/picture-books/the-why-why-girl-english.html</a></u>, read by Sarah Dryden Peterson
+<u><a href="https://www.youtube.com/watch?v=xNcV5DZhg4c" class="uri">https://www.youtube.com/watch?v=xNcV5DZhg4c</a></u></li>
+</ol>
+</div>
+<div id="fun-stuff-words-belong-hamlet" class="section level3">
+<h3>Fun Stuff: Words Belong Hamlet</h3>
+<p>Hamlet’s <em>To be or not to be</em> in Pidgin English <u><a href="https://www.hawaii.edu/satocenter/langnet/definitions/tokpisin.html">Tok
+Pisin</a></u>!</p>
+<blockquote>
+<p>Which way this time? Me killem de finish body b’long me. Or me no do
+’im? Me no savvy.<br />
+Might ’e better ’long you-me catchem this fella, string for throw ’im
+this fella arrow.<br />
+Altogether b’long number one bad fella, name b’long him fortune? Me no
+savvy.<br />
+Might ’e better ’long you-me For fightem ’long altogether where him ’e
+makem you-me sorry too much.<br />
+Bimeby him fall down die finish? Me no savvy.</p>
+</blockquote>
+</div>
+</div>
