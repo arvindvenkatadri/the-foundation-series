@@ -33,7 +33,7 @@ library(blogdown)
 Man is an Island by John Donne</a>
 :::
 
-From <https://nosweatshakespeare.com/quotes/famous/no-man-is-an-island/>
+From <u><https://nosweatshakespeare.com/quotes/famous/no-man-is-an-island></u>
 
 >The words ‘No man is an island’ were embedded in a deeply Christian sermon about how human beings are connected to each other, and how important that connection is for the wellbeing and survival of any individual. When you hear the church bell tolling for someone who has died, don’t ask who it is, Donne says, just know that it’s tolling for you too because you are part of the same society and the death of anyone takes a part of your own life away.
 
@@ -55,13 +55,13 @@ link)](https://ncase.me/polygons/)</u>
 ### Another Dark Side of...
 
 Why are Petrol Stations located next to each other? Here is the
-**Hotelling's Phenomenon**, explained.
+**Hotelling's Phenomenon**, explained.\
 
-<br> `r blogdown::shortcode("youtube", "u4cKzGj58q4")` <br>
+`r blogdown::shortcode("youtube", "u4cKzGj58q4")` <br>
 
 
 
-## Viral Trends..With a Song?
+## Viral Trends...With a Song?
 
 A Song that is all about Network Effects !!!
 
@@ -70,7 +70,7 @@ Singer: Kishore Kumar\
 Music: R. D. Burman\
 Film: Amar Prem (1972)\
 
-<https://www.youtube.com/watch?v=OK6Hux4spNM>
+<u><https://www.youtube.com/watch?v=OK6Hux4spNM></u>
 
 Hindi Lyrics | English Translation
 -------------|--------------------
@@ -110,9 +110,12 @@ Kuch toh log kahenge | People will say something or the other
 
 ## References
 
-1. Henderson, Ron. 12 June 2022. *Luxury Beliefs are Status Symbols: The struggle for distinction*. <https://www.robkhenderson.com/p/status-symbols-and-the-struggle-for?utm_campaign=post&utm_medium=web> Accessed 07 Jan 2024.
+1. Henderson, Ron. 12 June 2022. *Luxury Beliefs are Status Symbols: The struggle for distinction*. <u><https://www.robkhenderson.com/p/status-symbols-and-the-struggle-for?utm_campaign=post&utm_medium=web></u> Accessed 07 Jan 2024.\
+<br>
+`r blogdown::shortcode("youtube", "ck7Krz7QcxU")`
+<br>
 
-1. The Network Effects Bible. <https://www.nfx.com/post/network-effects-bible>
+1. The Network Effects Bible. <u><https://www.nfx.com/post/network-effects-bible></u>
 
-1. Mitchell Resnick. * Beyond the Centralized Mindset*. <https://web.media.mit.edu/~mres/papers/JLS/JLS-1.0.html>
+1. Mitchell Resnick. *Beyond the Centralized Mindset*. <u><https://web.media.mit.edu/~mres/papers/JLS/JLS-1.0.html></u>
 

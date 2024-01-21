@@ -1,5 +1,5 @@
 ---
-title: "\U0001F30A Order and Chaos"
+title: "\U0001F30A Order and Chaos: The Model of the Story"
 subtitle: "Math Models in Art, Design, and Whatever Else you do"
 date: "2021-08-10"
 linkTitle: Order and Chaos 
