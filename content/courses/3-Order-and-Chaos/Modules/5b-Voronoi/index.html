@@ -30,13 +30,12 @@ editor_options:
 
 <div id="a-model-for-proximity-the-voronoi-and-the-delaunay-diagrams" class="section level2">
 <h2>A Model for Proximity: The Voronoi and the Delaunay Diagrams</h2>
-<p>So how do we model “proximity”?</p>
-<p><u><a href="/pdf/Proximity/FollowingtheHerd.pdf"><strong>Predator-Prey Dynamics</strong></a></u></p>
-<div id="plotting-the-voronoi-diagram" class="section level3">
-<h3>Plotting the Voronoi Diagram</h3>
-<p>How do we plot this diagram?</p>
+<p>So how do we model “proximity”? Let us take a quick look at this description of <u><a href="/pdf/Proximity/FollowingtheHerd.pdf"><strong>Predator-Prey Dynamics.</strong></a></u></p>
+<div id="plotting-the-delaunay-and-voronoi-diagrams" class="section level3">
+<h3>Plotting the Delaunay and Voronoi Diagrams</h3>
+<p>How do we plot these diagrams?</p>
 <p>We will use this tool: <u><a href="https://www.geogebra.org/classic"><strong>Geogebra</strong></a></u></p>
-<p>Download and install this on your laptops. You can also use it in your browser <a href="https://www.geogebra.org/classic?lang=en" class="uri">https://www.geogebra.org/classic?lang=en</a> and download the <em>.ggb</em> files that you create.</p>
+<p>Download and install this on your laptops. You can also use it in your browser <u><a href="https://www.geogebra.org/classic?lang=en" class="uri">https://www.geogebra.org/classic?lang=en</a></u> and download the Geogebra (<em>.ggb</em>) files that you create.</p>
 <ol style="list-style-type: decimal">
 <li>Exercise 1: Let us first see <u><a href="/pdf/Proximity/SohoMap.ggb"><strong>Soho with the Voronoi Diagram</strong></a></u></li>
 </ol>
@@ -46,6 +45,15 @@ editor_options:
 <li><p>Exercise 3: With 4 points: <u><a href="/pdf/Proximity/four%20points.ggb">Four Pointer Voronoi</a></u></p></li>
 <li><p>Exercise 4: Let us now add more points. How do we make a multi-point Voronoi? We need to make a <u><a href="/pdf/Proximity/VoronoiLargeNoOfPointsInGeogebra.pdf"><strong>“list of points” in Geogebra</strong></a></u></p></li>
 </ol>
+<div id="discussion" class="section level4">
+<h4>Discussion</h4>
+<ul>
+<li>Did you see how the Delaunay Triangulation seems to “dislike” obtuse-angles, and changes the triangulation pattern when a certain (sum of) angles become more than 180?</li>
+<li>Wasn’t that a very Kandinsky-like thing to do, even for an algorithm?</li>
+<li>The Delaunay Triangulation gives us a set of traingular elements that cover our desired surface</li>
+<li>The Voronoi Diagram uses the Delaunay to give us <em>possibly infinite</em> proximal neighbourhoods.</li>
+</ul>
+</div>
 </div>
 </div>
 <div id="fun-stuff-with-geogebra-and-voronoi" class="section level2">
@@ -73,7 +81,7 @@ editor_options:
 <ol start="3" style="list-style-type: decimal">
 <li>Voronoi Portraits and Facial Recognition</li>
 </ol>
-<p>A. I am Predator</p>
+<p>A. My name is Arnold Schwarzenegger</p>
 <ul>
 <li>Take a picture of yourself and import it into Geogebra</li>
 <li>Plot Points on the Portrait such that the main facial features are defined.</li>
@@ -88,6 +96,8 @@ editor_options:
 </div>
 <div id="other-distances" class="section level2">
 <h2>Other Distances?</h2>
+<div id="hamming-distances" class="section level3">
+<h3>Hamming Distances</h3>
 <p>We have used the simplest and most common of geometric distances between entities, the <strong>Euclidean Distance </strong> to model proximity. Are there other <em>measures of distance</em>?</p>
 <ul>
 <li>How would you measure distance between <em>digital words</em>? For example <span class="math inline">\(10010011\)</span> and <span class="math inline">\(11011011\)</span>?</li>
@@ -100,23 +110,54 @@ editor_options:
 0000 and 1111 is 4.
 2173896 and 2233796 is 3.</p>
 </blockquote>
-<ul>
-<li>How would you measure distance over a <em>curved surface</em> such as the earth?</li>
-</ul>
-<p>View the path here: <a href="https://www.greatcirclemap.com/" class="uri">https://www.greatcirclemap.com/</a>
-Calculate distances here: <a href="https://www.gpsvisualizer.com/calculators" class="uri">https://www.gpsvisualizer.com/calculators</a></p>
-<ul>
-<li>And if you lived in New York?</li>
-</ul>
+<p>The Hamming Distance can be calculated using a logical operation known as <u><a href="https://www.khanacademy.org/computing/computer-science/cryptography/ciphers/a/xor-bitwise-operation">“Exclusive-OR” or “XOR”</a></u>.</p>
+</div>
+<div id="great-circle-distances" class="section level3">
+<h3>Great Circle Distances</h3>
+<p>How would you measure distance over a <em>curved surface</em> such as the earth?</p>
+<p>View the path here: <u><a href="https://www.greatcirclemap.com/" class="uri">https://www.greatcirclemap.com/</a></u>
+Calculate distances here: <u><a href="https://www.gpsvisualizer.com/calculators" class="uri">https://www.gpsvisualizer.com/calculators</a></u></p>
+</div>
+<div id="taxicab-distances" class="section level3">
+<h3>Taxicab Distances</h3>
+<p>And if a <em>man hatta</em> live in New York?</p>
 <p><img src="taxicab-manhattan-grid-layout-paths.gif" /></p>
 <p><img src="taxicab-manhattan-grid-taxicab-distance.png" /></p>
 <p>We will use the Euclidean and maybe other concepts of distance when we get into our Machine Learning models!</p>
 </div>
+</div>
+<div id="so-where-are-all-these-proximities-used" class="section level2">
+<h2>So where are all these Proximities used?</h2>
+<div id="a-brief-description-of-the-gps-system" class="section level3">
+<h3>A Brief Description of the GPS System</h3>
+<p>TBW.</p>
+</div>
+<div id="a-brief-foray-into-cryptography" class="section level3">
+<h3>A Brief Foray into Cryptography</h3>
+<p>In the Sherlock Holmes story,<u><a href="https://www.gutenberg.org/files/108/108-h/108-h.htm#chap03"><strong>The Adventure of the Dancing Men</strong></a></u>, a criminal known the one of the characters communicates with her using a childish/child-like drawing which looks like this:</p>
+<p><img src="images/img01.jpg" />
+In this message, each character is a visual representation, or a substution for, a letter from the alphabet. The characters with flags are the first letter of a new word. The message is translated in the story as “Am here, Abe Slaney”.</p>
+<p>The entire <strong>code alphabet</strong> is shown in the figure below:
+<img src="images/dancing-men-cipher-overview.png" /></p>
+<p>This code is a good example of a <u><a href="https://www.geeksforgeeks.org/substitution-cipher/"><strong>Substitution Cipher</strong></a></u> with non-text substition. See <u><a href="https://www.boxentriq.com/code-breaking/dancing-men-cipher" class="uri">https://www.boxentriq.com/code-breaking/dancing-men-cipher</a></u> and <u><a href="https://www.dcode.fr/dancing-men-cipher" class="uri">https://www.dcode.fr/dancing-men-cipher</a></u> for examples where you can encode and decode your own text, and send them to friends. 😎 😼</p>
+<p>The intent behind any substitution cipher is to be create <strong>distance</strong> from the original message, or characters. The algorithms to encode and decode uses this idea of <strong>distance</strong> to perform their operations and are entirely reversible.</p>
+</div>
+</div>
+<div id="painting-with-proximitydistance" class="section level2">
+<h2>Painting with Proximity/Distance</h2>
+<p>Well, all right, all right, tech is fine. Can we use the idea of Proximity to create <strong>art</strong>? Well, we are not Kandinsky, but we can try. Here goes:</p>
+<ul>
+<li>Fire up the Strava app, or equivalent, on your phones.</li>
+<li>Walk out into the college campus, preferably under open sky.</li>
+<li>With the app on, try to create a figure <u><a href="https://gpsart.info/en/gpsart-en/nowhow1-en/">like this</a></u></li>
+<li>Share the image with your friend!</li>
+</ul>
+</div>
 <div id="references" class="section level2">
 <h2>References</h2>
 <ol style="list-style-type: decimal">
-<li><strong>Voronoi Diagrams and a Day at the Beach</strong>
-<a href="/pdf/Proximity/VoronoiDiagrams-ADayAtTheBeach.pdf"><strong>(PDF)</strong></a>
+<li><u><strong>Voronoi Diagrams and a Day at the Beach</strong>
+<a href="/pdf/Proximity/VoronoiDiagrams-ADayAtTheBeach.pdf"><strong>(PDF)</strong></a></u>
 Talks about cholera in Soho, the Voronoi diagram, and how to construct it using waves on a beach!!</li>
 </ol>
 </div>
