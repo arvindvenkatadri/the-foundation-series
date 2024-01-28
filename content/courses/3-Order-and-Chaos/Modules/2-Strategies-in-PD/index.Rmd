@@ -14,7 +14,12 @@ tags:
 - Algorithm for Altruism?
 - Regret, Reward, Risk, Retribution
 - Nash Equilibrium
-
+# projects: [game-theory-examples]
+links:
+- icon: flask
+  icon_pack: fas
+  name: Worked Examples
+  url: project/game-theory-examples
 ---
 
 ```{r include=FALSE}
@@ -182,7 +187,7 @@ We'll see.
 5.  The Gods Must be Crazy (Brinkmanship)
     <u><https://www.youtube.com/watch?v=9LvViKftRnA></u>
     
-6. L.A. Confidential <u><https://criticalcommons.org/embed?m=pBXsAUvh9></u>
+6. L.A. Confidential  <u><https://criticalcommons.org/embed?m=pBXsAUvh9></u>
 
 
 ## Activity-2
