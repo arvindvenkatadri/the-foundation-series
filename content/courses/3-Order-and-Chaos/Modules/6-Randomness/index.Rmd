@@ -28,14 +28,19 @@ editor_options:
 ```{r include=FALSE}
 library(blogdown)
 library(tidyverse)
+library(ggformula)
 library(mosaic)
+library(emoji)
 ```
 
 ## Seeing Data
 
-Let us first examine the street traffic data we have gathered for any
-"model-like" pattern! We will use a tool called, ah..umm..ahem..
-er....**WTFcsv**. Let us first quickly see what this tool offers us!
+Is our data clean? Do we have two columns of data, one containing 60
+counts of vehicles, and the other containing inter-vehicular gap times
+in seconds?\
+Let us then examine the street traffic data we have gathered for any
+"model-like" pattern! We will use a tool called, ah...umm...ahem...
+er...**WTFcsv**. Let us first quickly see what this tool offers us!
 
 <br> `r blogdown::shortcode("vimeo", "150216437")` <br>
 
@@ -45,12 +50,67 @@ beneath our data!
 
 ### Discussion-1
 
+-   There were similar patterns in everybody's data
+    `r emoji::emoji("open_mouth")`
+
+```{r, echo=FALSE}
+ggplot2::theme_set(theme_classic())
+gf_histogram(~ rpois(n = 60, lambda = 3)) %>% 
+    gf_labs(x = "No. of Vehicles Spotted", y = "How Often", title = "Sixty Readings of Vehicles on the Road",
+            subtitle = "Poisson Dist.")
+
+gf_histogram(~ rexp(n = 160, rate = 1/3)) %>% 
+  gf_labs(x = "Gap Time in seconds", y = "How Often", title = "Vehicle Arrival Gap Times",
+          subtitle = "Exp. Dist")
+
+```
+
+-   What we saw was an example of the Poisson Arrival Process.
+-   This has applications in *Service Design*, *Traffic Management*,
+    *Logistics*, *Finding Defects in Materials*, *Weather Modelling*...
+
+From <u><https://stats.stackexchange.com/a/297375></u>:
+
+> (Say) Lambda($\lambda$) is the *average number* of cars that pass per
+> unit of time, let's say 60/hour ($\lambda$ = 60). We know, however,
+> that the actual number will vary - some days more, some days less. The
+> **Poisson Distribution** allows us to *model this variability*.
+>
+> Now, an average of 60 cars per hour equates to an average of 1 car
+> passing by each minute. Again though, we know there's going to be
+> variability in the amount of time between arrivals: Sometimes more
+> than 1 minute; other times less. The **Exponential Distribution**
+> allows us to *model this variability*.
+>
+> All that being said, cars passing by on a road won't always follow a
+> Poisson Process. If there's a traffic signal just around the corner,
+> for example, arrivals are going to be bunched up instead of steady. On
+> an open highway, a slow tractor-trailer may hold up a long line of
+> cars, again causing bunching. In these cases, the Poisson Distribution
+> may still work okay for longer time periods, but the exponential will
+> fail badly in modeling arrival times.
+>
+> Note also that there is huge variability based on **time of day**:
+> busier during commuting times; much slower at 3am. Make sure that your
+> lambda is reflective of the specific time period you are considering.
+
+Lambda then becomes a **parameter** of the model. And the higher the
+$\lambda$, the more the traffic. Hence shorter the *average
+inter-vehicular gap time*, which is $\sim \frac{1}{\lambda}$.
+
 -   So everything random is not really random?
+-   Is *anything* random at all?
 -   Does seeing a pattern make it "not random"?
+-   Are we just Victims of Randomness and cannot do much else but put up
+    with it?
 
 ## Is Randomness a Design Tool?
 
 ![Photo by Sharath G. from Pexels](pexels-sharath-g-4418675.jpg)
+
+But we are interested in more than just the Poisson Process. And mangoes
+are far more interesting than cars!!!
+
 
 1.  Do you remember plucking mangoes from the trees in your childhood
     gardens?
@@ -58,14 +118,21 @@ beneath our data!
 3.  Did you have run home to get the salt + chilly powder?
 4.  Why did you trust your friends not to eat off the best mangoes in
     your absence? ;-D
-5.  Were you used to being the "*denner*" in every game? Or the last
-    person to bat or bowl or whatever was the cool thing in the game...
+5.  Were you used to being the "*denner*" in every game? 
+6.  Or the last person to bat or bowl, or whatever was the cool thing in the game...
 6.  Or did you do that "bat numbers" thing?
 7.  Why did you trust your friends? ;-D
+8.  What strategy did you use when playing "Rock, Paper, Scissors"? Were
+you always "steady as a rock", or "variable as traffic"?
 
-So can we use **Randomness** in Design? With *intent*?
+Perhaps you suffered, but maybe you didn't because everyone "got their 
+turn" and they weren't always the first, nor were you always the last...
+So somehow it was all...fair, because it was "random".
 
-And is <u>[this](https://www.jacksonpollock.org)</u> the use of **randomness** in Art?
+And you didn't stick with just one of Rock, Paper, or Scissors. But chose one at.....random.
+
+So can we use **Randomness** in Design? With *intent*? And is <u>[this](https://www.jacksonpollock.org)</u> the use of
+**randomness** in Art?
 
 ### Pedagogical Vandalism
 
@@ -73,7 +140,9 @@ Let us throw some chalk pieces on the floor at random and see what
 happens!!
 
 1.  Was that a completely "mad" thing to do, throwing stuff on the
-    floor? Or was it an act of *Pedagogical Vandalism*?
+    floor? Or was it an act of ***Pedagogical Vandalism***? (See
+    <u>[*wreck this
+    Journal*](https://youtu.be/OCTaIZc1o8g?si=o7Bhi437vFZppXJQ)</u>).
 
 2.  Is Randomness just too much to handle or comprehend?
 
@@ -88,16 +157,11 @@ happens!!
 5.  What **diagrams or thought experiments** can we create to do this?
 
 6.  WHY would this be a good idea? Is there a very **Human Motivation**
-    behind this desire we might have? 
-    
-7. Could this song indicate what our situation might be?
+    behind this desire we might have?
 
-      <u><https://www.youtube.com/watch?v=qan0Y9hXpPQ></u>
-    
-      <u><https://www.filmyquotes.com/songs/1381></u>
-
-7.  Or let's ask <u>[this lady](https://wyldnetworks.com/blog/hedy-lamarr-frequency-hopping-spread-spectrum)</u> here.
-![](Hedy-Lamarr-and-the-Frequency-Hopping-Spread-Spectrum.jpg)
+7.  Or let's ask <u>[this
+    lady](https://wyldnetworks.com/blog/hedy-lamarr-frequency-hopping-spread-spectrum)</u>
+    here. ![](Hedy-Lamarr-and-the-Frequency-Hopping-Spread-Spectrum.jpg)
 
 ## <u>[Wait, But Why?](https://waitbutwhy.com)</u>
 
@@ -105,38 +169,39 @@ happens!!
 -   Visibly?
 -   *Generate Randomness* to make things fair? How?
 -   What does that even mean, "generate randomness"?
--  If something is random-random, how can it be fair "every time"?
-- What does <u>[**"every time"**](https://web.archive.org/web/20190302202830id_/http://pdfs.semanticscholar.org/a931/ac1b3ef11235d4516f341b3b5bd8b1ee330e.pdf)</u> even mean?
+-   If something is random-random, how can it be fair "every time"?
+-   What does <u>[**"every
+    time"**](https://web.archive.org/web/20190302202830id_/http://pdfs.semanticscholar.org/a931/ac1b3ef11235d4516f341b3b5bd8b1ee330e.pdf)</u>
+    even mean?
 
 We'll see.
 
 ### References
 
 1.  Seeing Probability Theory:
-    <u><https://seeing-theory.brown.edu/basic-probability/index.html></u> A Superb visual website to see patterns in theory! Go and play there
+    <u><https://seeing-theory.brown.edu/basic-probability/index.html></u>
+    A Superb visual website to see patterns in theory! Go and play there
     with Hamlet!
 
-2.  Penguin Press @ Medium. *Abraham Wald and the Missing Bullet Holes*. <u>[**(Web
+2.  Penguin Press \@ Medium. *Abraham Wald and the Missing Bullet
+    Holes*. <u>[**(Web
     Link)**](https://medium.com/@penguinpress/an-excerpt-from-how-not-to-be-wrong-by-jordan-ellenberg-664e708cfc3d)</u>
 
-3.  R. J. MacKay and R. W. Oldford. <u>[**Scientific Method, Statistical Method and the Speed of Light**](https://projecteuclid.org/euclid.ss/1009212817)</u>
+3.  R. J. MacKay and R. W. Oldford. <u>[**Scientific Method, Statistical
+    Method and the Speed of
+    Light**](https://projecteuclid.org/euclid.ss/1009212817)</u>
 
-4.  <u>[The Man Who Invented Modern Probability - Andrei Kolmogorov](https://getpocket.com/explore/item/the-man-who-invented-modern-probability)</u>
+4.  <u>[The Man Who Invented Modern Probability - Andrei
+    Kolmogorov](https://getpocket.com/explore/item/the-man-who-invented-modern-probability)</u>
 
-5.  Tim C. Hesterberg (2015) What Teachers Should Know About the
-    Bootstrap: Resampling in the Undergraduate Statistics Curriculum,
-    The American Statistician, 69:4, 371-386, DOI:
-    10.1080/00031305.2015.1089789
+5.  Robert Scholz. May 1982. <u>[**The Origin of Spread Spectrum
+    Communications**](https://web.archive.org/web/20190302202830id_/http://pdfs.semanticscholar.org/a931/ac1b3ef11235d4516f341b3b5bd8b1ee330e.pdf)</u>
+
+6.  Emma Neeson. 04 March 2023. <u>[**Hedy Lamarr and the Frequency
+    Hopping Spread Spectrum: The mother of
+    Wi-Fi**.](https://wyldnetworks.com/blog/hedy-lamarr-frequency-hopping-spread-spectrum)</u>
+
+7.  Karan Kashyap, *Calculating the Value of Pi: A Monte Carlo
+    Simulation*,
+    <u><https://www.cantorsparadise.com/calculating-the-value-of-pi-using-random-numbers-a-monte-carlo-simulation-d4b80dc12bdf></u>
     
-6. Robert Scholz. May 1982. <u>[**The Origin of Spread Spectrum Communications**](https://web.archive.org/web/20190302202830id_/http://pdfs.semanticscholar.org/a931/ac1b3ef11235d4516f341b3b5bd8b1ee330e.pdf)</u>
-
-7. Emma Neeson. 04 March 2023. <u>[**Hedy Lamarr and the Frequency Hopping Spread Spectrum: The mother of Wi-Fi**.](https://wyldnetworks.com/blog/hedy-lamarr-frequency-hopping-spread-spectrum)</u>
-
-8. Karan Kashyap, *Calculating the Value of Pi: A Monte Carlo Simulation*,
-    <https://www.cantorsparadise.com/calculating-the-value-of-pi-using-random-numbers-a-monte-carlo-simulation-d4b80dc12bdf>
-
-### Fun Stuff
-
-Hamlet's *To be or not to be* in Pidgin English:
-
-<https://m.facebook.com/bbcnewspidgin/posts/1024712457734480/?comment_tracking=%7B%22tn%22%3A%22O%22%7D>

@@ -37,51 +37,178 @@ library(ggformula)
 
 ## Hamlet is also, yeah, I mean,... like us! Random!!
 
-`r blogdown::shortcode("youtube", "EmjWIMMtjDc")` 
-<br>
+`r blogdown::shortcode("youtube", "EmjWIMMtjDc")` <br>
 
 Let us read the famous nunnery scene from <u>[**Hamlet: To be or Not to
 be**...](https://www.nosweatshakespeare.com/quotes/hamlet-to-be-or-not-to-be/)</u>
 
-**Hamlet’s ‘To Be Or Not To Be’ Speech, Act 3 Scene 1**
++------------------------------+---------------------------+
+| Shakespeare                  | Plain English (hopefully) |
++==============================+===========================+
+| To be, or not to be: that is | The first six words of    |
+| the question:                | the soliloquy establish a |
+|                              | balance. There is a       |
+|                              | direct opposition – to    |
+|                              | be, or not to be. Hamlet  |
+|                              | is thinking about life    |
+|                              | and death and pondering a |
+|                              | state of being versus a   |
+|                              | state of not being –      |
+|                              | being alive and being     |
+|                              | dead.                     |
++------------------------------+---------------------------+
+| Whether ’tis nobler in the   | The balance continues     |
+| mind to suffer\              | with a consideration of   |
+| *The slings and arrows of    | the way one deals with    |
+| outrageous fortune*,\        | life and death. Life is a |
+| Or to take arms against a    | lack of power: the living |
+| *sea of troubles*,\          | are at the mercy of *the  |
+| And by opposing end them?    | blows of outrageous       |
+|                              | fortune*.                 |
++------------------------------+---------------------------+
+| To die: to sleep;\           | The balance continues     |
+| No more; and by a sleep to   | with a consideration of   |
+| say we end\                  | the way one deals with    |
+| The heart-ache and the       | life and death. Life is a |
+| *thousand natural shocks*\   | lack of power: the living |
+| That flesh is heir to, ’tis  | are at the mercy of the   |
+| a consummation\              | blows of outrageous       |
+| Devoutly to be wish’d.       | fortune. The only action  |
+|                              | one can take against the  |
+|                              | things he lists among     |
+|                              | those blows is to end     |
+|                              | one’s life.               |
+|                              |                           |
+|                              | That’s the only way of    |
+|                              | opposing them. The ‘sleep |
+|                              | of death’ is therefore    |
+|                              | empowering: killing       |
+|                              | oneself is a way of       |
+|                              | taking action, taking up  |
+|                              | arms, opposing and        |
+|                              | defeating the slings and  |
+|                              | arrows of outrageous      |
+|                              | fortune. Living is a      |
+|                              | passive state; dying is   |
+|                              | an active state.          |
++------------------------------+---------------------------+
+| To die, to sleep;\           | Death is something        |
+| To sleep: perchance to       | desirable – devoutly to   |
+| dream: ay, there’s the rub;\ | be wished, a consummation |
+| For in that sleep of death   | – a perfect closure. It’s |
+| what dreams may come\        | nothing more than a       |
+| When we have shuffled off    | sleep.                    |
+| this mortal coil,\           |                           |
+| Must give us pause: there’s  | But there’s a catch,      |
+| the respect\                 | which Hamlet calls a rub. |
+| That makes calamity of so    | A ‘rub’ is a bowls term   |
+| long life;\                  | meaning an obstacle on    |
+| For who would bear the       | the bowls lawn that       |
+| *whips and scorns of time*,\ | diverts the bowl, so the  |
+| The oppressor’s wrong, the   | fear of the life          |
+| proud man’s contumely,\      | hereafter is the obstacle |
+| The pangs of despised love,  | that makes us pause and   |
+| the law’s delay,\            | perhaps change the        |
+| The insolence of office and  | direction of our          |
+| the spurns\                  | thinking.                 |
+| That patient merit of the    |                           |
+| unworthy takes,\             | We don’t control our      |
+| When he himself might his    | dreams so what dreams may |
+| quietus make\                | come in that sleep in     |
+| With a bare bodkin? who      | which we have shuffled    |
+| would fardels bear,\         | off all the fuss and      |
+| To *grunt and sweat under a  | bother of life? He uses   |
+| weary life*,                 | the term ‘[mortal coi     |
+|                              | l](h%20t                  |
+|                              | t%20ps:%20//n%20os%20weat |
+|                              | s%20hakes%20peare%20.co%2 |
+|                              | 0%20m%20/%20q%20u%20o%20t |
+|                              | es/famous/mortal-coil/),’ |
+|                              | which is an Elizabethan   |
+|                              | word for a big fuss. With |
+|                              | that thought, Hamlet      |
+|                              | stops to reconsider. What |
+|                              | will happen when we have  |
+|                              | discarded all the hustle  |
+|                              | and bustle of life?       |
++------------------------------+---------------------------+
+| But that the *dread of       | *The problem with the     |
+| something* after death,\     | proposition* is that the  |
+| The *undiscover’d country*   | sleep of death is unknown |
+| from whose bourn\            | and could be worse than   |
+| No traveller returns,        | life.                     |
+| *puzzles the will*\          |                           |
+| And makes us rather bear     | Hamlet now lets his       |
+| those *ills we have*\        | imagination wander on the |
+| Than fly to others that we   | subject of the voyages of |
+| know not of?                 | discovery and the         |
+|                              | exploratory expeditions.  |
+|                              | Dying is like crossing    |
+|                              | the border between known  |
+|                              | and unknown geography.    |
+|                              | One is likely to be lost  |
+|                              | in that unmapped place,   |
+|                              | from which one would      |
+|                              | never return. The         |
+|                              | implication is that there |
+|                              | may be unimagined horrors |
+|                              | in that land.             |
++------------------------------+---------------------------+
+| Thus conscience does make    | But there is more to it   |
+| cowards of us all;\          | than that. It is not just |
+| And thus the native hue of   | about killing himself but |
+| resolution\                  | also about the mission he |
+| Is sicklied o’er with the    | is on – to avenge his     |
+| pale cast of thought,\       | father’s death by killing |
+| And *enterprises of great    | his father’s murderer.    |
+| pith and moment*\            | Throughout the action of  |
+| With this regard their       | the play, he makes        |
+| currents turn awry,\         | excuses for not killing   |
+| And lose *the name of        | him and turns away when   |
+| action*.                     | he has the chance.        |
+|                              | ‘Conscience does make     |
+| \                            | cowards of us all.’       |
+|                              | Convention demands that   |
+|                              | he kill Claudius but      |
+|                              | murder is a sin and that  |
+|                              | conflict is the core of   |
+|                              | the play.                 |
+|                              |                           |
+|                              | At the end of the         |
+|                              | soliloquy, he pulls       |
+|                              | himself out of this       |
+|                              | reflective mode by        |
+|                              | deciding that too much    |
+|                              | thinking about it is the  |
+|                              | thing that will prevent   |
+|                              | the action he has to rise |
+|                              | to.                       |
++------------------------------+---------------------------+
+| –Soft you now! The fair      | ~~Saraswati Namostute !   |
+| Ophelia!\                    | Grant me Grace and        |
+| Nymph, in thy orisons\       | Knowledge on How to       |
+| Be all my sins remember’d.   | Proceed!~~                |
++------------------------------+---------------------------+
 
-> To be, or not to be: that is the question:\
-> Whether ’tis nobler in the mind to suffer\
-> The slings and arrows of outrageous fortune,\
-> Or to take arms against a sea of troubles,\
-> And by opposing end them? To die: to sleep;\
-> No more; and by a sleep to say we end\
-> The heart-ache and the thousand natural shocks\
-> That flesh is heir to, ’tis a consummation\
-> Devoutly to be wish’d. To die, to sleep;\
-> To sleep: perchance to dream: ay, there’s the rub;\
-> For in that sleep of death what dreams may come\
-> When we have shuffled off this mortal coil,\
-> Must give us pause: there’s the respect\
-> That makes calamity of so long life;\
-> For who would bear the whips and scorns of time,\
-> The oppressor’s wrong, the proud man’s contumely,\
-> The pangs of despised love, the law’s delay,\
-> The insolence of office and the spurns\
-> That patient merit of the unworthy takes,\
-> When he himself might his quietus make\
-> With a bare bodkin? who would fardels bear,\
-> To grunt and sweat under a weary life,\
-> But that the dread of something after death,\
-> The undiscover’d country from whose bourn\
-> No traveller returns, puzzles the will\
-> And makes us rather bear those ills we have\
-> Than fly to others that we know not of?\
-> Thus conscience does make cowards of us all;\
-> And thus the native hue of resolution\
-> Is sicklied o’er with the pale cast of thought,\
-> And enterprises of great pith and moment\
-> With this regard their currents turn awry,\
-> And lose the name of action.–Soft you now!\
-> The fair Ophelia! Nymph, in thy orisons\
-> Be all my sins remember’d.\
+: Hamlet’s ‘To Be Or Not To Be’ Speech, Act 3 Scene 1
 
-What was Hamlet's problem? How did he solve that problem?
+Do you see a lot of "randomness" in that famous soliloquy? What do you
+reckon was Hamlet's problem? In this soliloquy, Hamlet gives a list of
+all the *random* things that annoy him about life: *the whips and scorns
+of time*, *the oppressor’s wrong, the proud man’s contumely, the pangs
+of despised love, the law’s delay, the insolence of office and the
+spurns that patient merit of the unworthy takes*. There’s a sense of
+agonized frustration in this soliloquy that however bad life is we’re
+prevented from doing anything about it by fear of the unknown.
+
+And yet, being Prince of Denmark, and having a lot of Questions, and
+unmistakable Authority, he has to Act! How did he solve that problem? We
+don't know for sure if Hamlet believed in Goddess Saraswati,
+<u>[Shakespeare doesn't say, but Christopher Isherwood seems to think so, 
+on Page 3](https://www.yumpu.com/en/document/read/35825580/vedanta-for-the-western-world-swami-vivekananda)</u>.
+
+Aside: in Hindu mythology, who are the two who went into Hamlet's *"the
+undiscover’d country"* and *did return*? How did they manage it?
 
 ## Suppose we were Hamlet....
 
@@ -95,16 +222,34 @@ Did Hamlet have an idea, any suspicion, that he might have wanted to
 prove? Yes, he did, and that is why he *feigned madness*, so people
 would open up and tell him things, in an unguarded way. So there was
 <u>[**craft in his
-madness**](http://www.shakespeare-online.com/plays/hamlet/antichamlet.html)!!</u>\
+madness**](http://www.shakespeare-online.com/plays/hamlet/antichamlet.html)!!</u>
 
-<u>[**Hakuna Matata, Dude!!**](https://youtu.be/kaOIxll4LCA)</u>
+So here Hamlet tells his friends, Horatio and Marcellus, what he is 
+going to do, and swears them into silence:
+
+> Here as before. [For the third time, Hamlet places his sword for the
+> others to swear upon]\
+> Never, so help you mercy,\
+> How strange or odd soe'er I bear myself\
+> (As I perchance hereafter shall think meet\
+> To put an antic disposition on)\
+> That you at such time seeing me never shall,\
+> With arms encumbered thus, or thus head shaked,\
+> Or by pronouncing of some doubtful phrase\
+> As, "Well, we know," or "We could an if we would,"\
+> And especially don't say <u>[**Hakuna Matata,
+> Dude!!**](https://youtu.be/kaOIxll4LCA)</u>
 
 ### A Hypothesis worthy of Hamlet
 
+So we know what *Hamlet* wanted to know, and how he planned to find out.
+
+What about us?
+
 If we wanted to know the truth of something, some guess, a hunch, or a
 **Hypothesis** that we had, then we would need to conduct an
-"Experiment", rather like Hamlet did, without quite going or **feigning
-madness** of course. But there is a **Madness to/in the Method**, as we
+"Experiment", rather like Hamlet did, without quite going or *feigning
+madness* of course. But there is a *Madness to/in the Method*, as we
 will see...
 
 !["Design of Experiments - A Workflow: A Madness in the
@@ -134,23 +279,28 @@ From
 Let us pretend we are Hamlet and design a simple experiment to find out
 some "truth" (highly probable idea) that is important to us.
 
-For example:
+### [**No Free Hunch**](https://nofreehunch.org): Hypothesis Design
 
-Let us consider the **Short Term Memory(STM)** of Foundation Students: 
-(Or , we could use the **Guilford Divergent Thinking Test for Alternative Uses** as our vehicle for testing similar Hypotheses.)
+We learnt a lot (new) words from Hamlet, didn't we? How many do we
+remember? What Hypothesis could be make? What do we have a hunch about?
 
-### Hypothesis Design
-
-What Hypothesis could be make? What do we have a hunch about?
+Let us consider the <u>[**Short Term
+Memory(STM)**](Lawrence-ADesignofExperimentsWorkshopasanIntroductiontoStatistics.pdf)</u> of Foundation Students at SMI as our vehicle for testing similar
+Hypotheses.[^1]
 
 -   STM scores are significantly different between students of Design
     and those of Art (;-O)
--  STM is much better for those who use Windows as compared to those who use Macs
+-   STM is much better for those who use Windows as compared to those
+    who use Macs
 -   Any other factors, not related to types of individuals, but more
-    like parameters of STM itself, such as:
+    like *parameters of STM itself*, also affect the STM scores, for
+    example:
     -   Word complexity (Syllables per Word)
     -   No of Words
     -   Exposure Time and Recall Time
+    
+With the Guilford Divergent Thinking Test, you might consider:  
+
 -   Students who speak their Mother Tongue fluently score better in
     Divergent Thinking Scores (Fluency, Flexibility, Elaboration,
     Originality)
@@ -160,9 +310,10 @@ What Hypothesis could be make? What do we have a hunch about?
 ### Factors in Hypothesis
 
 In each of these Hypotheses, we can see that there are *binary* (Yes/No)
-(two-valued) parameters that are part of the test: `Art vs Design`,` Windows vs Mac`, `Speaks Mother Tongue or Not`, `Small Town vs Metro`,
-`Long vs Short List of Words`, `Short vs Long Words` and
-`Long vs Short Exposure`.
+(two-valued) parameters that are part of the test:
+`Art vs Design`, `Windows vs Mac`, `Speaks Mother Tongue or Not`,
+`Small Town vs Metro`, `Long vs Short List of Words`,
+`Short vs Long Words` and `Long vs Short Exposure`.
 
 If we want our experiment to be **fair** we must have:
 
@@ -176,7 +327,7 @@ We will choose one of these questions, or a similar one, and use the
 to guide our Hypothesis Testing and the Design of our Experiment:
 
 <u>[**Lawrence - A Design of Experiments Workshop as an Introduction to
-Statistics - PDF**](Lawrence%20-%20A%20Design%20of%20Experiments%20Workshop%20as%20an%20Introduction%20to%20Statistics.pdf).</u>
+Statistics - PDF**](Lawrence-ADesignofExperimentsWorkshopasanIntroductiontoStatistics.pdf)</u>).
 
 This is the paper describing a simple *Design of Experiments* workshop
 in class much like ours. We will try to mimic as much of this as we can.
@@ -185,17 +336,15 @@ experiment.
 
 ### Data Analysis-1: Comparison of STM Histograms using Excel and WTFcsv
 
-Once our test/survey is complete, let us collate all the data for all tests
-using Excel. (This is for the STM Hypothesis; we can adapt this
-spreadsheet for any other hypothesis test with categorical factors and
-scores.)
+Once our test/survey is complete, let us collate all the data for all
+tests using this Excel <u>[**spreadsheet**](STM.xlsx)</u>, which we can place on Google Drive for the whole class. (This is for the STM Hypothesis; we can adapt this spreadsheet for any other hypothesis test with categorical factors andscores.)
 
-1.  Download this <u>[**spreadsheet**](STM.xlsx)</u> and save as your own
-    *named* local copy.
-2.  Enter the data from all tests on the first sheet titled "RawData"
+1.  Enter the data from all tests on the first sheet titled "RawData"
     (the one with the warning)
+2.  Download and save as your own *named* local copy.
 3.  **Duplicate this data** on the sheet titled "Data Duplicated". **Do
-    not touch** the "RawData" sheet again. Good Practice!!
+    not touch** the "RawData" sheet again. Good Practice to not touch 
+    original data!!
 4.  For each of the *factors* under consideration, we will need to stack
     up STM scores from $2^3 = 8$ tests, i.e. eight columns.
 5.  If we have three two-valued, categorical factors, we will get three
@@ -382,18 +531,27 @@ Apropos: how could we do this for non-binary factors ...??!!!
 ### Making a Data Comic out of our Experiment
 
 What have been our Conclusions with the Experiment? Let us take our
-Experiment and make a comic out of it:
-
-**Data Comic Generator from Gramener**
-[(**Weblink**)](https://gramener.com/comicgen)
+Experiment and make a comic out of it: <u>**Data Comic Generator from Gramener**
+[(**Weblink**)](https://gramener.com/comicgen)</u>
 
 <br> `r blogdown::shortcode("youtube", "E_2hdZuugI8")` <br>
 
 ### References
 
-1.  Mahashweta Devi, *The Why Why Girl*,
-    <u><https://www.tulikabooks.com/picture-books/the-why-why-girl-english.html></u>, read by Sarah Dryden Peterson
+1.  Tim C. Hesterberg (2015). *What Teachers Should Know About the 
+Bootstrap: Resampling in the Undergraduate Statistics Curriculum*, 
+The American Statistician, 69:4, 371-386, DOI:10.1080/00031305.2015.1089789
+
+2.  Mahashweta Devi, *The Why Why Girl*,
+    <u><https://www.tulikabooks.com/picture-books/the-why-why-girl-english.html></u>,
+    read by Sarah Dryden Peterson
     <u><https://www.youtube.com/watch?v=xNcV5DZhg4c></u>
+
+3.  Could this song indicate what our situation might be?
+
+    <u><https://www.youtube.com/watch?v=qan0Y9hXpPQ></u>
+
+    <u><https://www.filmyquotes.com/songs/1381></u>
 
 ### Fun Stuff: Words Belong Hamlet
 
@@ -407,7 +565,6 @@ blogdown::shortcode("tweet",
                     
 ```
 
-
 > Which way this time? Me killem de finish body b'long me. Or me no do
 > 'im? Me no savvy.\
 > Might 'e better 'long you-me catchem this fella, string for throw 'im
@@ -417,3 +574,5 @@ blogdown::shortcode("tweet",
 > Might 'e better 'long you-me For fightem 'long altogether where him 'e
 > makem you-me sorry too much.\
 > Bimeby him fall down die finish? Me no savvy.
+
+[^1]: Or we could use <u>[Guilford Alternative Uses Creative Test](<https://curtbonk.com/bobweb/r546/modules/creativity/creativity_tests/guilford_uses_task.html>)</u>
