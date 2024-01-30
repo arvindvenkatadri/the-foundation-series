@@ -35,12 +35,12 @@ library(emoji)
 
 ## Seeing Data
 
-Is our data clean? Do we have two columns of data, one containing 60
-counts of vehicles, and the other containing inter-vehicular gap times
-in seconds?\
 Let us then examine the street traffic data we have gathered for any
-"model-like" pattern! We will use a tool called, ah...umm...ahem...
-er...**WTFcsv**. Let us first quickly see what this tool offers us!
+"model-like" pattern! Is our data clean? Do we have two columns of data,
+one containing 60counts of vehicles, and the other containing 
+inter-vehicular gap times in seconds?\
+We will use a tool called, ah...umm...ahem...er...**WTFcsv**. Let us 
+first quickly see what this tool offers us!
 
 <br> `r blogdown::shortcode("vimeo", "150216437")` <br>
 
@@ -104,9 +104,20 @@ inter-vehicular gap time*, which is $\sim \frac{1}{\lambda}$.
 -   Are we just Victims of Randomness and cannot do much else but put up
     with it?
 
+## Poisson Distribution as a 4As Complexity Idea...
+Consider a coin toss. One gets HEAD(H) or TAIL(T), and if the coin is fair, the long term chances of getting a H or a T are even. If one tosses a single coin several times, one gets different sequences of Hs and Ts.
+
+If we assume that an H means people <u>[**get into their car and drive**](https://youtu.be/w9NbXDXvr8M)</u>, what can
+we say of many many people? They are all tossing coins, so to speak, and leave only if they get a H. *Each sequence of Hs and Ts is a manifestation of car traffic*, with H being a vehicle, and T being no vehicle. 
+
+In a large society with $n~ -> \infty$, not many people drive out at any given time, so $p$ is low. So the product $people \times p(H) = np$ can be thought of as a constant, say 10, or 100. 
+
+The Accumulated random binary Actions of a large number of people gives us an aggregate <u>[**Poisson distribution**](https://math.oxford.emory.edu/site/math117/connectingPoissonAndBinomial/)</u> for the occurrence of traffic, with a mean of $\lambda = np$. 
+
 ## Is Randomness a Design Tool?
 
 ![Photo by Sharath G. from Pexels](pexels-sharath-g-4418675.jpg)
+
 
 But we are interested in more than just the Poisson Process. And mangoes
 are far more interesting than cars!!!

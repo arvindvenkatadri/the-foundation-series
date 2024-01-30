@@ -29,12 +29,12 @@ editor_options:
 
 <div id="seeing-data" class="section level2">
 <h2>Seeing Data</h2>
-<p>Is our data clean? Do we have two columns of data, one containing 60
-counts of vehicles, and the other containing inter-vehicular gap times
-in seconds?<br />
-Let us then examine the street traffic data we have gathered for any
-“model-like” pattern! We will use a tool called, ah…umm…ahem…
-er…<strong>WTFcsv</strong>. Let us first quickly see what this tool offers us!</p>
+<p>Let us then examine the street traffic data we have gathered for any
+“model-like” pattern! Is our data clean? Do we have two columns of data,
+one containing 60counts of vehicles, and the other containing
+inter-vehicular gap times in seconds?<br />
+We will use a tool called, ah…umm…ahem…er…<strong>WTFcsv</strong>. Let us
+first quickly see what this tool offers us!</p>
 <p><br> {{% vimeo "150216437" %}} <br></p>
 <p>Let us import our data into the <u><a href="https://databasic.io/en/wtfcsv/"><strong>WTFcsv</strong>
 tool</a></u> and see what patterns lurk
@@ -84,6 +84,14 @@ inter-vehicular gap time</em>, which is <span class="math inline">\(\sim \frac{1
 with it?</li>
 </ul>
 </div>
+</div>
+<div id="poisson-distribution-as-a-4as-complexity-idea" class="section level2">
+<h2>Poisson Distribution as a 4As Complexity Idea…</h2>
+<p>Consider a coin toss. One gets HEAD(H) or TAIL(T), and if the coin is fair, the long term chances of getting a H or a T are even. If one tosses a single coin several times, one gets different sequences of Hs and Ts.</p>
+<p>If we assume that an H means people <u><a href="https://youtu.be/w9NbXDXvr8M"><strong>get into their car and drive</strong></a></u>, what can
+we say of many many people? They are all tossing coins, so to speak, and leave only if they get a H. <em>Each sequence of Hs and Ts is a manifestation of car traffic</em>, with H being a vehicle, and T being no vehicle.</p>
+<p>In a large society with <span class="math inline">\(n~ -&gt; \infty\)</span>, not many people drive out at any given time, so <span class="math inline">\(p\)</span> is low. So the product <span class="math inline">\(people \times p(H) = np\)</span> can be thought of as a constant, say 10, or 100.</p>
+<p>The Accumulated random binary Actions of a large number of people gives us an aggregate <u><a href="https://math.oxford.emory.edu/site/math117/connectingPoissonAndBinomial/"><strong>Poisson distribution</strong></a></u> for the occurrence of traffic, with a mean of <span class="math inline">\(\lambda = np\)</span>.</p>
 </div>
 <div id="is-randomness-a-design-tool" class="section level2">
 <h2>Is Randomness a Design Tool?</h2>
