@@ -150,18 +150,6 @@ Once we exhaust **all** the FEATURE columns, then what remains is a subset (i.e.
 
 This forms the basic intuition for a Machine Learning Algorithm called a **Decision Tree**. Note that we being human, our tree is plotted **inverted**: trunk on top and the leaves below. <u>[Only God can make a tree.](https://www.poetryfoundation.org/poetrymagazine/poems/12744/trees)</u>
 
-### Decision Tree in Orange
-
-Let us visualize this Decision Tree in Orange. Look at the now famous `penguins` dataset, available here:
-
-<u><https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv></u>
-
-We see that there are three `species` of penguins, that live on three `islands`. The measurements for each penguin are `flipper_length_mm`, `bill_length_mm`, `bill_depth_mm`, and  `body_mass_g`. 
-
-1. **Task 1:** Create a few data visualizations for the variables, and pairs of variables from this dataset. 
-
-2. **Task 2:** Can you inspect the visualizations and imagine how each of this dataset can be used in a `20 Questions Game`, to create a **Decision Tree** for this dataset as shown below?
-
 ![Penguins Decision Tree!](penguins.png)
 
 
@@ -178,9 +166,23 @@ We see that there are three `species` of penguins, that live on three `islands`.
 
 This is how we will use this Game as a Model for our first ML algorithm, **classification** using Decision Trees.
 
+## Looking at Data in Orange
 
+Let us visualize this Decision Tree in Orange. Look at the now famous `penguins` dataset, available here:
 
-## How do we Make Predictions using our Decision Tree
+<u><https://raw.githubusercontent.com/mwaskom/seaborn-data/master/penguins.csv></u>
+
+We see that there are three `species` of penguins, that live on three `islands`. The measurements for each penguin are `flipper_length_mm`, `bill_length_mm`, `bill_depth_mm`, and  `body_mass_g`. 
+
+1. **Task 1:** Create a few data visualizations for the variables, and pairs of variables from this dataset. 
+
+2. **Task 2:** Can you inspect the visualizations and imagine how each of this dataset can be used in a `20 Questions Game`, to create a **Decision Tree** for this dataset as shown below?
+
+Once you are comfortable with the interface and the way to generate graphs, then you can save this Orange Workflow file locally for reference. 
+
+## How do we Make Predictions using our Decision Tree in Orange
+
+Download this <u>[**penguin tree file**](penguins-tree.ows)</u> and open it in Orange.
 
 Our aim is to make `predictions`. Predictions of what? When we are given new unseen data in the same format, we should be able to predict TARGET variable using the same FEATURE columns. 
 
@@ -188,17 +190,14 @@ NOTE: This  that is usually a **class/category** (We **CAN** also predict a **nu
 
 In order to make predictions with completely unseen data, we need to first check if the algorithm is working well with **known** data. The way to do this is to use a large portion of data to **design the tree**, and then use the tree to predict some aspect of the remaining, but similar, data. Let us split the `penguins` dataset into two pieces: a `training set` to design our tree, and a `test set` to check how it is working.
 
-Download this <u>[**penguin tree file**](penguins-tree.ows)</u> and open it in Orange.
-
 How good are the Predictions? What is the **Classification Error Rate**? 
-
 
 
 ## How Many Trees do we Need? Enter the Random Forest!
 
 Check all your individual Decision Trees: 
 
-- do they ask the same Questions? 
+- Do they ask the same Questions? 
 - Do they fork pretty much in the same way? 
 
 Yes, they all seem to use the same set of parameters to reach the target. So they are capable of being "biased" and make the **same mistakes**. So we ask: Does it help to use more than one tree, if all the questions/forks in the Trees are similar?
@@ -281,6 +280,7 @@ We will create a Random Forest Model for this dataset, and compare with the Deci
 
 
 ## How good is my Random Forest?
+
 There are good few metrics to state the performance of our Random Forest. We should know these:
 
 1. `Classification Error` : How many mismatches? Simple enough.
@@ -314,4 +314,4 @@ Again, this tells us how much a particular group has members from another class.
 
 4. *data.tree* sample applications, Christoph Glur, 2020-07-31. <https://cran.r-project.org/web/packages/data.tree/vignettes/applications.html>
 
-
+5. <https://waternova.github.io/random-forest-viz/>
