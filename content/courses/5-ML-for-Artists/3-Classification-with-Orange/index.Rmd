@@ -4,7 +4,7 @@ subtitle:
 date: "2021-08-09"
 external_link: ""
 image:
-  caption: Photo from unsplash.com
+  caption: Photo of [Yoga Narasimha at Hampi by Ruben Swieringa](https://www.flickr.com/photos/rubenswieringa/5413762847) on flickr
   focal_point: Smart
 weight: 2
 links:
@@ -27,6 +27,7 @@ tags:
 ---
 
 ```{r setup,include=FALSE}
+library(blogdown)
 library(DiagrammeR)
 library(tidyverse)
 library(palmerpenguins)
@@ -36,9 +37,16 @@ library(palmerpenguins)
 library(D3plusR)
 ```
 
+## <u>[Narasimha Agaccha](https://youtu.be/e0ENcwgf7-o)</u>
+> The fourth incarnation of the god Vishnu as Narasimha; the god with the lion-head. The pose that the god takes on in this statue is called the Yoga Narasimha -- from knee to knee there is a meditation-belt meant to keep the meditator in position.
+>
+>The goddess Laxmi used to be on Narasimha's knee, but was destroyed when the sultans of the south invaded Hampi in the 16th century. Her right arm is still visible in embrace.
+>
+>Hovering over Narasimha's head are 7 cobras.
+
 ## A Childhood Game
 
-Have you played a Childhood Game called **20 Questions**? Someone has a "target" entity in mind ( a person or a thing or a literary character) and the others need to discover that entity by asking 20 questions. 
+Have you played a Childhood Game called **20 Questions**? Someone has a "target" entity in mind (a person or a thing or a literary character) and the others need to discover that entity by asking 20 questions. 
 
 - How does one create questions in the game?  
   - Categories?
@@ -46,8 +54,9 @@ Have you played a Childhood Game called **20 Questions**? Someone has a "target"
   - Comparisons?
 
 - What sort of answers can you expect for each question?
+- If the "target" was the Narasimha avatara, what questions would you create?
 
-## Twenty Questions Game as a Play with Data...
+## 20Q Game as a Play with Data...
 
 Assuming we think of a 20Q Target as say, celebrity singer like Taylor Swift, or a cartoon character like Thomas the Tank Engine, what would an underlying "data structure" look like? We would ask Questions for instance in the following order to find the target of Taylor Swift:  
 
@@ -64,8 +73,8 @@ Oh...Taylor Swift!!!
 Let us try to construct the "datasets" underlying this game!
 
 ```{r echo=FALSE, warning=FALSE}
-taylor <- tibble(name = "Taylor Swift", Occupation = "Singer", Sex = "F", Living = T, Nationality = "USA", genre = "country/rock", pet = "Scottish Fold Cats")
-thomas <- tibble(name = "Thomas, the Tank Engine", Type = "Cartoon Character", Living = F, human = F, Nationality = "UK", colour = "blue", material = "metal")
+taylor <- tibble(Name = "Taylor Swift", Occupation = "Singer", Sex = "F", Living = T, Nationality = "USA", Genre = "country/rock", Pet = "Scottish Fold Cats")
+thomas <- tibble(Name = "Thomas, the Tank Engine", Type = "Cartoon Character", Living = F, Human = F, Nationality = "UK", colour = "blue", material = "metal")
 taylor %>% knitr::kable()
 thomas %>% knitr::kable()
 ```
@@ -119,7 +128,7 @@ Each Question we ask, based on one of the Feature columns, begets a Yes/No answe
 
 ## Twenty times 20 Questions !!
 
-What if the dataset we had contained **many** rows, instead of just one row? How would we play the 20Q Game in this situation? Here is a sample of the famous *penguins* dataset:
+What if the dataset we had contained **many** rows, instead of just one row? How would we play the **same** 20Q Game in this situation? Here is a sample of the famous *penguins* dataset:
 
 
 ```{r echo=FALSE,warning=FALSE, message=FALSE}
@@ -135,11 +144,11 @@ When we look at the FEATURE columns, We would need to formulate questions based 
 - If the specific **FEATURE** column is a **Numerical** (N) variable, the question would use some "thresholding" as shown in the question above, to convert the Numerical Variable into a Categorical variable.
 - If a specific **FEATURE** column is a **Categorical** (C) variable, the question would be like a *filter* operation in Excel. 
 
-Either way, we end up answering with a **smaller and smaller subset of rows in the dataset**, to which the questions are answered with a Yes. It is as if we played **many** 20 Questions games in parallel, ***since there are so many simultaneous "answers"***! 
+Either way, we end up answering with a **smaller and smaller subset of rows in the dataset**, to which the questions are answered with a Yes. It is as if we played **the same** 20 Questions games in parallel, ***since there are so many simultaneous "answers"***! 
 
 Once we exhaust **all** the FEATURE columns, then what remains is a subset (i.e. rows)  of the original dataset and we read off the TARGET column, which should now contain a set of identical entries, e.g. "Adelie". Thus we can extend a *single-target* 20Q game to a **multiple-target** one using a larger dataset. (Note how the multiple targets are all the same: "Adelie", or "Gentoo", or "Chinstrap")
 
-This forms the basic intuition for a Machine Learning Algorithm called a **Decision Tree**. Note that the tree is plotted **inverted**: trunk on top and the leaves below. <u>[Only God can make a tree.](https://www.poetryfoundation.org/poetrymagazine/poems/12744/trees)</u>
+This forms the basic intuition for a Machine Learning Algorithm called a **Decision Tree**. Note that we being human, our tree is plotted **inverted**: trunk on top and the leaves below. <u>[Only God can make a tree.](https://www.poetryfoundation.org/poetrymagazine/poems/12744/trees)</u>
 
 ### Decision Tree in Orange
 
@@ -160,11 +169,12 @@ We see that there are three `species` of penguins, that live on three `islands`.
 
 - The 20Q Game can be viewed as a "Decision Tree" of Questions and Answers, 
 - Each **fork** in the game is a Question. 
-- Depending upon whether the current answer is **yes or no**, we turn in one direction or the other.
+- Depending upon whether the current answer is **yes or no**, we turn in one direction or the other. (Remember "binary choices" in our work on the Poisson Distribution! More shortly!)
 - Each of our questions is **based** on the information available in one or other of the columns!!
 - We arrive at a final "answer" or "target" after a particular sequence of yes/no answers. This is the one of the **leaf** nodes in the Tree. 
 - The `island` and the `species` columns are **categories** and are especially suited to being the **targets** for a 20 Questions Game. 
 - We can therefore use an **entire column** of data as our 20Questions **target**, rather than just one entity, person. 
+- In doing so, we play the **same 20Q Game** many times over and obtain multiple answers from the **target columns**. 
 
 This is how we will use this Game as a Model for our first ML algorithm, **classification** using Decision Trees.
 
@@ -219,11 +229,30 @@ Let's get a visual sense of how all this works:
 <https://waternova.github.io/random-forest-viz/>
 
 
+## Are Random Forests an Example of Complexity?
+
+Does The Random Forest somehow embody the "4A"s of Complexity? (Agents, Actions, Again, Aggregate)? Can we try to interpret the algorithm as such? Here goes:
+
+- Each little *tree* in the Random Forest is an independent **Agent**
+- Each agent-tree has a vocabulary of **Actions**
+     * to choose randomly a *subset* of variables from the big dataset
+     * To independently vote using their choice of variables
+- And the "votes" are **Aggregated** to decide the final prediction
+- Which is greater (better, accurate with higher confidence) than each individual Agent-Trees
+- <u>[Do it **Again**](https://youtu.be/jmdiKePVUy8)</u> when presented with fresh data
+
+Not bad, is it, as a metaphor for Random Forests?
+
+`r blogdown::shortcode("youtube", "gSQsFIMcA8A")`
+
 ## Random Forest Classification for Heart Patients
 
-Do you want to develop an ML model for heart patients? We have a dataset of heart patients at the [**University of California, ~~Arvind~~ Irvine ML Dataset Repository**](https://archive.ics.uci.edu/ml/datasets/heart+disease)
+Do you want to develop an ML model for heart patients? We have a dataset of heart patients at the <u>[**University of California, ~~Arvind~~ Irvine ML Dataset Repository**](https://archive.ics.uci.edu/ml/datasets/heart+disease)</u>:
 
-[**Heart Patient Data**](https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/processed.cleveland.data). Import into Orange !!
+<u>[**Cleveland Heart Patient Data CSV**](processed.cleveland.data.csv)</u>. 
+
+We will download this data and use it with this Orange Workflow file. <u>[Random Forests Workflow File](random_forest.ows)
+
 
 What are the variables?
 
@@ -250,20 +279,6 @@ What are the variables?
 
 We will create a Random Forest Model for this dataset, and compare with the Decision Tree for the same dataset. 
 
-
-## Are Random Forests an Example of Complexity?
-
-Does The Random Forest somehow embody the "4A"s of Complexity? (Agents, Actions, Again, Aggregate)? Can we try to interpret the algorithm as such? Here goes:
-
-- Each little *tree* in the Random Forest is an independent **Agent**
-- Each agent-tree has a vocabulary of **Actions**
-     * to choose randomly a *subset* of variables from the big dataset
-     * To independently vote using their choice of variables
-- And the "votes" are **Aggregated** to decide the final prediction
-- Which is greater (better, accurate with higher confidence) than each individual Agent-Trees
-- <u>[Do it **Again**](https://youtu.be/jmdiKePVUy8)</u> when presented with fresh data
-
-Not bad, is it, as a metaphor for Random Forests?
 
 ## How good is my Random Forest?
 There are good few metrics to state the performance of our Random Forest. We should know these:

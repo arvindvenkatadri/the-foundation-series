@@ -216,3 +216,5 @@ We'll see.
     Simulation*,
     <u><https://www.cantorsparadise.com/calculating-the-value-of-pi-using-random-numbers-a-monte-carlo-simulation-d4b80dc12bdf></u>
     
+8. Mozart Dice Game: Generate Mozart-like tunes by throwing dice: <u><https://vician.net/mozart/></u>
+

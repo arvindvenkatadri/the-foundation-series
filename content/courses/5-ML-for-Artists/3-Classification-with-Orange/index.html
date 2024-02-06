@@ -4,7 +4,7 @@ subtitle:
 date: "2021-08-09"
 external_link: ""
 image:
-  caption: Photo from unsplash.com
+  caption: Photo of [Yoga Narasimha at Hampi by Ruben Swieringa](https://www.flickr.com/photos/rubenswieringa/5413762847) on flickr
   focal_point: Smart
 weight: 2
 links:
@@ -32,9 +32,17 @@ tags:
 <script src="{{< blogdown/postref >}}index_files/grViz-binding/grViz.js"></script>
 
 
+<div id="narasimha-agaccha" class="section level2">
+<h2><u><a href="https://youtu.be/e0ENcwgf7-o">Narasimha Agaccha</a></u></h2>
+<blockquote>
+<p>The fourth incarnation of the god Vishnu as Narasimha; the god with the lion-head. The pose that the god takes on in this statue is called the Yoga Narasimha – from knee to knee there is a meditation-belt meant to keep the meditator in position.</p>
+<p>The goddess Laxmi used to be on Narasimha’s knee, but was destroyed when the sultans of the south invaded Hampi in the 16th century. Her right arm is still visible in embrace.</p>
+<p>Hovering over Narasimha’s head are 7 cobras.</p>
+</blockquote>
+</div>
 <div id="a-childhood-game" class="section level2">
 <h2>A Childhood Game</h2>
-<p>Have you played a Childhood Game called <strong>20 Questions</strong>? Someone has a “target” entity in mind ( a person or a thing or a literary character) and the others need to discover that entity by asking 20 questions.</p>
+<p>Have you played a Childhood Game called <strong>20 Questions</strong>? Someone has a “target” entity in mind (a person or a thing or a literary character) and the others need to discover that entity by asking 20 questions.</p>
 <ul>
 <li>How does one create questions in the game?
 <ul>
@@ -43,10 +51,11 @@ tags:
 <li>Comparisons?</li>
 </ul></li>
 <li>What sort of answers can you expect for each question?</li>
+<li>If the “target” was the Narasimha avatara, what questions would you create?</li>
 </ul>
 </div>
-<div id="twenty-questions-game-as-a-play-with-data" class="section level2">
-<h2>Twenty Questions Game as a Play with Data…</h2>
+<div id="q-game-as-a-play-with-data" class="section level2">
+<h2>20Q Game as a Play with Data…</h2>
 <p>Assuming we think of a 20Q Target as say, celebrity singer like Taylor Swift, or a cartoon character like Thomas the Tank Engine, what would an underlying “data structure” look like? We would ask Questions for instance in the following order to find the target of Taylor Swift:</p>
 <ul>
 <li>Human?(Yes)<br />
@@ -75,13 +84,13 @@ tags:
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">name</th>
+<th align="left">Name</th>
 <th align="left">Occupation</th>
 <th align="left">Sex</th>
 <th align="left">Living</th>
 <th align="left">Nationality</th>
-<th align="left">genre</th>
-<th align="left">pet</th>
+<th align="left">Genre</th>
+<th align="left">Pet</th>
 </tr>
 </thead>
 <tbody>
@@ -108,10 +117,10 @@ tags:
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left">name</th>
+<th align="left">Name</th>
 <th align="left">Type</th>
 <th align="left">Living</th>
-<th align="left">human</th>
+<th align="left">Human</th>
 <th align="left">Nationality</th>
 <th align="left">colour</th>
 <th align="left">material</th>
@@ -140,7 +149,7 @@ tags:
 </div>
 <div id="twenty-times-20-questions" class="section level2">
 <h2>Twenty times 20 Questions !!</h2>
-<p>What if the dataset we had contained <strong>many</strong> rows, instead of just one row? How would we play the 20Q Game in this situation? Here is a sample of the famous <em>penguins</em> dataset:</p>
+<p>What if the dataset we had contained <strong>many</strong> rows, instead of just one row? How would we play the <strong>same</strong> 20Q Game in this situation? Here is a sample of the famous <em>penguins</em> dataset:</p>
 <table>
 <colgroup>
 <col width="10%" />
@@ -166,124 +175,124 @@ tags:
 </thead>
 <tbody>
 <tr class="odd">
+<td align="left">Adelie</td>
+<td align="left">Dream</td>
+<td align="right">38.1</td>
+<td align="right">18.6</td>
+<td align="right">190</td>
+<td align="right">3700</td>
+<td align="left">female</td>
+<td align="right">2008</td>
+</tr>
+<tr class="even">
+<td align="left">Chinstrap</td>
+<td align="left">Dream</td>
+<td align="right">49.8</td>
+<td align="right">17.3</td>
+<td align="right">198</td>
+<td align="right">3675</td>
+<td align="left">female</td>
+<td align="right">2009</td>
+</tr>
+<tr class="odd">
 <td align="left">Gentoo</td>
 <td align="left">Biscoe</td>
-<td align="right">46.5</td>
-<td align="right">14.8</td>
-<td align="right">217</td>
-<td align="right">5200</td>
+<td align="right">50.5</td>
+<td align="right">15.2</td>
+<td align="right">216</td>
+<td align="right">5000</td>
 <td align="left">female</td>
-<td align="right">2008</td>
+<td align="right">2009</td>
 </tr>
 <tr class="even">
-<td align="left">Adelie</td>
+<td align="left">Gentoo</td>
 <td align="left">Biscoe</td>
-<td align="right">35.0</td>
-<td align="right">17.9</td>
-<td align="right">190</td>
-<td align="right">3450</td>
+<td align="right">45.5</td>
+<td align="right">13.9</td>
+<td align="right">210</td>
+<td align="right">4200</td>
 <td align="left">female</td>
 <td align="right">2008</td>
 </tr>
 <tr class="odd">
 <td align="left">Adelie</td>
-<td align="left">Torgersen</td>
-<td align="right">38.6</td>
-<td align="right">17.0</td>
-<td align="right">188</td>
-<td align="right">2900</td>
+<td align="left">Dream</td>
+<td align="right">36.6</td>
+<td align="right">18.4</td>
+<td align="right">184</td>
+<td align="right">3475</td>
 <td align="left">female</td>
-<td align="right">2009</td>
-</tr>
-<tr class="even">
-<td align="left">Adelie</td>
-<td align="left">Dream</td>
-<td align="right">39.0</td>
-<td align="right">18.7</td>
-<td align="right">185</td>
-<td align="right">3650</td>
-<td align="left">male</td>
-<td align="right">2009</td>
-</tr>
-<tr class="odd">
-<td align="left">Adelie</td>
-<td align="left">Dream</td>
-<td align="right">40.7</td>
-<td align="right">17.0</td>
-<td align="right">190</td>
-<td align="right">3725</td>
-<td align="left">male</td>
 <td align="right">2009</td>
 </tr>
 <tr class="even">
 <td align="left">Chinstrap</td>
 <td align="left">Dream</td>
-<td align="right">42.5</td>
-<td align="right">17.3</td>
-<td align="right">187</td>
-<td align="right">3350</td>
-<td align="left">female</td>
-<td align="right">2009</td>
-</tr>
-<tr class="odd">
-<td align="left">Gentoo</td>
-<td align="left">Biscoe</td>
-<td align="right">43.3</td>
-<td align="right">14.0</td>
-<td align="right">208</td>
-<td align="right">4575</td>
-<td align="left">female</td>
-<td align="right">2009</td>
-</tr>
-<tr class="even">
-<td align="left">Gentoo</td>
-<td align="left">Biscoe</td>
-<td align="right">42.9</td>
-<td align="right">13.1</td>
-<td align="right">215</td>
-<td align="right">5000</td>
+<td align="right">46.6</td>
+<td align="right">17.8</td>
+<td align="right">193</td>
+<td align="right">3800</td>
 <td align="left">female</td>
 <td align="right">2007</td>
 </tr>
 <tr class="odd">
-<td align="left">Gentoo</td>
-<td align="left">Biscoe</td>
-<td align="right">43.8</td>
-<td align="right">13.9</td>
-<td align="right">208</td>
-<td align="right">4300</td>
+<td align="left">Adelie</td>
+<td align="left">Dream</td>
+<td align="right">36.0</td>
+<td align="right">17.1</td>
+<td align="right">187</td>
+<td align="right">3700</td>
+<td align="left">female</td>
+<td align="right">2009</td>
+</tr>
+<tr class="even">
+<td align="left">Adelie</td>
+<td align="left">Torgersen</td>
+<td align="right">46.0</td>
+<td align="right">21.5</td>
+<td align="right">194</td>
+<td align="right">4200</td>
+<td align="left">male</td>
+<td align="right">2007</td>
+</tr>
+<tr class="odd">
+<td align="left">Chinstrap</td>
+<td align="left">Dream</td>
+<td align="right">51.3</td>
+<td align="right">19.2</td>
+<td align="right">193</td>
+<td align="right">3650</td>
+<td align="left">male</td>
+<td align="right">2007</td>
+</tr>
+<tr class="even">
+<td align="left">Adelie</td>
+<td align="left">Torgersen</td>
+<td align="right">36.7</td>
+<td align="right">18.8</td>
+<td align="right">187</td>
+<td align="right">3800</td>
 <td align="left">female</td>
 <td align="right">2008</td>
+</tr>
+<tr class="odd">
+<td align="left">Adelie</td>
+<td align="left">Dream</td>
+<td align="right">42.3</td>
+<td align="right">21.2</td>
+<td align="right">191</td>
+<td align="right">4150</td>
+<td align="left">male</td>
+<td align="right">2007</td>
 </tr>
 <tr class="even">
 <td align="left">Adelie</td>
 <td align="left">Dream</td>
-<td align="right">36.0</td>
-<td align="right">18.5</td>
-<td align="right">186</td>
-<td align="right">3100</td>
-<td align="left">female</td>
-<td align="right">2007</td>
-</tr>
-<tr class="odd">
-<td align="left">Gentoo</td>
-<td align="left">Biscoe</td>
-<td align="right">45.7</td>
-<td align="right">13.9</td>
-<td align="right">214</td>
-<td align="right">4400</td>
-<td align="left">female</td>
-<td align="right">2008</td>
-</tr>
-<tr class="even">
-<td align="left">Adelie</td>
-<td align="left">Biscoe</td>
-<td align="right">37.6</td>
-<td align="right">19.1</td>
-<td align="right">194</td>
-<td align="right">3750</td>
+<td align="right">39.7</td>
+<td align="right">17.9</td>
+<td align="right">193</td>
+<td align="right">4250</td>
 <td align="left">male</td>
-<td align="right">2008</td>
+<td align="right">2009</td>
 </tr>
 </tbody>
 </table>
@@ -295,9 +304,9 @@ tags:
 <li>If the specific <strong>FEATURE</strong> column is a <strong>Numerical</strong> (N) variable, the question would use some “thresholding” as shown in the question above, to convert the Numerical Variable into a Categorical variable.</li>
 <li>If a specific <strong>FEATURE</strong> column is a <strong>Categorical</strong> (C) variable, the question would be like a <em>filter</em> operation in Excel.</li>
 </ul>
-<p>Either way, we end up answering with a <strong>smaller and smaller subset of rows in the dataset</strong>, to which the questions are answered with a Yes. It is as if we played <strong>many</strong> 20 Questions games in parallel, <strong><em>since there are so many simultaneous “answers”</em></strong>!</p>
+<p>Either way, we end up answering with a <strong>smaller and smaller subset of rows in the dataset</strong>, to which the questions are answered with a Yes. It is as if we played <strong>the same</strong> 20 Questions games in parallel, <strong><em>since there are so many simultaneous “answers”</em></strong>!</p>
 <p>Once we exhaust <strong>all</strong> the FEATURE columns, then what remains is a subset (i.e. rows) of the original dataset and we read off the TARGET column, which should now contain a set of identical entries, e.g. “Adelie”. Thus we can extend a <em>single-target</em> 20Q game to a <strong>multiple-target</strong> one using a larger dataset. (Note how the multiple targets are all the same: “Adelie”, or “Gentoo”, or “Chinstrap”)</p>
-<p>This forms the basic intuition for a Machine Learning Algorithm called a <strong>Decision Tree</strong>. Note that the tree is plotted <strong>inverted</strong>: trunk on top and the leaves below. <u><a href="https://www.poetryfoundation.org/poetrymagazine/poems/12744/trees">Only God can make a tree.</a></u></p>
+<p>This forms the basic intuition for a Machine Learning Algorithm called a <strong>Decision Tree</strong>. Note that we being human, our tree is plotted <strong>inverted</strong>: trunk on top and the leaves below. <u><a href="https://www.poetryfoundation.org/poetrymagazine/poems/12744/trees">Only God can make a tree.</a></u></p>
 <div id="decision-tree-in-orange" class="section level3">
 <h3>Decision Tree in Orange</h3>
 <p>Let us visualize this Decision Tree in Orange. Look at the now famous <code>penguins</code> dataset, available here:</p>
@@ -316,11 +325,12 @@ tags:
 <ul>
 <li>The 20Q Game can be viewed as a “Decision Tree” of Questions and Answers,</li>
 <li>Each <strong>fork</strong> in the game is a Question.</li>
-<li>Depending upon whether the current answer is <strong>yes or no</strong>, we turn in one direction or the other.</li>
+<li>Depending upon whether the current answer is <strong>yes or no</strong>, we turn in one direction or the other. (Remember “binary choices” in our work on the Poisson Distribution! More shortly!)</li>
 <li>Each of our questions is <strong>based</strong> on the information available in one or other of the columns!!</li>
 <li>We arrive at a final “answer” or “target” after a particular sequence of yes/no answers. This is the one of the <strong>leaf</strong> nodes in the Tree.</li>
 <li>The <code>island</code> and the <code>species</code> columns are <strong>categories</strong> and are especially suited to being the <strong>targets</strong> for a 20 Questions Game.</li>
 <li>We can therefore use an <strong>entire column</strong> of data as our 20Questions <strong>target</strong>, rather than just one entity, person.</li>
+<li>In doing so, we play the <strong>same 20Q Game</strong> many times over and obtain multiple answers from the <strong>target columns</strong>.</li>
 </ul>
 <p>This is how we will use this Game as a Model for our first ML algorithm, <strong>classification</strong> using Decision Trees.</p>
 </div>
@@ -362,10 +372,28 @@ E.g. with <code>penguins</code>, if our target is <code>species</code>, then som
 <p>Let’s get a visual sense of how all this works:</p>
 <p><a href="https://waternova.github.io/random-forest-viz/" class="uri">https://waternova.github.io/random-forest-viz/</a></p>
 </div>
+<div id="are-random-forests-an-example-of-complexity" class="section level2">
+<h2>Are Random Forests an Example of Complexity?</h2>
+<p>Does The Random Forest somehow embody the “4A”s of Complexity? (Agents, Actions, Again, Aggregate)? Can we try to interpret the algorithm as such? Here goes:</p>
+<ul>
+<li>Each little <em>tree</em> in the Random Forest is an independent <strong>Agent</strong></li>
+<li>Each agent-tree has a vocabulary of <strong>Actions</strong>
+<ul>
+<li>to choose randomly a <em>subset</em> of variables from the big dataset</li>
+<li>To independently vote using their choice of variables</li>
+</ul></li>
+<li>And the “votes” are <strong>Aggregated</strong> to decide the final prediction</li>
+<li>Which is greater (better, accurate with higher confidence) than each individual Agent-Trees</li>
+<li><u><a href="https://youtu.be/jmdiKePVUy8">Do it <strong>Again</strong></a></u> when presented with fresh data</li>
+</ul>
+<p>Not bad, is it, as a metaphor for Random Forests?</p>
+<p>{{% youtube "gSQsFIMcA8A" %}}</p>
+</div>
 <div id="random-forest-classification-for-heart-patients" class="section level2">
 <h2>Random Forest Classification for Heart Patients</h2>
-<p>Do you want to develop an ML model for heart patients? We have a dataset of heart patients at the <a href="https://archive.ics.uci.edu/ml/datasets/heart+disease"><strong>University of California, <del>Arvind</del> Irvine ML Dataset Repository</strong></a></p>
-<p><a href="https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/processed.cleveland.data"><strong>Heart Patient Data</strong></a>. Import into Orange !!</p>
+<p>Do you want to develop an ML model for heart patients? We have a dataset of heart patients at the <u><a href="https://archive.ics.uci.edu/ml/datasets/heart+disease"><strong>University of California, <del>Arvind</del> Irvine ML Dataset Repository</strong></a></u>:</p>
+<p><u><a href="processed.cleveland.data.csv"><strong>Cleveland Heart Patient Data CSV</strong></a></u>.</p>
+<p>We will download this data and use it with this Orange Workflow file. <u><a href="random_forest.ows">Random Forests Workflow File</a></p>
 <p>What are the variables?</p>
 <ol style="list-style-type: decimal">
 <li>(age): age in years<br />
@@ -397,22 +425,6 @@ E.g. with <code>penguins</code>, if our target is <code>species</code>, then som
 (in any major vessel: attributes 59 through 68 are vessels)</li>
 </ol>
 <p>We will create a Random Forest Model for this dataset, and compare with the Decision Tree for the same dataset.</p>
-</div>
-<div id="are-random-forests-an-example-of-complexity" class="section level2">
-<h2>Are Random Forests an Example of Complexity?</h2>
-<p>Does The Random Forest somehow embody the “4A”s of Complexity? (Agents, Actions, Again, Aggregate)? Can we try to interpret the algorithm as such? Here goes:</p>
-<ul>
-<li>Each little <em>tree</em> in the Random Forest is an independent <strong>Agent</strong></li>
-<li>Each agent-tree has a vocabulary of <strong>Actions</strong>
-<ul>
-<li>to choose randomly a <em>subset</em> of variables from the big dataset</li>
-<li>To independently vote using their choice of variables</li>
-</ul></li>
-<li>And the “votes” are <strong>Aggregated</strong> to decide the final prediction</li>
-<li>Which is greater (better, accurate with higher confidence) than each individual Agent-Trees</li>
-<li><u><a href="https://youtu.be/jmdiKePVUy8">Do it <strong>Again</strong></a></u> when presented with fresh data</li>
-</ul>
-<p>Not bad, is it, as a metaphor for Random Forests?</p>
 </div>
 <div id="how-good-is-my-random-forest" class="section level2">
 <h2>How good is my Random Forest?</h2>

@@ -13,7 +13,7 @@ tags:
 title: TRIZ Presentation to IIT-B
 url_code: ""
 url_pdf: ""
-url_slides: "slides/P;ayAndInvent/TRIZ-Basics-new"
+url_slides: "slides/PlayAndInvent/TRIZ-Basics-new"
 url_video: ""
 ---
 This is an Introduction on TRIZ that I am making to students and staff at IIT-B

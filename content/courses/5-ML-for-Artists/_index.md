@@ -1,6 +1,6 @@
 ---
-title: "\U0001F409 Machine Learning for Artists"
-author: "Arvind Venkatadri"
+title: "\U0001F409 Machine Learning for Artists and Designers"
+author: "Arvind V."
 linkTitle: Machine Learning for Artists
 summary: Obtain an Intuitive Understanding the Basic Algorithms of Machine Learning and applying them to Creative Art/Design Projects
 view: 2
