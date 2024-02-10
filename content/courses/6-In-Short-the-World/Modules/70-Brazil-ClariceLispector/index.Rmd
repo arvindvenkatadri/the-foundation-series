@@ -89,13 +89,17 @@ Jackson](Oxford%20Anthology%20of%20the%20Brazilian%20Short%20St%20-%20Jackson,%2
 The roles are the reversed in this song are they? But that is possibly
 what we saw in the story...who *is* the beggar?
 
-<u><https://youtu.be/IUqQyJUmgDM></u>
+`r blogdown::shortcode("youtube", "At9FypGZ44M")`
 
 
-Another not un-related song, is <u>[this one by England Dan Seals and John Ford Coley](https://youtu.be/f1E-Z6_BCiE)</u>, especially if you think the lady had a boyfriend earlier. 
+Another not un-related song, is this one by England Dan Seals and John Ford Coley, especially if you think the lady had a boyfriend earlier. 
+
+`r blogdown::shortcode("youtube", "f1E-Z6_BCiE")`
+
 
 ## Writing Prompts
 
 1.  On Growing Older by 5 years in 5 minutes
 2.  On How Others seem to Define Us
-3.  Something using Metaphors(TBD)!!
+3.  Explain something using Religous Metaphors (any religion, any scripture)
+!!
