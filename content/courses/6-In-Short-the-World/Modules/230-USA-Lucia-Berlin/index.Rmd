@@ -3,7 +3,9 @@ title: "USA - Lucia Berlin"
 subtitle: ""
 output: html_document
 date: 2021-12-28
+lastmod: " `r Sys.Date()`"
 weight: 230
+type: book
 ---
 
 ```{r setup, include=FALSE}

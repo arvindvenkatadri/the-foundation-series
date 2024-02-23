@@ -5,6 +5,7 @@ date: "2024-01-03"
 lastmod: "` r Sys.Date()`"
 output: html_document
 weight: 60
+type: book
 editor_options: 
   markdown: 
     wrap: 72
@@ -66,24 +67,24 @@ Stories**.](Distant%20View%20of%20a%20Minaret%20and%20Other%20Storie%20-%20Rifaa
     “brilliant”, “beautiful”, “radiant”.
 
 2.  Alifa Rifaat on the Dangerous Women Project
-    <https://dangerouswomenproject.org/2016/04/30/alifa-rifaat/>
+    <u><https://dangerouswomenproject.org/2016/04/30/alifa-rifaat/></u>
 
 3.  Banipal Magazine of Modern Arabic Literature.
-    <http://www.banipal.co.uk>
+    <u><http://www.banipal.co.uk></u>
 
-4.  <https://www.arabicfiction.org/en>
+4.  <u><https://www.arabicfiction.org/en></u>
 
 5.  Denys Johnson-Davies
-    <https://www.theguardian.com/world/2017/jun/18/denys-johnson-davies-obituary>
+    <u><https://www.theguardian.com/world/2017/jun/18/denys-johnson-davies-obituary></u>
 
 6.  Malti-Douglas, Fedwa. *Men, Women, and God(s): Nawal El Saadawi and
     Arab Feminist Poetics*. Berkeley: University of California Press,
-    c1995 1995. <http://ark.cdlib.org/ark:/13030/ft8c6009n4/>
+    c1995 1995. <u><http://ark.cdlib.org/ark:/13030/ft8c6009n4/></u>
 
 7.  *Ya Baheya, the Woman Behind the Legend*.
-    <http://www.shira.net/music/ya-baheya-background.htm>
+    <u><http://www.shira.net/music/ya-baheya-background.htm></u>
 
-8.  *Oyun Baheya*, the Song. <https://youtu.be/sb4ZNdLGeIo>
+8.  *Oyun Baheya*, the Song. <u><https://youtu.be/sb4ZNdLGeIo></u>
 
 ### Song for the Story
 
@@ -96,12 +97,12 @@ Starring: Naseeruddin Shah, Shabana Azmi, Master Jugal, Baby Urmila,
 Saeed Jaffery\
 Director : Shekhar Kapoor\
 
-<https://youtu.be/qfrdkbQHw48>
+<u><https://youtu.be/qfrdkbQHw48></u>
 
 `r embedr::embed_audio("old_Masoom-Do Naina Aur Ek Kahani.mp3")`
 
 | Hindi Lyrics                                         | English Translation                                              |
-|------------------------------------------------------|------------------------------------------------------------------|
+|---------------------------------|---------------------------------------|
 | Do naina aur ek kahanee(2)                           | Two eyes and one story,                                          |
 | thoda sa badal, thoda sa panee aur ek kahanee(2)     | some clouds, some water, and a story                             |
 | ------                                               | ------                                                           |

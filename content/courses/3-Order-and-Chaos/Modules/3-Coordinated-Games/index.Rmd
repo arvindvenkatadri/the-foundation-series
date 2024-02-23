@@ -19,6 +19,8 @@ editor_options:
 library(blogdown)
 ```
 
+![](featured.jpg)
+
 ## Introduction
 
 So, would you wear a veshti/kurta/angavastram, or silk paavade to college?

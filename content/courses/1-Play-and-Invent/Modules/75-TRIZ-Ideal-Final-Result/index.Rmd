@@ -1,9 +1,11 @@
 ---
-date: "`r Sys.Date()`"
+date: "2021-02-04"
+lastmod: " `r Sys.Date()`"
 title: "TRIZ - The Ideal Final Result"
 author: "Arvind Venkatadri"
 external_link: ""
 weight: 75
+type: book
 image:
   caption: "Photo by suzukii xingfu: https://www.pexels.com/photo/food-photography-of-food-and-wine-bottles-on-table-inside-boat-872835/"
   focal_point: Smart
@@ -31,7 +33,7 @@ url_video: ""
 
 
 
-```{r,echo=FALSE, eval=FALSE, fig.align='center',fig.alt="Photo by suzukii xingfu on pexels"}
+```{r,echo=FALSE, fig.align='center',fig.alt="Photo by suzukii xingfu on pexels"}
 knitr::include_graphics("featured.jpg")
 
 ```
@@ -65,7 +67,7 @@ TBD
 
 ## Discussion
 
-Like the Queen in Alice in Wonderland, it is important to conceptualize the Ideal Final Result as one of the <u>[**six impossible things before breakfast.**](http://www.literaturepage.com/read/throughthelookingglass-42.html)</u>As Jack Hipple says in his book *The Ideal Result* ( Reference 3), *it's when something performs its function, and does not exist.*
+Like the Queen in Alice in Wonderland, it is important to conceptualize the Ideal Final Result as one of the <u>[**six impossible things before breakfast.**](http://www.literaturepage.com/read/throughthelookingglass-42.html)</u> As Jack Hipple says in his book *The Ideal Result* ( Reference 3), *it's when something performs its function, and does not exist.*
 
 In this sense, TRIZ is a foretaste of what was said much later after TRIZ was invented, that <u>[**the best Technologies are those that disappear.**](https://web.archive.org/web/20141022035044/http://www.ubiq.com/hypertext/weiser/SciAmDraft3.html)</u>
 

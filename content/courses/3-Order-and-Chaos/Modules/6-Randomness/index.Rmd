@@ -34,6 +34,8 @@ library(mosaic)
 library(emoji)
 ```
 
+![](featured.jpg)
+
 ## Seeing Data
 
 Let us then examine the street traffic data we have gathered for any

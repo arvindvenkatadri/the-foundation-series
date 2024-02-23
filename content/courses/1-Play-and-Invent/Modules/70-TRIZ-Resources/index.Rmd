@@ -1,10 +1,12 @@
 ---
-date: "`r Sys.Date()`"
+date: "2021-01-20"
+lastmod: " `r Sys.Date()`"
 title: "TRIZ - The Unreasonable Effectiveness of Available Resources"
 linkTitle: TRIZ - The Unreasonable Effectiveness of Available Resources
 author: "Arvind Venkatadri"
 external_link: ""
 weight: 70
+type: book
 view: 2
 image:
   caption: Photo by <a href="https://unsplash.com/@arsanandha?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Arsanandha Aphisitworachorch</a> on <a href="https://unsplash.com/s/photos/count-your-blessings?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -33,7 +35,7 @@ url_video: ""
 ---
 
 
-```{r,echo=FALSE, eval=FALSE, fig.align='center',fig.alt="Image by Arsanandha Aphisitworachorch on Unsplash"}
+```{r,echo=FALSE, fig.align='center',fig.alt="Image by Arsanandha Aphisitworachorch on Unsplash"}
 knitr::include_graphics("featured.jpg")
 
 ```

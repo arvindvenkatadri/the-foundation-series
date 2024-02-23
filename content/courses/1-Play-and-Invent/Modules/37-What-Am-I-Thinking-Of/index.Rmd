@@ -1,11 +1,13 @@
 ---
-date: "`r Sys.Date()`"
+date: "2021-02-12"
+lastmod: " `r Sys.Date()`"
 title: "I Think, Fast and Slow"
 linkTitle: "I Think, Fast and Slow"
 author: "Arvind Venkatadri"
 output: html_document
 external_link: ""
 weight: 37
+type: book
 view: 2
 image:
   caption: Image by <a href="https://commons.wikimedia.org/wiki/File:The_Cognitive_Bias_Codex_-_180%2B_biases,_designed_by_John_Manoogian_III_(jm3).png">Jm3</a>, <a href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons
@@ -29,7 +31,7 @@ url_slides: ""
 url_video: ""
 ---
 
-```{r, echo=FALSE, eval=FALSE, fig.align='center', fig.alt="andreas N on pixabay"}
+```{r, echo=FALSE, out.height= "150%", out.width= "150%", fig.align='center', fig.alt="andreas N on pixabay"}
 knitr::include_graphics("featured.jpg")
 
 ```

@@ -25,6 +25,8 @@ library(slickR)
 library(embedr) # Embed multimedia in HTML files
 ```
 
+![](featured.jpg)
+
 ## Introduction: The Company of Strangers!
 
 How many strangers do you "meet" everyday? Why is the Human Species

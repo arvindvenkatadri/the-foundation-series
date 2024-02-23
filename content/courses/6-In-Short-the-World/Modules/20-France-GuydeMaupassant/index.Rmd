@@ -5,6 +5,7 @@ output: html_document
 date: 2021-12-28
 lastmod: "`r Sys.Date()`"
 weight: 20
+type: book
 editor_options: 
   markdown: 
     wrap: 72

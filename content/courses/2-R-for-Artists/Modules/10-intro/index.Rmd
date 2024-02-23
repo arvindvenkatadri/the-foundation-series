@@ -4,6 +4,7 @@ subtitle: ""
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 weight: 10
+type: book
 summary: "What is Data? Why do we visualize it?"
 output:
   html_document:
@@ -45,6 +46,8 @@ library(blogdown)
 library(tidyverse)
 library(ggtext)
 ```
+
+![](featured.jpg)
 
 ## Some Data Games
 

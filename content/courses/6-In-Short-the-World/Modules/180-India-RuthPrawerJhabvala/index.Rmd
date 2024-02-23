@@ -3,12 +3,14 @@ title: "India - Ruth Prawer Jhabvala"
 subtitle:  "The Interview"
 output: html_document
 date: 2022-04-22
+lastmod: " `r Sys.Date()`"
 weight: 180
+type: book
 image: 
   caption: Gotfryd, Bernard, photographer, Public domain, via Wikimedia Commons
   focal_point: Smart
 ---
-
+![](featured.jpg)
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(blogdown)

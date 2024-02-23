@@ -13,7 +13,7 @@ weight: 180
 type: book
 ---
 
-```{r,echo = FALSE,eval = FALSE, fig.alt="Petr Slováček on Unsplash", fig.align='center'}
+```{r,echo = FALSE, fig.alt="Petr Slováček on Unsplash", fig.align='center'}
 knitr::include_graphics("featured.jpg")
 ```
 

@@ -40,7 +40,7 @@ Dude, what's the square root of -1?? `r emoji::emoji("scream_cat")` `r emoji::em
 
 What can you do repeatedly to arrive at $[-1, 0]$?
 
-Complex Planes: 
+### Complex Planes
 
 `r blogdown::shortcode("youtube", "t75gXyWJNpA")`
 
@@ -58,7 +58,9 @@ How Mandelbrot Set is generated: https://www.youtube.com/watch?v=8ma6cV6fw24
 
 `r blogdown::shortcode("youtube", "8ma6cV6fw24")`
 
-Menger Sponge: https://blogs.scientificamerican.com/roots-of-unity/a-few-of-my-favorite-spaces-the-menger-sponge/
+## References
+
+1. Menger Sponge: https://blogs.scientificamerican.com/roots-of-unity/a-few-of-my-favorite-spaces-the-menger-sponge/
 
 Use XaOS to make Mandelbrot and Julia fractals.
 

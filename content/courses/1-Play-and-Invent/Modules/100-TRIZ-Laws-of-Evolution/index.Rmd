@@ -1,9 +1,11 @@
 ---
-date: "`r Sys.Date()`"
+date: "2021-03-20"
+lastmod: " `r Sys.Date()`"
 title: "TRIZ - The Laws of Evolution"
 author: "Arvind Venkatadri"
 external_link: ""
 weight: 100
+type: book
 image:
   caption: Photo by <a href="https://unsplash.com/@scw1217?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Suzanne D. Williams</a> on <a href="https://unsplash.com/s/photos/evolution?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   
@@ -38,7 +40,7 @@ library(ggradar) # Radar Plots
 ```
 
 
-```{r,echo=FALSE, eval=FALSE, fig.align='center',fig.alt="Photo by Suzanne D. Williams on unsplash"}
+```{r,echo=FALSE, fig.align='center',fig.alt="Photo by Suzanne D. Williams on unsplash"}
 knitr::include_graphics("featured.jpg")
 
 ```
@@ -60,6 +62,9 @@ knitr::include_graphics("featured.jpg")
 - Law of transition to a super system: Solution system becomes subsystem of larger system.
 - Law of Transition from Macro to Micro: Using physically smaller solutions, e.g., electronic tubes to chips.
 - Law of Increasing Substance-Field Involvement: Viewing and modeling systems as composed of two substances interacting through a field.
+
+## How Would you Redesign this Product
+TBD. Plot a set of Radar charts showing different stages of evolution of well known product lines. Obsolete products are even more interesting. 
 
 ## References
 

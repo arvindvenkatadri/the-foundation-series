@@ -1,10 +1,12 @@
 ---
-date: "`r Sys.Date()`"
+date: "2021-04-22"
 title: "I am Water"
 linktitle: I am Water
+lastmod: " `r Sys.Date()`"
 external_link: ""
 weight: 10
 view: 2
+type: book
 image:
   caption: Photo by <a href="https://unsplash.com/@grwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Petr Slováček</a> on <a href="https://unsplash.com/s/photos/rock-climbing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
@@ -22,7 +24,7 @@ url_slides: ""
 url_video: ""
 ---
 
-```{r,echo = FALSE, eval = FALSE, fig.alt="Petr Slováček on Unsplash", fig.align='center'}
+```{r,echo = FALSE, eval = TRUE, fig.alt="Petr Slováček on Unsplash", fig.align='center'}
 knitr::include_graphics("featured.jpg")
 ```
 

@@ -1,9 +1,11 @@
 ---
-date: "`r Sys.Date()`"
+date: "2021-01-18"
+lastmod: " `r Sys.Date()`"
 title: "TRIZ - The Contradiction Matrix Workflow"
 author: "Arvind Venkatadri"
 external_link: ""
 weight: 90
+type: book
 image:
   caption: Photo by <a href="https://unsplash.com/@lanirudhreddy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">ANIRUDH</a> on <a href="https://unsplash.com/s/photos/matrix?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
@@ -31,7 +33,7 @@ url_video: ""
 ---
 
 
-```{r,echo=FALSE, eval = FALSE, fig.align='center',fig.alt="Photo by Anirudh on unsplash"}
+```{r,echo=FALSE, fig.align='center',fig.alt="Photo by Anirudh on unsplash"}
 knitr::include_graphics("featured.jpg")
 
 ```

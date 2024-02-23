@@ -1,9 +1,11 @@
 ---
-date: "`r Sys.Date()`"
+date: "2021-04-22"
 title: "I yam what I yam"
 linktitle: "I yam what I yam"
+lastmod: " `r Sys.Date()`"
 external_link: ""
 weight: 20
+type: book
 view: 2
 image:
   caption: Photo by <a href="https://unsplash.com/@grwood?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Petr Slováček</a> on <a href="https://unsplash.com/s/photos/rock-climbing?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
@@ -23,9 +25,7 @@ url_slides: ""
 url_video: ""
 ---
 
-```{r,echo = FALSE, eval=FALSE,fig.alt="Petr Slováček on Unsplash", fig.align='center'}
-knitr::include_graphics("featured.jpg")
-```
+![](featured.jpg)
 
 
 ```{r include=FALSE}
@@ -39,10 +39,9 @@ We will understand Pierre Bourdieu's Concept of {{<hl>}}Cultural Capital(CC){{</
 
 CC affects our view of the world and helps us identify Problem Situations and Contradictions in Life. 
 
-1. **What is Cultural Capital?** [(weblink)](https://culturallearningalliance.org.uk/what-is-cultural-capital)
+1. **What is Cultural Capital?** [(weblink)](https://culturallearningalliance.org.uk/what-is-cultural-capital)\
+2. Cultural Capital\
 <br>
-
-2. Cultural Capital <br>
 `r blogdown::shortcode("youtube", "5DBEYiBkgp8")`
 
 
@@ -60,11 +59,11 @@ CC affects our view of the world and helps us identify Problem Situations and Co
 
 ### Inventing your City
 
-1. Making a Street Intersection Logo: [(Inspiration)](https://www.cartogrammar.com/blog/maps-make-the-best-logos/). <br> <br>
-1. Here are some instructions:
- - Visit your home town on Google Maps
- - Select a specific STREET INTERSECTION there.
- - Copy paste the Shape of the Street Intersection into your favourite image making software
+1. Making a Street Intersection Logo: [(Inspiration)](https://www.cartogrammar.com/blog/maps-make-the-best-logos/).\
+1. Here are some instructions:\
+- Visit your home town on Google Maps
+- Select a specific STREET INTERSECTION there.
+- Copy paste the Shape of the Street Intersection into your favourite image making software
  - Create A LOGO for your city, using the Shape, such that you show off some interesting aspects of your City, based on your own CULTURAL CAPITAL.
  - Three sentences to describe your Logo.
  - See examples at the link above for inspiration

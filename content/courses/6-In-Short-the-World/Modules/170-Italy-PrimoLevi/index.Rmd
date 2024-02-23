@@ -3,7 +3,9 @@ title: "Italy-Primo Levi"
 subtitle: "Hydrogen"
 output: html_document
 date: 2022-03-02
+lastmod: " `r Sys.Date()`"
 weight: 170
+type: book
 ---
 
 ```{r setup, include=FALSE}

@@ -5,6 +5,7 @@ output: html_document
 date: 2023-12-13
 lastmod: " `r Sys.Date()`"
 weight: 190
+type: book
 editor_options: 
   markdown: 
     wrap: 72
@@ -36,6 +37,8 @@ library(embedr) # Embed multimedia in HTML files
 ## Notes and References
 
 ### Song for the Story !!
+
+`r blogdown::shortcode("youtube", "V0tA8CjKlLM")`
 
 
 ## Writing Prompts

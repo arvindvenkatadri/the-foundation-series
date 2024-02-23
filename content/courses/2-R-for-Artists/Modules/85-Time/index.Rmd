@@ -5,6 +5,7 @@ subtitle: "Time Series in R"
 summary: "Time Series in R"
 author: Arvind Venkatadri
 weight: 85
+type: book
 featured: no
 tags:
   - Line Charts

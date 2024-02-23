@@ -25,6 +25,8 @@ url_pdf: ""
 url_slides: ""
 url_video: ""
 ---
+![](featured.jpg)
+WORK IN PROGRESS!!
 
 ## The Solitary Reaper
 
@@ -32,7 +34,7 @@ Have you read this poem, **The Solitary Reaper**? [(Web Link)](https://www.poetr
 
 "The Solitary Reaper" is a ballad by English Romantic poet William Wordsworth, and one of his best-known works.[^1] The poem was inspired by his and his sister Dorothy's stay at the village of Strathyre in the parish of Balquhidder in Scotland in September 1803.
 
-'"The Solitary Reaper is one of Wordsworth's most famous post-Lyrical Ballads lyrics".[1] The words of the reaper's song are incomprehensible to the speaker, so his attention is free to focus on the tone, expressive beauty, and the blissful mood it creates in him. The poem functions to 'praise the beauty of music and its fluid expressive beauty, the "spontaneous overflow of powerful feelings" that Wordsworth identified at the heart of poetry.'[1] The poet orders or requests his listeners to behold a young maiden reaping and singing to herself. The poet says that anyone passing by should either stop or gently pass as not to disturb her.
+'"The Solitary Reaper is one of Wordsworth's most famous post-Lyrical Ballads lyrics".The words of the reaper's song are incomprehensible to the speaker, so his attention is free to focus on the tone, expressive beauty, and the blissful mood it creates in him. The poem functions to 'praise the beauty of music and its fluid expressive beauty, the "spontaneous overflow of powerful feelings" that Wordsworth identified at the heart of poetry.The poet orders or requests his listeners to behold a young maiden reaping and singing to herself. The poet says that anyone passing by should either stop or gently pass as not to disturb her.
 
 
 
@@ -127,7 +129,8 @@ d) Play it again, Sam !
 
 
 ### References
-1. https://www.wikiwand.com/en/William_Wordsworth
+[^1]. https://www.wikiwand.com/en/William_Wordsworth
+
 2. https://groups.google.com/g/rec.music.indian.classical/c/29xDcW1rXzY?pli=1
 3. https://musicianscompendium.netlify.app/
 

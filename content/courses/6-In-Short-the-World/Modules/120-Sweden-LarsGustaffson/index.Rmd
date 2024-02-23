@@ -5,6 +5,7 @@ output: html_document
 date: 2023-12-13
 lastmod: " `r Sys.Date()`"
 weight: 120
+type: book
 editor_options: 
   markdown: 
     wrap: 72
@@ -41,6 +42,6 @@ A terrific comment on education itself!!
 `r blogdown:::shortcode("youtube", "vD7HJcpJD9U")`
 
 ## Writing Prompts
-1.
-1.
+1. I never let my Schooling interfere with my Education.
+1. 
 

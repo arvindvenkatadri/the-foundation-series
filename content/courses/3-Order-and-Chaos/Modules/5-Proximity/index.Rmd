@@ -37,6 +37,7 @@ library(htmlwidgets)
 library(slickR)
 library(bsplus)
 ```
+![](featured.png)
 
 ## Introduction
 

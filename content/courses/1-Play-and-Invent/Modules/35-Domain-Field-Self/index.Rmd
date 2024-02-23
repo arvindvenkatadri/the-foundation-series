@@ -1,9 +1,11 @@
 ---
-date: "`r Sys.Date()`"
+date: "2021-02-14"
+lastmod: " `r Sys.Date()`"
 title: "I Connect therefore I am"
 subtitle: "I Connect therefore I am"
 external_link: 
 weight: 35
+type: book
 image:
   caption: Image by rawpixel.com
   focal_point: Smart
@@ -22,7 +24,7 @@ url_slides: ""
 url_video: ""
 ---
 
-```{r,echo=FALSE, eval=FALSE, fig.align='center',fig.alt="Image by rawpixel.com"}
+```{r,echo=FALSE, fig.align='center',fig.alt="Image by rawpixel.com"}
 knitr::include_graphics("featured.jpg")
 
 ```
