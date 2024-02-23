@@ -4,6 +4,7 @@ author: "Arvind V."
 date: 2021-12-11
 output: html_document
 weight: 50
+type: book
 external_link: ""
 image:
   caption: Made on Snazzy Maps

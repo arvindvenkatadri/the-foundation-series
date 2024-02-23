@@ -3,6 +3,7 @@ title: "\U0001F579 A Random Walk with Hamlet"
 author: "Arvind Venkatadri"
 date: 2021-12-11
 weight: 70
+type: book
 external_link: ""
 image:
   caption: Tom und Nicki Löschner on Pixabay

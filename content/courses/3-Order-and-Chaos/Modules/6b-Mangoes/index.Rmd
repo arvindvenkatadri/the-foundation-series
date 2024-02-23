@@ -3,6 +3,7 @@ title: "\U0001F579 Eating Mangoes with Hamlet"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 weight: 75
+type: book
 external_link: ""
 image:
   caption: Tom und Nicki Löschner on Pixabay

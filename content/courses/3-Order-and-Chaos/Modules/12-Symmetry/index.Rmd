@@ -1,0 +1,36 @@
+---
+title: "\U0001F579 Symmetry"
+subtitle: "Resilience to Change"
+author: "Arvind V"
+date: "2024-02-23"
+tags:
+- Path Dependence
+- Evolution
+image:
+  placement: 2
+  caption: "Image credit:Jens Lelie leliejens, CC0, via Wikimedia Commons"
+weight: 200
+type: book
+view: 2
+output: 
+  html_document:
+    keep_md: true
+
+---
+
+```{r,echo = FALSE,eval = FALSE, fig.alt="Petr Slováček on Unsplash", fig.align='center'}
+knitr::include_graphics("featured.jpg")
+```
+
+## Introduction
+To be written up !!
+
+Mahabharata\
+T. E. Brown\
+Elizabeth Barrett Browning\
+
+## Symmetry Games
+
+
+
+## Friezes and Lattices

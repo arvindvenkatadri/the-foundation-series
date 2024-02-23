@@ -35,6 +35,7 @@ library(palmerpenguins)
 #https://d3plus.org/?path=/docs/introduction--documentation
 #https://github.com/d3plus/d3plus/wiki/Visualizations
 library(D3plusR)
+library(emoji)
 ```
 
 ## <u>[Narasimha Agaccha](https://youtu.be/e0ENcwgf7-o)</u>
@@ -204,7 +205,7 @@ Yes, they all seem to use the same set of parameters to reach the target. So the
 
 No...we need different Trees to be able to **ask different questions**, based on different **variables** or **features** in the data. That will make the Trees as different as possible and so...unbiased. This is what we also saw when we played 20Q: offbeat questions opened up some avenues for predicting the answer/target. 
 
-A forest of such trees is called <u>[~~**the Wild Wood**~~](https://youtu.be/zE0uAfAuZ08)</u> **a Random Forest** ! 
+A forest of such trees is called <u>[`r emoji("film")` ~~**the Wild Wood**~~](https://youtu.be/zE0uAfAuZ08)</u> **a Random Forest** ! 
 
 
 
@@ -225,12 +226,12 @@ Phew!!
 
 Let's get a visual sense of how all this works:
 
-<https://waternova.github.io/random-forest-viz/>
+<u><https://waternova.github.io/random-forest-viz/></u>
 
 
 ## Are Random Forests an Example of Complexity?
 
-Does The Random Forest somehow embody the "4A"s of Complexity? (Agents, Actions, Again, Aggregate)? Can we try to interpret the algorithm as such? Here goes:
+Does The Random Forest somehow embody the "4A"s of Complexity? (`Agents, Actions, Again, Aggregate`)? Can we try to interpret the algorithm as such? Here goes:
 
 - Each little *tree* in the Random Forest is an independent **Agent**
 - Each agent-tree has a vocabulary of **Actions**
@@ -238,16 +239,16 @@ Does The Random Forest somehow embody the "4A"s of Complexity? (Agents, Actions,
      * To independently vote using their choice of variables
 - And the "votes" are **Aggregated** to decide the final prediction
 - Which is greater (better, accurate with higher confidence) than each individual Agent-Trees
-- <u>[Do it **Again**](https://youtu.be/jmdiKePVUy8)</u> when presented with fresh data
+- <u>[`r emoji("music")` Do it **Again**](https://youtu.be/jmdiKePVUy8)</u> when presented with fresh data
 
-Not bad, is it, as a metaphor for Random Forests?
+Not bad, is it, as a metaphor for Random Forests? Can <u>[`r emoji("page_with_curl")`More is Different](Strogatz_et_al_2022_More_is_different.pdf)</u> be true here too?
+
+## Random Forest Classification in Orange
+
+Let us see how to create a Random Forests ML model in Orange:
 
 `r blogdown::shortcode("youtube", "gSQsFIMcA8A")`
 
-
-
-
-## Random Forest Classification in Orange
 
 
 ### RF for for Penguins Data

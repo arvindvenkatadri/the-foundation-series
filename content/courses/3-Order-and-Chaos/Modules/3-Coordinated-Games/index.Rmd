@@ -8,6 +8,7 @@ image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
 weight: 30
+type: book
 editor_options: 
   markdown: 
     wrap: 72

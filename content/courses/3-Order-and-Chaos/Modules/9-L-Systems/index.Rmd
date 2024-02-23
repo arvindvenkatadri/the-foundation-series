@@ -5,7 +5,7 @@ summary: Investigating simple repetitive algorithms to create organic looking st
 tags:
 - Algorithmic Trees
 - Lindenmayer Systems
-type: page
+type: book
 weight: 100
 links:
 slides: 

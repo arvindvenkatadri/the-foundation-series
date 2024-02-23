@@ -7,6 +7,7 @@ image:
   caption: Photo by Markus Spiske on Unsplash
   focal_point: Smart
 weight: 10
+type: book
 tags:
 - Cooperation
 - Defection
