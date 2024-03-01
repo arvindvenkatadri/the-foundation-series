@@ -19,9 +19,12 @@ interests:
 - Music and Sound
 - Reading and Literature
 organizations:
-- name: Dayanand Sagar University
+- name: Dayanand Sagar University, School of Management and Commerce Studies
   url: https://www.dsu.edu.in/
-role: Adjunct Professor
+  role: Adjunct Professor
+- name: Srishti Manipal Institute of Art, Design, and Technology
+  url: https://srishtimanipalinstitute.in
+  role: External Faculty
 social:
 - icon: envelope
   icon_pack: fas
@@ -41,4 +44,4 @@ social:
 superuser: yes
 ---
 
-Teaching Complexity Science, Problem Solving using TRIZ, Reading Short Stories in English, R/RStudio and FOSS Software for Data Visualization, Statistical Inference, and Machine Learning.
+Teaching Complexity Science; Problem Solving using TRIZ; Design Thinking from Short Stories in English; Data Analytics and Data Visualization using R/RStudio; FOSS Software for Data Visualization; Statistical Inference, and Machine Learning.
