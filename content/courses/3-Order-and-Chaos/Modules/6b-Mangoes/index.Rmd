@@ -543,6 +543,8 @@ Experiment and make a comic out of it: <u>**Data Comic Generator from Gramener**
 
 `r blogdown::shortcode("youtube", "eGRd8jBdNYg")` <br>
 
+2. <u><https://safetyculture.com/topics/design-of-experiments/></u>
+
 2.  Tim C. Hesterberg (2015). *What Teachers Should Know About the 
 Bootstrap: Resampling in the Undergraduate Statistics Curriculum*, 
 The American Statistician, 69:4, 371-386, <u>DOI:10.1080/00031305.2015.1089789</u>. <u>[PDF here](hesterberg2015.pdf)</u>
