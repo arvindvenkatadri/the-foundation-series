@@ -2,6 +2,7 @@
 title: 'The TRIZ Chronicles: A TRIZ Analysis of a Recent Spotify Ad'
 author: "Arvind Venkatadri"
 date: "2023-01-09"
+weight: 20
 output:
   html_document:
     df_print: paged
@@ -162,7 +163,9 @@ causes[6] <- list(c("Bike", "Shelves", "Weighing Scales"))
 
 #Fishbone Diagram
 #
-ss.ceDiag(effect,causes.head,causes, main ="Me, Mom, and the Market",ss.col = c("", "red"), sub = "Ishikawa Cause-Effect Diagram")
+ss.ceDiag(effect,causes.head,causes, main ="Me, Mom, and the Market",
+          #ss.col = c("", "red"), 
+          sub = "Ishikawa Cause-Effect Diagram")
 
 
 

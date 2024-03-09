@@ -1,4 +1,3 @@
-base
 igraph
 visNetwork
 tidyverse
@@ -17,3 +16,4 @@ patchwork
 here
 ggforce
 png
+lubridate

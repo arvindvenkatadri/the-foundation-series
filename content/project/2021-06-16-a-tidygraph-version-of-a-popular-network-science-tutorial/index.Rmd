@@ -2,13 +2,16 @@
 title: A Tidygraph version of a Popular Network Science Tutorial
 author: Arvind Venkatadri
 date: '2021-06-16'
+type: book
+weight: 100
 slug: a-tidygraph-version-of-a-popular-network-science-tutorial
 categories: [R; Networks]
 tags: [tidygraph; ggraph;]
 subtitle: ''
 summary: 'A reworking of a Network Science tutorial by Prof. Katherine Ognyanova, using tidygraph'
 authors: []
-lastmod: '2021-06-16T17:29:47+05:30'
+#lastmod: '2021-06-16T17:29:47+05:30'
+lastmod: "`r Sys.Date()`"
 featured: no
 image:
   caption: ''

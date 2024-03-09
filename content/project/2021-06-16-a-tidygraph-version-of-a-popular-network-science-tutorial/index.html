@@ -2,13 +2,16 @@
 title: A Tidygraph version of a Popular Network Science Tutorial
 author: Arvind Venkatadri
 date: '2021-06-16'
+type: book
+weight: 100
 slug: a-tidygraph-version-of-a-popular-network-science-tutorial
 categories: [R; Networks]
 tags: [tidygraph; ggraph;]
 subtitle: ''
 summary: 'A reworking of a Network Science tutorial by Prof. Katherine Ognyanova, using tidygraph'
 authors: []
-lastmod: '2021-06-16T17:29:47+05:30'
+#lastmod: '2021-06-16T17:29:47+05:30'
+lastmod: "2024-03-09"
 featured: no
 image:
   caption: ''
@@ -17,10 +20,9 @@ image:
 projects: []
 ---
 
-<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
 <script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
-<link href="{{< blogdown/postref >}}index_files/vis/vis.css" rel="stylesheet" />
-<script src="{{< blogdown/postref >}}index_files/vis/vis.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/vis/vis-network.min.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/vis/vis-network.min.js"></script>
 <script src="{{< blogdown/postref >}}index_files/visNetwork-binding/visNetwork.js"></script>
 <link href="{{< blogdown/postref >}}index_files/font-awesome/css/font-awesome.min.css" rel="stylesheet" />
 
@@ -82,10 +84,10 @@ head(nodes)</code></pre>
 class(net)</code></pre>
 <pre><code>## [1] &quot;igraph&quot;</code></pre>
 <pre class="r"><code>net</code></pre>
-<pre><code>## IGRAPH b658a68 DNW- 17 49 -- 
+<pre><code>## IGRAPH ba429b6 DNW- 17 49 -- 
 ## + attr: name (v/c), media (v/c), media.type (v/n), type.label (v/c),
 ## | audience.size (v/n), type (e/c), weight (e/n)
-## + edges from b658a68 (vertex names):
+## + edges from ba429b6 (vertex names):
 ##  [1] s01-&gt;s02 s01-&gt;s03 s01-&gt;s04 s01-&gt;s15 s02-&gt;s01 s02-&gt;s03 s02-&gt;s09 s02-&gt;s10
 ##  [9] s03-&gt;s01 s03-&gt;s04 s03-&gt;s05 s03-&gt;s08 s03-&gt;s10 s03-&gt;s11 s03-&gt;s12 s04-&gt;s03
 ## [17] s04-&gt;s06 s04-&gt;s11 s04-&gt;s12 s04-&gt;s17 s05-&gt;s01 s05-&gt;s02 s05-&gt;s09 s05-&gt;s15
@@ -101,7 +103,7 @@ class(net)</code></pre>
 The two numbers that follow (17 49) refer to the <strong>number of nodes</strong> and <strong>edges</strong> in the graph. The description also lists node &amp; edge attributes.</p>
 <p>We can access the nodes, edges, and their attributes:</p>
 <pre class="r"><code>E(net)</code></pre>
-<pre><code>## + 49/49 edges from b658a68 (vertex names):
+<pre><code>## + 49/49 edges from ba429b6 (vertex names):
 ##  [1] s01-&gt;s02 s01-&gt;s03 s01-&gt;s04 s01-&gt;s15 s02-&gt;s01 s02-&gt;s03 s02-&gt;s09 s02-&gt;s10
 ##  [9] s03-&gt;s01 s03-&gt;s04 s03-&gt;s05 s03-&gt;s08 s03-&gt;s10 s03-&gt;s11 s03-&gt;s12 s04-&gt;s03
 ## [17] s04-&gt;s06 s04-&gt;s11 s04-&gt;s12 s04-&gt;s17 s05-&gt;s01 s05-&gt;s02 s05-&gt;s09 s05-&gt;s15
@@ -110,7 +112,7 @@ The two numbers that follow (17 49) refer to the <strong>number of nodes</strong
 ## [41] s13-&gt;s17 s14-&gt;s11 s14-&gt;s13 s15-&gt;s01 s15-&gt;s04 s15-&gt;s06 s16-&gt;s06 s16-&gt;s17
 ## [49] s17-&gt;s04</code></pre>
 <pre class="r"><code>V(net)</code></pre>
-<pre><code>## + 17/17 vertices, named, from b658a68:
+<pre><code>## + 17/17 vertices, named, from ba429b6:
 ##  [1] s01 s02 s03 s04 s05 s06 s07 s08 s09 s10 s11 s12 s13 s14 s15 s16 s17</code></pre>
 <pre class="r"><code>E(net)$type</code></pre>
 <pre><code>##  [1] &quot;hyperlink&quot; &quot;hyperlink&quot; &quot;hyperlink&quot; &quot;mention&quot;   &quot;hyperlink&quot; &quot;hyperlink&quot;
@@ -137,24 +139,28 @@ tbl_graph(nodes, links, directed = TRUE) %&gt;%
 ## #
 ## # A directed multigraph with 1 component
 ## #
-## # Edge Data: 49 x 3 (active)
-##    from    to type     
-##   &lt;int&gt; &lt;int&gt; &lt;chr&gt;    
-## 1     1     2 hyperlink
-## 2     1     3 hyperlink
-## 3     1     4 hyperlink
-## 4     1    15 mention  
-## 5     2     1 hyperlink
-## 6     2     3 hyperlink
-## # ... with 43 more rows
+## # Edge Data: 49 × 3 (active)
+##     from    to type     
+##    &lt;int&gt; &lt;int&gt; &lt;chr&gt;    
+##  1     1     2 hyperlink
+##  2     1     3 hyperlink
+##  3     1     4 hyperlink
+##  4     1    15 mention  
+##  5     2     1 hyperlink
+##  6     2     3 hyperlink
+##  7     2     9 hyperlink
+##  8     2    10 hyperlink
+##  9     3     1 hyperlink
+## 10     3     4 hyperlink
+## # ℹ 39 more rows
 ## #
-## # Node Data: 17 x 5
+## # Node Data: 17 × 5
 ##   id    media               media.type type.label audience.size
 ##   &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
 ## 1 s01   NY Times                     1 Newspaper             20
 ## 2 s02   Washington Post              1 Newspaper             25
 ## 3 s03   Wall Street Journal          1 Newspaper             30
-## # ... with 14 more rows</code></pre>
+## # ℹ 14 more rows</code></pre>
 <pre class="r"><code>tbl_graph(nodes, links, directed = TRUE) %&gt;% 
   activate(nodes) %&gt;% 
   select(media)</code></pre>
@@ -162,30 +168,40 @@ tbl_graph(nodes, links, directed = TRUE) %&gt;%
 ## #
 ## # A directed multigraph with 1 component
 ## #
-## # Node Data: 17 x 1 (active)
-##   media              
-##   &lt;chr&gt;              
-## 1 NY Times           
-## 2 Washington Post    
-## 3 Wall Street Journal
-## 4 USA Today          
-## 5 LA Times           
-## 6 New York Post      
-## # ... with 11 more rows
+## # Node Data: 17 × 1 (active)
+##    media              
+##    &lt;chr&gt;              
+##  1 NY Times           
+##  2 Washington Post    
+##  3 Wall Street Journal
+##  4 USA Today          
+##  5 LA Times           
+##  6 New York Post      
+##  7 CNN                
+##  8 MSNBC              
+##  9 FOX News           
+## 10 ABC                
+## 11 BBC                
+## 12 Yahoo News         
+## 13 Google News        
+## 14 Reuters.com        
+## 15 NYTimes.com        
+## 16 WashingtonPost.com 
+## 17 AOL.com            
 ## #
-## # Edge Data: 49 x 4
+## # Edge Data: 49 × 4
 ##    from    to type      weight
 ##   &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
 ## 1     1     2 hyperlink     22
 ## 2     1     3 hyperlink     22
 ## 3     1     4 hyperlink     21
-## # ... with 46 more rows</code></pre>
+## # ℹ 46 more rows</code></pre>
 <p>Or find specific nodes and edges by attribute:(that returns objects of type vertex sequence / edge sequence)</p>
 <pre class="r"><code>V(net)[media == &quot;BBC&quot;]</code></pre>
-<pre><code>## + 1/17 vertex, named, from b658a68:
+<pre><code>## + 1/17 vertex, named, from ba429b6:
 ## [1] s11</code></pre>
 <pre class="r"><code>E(net)[type == &quot;mention&quot;]</code></pre>
-<pre><code>## + 20/49 edges from b658a68 (vertex names):
+<pre><code>## + 20/49 edges from ba429b6 (vertex names):
 ##  [1] s01-&gt;s15 s03-&gt;s10 s04-&gt;s06 s04-&gt;s11 s04-&gt;s17 s05-&gt;s01 s05-&gt;s15 s06-&gt;s17
 ##  [9] s07-&gt;s03 s07-&gt;s08 s07-&gt;s14 s08-&gt;s07 s08-&gt;s09 s09-&gt;s10 s12-&gt;s06 s12-&gt;s14
 ## [17] s13-&gt;s17 s14-&gt;s11 s14-&gt;s13 s16-&gt;s17</code></pre>
@@ -197,13 +213,13 @@ tbl_graph(nodes, links, directed = TRUE) %&gt;%
 ## #
 ## # A rooted tree
 ## #
-## # Node Data: 1 x 5 (active)
+## # Node Data: 1 × 5 (active)
 ##   id    media media.type type.label audience.size
 ##   &lt;chr&gt; &lt;chr&gt;      &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
 ## 1 s11   BBC            2 TV                    34
 ## #
-## # Edge Data: 0 x 4
-## # ... with 4 variables: from &lt;int&gt;, to &lt;int&gt;, type &lt;chr&gt;, weight &lt;int&gt;</code></pre>
+## # Edge Data: 0 × 4
+## # ℹ 4 variables: from &lt;int&gt;, to &lt;int&gt;, type &lt;chr&gt;, weight &lt;int&gt;</code></pre>
 <pre class="r"><code>tbl_graph(nodes, links, directed = TRUE) %&gt;% 
   activate(edges) %&gt;% 
   filter(type == &quot;mention&quot;)</code></pre>
@@ -211,24 +227,37 @@ tbl_graph(nodes, links, directed = TRUE) %&gt;%
 ## #
 ## # A directed simple graph with 3 components
 ## #
-## # Edge Data: 20 x 4 (active)
-##    from    to type    weight
-##   &lt;int&gt; &lt;int&gt; &lt;chr&gt;    &lt;int&gt;
-## 1     1    15 mention     20
-## 2     3    10 mention      2
-## 3     4     6 mention      1
-## 4     4    11 mention     22
-## 5     4    17 mention      2
-## 6     5     1 mention      1
-## # ... with 14 more rows
+## # Edge Data: 20 × 4 (active)
+##     from    to type    weight
+##    &lt;int&gt; &lt;int&gt; &lt;chr&gt;    &lt;int&gt;
+##  1     1    15 mention     20
+##  2     3    10 mention      2
+##  3     4     6 mention      1
+##  4     4    11 mention     22
+##  5     4    17 mention      2
+##  6     5     1 mention      1
+##  7     5    15 mention     21
+##  8     6    17 mention     21
+##  9     7     3 mention      1
+## 10     7     8 mention     22
+## 11     7    14 mention      4
+## 12     8     7 mention     21
+## 13     8     9 mention     23
+## 14     9    10 mention     21
+## 15    12     6 mention      2
+## 16    12    14 mention     22
+## 17    13    17 mention      1
+## 18    14    11 mention      1
+## 19    14    13 mention     21
+## 20    16    17 mention     21
 ## #
-## # Node Data: 17 x 5
+## # Node Data: 17 × 5
 ##   id    media               media.type type.label audience.size
 ##   &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
 ## 1 s01   NY Times                     1 Newspaper             20
 ## 2 s02   Washington Post              1 Newspaper             25
 ## 3 s03   Wall Street Journal          1 Newspaper             30
-## # ... with 14 more rows</code></pre>
+## # ℹ 14 more rows</code></pre>
 <p>If you need them, you can extract an edge list or a matrix back from the igraph networks.</p>
 <pre class="r"><code>as_edgelist(net, names = T)</code></pre>
 <pre><code>##       [,1]  [,2] 
@@ -283,7 +312,7 @@ tbl_graph(nodes, links, directed = TRUE) %&gt;%
 ## [49,] &quot;s17&quot; &quot;s04&quot;</code></pre>
 <pre class="r"><code>as_adjacency_matrix(net, attr = &quot;weight&quot;)</code></pre>
 <pre><code>## 17 x 17 sparse Matrix of class &quot;dgCMatrix&quot;</code></pre>
-<pre><code>##    [[ suppressing 17 column names &#39;s01&#39;, &#39;s02&#39;, &#39;s03&#39; ... ]]</code></pre>
+<pre><code>##   [[ suppressing 17 column names &#39;s01&#39;, &#39;s02&#39;, &#39;s03&#39; ... ]]</code></pre>
 <pre><code>##                                                      
 ## s01  . 22 22 21 .  .  .  .  .  .  .  .  .  . 20  .  .
 ## s02 23  . 21  . .  .  .  .  1  5  .  .  .  .  .  .  .
@@ -379,7 +408,7 @@ igraph::as_data_frame(x = net, what = &quot;edges&quot;)</code></pre>
 tbl_graph(nodes, links, directed = TRUE) %&gt;% 
   activate(nodes) %&gt;% 
   as_tibble()</code></pre>
-<pre><code>## # A tibble: 17 x 5
+<pre><code>## # A tibble: 17 × 5
 ##    id    media               media.type type.label audience.size
 ##    &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
 ##  1 s01   NY Times                     1 Newspaper             20
@@ -402,7 +431,7 @@ tbl_graph(nodes, links, directed = TRUE) %&gt;%
 <pre class="r"><code>tbl_graph(nodes, links, directed = TRUE)%&gt;% 
   activate(edges) %&gt;% 
   as_tibble()</code></pre>
-<pre><code>## # A tibble: 49 x 4
+<pre><code>## # A tibble: 49 × 4
 ##     from    to type      weight
 ##    &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
 ##  1     1     2 hyperlink     22
@@ -415,7 +444,7 @@ tbl_graph(nodes, links, directed = TRUE) %&gt;%
 ##  8     2    10 hyperlink      5
 ##  9     3     1 hyperlink     21
 ## 10     3     4 hyperlink     22
-## # ... with 39 more rows</code></pre>
+## # ℹ 39 more rows</code></pre>
 <pre class="r"><code># You can also access the network matrix directly:
 net[1,]</code></pre>
 <pre><code>## s01 s02 s03 s04 s05 s06 s07 s08 s09 s10 s11 s12 s13 s14 s15 s16 s17 
@@ -514,9 +543,13 @@ dim(links2)</code></pre>
 <pre><code>## [1] 30  5</code></pre>
 <p>Note: What is a <strong>two-mode</strong> network? A network that as a <code>node$type</code> variable and can be a <code>bipartite</code> or a <code>k-partite</code> network as a result.</p>
 <pre class="r"><code># Create an igraph network object from the two-mode matrix:
-net2 &lt;- igraph::graph_from_incidence_matrix(links2)
-
-# To transform a one-mode network matrix into an igraph object,
+net2 &lt;- igraph::graph_from_incidence_matrix(links2)</code></pre>
+<pre><code>## Warning: `graph_from_incidence_matrix()` was deprecated in igraph 1.6.0.
+## ℹ Please use `graph_from_biadjacency_matrix()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre class="r"><code># To transform a one-mode network matrix into an igraph object,
 # we would use graph_from_adjacency_matrix()
 
 # A built-in vertex attribute &#39;type&#39; shows which mode vertices belong to.
@@ -533,7 +566,7 @@ plot(net2,vertex.label = NA)</code></pre>
 # 
 graph &lt;- as_tbl_graph(links2)
 graph %&gt;% activate(nodes) %&gt;% as_tibble()</code></pre>
-<pre><code>## # A tibble: 30 x 2
+<pre><code>## # A tibble: 30 × 2
 ##    type  name 
 ##    &lt;lgl&gt; &lt;chr&gt;
 ##  1 FALSE s01  
@@ -546,9 +579,9 @@ graph %&gt;% activate(nodes) %&gt;% as_tibble()</code></pre>
 ##  8 FALSE s08  
 ##  9 FALSE s09  
 ## 10 FALSE s10  
-## # ... with 20 more rows</code></pre>
+## # ℹ 20 more rows</code></pre>
 <pre class="r"><code>graph %&gt;% activate(edges) %&gt;% as_tibble()</code></pre>
-<pre><code>## # A tibble: 31 x 3
+<pre><code>## # A tibble: 31 × 3
 ##     from    to weight
 ##    &lt;int&gt; &lt;int&gt;  &lt;dbl&gt;
 ##  1     1    11      1
@@ -561,7 +594,7 @@ graph %&gt;% activate(nodes) %&gt;% as_tibble()</code></pre>
 ##  8     3    17      1
 ##  9     3    18      1
 ## 10     3    19      1
-## # ... with 21 more rows</code></pre>
+## # ℹ 21 more rows</code></pre>
 <pre class="r"><code>graph %&gt;% 
   ggraph(., layout = &quot;graphopt&quot;) + 
   geom_edge_link(color = &quot;grey&quot;) + 
@@ -573,9 +606,9 @@ graph %&gt;% activate(nodes) %&gt;% as_tibble()</code></pre>
 class(net2)</code></pre>
 <pre><code>## [1] &quot;igraph&quot;</code></pre>
 <pre class="r"><code>net2</code></pre>
-<pre><code>## IGRAPH b85369e UN-B 30 31 -- 
+<pre><code>## IGRAPH ee85af4 UN-B 30 31 -- 
 ## + attr: type (v/l), name (v/c)
-## + edges from b85369e (vertex names):
+## + edges from ee85af4 (vertex names):
 ##  [1] s01--U01 s01--U02 s01--U03 s02--U04 s02--U05 s02--U20 s03--U06 s03--U07
 ##  [9] s03--U08 s03--U09 s04--U09 s04--U10 s04--U11 s05--U11 s05--U12 s05--U13
 ## [17] s06--U13 s06--U14 s06--U17 s07--U14 s07--U15 s07--U16 s08--U16 s08--U17
@@ -588,7 +621,6 @@ class(net2)</code></pre>
 <h2>——~~ Plot parameters in igraph ——–</h2>
 <p>Check out the node options (starting with ‘vertex.’) and the edge options (starting with ‘edge.’).</p>
 <pre class="r"><code>?igraph.plotting</code></pre>
-<pre><code>## starting httpd help server ... done</code></pre>
 <p>We can set the node &amp; edge options in two ways - one is to specify them in the <code>plot()</code> function, as we are doing below.</p>
 <ul>
 <li>Plot with curved edges (edge.curved = .1) and reduce arrow size:</li>
@@ -602,24 +634,34 @@ graph</code></pre>
 ## #
 ## # A directed multigraph with 1 component
 ## #
-## # Node Data: 17 x 5 (active)
-##   id    media               media.type type.label audience.size
-##   &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
-## 1 s01   NY Times                     1 Newspaper             20
-## 2 s02   Washington Post              1 Newspaper             25
-## 3 s03   Wall Street Journal          1 Newspaper             30
-## 4 s04   USA Today                    1 Newspaper             32
-## 5 s05   LA Times                     1 Newspaper             20
-## 6 s06   New York Post                1 Newspaper             50
-## # ... with 11 more rows
+## # Node Data: 17 × 5 (active)
+##    id    media               media.type type.label audience.size
+##    &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
+##  1 s01   NY Times                     1 Newspaper             20
+##  2 s02   Washington Post              1 Newspaper             25
+##  3 s03   Wall Street Journal          1 Newspaper             30
+##  4 s04   USA Today                    1 Newspaper             32
+##  5 s05   LA Times                     1 Newspaper             20
+##  6 s06   New York Post                1 Newspaper             50
+##  7 s07   CNN                          2 TV                    56
+##  8 s08   MSNBC                        2 TV                    34
+##  9 s09   FOX News                     2 TV                    60
+## 10 s10   ABC                          2 TV                    23
+## 11 s11   BBC                          2 TV                    34
+## 12 s12   Yahoo News                   3 Online                33
+## 13 s13   Google News                  3 Online                23
+## 14 s14   Reuters.com                  3 Online                12
+## 15 s15   NYTimes.com                  3 Online                24
+## 16 s16   WashingtonPost.com           3 Online                28
+## 17 s17   AOL.com                      3 Online                33
 ## #
-## # Edge Data: 49 x 4
+## # Edge Data: 49 × 4
 ##    from    to type      weight
 ##   &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
 ## 1     1     2 hyperlink     22
 ## 2     1     3 hyperlink     22
 ## 3     1     4 hyperlink     21
-## # ... with 46 more rows</code></pre>
+## # ℹ 46 more rows</code></pre>
 <pre class="r"><code>graph %&gt;% ggraph(., layout = &quot;graphopt&quot;) +
   geom_edge_arc(
     color = &quot;grey&quot;,
@@ -869,7 +911,7 @@ graph %&gt;% ggraph(., layout = &quot;circle&quot;) +
 ##  [23,]  1.873813e-01  9.822873e-01
 ##  [24,]  1.253332e-01  9.921147e-01
 ##  [25,]  6.279052e-02  9.980267e-01
-##  [26,] -1.608143e-16  1.000000e+00
+##  [26,] -1.608123e-16  1.000000e+00
 ##  [27,] -6.279052e-02  9.980267e-01
 ##  [28,] -1.253332e-01  9.921147e-01
 ##  [29,] -1.873813e-01  9.822873e-01
@@ -894,7 +936,7 @@ graph %&gt;% ggraph(., layout = &quot;circle&quot;) +
 ##  [48,] -9.822873e-01  1.873813e-01
 ##  [49,] -9.921147e-01  1.253332e-01
 ##  [50,] -9.980267e-01  6.279052e-02
-##  [51,] -1.000000e+00 -3.216286e-16
+##  [51,] -1.000000e+00 -3.216245e-16
 ##  [52,] -9.980267e-01 -6.279052e-02
 ##  [53,] -9.921147e-01 -1.253332e-01
 ##  [54,] -9.822873e-01 -1.873813e-01
@@ -919,7 +961,7 @@ graph %&gt;% ggraph(., layout = &quot;circle&quot;) +
 ##  [73,] -1.873813e-01 -9.822873e-01
 ##  [74,] -1.253332e-01 -9.921147e-01
 ##  [75,] -6.279052e-02 -9.980267e-01
-##  [76,] -1.836910e-16 -1.000000e+00
+##  [76,] -1.836970e-16 -1.000000e+00
 ##  [77,]  6.279052e-02 -9.980267e-01
 ##  [78,]  1.253332e-01 -9.921147e-01
 ##  [79,]  1.873813e-01 -9.822873e-01
@@ -1107,24 +1149,34 @@ graph</code></pre>
 ## #
 ## # A directed multigraph with 1 component
 ## #
-## # Node Data: 17 x 5 (active)
-##   id    media               media.type type.label audience.size
-##   &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
-## 1 s01   NY Times                     1 Newspaper             20
-## 2 s02   Washington Post              1 Newspaper             25
-## 3 s03   Wall Street Journal          1 Newspaper             30
-## 4 s04   USA Today                    1 Newspaper             32
-## 5 s05   LA Times                     1 Newspaper             20
-## 6 s06   New York Post                1 Newspaper             50
-## # ... with 11 more rows
+## # Node Data: 17 × 5 (active)
+##    id    media               media.type type.label audience.size
+##    &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
+##  1 s01   NY Times                     1 Newspaper             20
+##  2 s02   Washington Post              1 Newspaper             25
+##  3 s03   Wall Street Journal          1 Newspaper             30
+##  4 s04   USA Today                    1 Newspaper             32
+##  5 s05   LA Times                     1 Newspaper             20
+##  6 s06   New York Post                1 Newspaper             50
+##  7 s07   CNN                          2 TV                    56
+##  8 s08   MSNBC                        2 TV                    34
+##  9 s09   FOX News                     2 TV                    60
+## 10 s10   ABC                          2 TV                    23
+## 11 s11   BBC                          2 TV                    34
+## 12 s12   Yahoo News                   3 Online                33
+## 13 s13   Google News                  3 Online                23
+## 14 s14   Reuters.com                  3 Online                12
+## 15 s15   NYTimes.com                  3 Online                24
+## 16 s16   WashingtonPost.com           3 Online                28
+## 17 s17   AOL.com                      3 Online                33
 ## #
-## # Edge Data: 49 x 4
+## # Edge Data: 49 × 4
 ##    from    to type      weight
 ##   &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
 ## 1     1     2 hyperlink     22
 ## 2     1     3 hyperlink     22
 ## 3     1     4 hyperlink     21
-## # ... with 46 more rows</code></pre>
+## # ℹ 46 more rows</code></pre>
 <pre class="r"><code>graph %&gt;%
   activate(nodes) %&gt;%
   mutate(size = centrality_degree()) %&gt;%
@@ -1247,24 +1299,34 @@ graph</code></pre>
 ## #
 ## # A directed multigraph with 1 component
 ## #
-## # Node Data: 17 x 5 (active)
-##   id    media               media.type type.label audience.size
-##   &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
-## 1 s01   NY Times                     1 Newspaper             20
-## 2 s02   Washington Post              1 Newspaper             25
-## 3 s03   Wall Street Journal          1 Newspaper             30
-## 4 s04   USA Today                    1 Newspaper             32
-## 5 s05   LA Times                     1 Newspaper             20
-## 6 s06   New York Post                1 Newspaper             50
-## # ... with 11 more rows
+## # Node Data: 17 × 5 (active)
+##    id    media               media.type type.label audience.size
+##    &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
+##  1 s01   NY Times                     1 Newspaper             20
+##  2 s02   Washington Post              1 Newspaper             25
+##  3 s03   Wall Street Journal          1 Newspaper             30
+##  4 s04   USA Today                    1 Newspaper             32
+##  5 s05   LA Times                     1 Newspaper             20
+##  6 s06   New York Post                1 Newspaper             50
+##  7 s07   CNN                          2 TV                    56
+##  8 s08   MSNBC                        2 TV                    34
+##  9 s09   FOX News                     2 TV                    60
+## 10 s10   ABC                          2 TV                    23
+## 11 s11   BBC                          2 TV                    34
+## 12 s12   Yahoo News                   3 Online                33
+## 13 s13   Google News                  3 Online                23
+## 14 s14   Reuters.com                  3 Online                12
+## 15 s15   NYTimes.com                  3 Online                24
+## 16 s16   WashingtonPost.com           3 Online                28
+## 17 s17   AOL.com                      3 Online                33
 ## #
-## # Edge Data: 49 x 4
+## # Edge Data: 49 × 4
 ##    from    to type      weight
 ##   &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
 ## 1     1     2 hyperlink     22
 ## 2     1     3 hyperlink     22
 ## 3     1     4 hyperlink     21
-## # ... with 46 more rows</code></pre>
+## # ℹ 46 more rows</code></pre>
 <pre class="r"><code>graph %&gt;%
   activate(nodes) %&gt;%
   mutate(size = centrality_degree()) %&gt;%
@@ -1329,24 +1391,34 @@ graph</code></pre>
 ## #
 ## # A directed multigraph with 1 component
 ## #
-## # Node Data: 17 x 5 (active)
-##   id    media               media.type type.label audience.size
-##   &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
-## 1 s01   NY Times                     1 Newspaper             20
-## 2 s02   Washington Post              1 Newspaper             25
-## 3 s03   Wall Street Journal          1 Newspaper             30
-## 4 s04   USA Today                    1 Newspaper             32
-## 5 s05   LA Times                     1 Newspaper             20
-## 6 s06   New York Post                1 Newspaper             50
-## # ... with 11 more rows
+## # Node Data: 17 × 5 (active)
+##    id    media               media.type type.label audience.size
+##    &lt;chr&gt; &lt;chr&gt;                    &lt;int&gt; &lt;chr&gt;              &lt;int&gt;
+##  1 s01   NY Times                     1 Newspaper             20
+##  2 s02   Washington Post              1 Newspaper             25
+##  3 s03   Wall Street Journal          1 Newspaper             30
+##  4 s04   USA Today                    1 Newspaper             32
+##  5 s05   LA Times                     1 Newspaper             20
+##  6 s06   New York Post                1 Newspaper             50
+##  7 s07   CNN                          2 TV                    56
+##  8 s08   MSNBC                        2 TV                    34
+##  9 s09   FOX News                     2 TV                    60
+## 10 s10   ABC                          2 TV                    23
+## 11 s11   BBC                          2 TV                    34
+## 12 s12   Yahoo News                   3 Online                33
+## 13 s13   Google News                  3 Online                23
+## 14 s14   Reuters.com                  3 Online                12
+## 15 s15   NYTimes.com                  3 Online                24
+## 16 s16   WashingtonPost.com           3 Online                28
+## 17 s17   AOL.com                      3 Online                33
 ## #
-## # Edge Data: 49 x 4
+## # Edge Data: 49 × 4
 ##    from    to type      weight
 ##   &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;int&gt;
 ## 1     1     2 hyperlink     22
 ## 2     1     3 hyperlink     22
 ## 3     1     4 hyperlink     21
-## # ... with 46 more rows</code></pre>
+## # ℹ 46 more rows</code></pre>
 <pre class="r"><code># Set up NY Times as root node first
 # V(net)[media == &quot;NY Times&quot;] cannot be used since it returns an `igraph.vs` ( i.e. a list ) object. 
 # We need an integer node id.
@@ -1421,13 +1493,13 @@ news.path.distance &lt;- distances(net,
 news.path</code></pre>
 <pre><code>## $vpath
 ## $vpath[[1]]
-## + 4/17 vertices, named, from b7994bb:
+## + 4/17 vertices, named, from 59b72c6:
 ## [1] s08 s03 s12 s06
 ## 
 ## 
 ## $epath
 ## $epath[[1]]
-## + 3/48 edges from b7994bb (vertex names):
+## + 3/48 edges from 59b72c6 (vertex names):
 ## [1] s08-&gt;s03 s03-&gt;s12 s12-&gt;s06
 ## 
 ## 
@@ -1522,24 +1594,28 @@ msnbc_nyp</code></pre>
 ## #
 ## # A directed multigraph with 1 component
 ## #
-## # Edge Data: 49 x 5 (active)
-##    from    to type      weight shortest_path_edge
-##   &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;int&gt; &lt;lgl&gt;             
-## 1     1     2 hyperlink     22 FALSE             
-## 2     1     3 hyperlink     22 FALSE             
-## 3     1     4 hyperlink     21 FALSE             
-## 4     1    15 mention       20 FALSE             
-## 5     2     1 hyperlink     23 FALSE             
-## 6     2     3 hyperlink     21 FALSE             
-## # ... with 43 more rows
+## # Edge Data: 49 × 5 (active)
+##     from    to type      weight shortest_path_edge
+##    &lt;int&gt; &lt;int&gt; &lt;chr&gt;      &lt;int&gt; &lt;lgl&gt;             
+##  1     1     2 hyperlink     22 FALSE             
+##  2     1     3 hyperlink     22 FALSE             
+##  3     1     4 hyperlink     21 FALSE             
+##  4     1    15 mention       20 FALSE             
+##  5     2     1 hyperlink     23 FALSE             
+##  6     2     3 hyperlink     21 FALSE             
+##  7     2     9 hyperlink      1 FALSE             
+##  8     2    10 hyperlink      5 FALSE             
+##  9     3     1 hyperlink     21 FALSE             
+## 10     3     4 hyperlink     22 TRUE              
+## # ℹ 39 more rows
 ## #
-## # Node Data: 17 x 6
-##   id    media              media.type type.label audience.size shortest_path_no~
-##   &lt;chr&gt; &lt;chr&gt;                   &lt;int&gt; &lt;chr&gt;              &lt;int&gt; &lt;lgl&gt;            
-## 1 s01   NY Times                    1 Newspaper             20 FALSE            
-## 2 s02   Washington Post             1 Newspaper             25 FALSE            
-## 3 s03   Wall Street Journ~          1 Newspaper             30 TRUE             
-## # ... with 14 more rows</code></pre>
+## # Node Data: 17 × 6
+##   id    media             media.type type.label audience.size shortest_path_node
+##   &lt;chr&gt; &lt;chr&gt;                  &lt;int&gt; &lt;chr&gt;              &lt;int&gt; &lt;lgl&gt;             
+## 1 s01   NY Times                   1 Newspaper             20 FALSE             
+## 2 s02   Washington Post            1 Newspaper             25 FALSE             
+## 3 s03   Wall Street Jour…          1 Newspaper             30 TRUE              
+## # ℹ 14 more rows</code></pre>
 <pre class="r"><code>msnbc_nyp %&gt;%
   activate(nodes) %&gt;%
   mutate(size = centrality_degree()) %&gt;%
@@ -1621,6 +1697,8 @@ graph %&gt;%
   ggtitle(label = &quot;Highlighting WSJ Neighbours and Links&quot;) +
   guides(shape = &quot;none&quot;, fill = &quot;none&quot; #, colour = &quot;none&quot;
   )</code></pre>
+<pre><code>## Warning: ggrepel: 15 unlabeled data points (too many overlaps). Consider
+## increasing max.overlaps</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-56-1.png" width="672" /></p>
 </div>
 <div id="highlight-neighbours" class="section level2">
@@ -1671,6 +1749,8 @@ graph %&gt;%
   ggtitle(label = &quot;Highlighting WSJ Neighbours and Links&quot;) +
   guides(shape = &quot;none&quot;, fill = &quot;none&quot; #, colour = &quot;none&quot;
   )</code></pre>
+<pre><code>## Warning: ggrepel: 15 unlabeled data points (too many overlaps). Consider
+## increasing max.overlaps</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-58-1.png" width="672" /></p>
 <p>Another way to draw attention to a group of nodes: (This is generally not recommended since, depending on layout, nodes that are not ‘marked’ can accidentally get placed on top of the mark)</p>
 <pre class="r"><code>plot(net, mark.groups = c(1,4,5,8), mark.col = &quot;#C5E5E7&quot;, mark.border = NA)</code></pre>
@@ -1685,8 +1765,13 @@ plot(net, mark.groups = list(c(1,4,5,8), c(15:17)),
 <p>R and igraph offer interactive plotting capabilities (mostly helpful for small networks)</p>
 <pre class="r"><code>tkid &lt;- tkplot(net) #tkid is the id of the tkplot
 
-l &lt;- tkplot.getcoords(tkid) # grab the coordinates from tkplot
-plot(net, layout = l)</code></pre>
+l &lt;- tkplot.getcoords(tkid) # grab the coordinates from tkplot</code></pre>
+<pre><code>## Warning: `tkplot.getcoords()` was deprecated in igraph 2.0.0.
+## ℹ Please use `tk_coords()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre class="r"><code>plot(net, layout = l)</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-60-1.png" width="672" /></p>
 </div>
 <div id="other-ways-to-represent-a-network" class="section level2">
@@ -1723,6 +1808,11 @@ graph %&gt;%
   stat_bin(aes(y = cumsum(..count..)),
                 binwidth = 1,# Ta-Da !!
                 geom =&quot;point&quot;,color =&quot;orange&quot;, size = 5)</code></pre>
+<pre><code>## Warning: The dot-dot notation (`..count..`) was deprecated in ggplot2 3.4.0.
+## ℹ Please use `after_stat(count)` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-62-2.png" width="672" /></p>
 </div>
 <div id="plotting-two-mode-networks" class="section level2">
@@ -1751,9 +1841,9 @@ graph %&gt;%
 ## s05   0
 ## s06   0</code></pre>
 <pre class="r"><code>net2</code></pre>
-<pre><code>## IGRAPH b85369e UN-B 30 31 -- 
+<pre><code>## IGRAPH ee85af4 UN-B 30 31 -- 
 ## + attr: type (v/l), name (v/c)
-## + edges from b85369e (vertex names):
+## + edges from ee85af4 (vertex names):
 ##  [1] s01--U01 s01--U02 s01--U03 s02--U04 s02--U05 s02--U20 s03--U06 s03--U07
 ##  [9] s03--U08 s03--U09 s04--U09 s04--U10 s04--U11 s05--U11 s05--U12 s05--U13
 ## [17] s06--U13 s06--U14 s06--U17 s07--U14 s07--U15 s07--U16 s08--U16 s08--U17
@@ -1897,13 +1987,22 @@ as_tbl_graph(x = links2, directed = TRUE) %&gt;%
   visGroups(groupname = &quot;TRUE&quot;,shape = &quot;icon&quot;, 
             icon = list(code = &quot;f007&quot;, size = 75)) %&gt;% 
   addFontAwesome()</code></pre>
-<div id="htmlwidget-1" style="width:672px;height:480px;" class="visNetwork html-widget"></div>
-<script type="application/json" data-for="htmlwidget-1">{"x":{"nodes":{"id":["s01","s02","s03","s04","s05","s06","s07","s08","s09","s10","U01","U02","U03","U04","U05","U06","U07","U08","U09","U10","U11","U12","U13","U14","U15","U16","U17","U18","U19","U20"],"type":[false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],"media":["NYT","WaPo","WSJ","USAT","LATimes","CNN","MSNBC","FOX ","ABC","BBC","John","Mary","Paul","Ted","Tom","Kate","Ed","Anna","Dan","Nancy","Sandra","Ronda","Sheila","Jim","Jill","Jo","Brian","Jason","Lisa","Dave"],"media.type":[1,1,1,1,1,2,2,2,2,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"media.name":["Newspaper","Newspaper","Newspaper","Newspaper","Newspaper","TV","TV","TV","TV","TV",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"audience.size":[20,25,30,32,20,56,34,60,23,34,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"group":["FALSE","FALSE","FALSE","FALSE","FALSE","FALSE","FALSE","FALSE","FALSE","FALSE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE"],"label":["s01","s02","s03","s04","s05","s06","s07","s08","s09","s10","U01","U02","U03","U04","U05","U06","U07","U08","U09","U10","U11","U12","U13","U14","U15","U16","U17","U18","U19","U20"],"x":[0.875794152013906,-0.876534474835432,-0.150160421649664,0.199805582338123,0.143943475246901,-0.273980859015677,-0.561411622189985,-0.590160538019765,-0.566399146614502,0.506180040846123,0.698374177231765,1,0.971551799164517,-0.926598003328571,-1,-0.363318453759271,-0.176772753111752,-0.0810257699540002,0.034281472468183,0.295928423024932,0.294708553196144,0.211167497112309,-0.0589480176550634,-0.408042689921689,-0.630748278059063,-0.611475879477556,-0.433887321062141,-0.718770135310617,-0.594758545363145,-0.729574517089591],"y":[0.353460275919258,-0.820569228824587,-0.639932658374738,-0.213114342013239,0.37162956924343,0.575425528495313,0.804596625594114,0.274229155614842,-0.439372682632045,0.198237365650179,0.278403226858261,0.311953645758364,0.486654675151901,-1,-0.859567165565216,-0.564267238060854,-0.848929541400687,-0.820669932814206,-0.448833241642035,-0.338295609346574,0.116949504055721,0.540355044143214,0.502717747724421,0.751354655676263,1,0.559096033575946,0.432670998788391,0.298949380968368,-0.0865656947211026,-0.642327869895226]},"edges":{"from":["s01","s01","s01","s02","s02","s02","s03","s03","s03","s03","s04","s04","s04","s05","s05","s05","s06","s06","s06","s07","s07","s07","s08","s08","s08","s08","s09","s09","s09","s10","s10"],"to":["U01","U02","U03","U04","U05","U20","U06","U07","U08","U09","U09","U10","U11","U11","U12","U13","U13","U14","U17","U14","U15","U16","U16","U17","U18","U19","U06","U19","U20","U01","U11"],"weight":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"smooth":false,"arrows":"to"},"physics":{"stabilization":false},"groups":{"FALSE":{"shape":"icon","icon":{"code":"f26c","size":75,"color":"orange"}},"useDefaultGroups":true,"TRUE":{"shape":"icon","icon":{"code":"f007","size":75,"color":"#2B7CE9"}}}},"groups":["FALSE","TRUE"],"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"iconsRedraw":true},"evals":[],"jsHooks":[]}</script>
+<div class="visNetwork html-widget html-fill-item" id="htmlwidget-1" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"nodes":{"id":["s01","s02","s03","s04","s05","s06","s07","s08","s09","s10","U01","U02","U03","U04","U05","U06","U07","U08","U09","U10","U11","U12","U13","U14","U15","U16","U17","U18","U19","U20"],"type":[false,false,false,false,false,false,false,false,false,false,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true,true],"media":["NYT","WaPo","WSJ","USAT","LATimes","CNN","MSNBC","FOX ","ABC","BBC","John","Mary","Paul","Ted","Tom","Kate","Ed","Anna","Dan","Nancy","Sandra","Ronda","Sheila","Jim","Jill","Jo","Brian","Jason","Lisa","Dave"],"media.type":[1,1,1,1,1,2,2,2,2,2,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"media.name":["Newspaper","Newspaper","Newspaper","Newspaper","Newspaper","TV","TV","TV","TV","TV",null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"audience.size":[20,25,30,32,20,56,34,60,23,34,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"group":["FALSE","FALSE","FALSE","FALSE","FALSE","FALSE","FALSE","FALSE","FALSE","FALSE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE","TRUE"],"label":["s01","s02","s03","s04","s05","s06","s07","s08","s09","s10","U01","U02","U03","U04","U05","U06","U07","U08","U09","U10","U11","U12","U13","U14","U15","U16","U17","U18","U19","U20"],"x":[0.8904680772071989,-0.8757327818010522,-0.1620960751873147,0.2078818427398181,0.2171095390915334,-0.1427556346049489,-0.3832252977657569,-0.4727968353067336,-0.5315734398093106,0.5280076129146236,0.7170469838794384,0.9984352986310514,1,-0.9529264184890094,-1,-0.3539476141704619,-0.2118266057665844,-0.1174955258493066,0.03053485946809986,0.2846075144841183,0.3242619011756687,0.2993673839900788,0.04660672665606747,-0.2456860528609075,-0.4248205165926905,-0.4590414619493441,-0.309162399121799,-0.5927946723574349,-0.5180201805543698,-0.7117717954693505],"y":[-0.2463684981160805,-0.7466388211332455,-0.7978429149503279,-0.4889467683293773,0.1150454436463197,0.4705586514074023,0.787723768029754,0.2754795004129007,-0.4524234691477536,-0.2106429023349606,-0.2280986961945629,-0.3465902638077402,-0.1643136414824734,-0.9106324613592305,-0.7527376475995236,-0.6478231824040366,-0.996968695062594,-1,-0.6696608731672644,-0.6443600731586406,-0.1944218824187712,0.2593424601684919,0.3190936787222776,0.6898659709377624,1,0.5627765318380378,0.384023984810868,0.3433094242457138,-0.08728101294073576,-0.6082111490998795]},"edges":{"from":["s01","s01","s01","s02","s02","s02","s03","s03","s03","s03","s04","s04","s04","s05","s05","s05","s06","s06","s06","s07","s07","s07","s08","s08","s08","s08","s09","s09","s09","s10","s10"],"to":["U01","U02","U03","U04","U05","U20","U06","U07","U08","U09","U09","U10","U11","U11","U12","U13","U13","U14","U17","U14","U15","U16","U16","U17","U18","U19","U06","U19","U20","U01","U11"],"weight":[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]},"nodesToDataframe":true,"edgesToDataframe":true,"options":{"width":"100%","height":"100%","nodes":{"shape":"dot","physics":false},"manipulation":{"enabled":false},"edges":{"smooth":false,"arrows":"to"},"physics":{"stabilization":false},"groups":{"FALSE":{"shape":"icon","icon":{"code":"f26c","size":75,"color":"orange"}},"useDefaultGroups":true,"TRUE":{"shape":"icon","icon":{"code":"f007","size":75,"color":"#2B7CE9"}}}},"groups":["FALSE","TRUE"],"width":null,"height":null,"idselection":{"enabled":false},"byselection":{"enabled":false},"main":null,"submain":null,"footer":null,"background":"rgba(0, 0, 0, 0)","igraphlayout":{"type":"square"},"iconsRedraw":true},"evals":[],"jsHooks":[]}</script>
 <p>We can also generate and plot <strong>bipartite projections</strong> for the <strong>two-mode network</strong> : (co-memberships are easy to calculate by multiplying the network matrix by its transposed matrix, or using igraph’s <code>bipartite.projection</code> function)</p>
-<pre class="r"><code>net2.bp &lt;- bipartite.projection(net2)
-
-#We can calculate the projections manually as well:
+<pre class="r"><code>net2.bp &lt;- bipartite.projection(net2)</code></pre>
+<pre><code>## Warning: `bipartite.projection()` was deprecated in igraph 2.0.0.
+## ℹ Please use `bipartite_projection()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre class="r"><code>#We can calculate the projections manually as well:
 as_incidence_matrix(net2)  %*% t(as_incidence_matrix(net2))</code></pre>
+<pre><code>## Warning: `as_incidence_matrix()` was deprecated in igraph 1.6.0.
+## ℹ Please use `as_biadjacency_matrix()` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
 <pre><code>##     s01 s02 s03 s04 s05 s06 s07 s08 s09 s10
 ## s01   3   0   0   0   0   0   0   0   0   1
 ## s02   0   3   0   0   0   0   0   0   1   0

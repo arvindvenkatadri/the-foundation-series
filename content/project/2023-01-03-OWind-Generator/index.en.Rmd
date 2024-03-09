@@ -8,6 +8,7 @@ output:
   bookdown::html_document2: default
 subtitle: A Wind in the Door
 lastmod: "`r Sys.Date()`"
+weight: 30
 slug: []
 categories: TRIZ
 tags:
@@ -140,7 +141,9 @@ causes[6] <- list(c("Mech Arrangements", "Electrical"))
 
 #Fishbone Diagram
 #
-ss.ceDiag(effect,causes.head,causes, main ="Where is the Wind?",ss.col = c("", "red"), sub = paste("Ishikawa Cause-Effect Diagram \n (Made with R)"))
+ss.ceDiag(effect,causes.head,causes, main ="Where is the Wind?",
+          #ss.col = c("", "red"), 
+          sub = paste("Ishikawa Cause-Effect Diagram \n (Made with R)"))
 
 
 

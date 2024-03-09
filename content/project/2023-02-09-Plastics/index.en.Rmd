@@ -2,6 +2,7 @@
 title: 'The TRIZ Chronicles: TRIZ Analysis of the Amsterdam Bubble Barrier'
 author: "Arvind Venkatadri"
 date: "2023-02-09"
+weight: 50
 output:
   html_document:
     df_print: paged
@@ -179,7 +180,9 @@ causes[6] <- list(c("Filters", "Nets", "Boats"))
 
 #Fishbone Diagram
 #
-ss.ceDiag(effect,causes.head,causes, main ="~Smoke~ Plastics on the Water",ss.col = c("", "red"), sub = paste("Ishikawa Cause-Effect Diagram \n (Made with R)"))
+ss.ceDiag(effect,causes.head,causes, main ="~Smoke~ Plastics on the Water",
+          #ss.col = c("", "red"), 
+          sub = paste("Ishikawa Cause-Effect Diagram \n (Made with R)"))
 
 
 

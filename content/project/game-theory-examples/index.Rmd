@@ -3,7 +3,7 @@ title: "Some Game Theory Examples"
 subtitle: "Worked Examples of Game Theoretic Situations"
 author: "Arvind V"
 date: "2024-01-28"
-
+weight: 150
 output:
   html_document:
     keep_md: yes
@@ -44,7 +44,7 @@ You and your brother have to share Dining Table duties. One of you lays the Tabl
 **4Rs and Temptations:**
 
 | 4Rs         | You                                                     | Brother                                                 |
-|-------------|---------------------------------------------------------|---------------------------------------------------------|
+|---------------|-----------------------------|-----------------------------|
 | REWARD      | Dinner Laid; Praise from Family; Satisfaction/Feel Good | Table Clean; Praise from Family; Satisfaction/Feel Good |
 | RISK        | Family Ire                                              | Family Ire                                              |
 | REGRET      | No Satisfaction/Feel Good                               | No Satisfaction/Feel Good                               |
