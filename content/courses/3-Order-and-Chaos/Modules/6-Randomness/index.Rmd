@@ -68,9 +68,9 @@ gf_histogram(~ rexp(n = 160, rate = 1/3)) %>%
 
 ```
 
--   What we saw was an example of the Poisson Arrival Process.
+-   What we saw was an example of the **Poisson Arrival Process**.
 -   This has applications in *Service Design*, *Traffic Management*,
-    *Logistics*, *Finding Defects in Materials*, *Weather Modelling*...
+    *Logistics*, *Finding Defects in Materials*, *Weather Modelling*, *Pest Control*...
 
 From <u><https://stats.stackexchange.com/a/297375></u>:
 

@@ -1,0 +1,49 @@
+---
+title: "Spain-Merce Rodoreda"
+author: "Arvind V"
+date: "2024-03-12"
+lastmod: " `r Sys.Date()`"
+output: html_document
+weight: 260
+type: book
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr) # Embed multimedia in HTML files
+```
+
+## Merce Rodoreda
+
+![](https://upload.wikimedia.org/wikipedia/commons/3/30/Rodoreda.jpg)
+
+
+## Story
+
+We will read Rodoreda's story <u>[Rain.](Maxim%20Gorky%20-%20The%20Clown.docx)</u>
+
+## Themes
+- Independent Single Women
+- Making Decisions
+- Is Marriage crumbling as an Institution?
+- Luxury Beliefs (after Rob Henderson)
+
+
+## Additional Material
+
+### Notes and References
+
+
+### Song for the Story
+
+`r blogdown::shortcode("youtube","W-X2HpAE0to")`
+
+## Writing Prompts
+
+1.  On Ghosting
+1.  On Being Indecisive
+1.  
