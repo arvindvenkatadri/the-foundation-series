@@ -2,7 +2,7 @@
 title: "\U0001F579 How Must I Play?"
 author: "Arvind V."
 date: 2021-12-11
-lastmod: "2024-03-01"
+lastmod: "2024-03-13"
 image:
   caption: Photo by Markus Spiske on Unsplash
   focal_point: Smart
@@ -23,8 +23,6 @@ links:
   url: project/game-theory-examples
 ---
 
-<script src="{{< blogdown/postref >}}index_files/kePrint/kePrint.js"></script>
-<link href="{{< blogdown/postref >}}index_files/lightable/lightable.css" rel="stylesheet" />
 
 
 <div id="introduction" class="section level2">
@@ -79,54 +77,493 @@ Transcript: <u><a href="https://www.wnycstudios.org/podcasts/radiolab/segments/1
 <p>Are there COSTs to ACTIONs? Who decides?</p>
 <p>How does one ACT to minimize costs and maximize rewards? Remember, we are all <strong>Agents</strong>, with our own vocabulary of <strong>Actions</strong> which we might use <strong>Again</strong> and again, and experience an <strong>Aggregate</strong> outcome in society.</p>
 <p>The <strong>Payoff Matrix</strong> in PD is:</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left;">
-</th>
-<th style="text-align:left;">
-C
-</th>
-<th style="text-align:left;">
-D
-</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left;">
-C
-</td>
-<td style="text-align:left;">
-(R=3,R=3)
-</td>
-<td style="text-align:left;">
-(T=5,S=0)
-</td>
-</tr>
-<tr>
-<td style="text-align:left;">
-D
-</td>
-<td style="text-align:left;">
-(S=0,T=5)
-</td>
-<td style="text-align:left;">
-(P=1,P=1)
-</td>
-</tr>
-</tbody>
+<div id="zvvybupoho" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#zvvybupoho table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#zvvybupoho thead, #zvvybupoho tbody, #zvvybupoho tfoot, #zvvybupoho tr, #zvvybupoho td, #zvvybupoho th {
+  border-style: none;
+}
+
+#zvvybupoho p {
+  margin: 0;
+  padding: 0;
+}
+
+#zvvybupoho .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#zvvybupoho .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#zvvybupoho .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#zvvybupoho .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#zvvybupoho .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zvvybupoho .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zvvybupoho .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#zvvybupoho .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#zvvybupoho .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#zvvybupoho .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#zvvybupoho .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#zvvybupoho .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#zvvybupoho .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#zvvybupoho .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#zvvybupoho .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#zvvybupoho .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#zvvybupoho .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#zvvybupoho .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#zvvybupoho .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zvvybupoho .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#zvvybupoho .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#zvvybupoho .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#zvvybupoho .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zvvybupoho .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#zvvybupoho .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#zvvybupoho .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zvvybupoho .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zvvybupoho .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#zvvybupoho .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zvvybupoho .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#zvvybupoho .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#zvvybupoho .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zvvybupoho .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zvvybupoho .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#zvvybupoho .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#zvvybupoho .gt_left {
+  text-align: left;
+}
+
+#zvvybupoho .gt_center {
+  text-align: center;
+}
+
+#zvvybupoho .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#zvvybupoho .gt_font_normal {
+  font-weight: normal;
+}
+
+#zvvybupoho .gt_font_bold {
+  font-weight: bold;
+}
+
+#zvvybupoho .gt_font_italic {
+  font-style: italic;
+}
+
+#zvvybupoho .gt_super {
+  font-size: 65%;
+}
+
+#zvvybupoho .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#zvvybupoho .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#zvvybupoho .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#zvvybupoho .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#zvvybupoho .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#zvvybupoho .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#zvvybupoho .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    <tr class="gt_heading">
+      <td colspan="3" class="gt_heading gt_title gt_font_normal gt_bottom_border" style><strong>Prisoners’ Dilemma Payoff Matrix</strong></td>
+    </tr>
+    
+    <tr class="gt_col_headings gt_spanner_row">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="2" colspan="1" style="text-align: center; font-weight: bold;" scope="col" id="Player #2">Player #2</th>
+      <th class="gt_center gt_columns_top_border gt_column_spanner_outer" rowspan="1" colspan="2" scope="colgroup" id="&lt;strong&gt;Player #1&lt;/strong&gt;">
+        <span class="gt_column_spanner"><strong>Player #1</strong></span>
+      </th>
+    </tr>
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="text-align: center; font-weight: bold;" scope="col" id="C">C</th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" style="text-align: center; font-weight: bold;" scope="col" id="D">D</th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="Player #2" class="gt_row gt_center" style="font-weight: bold;">C</td>
+<td headers="C" class="gt_row gt_center">(R=3, R=3)</td>
+<td headers="D" class="gt_row gt_center">(T=5, S=0)</td></tr>
+    <tr><td headers="Player #2" class="gt_row gt_center" style="font-weight: bold;">D</td>
+<td headers="C" class="gt_row gt_center">(S=0, T=5)</td>
+<td headers="D" class="gt_row gt_center">(P=1, P=1)</td></tr>
+  </tbody>
+  
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="3"> <strong>Payoffs are (Player#1, Player#2)</strong></td>
+    </tr>
+    <tr>
+      <td class="gt_footnote" colspan="3"> R = Reward; S = Sucker’s Payoff; T = Temptation; P = Punishment</td>
+    </tr>
+  </tfoot>
 </table>
-<p>where:
-<span class="math display">\[
-Temptation &gt; Reward &gt; Punishment &gt; S\\\
+</div>
+<p>Note that, in order for this to be a true Prisoners’ Dilemma, we need:</p>
+<p><span class="math display">\[
+Temptation &gt; Reward &gt; Punishment &gt; Sucker&#39;s~ Payoff\\\
 \]</span>
 <span class="math display">\[
 R &gt; (S + T)/2
 \]</span>
-The first condition ensures that Temptation (to D) is always stronger than the Reward(for C); and the second ensures that you cannot mutually agree to alternate between C and D and have a higher net reward !! (<u> <a href="https://www.quora.com/Who-is-responsible-for-repairing-roads-if-they-are-damaged-by-heavy-vehicles-Who-can-we-complain-to-if-our-roads-are-damaged">Can you Game Game Theory ? That’s a Cabal !!</a></u>)</p>
+The first condition ensures that Temptation (to D) is always stronger than the Reward(for C); and the second ensures that the two Players cannot mutually agree to alternate between C and D and have a higher net reward !! (<u><a href="https://www.quora.com/Who-is-responsible-for-repairing-roads-if-they-are-damaged-by-heavy-vehicles-Who-can-we-complain-to-if-our-roads-are-damaged">Can you Game Game Theory ? That’s a Cabal !!</a></u>)</p>
 <p>Wherever you “are” on the matrix, you can <strong>always</strong> improve your situation by defecting!! “D” is your <strong>best move</strong>, your <strong>“Dominant Strategy”</strong>, because that is how the matrix is stacked. And if both players do that, then we end up at the bottom-right cell, which says “(D,D)”, where the game stays forever, in state called the <strong>“Nash Equilibrium”</strong>.<br />
-While just a little thought, even hesitation, could have led us “(C, C)”…An altruistic decision to “C” first could tip the scales in favour of “(C,C)”.</p>
+</p>
+<p>While just a little thought, even hesitation, could have led us “(C, C)”…An altruistic decision to “C” first could tip the scales in favour of “(C,C)”.</p>
 <p>Sigh.</p>
 </div>
 </div>
@@ -162,6 +599,12 @@ While just a little thought, even hesitation, could have led us “(C, C)”…A
 </ul>
 <p>We’ll see.</p>
 </div>
+<div id="fun-stuff-with-game-theory" class="section level2">
+<h2>Fun Stuff With Game Theory</h2>
+<ol style="list-style-type: decimal">
+<li>Olivia Jack , Dirk Brockmann. “<em>The Prisoner’s Kaleidoscope</em>”: The prisoner’s dilemma game on a lattice Pattern Formation, Beauty and Chaos in a Game Theoretic Model. <u><a href="https://www.complexity-explorables.org/explorables/prisoners-kaleidoscope/" class="uri">https://www.complexity-explorables.org/explorables/prisoners-kaleidoscope/</a></u></li>
+</ol>
+</div>
 <div id="references" class="section level2">
 <h2>References</h2>
 <ol style="list-style-type: decimal">
@@ -173,6 +616,7 @@ While just a little thought, even hesitation, could have led us “(C, C)”…A
 <li><p>Avinash Dixit, Susan Skeath, David Reiley, <em>Games of strategy</em>, ISBN: 9780393124446, New York :W.W. Norton &amp; Company, 2015.</p></li>
 <li><p>Brams Steven J., 1994. “Game Theory and Literature,” Games and Economic Behavior, Elsevier, vol. 6(1), pages 32-54, January. <u><a href="http://www.sscnet.ucla.edu/polisci/faculty/chwe/austen/brams1994.pdf">Available here.</a></u></p></li>
 <li><p>Alexander Mehlmann,<em>The game’s afoot! Game theory in myth and paradox</em>, American Mathematical Society 2000. <u><a href="https://bookstore.ams.org/stml-5/">AMS Bookstore</a></u></p></li>
+<li><p><em>The Tragedy of the Commons</em>. <u><a href="https://en.wikipedia.org/wiki/Tragedy_of_the_commons" class="uri">https://en.wikipedia.org/wiki/Tragedy_of_the_commons</a></u></p></li>
 </ol>
 </div>
 <div id="game-theory-pop-music-movie-clip-and-tv-ad-playlist" class="section level2">
@@ -189,7 +633,8 @@ While just a little thought, even hesitation, could have led us “(C, C)”…A
 <u><a href="https://www.youtube.com/watch?v=rMz7JBRbmNo" class="uri">https://www.youtube.com/watch?v=rMz7JBRbmNo</a></u></p></li>
 <li><p>The Gods Must be Crazy (Brinkmanship)
 <u><a href="https://www.youtube.com/watch?v=9LvViKftRnA" class="uri">https://www.youtube.com/watch?v=9LvViKftRnA</a></u></p></li>
-<li><p>L.A. Confidential <u><a href="https://criticalcommons.org/embed?m=pBXsAUvh9" class="uri">https://criticalcommons.org/embed?m=pBXsAUvh9</a></u></p></li>
+<li><p>L.A. Confidential
+<u><a href="https://criticalcommons.org/embed?m=pBXsAUvh9" class="uri">https://criticalcommons.org/embed?m=pBXsAUvh9</a></u></p></li>
 </ol>
 </div>
 <div id="activity-2" class="section level2">

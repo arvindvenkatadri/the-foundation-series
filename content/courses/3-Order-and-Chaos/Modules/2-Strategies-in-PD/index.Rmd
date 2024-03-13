@@ -27,6 +27,7 @@ links:
 library(blogdown)
 library(tidyverse)
 library(huxtable)
+library(gt)
 library(knitr)
 library(kableExtra)
 library(emoji)
@@ -99,24 +100,43 @@ How does one ACT to minimize costs and maximize rewards? Remember, we are all **
 The **Payoff Matrix** in PD is:
 
 ```{r, echo=FALSE}
-data <- tibble::tibble(P = c("C", "D"),
-                       C = c("(R=3,R=3)", "(S=0,T=5)"),
-                       D = c("(T=5,S=0)", "(P=1,P=1)")) %>% tibble::column_to_rownames(var = "P")
+library(kableExtra)
+library(gt)
+data <- tibble::tibble("Player #2" = c("C", "D"),
+                       C = c("(R=3, R=3)", "(S=0, T=5)"),
+                       D = c("(T=5, S=0)", "(P=1, P=1)")) 
+
 data %>% 
-  kableExtra::kbl(centering = TRUE)
+  gt(rowname_col = ) %>% 
+  tab_header(
+    title = md("**Prisoners' Dilemma Payoff Matrix**")) %>% 
+  gt::tab_spanner(columns = c(2,3), label = md("**Player #1**")) %>% 
+  cols_align(align = "center", columns = c(C,D,`Player #2`)) %>% 
+  tab_style(
+    style = cell_text(align = "center", weight = "bold"),
+    locations = cells_column_labels(columns = c(C,D, `Player #2`))) %>% 
+  tab_style(
+    style = cell_text(weight = "bold"),
+    locations = cells_body(columns = c(`Player #2`))) %>% 
+  tab_footnote(footnote = md("**Payoffs are (Player#1, Player#2)**")) %>% 
+  tab_footnote(footnote = md("R = Reward; S = Sucker's Payoff; T = Temptation; P = Punishment"))
+
 
 ```
 
-where:
+
+Note that, in order for this to be a true Prisoners' Dilemma, we need:
+
 $$
-Temptation > Reward > Punishment > S\\\
+Temptation > Reward > Punishment > Sucker's~ Payoff\\\
 $$
 $$
 R > (S + T)/2
 $$
-The first condition ensures that Temptation (to D) is always stronger than the Reward(for C); and the second ensures that you cannot mutually agree to alternate between C and D and have a higher net reward !! (<u> [Can you Game Game Theory ? That's a Cabal !! ](https://www.quora.com/Who-is-responsible-for-repairing-roads-if-they-are-damaged-by-heavy-vehicles-Who-can-we-complain-to-if-our-roads-are-damaged)</u>)
+The first condition ensures that Temptation (to D) is always stronger than the Reward(for C); and the second ensures that the two Players cannot mutually agree to alternate between C and D and have a higher net reward !! (<u>[Can you Game Game Theory ? That's a Cabal !! ](https://www.quora.com/Who-is-responsible-for-repairing-roads-if-they-are-damaged-by-heavy-vehicles-Who-can-we-complain-to-if-our-roads-are-damaged)</u>)
 
 Wherever you "are" on the matrix, you can **always** improve your situation by defecting!! "D" is your **best move**, your **"Dominant Strategy"**, because that is how the matrix is stacked. And if both players do that, then we end up at the bottom-right cell, which says "(D,D)", where the game stays forever, in state called the **"Nash Equilibrium"**. \
+
 While just a little thought, even hesitation, could have led us "(C, C)"...An altruistic decision to "C" first could tip the scales in favour of "(C,C)". 
 
 Sigh.
@@ -153,6 +173,9 @@ Why are Hotels and Petrol Pumps located next to each other? Here is the <u>[**Ho
 
 We'll see.
 
+## Fun Stuff With Game Theory
+
+1. Olivia Jack , Dirk Brockmann. "*The Prisoner's Kaleidoscope*”: The prisoner's dilemma game on a lattice Pattern Formation, Beauty and Chaos in a Game Theoretic Model. <u><https://www.complexity-explorables.org/explorables/prisoners-kaleidoscope/></u>
 
 ## References
 1. <u><https://medium.com/@jeffdesjardins/the-silver-rule-taleb-and-the-slippery-slope-to-interventionism-ef6baef17c23></u>
@@ -170,6 +193,9 @@ We'll see.
 4.  Brams Steven J., 1994. "Game Theory and Literature," Games and Economic Behavior, Elsevier, vol. 6(1), pages 32-54, January. <u>[Available here.](http://www.sscnet.ucla.edu/polisci/faculty/chwe/austen/brams1994.pdf)</u>
 
 5.  Alexander Mehlmann,*The game’s afoot! Game theory in myth and paradox*, American Mathematical Society 2000. <u>[AMS Bookstore](https://bookstore.ams.org/stml-5/)</u>
+
+6. *The Tragedy of the Commons*. <u><https://en.wikipedia.org/wiki/Tragedy_of_the_commons></u>
+
 
 
 ## Game Theory Pop Music, Movie Clip, and TV ad Playlist !!
@@ -191,7 +217,8 @@ We'll see.
 5.  The Gods Must be Crazy (Brinkmanship)
     <u><https://www.youtube.com/watch?v=9LvViKftRnA></u>
     
-6. L.A. Confidential  <u><https://criticalcommons.org/embed?m=pBXsAUvh9></u>
+6. L.A. Confidential
+  <u><https://criticalcommons.org/embed?m=pBXsAUvh9></u>
 
 
 ## Activity-2
