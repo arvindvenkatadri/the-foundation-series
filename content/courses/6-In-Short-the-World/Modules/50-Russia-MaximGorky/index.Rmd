@@ -21,12 +21,11 @@ library(embedr) # Embed multimedia in HTML files
 
 ![](https://upload.wikimedia.org/wikipedia/commons/f/f5/Maxim_Gorky.jpg)
 
-> Maxim Gorky (born March 16 [March 28, New Style], 1868, Nizhny
-> Novgorod, Russia—died June 14, 1936) Russian short-story writer and
-> novelist who first attracted attention with his naturalistic and
-> sympathetic stories of tramps and social outcasts and later wrote
-> other stories, novels, and plays, including his famous The Lower
-> Depths.
+> Maxim Gorky (born March 16, 1868, Nizhny Novgorod, Russia—died June
+> 14, 1936) Russian short-story writer and novelist who first attracted
+> attention with his naturalistic and sympathetic stories of tramps and
+> social outcasts and later wrote other stories, novels, and plays,
+> including his famous The Lower Depths.
 
 > (He) was a Russian author considered the father of Soviet
 > revolutionary literature and founder of the doctrine of socialist
@@ -59,7 +58,8 @@ Clown.](Maxim%20Gorky%20-%20The%20Clown.docx)</u>
 
 -   Being Pretentious and Being Genuine
 -   Humour as way to examine Life
--   Street Events, The Bystander Effect, and Jane Jacobs' idea "*Eyes on the Street*"
+-   Street Events, The Bystander Effect, and Jane Jacobs' idea "*Eyes on
+    the Street*"
 -   Signalling and How to Speak without Talking
 -   Risk Taking for the Benefit of Society
 -   Hating Oneself for Cowardice?
@@ -141,10 +141,10 @@ Year: 1970\
 
 | Hindi Lyrics                               | English Translation                           |
 |-----------------------------------|-------------------------------------|
-| Kehta hai joker saara jamaana              | Says the Joker, that the whole World          |
+| Kehta hai joker saara zamaana              | Says the Joker, that the whole World          |
 | Aadhi haqikat aadha fasana                 | (is) Half Truth, Half Story                   |
-| Chashma utaaro phir yaaro dekho            | Remove your specs, and then see, my friends   |
-| duniya nahi hai chehra purana              | The World is New, the Face is Old             |
+| Chashma utaaro phir dekho yaaro            | Remove your specs, and then see, my friends   |
+| duniya nayee hai, chehra purana            | The World is New, the Face is Old             |
 | kehta hai joker...                         | Says the Joker...                             |
 | -----                                      | -----                                         |
 | ( Apne pe hans kar jag ko hansaya          | He laughs at Himself to make the World laugh  |
@@ -166,12 +166,14 @@ Year: 1970\
 ## Writing Prompts
 
 1.  On being funny at the "wrong time"
-1.  On being a bystander in a street crime / Actions Speak Louder than Words?
-1.  On the Design of an ad/campaign for the Police to prevent neighbourhood crime
-1.  On a cringe-worthy act on your part (autobiographical first person
+2.  On being a bystander in a street crime / Actions Speak Louder than
+    Words?
+3.  On the Design of an ad/campaign for the Police to prevent
+    neighbourhood crime
+4.  On a cringe-worthy act on your part (autobiographical first person
     writing)
-1.  A discussion of jobs and professions that seem to take risks for the
+5.  A discussion of jobs and professions that seem to take risks for the
     benefit of society
-1.  Comparing this story with <u>[Peter Carey's The Last Days of the
+6.  Comparing this story with <u>[Peter Carey's The Last Days of the
     Famous
     Mime](Peter%20Carey%20-%20The%20Last%20Days%20of%20the%20Famous%20Mime.docx)</u>.

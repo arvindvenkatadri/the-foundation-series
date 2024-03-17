@@ -119,7 +119,7 @@ The Accumulated random binary Actions of a large number of people gives us an ag
 
 ## Is Randomness a Design Tool?
 
-![Photo by Sharath G. from Pexels](pexels-sharath-g-4418675.jpg)
+![](pexels-sharath-g-4418675.jpg)
 
 
 But we are interested in more than just the Poisson Process. And mangoes
@@ -182,7 +182,7 @@ happens!!
 -   Randomness can help create fairness?
 -   Visibly?
 -   *Generate Randomness* to make things fair? How?
--   What does that even mean, "generate randomness"?
+-   What does that even mean, to <u>["generate randomness"](https://www.random.org/coins/)</u>?
 -   If something is random-random, how can it be fair "every time"?
 -   What does <u>[**"every
     time"**](https://web.archive.org/web/20190302202830id_/http://pdfs.semanticscholar.org/a931/ac1b3ef11235d4516f341b3b5bd8b1ee330e.pdf)</u>
@@ -200,6 +200,8 @@ We'll see.
 2.  Penguin Press \@ Medium. *Abraham Wald and the Missing Bullet
     Holes*. <u>[**(Web
     Link)**](https://medium.com/@penguinpress/an-excerpt-from-how-not-to-be-wrong-by-jordan-ellenberg-664e708cfc3d)</u>
+
+![](Survivorship-bias.svg){width=200px}
 
 3.  R. J. MacKay and R. W. Oldford. <u>[**Scientific Method, Statistical
     Method and the Speed of

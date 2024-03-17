@@ -193,7 +193,7 @@ and <u>[he](<https://www.templepurohit.com/story-nachiketa-yama/>)</u>. But how
 did they manage it?
 
 Yes, they asked
-<u>[Questions](https://www.brainyquote.com/quotes/pablo_picasso_102018!)</u> !
+<u>[Questions](https://www.brainyquote.com/quotes/pablo_picasso_102018)</u>!
 
 ## Suppose we were Hamlet....
 
@@ -264,7 +264,7 @@ From
 Let us pretend we are Hamlet and design a simple experiment to find out
 some "truth" (highly probable idea) that is important to us.
 
-### [**No Free Hunch**](https://nofreehunch.org): Hypothesis Design
+### <u>[**No Free Hunch**](https://nofreehunch.org)</u>: Hypothesis Design
 
 We learnt a lot (new) words from Hamlet, didn't we? How many do we
 remember? What Hypothesis could be make? What do we have a hunch about?
@@ -416,18 +416,19 @@ ggplot(p1, aes(x = values, fill = p1, colour = p1)) +
 
 ### Computing Parallel Worlds: The Permutation Test
 
-What is we cannot trust our eyes to compare the pair-wise Histograms?
+What if we cannot trust our eyes to compare the pair-wise Histograms?
 
 If there was considerable overlap?
 
 Is there a better way? Yes by playing another Childhood Game, with **a
 deck of cards** !!!
 
-#### Before we play with cards, some background
+Before we play with cards, some background: 
 
-From: Tim C. Hesterberg (2015) *What Teachers Should Know About the
-Bootstrap: Resampling in the Undergraduate Statistics Curriculum*, The
-American Statistician, 69:4, 371-386, DOI: 10.1080/00031305.2015.1089789
+> From: Tim C. Hesterberg (2015) *What Teachers Should Know About the
+> Bootstrap: Resampling in the Undergraduate Statistics Curriculum*, 
+> The American Statistician, 69:4, 371-386
+> DOI: 10.1080/00031305.2015.1089789
 
 > Student B. R. was annoyed by TV commercials. He suspected that there
 > were more commercials in the "basic" TV channels, the ones that come

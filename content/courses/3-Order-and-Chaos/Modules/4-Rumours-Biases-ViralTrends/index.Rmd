@@ -61,7 +61,6 @@ Why are Petrol Stations located next to each other? Here is the
 `r blogdown::shortcode("youtube", "u4cKzGj58q4")` <br>
 
 
-
 ## Viral Trends...With a Song?
 
 A Song that is all about Network Effects !!!

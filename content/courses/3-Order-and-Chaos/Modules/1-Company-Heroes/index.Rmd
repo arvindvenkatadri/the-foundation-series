@@ -53,10 +53,10 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/d/
 
 </iframe>
 
-### Movie Time!
+### Classic Movie Time!
 
 Let us watch a (very very) small part of this movie, <u>[The Three
-~~Pangas~~ Musketeers-1973](https://en.wikipedia.org/wiki/The_Three_Musketeers_(1973_live-action_film))</u>
+~~Pangas~~ Musketeers-1973](https://en.wikipedia.org/wiki/The_Three_Musketeers_(1973_live-action_film))</u>.
 
 `r blogdown::shortcode("youtube","QPun-5dtld0")`
 <br>
@@ -69,13 +69,12 @@ And here is an older, slightly longer version:
 </iframe>
 
 <br> If this does not work... the same clip is available here:
-<https://www.tcm.com/video/454255/three-musketeers-the-1973-movie-clip-we-are-only-three/>
+<u><https://www.tcm.com/video/454255/three-musketeers-the-1973-movie-clip-we-are-only-three/></u>
 
-### Fiction Time!
+### Classic Fiction Time!
 
 Let us read aloud(!) a bit of good old classic fiction !! This is the
-Conversation that occurs right before the duel scene we saw in the video
-above.
+Conversation that occurs right before the duel scene we saw in the video above.
 
 <u>[**Chapter 5. THE KING'S MUSKETEERS AND THE CARDINAL'S
 GUARDS**](https://www.gutenberg.org/files/1257/1257-h/1257-h.htm).</u>[^1]
@@ -94,8 +93,9 @@ Here is the audio reading of this chapter from
 </center>
 
 ### Discussion-1
-- <u>["When have to fight, fight! Don't talk!"](https://youtu.be/JrYtD7gSWsI?feature=shared)</u>
-- Why were they so polite to each other? (Oh, These French...)
+
+- <u>["When have to shoot, shoot! Don't talk!"](https://youtu.be/JrYtD7gSWsI?feature=shared)</u> said <u>[Eli Wallach](https://en.wikipedia.org/wiki/Eli_Wallach)</u>.
+- Pardon,m'sieu, but why were they so polite to each other? (Oh, These French...)
 - Were they talking as if they didn't want to fight?
 - But to "have fought already"?
 - The **Shadow of the Future**
@@ -104,11 +104,9 @@ Here is the audio reading of this chapter from
 
 What about this game ?
 
-<iframe width="560" height="315" src="https://criticalcommons.org/embed?m=vufgXphCO" frameborder="0" allowfullscreen>
+<iframe width="560" height="315" src="https://criticalcommons.org/embed?m=vufgXphCO" frameborder="0" allowfullscreen></iframe>
 
-</iframe>
-
-## Discussion-2
+### Discussion-2
 
 What **emotions** or **motivations** are portrayed by the characters in
 the story? We can think of the "4Rs":
@@ -138,8 +136,7 @@ the story? We can think of the "4Rs":
     Theory of Games of Strategy*, RAND Corporation,
     <ISBN:9780833042224>. This is a very humourous and fun book on Game
     Theory ! It is available for free online at the <u>[**RAND
-    Corporation
-    Website.**](https://www.rand.org/content/dam/rand/pubs/commercial_books/2007/RAND_CB113-1.pdf)</u>
+    Corporation Website.**](https://www.rand.org/content/dam/rand/pubs/commercial_books/2007/RAND_CB113-1.pdf)</u>
 
 2.  Ken Binmore,*Playing for Real: A Text on Game Theory*,
     <ISBN:9780195300574>, Oxford University Press, March 2007.
@@ -156,6 +153,9 @@ the story? We can think of the "4Rs":
 5.  Alexander Mehlmann,*The game’s afoot! Game theory in myth and
     paradox*, American Mathematical Society 2000. <u>[AMS
     Bookstore](https://bookstore.ams.org/stml-5/)</u>
+    
+6.  Steven .J Brams. (February 4, 1992). *Game Theory in Literature* 
+    Department of Politics, New York University, New York, New York        10003. <u>[Read the PDF](brams1994.pdf)</u>
 
 ## Game Theory Pop Music, Movie Clip, and TV ad Playlist !!
 

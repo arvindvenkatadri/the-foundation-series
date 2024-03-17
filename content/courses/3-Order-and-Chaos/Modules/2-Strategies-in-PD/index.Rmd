@@ -63,7 +63,7 @@ So, let us **play** a Game,  on the <u>[**Game of Trust Website**](https://ncase
 - We saw quite a few strategies here
 - The *best strategy* is one that **survives**!
 - Survival is everything. That is what D'Artagnan and the Three Musketeers were also basing their actions on!
-  * Read more about this idea in this possibly illegal copy of <u>[**Nassim Nicholas Taleb, "Skin in the Game"**.](https://philosophiatopics.files.wordpress.com/2018/10/skin-in-the-game-nassim-nicholas-taleb.pdf)</u>
+  * Read more about this idea in this (possibly illegal) copy of <u>[**Nassim Nicholas Taleb's Book, "Skin in the Game"**.](https://philosophiatopics.files.wordpress.com/2018/10/skin-in-the-game-nassim-nicholas-taleb.pdf)</u>
   * Or you can <u>[**watch Taleb speak**](https://youtu.be/uv6KLbkvua8?feature=shared)</u>
 - We will encounter *Survival* again soon!
 
@@ -72,7 +72,7 @@ So, let us **play** a Game,  on the <u>[**Game of Trust Website**](https://ncase
 
 This is a famous study of the Iterated Prisoners' Dilemma by Robert Axelrod, <u>[**The Evolution of Cooperation** (PDF)](Axelrod-Hamilton.pdf)</u>. We will read just a wee bit of it in class. 
 
-And here is Robert Axelrod on the **RadioLab Podcast**
+And here is Robert Axelrod on the **RadioLab Podcast**:
 
 <iframe frameborder="0" scrolling="no" height="130" width="100%" src="https://www.wnyc.org/widgets/ondemand_player/wnycstudios/#file=/audio/json/104010/&amp;share=1">
 
@@ -118,8 +118,12 @@ data %>%
   tab_style(
     style = cell_text(weight = "bold"),
     locations = cells_body(columns = c(`Player #2`))) %>% 
+  tab_style(
+    style = cell_fill(color = "grey"),
+    locations = cells_body(columns = D, rows = 2)) %>% 
   tab_footnote(footnote = md("**Payoffs are (Player#1, Player#2)**")) %>% 
-  tab_footnote(footnote = md("R = Reward; S = Sucker's Payoff; T = Temptation; P = Punishment"))
+  tab_footnote(footnote = md("R = Reward; S = Sucker's Payoff; T = Temptation; P = Punishment")) %>% 
+  tab_footnote(footnote = md("Shaded Cells are Nash Equilibria"))
 
 
 ```
@@ -133,9 +137,9 @@ $$
 $$
 R > (S + T)/2
 $$
-The first condition ensures that Temptation (to D) is always stronger than the Reward(for C); and the second ensures that the two Players cannot mutually agree to alternate between C and D and have a higher net reward !! (<u>[Can you Game Game Theory ? That's a Cabal !! ](https://www.quora.com/Who-is-responsible-for-repairing-roads-if-they-are-damaged-by-heavy-vehicles-Who-can-we-complain-to-if-our-roads-are-damaged)</u>)
+The first condition ensures that Temptation (to D) is always stronger than the Reward(for C); and the second ensures that the two Players cannot mutually agree to alternate between C and D and have a higher net reward !! <u>[Can you Game Game-Theory ? That's a Cabal !! ](https://www.quora.com/Who-is-responsible-for-repairing-roads-if-they-are-damaged-by-heavy-vehicles-Who-can-we-complain-to-if-our-roads-are-damaged)</u>
 
-Wherever you "are" on the matrix, you can **always** improve your situation by defecting!! "D" is your **best move**, your **"Dominant Strategy"**, because that is how the matrix is stacked. And if both players do that, then we end up at the bottom-right cell, which says "(D,D)", where the game stays forever, in state called the **"Nash Equilibrium"**. \
+Wherever you "are" on the matrix, you can **always** improve your situation by defecting!! "D" is your **best move**, your **"Dominant Strategy"**, because that is how the matrix is (numerically) stacked. And if both players do that, then we end up at the bottom-right cell, which says "(D,D)", where the game stays forever, in state called the **"Nash Equilibrium"**. \
 
 While just a little thought, even hesitation, could have led us "(C, C)"...An altruistic decision to "C" first could tip the scales in favour of "(C,C)". 
 
