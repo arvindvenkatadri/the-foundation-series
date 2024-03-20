@@ -416,16 +416,13 @@ ggplot(p1, aes(x = values, fill = p1, colour = p1)) +
 
 ### Computing Parallel Worlds: The Permutation Test
 
+BTW, why did Gabbar Singh say to Kaalia and the others in Sholay, 
+<u>["Hum ko kuchh nahi pata"](https://youtu.be/chi9hsfYcDE)?</u> And then afterwards, "Kamal ho gaya"...why does he say that?
+
 What if we cannot trust our eyes to compare the pair-wise Histograms?
+If there was considerable overlap? Is there a better way? Can we fix this by playing another Childhood Game? Yes, with **a deck of cards**! But before we play with cards, some background: 
 
-If there was considerable overlap?
-
-Is there a better way? Yes by playing another Childhood Game, with **a
-deck of cards** !!!
-
-Before we play with cards, some background: 
-
-> From: Tim C. Hesterberg (2015) *What Teachers Should Know About the
+> From: ~~Gabbar Singh~~ Tim C. Hesterberg (2015) *What Teachers Should Know About the
 > Bootstrap: Resampling in the Undergraduate Statistics Curriculum*, 
 > The American Statistician, 69:4, 371-386
 > DOI: 10.1080/00031305.2015.1089789
