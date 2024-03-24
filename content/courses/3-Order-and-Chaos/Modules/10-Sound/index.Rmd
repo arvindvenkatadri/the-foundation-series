@@ -2,7 +2,7 @@
 title: "\U0001F578 Wired for Sound"
 date: 2021-08-06
 summary: A model for analyzing and synthesizing Sound
-weight: 130
+weight: 100
 type: book
 tags:
 - Fourier Series, Sound, Vibration

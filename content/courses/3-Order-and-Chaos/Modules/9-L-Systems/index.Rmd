@@ -6,7 +6,7 @@ tags:
 - Algorithmic Trees
 - Lindenmayer Systems
 type: book
-weight: 100
+weight: 90
 links:
 slides: 
 url_code: ""

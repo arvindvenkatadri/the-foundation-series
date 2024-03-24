@@ -127,6 +127,8 @@ Discussion: `Network Traversal, Node Degree, Centrality, Betweenness, Link Value
 
 12. Omar Lizardo and Isaac Jilbert, *Social Networks: An Introduction.* <u><https://bookdown.org/omarlizardo/_main/></u>
 
+13. David Easely and Kleinberg. Networks, Market and Crowds. **The Rich get Richer.** <u><http://www.cs.cornell.edu/home/kleinber/networks-book/networks-book-ch18.pdf></u>
+
 ## Network Science in a Bollywood Song
 
 Song: Kuchh Toh Log Kahenge\
