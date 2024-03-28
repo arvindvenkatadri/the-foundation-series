@@ -51,6 +51,7 @@ b) A Creative Piece of Writing on a choice of topics to be announced after readi
 
 ## References
 
+1. Francine Prose. *Close Reading: Learning to write by learning to read*. FICTION 2006 ISSUE. <u><https://www.theatlantic.com/magazine/archive/2006/08/close-reading/305038/></u>
 1. Neumann, Bonnie H., Ed.; McDonnell, Helen M., Ed., *Teaching the Short Story: A Guide to Using Stories from around the World*. National Council of Teachers of English, Urbana, IL,USA. ISBN-0-8141-1947-6  
 
 1. Ron Hansen, *You've Got to Read This: Contemporary American Writers Introduce Stories That Held Them in Awe*. Harper Perennial, 1994. ISBN:9780060982027  

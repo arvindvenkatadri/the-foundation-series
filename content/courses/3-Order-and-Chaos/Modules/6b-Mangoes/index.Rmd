@@ -535,11 +535,11 @@ Gramener** [(**Weblink**)](https://gramener.com/comicgen)</u>
 
 2.  <u><https://safetyculture.com/topics/design-of-experiments/></u>
 
-3.  Tim C. Hesterberg (2015). *What Teachers Should Know About the
-    Bootstrap: Resampling in the Undergraduate Statistics Curriculum*,
-    The American Statistician, 69:4, 371-386,
-    <u><DOI:10.1080/00031305.2015.1089789></u>. <u>[PDF
-    here](hesterberg2015.pdf)</u>
+1. A. J. Lawrance (1996) *A Design of Experiments Workshop as an Introduction to Statistics*, The American Statistician, 50:2, 156-158, DOI: 10.1080/00031305.1996.10474364. <u>[PDF](Lawrence-ADesignofExperimentsWorkshopasanIntroductiontoStatistics.pdf)</u>
+
+1. Victoria Woodard (2023) *Five Hands-on Experiments for a Design of Experiments Course*, Journal of Statistics and Data Science Education, 31:3, 225-235, DOI: 10.1080/26939169.2023.2195889. <u>[PDF](Five Hands-on Experiments for a Design of Experiments Course.pdf)</u>
+
+3.  Tim C. Hesterberg (2015). *What Teachers Should Know About the Bootstrap: Resampling in the Undergraduate Statistics Curriculum*, The American Statistician, 69:4, 371-386, DOI:10.1080/00031305.2015.1089789. <u>[PDF](hesterberg2015.pdf)</u>
 
 1. Shuttleworth, M. (2009). What is the scientific method? Retrieved from <u><https://explorable.com/what-is-the-scientific-method></u>
 

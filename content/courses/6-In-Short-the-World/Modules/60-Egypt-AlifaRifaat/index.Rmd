@@ -101,24 +101,24 @@ Director : Shekhar Kapoor\
 
 `r embedr::embed_audio("old_Masoom-Do Naina Aur Ek Kahani.mp3")`
 
-| Hindi Lyrics                                         | English Translation                                              |
-|---------------------------------|---------------------------------------|
-| Do naina aur ek kahanee(2)                           | Two eyes and one story,                                          |
-| thoda sa badal, thoda sa panee aur ek kahanee(2)     | some clouds, some water, and a story                             |
-| ------                                               | ------                                                           |
-| Chhotee see do jhilon me woh, bahatee rahatee hai(2) | In two small lakes, they keep floating/flowing                   |
-| Koi sune ya na sune, kahatee rahatee hai             | Whether anyone is listening or not, they keep telling the story, |
-| Kuchh likh ke aur, kuchh jubanee                     | Some Written, and Sometimes by speaking out                      |
-| ------                                               | ------                                                           |
-| Thodee sai hain janee hui, thodee see nayee(2)       | A part of the story is known, but a small part of it is new      |
-| Jahaan ruke aansu, waheen puree ho gayee             | Whenever the tears stop, that is where the story stops too,      |
-| Hai toh nayee fir bhi, hain puranee                  | It is new but its old at the same time                           |
-| ------                                               | -------                                                          |
-| Ek khatm ho toh, dusaree raat aa jatee hai(2)        | As one night passes, it is time for the other night,             |
-| Hothhon pe fir bhulee hui, bat aa jatee hai          | And those forgotten words cross my lips                          |
-| Do naino kee hain yeh kahanee                        | That is the story of the two eyes!                               |
-| thoda sa badal, thoda sa panee aur ek kahanee        | some clouds, some water, and a story                             |
-| Do naina aur ek kahanee...                           | Two eyes and one story.....                                      |
+| Hindi Lyrics                                          | English Translation                                              |
+|-------------------------------------------------------|------------------------------------------------------------------|
+| Do naina aur ek kahanee(2)                            | Two eyes and one story,                                          |
+| thoda sa badal, thoda sa panee aur ek kahanee(2)      | some clouds, some water, and a story                             |
+| ------                                                | ------                                                           |
+| Chhotee see do jheelon me woh, bahatee rahatee hai(2) | In two small lakes, they keep floating/flowing                   |
+| Koi sune ya na sune, kahatee rahatee hai              | Whether anyone is listening or not, they keep telling the story, |
+| Kuchh likh ke aur, kuchh zubanee                      | Some Written, and Sometimes by speaking out                      |
+| ------                                                | ------                                                           |
+| Thodee sai hain janee hui, thodee see nayee(2)        | A part of the story is known, but a small part of it is new      |
+| Jahaan ruke aansu, waheen puree ho gayee              | Whenever the tears stop, that is where the story stops too,      |
+| Hai toh nayee phir bhi, hain puranee                  | It is new but its old at the same time                           |
+| ------                                                | -------                                                          |
+| Ek khatm ho toh, dusaree raat aa jatee hai(2)         | As one night passes, it is time for the other night,             |
+| Hothhon pe phir bhulee hui, baat aa jatee hai         | And those forgotten words cross my lips                          |
+| Do naino kee hain yeh kahanee                         | That is the story of the two eyes!                               |
+| thoda sa badal, thoda sa panee aur ek kahanee         | some clouds, some water, and a story                             |
+| Do naina aur ek kahanee...                            | Two eyes and one story.....                                      |
 
 ## Writing Prompts
 
@@ -126,3 +126,7 @@ Director : Shekhar Kapoor\
     relationships and not merely on (imaginary) opulence/ property.
 2.  Your Friend is Blind.
 3.  A Child discovers a piece of Family History.
+4.  Compare the theme of *blindness* in this story with that in
+    <u>[Raymond Carver's story,
+    *Cathedral*](.../../../160-usa-raymondcarver/index.html)</u>
+    
