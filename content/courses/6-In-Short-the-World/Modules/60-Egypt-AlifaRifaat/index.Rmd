@@ -31,9 +31,10 @@ From the book blurb:
 > traveled abroad. This virtual immunity from Western influence lends a
 > special authenticity to her direct yet sincere accounts of death,
 > sexual fulfillment, the lives of women in purdah, and the frustrations
-> of everyday life in a male-dominated Islamic environment. Translated
-> from the Arabic by Denys Johnson-Davies
-> <https://www.theguardian.com/world/2017/jun/18/denys-johnson-davies-obituary>,
+> of everyday life in a male-dominated Islamic environment.\
+>
+> Translated from the Arabic by Denys Johnson-Davies
+> <u><https://www.theguardian.com/world/2017/jun/18/denys-johnson-davies-obituary></u>,
 > the collection admits the reader into a hidden private world,
 > regulated by the call of the mosque, but often full of profound
 > anguish and personal isolation. Badriyya’s despairing anger at her
@@ -51,7 +52,7 @@ Stories**.](Distant%20View%20of%20a%20Minaret%20and%20Other%20Storie%20-%20Rifaa
 ## Themes
 
 -   Age and Aging
--   Disease and Healthcare
+-   Poverty, Disease, and Healthcare
 -   Woman's Place in Society
 -   "Eyes are the Gateway to the Soul" - Herman Melville
 -   Religion, Tradition, and Conservative Belief: Is Belief always
@@ -86,10 +87,14 @@ Stories**.](Distant%20View%20of%20a%20Minaret%20and%20Other%20Storie%20-%20Rifaa
 
 8.  *Oyun Baheya*, the Song. <u><https://youtu.be/sb4ZNdLGeIo></u>
 
+9. Female Genital Mutilation. <u><https://www.who.int/news-room/fact-sheets/detail/female-genital-mutilation></u> and <u><https://data.unicef.org/topic/child-protection/female-genital-mutilation/></u>
+
+
+
 ### Song for the Story
 
 Song: Do Naina aur Ek Kahani\
-Film: Masoom(1983)\
+Film: Masoom (1983)\
 Artist: Arati Mukherjee\
 Music Director: R.D Burman\
 Lyricist: Gulzar\
