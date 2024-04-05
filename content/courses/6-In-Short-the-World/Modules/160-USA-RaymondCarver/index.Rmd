@@ -44,32 +44,35 @@ We will read Carver's luminous story, **Cathedral**. <u>[PDF](/pdf/ISTW/RaymondC
 2. H.G. Wells' story, <u>[The Country of the Blind](/pdf/ISTW/HGWells - The Country of the Blind.docx)</u>
 
 > "The Country of the Blind" is a short story written by H. G. Wells. It was first published in the April 1904 issue of The Strand Magazine and included in a 1911 collection of Wells's short stories, The Country of the Blind and Other Stories. It is one of Wells's best known short stories, and features prominently in literature **dealing with blindness**.  
-- Wikipedia
+[-Wikipedia]{style="float:right"}
 
+<br>
 4. **Sparsh**, starring Naseeruddin Shah and Shabana Azmi. 
 
 `r blogdown::shortcode("youtube", "8yB4IwsnyQ8")`
 
 <u><https://www.youtube.com/watch?v=8yB4IwsnyQ8></u>
 
-> Sparsh (English: Touch) is a 1980 Indian Hindi feature film directed by Sai Paranjpye. It stars Naseeruddin Shah and Shabana Azmi playing the characters of a visually impaired principal and a sighted teacher in a school for the blind, where they fall in love though soon their complexes tag along and they struggle to get past them to reconnect with the "touch" of love. The film remains most memorable for the subtle acting of its leads, plus the handling of the issue of relationships with the visually handicapped, revealing the emotional and perception divide between the worlds of the "blind" and the "sighted", epitomized by the characters. The film won the National Film Award for Best Feature Film in Hindi. However, the film's release was delayed by almost 4 years.
+> Sparsh (English: Touch) is a 1980 Indian Hindi feature film directed by Sai Paranjpye. It stars Naseeruddin Shah and Shabana Azmi playing the characters of a visually impaired principal and a sighted teacher in a school for the blind, where they fall in love though soon their complexes tag along and they struggle to get past them to reconnect with the "touch" of love. 
+>
+> The film remains most memorable for the subtle acting of its leads, plus the handling of the issue of relationships with the visually handicapped, revealing the emotional and perception divide between the worlds of the "blind" and the "sighted", epitomized by the characters. The film won the National Film Award for Best Feature Film in Hindi. However, the film's release was delayed by almost 4 years.
 
 Shorter Summary:
 
 <u><https://www.dailymotion.com/video/x3nv3l5></u>
 
 
-5. **And Then there was Light** is the autobiography of Jacques Lusseyran, the blind hero of the French Resistance during WWII.
+5. *And Then there was Light* is the autobiography of Jacques Lusseyran, the blind hero of the French Resistance during WWII.
 
 ![](https://angelusnews.com/wp-content/uploads/2019/09/31u8m4qqqg_jerome_garciant.jpg)
 <u><https://angelusnews.com/news/us-world/jacques-lusseyran-blind-hero-of-the-french-resistance/></u>
 
 > “And There Was Light” is the strange and beautiful autobiography of Jacques Lusseyran, “blind hero of the French Resistance.”
-
+>
 >Born in Paris in 1924, Lusseyran lost his sight at the age of 8 in a schoolroom incident.  Even at that age, he was groping toward the transcendent.
-
+>
 >Trying to navigate his way around a world he could no longer see, he came to learn that inanimate things are alive, and of the sympathetic current that runs between the branches of a tree in springtime, and that if you press the little stone you’ve secreted in your pocket, it will press back.
-
+>
 >He wrote, “The seeing commit a strange error. They believe that we know the world only through our eyes. For my part, I discovered that the universe consists of pressure, that every object and every living being reveals itself to us at first by a kind of quiet yet unmistakable pressure that indicates its intention and its form. I even experienced the following wonderful fact: A voice, the voice of a person, permits him to appear in a picture. When the voice of a man reaches me, I immediately perceive his figure, his rhythm, and most of his intentions.
 
  

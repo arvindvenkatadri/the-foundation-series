@@ -43,10 +43,10 @@ Jackson](Oxford%20Anthology%20of%20the%20Brazilian%20Short%20St%20-%20Jackson,%2
 
 ### Notes and References
 
-1.  <https://www.newyorker.com/books/page-turner/the-true-glamour-of-clarice-lispector>
+1.  <u><https://www.newyorker.com/books/page-turner/the-true-glamour-of-clarice-lispector></u>
 
 2.  Suryakant Tripathi "Nirala". 1923. *Bhikshuk*.
-    <http://kavitakosh.org>
+    <u><http://kavitakosh.org></u>
 
 वह आता--
 
@@ -84,7 +84,11 @@ Jackson](Oxford%20Anthology%20of%20the%20Brazilian%20Short%20St%20-%20Jackson,%2
 
 **तुम्हारे दुख मैं अपने हृदय में खींच लूँगा।**
 
--   Suryakant Tripathi "Nirala"
+[-Suryakant Tripathi "Nirala"]{style="float:right"}
+
+
+
+<br>
 
 ## Song for the Story
 

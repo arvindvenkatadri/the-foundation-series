@@ -30,7 +30,9 @@ library(embedr) # Embed multimedia in HTML files
 > own. And Dino would have fun surfing the Internet, tweeting,
 > photographing on Instagram. For this reason he would be proud of "his"
 > site which is now beginning to take its first steps.\
-> - Almerina Buzzati \@ <u><http://dinobuzzati.it></u>
+[- Almerina Buzzati \@ <u><http://dinobuzzati.it></u>]{style="float:right"}
+
+
 
 ### Story
 We will read Buzzati's surreal story, <u>[**The Falling Girl** PDF](The_Falling_Girl.pdf)</u>
@@ -55,7 +57,7 @@ this!! He would have approved!!
 
 `r blogdown::shortcode("youtube", "_ji8jZjk56c")`
 
-Lyrics and Translation: <https://www.filmyquotes.com/songs/1245>
+Lyrics and Translation: <u><https://www.filmyquotes.com/songs/1245></u>
 
 | Hindi Lyrics                                  | English Translation                             |
 |-----------------------------------|-------------------------------------|

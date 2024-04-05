@@ -24,14 +24,14 @@ library(embedr) # Embed multimedia in HTML files
 
 From <https://encyclopedia.densho.org/Hisaye_Yamamoto/>
 
-> A Southern California [Nisei](https://encyclopedia.densho.org/Nisei/)
+> A Southern California <u>[Nisei](https://encyclopedia.densho.org/Nisei/)</u>
 > writer of short stories, Hisaye Yamamoto (1921–2011) was among the
 > first Japanese American writers to win national renown after World War
 > II. Yamamoto's upbringing in an immigrant farming community and her
 > incarceration in a World War II U.S. government prison camp formed the
 > basis for some of her best-known stories, notable for their sensitive
 > portrayal of the emotionally and artistically constricted lives of
-> [Issei](https://encyclopedia.densho.org/Issei/) women and
+> <u>[Issei](https://encyclopedia.densho.org/Issei/)</u> women and
 > intergenerational family dynamics. Oblique, often deadpan in delivery
 > and told with quiet humor and bracing candor, they reveal the love
 > affairs, madness, psychic and physical brutality that lay beneath the
@@ -60,11 +60,10 @@ Syllables.](HisayeYamamoto%20-%2017%20syllables.docx)</u>
 ### Notes and References
 
 1.  A Beautiful Scrolly Story about Yamamoto and her influence.
-    <https://artsandculture.google.com/story/hisaye-yamamoto-an-american-story-american-writers-museum/OAVRaqAwV3tpLA?hl=en>
-2.  Reading Yamamoto.
-    <https://faculty.georgetown.edu/bassr/heath/syllabuild/iguide/yamamoto.html>
+    <u><https://artsandculture.google.com/story/hisaye-yamamoto-an-american-story-american-writers-museum/OAVRaqAwV3tpLA?hl=en></u>
+2.  Reading Yamamoto. <u><https://faculty.georgetown.edu/bassr/heath/syllabuild/iguide/yamamoto.html></u>
     
-3. Gangs of Wasseypur. <u>https://youtu.be/To54dv2jnJg></u>
+3. Gangs of Wasseypur: "Permission Leni Chahiye, Na?" <u>https://youtu.be/To54dv2jnJg</u>
 
 ## Song for the Story
 

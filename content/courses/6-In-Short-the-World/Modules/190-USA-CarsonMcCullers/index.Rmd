@@ -25,7 +25,7 @@ library(embedr) # Embed multimedia in HTML files
 
 ### Story
 
-We will read McCullers' astonishing story, ***A Rock. A Tree. A Cloud*** <u>[PDF](Carson McCullers_A_Tree _ A Rock _ A Cloud.pdf)</u>
+We will read McCullers' astonishing story, ***A Rock. A Tree. A Cloud.*** <u>[PDF](Carson McCullers_A_Tree _ A Rock _ A Cloud.pdf)</u>
 
 ### Themes
 

@@ -19,7 +19,7 @@ library(blogdown)
 
 ## India : Ruth Prawer Jhabvala
 
-From: <https://www.britannica.com/biography/Ruth-Prawer-Jhabvala>
+From: <u><https://www.britannica.com/biography/Ruth-Prawer-Jhabvala></u>
 
 > Ruth Prawer Jhabvala, original name Ruth Prawer, (born May 7, 1927, Cologne, Germany—died April 3, 2013, New York, New York, U.S.), novelist and screenwriter, well known for her witty and insightful portrayals of contemporary Indian lives and, especially, for her 46 years as a pivotal member of Ismail Merchant and James Ivory’s filmmaking team.
 
@@ -46,9 +46,9 @@ We will read this beautiful, beautifully written story, with a completely cringe
 
 ### Additional Material
 
-1. The Great Indian Family: New Roles, Old Responsibilities, <https://www.amazon.in/Gitanjali-Prasad/e/B001HPLWHW/ref=dp_byline_cont_pop_book_1>
+1. The Great Indian Family: New Roles, Old Responsibilities, <u><https://www.amazon.in/Gitanjali-Prasad/e/B001HPLWHW/ref=dp_byline_cont_pop_book_1></u>
 
-2. Mukul Kesavan, The ugly Indian man: Of hygiene, hair and horrible habits, <https://www.telegraphindia.com/opinion/the-ugly-indian-man-of-hygiene-hair-and-horrible-habits/cid/1026680#>
+2. Mukul Kesavan, The ugly Indian man: Of hygiene, hair and horrible habits, <u><https://www.telegraphindia.com/opinion/the-ugly-indian-man-of-hygiene-hair-and-horrible-habits/cid/1026680#></u>
 
 ### Song for the Story
 

@@ -14,6 +14,9 @@ editor_options:
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 library(blogdown)
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr) # Embed multimedia in HTML files
+
 ```
 
 ## Guy de Maupassant
@@ -68,8 +71,8 @@ Suif**](/pdf/ISTW/BouleDeSuif-Maupassant.pdf)</u>
 > fans may not have known that Nimoy, through his work as a
 > photographer, also championed women who did not conform to Hollywood's
 > ideal of physical perfection. [see also
-> <u><http://mashable.com/2015/02/26/body-positivity-get-involved></u>] In
-> 2007, Nimoy published The Full Body Project, a collection of photos
+> <u><http://mashable.com/2015/02/26/body-positivity-get-involved></u>]
+> In 2007, Nimoy published The Full Body Project, a collection of photos
 > featuring nude women of many shapes and sizes. Nimoy's previous book
 > of photographs captured images of nude women as well, though the
 > models' slim bodies hewed closely to the conventional standards of
@@ -80,13 +83,12 @@ Suif**](/pdf/ISTW/BouleDeSuif-Maupassant.pdf)</u>
 Listen to Leonard Nimoy discuss this project on NPR:
 
 <iframe src="https://www.npr.org/player/embed/15912659/15912667" width="100%" height="290" frameborder="0" scrolling="no" title="NPR embedded audio player">
-
 </iframe>
 
 4.  It Ain't Over until the Fat Lady Sings:
-    <https://knowyourphrase.com/aint-over-until-the-fat-lady-sings>
+    <u><https://knowyourphrase.com/aint-over-until-the-fat-lady-sings></u>
 
-5.  *Is it all about Hips?* <http://bollynatyam.com/books/>
+5.  *Is it all about Hips?*: <u><http://bollynatyam.com/books/></u>
 
 ```{r, echo=FALSE, out.height="50%", out.width="50%"}
 knitr::include_graphics("book_cover_temp_website.jpg")
@@ -103,32 +105,34 @@ Singer: Kishore Kumar\
 Music: R. D. Burman\
 Film: Amar Prem (1972)\
 
+`r embedr::embed_audio("Kuchh to Log kahenge - Amar Pr.mp3")`
+
 <u><https://www.youtube.com/watch?v=OK6Hux4spNM></u>
 
-| Hindi Lyrics                         | English Translation                            |
-|---------------|-------------------------------------------|
-| Kuch toh log kahenge                 | People will say something or the other         |
-| Logon ka kaam hai kehna              | It's the job of people to say something        |
-| Chhodo bekaar ki baaton mein         | Forget all these useless things                |
-| Kahin beet na jaaye raina            | Or else our night will end just around them    |
-| Kuch toh log kahenge                 | People will say something or the other         |
-| ------                               | -------                                        |
-| Kuch reet jagat ki aisi hai(2)       | Some traditions of the world are such that     |
-| Har ek subah ki shaam huyi(2)        | Every morning has had an evening               |
-| Tu kaun hai, tera naam hai kya       | Who are you and what's your name               |
-| Sita bhi yahan badnaam huyi          | Even Goddess Sita has been defamed here        |
-| Phir kyun sansaar ki baaton se       | Then why with these conversations of the world |
-| Bheeg gaye tere naina                | Have your eyes become bedewed                  |
-| Kuch toh log kahenge                 | People will say something or the other         |
-| ----------                           | ------------                                   |
-| Humko joh taane dete hai(2)          | Those who taunt us saying that                 |
-| Hum khoye hai in rangraliyon mein(2) | We're lost in this debauchery                  |
-| Humne unko bhi chup chupke           | Secretly I've also seen them                   |
-| Aate dekha in galiyon mein           | Coming in these streets                        |
-| Yeh sach hai jhoothi baat nahi       | This is the truth and not a lie                |
-| Tum bolo yeh sach hai na             | You tell me, isn't this the truth?             |
-| Kuch toh log kahenge                 | People will say something or the other         |
-| ...                                  | ...                                            |
+| Hindi Lyrics                          | English Translation                                           |
+|-----------------------------------|--------------------------------------|
+| Kuch toh log kahenge                  | People will say something or the other                        |
+| Logon ka kaam hai kehna               | It's the job of people to say something                       |
+| Chhodo bekaar ki baaton mein          | Forget all these useless things                               |
+| Kahin beet na jaaye raina             | Or else our night will end just around them                   |
+| Kuch toh log kahenge                  | People will say something or the other                        |
+| ------                                | -------                                                       |
+| Kuch reet jagat ki aisi hai(2)        | Some traditions of the world are such that                    |
+| Har ek subah ki shaam huyi(2)         | Every morning has had an evening (One thing leads to another) |
+| Tu kaun hai, tera naam hai kya        | Who are you and what's your name                              |
+| Sita bhi yahan badnaam huyi           | Even Sita has been defamed here                               |
+| Phir kyun sansaar ki baaton se        | Then why with these conversations of the world                |
+| Bheeg gaye tere naina                 | Have your eyes become bedewed                                 |
+| Kuch toh log kahenge                  | People will say something or the other                        |
+| ----------                            | ------------                                                  |
+| Humko joh taane dete hai(2)           | Those who taunt us saying that                                |
+| Hum khoye hai in rang-raliyon mein(2) | We're lost in this debauchery                                 |
+| Humne unko bhi chup chupke            | Secretly I've also seen them                                  |
+| Aate dekha in galiyon mein            | Coming in these streets                                       |
+| Yeh sach hai jhoothi baat nahi        | This is the truth and not a lie                               |
+| Tum bolo yeh sach hai na              | You tell me, isn't this the truth?                            |
+| Kuch toh log kahenge                  | People will say something or the other                        |
+| ...                                   | ...                                                           |
 
 <br>
 
@@ -152,10 +156,10 @@ an astonishing and deeply affecting account.
 
 It has also been made into a movie.
 <u><https://www.theguardian.com/film/2009/nov/26/anonyma-a-woman-in-berlin></u>.
+
 Here is the trailer:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/xEZxcSf9HwM?si=RjKW33TpuFjZont7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-
 </iframe>
 
 ## Writing Prompts
