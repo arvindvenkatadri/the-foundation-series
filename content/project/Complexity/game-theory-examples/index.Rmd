@@ -1,0 +1,54 @@
+---
+title: "Some Game Theory Examples"
+subtitle: "Worked Examples of Game Theoretic Situations"
+author: "Arvind V"
+date: "2024-01-28"
+weight: 150
+view: 2
+type: book
+abstract: "Worked Examples of Game Theoretic Situations"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(blogdown)
+library(tidyverse)
+library(huxtable)
+library(knitr)
+library(kableExtra)
+library(emoji)
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr) # Embed multimedia in HTML files
+
+```
+
+## Some Worked examples
+
+Let us consider some simple real life situations that we may have experienced. We will analyse these situations and arrive at:
+
+-   Players or AGENTS
+-   Their Possible ACTIONS
+-   Their 4Rs, and if they are identical, or not
+-   Payoffs and Matrix
+-   Understand whether it is a Prisoners' Dilemma, or Stag Hunt, or Chicken, or maybe not model-able as a Game.
+
+## Story 1: Siblings at Home
+
+You and your brother have to share Dining Table duties. One of you lays the Table for Dinner, the other cleans up.
+
+**Players**: You, and your Brother
+
+**Actions**:\
+- You: Cooperate: Lay the Table; Defect: Do not Lay the Table - Brother: Cooperate: Clean Up after Dinner; Defect: Do not Clean Up.
+
+**4Rs and Temptations:**
+
+| 4Rs         | You                                                     | Brother                                                 |
+|---------------|-----------------------------|-----------------------------|
+| REWARD      | Dinner Laid; Praise from Family; Satisfaction/Feel Good | Table Clean; Praise from Family; Satisfaction/Feel Good |
+| RISK        | Family Ire                                              | Family Ire                                              |
+| REGRET      | No Satisfaction/Feel Good                               | No Satisfaction/Feel Good                               |
+| RETRIBUTION | Family Ire; Grounded? No Dinner !!??                    | Family Ire; Grounded? No Dinner !!??                    |
+|             |                                                         |                                                         |
+
+: 4Rs

@@ -23,6 +23,11 @@ links:
   url: project/game-theory-examples
 ---
 
+#### The Rules of My Game
+![Photo by <a href="https://unsplash.com/@nathan_cima?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Nathan Cima</a> on <a href="https://unsplash.com/photos/a-group-of-men-standing-around-a-pool-table-CiVuPxerdAA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  ](featured.jpg)
+
+
 ```{r include=FALSE}
 library(blogdown)
 library(tidyverse)
@@ -62,7 +67,7 @@ So, let us **play** a Game,  on the <u>[**Game of Trust Website**](https://ncase
 - **Strategies** in PD define what actions you will take in response to actions others might take. 
 - We saw quite a few strategies here
 - The *best strategy* is one that **survives**!
-- Survival is everything. That is what D'Artagnan and the Three Musketeers were also basing their actions on!
+- ***Survival is everything***. That is what D'Artagnan and the Three Musketeers were also basing their actions on!
   * Read more about this idea in this (possibly illegal) copy of <u>[**Nassim Nicholas Taleb's Book, "Skin in the Game"**.](https://philosophiatopics.files.wordpress.com/2018/10/skin-in-the-game-nassim-nicholas-taleb.pdf)</u>
   * Or you can <u>[**watch Taleb speak**](https://youtu.be/uv6KLbkvua8?feature=shared)</u>
 - We will encounter *Survival* again soon!
@@ -202,9 +207,8 @@ We'll see.
 
 
 
+
 ## Game Theory Pop Music, Movie Clip, and TV ad Playlist !!
-
-
 1.  Chris de Burgh: Don't Pay the Ferryman!
     <u><https://www.youtube.com/watch?v=Q-a5TAL-IXs></u>
 

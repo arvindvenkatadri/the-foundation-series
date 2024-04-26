@@ -1,6 +1,6 @@
 title: The Foundation Series
 baseurl: 'https://the-foundation-series.netlify.app'
-copyright: ''
+copyright: '© {year} Arvind V.'
 theme: starter-hugo-academic
 enableGitInfo: true
 defaultContentLanguage: en
@@ -44,8 +44,8 @@ markup:
   highlight:
     codeFences: true
   tableOfContents:
-    startLevel: 2
-    endLevel: 3
+    startLevel: 1
+    endLevel: 4
 imaging:
   resampleFilter: lanczos
   quality: 90
@@ -76,7 +76,7 @@ security:
       - .*
     ignoreErrors: error-remote-getjson
 # Params:
-#   showRelatedPosts: yes
+  showRelatedPosts: yes
 
 
 

@@ -36,7 +36,12 @@ library(ggtext)
 library(ggformula)
 ```
 
-## Hamlet is also, yeah, I mean,... like us! Random!!
+#### Hamlet is also, yeah, I mean,... like us! Random!!
+![Photo by <a href="https://unsplash.com/@gabiontheroad?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Gabriella Clare Marino</a> on <a href="https://unsplash.com/photos/a-group-of-people-standing-in-the-water-5tQ-2o7J86E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+  ](rural-survey.jpg)
+
+
+## Introduction
 
 `r blogdown::shortcode("youtube", "EmjWIMMtjDc")` <br>
 

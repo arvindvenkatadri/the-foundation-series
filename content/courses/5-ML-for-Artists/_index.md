@@ -13,7 +13,7 @@ type: book
 
 # What you will learn
 
-- {{<hl>}}Basics of ML{{</hl>}} using examples from Literature, Painting and Music and Games and Kitchen Recipes
+- {{<hl>}}Basics of ML{{</hl>}} using examples from Literature, Painting, Music, Parlour Games, and Kitchen Recipes
 - Develop Intuition for when to use which ML algorithm:
 
   - Regression  

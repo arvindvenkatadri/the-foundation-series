@@ -22,7 +22,7 @@ library(embedr) # Embed multimedia in HTML files
 
 ![](Hisaye-Yamamoto.jpeg)
 
-From <https://encyclopedia.densho.org/Hisaye_Yamamoto/>
+From <u><https://encyclopedia.densho.org/Hisaye_Yamamoto/></u>
 
 > A Southern California <u>[Nisei](https://encyclopedia.densho.org/Nisei/)</u>
 > writer of short stories, Hisaye Yamamoto (1921–2011) was among the

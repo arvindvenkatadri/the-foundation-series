@@ -1,6 +1,7 @@
 ---
 title: "\U0001F579 A Random Walk with Hamlet"
 author: "Arvind Venkatadri"
+abstract: "The Science of Surprise"
 date: 2021-12-11
 weight: 70
 type: book
@@ -33,10 +34,11 @@ library(ggformula)
 library(mosaic)
 library(emoji)
 ```
+#### God Does not Play Dice
 
 ![](featured.jpg)
 
-## Seeing Data
+## The Science of Surprise
 
 Let us then examine the street traffic data we have gathered for any
 "model-like" pattern! Is our data clean? Do we have two columns of data,

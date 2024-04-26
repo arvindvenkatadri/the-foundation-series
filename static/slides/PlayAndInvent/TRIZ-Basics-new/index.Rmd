@@ -73,7 +73,7 @@ Written: `r dateWritten`
 Updated: `r today`
 
 .footer-large[.right[.fira[
-<br><br><br><br><br>[The Foundation Series](https://the-foundation-series.netlify.app/courses/1-Play-and-Invent/)
+<br><br><br><br><br>[The Foundation Series](https://arvindvenkatadri.com/)
 ]]]
 
 ---

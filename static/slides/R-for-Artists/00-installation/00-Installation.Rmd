@@ -154,7 +154,7 @@ This is **RStudio**, a integrated development environment ( IDE ) for **R** ( An
 
 ```{r,echo=FALSE,out.height="450px", out.width="750px"}
 
-knitr::include_graphics(here("static", "img", "rstudio-panes-1.png"))
+knitr::include_graphics(here("static", "images", "rstudio-panes-1.png"))
 
 ```
 ]
@@ -170,7 +170,7 @@ knitr::include_graphics(here("static", "img", "rstudio-panes-1.png"))
 .rightcol70[
 
 ```{r,echo=FALSE,out.height="450px", out.width="750px"}
-knitr::include_graphics(here("static", "img", "rstudio-panes-2.png"))
+knitr::include_graphics(here("static", "images", "rstudio-panes-2.png"))
 
 ```
 ]
@@ -185,7 +185,7 @@ knitr::include_graphics(here("static", "img", "rstudio-panes-2.png"))
 .rightcol70[
 
 ```{r,echo=FALSE,out.height="450px", out.width="750px"}
-knitr::include_graphics(here("static", "img", "rstudio-panes-2.png"))
+knitr::include_graphics(here("static", "images", "rstudio-panes-2.png"))
 
 ```
 ]
@@ -200,7 +200,7 @@ knitr::include_graphics(here("static", "img", "rstudio-panes-2.png"))
 
 
 ```{r,echo=FALSE,out.height="450px", out.width="750px"}
-knitr::include_graphics(here("static", "img", "rstudio-panes-2.png"))
+knitr::include_graphics(here("static", "images", "rstudio-panes-2.png"))
 
 ```
 ]
@@ -215,7 +215,7 @@ knitr::include_graphics(here("static", "img", "rstudio-panes-2.png"))
 
 
 ```{r,echo=FALSE,out.height="450px", out.width="750px"}
-knitr::include_graphics(here("static", "img", "rstudio-panes-2.png"))
+knitr::include_graphics(here("static", "images", "rstudio-panes-2.png"))
 
 ```
 ]
@@ -229,7 +229,7 @@ knitr::include_graphics(here("static", "img", "rstudio-panes-2.png"))
 .rightcol70[
 
 ```{r,echo=FALSE,out.height="450px", out.width="750px"}
-knitr::include_graphics(here("static", "img", "rstudio-panes-2.png"))
+knitr::include_graphics(here("static", "images", "rstudio-panes-2.png"))
 
 ```
 ]
@@ -247,7 +247,7 @@ The placement of these panes and their content can be customized using the RStud
 
 
 ```{r,echo=FALSE,out.height="450px", out.width="750px"}
-knitr::include_graphics(here("static", "img", "rstudio-panes-2.png"))
+knitr::include_graphics(here("static", "images", "rstudio-panes-2.png"))
 
 ```
 ]

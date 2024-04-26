@@ -1,6 +1,5 @@
 ---
 title: "\U0001F579 Still More Games !!"
-subtitle: "Which Stranger Am I Talking with Today?"
 author: "Arvind V."
 date: 2024-01-04
 lastmod: "`r Sys.Date()`"
@@ -18,6 +17,8 @@ editor_options:
 ```{r include=FALSE}
 library(blogdown)
 ```
+
+#### Which Stranger Am I Talking with Today?
 
 ![](featured.jpg)
 

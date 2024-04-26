@@ -4,7 +4,7 @@ subtitle: ""
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 weight: 10
-type: book
+type: "book"
 summary: "What is Data? Why do we visualize it?"
 output:
   html_document:
@@ -12,7 +12,13 @@ output:
     theme: flatly
     toc: true
     code_folding: true
-
+pager: true
+profile: true
+show_breadcrumb: true
+reading_time: true
+features:
+  math:
+    enable: true
 tags:
 - Scientific Inquiry
 - Experiments
@@ -24,19 +30,20 @@ image:
   caption: Photo by rawpixel on Unsplash
   focal_point: Smart
 external_link: ""
-links:
-- icon: book
-  icon_pack: fa
-  name: notes
-  url: "https://schoolofdata.org/handbook/courses/what-is-data/"
-- icon: file-powerpoint
-  icon_pack: fa
-  name: slides
-  url: "slides/R-for-Artists/10-Nature-of-Data/10-Nature-of-Data.html"
-slides: ""
-url_code: ""
+# links:
+# - icon: book
+#   icon_pack: fa
+#   name: notes
+#   url: https://schoolofdata.org/handbook/courses/what-is-data/
+#   
+# - icon: file-powerpoint
+#   icon_pack: fa
+#   name: slides
+#   url: slides/R-for-Artists/10-Nature-of-Data
+  
+url_code: https://schoolofdata.org/handbook/courses/what-is-data/
 url_pdf: ""
-url_slides: ""
+url_slides: slides/R-for-Artists/10-Nature-of-Data
 url_video: ""
 ---
 

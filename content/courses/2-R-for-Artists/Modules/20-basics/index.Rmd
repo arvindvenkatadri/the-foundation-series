@@ -10,9 +10,16 @@ type: book
 output:
   html_document:
     toc_float: true
-    theme: united
+    theme: flatly
     toc: true
     code_folding: true
+pager: true
+profile: true
+show_breadcrumb: true
+reading_time: true
+features:
+  math:
+    enable: true
 
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
@@ -41,6 +48,12 @@ links:
   icon_pack: fas
   name: Installation Slides
   url: /slides/R-for-Artists/00-installation/00-Installation.html
+  
+  
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
 ---
 
 ![](featured.jpg)
@@ -61,6 +74,13 @@ The best stats you've ever seen by Hans Rosling:
 
 
 <br>
+
+## Installation
+
+```{r}
+#| echo: false
+knitr::include_url("/slides/R-for-Artists/00-installation/00-Installation.html")
+```
 
 We will run some boiler-plate R code today! Nothing ( almost! ) to code! We will get used to the tools and words of the trade: R, RStudio, installation, packages, libraries....
 

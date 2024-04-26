@@ -17,6 +17,11 @@ editor_options:
 library(blogdown)
 ```
 
+#### No Man is an Island
+
+![Photo by <a href="https://unsplash.com/@yaaniu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ahmed Yaaniu</a> on <a href="https://unsplash.com/photos/green-and-brown-island-in-the-middle-of-blue-water-lD2PZuMscsw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](featured.jpg)
+
+
 ## Introduction
 
 ![](donne.png)

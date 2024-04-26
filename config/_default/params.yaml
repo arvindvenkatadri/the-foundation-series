@@ -116,7 +116,7 @@ publications:
   date_format: January 2006
   citation_style: apa
 projects:
-  post_view: 3
+  post_view: 2
   publication_view: 2
   talk_view: 2
 breadcrumb:
@@ -126,6 +126,7 @@ breadcrumb:
     post: true
     project: true
     publication: true
+    event: true
 comments:
   provider: ''
   commentable:
@@ -163,3 +164,4 @@ icon:
   pack:
     ai: true
     fa: true
+toc: true

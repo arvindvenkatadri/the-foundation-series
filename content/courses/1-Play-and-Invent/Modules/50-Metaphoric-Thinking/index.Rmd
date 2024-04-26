@@ -115,18 +115,19 @@ knitr::include_url("/slides/PlayAndInvent/Constructionism/index.html")
 
 ## References
 
-1.  **Guilford Test for Divergent Thinking**: [(Weblink)](https://curtbonk.com/bobweb/d1.html)
+1.  <u>[Guilford Test for Divergent Thinking](https://curtbonk.com/bobweb/d1.html)</u>
 
-2.  **Wallas-Kogan Test for Divergent Thinking**: [(Weblink)](https://curtbonk.com/bobweb/d2.html)
+2.  <u>[Wallas-Kogan Test for Divergent Thinking](https://curtbonk.com/bobweb/d2.html)</u>
 
-3.  Thibodeau, Paul & Boroditsky, Lera. (2011). **Metaphors We Think With: The Role of Metaphor in Reasoning**. PloS one. 6. e16782. 10.1371/journal.pone.0016782. [(PDF)](Thibodeau-Boroditsky-Role-of-Metaphor.pdf)
+3.  Thibodeau, Paul & Boroditsky, Lera. (2011). **Metaphors We Think With: The Role of Metaphor in Reasoning**. PloS one. <u>[(PDF)](Thibodeau-Boroditsky-Role-of-Metaphor.pdf)</u>
 
-4.  Bobo Hjort. (2003) **Drawing, Knowledge, and Intuitive Thinking: Drawing as a Way to Understand and Solve Complex Problems in Art and Complexity**. J. Casti and A. Karlqvist (editors) © 2003 Published by Elsevier Science B.V.[(PDF)](Hjort.pdf)
+4.  Bobo Hjort. (2003) **Drawing, Knowledge, and Intuitive Thinking: Drawing as a Way to Understand and Solve Complex Problems in Art and Complexity**. J. Casti and A. Karlqvist (editors) © 2003 Published by Elsevier Science B.V.<u>[(PDF)](Hjort.pdf)</u>
 
-5.  David Chen, **Creative Paradoxical Thinking and Its Implications for Teaching and Learning Motor Skills** [(PDF)](CreativeParadoxicalThinking2011.pdf)
+5.  David Chen, **Creative Paradoxical Thinking and Its Implications for Teaching and Learning Motor Skills** <u>[(PDF)](CreativeParadoxicalThinking2011.pdf)</u>
 
-6.  Holyoak and Thagard, **The Analogical Mind**, [(PDF)](Holyoak-%20Thagard%20-%20Analogical%20Mind.1997pdf.pdf)
+6.  Holyoak and Thagard, **The Analogical Mind**, <u>[(PDF)](Holyoak-%20Thagard%20-%20Analogical%20Mind.1997pdf.pdf)</u>
 
-7.  Joshua Ferris, **The Market Value of my Father**, a metaphorical Short Story. [(Web Link)](https://www.wealthsimple.com/en-ca/magazine/joshua-ferris)
+7.  Joshua Ferris, <u>[The Market Value of my Father](https://www.wealthsimple.com/en-ca/magazine/joshua-ferris)</u>. A metaphorical Short Story.
 
+8.  Martin Weller. "Dangers of tech metaphors in nature – The Ed Techie." N.p., n.d. Web. 5 Apr. 2024. <u><https://blog.edtechie.net/books/dangers-of-tech-metaphors-in-nature></u>.
 

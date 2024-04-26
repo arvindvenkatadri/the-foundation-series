@@ -1,8 +1,12 @@
 ---
 title: "\U0001F9B8 The Company of Heroes"
-author: "Arvind Venkatadri"
+author: "Arvind V."
 date: 2021-12-11
 lastmod: "`r Sys.Date()`"
+output:
+  html_document:
+    toc: true
+    toc_depth: 3
 image:
   caption: Photo by Markus Spiske on Unsplash
   focal_point: Smart
@@ -23,7 +27,10 @@ library(blogdown)
 library(slickR)
 #devtools::install_github("mccarthy-m-g/embedr")
 library(embedr) # Embed multimedia in HTML files
+
 ```
+
+#### Who is a Stranger?
 
 ![](featured.jpg)
 
