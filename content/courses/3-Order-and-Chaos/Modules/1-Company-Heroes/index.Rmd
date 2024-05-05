@@ -60,23 +60,22 @@ knitr::include_graphics("https://upload.wikimedia.org/wikipedia/commons/thumb/d/
 
 </iframe>
 
+This is the story of a young man who leaves home from Tarbes, in Gascony, France, to travel to Paris to make his fortune. He has two blessings,one each from his mother and his father. True to the instructions given by his Dad, and his very Gascon nature, <u>[he picks a fight even before he reaches Paris.](https://youtu.be/KXvzAvOL5GI)</u>
+
 ### Classic Movie Time!
 
 Let us watch a (very very) small part of this movie, <u>[The Three
-~~Pangas~~ Musketeers-1973](https://en.wikipedia.org/wiki/The_Three_Musketeers_(1973_live-action_film))</u>.
+~~Pangas~~ Musketeers-1973](https://en.wikipedia.org/wiki/The_Three_Musketeers_(1973_live-action_film))</u>. Here is the <u>[IMDB page](https://www.imdb.com/title/tt0072281/)</u> for film buffs. 
 
-`r blogdown::shortcode("youtube","QPun-5dtld0")`
-<br>
-`r blogdown::shortcode("youtube","nOFhfw-u5fg")`
 
-And here is an older, slightly longer version:
+<u><https://www.tcm.com/video/454255/three-musketeers-the-1973-movie-clip-we-are-only-three/></u>
+
+and this order version:
 
 <iframe width="560" height="480" src="https://www.youtube.com/embed/WRR0k2-8i-I" title="The Three Musketeers(1935) - D&#39;Artagnan vs. Athos vs. Cardinal Guards" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
 
 </iframe>
 
-<br> If this does not work... the same clip is available here:
-<u><https://www.tcm.com/video/454255/three-musketeers-the-1973-movie-clip-we-are-only-three/></u>
 
 ### Classic Fiction Time!
 
@@ -112,6 +111,7 @@ Here is the audio reading of this chapter from
 What about this game ?
 
 <iframe width="560" height="315" src="https://criticalcommons.org/embed?m=vufgXphCO" frameborder="0" allowfullscreen></iframe>
+
 
 ### Discussion-2
 
@@ -183,6 +183,10 @@ the story? We can think of the "4Rs":
     <u><https://www.youtube.com/watch?v=9LvViKftRnA></u>
     
 6. L.A. Confidential <u><https://criticalcommons.org/embed?m=pBXsAUvh9></u>
+
+7. <u><https://www.youtube.com/watch?v=QPun-5dtld0></u> (Sadly, dead link)
+
+8. <u><https://www.youtube.com/watch?v=nOFhfw-u5fg></u> (Sadly, dead link)
 
 
 ## Activity-1

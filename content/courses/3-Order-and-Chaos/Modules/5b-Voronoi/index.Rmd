@@ -15,6 +15,7 @@ summary:
 tags:
 - Voronoi Diagram
 - Delaunay Triangulation
+- Silhouette Diagra s
 - Geogebra
 - Herds and Predators
 - Proximity
@@ -130,6 +131,10 @@ And if a *man hatta* live in New York?
 
 We will use the Euclidean and maybe other concepts of distance when we get into our Machine Learning models!
 
+### Plotting Sihouette Diagrams 
+
+To be written up!!
+<https://orange3.readthedocs.io/projects/orange-visual-programming/en/latest/widgets/visualize/silhouetteplot.html>
 
 ## So where are all these Proximities used?
 
