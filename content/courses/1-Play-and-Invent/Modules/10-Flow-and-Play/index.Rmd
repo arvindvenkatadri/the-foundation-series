@@ -82,7 +82,7 @@ We will understand **Flow** from:
 
 1. This is Water: David Foster Wallace's famous Talk:
 `r blogdown::shortcode("youtube", "eC7xzavzEKY")`  <br><br>
-1. Let us quickly read and discuss this extract from the **Play and Playground Encyclopedia** <https://www.pgpedia.com/m/man-play-and-games>
+1. Let us quickly read and discuss this extract from the <u>[**Play and Playground Encyclopedia**](https://www.pgpedia.com/m/man-play-and-games)</u>
 
 ## Pop Quix: Want still more Flow? 
 
@@ -93,12 +93,12 @@ Go find me in this picture !!
 
 ## References
 
-1. Scott Eberle, "The Aspects of Play" <https://www.journalofplay.org/sites/www.journalofplay.org/files/pdf-articles/6-2-article-elements-of-play.pdf>
+1. Scott Eberle, <u>["The Aspects of Play"](https://www.journalofplay.org/sites/www.journalofplay.org/files/pdf-articles/6-2-article-elements-of-play.pdf)</u>
 
-1. "Platform Creativity: Domain, Field, and Person", https://medium.com/call4/domain-8a22b6b486f4
+1. <u>["Platform Creativity: Domain, Field, and Person"](https://medium.com/call4/domain-8a22b6b486f4)</u>
 
 
-1. **8 Ways To Create Flow According to Mihaly Csikszentmihalyi** <https://positivepsychology.com/mihaly-csikszentmihalyi-father-of-flow/>  
+1. <u>[8 Ways To Create Flow According to Mihaly Csikszentmihalyi](https://positivepsychology.com/mihaly-csikszentmihalyi-father-of-flow/)</u>  
 
 1. Ian Bogost, "Play at Anything"
 

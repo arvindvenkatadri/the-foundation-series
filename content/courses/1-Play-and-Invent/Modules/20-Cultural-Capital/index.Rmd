@@ -34,13 +34,16 @@ library(blogdown)
 ```
 
 ## Introduction
+What are the identities / ethnicities of the two individuals in the photograph?
+Do you find something bemusing about their gestures / postures? Why?
 
-We will understand Pierre Bourdieu's Concept of {{<hl>}}Cultural Capital(CC){{</hl>}}. 
 
-CC affects our view of the world and helps us identify Problem Situations and Contradictions in Life. 
+## Cultural Capital
+We will understand Pierre Bourdieu's Concept of {{<hl>}}Cultural Capital(CC){{</hl>}}. CC affects our view of the world and helps us identify Problem Situations and Contradictions in Life. 
 
-1. **What is Cultural Capital?** [(weblink)](https://culturallearningalliance.org.uk/what-is-cultural-capital)\
-2. Cultural Capital\
+1. Let us quickly read this short article: <u>[What is Cultural Capital?](https://culturallearningalliance.org.uk/what-is-cultural-capital)</u>
+
+2. And view this video on Cultural Capital\
 <br>
 `r blogdown::shortcode("youtube", "5DBEYiBkgp8")`
 
@@ -53,20 +56,20 @@ CC affects our view of the world and helps us identify Problem Situations and Co
 
 ### Re-Inventing your Own Game
 
-1. You will be divided into Teams. Each Team needs to chose a wellknown parlour/household or board game from your childhood. Set it up and play it. 
+1. You will be divided into Teams. Each Team needs to chose a well known parlour/household or board game from your childhood. Set it up and play it. 
 1. Then, you will be given a piece of Electronic Hardware called a **Makey-Makey**. You will need to include this hardware in your Game and extend the Game in a certain way.
 
 
-### Inventing your City
+### <u>[Inventing your City](https://youtu.be/JW1kfoXtxzY)</u>
 
-1. Making a Street Intersection Logo: [(Inspiration)](https://www.cartogrammar.com/blog/maps-make-the-best-logos/).\
+1. Making a Street Intersection Logo: <u>[(Inspiration)](https://www.cartogrammar.com/blog/maps-make-the-best-logos/)</u>.\
 1. Here are some instructions:\
-- Visit your home town on Google Maps
-- Select a specific STREET INTERSECTION there.
-- Copy paste the Shape of the Street Intersection into your favourite image making software
- - Create A LOGO for your city, using the Shape, such that you show off some interesting aspects of your City, based on your own CULTURAL CAPITAL.
- - Three sentences to describe your Logo.
- - See examples at the link above for inspiration
+    - Visit your home town on Google Maps
+    - Select a specific STREET INTERSECTION there.
+    - Copy paste the Shape of the Street Intersection into your favourite image making software
+    - Create A LOGO for your city, using the Shape, such that you show off some interesting aspects of your City, based on your own CULTURAL CAPITAL.
+    - Three sentences to describe your Logo.
+    - See examples at the link above for inspiration
 
 ## References
 

@@ -1,0 +1,12 @@
+---
+title: "\U0001F9ED Using Idyll"
+date: "2021-01-24"
+linkTitle: Using Idyll
+summary: ""
+view: 2
+weight: 10
+type: book
+image:
+  caption: ""
+  focal_point: "smart"
+---

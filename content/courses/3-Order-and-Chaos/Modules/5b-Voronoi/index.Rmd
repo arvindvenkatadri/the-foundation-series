@@ -166,10 +166,37 @@ Well, all right, all right, tech is fine. Can we use the idea of Proximity to cr
 - With the app on, try to create a figure <u>[like this](<https://gpsart.info/en/gpsart-en/nowhow1-en/>)</u>
 - Share the image with your friend!
 
+
+## <u>[Wait, But Why?](https://waitbutwhy.com)</u>
+
+Here are some domains and purposes within them, that use the idea of Proximity, and use Voronoi/Delaunay diagrams in their work. From <u>[David Eppstein's *Geometry in Action* webpage at UC, ~~Arvind~~ Irvine](https://www.ics.uci.edu/~eppstein/gina/scot.drysdale.html)</u>
+
+- Anthropology and Archeology -- Identify the parts of a region under the influence of different neolithic clans, chiefdoms, ceremonial centers, or hill forts.  
+- Astronomy -- Identify clusters of stars and clusters of galaxies (Here we saw what may be the earliest picture of a Voronoi diagram, drawn by Descartes in 1644, where the regions described the regions of gravitational influence of the sun and other stars.)   
+- Biology, Ecology, Forestry -- Model and analyze plant competition ("Area potentially available to a tree", "Plant polygons")  
+- Cartography -- Piece together satellite photographs into large "mosaic" maps  
+- Crystallography and Chemistry -- Study chemical properties of metallic sodium ("Wigner-Seitz regions"); Modelling alloy structures as sphere packings ("Domain of an atom")   
+- Finite Element Analysis -- Generating finite element meshes which avoid small angles  
+- Geography -- Analyzing patterns of urban settlements  
+- Geology -- Estimation of ore reserves in a deposit using information obtained from bore holes; modelling crack patterns in basalt due to contraction on cooling  
+- Geometric Modeling -- Finding "good" triangulations of 3D surfaces  
+- Marketing -- Model market of US metropolitan areas; market area extending down to individual retail stores  
+- Mathematics -- Study of positive definite quadratic forms ("Dirichlet tesselation", "Voronoi diagram")   
+- Metallurgy -- Modelling "grain growth" in metal films  
+- Meteorology -- Estimate regional rainfall averages, given data at discrete rain gauges ("Thiessen polygons")  
+- Pattern Recognition -- Find simple descriptors for shapes that extract 1D characterizations from 2D shapes ("Medial axis" or "skeleton" of a contour)   
+- Physiology -- Analysis of capillary distribution in cross-sections of muscle tissue to compute oxygen transport ("Capillary domains")  
+- Robotics -- Path planning in the presence of obstacles  
+- Statistics and Data Analysis -- Analyze statistical clustering ("Natural neighbors" interpolation)   
+- Zoology -- Model and analyze the territories of animals  
+
+
 ## References
 
 1. <u>**Voronoi Diagrams and a Day at the Beach**
 [**(PDF)**](/pdf/Proximity/VoronoiDiagrams-ADayAtTheBeach.pdf)</u>
 Talks about cholera in Soho, the Voronoi diagram, and how to construct it using waves on a beach!!
 
+1. Data Genetics. <u>[*Voronoi Tessellations*.](http://datagenetics.com/blog/may12017/index.html)</u>
+Very interesting 3D pictures of how Voronois and Delaunays are created. 
 

@@ -113,20 +113,20 @@ knitr::include_url("/slides/PlayAndInvent/TRIZ-Database/index.html")
 
 ## References
 
-1. Pizza Box (https://www.metodolog.ru/triz-journal/archives/2008/03/04/)
+1. Pizza Box <u>(https://www.metodolog.ru/triz-journal/archives/2008/03/04/)</u>
 
-1. TRIZ for Dummies Cheat Sheet [(weblink)](https://www.dummies.com/business/management/triz-for-dummies-cheat-sheet/)
+1. TRIZ for Dummies Cheat Sheet <u>[(weblink)](https://www.dummies.com/business/management/triz-for-dummies-cheat-sheet/)</u>
 
-1. TRIZ Inventive Principles in Pics @instagram: <https://www.instagram.com/stories/highlights/17857566926043828/>
+1. TRIZ Inventive Principles in Pics @instagram: <u><https://www.instagram.com/stories/highlights/17857566926043828/></u>
 
-1. Stan Kaplan, ***An Introduction to TRIZ***[(PDF)](pdf/TRIZ/Stan Kaplan-Intro-to-TRIZ.pdf)
+1. Stan Kaplan, ***An Introduction to TRIZ*** <u>[(PDF)](pdf/TRIZ/Stan Kaplan-Intro-to-TRIZ.pdf)</u>
 This is a simple and short introduction to *all* aspects of Classical TRIZ.
 
 1. Jack Hipple, "The Ideal Result: What it is and how to achive it", Springer, 2012.
 
-1. Project TETRIS: Chapter 1: Introduction to Classical TRIZ [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_01.pdf)
+1. Project TETRIS: Chapter 1: Introduction to Classical TRIZ <u>[(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_01.pdf)</u>
 
 
-1. Project TETRIS: Chapter 5: Techniques  to  Resolve  Contradictions / Resources / Effects [(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_05.pdf)
+1. Project TETRIS: Chapter 5: Techniques  to  Resolve  Contradictions / Resources / Effects <u>[(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_05.pdf)</u>
 
-1. Project TETRIS: Examples of inventive problems: Example 1-5 [(RAR Archive File)](https://innovazionesistematica.it/wp-content/uploads/2020/10/ExamplesEN.rar)
+1. Project TETRIS: Examples of inventive problems: Example 1-5 <u>[(RAR Archive File)](https://innovazionesistematica.it/wp-content/uploads/2020/10/ExamplesEN.rar)</u>

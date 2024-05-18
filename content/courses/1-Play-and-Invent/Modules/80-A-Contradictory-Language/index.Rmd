@@ -40,11 +40,13 @@ knitr::include_graphics("featured.jpg")
 library(blogdown)
 library(tidyverse)
 library(hrbrthemes)
+library(ggtext)
 hrbrthemes::import_roboto_condensed()
 library(showtext)
 font_add_google(name = "Fira Code", family = "fira")
 font_add_google("Gochi Hand", "gochi")
 font_add_google("Schoolbell", "bell")
+font_add_google("Roboto", "roboto")
 showtext_auto()
 
 ```
@@ -69,7 +71,7 @@ Before we study this *TRIZ Contradiction Language* however, we need to obtain a 
 ## The History of TRIZ
 
 ```{r echo=FALSE, fig.align='center', out.height = "350px", out.width="250px"}
-knitr::include_graphics("Altshuller.454.png")
+knitr::include_graphics("images/Altshuller.454.png")
 ```
 
 The creator of TRIZ, **Genrich Altshuller**, was born in Russia in 1926, made his first invention at age 14 (9th Grade), and was later educated as a mechanical engineer. At the time he started working on TRIZ, in 1946, he was employed in the patent department of the Soviet navy, assisting inventors in filing their patents, in Baku, Azerbaijan.  
@@ -80,49 +82,49 @@ While there he became intrigued by the question of how an invention happens:
 
 Altshuller adopted an *empirical approach* to answering this question. He **studied thousands of patents, looking for commonalities, repetitive patterns, and principles of inventive thought**. As he found them he codified and documented them, as shown below. His results, when eventually published, attracted many enthusiasts who continued and expanded the work over the years, reviewing what is now estimated to be more than two million patents worldwide. 
 
-```{r echo=FALSE}
+```{r echo=FALSE, fig.height=5, fig.width= 8, fig.align='center'}
 
 data <- tibble(
   pp = c(32, 45, 18, 4, 1),
   Levels  = c(
-    "Level 1. Apparent Solution",
-    "Level 2. Improvement",
-    "Level 3. Invention Inside the Paradigm",
-    "Level 4. Invention Outside the Paradigm",
-    "Level 5. Discovery"
+    "Level 1. Simple Improvement",
+    "Level 2. Significant Improvement",
+    "Level 3. Cross-Domain Improvement",
+    "Level 4. New Tech",
+    "Level 5. New Science"
   )
 )
 
 # pie(slices, labels = lbls, main="Levels of Invention",clockwise = TRUE, init.angle = 90)
-ggplot(data, aes(x = Levels, y = pp, fill = Levels)) + geom_col(colour = "black") +
+ggplot(data, aes(x = Levels, y = pp, fill = Levels)) + 
+  geom_col(colour = "black",width = 0.5) +
   geom_text(
     aes(label = paste0(pp, "%")),
     colour = "black",
     nudge_y = 2.5,
-    size = 8
+    size = 4
   ) +
   coord_flip() + scale_fill_brewer(palette = "Spectral",
                                    guide = guide_legend(reverse = TRUE)) +
   theme_void() +
   theme(
     plot.title = element_text(
-      family = "serif",
+      family = "roboto",
       face = "bold",
-      size = 36
+      size = 20
     ),
     plot.subtitle = element_text(
-      family = "gochi",
+      family = "serif",
       face = "bold",
-      size = 30
+      size = 18
     ),
     legend.title = element_text(
       family = "bell",
       face = "bold",
-      size = 24
+      size = 16
     ),
-    legend.text = element_text(family = "bell",
-                               size = 18),
-    legend.position = c(0.65, 0.8),
+    legend.text = element_text(family = "fira",
+                               size = 8),
     legend.background = element_rect(fill = "cornsilk",
                                      colour = "black"),
     legend.margin = margin(
@@ -143,11 +145,11 @@ ggplot(data, aes(x = Levels, y = pp, fill = Levels)) + geom_col(colour = "black"
 
 ***Level 3: Invention Inside the Paradigm***. This level uses methods from other fields and improves previous approaches. This is an invention containing a resolution of a **physical contradiction**(PC). It requires knowledge from other industries. 
 
-*Levels #2 & #3 solve contradictions and therefore are innovative by definition. About 18% of all patent applications were in this category.*
+*Levels #2 & #3 solve contradictions and therefore are innovative by definition. About 77% of all patent applications were in this category.*
 
-**Level 4. Invention Outside the Paradigm**. This level involves a new design that is based on modifications of existing principles but in a manner not previously used. This level involves development a new technology. It is developed by using breakthrough solutions that requires knowledge from different fields of science. This fourth level also improves upon a technical system, but without solving an existing technical problem. Instead, it improves the function by replacing the original technology with a new technology. For example a mechanical system is replaced with a chemical system to perform the function.
+**Level 4. Invention Outside the Paradigm**. This level involves a new design that is based on modifications of existing principles but in a manner not previously used. This level involves **development a new technology**. It is developed by using breakthrough solutions that requires knowledge from different fields of science. This fourth level also improves upon a technical system, but without solving an existing technical problem. Instead, it improves the function by replacing the original technology with a new technology. For example a mechanical system is replaced with a chemical system to perform the function.
 
-**Level 5: Discovery**. This is the highest invention level. It consists of completely new concepts using new principles, and involves the discovery of new phenomena. The new phenomenon is discovered that allows pushing the existing technology to a higher level.
+**Level 5: Discovery**. This is the highest invention level. It consists of completely new concepts using new principles, and **involves the discovery of new phenomena, or new science**. The new phenomenon is discovered that allows pushing the existing technology to a higher level.
 
 
 Altshuller concluded from his research that a large number of patents (77%) belong only to Levels #1 and #2. The practical utilization of TRIZ methodology can help inventors elevate their innovative solutions to Levels #3 and #4. As a result of this work, hundreds of technical papers and many books on TRIZ have been published, including 14 books by Altshuller himself.
@@ -183,79 +185,29 @@ So the task is:
 - To increase the speed of an airplane, a new and more powerful engine is installed. This increases the weight of the airplane so the wings can no longer support it during takeoff. Increasing the wing size produces more drag, slowing the airplane down.
 
 
-```{r,echo=FALSE, eval=FALSE,warning=FALSE}
-library(ggplot2)
-library(ggtext)
-eq = function(x){(x-25)*(x-25)}
-ggplot(data.frame(x=c(0, 50)), aes(x=x)) +
-  stat_function(fun=eq) + 
-  geom_abline(slope = -12, intercept = 600, colour = "skyblue") + 
-  geom_abline(slope = 12, intercept = 0, colour = "pink") +
-  labs(ylab = "Likelihood of losing a Wheel",
-       title =  "Automobile Wheel Bolts (*A Contradiction*)") +
-annotate("text", x = 6, y = 25, label = "Effort to Remove Wheel Bolts",size = 18) +
-  annotate("text", x = 45, y = 100, label = "Number of Wheel Bolts", size = 18) +
-  annotate("text", x = 45, y = 450, label = "Ideality") +
-  theme_void() +
-  theme(
-    plot.title = element_text(
-      family = "serif",
-      face = "bold",
-      size = 28
-    ),
-    plot.subtitle = element_text(
-      family = "gochi",
-      face = "bold",
-      size = 24
-    ),
-    legend.title = element_text(
-      family = "bell",
-      face = "bold",
-      size = 24
-    ),
-    legend.text = element_text(family = "bell",
-                               size = 24),
-    legend.position = c(0.65, 0.8),
-    legend.background = element_rect(fill = "cornsilk",
-                                     colour = "black"),
-    legend.margin = margin(
-      t = 2,
-      r = 2,
-      b = 2,
-      l = 2,
-      unit = "pt"
-    )
-  )
-
-# curve(eq, 0, 50) also works
-
-```
-
-
 ```{r,echo=FALSE}
-library(ggplot2)
-library(ggtext)
 
-eq = function(x){(x-25)*(x-25)}
-data <- data.frame(x=c(0, 50))
-
+eq <- function(x){(x-25)*(x-25)}
+x <- c(0, 50)
+y <- eq(x)
+data <- data.frame(x,y)
 ggplot(data, aes(x = x)) + 
-  stat_function(fun=eq) + 
-  geom_abline(slope = -12, intercept = 600, colour = "skyblue") + 
-  geom_abline(slope = 12, intercept = 0, colour = "pink") +
+  stat_function(fun=eq, linewidth = 2) +
+  geom_abline(slope = -12, intercept = 600, colour = "skyblue", linewidth = 1) + 
+  geom_abline(slope = 12, intercept = 0, colour = "pink", linewidth =1) +
   geom_richtext(
     data = data,
-    x = 40, y = 600,
-    label = "Effort in Removing Bolts",
+    x = 35, y = 600,
+    label = "Effort in <br> Removing Bolts",
     hjust = 0.5, vjust = 0.5,fill = "pink",
-    size = 8
+    size = 5
   ) + 
   geom_richtext(
     data = data, 
-    x = 10, y = 600,
-    label = "Likelihood of losing a Wheel",
+    x = 15, y = 600,
+    label = "Likelihood of<br> losing a Wheel",
     hjust = 0.5, vjust = 0.4, fill = "skyblue",
-    size = 8
+    size = 5
   ) + 
   
    geom_richtext(
@@ -263,33 +215,30 @@ ggplot(data, aes(x = x)) +
     x = 25, y = 50,
     label = "Ideality??",
     hjust = 0.5, vjust = 0.5,
-    size = 8
+    size = 5
   )  + 
   labs(title =  "Automobile Wheel Bolts",
        subtitle = "*A Contradiction*",  
-  y = "Likelihood of losing a Wheel / Effort",
+  y = "Likelihood of losing a Wheel/ Effort",
   x = "Number of Bolts") + 
   
-  # annotate("text", x = 6, y = 25, label = "Effort to Remove Wheel Bolts",size = 12) +
-  # annotate("text", x = 45, y = 100, label = "Number of Wheel Bolts", size = 12) +
-  # annotate("text", x = 45, y = 450, label = "Ideality") +
   theme_minimal() +
   theme(
     axis.text.y = element_blank(),
     axis.text.x = element_blank(),
-    axis.title = element_text(size = 18),
+    axis.title = element_text(size = 12),
     axis.line = element_line(arrow = arrow(), linewidth = 1),
     panel.grid = element_blank(),
     
     plot.title = element_text(
-      family = "serif",
+      family = "roboto",
       face = "bold",
       size = 24
     ),
     plot.subtitle = element_markdown(
-      family = "gochi",
+      family = "sans",
       face = "bold",
-      size = 18
+      size = 14
     )
   )
 
@@ -308,9 +257,9 @@ ggplot(data, aes(x = x)) +
 
 ## Thinking, Problem Solving, and Language
 
-Here is Albert Einstein speaking on **The Language of Science**. The transcript is here.[**PDF**](albert-einstein-the-common-language-of-science.pdf).
+Here is Albert Einstein speaking on **The Language of Science**. The transcript is here. <u>[**PDF**](albert-einstein-the-common-language-of-science.pdf)</u>.
 
-One quote from this short reading seems very apposite here:
+One quote from this short reading seems very appropriate here:
 
 > "The super-national character of scientific concepts and scientific language is due to the fact that they have been set up by the best brains of all countries and all times. In solitude, and yet in cooperative effort as regards the final effect, they created the spiritual tools for the technical revolutions which have transformed the life of mankind in the last centuries. Their system of concepts has served as a guide in the bewildering chaos of perceptions so that we learned to grasp general truths from particular observations."
 
@@ -318,19 +267,19 @@ One quote from this short reading seems very apposite here:
 
 ## References
 
-1. Valeri Souchkov, **Differentiating Among the Five Levels of Solutions**,[**Web**](https://www.metodolog.ru/triz-journal/archives/2007/07/02/index.html)  
+1. Valeri Souchkov, <u>[**Differentiating Among the Five Levels of Solutions**](https://www.metodolog.ru/triz-journal/archives/2007/07/02/index.html)</u>  
 
-1. Valeri Souchkov, **"How to Define a Contradiction"**, [**Web**](https://xtriz.com/Training/TRIZ_DefineContradiction_Tutorial.pdf) and [**PDF**](TRIZ_DefineContradiction_Tutorial.pdf)  
+1. Valeri Souchkov, <u>[**"How to Define a Contradiction"**](https://xtriz.com/Training/TRIZ_DefineContradiction_Tutorial.pdf)</u> and <u>[**PDF**](TRIZ_DefineContradiction_Tutorial.pdf)</u>  
 
-1. Open Source TRIZ: **TRIZ Power Tools: Formulating Contradictions**: [Webpage](https://www.opensourcetriz.com/triz-books/triz-skills/resolving-contradictions.html)
+1. Open Source TRIZ: <u>[**TRIZ Power Tools: Formulating Contradictions**](https://www.opensourcetriz.com/triz-books/triz-skills/resolving-contradictions.html)</u>
 
 
 
 ## Additional Readings
 
-1. https://www.bbc.com/worklife/article/20201109-why-the-paradox-mindset-is-the-key-to-success
+1. <u><https://www.bbc.com/worklife/article/20201109-why-the-paradox-mindset-is-the-key-to-success></u>
 
-1. https://hbr.org/2008/06/the-contradictions-that-drive-toyotas-success
+1. <u><https://hbr.org/2008/06/the-contradictions-that-drive-toyotas-success></u>
 
 
 

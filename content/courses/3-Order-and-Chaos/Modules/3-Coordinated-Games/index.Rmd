@@ -38,7 +38,7 @@ Where would you stage a protest? How would you get other people to join in?
 
 What does "less than three" mean?!!??
 
-In the module on [Game Theory](), we saw how we all are engaged in *adversarial and transactional Games* with many other people, most of 
+In the previous module on the Prisoners' Dilemma, we saw how we all are engaged in *adversarial and transactional Games* with many other people, most of 
 whom are strangers to us. But as remarked before, the Human Species is perhaps unique in that we are able to <u>[cooperate with strangers](https://fee.org/media/4316/547_42.pdf)</u>!! So we are not always adversaries or enemies, and we are able to obtain ***unspoken agreement and correspondence with strangers***.
 
 What use would this be? Would it be a Design Tool? How?

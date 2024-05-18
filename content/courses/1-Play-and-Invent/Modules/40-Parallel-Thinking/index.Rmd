@@ -53,29 +53,29 @@ Let us consider a couple of ideas for schemes that have been "around" for some t
 
 1. 6 Thinking Hats Quick Reference [(**PDF Link**)](W1D1 - 01 - The Six Thinking Hats.pdf)
 
-2. 6H Technique - **PMI: Plus Minus Interesting** : <https://www.debono.com/de-bono-thinking-lessons-1/1.-PMI-lesson-plan>   
+2. 6H Technique - **PMI: Plus Minus Interesting** : <u><https://www.debono.com/de-bono-thinking-lessons-1/1.-PMI-lesson-plan></u>  
 Also see:  
-<https://sites.google.com/site/qepcafe/modules/expand/plus-minus-interesting-pmi>
+<u><https://sites.google.com/site/qepcafe/modules/expand/plus-minus-interesting-pmi></u>
 
-3. 6H Technique - **APC: Alternatives, Possibilities, Choices**: <https://www.debono.com/de-bono-thinking-lessons-1/6.-APC-lesson-plan>
+3. 6H Technique - **APC: Alternatives, Possibilities, Choices**: <u><https://www.debono.com/de-bono-thinking-lessons-1/6.-APC-lesson-plan></u>
 
 
-4. 6H Technique - **CAF: Consider All Factors**: <https://www.debono.com/de-bono-thinking-lessons-1/2.-CAF-lesson-plan>
+4. 6H Technique - **CAF: Consider All Factors**: <u><https://www.debono.com/de-bono-thinking-lessons-1/2.-CAF-lesson-plan></u>
 
-5. 6H Technique - **OPV: Other Peoples' Voices**: <https://www.debono.com/de-bono-thinking-lessons-1/7.-OPV-lesson-plan>
+5. 6H Technique - **OPV: Other Peoples' Voices**: <u><https://www.debono.com/de-bono-thinking-lessons-1/7.-OPV-lesson-plan></u>
 
-6. 6H Technique - **CnS: Consequence and Sequel** : <https://www.debono.com/de-bono-thinking-lessons-1/3.-C%26S-lesson-plan>
+6. 6H Technique - **CnS: Consequence and Sequel** : <u><https://www.debono.com/de-bono-thinking-lessons-1/3.-C%26S-lesson-plan></u>
 
 
 
 ## References
 
-1. Reading in Parallel Thinking [(**Web Link**)](https://www.debonogroup.com/services/core-programs/lateral-thinking/parallel-thinking/)  
+1. Reading in Parallel Thinking <u>[(**Web Link**)](https://www.debonogroup.com/services/core-programs/lateral-thinking/parallel-thinking/)</u>
 
-1. Edward de Bono, Six Thinking Hats [(**Goodreads**)](https://www.goodreads.com/book/show/97030.Six_Thinking_Hats)  
+1. Edward de Bono, Six Thinking Hats <u>[(**Goodreads**)](https://www.goodreads.com/book/show/97030.Six_Thinking_Hats)</u> 
 
-1. Quality Enhancement Program (**QEP cafe**) <https://sites.google.com/site/qepcafe/#training-modules>
+1. Quality Enhancement Program (**QEP cafe**) <u><https://web.archive.org/web/20210212140014/https://sites.google.com/site/qepcafe/home></u>
 
-1. Reverse Brainstorming <https://sites.google.com/site/qepcafe/modules/expand/reverse-brainstorming>
+1. Reverse Brainstorming <u><https://web.archive.org/web/20210212140014/https://sites.google.com/site/qepcafe/modules/expand/reverse-brainstorming></u>
 
 

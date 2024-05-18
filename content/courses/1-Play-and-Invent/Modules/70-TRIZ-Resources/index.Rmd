@@ -155,3 +155,37 @@ This should also remind us of the *Guilford Alternative Uses Exercise* that we d
 This is a simple and short introduction to *all* aspects of Classical TRIZ.
 
 1. Jack Hipple, "The Ideal Result: What it is and how to achieve it", Springer, 2012.
+
+
+### Case Study Story
+1. Sahil Bloom, on X, May 6 2024:
+In 2009, Stanford business professor Tina Seelig split her class into groups and issued a challenge:
+Each group had $5 and 2 hours to make the highest return on the money.
+At the end, they'd give a short presentation on their strategy.
+What happened next was fascinating:
+![](https://pbs.twimg.com/media/GM5Dw7DXoAAMd12?format=jpg&name=medium)
+
+> Most of the groups followed a simple approach:
+>
+>   - Use the $5 to buy a few items.
+>   - Barter or resell those items.
+>   - Repeat
+>   - Sell final items for (hopefully) more than $5.
+> - These groups made a modest return on their initial $5.
+
+> A few groups ignored the $5. They thought up ways to make the most money in the allotted time:
+>
+>   - Made/sold reservations at hot restaurants.
+>   - Refilled bike tires on campus.
+>   - These groups made a good return on the initial USD5.
+
+> The winning group took a very different approach: They had three realizations:
+>
+>   - The $5 was a distraction.
+>   - The 2 hours of time was not enough to make an attractive, outsized return with a mini-business.
+>   - The most valuable "asset" was actually the presentation time in front of a class of Stanford students.
+>   - Recognizing the value of the **hidden asset**, they offered the presentation time to companies looking to recruit Stanford students.
+>   - They sold the slot for `$650`, a huge return on the `$5` of initial capital.
+
+The winning group thought differently ( about resources ) and achieved an asymmetric outcome.
+

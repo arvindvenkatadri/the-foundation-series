@@ -38,15 +38,45 @@ knitr::include_graphics("featured.jpg")
 
 ## Introduction
 
-Often times we swiftly come to conclusions or decisions, without being aware that a) we are making a big mistake based on the information that is available , b) we are looking for our fondest beliefs to be true, or worse c) we are being manipulated !!
+Often times we swiftly come to conclusions or decisions, without being aware that 
+
+  a) we are making a big mistake based on the information that is available
+  b) we are looking for our fondest beliefs to be true, or worse 
+  c) we are being manipulated !!
 
 Hence, one of the important points of view we need to retain is to be aware of our Cognitive Biases. Being aware of this may be the first step to check ourselves and therefore arrive a more nuanced "appreciation of the situation", that would then allow us to formulate our Innovative Problems better. 
 
 Let us now engage in some simple activities that show off! to us, our Cognitive Biases!
 
 
-## References
+## Games
 
+### Cognitive Miserliness, aka Jumping to Conclusions
+
+<u>[Presentation](/labs/Play-and-Invent/Cognitive-Misers.pdf)</u>
+
+
+### Halo Effect, aka First Impressions are...
+
+We will form into an even number of groups. Each group will be given a description of an individual. You will need to add more information about that person, working as a group. 
+
+<u>[Presentation](/labs/Play-and-Invent/Solomon%20Asch%20Test%20-%20Halo%20Effect.pdf)</u>
+
+### Priming, aka I know what to make you think
+
+Again, we will form into an even number of groups. Each group will be given a couple of questions with multiple choice answers. Quickly answer this and be ready for a short, dismaying, and confounding discussion. 
+
+<u>[Presentation](/labs/Play-and-Invent/Priming%20Exercises.pdf)</u>
+
+## Wait, But Why?
+
+As Kahneman says, it is good to be wise about our biases. There are ways in which one can be aware of them and try to overcome them, by say taking time and not opting for the first answer that your mind suggests, and doing some counter-factual thinking ("What if this is NOT the answer?").
+
+Doing so will allow us to gather research information better, ask better questions and arrive at better inferences as to the problem that we might be trying to articulate.
+
+ 
+
+## References
 
 1. Kahneman, Daniel. “Thinking Fast and Slow”
 
@@ -57,5 +87,5 @@ Let us now engage in some simple activities that show off! to us, our Cognitive 
 1. Holyoak, Keith J.& Morrison, Robert G., “The Cambridge Handbook of Thinking and Reasoning” 
 
 
-1. Quality Enhancement Program (**QEP cafe**) <https://sites.google.com/site/qepcafe/#training-modules>
+1. Quality Enhancement Program (**QEP cafe** <u><https://web.archive.org/web/20210212140014/https://sites.google.com/site/qepcafe/home></u>
 
