@@ -30,6 +30,13 @@ knitr::include_graphics("featured.jpg")
 
 ```
 
+
+```{r include=FALSE}
+library(blogdown)
+#devtools::install_github("mccarthy-m-g/embedr")
+library(embedr) # Embed multimedia in HTML files
+```
+
 ## Introduction
 
 >*The Year of Magical Thinking* is Joan Didion’s account of the year following the death of her husband, writer John Gregory Dunne, and her attempts to make sense of her grief while tending to the severe illness of her adopted daughter, Quintana. As she tries to make sense of John’s death and her own changed identity, Didion discovers that grief is not what she expected it to be. Consumed by memories of the years they lived in Los Angeles, shortly after they married and adopted Quintana, Didion feels that she has entered a state of temporary insanity. Though cool and collected on the surface, she begins to believe that her wishes might have the power to bring John back. To this end, she refuses to give away his clothes and shoes, believing that her husband will need them when he returns to her. She calls this childlike belief that her thoughts and wishes can alter reality “magical thinking.”
@@ -80,16 +87,25 @@ Both these activities are examples of exercises in divergent thinking. See the r
 
 ### Activity-3: Gangs of Wasseypur
 
-We will divide into two groups (four if necessary) and contemplate a brief description of the city of Wasseypur. There are 4 short questions / problems for you to consider at the end.
+We will divide into two groups (four if necessary) and contemplate a brief written description of the city of Wasseypur. There are 4 short questions / problems for you to consider at the end of that short para which you will answer as a group.
 
-### Activity-4: Seymour Papert Constructionism Game
+### Activity-4: Seymour Papert <u>[Constructionism](http://www.papert.org/articles/SituatingConstructionism.html)</u> Game
 
 ```{r, echo=FALSE}
 knitr::include_url("/slides/PlayAndInvent/Constructionism/index.html")
 
 ```
 
-### Activity-5: C'est ne une Pipe
+### Activity-5: <u>[C'est ne une Pipe](https://www.fusionmagazine.org/why-this-is-not-a-pipe/)</u>
+
+![Rene Magritte's *La Clef des Songes*](images/magritte-la-clef-des-songes.jpg){width=200px}
+
+<br>
+Let us see if we can find a (piece of) a Rene Magritte gene/meme within ourselves. 
+
+> Magritte’s art has something in common with the rest of the surrealist artists: his art is the juxtaposition of elements that together won’t make a rational sense, but the value of its interpretation lies in the reaction of each spectator’s mind toward the relation of those elements. Magritte’s approach is more conceptual. He exposes how we define things by the word we use to name them creating a word-image ***series of conflicts***. For instance, we think we know what a shoe is because of the definition we give to the word. But what if we replace the name shoe for “moon”? That is what Magritte does in his painting *“La Clef des Sognes II” (1930)*. We see six simple objects and below them it is written a word apparently unrelated to the picture above it, forcing the viewer to think about this relation we have with what we see and what we know. Just like in his painting of “The Treason of Images”, Magritte is trying to show how it doesn’t matter how we name the object, the word will never be one with the object’s physical reality. 
+>
+>In general, not only (did he make) this observation through these types of images, but also he usually gives a title for his paintings that has nothing to do with the literal things you see in the image.(*emphasis mine*)
 
 1. We will break up into groups of 4-5. 
 1. Each group will be given a household object, perhaps an unusual one. 
@@ -104,13 +120,20 @@ knitr::include_url("/slides/PlayAndInvent/Constructionism/index.html")
 
 1. Read the story in Ref. 7 below.
 2. Understand the metaphors in the story:
-  - What is the story about?
-  - What "metaphorical language" has Joshua Ferris used to describe the characters, their actions, and the results of their actions?
-  - What is the *domain* of these metaphors in the story?
+    - What is the story about?
+    - What "metaphorical language" has Joshua Ferris used to describe the characters, their actions, and the results of their actions?
+    - What is the *domain* of these metaphors in the story?
 3. Now, choose a (short!) story that you know really well, something that you may have encountered in school.
 4. Re-write this story using language, metaphors, and images from any *domain* (other than what may be in the original story). 
-  - For example, in Primo Levi's lyrical story [**Carbon**](https://www.arvindguptatoys.com/arvindgupta/periodic-primo.pdf), a lot of metaphors from Chemistry and atomic physics are used to describe life, and connections with people.
+    - For example, in Primo Levi's lyrical story <u>[**Carbon**](https://www.arvindguptatoys.com/arvindgupta/periodic-primo.pdf)</u>, a lot of metaphors from Chemistry and atomic physics are used to describe life, and connections with people.
 
+### Activity-7: Podcast on Metaphors
+Listen to this discussion between Michael Rosen and author James Geary, on the former's BBC Podcast <u>[*Words of Mouth*.](https://www.bbc.co.uk/programmes/m000d1z9)</u>
+
+```{r, echo = FALSE}
+embedr::embed_audio("WordOfMouth-20200107-Metaphors.mp3")  
+
+```
 
 
 ## References
@@ -130,4 +153,7 @@ knitr::include_url("/slides/PlayAndInvent/Constructionism/index.html")
 7.  Joshua Ferris, <u>[The Market Value of my Father](https://www.wealthsimple.com/en-ca/magazine/joshua-ferris)</u>. A metaphorical Short Story.
 
 8.  Martin Weller. "Dangers of tech metaphors in nature – The Ed Techie." N.p., n.d. Web. 5 Apr. 2024. <u><https://blog.edtechie.net/books/dangers-of-tech-metaphors-in-nature></u>.
+
+9. Edith Ackermann(2001). *Piaget’s Constructivism, Papert’s Constructionism: What’s the difference?*<u><https://learning.media.mit.edu/content/publications/EA.Piaget%20_%20Papert.pdf></u>
+
 
