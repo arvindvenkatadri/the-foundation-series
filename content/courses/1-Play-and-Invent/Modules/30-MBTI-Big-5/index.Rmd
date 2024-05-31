@@ -35,7 +35,6 @@ url_video: ""
 knitr::include_graphics("featured.jpg")
 ```
 
-
 ## Introduction
 
 We will briefly study the Big5/MBTI Personality Test Matrix and understand the "dichotomies" these embody. We will then use these to understand ourselves, as we create some novel situations for ourselves in a Game.
@@ -70,9 +69,16 @@ I have divided you up into 4 groups. Each group will be given a specific task. Y
 
 From the two exercises, we see that:  
 
-  - Reality depends upon the viewer: and that there are many possible points of view. Note that this is about our *cognitive bias* that may depend upon our cultural outlook, and our ability to miss things. It is emphatically not about <u>[alternative facts](https://www.dictionary.com/e/slang/alternative-facts/)</u> which is arrant nonsense.
+  - Reality depends upon the viewer: and that there are many possible points of view. Note that this is about our *cognitive bias* that may depend upon our cultural outlook, and our ability to miss things. 
+  - It is emphatically not about <u>[alternative facts](https://www.dictionary.com/e/slang/alternative-facts/)</u> which is arrant nonsense.
   - We all have our "default modes" for behaviour, that give us a restricted appreciation of the World
   - As creators we need to be able straddle, if possible, the spectrum of the 4 preference pairs, in order to comprehend reality better. 
   - Comprehending reality better gives a stronger basis for Art/Design **decisions** and plans for action.
-  
-  
+
+
+## Additional References
+1. <u><https://youtu.be/g34SYgKbqFY></u>
+
+
+
+

@@ -34,17 +34,21 @@ knitr::include_graphics("featured.jpg")
 
 ```{r setup, include=FALSE}
 library(blogdown)
-library(hugodown)
 ```
 
 
 ![](chesterton-riddle.jpeg)
 
-Let us take our first step into the world of TRIZ. What did you think of immediately when you saw the first picture on this page?
 
-In TRIZ, the fundamental way of looking at an Inventive Design Problem is to discover and propose **Contradictions**. These are rendered in as **simple** and **stark** a language as possible...the starker the better!
+*Mary, Mary, quite contrary,*\
+*How does your garden grow?*\
+*With silver bells, and cockle shells,*\
+*And pretty maids all in a row.*\
 
-Once we have our Contradiction (and there can be *more than one* in a given Design Situation !) we can use TRIZ Principles to solve them **WITHOUT COMPROMISE.**
+
+Let us take our first baby step into the world of TRIZ. What did you think of immediately when you saw the first picture on this page?
+
+In TRIZ, the fundamental way of looking at an Inventive Design Problem is to discover and propose **Contradictions**. These are rendered in as **simple** and **stark** a language as possible...the starker the better! Once we have our Contradiction (and there can be *more than one* in a given Design Situation !) we can use TRIZ Principles to solve them **WITHOUT COMPROMISE.**
 
 What sort of Contradictions do we see in these familiar objects? What is good and what is not so good? Could that be the source of a problem to solve?
 
@@ -88,24 +92,13 @@ We see them everywhere....if one is observant!! Let's see a few:
 
 How is this for a Contradiction? A shelf in a supermarket carries this placard for a shelf of ***FRESH JUICE***:
 
-```{r echo=FALSE}
-blogdown::shortcode("tweet", 
-                    user = "JoshHochschild", 
-                    id = "1453536795564683264")
-```
-
 ![](Juice.jpeg)
 
 ### C2: Contradiction-2
 
 Here is another:
 
-```{r echo=FALSE}
-blogdown::shortcode("tweet",
-                    user = "otherliztaylor", 
-                    id = "1238079127992795137")
-
-```
+![](schools-corona.png)
 
 ### C3: Contradiction-3
 
@@ -116,7 +109,7 @@ knitr::include_graphics("Snails-1.jpeg")
 knitr::include_graphics("Snails-2.jpeg")
 ```
 
-So...they need to group together.
+So...they need to group together and not appear to be "by themselves".
 
 ### C4: Contradiction-4
 
@@ -125,13 +118,7 @@ Most people's healthcare is tied to their job....Therefore, every corona-time la
 > This outbreak is highlighting, with extreme clarity, every major ***contradiction*** of this society and its decaying social order. <https://t.co/EtSUY3pPMi>\
 > --- Revolutionary Left Radio (\@RevLeftRadio)
 
-```{r echo=FALSE}
-blogdown::shortcode("tweet", 
-                    user ="washingtonpost" ,
-                    id="1237821091680313344")
-
-```
-
+![](layoff-corona.png)
 ## Contradictory Situations
 
 We don't contemplate only *objects* at all times; indeed, as designers/artists/creators, we want to be able to **make** objects. What we more commonly contemplate is a **situation**.
@@ -199,3 +186,22 @@ Do glance through these articles and try to form a "contradiction mentality" abo
 1. Open Source TRIZ: Contradiction Challenges! <u><https://www.opensourcetriz.com/images/1_OpenSourceTRIZ_Pictures/1.1_Teaching_Materials/01_Contradictions_Exercises_Actual.pdf></u>
 
 
+## More Contradictions?
+
+1. If you live in an apartment complex, you might see people walking. Some walk "normally", along the driveways or pathways. Some walk with excruciatingly specific intent along the periphery of every walkable surface, going into far corners and turning and walking around the far edges of building, and near to compound walls and gates. 
+Why are they doing this?
+
+2. What was the boon requested by <u>[Hiranyakashipu](https://hinduism.en-academic.com/329/Hiranyakashipu)</u>?
+
+3. Why do most people love landscape paintings such as those by <u>[Ivan Shishkin](https://artsandculture.google.com/entity/ivan-shishkin/m059y1y?hl=en)</u> and <u>[John Constable](https://www.theartstory.org/artist/constable-john/)</u>?
+See this <u>[page](https://landarchconcepts.wordpress.com/what-is-prospect-refuge/)</u> for a well-articulated TRIZ-contradiction in landscape paintings.
+
+4. *Good fences make good neighbours*, it is said. Spot the Contradiction here?
+
+5. Why do police cars switch on their sirens as they rush to a potential crime site? Isn't it better to arrive swiftly and silently to catch the criminal? (Note: this is also close to the idea of the <u>[IFR in TRIZ](../75-triz-ideal-final-result/)</u>
+
+6. All students say *Bro*, *My Bad*, and worse, *Think Different* (*&^%$#@). And yet want Faculty to identify, know, and appreciate them individually. 
+
+6. And finally, what does this even mean!!??!!
+
+> *Always go to other people's funerals, otherwise they won't come to yours.  [-Yogi Berra](https://www.brainyquote.com/quotes/yogi_berra_161244)

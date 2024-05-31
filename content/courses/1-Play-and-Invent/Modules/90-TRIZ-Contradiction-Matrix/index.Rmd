@@ -109,6 +109,10 @@ knitr::include_url("/slides/PlayAndInvent/TRIZ-Database/index.html")
 
 1. The TRIZ Contradiction Matrix (2003) [(Matrix)](pdf/TRIZ/TRIZ_interactive_contradiction_matrix_2016.xlsx)
 
+## Movie Time!
+
+1. <u><https://youtu.be/4hbru1nLBeU></u>
+
 
 
 ## References

@@ -7,7 +7,7 @@ header:
   caption: Photo by <a href="https://unsplash.com/@edwardhowellphotography?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Edward Howell</a> on <a href="https://unsplash.com/s/photos/graphs?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 linkTitle: 
 view: 2
-weight: 300
+weight: 80
 type: book
 tags: 
   - Descriptive, Predictive, and Prescriptive Analytics

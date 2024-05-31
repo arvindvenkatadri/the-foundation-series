@@ -4,7 +4,7 @@ date: "2021-09-02"
 linkTitle: Form and Structure - GeoSpatial and Network Data
 summary: Enabling Complex Data Driven Experiences with Geospatial, Network and Sensor data
 view: 2
-weight: 180
+weight: 40
 type: book
 ---
 

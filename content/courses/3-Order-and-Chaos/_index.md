@@ -28,53 +28,72 @@ image:
 
 > All Models Are Wrong But Some Are Useful. --- GEORGE BOX
 
-In this Unit, we will take inspiration from **Story, Drama, and Paintings** to contemplate certain aspects of **Human Experience and Intent**. We will try and make sense of these aspects of experience using **Models** that we will create. These Models may resemble a {{<hl>}}Thought Experiment, or a Diagram, or a simple Procedure, or a piece of Computer Code, or a Cultural Tradition{{</hl>}}. The Models should provide data and directions for artistic and design endeavours.
+In this Unit, we will take inspiration from {{<hl>}}**Classic Literature, Poetry, Drama, and Paintings, and Music**{{</hl>}} to contemplate certain **Human Experiences**. Using these as a starting point, we will create **Models** and make sense of these human experiences. 
 
-In effect, we will go from <u>[**Stories to Data**](https://open.spotify.com/episode/2DpA27VkXd0eVvcM4f3hTl?si=fa54cde8dd0044d0)</u> rather than the other way around.
+These Models may resemble a {{<hl>}}Thought Experiment, or a Diagram, or a simple Procedure, or a piece of Computer Code, or even a Cultural Tradition{{</hl>}}. The Models will be understood, internalized, fitted in with what we already know, and generalized to new situations and applications. This will done with the help of activities based on {{<hl>}}games, pranks, memes, videos, movie-clips, art-related activities, open source software tools, field experiments, field visits, readings, additional readings, writings, more writings, still more writings, and seemingly endless discussions{{</hl>}}. 
 
-The Models will be understood, internalized, fitted in with what we already know, and generalized to new applications. This will done with the help of activities based on {{<hl>}}games, videos, art-related activities, open source software tools, field experiments, ~~field visits~~, readings, additional readings, writings, still more writings, and discussions{{</hl>}}.
-
-At the end of the Unit, the students will use the gamut of Models / Tools / Techniques encountered in class to design an artifact or performance, working individually or in teams.
+The Models should thusly provide data and directions for artistic and design endeavours. In effect, we will go from <u>[**Stories to Data**](https://open.spotify.com/episode/2DpA27VkXd0eVvcM4f3hTl?si=fa54cde8dd0044d0)</u> rather than the other way around. At the end of the Unit, the ~~tired, but happy~~ students will use the gamut of Models / Tools / Techniques encountered in class to design an artifact or performance, working individually or in teams.
 
 ## What you will learn
 
--   {{<hl>}}The 4 As {{</hl>}} of Complexity Science - "Agents, Actions, Again, Aggregate"
+-   The so-called (by me!) {{<hl>}}4-As {{</hl>}} of Complexity Science - "Agents, Actions, Again, Aggregate"
 -   {{<hl>}}Complexity concepts{{</hl>}} and how to identify them and apply them in practice
--   {{<hl>}}Game Theory{{</hl>}}
-    -   Prisoners' Dilemma and Stag Hunt
+- Complexity in Human Behaviour:
+    -   {{<hl>}}Game Theory{{</hl>}}: Prisoners' Dilemma, Stag Hunt, and Chicken Games
     -   Coordination Games and Schelling Points
     -   {{<hl>}}Public Behaviour and Policy{{</hl>}}
-    -   {{<hl>}}Viral Trends, Biases, and Epidemics{{</hl>}}
-    -   Urban Patterns and Social Behaviour
+    -   {{<hl>}}Viral Trends, Biases, and Epidemics{{</hl>}}, and why you persist in saying *Bro*, *My Bad*, and *Think Different*🤦 
+    -   Spatial Patterns and Social Behaviour
 
--   Basics of Networks as a Complexity Phenomenon
+
+-   Complexity in Connections:
     -   Network Structure
     -   Network Effects
     -   How the Spatial (Static) affects the Temporal (Behavioural) and vice versa
+    
 -   Complexity in Geometry:
     -   Proximity
     -   Delaunay and Voronoi Patterns
-    -   Fundamentals of {{<hl>}}Fractals{{</hl>}}
+    -   Spatial Pattern Emergence(again)
+    
+-   Fundamentals of {{<hl>}}Fractals{{</hl>}}
+    - Repetition and Iterated Functions
+    - Emergence of Shape(yet again)
+    - Fractional Dimensions and Box Counting
+    - Mandelbrot, Julia, and Barnsley Fractals
+    
+-   Symmetry
+    - Canonical Movements at your fingertips
+    - 1D, 2D, 3D symmetry: Friezes, Mosaics, and Cubes
+    - *Symmetry on Average*: Probability meets Symmetry
+    - Orientation and "Orientability"
+    
 -   Probability and Randomness
     -   Randomness and its manifestation in Real Life
     -   Using Randomness as a Design Tool
     -   Hypothesis Testing
     -   Basics of Design of Experiments
-    -   Data Gathering and Analysis (aka "Research")
+    -   Data Gathering and Analysis (aka "Primary Research")
+    
 -   Basics of Machine Learning Algorithms
     -   Classification
     -   Clustering
     -   Regression
--   {{<hl>}}Why all these &*@!#^%$ matter in Art and Design{{</hl>}}
+    - Interpretation of (some) ML algorithms with ideas from Complexity
+
+<br> And, finally
+
+-   {{<hl>}}Why all these &*@!#^%$ matter in Art and Design{{</hl>}}, especially since you came here because you hated Maths in Class 8!!
 
 ## Some Teasers!!
 
-1. This century was named by Stephen Hawking as the **Age of Complexity**. [(Weblink)](https://blogs.scientificamerican.com/the-curious-wavefunction/stephen-hawkings-advice-for-twenty-first-century-grads-embrace-complexity/).
+1. This century was named by Stephen Hawking as the <u>[**Age of Complexity**](https://blogs.scientificamerican.com/the-curious-wavefunction/stephen-hawkings-advice-for-twenty-first-century-grads-embrace-complexity/)</u>.
     > A few years ago, Hawking was asked what he thought of the common opinion that the twentieth century was that of biology and the twenty-first century would be that of physics. Hawking replied that in his opinion the twenty-first century would be the "century of complexity". That remark probably holds more useful advice for contemporary students than they realize since it points to at least two skills which are going to be essential for new college grads in the age of complexity: statistics and data visualization.
 
-1.  Documentary: **The Secret Life of Chaos.** [(Weblink)](https://topdocumentaryfilms.com/secret-life-chaos/)
+1.  Documentary: <u>[**The Secret Life of Chaos.**](https://topdocumentaryfilms.com/secret-life-chaos/)</u>
 
-2.  TED Talk: Benoit Mandelbrot - **Fractals and the Art of Roughness.** [(Weblink)](https://www.ted.com/talks/benoit_mandelbrot_fractals_and_the_art_of_roughness/transcript?language=en)
+2.  TED Talk: Benoit Mandelbrot. <u>[**Fractals and the Art of Roughness.**](https://www.ted.com/talks/benoit_mandelbrot_fractals_and_the_art_of_roughness/transcript?language=en)</u>
 
-3. <u><https://www.complexity-explorables.org></u>
+3. Complexity Explorables: A collection/playground of interactive explorable explanations of complex systems in biology, physics, mathematics, social sciences, epidemiology, ecology and other fields. <u><https://www.complexity-explorables.org></u>
 
+4. Santa Fe Complexity Institute's Complexity Explorer delivers online courses, tutorials, and resources essential to the study of complex systems. <u>https://www.complexityexplorer.org</u>

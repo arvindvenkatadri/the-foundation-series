@@ -4,7 +4,7 @@ date: "2021-01-24"
 linkTitle: Play and Invent
 summary: "Using Metaphors and Analogic Thinking techniques like TRIZ to solve Inventive Problems"
 view: 2
-weight: 150
+weight: 10
 type: book
 image:
   caption: ""
@@ -14,16 +14,26 @@ image:
 ![](featured.jpg)
 
 ## Introduction
+Creative Problem Solving is a Process and can be taught.
+Brainstorming is utter BS. Post-Its are a great Invention, but a complete waste of time.
 
-This is a {{<hl>}} Contextual Enquiry Course{{</hl>}} in the Foundation (freshman) year of a Bachelor's Degree in Art and Design, at the Srishti Manipal Institute of Art, Design, and Technology, Bangalore, India.
+This is a (very opinionated) {{<hl>}} Contextual Enquiry Course{{</hl>}} on {{<hl>}}Creative Problem Solving{{</hl>}}, designed for the Foundation (freshman) year of a Bachelor's Degree in Art and Design, at the Srishti Manipal Institute of Art, Design, and Technology, Bangalore, India.
 
 ## Course Contents
 
+The course will have some basic foundations from psychological and cognitive science foundations, on top of which will be built the edifice of <u>[Big Understandings, Dispostions, and Skills](/slides/fspmanifesto)</u>.
+
 - Fundamentals of {{<hl>}}Flow and Play{{</hl>}} as defined by Mihaly Csikszentmihalyi
+- Thinking Styles and how one appreciates the Problem Situation
+- Cognitive Biases and Functional Fixedness
+- A Mentality of Resource(fulness)
 - {{<hl>}}Cultural Capital{{</hl>}} as a source of one's Ideas
 - Genes and {{<hl>}}Memes{{</hl>}}
+- Metaphors as Gateways
 - {{<hl>}}The Six Thinking Hats Method{{</hl>}} and how to apply them in practice
 - Innovative Problems Solving Methods like {{<hl>}}TRIZ{{</hl>}}, its philosophy and techniques such as the {{<hl>}}Contradiction Matrix{{</hl>}} and {{<hl>}}40 Inventive Principles{{</hl>}}
+- Analysis of Movies for manifestations of metaphoric problems and TRIZ methods
+- Bring your own Problem: A Final Culminating Project
 
 
 ## Abstract
@@ -42,6 +52,7 @@ Field visits to product, food preparation, solar energy, and logistics companies
 
 The students will finally use the methods and ideas they have learnt and apply them in creating a project, artifact or performance of their own.
 
+<span hidden>
 ## Daywise Plan
 
 1. **Day 1: Play Childhood games**
@@ -201,4 +212,4 @@ The students will finally use the methods and ideas they have learnt and apply t
 
     -   Make, Show and Tell
 
-
+</span>

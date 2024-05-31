@@ -4,7 +4,7 @@ date: "2024-05-09"
 linkTitle: Creative Education
 summary: "Media for Thought and Understanding: Using Diverse Tech Tools and Methods to Explain Things better"
 view: 2
-weight: 80
+weight: 100
 type: book
 image:
   caption: ""
