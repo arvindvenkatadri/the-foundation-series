@@ -5,6 +5,7 @@ author: "Arvind Venkatadri"
 date: 12/Jan/2023
 external_link: ""
 weight: 20
+type: book
 df_print: paged
 code_show: hide
 code_download: TRUE

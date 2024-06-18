@@ -7,6 +7,7 @@ image:
   caption: The Tight Rope Walker (Seiltänzer) (1923) by Paul Klee
   focal_point: Smart
 weight: 30
+type: book
 # links:
 # - icon: twitter
 #   icon_pack: fab

@@ -3,8 +3,9 @@ title: "\U0001F58F Ratings and Rankings"
 subtitle: "On what Basis do we compare and grade things? How do we represent that?"
 author: "Arvind Venkatadri"
 dat: 13/Feb/2023
-lastmod: "2023-02-13"
-order : 60
+lastmod: "2024-06-17"
+weight: 60
+type: book
 abstract: "On what Basis do we compare and grade things? How do we represent that?"
 summary: "On what Basis do we compare and grade things? How do we represent that?"
 tags:
@@ -190,12 +191,12 @@ df3 &lt;- tibble(Product = c(&quot;G1&quot;, &quot;G2&quot;, &quot;G3&quot;),
               Universality = runif(3))
 df3</code></pre>
 <pre><code>## # A tibble: 3 × 9
-##   Product   Power  Cost Harmony  Style  Size Manufacturability Durabil…¹ Unive…²
-##   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;             &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-## 1 G1      0.586   0.277   0.724 0.0731 0.100             0.455     0.962   0.997
-## 2 G2      0.00895 0.814   0.906 0.755  0.954             0.971     0.762   0.506
-## 3 G3      0.294   0.260   0.949 0.286  0.416             0.584     0.715   0.490
-## # … with abbreviated variable names ¹​Durability, ²​Universality</code></pre>
+##   Product   Power  Cost Harmony  Style  Size Manufacturability Durability
+##   &lt;chr&gt;     &lt;dbl&gt; &lt;dbl&gt;   &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt;             &lt;dbl&gt;      &lt;dbl&gt;
+## 1 G1      0.586   0.277   0.724 0.0731 0.100             0.455      0.962
+## 2 G2      0.00895 0.814   0.906 0.755  0.954             0.971      0.762
+## 3 G3      0.294   0.260   0.949 0.286  0.416             0.584      0.715
+## # ℹ 1 more variable: Universality &lt;dbl&gt;</code></pre>
 <pre class="r"><code>ggradar::ggradar(plot.data = df3,
                  axis.label.size = 3, # Titles of Params
                  grid.label.size = 4, # Score Values/Circles

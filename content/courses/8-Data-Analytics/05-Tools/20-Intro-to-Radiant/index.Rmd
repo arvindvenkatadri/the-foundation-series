@@ -6,6 +6,7 @@ lastmod: "`r Sys.Date()`"
 summary: An R/Shiny based point-and-click tool for Business Analytics
 view: 2
 weight: 10
+type: book
 tags:
 -
 image:

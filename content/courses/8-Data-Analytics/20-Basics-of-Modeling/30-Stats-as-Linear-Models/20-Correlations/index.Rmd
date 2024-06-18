@@ -4,6 +4,7 @@ author: "Arvind Venkatadri"
 date: Nov 22, 2022
 lastmod: "`r Sys.Date()`"
 weight: 20
+type: book
 output:
   html_document:
     toc_float: yes

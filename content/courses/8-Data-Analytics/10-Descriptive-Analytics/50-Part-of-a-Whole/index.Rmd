@@ -4,6 +4,7 @@ subtitle: "Parts of a Whole"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 weight: 50
+type: book
 summary: "Slices, Portions, Counts, and Aggregates of Data"
 tags:
   - Pie Charts/Fan Charts/Donut Charts

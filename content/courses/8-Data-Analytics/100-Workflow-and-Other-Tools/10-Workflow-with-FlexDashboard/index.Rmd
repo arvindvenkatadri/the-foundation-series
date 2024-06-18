@@ -4,6 +4,7 @@ date: "`r Sys.Date()`"
 subtitle: "Making Business Presentations using Flexdashboards in R"
 author: Arvind Venkatadri
 weight: 20
+type: book
 featured: no
 image:
   placement: 2

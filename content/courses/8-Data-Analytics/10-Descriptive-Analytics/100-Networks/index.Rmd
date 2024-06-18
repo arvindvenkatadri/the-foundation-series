@@ -5,6 +5,7 @@ author: "Arvind Venkatadri"
 date: 12/July/2022
 lastmod: "`r Sys.Date()`"
 weight : 100
+type: book
 summary: "Networks and Connections and what happens over them"
 tags:
 - Nodes and Edges

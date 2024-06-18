@@ -4,7 +4,8 @@ subtitle: "On what Basis do we compare and grade things? How do we represent tha
 author: "Arvind Venkatadri"
 dat: 13/Feb/2023
 lastmod: "`r Sys.Date()`"
-order : 60
+weight: 60
+type: book
 abstract: "On what Basis do we compare and grade things? How do we represent that?"
 summary: "On what Basis do we compare and grade things? How do we represent that?"
 tags:

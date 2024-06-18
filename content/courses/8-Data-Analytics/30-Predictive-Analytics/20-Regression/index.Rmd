@@ -4,7 +4,7 @@ subtitle: ""
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 view: 2
-type: page
+type: book
 weight: 20
 summary: "Using Linear Regression to Predict Numerical Data"
 output:

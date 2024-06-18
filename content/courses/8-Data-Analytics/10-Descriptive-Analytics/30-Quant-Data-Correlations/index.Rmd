@@ -4,6 +4,7 @@ subtitle: "How one variable changes with another"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 weight: 30
+type: book
 summary: "How one variable changes with another"
 tags:
 - Correlations  

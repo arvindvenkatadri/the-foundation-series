@@ -3,6 +3,8 @@ title: "\U0001F39A Comparing Proportions"
 author: "Arvind Venkatadri"
 date: 28/11/2022
 lastmod: "`r Sys.Date()`"
+weight: 30
+type: book
 links:
 - icon: circle
   icon_pack: fas

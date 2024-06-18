@@ -2,6 +2,7 @@
 title: "\U0001F578 Additional Reference Material"
 author: "Arvind Venkatadri"
 weight: 120
+type: book
 subtitle: "Miscellaneous References"
 date: "`r Sys.Date()`"
 summary: 

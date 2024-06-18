@@ -8,6 +8,7 @@ image:
   caption: Photo by <a href="https://unsplash.com/@maddibazzocco?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Maddi Bazzocco</a> on <a href="https://unsplash.com/s/photos/groceries?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
 weight: 40
+type: book
 links:
 # - icon: twitter
 #   icon_pack: fab

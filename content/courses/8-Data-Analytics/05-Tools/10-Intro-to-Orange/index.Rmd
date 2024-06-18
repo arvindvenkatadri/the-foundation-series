@@ -5,6 +5,7 @@ date: 22/July/2022
 lastmod: "`r Sys.Date()`"
 summary: Using A Visual drag and drop tool called Orange
 weight: 05
+type: book
 tags:
 - Qual Variables and Quant Variables
 - Bar and Column Charts

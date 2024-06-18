@@ -2,6 +2,8 @@
 title: "\U0001F3DA \U0001F515 Nonparametric Tests"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
+weight: 50
+type: book
 output:
   html_document:
     toc_float: yes

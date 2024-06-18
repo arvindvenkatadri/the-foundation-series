@@ -9,6 +9,7 @@ tags:
   - Time Series
 subtitle: Time Series
 weight: 80
+type: book
 summary: Trends, Seasons, and Changes over time
 image:
   caption: Photo by https://twitter.com/culturaltutor/status/1605415692169347073

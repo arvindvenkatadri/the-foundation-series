@@ -6,6 +6,7 @@ linkTitle: Intro to Linear Programming
 summary: 
 view: 2
 weight: 10
+type: book
 ---
 
 ```{r setup, include=FALSE}

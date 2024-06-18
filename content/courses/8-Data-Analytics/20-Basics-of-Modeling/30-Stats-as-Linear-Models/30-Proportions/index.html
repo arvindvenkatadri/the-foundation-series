@@ -2,7 +2,9 @@
 title: "\U0001F39A Comparing Proportions"
 author: "Arvind Venkatadri"
 date: 28/11/2022
-lastmod: "2023-01-20"
+lastmod: "2024-06-17"
+weight: 30
+type: book
 links:
 - icon: circle
   icon_pack: fas
@@ -39,13 +41,17 @@ editor_options:
 
 
 
-<div id="independence-of-categorical-variables" class="section level3">
-<h3>Independence of Categorical Variables</h3>
-<p>R provides for several tests of independence of <strong>CATEGORICAL</strong> variables.
-These are the chi-square, Fisher exact and Cochran-Mantel- Haenszel tests.</p>
+<div id="independence-of-categorical-variables" class="section level1">
+<h1>Independence of Categorical Variables</h1>
+<p>R provides for several tests of independence of <strong>CATEGORICAL</strong>
+variables. These are the chi-square, Fisher exact and Cochran-Mantel-
+Haenszel tests.</p>
 <div id="pearson-chi-square-test" class="section level4">
 <h4>Pearson Chi-Square Test</h4>
-<p>Chi square test needs a frequency table to be created first and works on two variables in the Table to decide if they are independent or not. <em>A crosstable is needed since the variables are categorical and need counts or scores to check for their independence.</em></p>
+<p>Chi square test needs a frequency table to be created first and works on
+two variables in the Table to decide if they are independent or not. <em>A
+crosstable is needed since the variables are categorical and need counts
+or scores to check for their independence.</em></p>
 <pre class="r"><code>myxtable &lt;- xtabs(data = Arthritis,formula = ~ Treatment + Improved)
 myxtable2 &lt;- xtabs(data = Arthritis, ~ Improved + Sex)
 
@@ -65,12 +71,16 @@ stats::chisq.test(myxtable) # Checks if variables are independent. So P value ne
 ## 
 ## data:  myxtable2
 ## X-squared = 4.8407, df = 2, p-value = 0.08889</code></pre>
-<p>Since the p-value of the Pearson Chisquare Test is very small, the variables Treatment and Improved are NOT independent and are therefore related.</p>
-<p>With Improved and Sex, there is no dependence. Here the p-value is more than 5% so it is likely that these variables are independent.</p>
+<p>Since the p-value of the Pearson Chisquare Test is very small, the
+variables Treatment and Improved are NOT independent and are therefore
+related.</p>
+<p>With Improved and Sex, there is no dependence. Here the p-value is more
+than 5% so it is likely that these variables are independent.</p>
 </div>
-<div id="fisher-exact-test" class="section level4">
-<h4>Fisher Exact Test</h4>
-<p>The Fisher exact test uses a Contingency Table, as with a Pearson ChiSquare Test.</p>
+<div id="fisher-exact-test" class="section level2">
+<h2>Fisher Exact Test</h2>
+<p>The Fisher exact test uses a Contingency Table, as with a Pearson
+ChiSquare Test.</p>
 <pre class="r"><code>stats::fisher.test(myxtable)</code></pre>
 <pre><code>## 
 ## 	Fisher&#39;s Exact Test for Count Data
@@ -86,13 +96,18 @@ stats::chisq.test(myxtable) # Checks if variables are independent. So P value ne
 ## p-value = 0.1094
 ## alternative hypothesis: two.sided</code></pre>
 <ul>
-<li>Treatment + Improved: The p-value is much smaller than 5% so these two variables are NOT independent. Hence Treatment and Improved are dependent.
--Treatment + Sex: p-value is pretty high, so Treatment and Sex are independent.</li>
+<li>Treatment + Improved: The p-value is much smaller than 5% so these
+two variables are NOT independent. Hence Treatment and Improved are
+dependent. -Treatment + Sex: p-value is pretty high, so Treatment
+and Sex are independent.</li>
 </ul>
 </div>
-<div id="cochran-mantel-haenszel-test" class="section level4">
-<h4>Cochran-Mantel-Haenszel Test</h4>
-<p>Another test for Independence is the Cochran-Mantel-Haenszel test: This test uses a <em>3D Contingency Table</em> and checks for the null hypothesis that <em>the first two variables are independent at every stratum of the third</em>. So we choose:</p>
+<div id="cochran-mantel-haenszel-test" class="section level2">
+<h2>Cochran-Mantel-Haenszel Test</h2>
+<p>Another test for Independence is the Cochran-Mantel-Haenszel test: This
+test uses a <em>3D Contingency Table</em> and checks for the null hypothesis
+that <em>the first two variables are independent at every stratum of the
+third</em>. So we choose:</p>
 <ul>
 <li>Treatment + Improved vs Sex</li>
 </ul>
@@ -103,18 +118,22 @@ stats::mantelhaen.test(myxtable3)</code></pre>
 ## 
 ## data:  myxtable3
 ## Cochran-Mantel-Haenszel M^2 = 14.632, df = 2, p-value = 0.0006647</code></pre>
-<p>Hence Treatment and Improved are NOT independent across all values of Sex. Hence, Treated individuals reported improvement more often than those receiving Placebos, after controlling for Sex.</p>
+<p>Hence Treatment and Improved are NOT independent across all values of
+Sex. Hence, Treated individuals reported improvement more often than
+those receiving Placebos, after controlling for Sex.</p>
 </div>
-<div id="associations-between-categorical-variables" class="section level4">
-<h4>Associations between categorical variables</h4>
-<p>When Tests for Independence fail and the variables are NOT independent, we need to explore <strong>the extent of the association.</strong></p>
+<div id="associations-between-categorical-variables" class="section level2">
+<h2>Associations between categorical variables</h2>
+<p>When Tests for Independence fail and the variables are NOT independent,
+we need to explore <strong>the extent of the association.</strong></p>
 <p>The <em>vcd</em> package allows us to look at these aspects:</p>
 <ul>
 <li>“phi” coefficient</li>
 <li>Contingency coefficient</li>
 <li>Cramer’s V ( for a 2D table) ## Phew !!!</li>
 </ul>
-<p>We know Treatment and Improved are NOT independent, so lets look at these cat-variables:</p>
+<p>We know Treatment and Improved are NOT independent, so lets look at
+these cat-variables:</p>
 <pre class="r"><code>vcd::assocstats(myxtable)</code></pre>
 <pre><code>##                     X^2 df  P(&gt; X^2)
 ## Likelihood Ratio 13.530  2 0.0011536
@@ -131,9 +150,10 @@ stats::mantelhaen.test(myxtable3)</code></pre>
 ## Phi-Coefficient   : NA 
 ## Contingency Coeff.: 0.233 
 ## Cramer&#39;s V        : 0.24</code></pre>
-<p>Larger magnitudes mean larger associations. But I can’t tell in absolute terms what is a “good number”.</p>
-<p>I wonder why the Phi Coefficient is NA: oh, it is computed only for 2 x 2 tables !!</p>
-</div>
+<p>Larger magnitudes mean larger associations. But I can’t tell in absolute
+terms what is a “good number”.</p>
+<p>I wonder why the Phi Coefficient is NA: oh, it is computed only for 2 x
+2 tables !!</p>
 </div>
 <div id="a-workflow-in-orange" class="section level2">
 <h2>A Workflow in Orange</h2>
@@ -143,6 +163,7 @@ stats::mantelhaen.test(myxtable3)</code></pre>
 </div>
 <div id="a-workflow-in-r" class="section level2">
 <h2>A Workflow in R</h2>
+</div>
 </div>
 <div id="references" class="section level1">
 <h1>References</h1>
@@ -238,7 +259,7 @@ mydata_wide</code></pre>
 ##  8  1.62   1.55  -0.990
 ##  9 -0.292  3.36  -0.172
 ## 10 -1.25   1.92  -0.158
-## # … with 40 more rows</code></pre>
+## # ℹ 40 more rows</code></pre>
 <pre class="r"><code>mydata_long</code></pre>
 <pre><code>## # A tibble: 150 × 2
 ##    group value[,1]
@@ -253,7 +274,7 @@ mydata_wide</code></pre>
 ##  8 y        -0.944
 ##  9 y2        0.624
 ## 10 x        -0.799
-## # … with 140 more rows</code></pre>
+## # ℹ 140 more rows</code></pre>
 <pre class="r"><code>mydata_long_y</code></pre>
 <pre><code>## # A tibble: 100 × 2
 ##    group value[,1]
@@ -268,7 +289,7 @@ mydata_wide</code></pre>
 ##  8 y2        5.43 
 ##  9 y         2.19 
 ## 10 y2        0.168
-## # … with 90 more rows</code></pre>
+## # ℹ 90 more rows</code></pre>
 </div>
 <div id="signed-rank-values" class="section level2">
 <h2>“Signed Rank” Values</h2>
@@ -315,6 +336,24 @@ p2 &lt;- mydata_long %&gt;%
   ylab(&quot;Signed Rank of Response Variable&quot;)
 
 patchwork::wrap_plots(p1,p2, nrow = 1, guides = &quot;collect&quot;)</code></pre>
+<pre><code>## Warning in geom_segment(data = mydata_wide, aes(y = 0, yend = 0, x = 0.75, : All aesthetics have length 1, but the data has 50 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
+<pre><code>## Warning in geom_text(aes(x = 1, y = 0.5, label = &quot;0&quot;)): All aesthetics have length 1, but the data has 150 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
+<pre><code>## Warning in geom_segment(data = mydata_wide, aes(y = 0.3, yend = 0.3, x = 1.75, : All aesthetics have length 1, but the data has 50 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
+<pre><code>## Warning in geom_text(aes(x = 2, y = 0.6, label = &quot;0.3&quot;)): All aesthetics have length 1, but the data has 150 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
+<pre><code>## Warning in geom_segment(data = mydata_wide, aes(y = 0.5, yend = 0.5, x = 2.75, : All aesthetics have length 1, but the data has 50 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
+<pre><code>## Warning in geom_text(aes(x = 3, y = 0.8, label = &quot;0.5&quot;)): All aesthetics have length 1, but the data has 150 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/data_plots-1.png" width="672" /></p>
 </div>
 <div id="how-does-sign-rank-data-work" class="section level2">
@@ -338,9 +377,9 @@ prediction leaves a small “residual” error between the actual and
 predicted values. <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span> are calculated based on
 minimizing the <em>sum of square</em>s of these residuals, and hence this
 method is called “ordinary least squares” regression.</p>
-<div class="figure">
-<img src="OLS.png" alt="" />
-<p class="caption">Least Squares</p>
+<div class="float">
+<img src="OLS.png" alt="Least Squares" />
+<div class="figcaption">Least Squares</div>
 </div>
 <p>The net <em>area</em> of all the shaded squares is minimized in the calculation
 of <span class="math inline">\(\beta_0\)</span> and <span class="math inline">\(\beta_1\)</span>. It is also possible that there is more than
@@ -425,8 +464,10 @@ that there is no relationship between x and y</em>.</p>
 <ol style="list-style-type: decimal">
 <li><strong>L</strong>: <span class="math inline">\(\color{blue}{linear}\)</span> relationship</li>
 <li><strong>I</strong>: Errors are <strong>independent</strong> (across observations)</li>
-<li><strong>N</strong>: y is <span class="math inline">\(\color{red}{normally}\)</span> distributed at each “level”
-of x.</li>
+<li><strong>N</strong>: y is <span class="math inline">\(\color{red}{normally}\)</span> distributed at each “level” of
+<ol start="24" style="list-style-type: lower-alpha">
+<li></li>
+</ol></li>
 <li><strong>E</strong>: equal variance at all levels of x. No <em>heteroscedasticity</em>.
 <img src="ols_assumptions.png" alt="OLS Assumptions" /></li>
 </ol>
@@ -486,7 +527,7 @@ print(cor)</code></pre>
 <pre><code>## # A tibble: 2 × 2
 ##    estimate p.value
 ##       &lt;dbl&gt;   &lt;dbl&gt;
-## 1 -9.06e-17   1    
+## 1 -1.28e-16   1.00 
 ## 2 -2.32e- 1   0.105</code></pre>
 <pre class="r"><code># All together
 rbind(cor, lin, lin_scl) %&gt;% print()</code></pre>
@@ -496,7 +537,7 @@ rbind(cor, lin, lin_scl) %&gt;% print()</code></pre>
 ## 1 -2.32e- 1   0.105
 ## 2  3   e- 1   0.286
 ## 3 -4.64e- 1   0.105
-## 4 -9.06e-17   1    
+## 4 -1.28e-16   1.00 
 ## 5 -2.32e- 1   0.105</code></pre>
 <p>Notes: 1. The <em>p-value</em> for Pearson Correlation and that for the <em>slope</em>
 in the linear model is the same ( 0.1053 ). Which means we cannot reject
@@ -570,6 +611,8 @@ mosaic::cor_test(gpa ~ study_hours, data = gpa_study_hours)</code></pre>
 <pre class="r"><code>statsExpressions::corr_test(data = gpa_study_hours, 
                             x = study_hours, 
                             y = gpa)</code></pre>
+<pre><code>## Warning: Function `data_find()` is deprecated and will be removed in a future
+##   release. Please use `extract_column_names()` instead.</code></pre>
 <pre><code>## # A tibble: 1 × 14
 ##   parameter1  parameter2 effectsize          estimate conf.level conf.low
 ##   &lt;chr&gt;       &lt;chr&gt;      &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;
@@ -593,8 +636,8 @@ hypothesis that <code>study_hours</code> and <code>gpa</code> have no relationsh
 <pre><code>## Registered S3 method overwritten by &#39;ggside&#39;:
 ##   method from   
 ##   +.gg   ggplot2</code></pre>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre><code>## `stat_xsidebin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_ysidebin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/Pearson_example_3-1.png" width="672" /></p>
 </div>
 </div>
@@ -710,8 +753,8 @@ ggstatsplot::ggscatterstats(data = cars93, x = weight,
                             type = &quot;nonparametric&quot;,
                             title = &quot;Cars93: Weight vs Price&quot;,
                             subtitle = &quot;Spearman Correlation&quot;)</code></pre>
-<pre><code>## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.
-## `stat_bin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
+<pre><code>## `stat_xsidebin()` using `bins = 30`. Pick better value with `binwidth`.
+## `stat_ysidebin()` using `bins = 30`. Pick better value with `binwidth`.</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/Spearman_example_2-1.png" width="672" /></p>
 <p>We see that using ranks of the <code>price</code> variable, we obtain a Spearman’s
 <span class="math inline">\(\rho = 0.882\)</span> with a <code>p-value</code> that is very small. Hence we are able to
@@ -812,7 +855,7 @@ population, of which y is a sample, could have mean=0.</p>
 ##  8 2000-1   Man    89    82    88           78.0
 ##  9 2000-1   Woman  87.5  86.5  95           82.9
 ## 10 2000-1   Man    91    98    88           89.1
-## # … with 223 more rows</code></pre>
+## # ℹ 223 more rows</code></pre>
 </div>
 </div>
 <div id="wilcoxons-signed-rank-test" class="section level2 tabset">
@@ -905,6 +948,18 @@ p4 &lt;- ggplot(mydata_wide, aes( x = 0, y = signed_rank(y))) +
 
 
 patchwork::wrap_plots(p1,p2,p3,p4, nrow = 1, guides = &quot;collect&quot;)</code></pre>
+<pre><code>## Warning in geom_segment(aes(y = t1$estimate, yend = t1$estimate, x = -0.2, : All aesthetics have length 1, but the data has 50 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
+<pre><code>## Warning in geom_segment(aes(y = lm(y ~ 1)$coefficient, yend = lm(y ~ 1)$coefficient, : All aesthetics have length 1, but the data has 50 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
+<pre><code>## Warning in geom_segment(aes(y = mean(signed_rank(y)), yend = mean(signed_rank(y)), : All aesthetics have length 1, but the data has 50 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
+<pre><code>## Warning in geom_segment(aes(y = lm(signed_rank(y) ~ 1)$coefficient, yend = lm(signed_rank(y) ~ : All aesthetics have length 1, but the data has 50 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/Mean_Related_Plots-1.png" width="672" /></p>
 </div>
 </div>
@@ -1075,7 +1130,7 @@ mydata_wide_new %&gt;%
   scale_x_discrete(name = &quot;Dummy Variable x_i  [0,1]&quot;,
                 limits = c(0,1)) +
   annotate(&quot;text&quot;, x = 0, y = 1.5, label = &quot;Difference in means \n equals slope in linear model&quot;) </code></pre>
-<pre><code>## Warning: Continuous limits supplied to discrete scale.
+<pre><code>## Warning in scale_x_discrete(name = &quot;Dummy Variable x_i  [0,1]&quot;, limits = c(0, : Continuous limits supplied to discrete scale.
 ## ℹ Did you mean `limits = factor(...)` or `scale_*_continuous()`?</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/Independent_Data_Plots-1.png" width="672" /></p>
 <pre class="r"><code># Need to use `glue` here to add more annotations
@@ -1147,20 +1202,18 @@ in means. <img src="t-distribution.png" alt="t-distribution curves" /></p>
 t5 &lt;- t.test(y2, y, var.equal = TRUE)
 t5 %&gt;% tidy() </code></pre>
 <pre><code>## # A tibble: 1 × 10
-##   estim…¹ estim…² estim…³ stati…⁴ p.value param…⁵ conf.…⁶ conf.…⁷ method alter…⁸
-##     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  
-## 1     0.2     0.5     0.3   0.566   0.573      98  -0.502   0.902 Two S… two.si…
-## # … with abbreviated variable names ¹​estimate, ²​estimate1, ³​estimate2,
-## #   ⁴​statistic, ⁵​parameter, ⁶​conf.low, ⁷​conf.high, ⁸​alternative</code></pre>
+##   estimate estimate1 estimate2 statistic p.value parameter conf.low conf.high
+##      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+## 1    0.200       0.5       0.3     0.566   0.573        98   -0.502     0.902
+## # ℹ 2 more variables: method &lt;chr&gt;, alternative &lt;chr&gt;</code></pre>
 <pre class="r"><code># Welch test when variances are not equal
 t6 &lt;- t.test(y2,y, var.equal = FALSE)
 t6 %&gt;% tidy()</code></pre>
 <pre><code>## # A tibble: 1 × 10
-##   estim…¹ estim…² estim…³ stati…⁴ p.value param…⁵ conf.…⁶ conf.…⁷ method alter…⁸
-##     &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;  
-## 1     0.2     0.5     0.3   0.566   0.573    90.9  -0.502   0.902 Welch… two.si…
-## # … with abbreviated variable names ¹​estimate, ²​estimate1, ³​estimate2,
-## #   ⁴​statistic, ⁵​parameter, ⁶​conf.low, ⁷​conf.high, ⁸​alternative</code></pre>
+##   estimate estimate1 estimate2 statistic p.value parameter conf.low conf.high
+##      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt;
+## 1    0.200       0.5       0.3     0.566   0.573      90.9   -0.502     0.902
+## # ℹ 2 more variables: method &lt;chr&gt;, alternative &lt;chr&gt;</code></pre>
 <pre class="r"><code># Linear Model with Dummy variable
 # lm(value ~ 1 + group, data = mydata_long_y) # also works
 lm6 &lt;- lm(value ~ 1 + I(group == &quot;y2&quot;), data = mydata_long_y)
@@ -1168,8 +1221,8 @@ lm6 %&gt;% tidy()</code></pre>
 <pre><code>## # A tibble: 2 × 5
 ##   term                     estimate std.error statistic p.value
 ##   &lt;chr&gt;                       &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;
-## 1 &quot;(Intercept)&quot;                 0.3     0.25      1.2     0.233
-## 2 &quot;I(group == \&quot;y2\&quot;)TRUE&quot;      0.2     0.354     0.566   0.573</code></pre>
+## 1 &quot;(Intercept)&quot;               0.300     0.25      1.20    0.233
+## 2 &quot;I(group == \&quot;y2\&quot;)TRUE&quot;    0.200     0.354     0.566   0.573</code></pre>
 <p>We get the same estimates for means of y and y2 ( 0.3 and 0.5
 respectively).</p>
 </div>
@@ -1238,10 +1291,9 @@ H_0 : \beta_1 = 0
 w5 &lt;- wilcox.test(y2,y, paired = FALSE)
 w5 %&gt;% tidy()</code></pre>
 <pre><code>## # A tibble: 1 × 4
-##   statistic p.value method                                            alternat…¹
-##       &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;                                             &lt;chr&gt;     
-## 1      1264   0.926 Wilcoxon rank sum test with continuity correction two.sided 
-## # … with abbreviated variable name ¹​alternative</code></pre>
+##   statistic p.value method                                           alternative
+##       &lt;dbl&gt;   &lt;dbl&gt; &lt;chr&gt;                                            &lt;chr&gt;      
+## 1      1264   0.926 Wilcoxon rank sum test with continuity correcti… two.sided</code></pre>
 <pre class="r"><code># As Linear model
 lm5 &lt;- lm(rank(value) ~ 1 + I(group == &quot;y2&quot;), 
           data = mydata_long_y)
@@ -1320,12 +1372,28 @@ P_anova1 = ggplot(D_anova1, aes(x=x, y=y)) +
     )
   )</code></pre>
 <pre><code>## Warning: The `fun.y` argument of `stat_summary()` is deprecated as of ggplot2 3.3.0.
-## ℹ Please use the `fun` argument instead.</code></pre>
-<pre><code>## Warning: Using `size` aesthetic for lines was deprecated in ggplot2 3.4.0.
-## ℹ Please use `linewidth` instead.</code></pre>
+## ℹ Please use the `fun` argument instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
 <pre class="r"><code>P_anova1</code></pre>
 <pre><code>## Warning: The dot-dot notation (`..y..`) was deprecated in ggplot2 3.4.0.
-## ℹ Please use `after_stat(y)` instead.</code></pre>
+## ℹ Please use `after_stat(y)` instead.
+## This warning is displayed once every 8 hours.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.</code></pre>
+<pre><code>## Warning in geom_segment(x = -10, xend = 100, y = 0.5, yend = 0.5, lwd = 2, : All aesthetics have length 1, but the data has 60 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
+<pre><code>## Warning in geom_segment(x = 0, xend = 1, y = ymeans[1], yend = ymeans[2], : All aesthetics have length 1, but the data has 60 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
+<pre><code>## Warning in geom_segment(x = 1, xend = 2, y = ymeans[1], yend = ymeans[3], : All aesthetics have length 1, but the data has 60 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
+<pre><code>## Warning in geom_segment(x = 2, xend = 3, y = ymeans[1], yend = ymeans[4], : All aesthetics have length 1, but the data has 60 rows.
+## ℹ Please consider using `annotate()` or provide this layer with data containing
+##   a single row.</code></pre>
 <p><img src="{{< blogdown/postref >}}index_files/figure-html/Visualizing_One_way_ANOVA-1.png" width="672" /></p>
 </div>
 <div id="code-10" class="section level3">

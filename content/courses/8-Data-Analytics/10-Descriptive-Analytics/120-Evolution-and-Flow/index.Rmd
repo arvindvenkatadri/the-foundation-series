@@ -5,6 +5,7 @@ author: "Arvind Venkatadri"
 date: 01/Feb/2023
 lastmod: "`r Sys.Date()`"
 weight: 120
+type: book
 summary: "Changes in Information over space and time"
 tags:
 - Line and Area Plots

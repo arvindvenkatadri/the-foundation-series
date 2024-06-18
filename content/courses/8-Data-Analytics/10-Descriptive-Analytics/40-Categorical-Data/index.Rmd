@@ -5,6 +5,7 @@ date: 15/Jan/2023
 lastmod: "`r Sys.Date()`"
 summary: "Visualizing Categorical Data"
 weight: 40
+type: book
 links:
 - icon: circle
   icon_pack: fas

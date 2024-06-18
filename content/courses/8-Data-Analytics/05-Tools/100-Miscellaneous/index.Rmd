@@ -2,6 +2,7 @@
 title: "\U0001F4DA Miscellaneous Graphs and Tools "
 author: "Arvind Venkatadri"
 weight: 110
+type: book
 subtitle: "Miscellaneous Graphs and Tools"
 date: "`r Sys.Date()`"
 summary: 

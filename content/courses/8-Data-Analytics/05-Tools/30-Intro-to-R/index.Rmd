@@ -5,6 +5,7 @@ date: "`r Sys.Date()`"
 summary: How to use R and RStudio
 view: 2
 weight: 15
+type: book
 tags:
 - R
 - RStudio / Posit

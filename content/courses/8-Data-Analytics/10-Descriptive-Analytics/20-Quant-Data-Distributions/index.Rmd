@@ -4,6 +4,7 @@ subtitle: "Distributions"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 weight: 20
+type: book
 summary: "Quant Variable Graphs and their Siblings"
 tags:
 - Qual Variables and Quant Variables
