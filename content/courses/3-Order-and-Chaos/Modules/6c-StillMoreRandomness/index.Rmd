@@ -67,11 +67,16 @@ Are there other applications of this *chaotic procedure*? Can we throw more rand
 
 1. Ken Perlin. *Making Noise*. <u>https://web.archive.org/web/20160308022101/http://noisemachine.com/talk1/index.html</u>
 
+1. <u>https://rtouti.github.io/graphics/perlin-noise-algorithm></u>
+
+1. Adrian Biagioli. (09 August 2014 ). *Understanding Perlin Noise*. <u>https://adrianb.io/2014/08/09/perlinnoise.html</u>
+
 1. Better Explained Blog. *Vector Calculus: Understanding the Dot Product*. <u>https://betterexplained.com/articles/vector-calculus-understanding-the-dot-product/</u>
 
 1. Ball P. (2015). Forging patterns and making waves from biology to geology: a commentary on Turing (1952) 'The chemical basis of morphogenesis'. Philosophical transactions of the Royal Society of London. Series B, Biological sciences, 370(1666), 20140218. https://doi.org/10.1098/rstb.2014.0218. <u>[**PDF**](/files/PBall.pdf)</u>
 
-1. Adrian Biagioli. (09 August 2014 ). *Understanding Perlin Noise*. <u>https://adrianb.io/2014/08/09/perlinnoise.html</u>
+
+1. Terragen Software Page. <u>https://planetside.co.uk</u>
 
 2. TRON Academy Award
 
