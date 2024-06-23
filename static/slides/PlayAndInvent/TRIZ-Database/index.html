@@ -4,34 +4,29 @@
     <title>TRIZ - A (Growing) Database of Case Studies</title>
     <meta charset="utf-8" />
     <meta name="author" content="Arvind Venkatadri" />
-    <meta name="date" content="2022-12-20" />
-    <script src="index_files/header-attrs/header-attrs.js"></script>
-    <link href="index_files/animate.css-xaringan/animate.slide_left.css" rel="stylesheet" />
-    <script src="index_files/xaringanExtra-webcam/webcam.js"></script>
-    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
-    <script src="index_files/js-cookie/js.cookie.js"></script>
-    <script src="index_files/peerjs/peerjs.min.js"></script>
-    <script src="index_files/tiny.toast/toast.min.js"></script>
-    <link href="index_files/xaringanExtra-broadcast/broadcast.css" rel="stylesheet" />
-    <script src="index_files/xaringanExtra-broadcast/broadcast.js"></script>
-    <link href="index_files/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
-    <script src="index_files/freezeframe/freezeframe.min.js"></script>
-    <script src="index_files/xaringanExtra-freezeframe/freezeframe-init.js"></script>
-    <script id="xaringanExtra-freezeframe-options" type="application/json">{"selector":"img[src$=\"gif\"]","trigger":"click","overlay":false,"responsive":true,"warnings":true}</script>
-    <link href="index_files/panelset/panelset.css" rel="stylesheet" />
-    <script src="index_files/panelset/panelset.js"></script>
-    <script src="index_files/fabric/fabric.min.js"></script>
-    <link href="index_files/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
-    <script src="index_files/xaringanExtra-scribble/scribble.js"></script>
-    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
-    <link href="index_files/font-awesome-animation/font-awesome-animation-emi.css" rel="stylesheet" />
-    <script src="index_files/fontawesome/js/fontawesome-all.min.js"></script>
-    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <meta name="date" content="2024-06-23" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/clipboard/clipboard.min.js"></script>
+    <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
+    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
+    <script src="libs/shareon/shareon.min.js"></script>
+    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <link href="libs/font-awesome-animation/font-awesome-animation-emi.css" rel="stylesheet" />
+    <script src="libs/fontawesome/js/fontawesome-all.min.js"></script>
+    <link rel="stylesheet" href="css/lexis.css" type="text/css" />
+    <link rel="stylesheet" href="css/lexis-fonts.css" type="text/css" />
   </head>
   <body>
     <textarea id="source">
-
-
 
 
 
@@ -72,22 +67,25 @@ class: center middle
 ---
 ## TRIZ: A Workflow Review
 
-
 - Find a "Problem Situation", using say 5W + H. 
 - Use the Ishikawa Diagram to finds **Knobs** and their **Parameters**
-- A. Formulate a **ADMINISTRATIVE CONTRADICTION (AC)** (a trade-off or a compromise) in "plain English using the method of manipaulation of the **Knobs**
+- Formulate a **ADMINISTRATIVE CONTRADICTION (AC)** (a trade-off or a compromise) in "plain English using the method of manipaulation of the **Knobs**
  - Specify an **IDEAL FINAL RESULT**
  - Convert/metaphorize the **AC** into a **TECHNICAL CONTRADICTION(TC)** using **48 TRIZ PARAMETER**s
- - Look up the **CONTRADICTION MATRIX**
- - Discover the **INVENTIVE PRINCIPLES** you might apply
- - *Un-metaphorize* the **INVENTIVE PRINCIPLES** to apply them in a specific way in your problem and solve it. Use your **CC**, and available **Resources**!
-  
-- B. If possible formulate a **PHYSICAL CONTRADICTION(PC)** from your AC. 
+
+
+---
+## TRIZ: A Workflow Review
+
+- Look up the **CONTRADICTION MATRIX**.  
+- Discover the **INVENTIVE PRINCIPLES** you might apply
+- *Un-metaphorize* the **INVENTIVE PRINCIPLES** to apply them in a specific way in your problem and solve it. Use your **CC**, and available **Resources**!
+- If possible formulate a **PHYSICAL CONTRADICTION(PC)** from your AC. 
   - E.g Something has to be hot and cold at the same time
   - Use **SEPARATION PRINCIPLES** to solve the **PC**
   - Use of **SEPARATION PRINCIPLES** may not involve much *un-metaphorization*, but applying them may be easier!!
   - But getting to a PC may not be easy.
- 
+
 
 ---
 
@@ -105,21 +103,21 @@ Alice laughed. “There’s no use trying,” she said: “one can’t believe i
 .pull-right[
 ![](images/2book25.jpg)
 ]
+
 ---
 
 ## TRIZ Workflow: Story #1: Meat Transportation
 
-
 .pull-left[
-A meat plant in South America ships its product to the United States. Refrigeration is required during transport to keep the meat frozen. The meat is flown to the United States, so refrigeration systems were installed in cargo planes. When competition increased, the owner of the plant sought to reduce delivery cost. 
+A meat plant in South America ships its product to the US. Refrigeration is required during transport to keep the meat frozen. The meat is flown to the US, so refrigeration systems were installed in cargo planes. When competition increased, the owner of the plant sought to reduce delivery cost. 
 
-It became obvious that he must increase the amount of product per air shipment. 
+It became obvious that he must increase the amount of product per air shipment. Analysis of the situation revealed that he could compete better if **the weight of the refrigeration system were replaced with that of meat**. 
 
-Analysis of the situation revealed that he could compete better if the weight of the refrigeration system were replaced with that of meat. 
 
-He did exactly that. 
 ]
 .pull-right[
+He did exactly that. 
+
 Flying at an altitude of 15,000–25,000 feet the air temperature is below 32 deg. F, so no refrigeration system was actually needed. 
 
 Conclusion: **Utilization of existing resources** costing nothing brought the system closer to Ideality. 
@@ -153,7 +151,7 @@ Excessive Action**
 
 ## TRIZ Workflow: Case Study #1: Spotify Ad
 .center[
-&lt;iframe width="760" height="500" src="https://www.youtube.com/embed/X1WP5J-I9f8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width="900" height="500" src="https://www.youtube.com/embed/X1WP5J-I9f8?si=LHqbaUTjp1lJHlUB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
 ]
 
 ---
@@ -164,20 +162,28 @@ Excessive Action**
 - **Knobs** (short list): 
   - Travel Time(L/S); Purchase Time(L/S); Noise(Loud/Soft); Bargaining Talk(Long/Short)
 - **Output**: Stress / Boredom / Waste of Time / Mom is Happy / Veggies
+]
+.pull-right[
 - **IFR**: *"I should go AND not go to the market at the same time"*
-
 - **TC**: From the 48 TRIZ parameters:
   - **TC1**: Increase *Productivity(39)* and not worsen *Stress(11)*
   - **TC2**: Improve *Loss of Time(25)* and not worsen *Effect of External Harmful Factors(30)*
   ]
-  
-.pull-right[
-Inventive Principles:
-- TC1: 10(Prior Action), 37(Thermal Expansion), 14(Spheroidality).....hmm, not very inspiring, unless 37 means *get angry with Mom* !! Never!!
-- TC2: 35(Parameter Change), 18(Mechanical Vibration)!!, 34(Rejecting and Regenerating Parts). 
 
+---
+## TRIZ Workflow: Case Study #1: Spotify Ad
+
+.pull-left[
+Inventive Principles:
+- TC1: 10(Prior Action), 37(Thermal Expansion), 14(Spheroidality).
+- Hmm, not very inspiring, unless 37 means *get angry with Mom* !! Never!!
+
+- TC2: 35(Parameter Change), 18(Mechanical Vibration)!!, 34(Rejecting and Regenerating Parts). 
+]
+
+.pull-right[
 Solution:
-- 18(Mechanical Vibration) : Make noise of your own? 🔉 🤣
+- 18(Mechanical Vibration) : Make noise of your own? 🔉 NA
 - 35(Parameter Change): Change *Bargaining Talk* to *Sweet Sound*: Play music!!🎵
 - Also 14(Spheroidality): Wear "spherical" headphones!!🎧! Create a "sound sphere"! Long shot!!
 - SO: with Spotify on, I was **in the market, and not in the market** !! IFR achieved !! Ta Da !!
@@ -207,7 +213,6 @@ But as park visitation increased, traffic volume surged—and so did highway-rel
 ### TRIZ Workflow: Case Study #2: Wildlife Crossings in Banff
 .pull-left[
 - **AC**: We want to drive at high speed, but not kill migrating wild animals (or endanger our vehicles). 
-
 - **Knobs** (short list): 
   - Speed(L/S); Size of Animal(L/S); Number of Animals(L/S); Time of Migration(D/N);
 - **Output**: Road Kill / Affects Animal Migration / Human Costs / Fast Journeys
@@ -235,11 +240,9 @@ But as park visitation increased, traffic volume surged—and so did highway-rel
 
 .pull-left[
 Inventive Principles:
-- TC1: 3(Local Quality), 19(Periodic Action), 35(Parameter Change), 5(Merging).....Local Quality? Parameter Change? Ok, change the road in some way...can't change all cars and definitely can't "change" animals!!
-
-- TC2: 35(Parameter Change), 18(Mechanical Vibration)!!, 34(Rejecting and Regenerating Parts). 
-
-- TC3: ***17(Another Dimension)!!!***, 1(Segmentation), 40(Composite Materials), 33(Homogeneity)
+- **TC1**: 3(Local Quality), 19(Periodic Action), 35(Parameter Change), 5(Merging).....Local Quality? Parameter Change? Ok, change the road in some way...can't change all cars and definitely can't "change" animals!!
+- **TC2**: 35(Parameter Change), 18(Mechanical Vibration)!!, 34(Rejecting and Regenerating Parts). 
+- **TC3**: ***17(Another Dimension)!!!***, 1(Segmentation), 40(Composite Materials), 33(Homogeneity)
 
 Solution:
 - (17)Another Dimension + (35)Parameter Change + 3(Local Quality) = Animal Bridge!!!
@@ -248,17 +251,17 @@ Solution:
 
 .pull-right[
 ![](images/banff.jpg)
-
-Watch in acton: https://youtu.be/9JX6cqME6Hw
-
-NOTE: The IFR embodies a **PC** !! So **Separation Principles** suggest "separation in Space and there you are: you have a bridge!!
 ]
 
+---
+### TRIZ Workflow: Case Study #2: Wildlife Crossings in Banff
+
+&lt;center&gt;
+&lt;iframe width="800" height="400" src="https://www.youtube.com/embed/9JX6cqME6Hw" title="A Wild Way to Move - Banff National Park [contains flashing images]" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;
 
 
-
-
-
+NOTE: The IFR embodies a **PC** !! So **Separation Principles** suggest "separation in Space and there you are: you have a bridge!!
 ---
 
 ### TRIZ Workflow: Case Study #3: Bike Lane
@@ -290,27 +293,20 @@ Very Similar Considerations!!
 
 ---
 
-## TRIZ Workflow: Case Study #4: Arc of the Diver
-
+### TRIZ Workflow: Case Study #4: Arc of the Diver
 .pull-left[
-- AC: When diving, the water may hurt the diver if they do not land properly. 
-- Knobs: Water(Deep/Shallow); Dive(High/Low); Weight of Diver(H/L); Posture?
-
-- IFR: For high water diving, water must be “hard” to support the diver and “soft” so as not to injure the diver. 
-
-- TC: Try!!
-
-- PC: The physical contradiction: The water must be hard and soft at the same time. 
-
-- Solution: 
-This contradiction is resolved by **Separating** the requirements **in space**: Saturate the water with air bubbles — the pool contains both air and water.
+- **AC**: When diving, the water may hurt the diver if they do not land properly. 
+- **Knobs**: Water(Deep/Shallow); Dive(High/Low); Weight of Diver(H/L); Posture?
+- **IFR**: For high water diving, water must be “hard” to support the diver and “soft” so as not to injure the diver. 
+- **TC**: Try!!
+- **PC**: The physical contradiction: The water must be hard and soft at the same time. 
 ]
-
 
 .pull-right[
-&lt;div style="width:100%;height:0;padding-bottom:75%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/9MFrUbcvCC3pCcq6vx" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/usnationalarchives-9MFrUbcvCC3pCcq6vx"&gt;via GIPHY&lt;/a&gt;&lt;/p&gt;
+&lt;div style="width:100%;height:0;padding-bottom:75%;position:relative;"&gt;&lt;iframe src="https://giphy.com/embed/9MFrUbcvCC3pCcq6vx" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen&gt;&lt;/iframe&gt;&lt;/div&gt;&lt;p&gt;&lt;a href="https://giphy.com/gifs/usnationalarchives-9MFrUbcvCC3pCcq6vx"&gt;&lt;/a&gt;&lt;/p&gt;
 ]
-
+- Solution: 
+This contradiction is resolved by **Separating** the requirements **in space**: Saturate the water with air bubbles — the pool contains both air and water.
 
 ---
 
@@ -323,7 +319,7 @@ This contradiction is resolved by **Separating** the requirements **in space**: 
 ]
 
 .pull-right[
-&lt;img src="https://ourworldindata.org/uploads/2021/04/Plastic-river-inputs-Meijer-et-al.-2021-2048x1505.png" width="100%" /&gt;
+![](https://ourworldindata.org/uploads/2021/04/Plastic-river-inputs-Meijer-et-al.-2021-2048x1505.png)&lt;!-- --&gt;
 ]
 
 
@@ -337,20 +333,30 @@ This contradiction is resolved by **Separating** the requirements **in space**: 
 - **Knobs**: Rivers? Water? Flow? Humans? Plastic waste itself? Water craft(boats/ships..)
 
 - **IFR**: Rivers must flow, but plastic must not.
-
+]
+.pull-right[
 - **TC**: 
   - **TC1**: Increase *Volume of Stationary Object*(8) and not worsen *Object affected by external harmful factors*(30)
   
-- **PC**: The Plastics must be in the water AND not in the water at the same time. ( Do we need "two kinds of water", then??? )
+- **PC**: The Plastics must be in the water AND not in the water at the same time. 
+  - ( Do we need "two kinds of water", then??? )
+]
+
+---
+### TRIZ Workflow: Case Study #5: Plastics in the Water
+
+.pull-left[
+Inventive Principles:
+- **TC1**: 34(Discarding and Recovering), 39(Inert Atmosphere), 19(Periodic Action), 27(Cheap Short Living Objects).....
+  - IP34: Discarding and Recovering? What can we discard in the water? Would we want to? Isn't that adding to pollution?? Not sure...
+  - IP39: Inert Atmosphere? In water? Ok..water must *not* flow in some places and be "inert". But how? Some blockage?
+
 ]
 
 .pull-right[
-Inventive Principles:
-- TC1: 34(Discarding and Recovering), 39(Inert Atmosphere), 19(Periodic Action), 27(Cheap Short Living Objects).....
-  - IP34: Discarding and Recovering? What can we discard in the water? Would we want to? Not sure...
-  - IP39: Inert Atmosphere? In water? Ok..water must *not* flow in some places and be "inert". But how? Some blockage?
-  - IP19: Periodic Action? Doing something again? What? Agitate the water? How?
-  - IP27: Cheap Short Living Objects? In the water? Wait....BUBBLES !!!!
+- IP19: Periodic Action? Doing something again? What? Agitate the water? How?
+  
+- IP27: Cheap Short Living Objects? In the water? Wait....BUBBLES !!!!
 
 ]
 
@@ -383,54 +389,57 @@ Inventive Principles:
 .footnote[http://www.darrellmann.com/mini-case-study-strike/]
 
 ---
+
 ## TRIZ Workflow: Case Study #6: Bus Strikes in Japan
 
 .pull-left[
 ![](images/japan-bus-0-800x504.png)
+
 ]
 
 .pull-right[
 
-- AC: We want to strike against our employers, but they are not riding on the buses we drive !! Commuters are!!
-
-- Knobs: 
+- **AC**: We want to strike against our employers, but they are not riding on the buses we drive !! Commuters are!!
+- **Knobs**: 
   - Drivers(Y/N); Commuters(Y/N); 
   - Schedules; Timings(OK/NOK); Time of Day
   - Fares; Routes; 
   - Types of Busses...
-  
-
-- PC: Drivers must strike AND not strike at the same time! ( From whose point of view !! )
-
-- IFR: We must convey our anger only to employers who are far away. 
+- **PC**: Drivers must strike AND not strike at the same time! ( From whose point of view !! )
+- **IFR**: We must convey our anger only to employers who are far away. 
 
 ]
 ---
 
 ## TRIZ Workflow: Case Study #6: Bus Strikes in Japan
-
 .pull-left[
-
 **TC**: Improve *Force(10)* ( i.e.of the Strike) and not worsen * Object generated Harmful Effects(31)* ( i.e. on themselves nor on commuters)
 
-Inventive Principles:
-- IP13(The Other Way Around)!!...what is one way and can be turned around? Bus Routes? No...Wait! The Bus Tickets! So Conductors *pay* commuters..by not charging!!
-- 3(Local Quality)...Something should be different *inside* the bus!! No Tickets!!
-- 36(Phase Transition)..hmm..everybody involved must "change dramatically"...who? Commuters? No. Drivers/Conductors? Yes...All of them. How? Wait...Nobody sells tickets !!!
-- 24 Intermediary...Fuel Cost and Loss of Revenue as intermediary between striking staff and the company!
-
-
+![](images/bus-strike.png)
 ]
 
 .pull-right[
-![](images/bus-strike.png)
+- IP13(The Other Way Around)!!...what is one way and can be turned around? Bus Routes? No...Wait! The Bus Tickets transaction! But how?
+- IP3(Local Quality)...Something should be different *inside* the bus!!
+- IP36(Phase Transition)..hmm..everybody involved must "change dramatically"...who?
+- IP24 Intermediary...What can act between Strikers and the Managers?
+
+]
+---
+## TRIZ Workflow: Case Study #6: Bus Strikes in Japan
 
 Solution:
 - Run buses properly on time, but FREE
+
 - All Conductors stop ISSUING TICKETS !!
 
+- The Ticket Transaction is *reversed* in direction (effectively)
+
+- Everyone in the bus is *suddenly different*: Happy, excited... (phase transition)
+
+- Fuel Cost and Loss of Revenue as *intermediary between striking staff and the company*!
+
 .footnote[http://www.darrellmann.com/mini-case-study-strike/]
-]
 
 ---
 
@@ -458,13 +467,15 @@ Solution:
 ---
 ## TRIZ Workflow: Case Study #7: Lawrence of Arabia
 
-&lt;center&gt;&lt;iframe width="950" height="500" src="https://www.youtube.com/embed/K34S8q76gDo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;
+&lt;center&gt;
+&lt;iframe width="950" height="500" src="https://www.youtube.com/embed/wyoEwfaXHkI" title="5. Lawrence meets Prince Faisal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/center&gt;
 
 ---
 
 ## TRIZ Workflow: Case Study #7: Lawrence of Arabia
 
-&lt;center&gt;&lt;iframe width="950" height="500" src="https://www.youtube.com/embed/5ZQSpMiaaxk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;
+&lt;center&gt;&lt;iframe width="950" height="500" src="https://www.youtube.com/embed/5ZQSpMiaaxk" title="Lawrence Convinces Ali" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;
 
 ---
 
@@ -475,35 +486,42 @@ Solution:
 - **Knobs**: Guns? Ships? Port? Width of the Gulf? Time of Attack? Duration of Attack?
 
 - **IFR**: We need to attack and take Aqaba port with ships that are not sinkable.
-
+]
+.pull-right[
 - **TC**: 
   - **TC1**: Increase *Stability of Objects Composition*(13) and not worsen *Duration of Action of a Moving Object*(15) 
   
-- **PC**: The Ships must be near Aqaba and near the guns but not be near enough to shoot. (They must be near and not near at the same time)
+- **PC**: The Ships must be near Aqaba and near the guns but not be near enough to shoot. (*They must be near and not near the guns at the same time*)
 ]
-
-.pull-right[
-Inventive Principles:
-- TC1: 13(The Other Way Around !!), 27(Cheap Short Living Objects), 10 (Prior Action), 35(Parameter Change) .....
-  - IP10: Prior Action? How? Lawrence and Ali are far from Aqaba and cannot do anything "in advance"...Hmm...Lawrence and Ali must **recruit the Howeitat "in advance" of their attack **!!
-  - IP27: Cheap Short Living Objects? What objects? Not men, not guns? Wait....**CAMELS**!!
-  - IP35: Parameter Change? What parameter can Lawrence change? Timing, Date..? Wait... **DIRECTION**!!
-  - IP13: The Other Way Around? How? Not attack by sea? Wait...**ATTACK BY LAND**!!
 
 ---
 
 ### TRIZ Workflow: Case Study #7: Lawrence of Arabia
 
+.pull-left[
+Inventive Principles:
+- **TC1**: 13(The Other Way Around !!), 27(Cheap Short Living Objects), 10 (Prior Action), 35(Parameter Change)
+
+- IP10: Prior Action? How? Lawrence and Ali are far from Aqaba and cannot do anything "in advance"...Hmm...Lawrence and Ali must **recruit the Howeitat "in advance" of their attack **!!
+]
+.pull-right[
+- IP27: Cheap Short Living Objects? What objects? Not men, not guns? Wait....**CAMELS**!!
+- IP35: Parameter Change? What parameter can Lawrence change? Timing, Date, Material? Wait..."Convert" sea-water into sand. 
+  - **ATTACK FROM THE DESERT**!! (NOTE: The Camel is the *ship of the desert* ! What a metaphor!!👏👏👏
+- IP13: The Other Way Around? How? Not attack by sea? Wait... **DIRECTION**!! Attack from the other side!!
+]
+---
+
+### TRIZ Workflow: Case Study #7: Lawrence of Arabia
+
 Solution:
-- 10 (Prior Action): Get hold of the Howeitat tribe to unite with them and fight
+- IP10 (Prior Action): Get hold of the Howeitat tribe to unite with them and fight
 
-- 27 (Cheap Short Living Objects: Attack with Camels! 
-
+- IP27 (Cheap Short Living Objects: Attack with Camels! 
 This was really inspired from Lawrence's reading and knowledge of the Koran, and his statement to Feisal in the tent scene is very telling!
-- 35(Parameter Change) and 13 (The Other Way Around): Change *the direction of the attack!* Attack by land!! ↩️ So the "ships are near the guns, but because the guns point seaward, the "ships" cannot be sunk!
+- IP35(Parameter Change) and IP13 (The Other Way Around): Change *the direction of the attack!* Attack by land!! ↩️ So the "ships are near the guns, but because the guns point seaward, the "ships" cannot be sunk!
 
 - SO: With the landward attack on camels, with the Howeitat in company, Lawrence and Ali were able to brush aside the flimsy defences at Aqaba and take it!
-
 AND...Camels are the **Ship of the Desert!** 🐫 🚢, so that the attack **was** with **ships**!!
 
 
@@ -541,11 +559,10 @@ Maurice Leloir (1851-1940)
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"slideNumberFormat": "%current%",
 "highlightStyle": "github",
 "highlightLines": true,
-"ratio": "16:9",
-"countIncrementalSlides": true
+"countIncrementalSlides": false,
+"ratio": "16:9"
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
