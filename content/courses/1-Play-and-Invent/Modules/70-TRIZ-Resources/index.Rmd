@@ -44,14 +44,16 @@ knitr::include_graphics("featured.jpg")
 
 In the previous Module on **Problems and Contradictions** we understood how to identify an **Administrative Contradiction** in everyday situations. This is the first and most important step in the TRIZ Problem Solving Method. 
 
-Another important idea in TRIZ is that of **Available Resources**. Let us appreciate this idea with the help of two games. 
+Another important idea in TRIZ is that of **Available Resources**. Let us appreciate this idea with the help of a few games. But before that, a short trip to ~~the moon~~ NASA this time.
 
-## Available Resources: Game #1  
+`r blogdown::shortcode("youtube", "ry55--J4_VQ")`
 
-You have to Stick the lighted candle to the Wall in such a way that the melting wax does not drop on to the floor. 
+### Available Resources: Game #1  
+
+You have to stick a lighted candle to the Wall in such a way that the melting wax does not drop on to the floor. 
 
 
-## Available Resources: Game #2
+### Available Resources: Game #2
 
 Look at the graph below: does it remind you of something you know very well?
 
@@ -184,7 +186,7 @@ What happened next was fascinating:
 >   - The $5 was a distraction.
 >   - The 2 hours of time was not enough to make an attractive, outsized return with a mini-business.
 >   - The most valuable "asset" was actually the presentation time in front of a class of Stanford students.
->   - Recognizing the value of the **hidden asset**, they offered the presentation time to companies looking to recruit Stanford students.
+>   - Recognizing the value of the **hidden asset**, they offered the presentation time to Companies looking to recruit Stanford students.
 >   - They sold the slot for `$650`, a huge return on the `$5` of initial capital.
 
 The winning group thought differently ( about resources ) and achieved an asymmetric outcome.

@@ -72,12 +72,29 @@ Let us get an actual experience of TRIZ methods with these short videos:
 
 6. How to use the Contradiction Matrix:[(Coursera Video)](https://www.coursera.org/lecture/creative-thinking-techniques-and-tools-for-success/contradiction-matrix-DtEKz>)
 
+## Discussion
+
+- The <u>[TRIZ Contradiction Matrix](pdf/TRIZ/matrix2003.pdf)</u> gives us 3-4 short, pithy **metaphoric solutions**, called **TRIZ Inventive Principles** that are eminently suited to our problem.\
+
+- We need to look at those Inventive Principle metaphors, and translate them back into our problem. Think of this process as, what else, yet another metaphor: *taking the antilogarithm* to arrive at the solution of a complicated multiplication problem. \
+- We use our CC, that we have embedded in the Ishikawa Diagram, to decide which knobs we can turn in accordance with each Inventive Principle. 
+
+
+Here is an example from the movie <u>[Home Alone(2)](https://youtu.be/mz-snPWBQYQ)</u>:
+
+`r blogdown::shortcode("youtube", "h_bUcNjmuSk")`
+
+The use of the movie **audio dialogue** by Kevin could be an example of the following *TRIZ Inventive Principles*:\
+
+- `Taking Out` ( i.e. taking the essential good/bad part out of something)\
+- `Continuity of Useful Action` (i.e. repeated use of a good solution)
+
 
 ## A TRIZ Workflow
 
-We have seen  
+We have seen:\
 
-- How to examine a Situation  
+- How to examine an Object or Situation 
 - Use the Ishikawa Diagram to find Knobs and Settings
 - Find one or more Administrative Contradictions  
 - State the Ideal Final Result  
@@ -93,11 +110,11 @@ knitr::include_url("/slides/PlayAndInvent/TRIZ-Basics/index.html")
 
 
 
-
-
 ## TRIZ Stories and Case Studies!!
 
-Want to create a good protest or strike? Or simply want to clean up the oceans?
+### TRIZ Case Study Database
+
+Want to create a good protest or strike? Or simply want to clean up the oceans? Or want to generate power from the wind in your balcony?
 
 
 ```{r echo=FALSE}
@@ -107,12 +124,9 @@ knitr::include_url("/slides/PlayAndInvent/TRIZ-Database/index.html")
 
 ## The TRIZ Contradiction Matrix
 
-1. The TRIZ Contradiction Matrix (2003) [(Matrix)](pdf/TRIZ/TRIZ_interactive_contradiction_matrix_2016.xlsx)
+1. The TRIZ Contradiction Matrix (2003): <u>[Interactive Excel](pdf/TRIZ/TRIZ_interactive_contradiction_matrix_2016.xlsx)</u>
 
-## Movie Time!
-
-1. <u><https://youtu.be/4hbru1nLBeU></u>
-
+1. The TRIZ Contradiction Matrix (2003): <u>[Printable PDF](pdf/TRIZ/matrix2003.pdf)</u>
 
 
 ## References
@@ -134,3 +148,11 @@ This is a simple and short introduction to *all* aspects of Classical TRIZ.
 1. Project TETRIS: Chapter 5: Techniques  to  Resolve  Contradictions / Resources / Effects <u>[(PDF)](https://innovazionesistematica.it/wp-content/uploads/2020/10/EN_05.pdf)</u>
 
 1. Project TETRIS: Examples of inventive problems: Example 1-5 <u>[(RAR Archive File)](https://innovazionesistematica.it/wp-content/uploads/2020/10/ExamplesEN.rar)</u>
+
+1. <u><https://www.metodolog.ru/triz-journal/archives/2001/06/b/index.htm></u>
+
+## More Readings
+
+1. <u>https://medium.com/@arvind.venkatadri</u>
+
+

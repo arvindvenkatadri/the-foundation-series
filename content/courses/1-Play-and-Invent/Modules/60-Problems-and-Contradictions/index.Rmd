@@ -52,7 +52,7 @@ In TRIZ, the fundamental way of looking at an Inventive Design Problem is to dis
 
 What sort of Contradictions do we see in these familiar objects? What is good and what is not so good? Could that be the source of a problem to solve?
 
-# Some Everyday Objects for us to Contemplate
+## Some Everyday Objects for us to Contemplate
 
 1)  ![Pizza Box](pizza.jpg)
 
@@ -78,13 +78,13 @@ Contemplate and note down for each Object:
 
 -   This could be the source of your **PROBLEM / CONTRADICTION** !!
 
-In **TRIZ**, this way of expressing a *Problem* as a simple *Contradiction* is referred to as stating an **ADMINISTRATIVE CONTRADICTION (AC).** (Oh those Russians...).
+In **TRIZ**, this way of expressing a *Problem* as a simple *Contradiction* is referred to as stating an **ADMINISTRATIVE CONTRADICTION (AC).** <u>[(Ohhhhhh, those Russians...)](https://youtu.be/16y1AkoZkmQ)</u>.
 
 Later we will use our experience with making metaphors to convert the AC into a more TRIZ-like Contradiction, using *TRIZ language*.
 
 Let us now consider some examples first and then get some practice at setting up simple *AC*:
 
-# Some Example Contradictions...
+## Some Example Contradictions...
 
 We see them everywhere....if one is observant!! Let's see a few:
 
@@ -119,11 +119,20 @@ Most people's healthcare is tied to their job....Therefore, every corona-time la
 > --- Revolutionary Left Radio (\@RevLeftRadio)
 
 ![](layoff-corona.png)
-## Contradictory Situations
+
+### C5 - Whiteboard Markers are made wrong!
+
+![](https://www.organizingcreativity.com/wp-content/gallery/blog_2021/sketchplanation-example-4.jpg)
+
+Pens need to be stored nib-down, to have ink flow under gravity. But you can't then tell the colour!
+
+## Contradictory Situations: Houston, We have a Problem!
+
+`r blogdown::shortcode("youtube" ,"YwG4F-16Tno")`
 
 We don't contemplate only *objects* at all times; indeed, as designers/artists/creators, we want to be able to **make** objects. What we more commonly contemplate is a **situation**.
 
-How does one figure Parameters/Aspects/Knobs on situations?
+How does one figure Parameters/Aspects/Knobs inside situations?
 
 We use what is called an **Ishikawa Fishbone Diagram**. There are many versions of this diagram depending upon the **DOMAIN** it is applied in; it should be considered more as a process for thinking. You should search for other forms of this diagram and quickly learn to apply them.
 
@@ -132,7 +141,7 @@ knitr::include_graphics("IshikawaDiagram.png")
 
 ```
 
-> NOTE: Deciding which are the Knobs that matter, and how they effect the outcome is not always this simple. It would typically involve research using **structured experimentation** to determine the effects of turning the knobs and deciding which ones matter. This experimentation lies within a DOMAIN called [**Design of Experiments**](). 
+> NOTE: Deciding which are the Knobs that matter, and how they effect the outcome is not always this simple. It would typically involve research using **structured experimentation** to determine the effects of turning the knobs and deciding which ones matter. This experimentation lies within a DOMAIN called <u>[**Design of Experiments**](https://r-for-artists.netlify.app/slides/10-nature-of-data/10-nature-of-data)</u>. 
 
 ## Documenting the Administrative Contradiction
 
@@ -148,7 +157,7 @@ You can document your analysis of the *Situation* using the following questionna
 
 4.  **Where** does the problem occur?
 
-5.  **Why** does the problem occur? ("Ask why 5 times" -- W. Edwards Deming)
+5.  **Why** does the problem occur? <u>[("Ask why 5 times" -- W. Edwards Deming)](https://www.mindtools.com/a3mi00v/5-whys)</u>
 
 6.  **How** does the problem occur?
 
@@ -167,23 +176,13 @@ Let us now apply these ideas to examine the following challenges below.
 
 ## Contradiction Challenges
 
-1.  Challenge #1: [**Web**](https://web.archive.org/web/20200813061353/https://triz-journal.com/triz-challenge-may-2001/) and [**PDF**](TRIZ%20Challenge%20-%20May%202001The%20Triz%20Journal.pdf)
+1.  Challenge #1: <u>[**Web**](https://web.archive.org/web/20200813061353/https://triz-journal.com/triz-challenge-may-2001/)</u> and <u>[**PDF**](TRIZ%20Challenge%20-%20May%202001The%20Triz%20Journal.pdf)</u>
 
-2.  Challenge #2: [**Web**](https://web.archive.org/web/20200813061945/https://triz-journal.com/triz-challenge-july-2001/) and [**PDF**](TRIZ%20Challenge%20-%20July%202001The%20Triz%20Journal.pdf)
+2.  Challenge #2: <u>[**Web**](https://web.archive.org/web/20200813061945/https://triz-journal.com/triz-challenge-july-2001/)</u> and <u>[**PDF**](TRIZ%20Challenge%20-%20July%202001The%20Triz%20Journal.pdf)</u>
 
 3.  Challenge #3: <u>[**Web**](https://web.archive.org/web/20200813061928/https://triz-journal.com/triz-challenge-july-2002/)</u> and <u>[**PDF**](TRIZ%20Challenge%20-%20July%202002The%20Triz%20Journal.pdf)</u>
 
 4.  Challenge #4: <u>[**Web**](https://web.archive.org/web/20200813063906/https://triz-journal.com/triz-challenge-november-2003/)</u> and <u>[**PDF**](TRIZ%20Challenge%20-%20November%202003The%20Triz%20Journal.pdf)</u>
-
-## Additional Readings
-
-Do glance through these articles and try to form a "contradiction mentality" about things around you:
-
-1.  <u><https://www.bbc.com/worklife/article/20201109-why-the-paradox-mindset-is-the-key-to-success></u>
-
-1.  <u><https://hbr.org/2008/06/the-contradictions-that-drive-toyotas-success></u>
-
-1. Open Source TRIZ: Contradiction Challenges! <u><https://www.opensourcetriz.com/images/1_OpenSourceTRIZ_Pictures/1.1_Teaching_Materials/01_Contradictions_Exercises_Actual.pdf></u>
 
 
 ## More Contradictions?
@@ -198,10 +197,28 @@ See this <u>[page](https://landarchconcepts.wordpress.com/what-is-prospect-refug
 
 4. *Good fences make good neighbours*, it is said. Spot the Contradiction here?
 
-5. Why do police cars switch on their sirens as they rush to a potential crime site? Isn't it better to arrive swiftly and silently to catch the criminal? (Note: this is also close to the idea of the <u>[IFR in TRIZ](../75-triz-ideal-final-result/)</u>
+5. Why do police cars switch on their sirens as they rush to a potential crime site? Isn't it better to arrive swiftly and silently to catch the criminal? (Note: this is also close to the idea of the <u>[IFR in TRIZ.](../75-triz-ideal-final-result/)</u>)
 
-6. All students say *Bro*, *My Bad*, and worse, *Think Different* (*&^%$#@). And yet want Faculty to identify, know, and appreciate them individually. 
+6. Is this piece of music Disco? Opera? Ballet? Flashmob? College Dance? All o' them at once? And yet...it is one of the <u>[most iconic pieces of **Pop** music](https://en.wikipedia.org/wiki/MacArthur_Park_(song))</u>, that set the tone for generations/genres of music!!
+
+`r blogdown::shortcode("youtube", "1UK-MbSJciM")`<br>
+
+6. All students say *Bro*, *My Bad*, and much much worse, *Think Different* (grammar-challenged *&^%$#@ peasants). They all sound the same, these <u>["Words of Wisdom"](https://youtu.be/UzNDPtIbv6A)</u>. And yet want Faculty to identify, know, and appreciate them individually. Bah. 
 
 6. And finally, what does this even mean!!??!!
 
-> *Always go to other people's funerals, otherwise they won't come to yours.  [-Yogi Berra](https://www.brainyquote.com/quotes/yogi_berra_161244)
+      > Always go to other people's funerals, otherwise they won't come to yours.  [<u>[-Yogi Berra](https://www.brainyquote.com/quotes/yogi_berra_161244)</u>]{style="float:right"}
+      
+      
+## Additional Readings
+
+Do glance through these articles and try to form a "contradiction mentality" about things around you:
+
+1.  <u><https://www.bbc.com/worklife/article/20201109-why-the-paradox-mindset-is-the-key-to-success></u>
+
+1.  <u><https://hbr.org/2008/06/the-contradictions-that-drive-toyotas-success></u>
+
+1. Open Source TRIZ: Contradiction Challenges! <u><https://www.opensourcetriz.com/images/1_OpenSourceTRIZ_Pictures/1.1_Teaching_Materials/01_Contradictions_Exercises_Actual.pdf></u>
+
+1. Kannada Proverbs: Contradictions? <u>https://girmitt.wordpress.com/kannada-proverbs/</u>
+

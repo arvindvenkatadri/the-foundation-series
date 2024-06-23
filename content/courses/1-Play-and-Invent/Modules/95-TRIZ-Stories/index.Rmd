@@ -1,0 +1,72 @@
+---
+date: "2024-06-23"
+lastmod: " `r Sys.Date()`"
+title: "TRIZ at the Movies!"
+author: "Arvind Venkatadri"
+external_link: ""
+weight: 95
+type: book
+image:
+  caption: ""
+  focal_point: Smart
+links:
+# - icon: flask
+#   icon_pack: fas
+#   name: TRIZ DataBase
+#   url: slides/PlayAndInvent/TRIZ-Database/index.html
+# - icon: game
+#   icon_pack: fab
+#   name: Game
+#   url: /pdf/TRIZ/Titanic_Case_Study.pdf
+slides: 
+summary: "This Module is part of a Creative Problem Solving course I offer at Srishti Manipal Institute, Bangalore"
+tags:
+- Contradictions
+- Reel World Problems
+- TRIZ Inventive Principles
+# url_code: ""
+# url_pdf: ""
+# url_slides: "slides/PlayAndInvent/TRIZ-Basics/index.html"
+# url_video: ""
+---
+
+## Introduction
+To recap: 
+
+We have seen:\
+
+- How to examine an Object or a Situation 
+- Use the Ishikawa Diagram to find Knobs and Settings
+- Find one or more Administrative Contradictions(AC)  
+- State the Ideal Final Result(IFR) to focus our attention  
+- Convert the AC into a TC with 39 TRIZ Parameters  
+- (Convert the AC into a PC)  
+- Read the  TRIZ Inventive Principles(IPs) from the Contradiction Matrix
+- Apply the TRIZ Inventive Principles to solve the Problem.
+
+Here are a few iconic movies that we may consider as embodying very significant use of TRIZ Principles!! But here is a ***very*** Administrative Contradiction for you to consider:
+
+>We watch the movie and have fun, but we then have a monster of an Assignment to follow. 
+
+Your call!!
+
+## TRIZ at the Movies
+
+1. <u><https://youtu.be/4hbru1nLBeU></u>
+
+2. <u><https://youtu.be/nBiZu5C6lCo></u>
+
+3. <u><https://youtu.be/Lu1ojHsMRrY></u>
+
+## References
+
+1. Script from Lawrence of Arabia. <u>https://assets.scriptslug.com/live/pdf/scripts/lawrence-of-arabia-1962.pdf</u>
+
+2. Filmsite.org: <u>[Review of Lawrence of Arabia.](https://www.filmsite.org/lawr.html)</u> 
+
+3. <u>https://sheldonkirshner.com/lawrence-of-arabia-the-movie-revisited/</u>
+## More Readings
+
+1. <u>https://medium.com/@arvind.venkatadri</u>
+
+

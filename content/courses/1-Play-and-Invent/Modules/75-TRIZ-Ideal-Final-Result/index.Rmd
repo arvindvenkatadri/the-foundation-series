@@ -57,6 +57,10 @@ Here is what TRIZ pioneer Ellen Domb says:
 
 In this way, TRIZ is itself an implementation of TRIZ: we are working backwards to the present from the solution, "**the other way around**" !! (We will see this Principle later)
 
+## The IFR: We Invented the Post-It
+
+Here is a <u>[first-person story from Art Fry and Spencer Silver](pdf/W1D1 - First Person_ ‘We invented the Post-it Note’ - FT.pdf)</u>, the inventors of the Post-It. Let us quickly read it to find evidence of *"IFR Thinking*!
+
 
 ## Ideal Final Result: Game
 TBD

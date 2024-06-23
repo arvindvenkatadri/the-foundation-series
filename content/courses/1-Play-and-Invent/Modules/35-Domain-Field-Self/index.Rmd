@@ -35,19 +35,14 @@ library(blogdown)
 ```
 
 ## The Creativity Systems Model
-
-```{r echo=FALSE, out.height= "150%", out.width="150%", fig.cap= "Mihaly Csikszentmihalyi",fig.align='center'}
-knitr::include_graphics("mihaly.jpg")
-
-```
+![](mihaly.jpg)
 
 Mihaly Csikszentmihalyi created what he called a Systems Model for Creativity, shown in the Figure below.
 
-```{r echo=FALSE, out.height="150%", out.width= "150%"}
-knitr::include_graphics("systems-model.jpg")
-```
+![The Creativity Systems Model](systems-model.jpg){#fig-creativity-systems-model}
 
-Here are some brief extracts from his book[Reference 1]
+<br>
+Here are some brief extracts from his book (Ref.1)
 
 > Many of these books and articles have tried to
 answer what has been thought to be the most fundamental question: What is creativity? But no one has raised the simple question that should precede attempts at defining, measuring, or enhancing, namely: Where is creativity?
@@ -97,13 +92,17 @@ from the interpretive efforts of critics like Ruskin?
 to genetics **at the time they were made**. Their implications for the theory of variation and natural selection were discovered only in 1900 by William Bateson
 and other evolutionists looking for a mechanism that explained discontinuous inheritance. Within their theoretical framework, Mendel’s work suddenly acquired an importance that it had lacked before, even in the mind of Mendel himself.
 
+### Galileo Galilei
+![](galileo_manuscript.png)
+The church was definitely the *Field* for Galileo...
+
 ## References
 
 
-1. Mihaly Csikszentmihalyi, **The Systems Model of Creativity: The Collected Works of Mihaly Csikszentmihalyi**, ISBN:9789401790857, Springer, 2015.
+1. Mihaly Csikszentmihalyi, **The Systems Model of Creativity: The Collected Works of Mihaly Csikszentmihalyi**, ISBN:9789401790857, Springer, 2015. <u>[**PDF Extract**](Systems Model of Creativity.pdf)</u>
 
 
 1. Oliver Ding. <u>[**Platform Creativity: Domain, Field, and Person**](https://medium.com/call4/domain-8a22b6b486f4)</u>
 
-1. Jessica Wolf,UCLA Newsroom. <u>[**The truth about Galileo and his conflict with the Catholic Church**](https://newsroom.ucla.edu/releases/the-truth-about-galileo-and-his-conflict-with-the-catholic-church)</u>
+1. Jessica Wolf, UCLA Newsroom. <u>[**The truth about Galileo and his conflict with the Catholic Church**](https://newsroom.ucla.edu/releases/the-truth-about-galileo-and-his-conflict-with-the-catholic-church)</u>
 
