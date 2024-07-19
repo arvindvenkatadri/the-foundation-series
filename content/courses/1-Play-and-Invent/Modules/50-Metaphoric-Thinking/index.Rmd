@@ -176,4 +176,5 @@ embedr::embed_audio("WordOfMouth-20200107-Metaphors.mp3")
 
 10. Dubnick, R. (1980). Visible Poetry: Metaphor and Metonymy in the Paintings of Rene Magritte. Contemporary Literature, 21(3), 407. doi:10.2307/1208249. <u>[(PDF)](dubnick1980.pdf)</u>
 
+11. Aniket Kittur, Lixiu Yu, Tom Hope, Joel Chan, Hila Lifshitz-Assaf, Karni Gilon, Felicia Ng, Robert E. Kraut, and Dafna Shahaf. (2019). *Scaling up analogical innovation with crowds and AI*. Proceedings of the National Academy of SciencesVol. 116, No. 6, February 5, 2019. <u>[**PDF**](kittur-et-al-2019-scaling-up-analogical-innovation-with-crowds-and-ai.pdf)</u>
 

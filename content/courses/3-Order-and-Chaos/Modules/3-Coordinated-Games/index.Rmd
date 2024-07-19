@@ -24,19 +24,17 @@ library(blogdown)
 
 ## Introduction
 
-So, would you wear a veshti/kurta/angavastram, or silk paavade to college?
+Think about the following:
 
-When you want someone to *search the internet*, what do you tell them
+- So, would you wear a veshti/kurta/angavastram, saree/silk paavade/dhaavani to college?
+- When you want someone to *search the internet*, what do you tell them
 do? 
+- How do you show someone, a stranger, that you agree with what they are doing at that moment?
+- How do you know where the exit is in a public place?
+- Where would you stage a protest? How would you get other people to join in? 
+- If you want a whole bunch of 20-30-something people to <u>[raise their arms up and spontaneously rock side to side](https://youtu.be/La0IJPt0t4Q)</u>?
 
-How do you show someone that you agree with what they are doing at
-that moment? Even if you don't know them?
-
-How do you know where the exit is in a public place?
-
-Where would you stage a protest? How would you get other people to join in?
-
-What does "less than three" mean?!!??
+And, what does "less than three" even mean?!!??
 
 In the previous module on the Prisoners' Dilemma, we saw how we all are engaged in *adversarial and transactional Games* with many other people, most of 
 whom are strangers to us. But as remarked before, the Human Species is perhaps unique in that we are able to <u>[cooperate with strangers](https://fee.org/media/4316/547_42.pdf)</u>!! So we are not always adversaries or enemies, and we are able to obtain ***unspoken agreement and correspondence with strangers***.

@@ -179,7 +179,7 @@ So the task is:
 
 ## Some Contradiction Examples
 
-*TC Examples*:  
+### TC Examples
 
 - Increasing the power of an engine (positive improvement) requires an increase in the size of the engine (negative effect). So, an inventor considers increasing the power partially in order to reduce the negative effect (compromise solution).  
 - To increase the speed of an airplane, a new and more powerful engine is installed. This increases the weight of the airplane so the wings can no longer support it during takeoff. Increasing the wing size produces more drag, slowing the airplane down.
@@ -247,7 +247,12 @@ ggplot(data, aes(x = x)) +
 
 ```
 
-*PC Examples*:  
+See this:
+
+<u><https://www.youtube.com/watch?v=tRBOiq-Q6_s></u>
+
+
+### PC Examples  
 
 - Landing gear must be present on an airplane in order to land and takeoff. It should not be present during flight because of an increase in air drag. The physical contradiction is that **the landing gear must be both present and absent**. This contradiction is resolved by separating the requirements in time — make the landing gear retractable.   
 
@@ -280,6 +285,8 @@ One quote from this short reading seems very appropriate here:
 1. <u><https://www.bbc.com/worklife/article/20201109-why-the-paradox-mindset-is-the-key-to-success></u>
 
 1. <u><https://hbr.org/2008/06/the-contradictions-that-drive-toyotas-success></u>
+
+1. Andrea Ovans. (February 27, 2015). *Is Innovation More About People or Process?*. <u><https://hbr.org/2015/02/is-innovation-more-about-people-or-process></u>
 
 
 

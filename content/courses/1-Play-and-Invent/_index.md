@@ -14,7 +14,7 @@ image:
 ![](featured.jpg)
 
 ## Introduction
-Creative Problem Solving is a Process and can be taught.
+Creative Problem Solving is a Process and can be taught and learnt.
 Brainstorming is utter BS. Post-Its are a great Invention, but a complete waste of time.
 
 This is a (very opinionated) {{<hl>}} Contextual Enquiry Course{{</hl>}} on {{<hl>}}Creative Problem Solving{{</hl>}}, designed for the Foundation (freshman) year of a Bachelor's Degree in Art and Design, at the Srishti Manipal Institute of Art, Design, and Technology, Bangalore, India.
