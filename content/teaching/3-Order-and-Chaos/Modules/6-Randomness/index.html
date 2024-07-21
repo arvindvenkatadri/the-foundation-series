@@ -1,0 +1,196 @@
+---
+title: "\U0001F579 A Random Walk with Hamlet"
+author: "Arvind Venkatadri"
+abstract: "The Science of Surprise"
+date: 2021-12-11
+weight: 70
+type: book
+external_link: ""
+image:
+  caption: Tom und Nicki Löschner on Pixabay
+  focal_point: Smart
+links:
+slides: 
+summary: 
+tags:
+- Hamlet
+- PPDAC Workflow
+- Design of Experiments
+- Sampling
+- Randomization
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+
+
+<div id="god-does-not-play-dice" class="section level4">
+<h4>God Does not Play Dice</h4>
+<p><img src="featured.jpg" /></p>
+</div>
+<div id="the-science-of-surprise" class="section level2">
+<h2>The Science of Surprise</h2>
+<p>Let us then examine the street traffic data we have gathered for any
+“model-like” pattern! Is our data clean? Do we have two columns of data,
+one containing 60counts of vehicles, and the other containing
+inter-vehicular gap times in seconds?<br />
+We will use a tool called, ah…umm…ahem…er…<strong>WTFcsv</strong>. Let us
+first quickly see what this tool offers us!</p>
+<p><br> {{% vimeo "150216437" %}} <br></p>
+<p>Let us import our data into the <u><a href="https://databasic.io/en/wtfcsv/"><strong>WTFcsv</strong>
+tool</a></u> and see what patterns lurk
+beneath our data!</p>
+<div id="discussion-1" class="section level3">
+<h3>Discussion-1</h3>
+<ul>
+<li>There were similar patterns in everybody’s data
+😮</li>
+</ul>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-1.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-2-2.png" width="672" /></p>
+<ul>
+<li>What we saw was an example of the <strong>Poisson Arrival Process</strong>.</li>
+<li>This has applications in <em>Service Design</em>, <em>Traffic Management</em>,
+<em>Logistics</em>, <em>Finding Defects in Materials</em>, <em>Weather Modelling</em>, <em>Pest Control</em>…</li>
+</ul>
+<p>From <u><a href="https://stats.stackexchange.com/a/297375" class="uri">https://stats.stackexchange.com/a/297375</a></u>:</p>
+<blockquote>
+<p>(Say) Lambda(<span class="math inline">\(\lambda\)</span>) is the <em>average number</em> of cars that pass per
+unit of time, let’s say 60/hour (<span class="math inline">\(\lambda\)</span> = 60). We know, however,
+that the actual number will vary - some days more, some days less. The
+<strong>Poisson Distribution</strong> allows us to <em>model this variability</em>.</p>
+<p>Now, an average of 60 cars per hour equates to an average of 1 car
+passing by each minute. Again though, we know there’s going to be
+variability in the amount of time between arrivals: Sometimes more
+than 1 minute; other times less. The <strong>Exponential Distribution</strong>
+allows us to <em>model this variability</em>.</p>
+<p>All that being said, cars passing by on a road won’t always follow a
+Poisson Process. If there’s a traffic signal just around the corner,
+for example, arrivals are going to be bunched up instead of steady. On
+an open highway, a slow tractor-trailer may hold up a long line of
+cars, again causing bunching. In these cases, the Poisson Distribution
+may still work okay for longer time periods, but the exponential will
+fail badly in modeling arrival times.</p>
+<p>Note also that there is huge variability based on <strong>time of day</strong>:
+busier during commuting times; much slower at 3am. Make sure that your
+lambda is reflective of the specific time period you are considering.</p>
+</blockquote>
+<p>Lambda then becomes a <strong>parameter</strong> of the model. And the higher the
+<span class="math inline">\(\lambda\)</span>, the more the traffic. Hence shorter the <em>average
+inter-vehicular gap time</em>, which is <span class="math inline">\(\sim \frac{1}{\lambda}\)</span>.</p>
+<ul>
+<li>So everything random is not really random?</li>
+<li>Is <em>anything</em> random at all?</li>
+<li>Does seeing a pattern make it “not random”?</li>
+<li>Are we just Victims of Randomness and cannot do much else but put up
+with it?</li>
+</ul>
+</div>
+</div>
+<div id="poisson-distribution-as-a-4as-complexity-idea" class="section level2">
+<h2>Poisson Distribution as a 4As Complexity Idea…</h2>
+<p>Consider a coin toss. One gets HEAD(H) or TAIL(T), and if the coin is fair, the long term chances of getting a H or a T are even. If one tosses a single coin several times, one gets different sequences of Hs and Ts.</p>
+<p>If we assume that an H means people <u><a href="https://youtu.be/w9NbXDXvr8M"><strong>get into their car and drive</strong></a></u>, what can
+we say of many many people? They are all tossing coins, so to speak, and leave only if they get a H. <em>Each sequence of Hs and Ts is a manifestation of car traffic</em>, with H being a vehicle, and T being no vehicle.</p>
+<p>In a large society with <span class="math inline">\(n~ -&gt; \infty\)</span>, not many people drive out at any given time, so <span class="math inline">\(p\)</span> is low. So the product <span class="math inline">\(people \times p(H) = np\)</span> can be thought of as a constant, say 10, or 100.</p>
+<p>The Accumulated random binary Actions of a large number of people gives us an aggregate <u><a href="https://math.oxford.emory.edu/site/math117/connectingPoissonAndBinomial/"><strong>Poisson distribution</strong></a></u> for the occurrence of traffic, with a mean of <span class="math inline">\(\lambda = np\)</span>.</p>
+</div>
+<div id="is-randomness-a-design-tool" class="section level2">
+<h2>Is Randomness a Design Tool?</h2>
+<p><img src="pexels-sharath-g-4418675.jpg" /></p>
+<p>But we are interested in more than just the Poisson Process. And mangoes
+are far more interesting than cars!!!</p>
+<ol style="list-style-type: decimal">
+<li>Do you remember plucking mangoes from the trees in your childhood
+gardens?</li>
+<li>Did you happen to be the youngest in the group?</li>
+<li>Did you have run home to get the salt + chilly powder?</li>
+<li>Why did you trust your friends not to eat off the best mangoes in
+your absence? ;-D</li>
+<li>Were you used to being the “<em>denner</em>” in every game?</li>
+<li>Or the last person to bat or bowl, or whatever was the cool thing in the game…</li>
+<li>Or did you do that “bat numbers” thing?</li>
+<li>Why did you trust your friends? ;-D</li>
+<li>What strategy did you use when playing “Rock, Paper, Scissors”? Were
+you always “steady as a rock”, or “variable as traffic”?</li>
+</ol>
+<p>Perhaps you suffered, but maybe you didn’t because everyone “got their
+turn” and they weren’t always the first, nor were you always the last…
+So somehow it was all…fair, because it was “random”.</p>
+<p>And you didn’t stick with just one of Rock, Paper, or Scissors. But chose one at…..random.</p>
+<p>So can we use <strong>Randomness</strong> in Design? With <em>intent</em>? And is <u><a href="https://www.jacksonpollock.org">this</a></u> the use of
+<strong>randomness</strong> in Art?</p>
+<div id="pedagogical-vandalism" class="section level3">
+<h3>Pedagogical Vandalism</h3>
+<p>Let us throw some chalk pieces on the floor at random and see what
+happens!!</p>
+<ol style="list-style-type: decimal">
+<li><p>Was that a completely “mad” thing to do, throwing stuff on the
+floor? Or was it an act of <strong><em>Pedagogical Vandalism</em></strong>? (See
+<u><a href="https://youtu.be/OCTaIZc1o8g?si=o7Bhi437vFZppXJQ"><em>wreck this
+Journal</em></a></u>).</p></li>
+<li><p>Is Randomness just too much to handle or comprehend?</p></li>
+<li><p>Or can we “tame” it in some way, and put it to use in Art, Design,
+and Tech?</p></li>
+<li><p>Have we been doing this all along? Have we been <u><a href="https://www.poetryfoundation.org/poems/43650/auguries-of-innocence"><em>holding
+infinity in the palm of our
+hands</em></a></u>,
+in the हाथ कीे लकीरे?</p></li>
+<li><p>What <strong>diagrams or thought experiments</strong> can we create to do this?</p></li>
+<li><p>WHY would this be a good idea? Is there a very <strong>Human Motivation</strong>
+behind this desire we might have?</p></li>
+<li><p>Or let’s ask <u><a href="https://wyldnetworks.com/blog/hedy-lamarr-frequency-hopping-spread-spectrum">this
+lady</a></u>
+here. <img src="Hedy-Lamarr-and-the-Frequency-Hopping-Spread-Spectrum.jpg" /></p></li>
+</ol>
+</div>
+</div>
+<div id="wait-but-why" class="section level2">
+<h2><u><a href="https://waitbutwhy.com">Wait, But Why?</a></u></h2>
+<ul>
+<li>Randomness can help create fairness?</li>
+<li>Visibly?</li>
+<li><em>Generate Randomness</em> to make things fair? How?</li>
+<li>What does that even mean, to <u><a href="https://www.random.org/coins/">“generate randomness”</a></u>?</li>
+<li>If something is random-random, how can it be fair “every time”?</li>
+<li>What does <u><a href="https://web.archive.org/web/20190302202830id_/http://pdfs.semanticscholar.org/a931/ac1b3ef11235d4516f341b3b5bd8b1ee330e.pdf"><strong>“every
+time”</strong></a></u>
+even mean?</li>
+<li>Whom would you meet in a casino? In other words, what if something looks random, but isn’t really? See Reference 2 below.</li>
+</ul>
+<p>We’ll see.</p>
+<div id="references" class="section level3">
+<h3>References</h3>
+<ol style="list-style-type: decimal">
+<li><p>Seeing Probability Theory:
+<u><a href="https://seeing-theory.brown.edu/basic-probability/index.html" class="uri">https://seeing-theory.brown.edu/basic-probability/index.html</a></u>
+A Superb visual website to see patterns in theory! Go and play there
+with Hamlet!</p></li>
+<li><p>Penguin Press @ Medium. <em>Abraham Wald and the Missing Bullet
+Holes</em>. <u><a href="https://medium.com/@penguinpress/an-excerpt-from-how-not-to-be-wrong-by-jordan-ellenberg-664e708cfc3d"><strong>(Web
+Link)</strong></a></u></p></li>
+</ol>
+<p><img src="Survivorship-bias.svg" width="300" /></p>
+<ol start="3" style="list-style-type: decimal">
+<li><p>R. J. MacKay and R. W. Oldford. <u><a href="https://projecteuclid.org/euclid.ss/1009212817"><strong>Scientific Method, Statistical
+Method and the Speed of
+Light</strong></a></u></p></li>
+<li><p><u><a href="https://getpocket.com/explore/item/the-man-who-invented-modern-probability">The Man Who Invented Modern Probability - Andrei
+Kolmogorov</a></u></p></li>
+<li><p>Robert Scholz. May 1982. <u><a href="https://web.archive.org/web/20190302202830id_/http://pdfs.semanticscholar.org/a931/ac1b3ef11235d4516f341b3b5bd8b1ee330e.pdf"><strong>The Origin of Spread Spectrum
+Communications</strong></a></u></p></li>
+<li><p>Emma Neeson. 04 March 2023. <u><a href="https://wyldnetworks.com/blog/hedy-lamarr-frequency-hopping-spread-spectrum"><strong>Hedy Lamarr and the Frequency
+Hopping Spread Spectrum: The mother of
+Wi-Fi</strong>.</a></u></p></li>
+<li><p>Karan Kashyap, <em>Calculating the Value of Pi: A Monte Carlo
+Simulation</em>,
+<u><a href="https://www.cantorsparadise.com/calculating-the-value-of-pi-using-random-numbers-a-monte-carlo-simulation-d4b80dc12bdf" class="uri">https://www.cantorsparadise.com/calculating-the-value-of-pi-using-random-numbers-a-monte-carlo-simulation-d4b80dc12bdf</a></u></p></li>
+<li><p>Mozart Dice Game: Generate Mozart-like tunes by throwing dice: <u><a href="https://vician.net/mozart/" class="uri">https://vician.net/mozart/</a></u></p></li>
+<li><p>Theodore Sturgeon. (September 1957). <em>The Pod in the Barrier.</em> Galaxy Science Fiction. <u><a href="https://archive.org/details/galaxymagazine-1957-09/page/n9/mode/2up?view=theater" class="uri">https://archive.org/details/galaxymagazine-1957-09/page/n9/mode/2up?view=theater</a></u></p></li>
+</ol>
+</div>
+</div>

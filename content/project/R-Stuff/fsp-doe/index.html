@@ -1,0 +1,209 @@
+---
+title: "A Design Of Experiments Class"
+subtitle: 
+summary: R code for a Permutation Test in a DoE class
+author: "Arvind Venkatadri"
+date: "2022-01-30"
+weight: 1
+type: book
+output:
+  html_document:
+    theme: flatly
+    toc: TRUE
+    toc_float: TRUE
+    toc_depth: 4
+    number_sections: TRUE
+    code_folding: hide
+    code_download: TRUE
+
+---
+
+
+
+<div id="introduction" class="section level1">
+<h1>Introduction</h1>
+<p>This project is a quick analysis of the Design of Experiments class carried out in the Order and Chaos course, FSP-2021-2022, at SMI MAHE, Bangalore.</p>
+<p>The methodology followed was that in A.J. Lawrance’s paper <a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> describing a Statistics module based on the method of Design of Experiments. The inquiry relates to Short Term Memory (STM) among students.</p>
+</div>
+<div id="structure" class="section level1">
+<h1>Structure</h1>
+<p>The total number of students were 17.
+Eight Pairs of students were created randomly to create eight different Test tools for Short Term Memory testing.</p>
+<p>The binary ( two - level ) variables/parameters that were used in the tests, were, following Lawrance:</p>
+<ul>
+<li>WL: Word List Length ( 7 and 15 words )<br />
+</li>
+<li>SL: Syllables in the Words ( 2 and 5 syllables )<br />
+</li>
+<li>ST: Study Time allowed for the Respondents ( 15 and 30 seconds )</li>
+</ul>
+<p>Other parameters considered were a) Language b) Structure/Depiction of the Word Lists ( e.g. word clouds, matrices, columns…), c) Whether the words would be shown or read aloud, and d) whether the respondents had to speak out, or write down, the recollected words. These parameters were discussed and abandoned as too complex to mechanize, though they could have had an impact on the STM scores.</p>
+<p>Hence a total of <strong>8 Tests</strong> were created by 8 pairs of students, and each team tested the remaining 15 students ( Due to COVID restrictions, this testing was carried out entirely online on MS Teams, using individual breakout rooms for the Test Teams. )</p>
+<p>The data were entered into a Google Sheet and the STM scores were converted to <em>percentages</em> so as to be comparable across WL.</p>
+<p>The data was then “flattened” for each of the binary parameters; this was logical to do since for each parameter, the other two parameters were balanced out by the Test structure. For instance, for WL = 5, the SL and ST parameters used all the four combinations ( SL = 5, 15 ) and (ST = 15, 30 ). Hence the “common sense” analysis could proceed for each of the parameters individually. Joint effects were not considered for this preliminary class.</p>
+</div>
+<div id="data" class="section level1">
+<h1>Data</h1>
+<pre><code>## # A tibble: 60 × 6
+##    syllable_2 syllable_5 study_time_15 study_time_30 list_length_7
+##         &lt;dbl&gt;      &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;         &lt;dbl&gt;
+##  1      0.714      0.571         0.714         0.714         0.714
+##  2      0.429      0.571         0.429         0.571         0.429
+##  3      0.571      0.714         0.571         0.571         0.571
+##  4      0.714      1             0.714         0.571         0.714
+##  5      0.714      1             0.714         1             0.714
+##  6      0.714      0.857         0.714         0.714         0.714
+##  7      0.571      0.571         0.571         0.571         0.571
+##  8      0.571      0.714         0.571         0.571         0.571
+##  9      0.571      0.857         0.571         1             0.571
+## 10      0.571      1             0.571         0.429         0.571
+## # ℹ 50 more rows
+## # ℹ 1 more variable: list_length_15 &lt;dbl&gt;</code></pre>
+<p>The data has scores that have been combined into single columns for each setting for each of the parameters. For example, the column <code>syllable_2</code> contains STM scores for <strong>all</strong> tests that used SL = 2-syllables in their tests. The Word Length WL and Study Time ST go through all their combinations in this column.
+The other columns are constructed similarly.</p>
+<div id="basic-plots" class="section level2">
+<h2>Basic Plots</h2>
+<p>We will use Box Plots and Density Plots to compare the STM score distributions for each Parameter. To do this we need to <code>pivot_longer</code> the adjacent columns ( e.g. <code>syllable_2</code> and syllable_5) and use these names as categorical variables:</p>
+<div id="syllable-parameter-sl" class="section level3">
+<h3>Syllable Parameter SL</h3>
+<pre><code>## # A tibble: 120 × 2
+##    syllable   syl_scores
+##    &lt;chr&gt;           &lt;dbl&gt;
+##  1 syllable_2      0.714
+##  2 syllable_5      0.571
+##  3 syllable_2      0.429
+##  4 syllable_5      0.571
+##  5 syllable_2      0.571
+##  6 syllable_5      0.714
+##  7 syllable_2      0.714
+##  8 syllable_5      1    
+##  9 syllable_2      0.714
+## 10 syllable_5      1    
+## # ℹ 110 more rows</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/plots-1-1.png" width="672" /></p>
+</div>
+<div id="study-time-parameter-st" class="section level3">
+<h3>Study Time Parameter ST</h3>
+<pre><code>## # A tibble: 120 × 2
+##    study         study_scores
+##    &lt;chr&gt;                &lt;dbl&gt;
+##  1 study_time_15        0.714
+##  2 study_time_30        0.714
+##  3 study_time_15        0.429
+##  4 study_time_30        0.571
+##  5 study_time_15        0.571
+##  6 study_time_30        0.571
+##  7 study_time_15        0.714
+##  8 study_time_30        0.571
+##  9 study_time_15        0.714
+## 10 study_time_30        1    
+## # ℹ 110 more rows</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/plots-2-1.png" width="672" /></p>
+</div>
+<div id="word-list-length-parameter-wl" class="section level3">
+<h3>Word List Length Parameter WL</h3>
+<pre><code>## # A tibble: 120 × 2
+##    list           list_scores
+##    &lt;chr&gt;                &lt;dbl&gt;
+##  1 list_length_7       0.714 
+##  2 list_length_15      0.267 
+##  3 list_length_7       0.429 
+##  4 list_length_15      0.2   
+##  5 list_length_7       0.571 
+##  6 list_length_15      0.0667
+##  7 list_length_7       0.714 
+##  8 list_length_15      0.133 
+##  9 list_length_7       0.714 
+## 10 list_length_15      0.2   
+## # ℹ 110 more rows</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/plots-3-1.png" width="672" /></p>
+</div>
+</div>
+</div>
+<div id="preliminary-observations" class="section level1">
+<h1>Preliminary Observations</h1>
+<p>Clearly, based on visual inspection of the Plots, the Word Count seems to have a large effect on STM Test Scores, with fewer words ( 7 ) being easier to recall. Study Time ( 15 and 30 seconds ) also seems to have a more modest positive effect on STM scores, while Syllable Count ( 2 or 5 syllables ) seems to have a modest negative effect on STM scores.</p>
+</div>
+<div id="analysis" class="section level1">
+<h1>Analysis</h1>
+<p>We wish to establish the significance of the effect size due to each of the Parameters. Already from the Density Plots, we can see that <em>none</em> of the scores are normally distributed. A quick <em>Shapiro-Wilkes Test</em> for each of them confirms that the scores are <em>not</em> normally distributed.</p>
+<p>Hence we go for a Permutation Test to check for significance of effect.</p>
+<p>On the other hand, as remarked in Ernst<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a>, the non-parametric permutation test can be both <em>exact</em> and also <strong>intuitively easier</strong> for students to grasp, as I can testify from direct observation in this class. There is no need to discuss sampling distributions and means, t-tests and the like. Permutations are easily executed in R, using packages such as <code>mosaic</code><a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a>.</p>
+<pre><code>## 
+## 	Shapiro-Wilk normality test
+## 
+## data:  stm$syllable_2
+## W = 0.95508, p-value = 0.02716</code></pre>
+<pre><code>## 
+## 	Shapiro-Wilk normality test
+## 
+## data:  stm$syllable_5
+## W = 0.95321, p-value = 0.02211</code></pre>
+<pre><code>## 
+## 	Shapiro-Wilk normality test
+## 
+## data:  stm$study_time_15
+## W = 0.9068, p-value = 0.0002348</code></pre>
+<pre><code>## 
+## 	Shapiro-Wilk normality test
+## 
+## data:  stm$study_time_30
+## W = 0.95539, p-value = 0.0281</code></pre>
+<pre><code>## 
+## 	Shapiro-Wilk normality test
+## 
+## data:  stm$list_length_7
+## W = 0.90542, p-value = 0.0002085</code></pre>
+<pre><code>## 
+## 	Shapiro-Wilk normality test
+## 
+## data:  stm$list_length_15
+## W = 0.92806, p-value = 0.001645</code></pre>
+</div>
+<div id="permutation-tests" class="section level1">
+<h1>Permutation Tests</h1>
+<p>We proceed with a Permutation Test for each of the Parameters.
+We start with the Syllable Parameter SL. We shuffle the labels ( SL- = 2 and SL+ = 5) between the scores and determine the null distribution. This is then compared with the difference in <em>mean scores</em> between the unpermuted sets.
+We continue similarly for the other two parameters.</p>
+<pre><code>## [1] 0.0153731</code></pre>
+<pre><code>##     syllable_5
+## 1 -0.041929444
+## 2  0.061911508
+## 3  0.000650873
+## 4 -0.055579921
+## 5  0.005367381
+## 6 -0.039703254</code></pre>
+<pre><code>## [1] 0.08526183</code></pre>
+<pre><code>##   study_time_30
+## 1  4.026230e-02
+## 2 -3.139690e-02
+## 3  1.970325e-02
+## 4  2.436508e-05
+## 5  2.727722e-02
+## 6 -4.177698e-03</code></pre>
+<pre><code>## [1] 0.2887539</code></pre>
+<pre><code>##   list_length_7
+## 1  -0.028256746
+## 2   0.022258333
+## 3  -0.090823889
+## 4   0.005681508
+## 5  -0.023190873
+## 6  -0.004151349</code></pre>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/null-plots-1.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/null-plots-2.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/null-plots-3.png" width="672" /></p>
+</div>
+<div id="conclusions" class="section level1">
+<h1>Conclusions</h1>
+<p>From the above null distribution plots obtained using Permutation tests, it is clear that both Study Time ( ST ) and List Word Length ( WL) have significant effects on the Short Term Memory Scores. The probability that the <strong>observed value</strong> is obtained or exceeded by any permutation of scores is very low in both cases.</p>
+<p>On the other hand, Syllable Count (SL) does not seem to affect the STM scores significantly.</p>
+</div>
+<div id="references" class="section level1">
+<h1>References</h1>
+</div>
+<div class="footnotes footnotes-end-of-document">
+<hr />
+<ol>
+<li id="fn1"><p>Lawrance, A. J. 1996. “A Design of Experiments Workshop as an Introduction to Statistics.” American Statistician 50 (2): 156–58. <a href="doi:10.1080/00031305.1996.10474364" class="uri">doi:10.1080/00031305.1996.10474364</a>.<a href="#fnref1" class="footnote-back">↩︎</a></p></li>
+<li id="fn2"><p>Ernst, Michael D. 2004. “Permutation Methods: A Basis for Exact Inference.” Statistical Science 19 (4): 676–85. <a href="doi:10.1214/088342304000000396" class="uri">doi:10.1214/088342304000000396</a>.<a href="#fnref2" class="footnote-back">↩︎</a></p></li>
+<li id="fn3"><p>Pruim R, Kaplan DT, Horton NJ (2017). “The mosaic Package: Helping Students to ‘Think with Data’ Using R.” The R Journal, 9(1), 77–102. <a href="https://journal.r-project.org/archive/2017/RJ-2017-024/index.html" class="uri">https://journal.r-project.org/archive/2017/RJ-2017-024/index.html</a>.<a href="#fnref3" class="footnote-back">↩︎</a></p></li>
+</ol>
+</div>

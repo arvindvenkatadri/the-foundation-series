@@ -1,0 +1,118 @@
+---
+date: "2021-02-04"
+lastmod: " `r Sys.Date()`"
+title: "TRIZ - The Ideal Final Result"
+author: "Arvind Venkatadri"
+external_link: ""
+weight: 75
+type: book
+image:
+  caption: "Photo by suzukii xingfu: https://www.pexels.com/photo/food-photography-of-food-and-wine-bottles-on-table-inside-boat-872835/"
+  focal_point: Smart
+links:
+- icon: flask
+  icon_pack: fas
+  name: TRIZ DataBase
+  url: /slides/PlayAndInvent/TRIZ-Database/index.html
+# - icon: game
+#   icon_pack: fab
+#   name: Game
+#   url: /pdf/TRIZ/PlayAndInvent/Titanic_Case_Study.pdf
+slides: 
+summary: "This Module is part of a Creative Problem Solving course I offer at Srishti Manipal Institute, Bangalore"
+tags:
+- Ideal Final Result
+- Looking Backwards towards the Present 
+- Inversion
+
+url_code: ""
+url_pdf: ""
+url_slides: ""
+url_video: ""
+---
+
+
+
+```{r,echo=FALSE, fig.align='center',fig.alt="Photo by suzukii xingfu on pexels"}
+knitr::include_graphics("featured.jpg")
+
+```
+
+
+## Introduction
+
+In the previous Module on ***the Unreasonable Effectiveness of Available Resources*** we understood how to identify resources in everyday situations and to come to terms with our assumptions and ***functional fixedness***. This is the first and most important step in the TRIZ Problem Solving Method. 
+
+Another important idea in TRIZ is that of the ***Ideal Final Result(IFR)***. 
+
+Here is what TRIZ pioneer Ellen Domb says:  
+
+> The IFR is an *implementation-free description* of the situation after the problem has been solved. It focuses on customer needs or functions needed, *not the current process or equipment*. The goal of formulating the IFR is to eliminate rework (solve the right problem the first time!) by addressing the root cause of the problem or customer need. The IFR helps you reach breakthrough solutions by thinking about the solution, not the intervening problems.
+
+In this way, TRIZ is itself an implementation of TRIZ: we are working backwards to the present from the solution, "**the other way around**" !! (We will see this Principle later)
+
+## The Intellectual Position in stating the IFR
+
+Here are two quotes:
+
+> “The reasonable man adapts himself to the world: the unreasonable one persists in trying to adapt the world to himself. Therefore all progress depends on the unreasonable man.” 
+[— George Bernard Shaw]{style="float:right"}
+
+
+
+And from <u>[Alice in Wonderland](https://www.alice-in-wonderland.net)</u>:
+
+![](https://www.alice-in-wonderland.net/wp-content/uploads/2book25.jpg)
+
+> “How old are you?” said the queen.\
+> “I’m seven and a half exactly”\
+> “You needn't say “exactly” the queen remarked : “I can believe it without that. Now I’ll give you something to believe. I am just one hundred and one, five months and a day”\
+>“I can’t believe that!” said Alice.\
+> “Can’t you?” the Queen said in a pitying tone. “Try again: draw a long breath, and shut your eyes.”\
+> Alice laughed. “There’s no use trying,” she said: “one can’t believe impossible things.”\
+> “I daresay you haven’t had much practice,” said the Queen. “When I was your age, I always did it for half-an-hour a day. Why, sometimes I’ve believed as many as six impossible things before breakfast.”\
+
+So, how "unreasonable" and "impossible" can we become? Alice could not, but the Queen said she could contemplate 6 impossible things before breakfast! Can we try?
+
+- In college, I want to have 150% attendance in a course?\
+- I want to be in office without travelling.\
+- I want milk to boil itself and wait while I check my Insta.\
+- Can a ball spin in the same direction regardless of the torque applied?
+- Elephants and monkeys who come into my orchard to raid it must decide by themselves to leave it alone.
+- I want to remove seeds from a capsicum/bell-pepper without cutting it open.
+- I want to wear baggy, ill-fitting clothes and still look good.
+- Can my exhaust filter clean itself, without me scrubbing it with soap and water?
+
+Can you think of any more? How about this?
+
+## The IFR: Apollo-13 once again
+
+`r blogdown::shortcode("youtube", "1cYzkyXp0jg")` 
+
+## The IFR: We Invented the Post-It
+
+Here is a <u>[first-person story from Art Fry and Spencer Silver](pdf/W1D1 - First Person_ ‘We invented the Post-it Note’ - FT.pdf)</u>, the inventors of the Post-It. Let us quickly read it to find evidence of *"IFR Thinking*!
+
+
+## Ideal Final Result: Game
+TBD
+
+
+
+
+
+## Discussion
+
+Like the Queen in Alice in Wonderland, it is important to conceptualize the Ideal Final Result as one of the <u>[**six impossible things before breakfast.**](http://www.literaturepage.com/read/throughthelookingglass-42.html)</u> As Jack Hipple says in his book *The Ideal Result* ( Reference 3), *it's when something performs its function, and does not exist.*
+
+In this sense, TRIZ is a foretaste of what was said much later after TRIZ was invented, that <u>[**the best Technologies are those that disappear.**](https://web.archive.org/web/20141022035044/http://www.ubiq.com/hypertext/weiser/SciAmDraft3.html)</u>
+
+
+## References
+
+1. Titanic Game [(PDF)](pdf/TRIZ/Titanic_Case_Study.pdf)
+
+1. Stan Kaplan, ***An Introduction to TRIZ***[(PDF)](pdf/TRIZ/Stan Kaplan-Intro-to-TRIZ.pdf)
+This is a simple and short introduction to *all* aspects of Classical TRIZ.
+
+1. Jack Hipple, "The Ideal Result: What it is and how to achieve it", Springer, 2012.
