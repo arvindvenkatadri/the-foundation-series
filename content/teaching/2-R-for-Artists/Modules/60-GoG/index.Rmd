@@ -6,7 +6,7 @@ date: "`r Sys.Date()`"
 featured: false
 draft: false
 weight: 50
-type: book
+type: page
 output:
   html_document:
     toc_float: true
