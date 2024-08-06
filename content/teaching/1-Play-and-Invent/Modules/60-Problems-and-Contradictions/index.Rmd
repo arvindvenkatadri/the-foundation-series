@@ -209,7 +209,12 @@ See this <u>[page](https://landarchconcepts.wordpress.com/what-is-prospect-refug
 
       > Always go to other people's funerals, otherwise they won't come to yours.  [<u>[-Yogi Berra](https://www.brainyquote.com/quotes/yogi_berra_161244)</u>]{style="float:right"}
       
-      
+
+## References
+
+1. Dr Rafiq Elmansy. (02/05/2023). *How to Use the Fishbone Diagram in Root Cause Analysis?* <u><https://www.designorate.com/problem-solving-cause-and-effect-diagram/></u>
+
+
 ## Additional Readings
 
 Do glance through these articles and try to form a "contradiction mentality" about things around you:

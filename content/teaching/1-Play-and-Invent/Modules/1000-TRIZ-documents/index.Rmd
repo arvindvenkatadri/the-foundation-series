@@ -1,0 +1,113 @@
+---
+title: "TRIZ Reference Documents"
+author: "Arvind V"
+date: "2024-08-06"
+output: html_document
+lastmod: " `r Sys.Date()`"
+external_link: ""
+weight: 1000
+type: book
+image:
+  caption: ""
+  focal_point: Smart
+links:
+# - icon: flask
+#   icon_pack: fas
+#   name: TRIZ DataBase
+#   url: slides/PlayAndInvent/TRIZ-Database/index.html
+# - icon: game
+#   icon_pack: fab
+#   name: Game
+#   url: /pdf/TRIZ/Titanic_Case_Study.pdf
+slides: 
+summary: "This Module is part of a Creative Problem Solving course I offer at Srishti Manipal Institute, Bangalore"
+tags: ""
+# url_code: ""
+# url_pdf: ""
+# url_slides: "slides/PlayAndInvent/TRIZ-Basics/index.html"
+# url_video: ""
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+This is an annotated and embedded list of documents that I have gathered on various aspects of TRIZ. 
+
+## Overview
+
+1. Stan Kaplan. 
+
+1. *What is TRIZ?* Presentation. <u>[PDF](TRIZ-related/Chapter 7 TRIZ.pdf)</u> 
+
+1. Yaroslav Baronov. *TRIZ Overview*. <u>[PDF](TRIZ-related/trizoverviewyaroslav-120912103927-phpapp01.pdf)</u>
+1. Shiv Kumar, P. S. Bajwa, Kulbhushan. (Jan 2018). *Recent Trends in Problem Solving through TRIZ: A Review). International Journal of Innovative Research in Science, Engineering and Technology. Vol. 7, Issue 1, January 2018. <u>[PDF](TRIZ-related/24_IJIRSET_TRIZ.pdf)</u>
+
+2. Valeri Souchkov. (November 2006, updated November 2011). *Annotated List of Key TRIZ Components and Techniques*. <u>[PDF](TRIZ-related/Annotated list of main TRIZ tools and techniques.pdf)</u> 
+
+
+
+## Project TETRIS Documents
+
+1. Project TETRIS. *Table of Contents*. <u>[PDF](TRIZ-related/Project Tetris/cover_index_EN.pdf)</u>
+
+2. Project TETRIS. *Fundamentals of Classical TRIZ*. <u>[PDF](TRIZ-related/Project Tetris/EN_01.pdf)</u>
+
+3. Project TETRIS. *Laws of Engineering System Evolution*. <u>[PDF](TRIZ-related/Project Tetris/EN_02.pdf)</u>
+
+4. Project TETRIS. *Short Review of Altshuller’s Algorithm of Inventive Problem Solving (ARIZ) Illustrated*. <u>[PDF](TRIZ-related/Project Tetris/EN_03.pdf)</u>
+
+5. Project TETRIS. *Su-Field Analysis and Standard Solutions*. <u>[PDF](TRIZ-related/Project Tetris/EN_04.pdf)</u>
+
+6. Project TETRIS. *Techniques to Resolve Contradic- tions / Resources / Effects*. <u>[PDF](TRIZ-related/Project Tetris/EN_05.pdf)</u>
+
+## Project TETRIS TRIZ Examples
+
+1. Project TETRIS. *Crash-Proof Key*. <u>[PDF](TRIZ-related/TRIZ-ExamplesEN/EN_ex_1.pdf)</u>
+
+1. Project TETRIS. *Umbrella Design*. <u>[PDF](TRIZ-related/TRIZ-ExamplesEN/EN_ex_2.pdf)</u>
+
+1. Project TETRIS. *Innovative Connecting Rod for Engines*. <u>[PDF](TRIZ-related/TRIZ-ExamplesEN/EN_ex_3.pdf)</u>
+
+1. Project TETRIS. *Leak-Proof Ballpoint Pens*. <u>[PDF](TRIZ-related/TRIZ-ExamplesEN/EN_ex_4.pdf)</u>
+
+1. Project TETRIS. *Removing Ice off frozen tranmission lines*. <u>[PDF](TRIZ-related/TRIZ-ExamplesEN/EN_ex_5.pdf)</u>
+
+## Contradictions
+
+1. Oxford TRIZ Contradictions Matrix. <u>[PDF](TRIZ-related/oxfordtriz_contradictions_matrix.pdf)</u> 
+
+2. TRIZ Power Tools. *TRIZ Contradictions Exercises*. <u>[PDF](TRIZ-related/TRIZ_01_Contradictions_Exercises_Actual.pdf)</u> 
+
+## The Ideal Final Result (IFR)
+
+## Inventive Principles: Interpretations and Examples
+
+1. 40 Inventive Principles Illustrated. <u>[PDF](TRIZ-related/40_principles_of_TRIZ_method_720dpi.jpg)</u>
+
+2. TRIZ Inventive Principles with examples. <u>[PDF](TRIZ-related/TRIZ_40_inventive_principles_with_examplesfeb15.pdf)</u>
+
+3. TRIZ Inventive Principles One-Pager Reference. <u>[PNG Image](TRIZ-related/Triz IPs.png)</u>
+
+## Scientific Effects in TRIZ
+
+## Advanced TRIZ Methods
+
+
+### Su-Field Analysis
+
+1. Davide Russo, Stefano Duci. (World Conference: TRIZ FUTURE, TF 2011-2014). *From Altshuller’s 76 Standard Solutions to a new Set of 111 Standards*. <u>[PDF](TRIZ-related/Altshuller 76 to 111 Inventive Solutions.pdf)</u>
+
+TRIZ Power Tools. *TRIZ Contradictions Exercises*. <u>[PDF](TRIZ-related/TRIZ_01_Contradictions_Exercises_Actual.pdf)</u>
+### System-Subsystem-SuperSystem
+
+###
+
+
+## TRIZ Case Studies
+
+1. TRIZ Contradictions in Science Fiction. [](TRIZ-related/Contradictions in Science Fiction.pdf)
+
+2. TRIZ Games. [](TRIZ-related/PRIZM Game for TRIZ - Pahl.pdf)

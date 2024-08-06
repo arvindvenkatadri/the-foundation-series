@@ -2,7 +2,6 @@
 date: "2024-06-23"
 lastmod: " `r Sys.Date()`"
 title: "TRIZ at the Movies!"
-author: "Arvind Venkatadri"
 external_link: ""
 weight: 95
 type: book
