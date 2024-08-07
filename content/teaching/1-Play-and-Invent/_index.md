@@ -32,6 +32,7 @@ The course will have some basic foundations from psychological and cognitive sci
 - Metaphors as Gateways
 - {{<hl>}}The Six Thinking Hats Method{{</hl>}} and how to apply them in practice
 - Innovative Problems Solving Methods like {{<hl>}}TRIZ{{</hl>}}, its philosophy and techniques such as the {{<hl>}}Contradiction Matrix{{</hl>}} and {{<hl>}}40 Inventive Principles{{</hl>}}
+- Advanced TRIZ methods such as {{<hl>}}Substance-Field Analysis{{</hl>}}, {{<hl>}}76 Innovation Principles{{</hl>}}, and the {{<hl>}}Laws of Product Evolution{{</hl>}}
 - Analysis of Movies for manifestations of metaphoric problems and TRIZ methods
 - Bring your own Problem: A Final Culminating Project
 
@@ -47,6 +48,8 @@ Bourdieu's concept of Cultural Capital will be interpreted as one of the primary
 Structured heuristic techniques based on de Bono's 6 Hat method will help us see how to perform Situational Analysis and Idea Generation, to help us take ideas from conception to execution. Reference will be made to Alex Osborn's "Applied Imagination" methods and tied to the Big 5 results.
 
 Aspects of the Russian system of innovation and problem solving, TRIZ (Teoriya Resheniya Izobretatelskhikh Zadatch) invented by Genrikh Altshuller will be introduced. Alshuller's idea of Generalized Problem Solving by borrowing ideas/memes from other Domains, his 8 Laws of Evolution of Products, and ( a few of ) the 40 Inventive Principles derived from his analysis of patents, will be covered in gamified fashion. These will be linked to with David Perkin's (Harvard Project Zero) ideas and Edward de Bono's methods to interpret, and design for, existing situations and products.
+
+Advanced aspects of TRIZ such as Su-Field Analysis, the Laws of Product Evolution, and ARIZ will be introduced in gamefied fashion. 
 
 Field visits to product, food preparation, solar energy, and logistics companies will be used to bolster and demonstrate the unity of these concepts acquired in class. Technological assignments, and non-tech making and presenting tasks will also be used in class to create gamefied experiences for all of these.
 
