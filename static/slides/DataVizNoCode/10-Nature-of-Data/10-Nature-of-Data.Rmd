@@ -44,7 +44,7 @@ today <- format(Sys.Date(),
                 format="%B %d %Y")
 library(xaringanthemer)
 library(xaringanExtra)
-library(xaringanBuilder)
+#library(xaringanBuilder)
 library(renderthis)
 library(tidyverse)
 library(patchwork)
