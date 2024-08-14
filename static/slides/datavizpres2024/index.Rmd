@@ -18,7 +18,7 @@ output:
       countIncrementalSlides: false
       ratio: "16:9"
     yolo:
-      times: 5
+      times: 3
       img: images/Adult_Scottish_Fold.jpg # use a different image 5 times
 ---
 
@@ -579,14 +579,18 @@ knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizati
 
 ```
 ]
+.small[
 - Variable: Ordinal / Nominal
 - Stat: `count`
-- Geometry: **height and colour**
+- Geometry: 
+  - x: Ord/Nom; y = count = height; colour = Ord/Nom
 - Questions: 
-  - .orange[How many] of each type of #Var1?
-  - .orange[How many] of each type of #Var1 broken up by #Var2?
+  - How many artists work with each Type of Material?
+  - Broken up by Gender or Nationality?
+  - Do ~~girls outnumber boys~~(meh!) Introverts outnumber Extraverts in Srishti 4:1 ? 
+  - And from metros?
 ]
-
+]
 .pull-right[
 ```{r, out.height="480px"}
 knitr::include_graphics("https://av-quarto.netlify.app/content/courses/analytics/descriptive/modules/20-barplots/capitals-vs-rest.jpeg")
@@ -608,14 +612,18 @@ knitr::include_graphics("https://av-quarto.netlify.app/content/courses/analytics
 knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/single-distributions-1.png")
 ```
 ]
-
+.small[
 - Variable: Interval / Ratio
 - Stat: `bin` and `count`
-- Geometry: x = bins, y = count, and colour
+- Geometry: 
+  - x = bins ( Quant ranges)
+  - y = count
+  - colour = nothing, or Nom/Ord
 - Questions: 
   - What is the Range and frequency of Interval/Ratio variable?
+  - [Do men and women ~~box~~ play golf differently?](https://en.wikipedia.org/wiki/Imane_Khelif)
 ]
-
+]
 .pull-right[
 
 ```{r,echo=FALSE, fig.align='center', out.height="224px"}
@@ -647,16 +655,20 @@ knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizati
 ```
 
 ]
-
+.small[
 - Variable: Interval/Ratio + Nominal/Ordinal 
 - Stat: `sort`(boxplot), `bin`(violin)
 - Geometry: 
   - x = Int/Ratio,
   - y = Nom/Ord, and 
   - colour = Nom/Ord
-- Question: What is the distribution of the Interval/Ratio variable grouped by an Ord/Nom variable?
+- Question: 
+  - What is the distribution of the Interval/Ratio variable?
+  - Grouped by an Ord/Nom variable?
+  - [Does "bruh" mean the same thing in every building in SMI](https://www.dictionary.com/e/slang/bruh/)?
+  - Which building in SMI is voted the most ugly? (Rust, Rack, Ruin, WReck, Reject?)
 ]
-
+]
 .pull-right[
 
 ```{r, echo=FALSE, out.height="450px", fig.cap="I say what I mean, and I mean what I say"}
@@ -686,15 +698,20 @@ knitr::include_graphics("https://av-quarto.netlify.app/content/courses/analytics
 knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/basic-scatter-1.png")
 ```
 ]
-
+.small[
 - Variable: Interval/Ratio + Nominal/Ordinal 
 - Stat: none
 - Geometry: 
   - x = Int/Ratio, 
   - y = Int/Ratio, and 
-  - colour = Nom/ord
-- Question: How does one Interval/Ratio variable vary with respect to another?
+  - colour = Nom/Ord
+  - shape = Nom/Ord
+- Question: 
+  - How does one Interval/Ratio variable vary with respect to another?
+  - Are the number of friendships dependent upon my wallet-size?
 ]
+]
+
 .pull-right[
 
 ```{r,echo=FALSE, fig.align='center', out.height="440px"}
@@ -717,7 +734,7 @@ knitr::include_graphics("https://av-quarto.netlify.app/content/courses/analytics
 knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/proportions-multi-1.png")
 ```
 ]
-
+.small[
 - Variables: Nominal/Ordinal 
 - Stat: none
 - Geometry: 
@@ -725,7 +742,10 @@ knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizati
   - y = Count (computed)
   - colour = Nom/Ord
   - width = Count (computed)
-- Question: How do counts vary over (combinations of) Ord/Nom variables?
+- Question: 
+  - How do counts vary over (combinations of) Ord/Nom variables?
+  - [Could Jack have lived happily ever after with Rose](https://youtu.be/F2RnxZnubCM)?
+]
 ]
 
 .pull-right[
@@ -756,14 +776,18 @@ knitr::include_graphics("https://av-quarto.netlify.app/content/courses/analytics
 knitr::include_graphics("https://mr.schochastics.net/material/netVizR/index_files/figure-html/network_grps_sol-1.png")
 ```
 ]
-
+.small[
 - Variables: Nominal/Ordinal 
 - Stat: none
 - Geometry: 
   - Node (shape) = Nom
   - Colour = Ord
   - Edge Line width = Count (computed) or Quant
-- Question: How much does on Qual variable connect with another? 
+- Question: 
+  - How much does on Qual variable connect with another? 
+  - What is the strength of someone's friendship with another?
+  - [Are friendships, ah, "beneficial"](https://www.netflix.com/title/70167075)?
+]
 ]
 
 .pull-right[
@@ -790,14 +814,17 @@ knitr::include_graphics("https://av-quarto.netlify.app/content/courses/analytics
 knitr::include_graphics("images/dendro.png")
 ```
 ]
-
+.small[
 - Variables: Nominal/Ordinal 
 - Stat: none
 - Geometry: 
   - x = Nom/Ord 
-  - y = Count (computed)
-  - colour = Nom/Ord
-- Question: How much does on Qual variable connect with another? 
+  - y = Nom/Ord
+- Question: 
+  - How much does on Qual variable connect with another? 
+  - Who reports to whom, or is dependent upon whom?
+  - Who cannot pass the buck any further?
+]
 ]
 
 .pull-right[
@@ -823,16 +850,19 @@ knitr::include_graphics("https://ggraph.data-imaginist.com/articles/Layouts_file
 knitr::include_graphics("https://clauswilke.com/dataviz/directory_of_visualizations_files/figure-html/geospatial-1.png")
 ```
 ]
-
-- Variables: Nominal/Ordinal 
+.small[
+- Variables: Quant + Qual (Nominal/Ordinal) 
 - Stat: none
 - Geometry: 
-  - x = Nom/Ord 
-  - y = Count (computed)
+  - x = Quant
+  - y = Quant
   - colour = Nom/Ord
-  - width = Count (computed)
+- Question: 
+  - What does each area represent, qualitatively? (Religion, Properity, Voting Pattern..)
+  - Which are the most affluent, or crime-prone neighbourhoods?
+  - Who watches [Brooklyn 99](https://www.netflix.com/title/70281562) and who watches [Bojack Horseman](https://www.netflix.com/title/70300800)?
 ]
-
+]
 .pull-right[
 
 ```{r,echo=FALSE, fig.align='center', out.height="440px"}
@@ -862,7 +892,7 @@ knitr::include_graphics("https://av-quarto.netlify.app/content/materials/images/
 - Hypotheses leads us to define *Questions*
 - Questions lead to *Variables* and *Data*
 - Questions *with* Variables lead to *Graphs*
-- With Graphs, we can write *Stories* that can drive Decisions, Designs, Policies, and...Art!!
+- With Graphs, we can write *Stories* that can drive **Decisions**, **Designs**, **Policies**, and...**Art**!!
 
 
 ---
