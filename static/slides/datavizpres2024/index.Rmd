@@ -64,6 +64,7 @@ library(HistData)
 library(kableExtra)
 
 # Enables the ability to show all slides in a tile overview by pressing "o"
+xaringanExtra::use_webcam()
 xaringanExtra::use_tile_view()
 xaringanExtra::use_panelset()
 xaringanExtra::use_clipboard()
@@ -89,6 +90,7 @@ xaringanExtra::use_extra_styles(
 # )
 # Xaringan Lexis theme
 # https://jhelvy.github.io/lexis/
+
 ```
 
 
