@@ -40,6 +40,8 @@ This is an annotated and embedded list of documents that I have gathered on vari
 
 1. Stan Kaplan. *An Introduction to TRIZ*. <u>[PDF](TRIZ-related/Stan Kaplan-Intro-to-TRIZ.pdf)</u>. Read this booklet if this is the *only* TRIZ document you are going to read. 
 
+1. Lev Shulyak. *Introduction to TRIZ*. <u>[PDF](TRIZ-related/Shulyak-Intro-to-TRIZ.pdf)</u>. Short Two-pager intro. 
+
 1. Simon Litvin, Vladimir Petrov, Mikhail Rubin, Victor Fey. *TRIZ BODY OF KNOWLEDGE*. <u>[PDF](TRIZ-related/TRIZ-Body-of-Knowledge-final.pdf)</u>. A one page map of the TRIZ system, with copious references. Compiled by TRIZ greats. 
 
 1. *What is TRIZ?* Presentation. <u>[PDF](TRIZ-related/Chapter 7 TRIZ.pdf)</u> 
@@ -57,10 +59,9 @@ International Technology Education Association. <u>[PDF](TRIZ-related/NewToolsfo
 
 1. G.S. Altshuller, R.B. Shapiro (1956). *The Psychology of Inventive Creativity*. TRIZ Review: Journal of the International TRIZ Association – MATRIZ. Vol 1, #1, February 2019. <u>[PDF](TRIZ-related/Psychology-1956-en.pdf)</u> 
 
-1. Felicito S. Caluyo. *Innovation and the Theory of
-Inventive Problem Solving (TRIZ): Presentation*. <u>[PDF](TRIZ-relatedCahuyo - Innovation-and-the-Theory-of-Inventive-Problem-Solving-TRIZ.pdfu)</u> 
+1. Felicito S. Caluyo. *Innovation and the Theory of Inventive Problem Solving (TRIZ): Presentation*. <u>[PDF](TRIZ-relatedCahuyo - Innovation-and-the-Theory-of-Inventive-Problem-Solving-TRIZ.pdfu)</u> 
 
-Books by G. S. Altshuller. 
+### Books by G. S. Altshuller. 
 
 1. Altshuller G.S. <u>[*THE ART OF INVENTING - AND SUDDENLY THE INVENTOR APPEARED*](https://library.lol/main/8EEDC7B5ABAC7A453CD79A71C0B12B59)</u>. Moscow: Detskaya Literatura, 1989 (1st ed.-1984; 2nd ed.-1987; 3rd ed.- 1989). ISBN 5-08-000598-X.
 
@@ -78,6 +79,8 @@ Books by G. S. Altshuller.
 4. Altshuller, G.S. (1991) *To Find an Idea: Introduction to the Theory of Inventive Problem Solving*, 2nd edn. Nauka, Novosibirsk.
 
 ## TRIZ Examples
+
+1. Arvind's TRIZ Case Study Database `r emoji::emoji("laugh")`! <u>[Online Presentation](/slides/PlayAndInvent/TRIZ-Database/index.html)</u>
 
 1. 40 Inventive Principles for Architecture. <u>[PDF](TRIZ-rela40-Inventive-Principles-for-Architecture.pdf)</u>
 
@@ -145,9 +148,12 @@ These are from an early project on teaching TRIZ to school children, in Italy.
 
 6. Project TETRIS. *Techniques to Resolve Contradictions / Resources / Effects*. <u>[PDF](TRIZ-related/Project Tetris/EN_05.pdf)</u>
 
-## TRIZ Concepts
+## TRIZ Concepts and Methods
 
 ### Contradictions
+
+1. TRIZ40 website by Roni Horowitz. <u>[*Detailed list of Inventive Principles mapped to Contradictions!*](https://www.triz40.com/aff_Principles_TRIZ.php)</u>
+Excellent searchable contradictions database with examples.
 
 1. Oxford TRIZ Contradictions Matrix. <u>[PDF](TRIZ-related/oxfordtriz_contradictions_matrix.pdf)</u> 
 
@@ -155,9 +161,15 @@ These are from an early project on teaching TRIZ to school children, in Italy.
 
 1. Valeri Souchkov. *TRIZ Define Contradiction Tutorial*. <u>[PDF](TRIZ-related/TRIZ_DefineContradiction_Tutorial.pdf)</u> 
 
+
 ### The Ideal Final Result (IFR)
 1.
 
+### Root Cause Analysis + TRIZ
+
+1. Karen Gadd. *TRIZ - essential to anyone using Root Cause Analysis (RCA) Toolkits*. <u>[PDF](TRIZ-related/TRIZ and Root Cause Analysis Article by Karen Gadd.pdf)</u>
+
+1. Oleg Abramov.(2015).*TRIZ-BASED CAUSE AND EFFECT CHAINS ANALYSIS VS ROOT CAUSE ANALYSIS*. TRIZfest 2015. <u>[PDF](TRIZ-related/Abramov_TRIZfest-2015Paper_CECAvsRCA_final_published.pdf)</u>
 
 ### Inventive Principles: Interpretations and Examples
 
@@ -175,6 +187,9 @@ These are from an early project on teaching TRIZ to school children, in Italy.
 2. Project TETRIS. *Short Review of Altshuller’s Algorithm of Inventive Problem Solving (ARIZ) Illustrated*. <u>[PDF](TRIZ-related/Project Tetris/EN_03.pdf)</u>
 
 ### Su-Field Analysis and Scientific Effects in TRIZ
+
+1. John Terninko, Ellen Domb, Joe Miller. *The Seventy-six Standard Solutions, with Examples*. <u>[PDF](TRIZ-related/The 76 solutions.PDF)</u>
+
 
 1. Davide Russo, Stefano Duci. (World Conference: TRIZ FUTURE, TF 2011-2014). *From Altshuller’s 76 Standard Solutions to a new Set of 111 Standards*. <u>[PDF](TRIZ-related/Altshuller 76 to 111 Inventive Solutions.pdf)</u>
 
@@ -215,7 +230,6 @@ Philosophical Transactions: Mathematical, Physical and Engineering Sciences, Vol
 
 1. Julian F. V. Vincent, Olga A. Bogatyreva, Nikolaj R. Bogatyrev, Adrian Bowyer and Anja-Karina Pahl. *Biomimetics: its practice and theory*. <u>[PDF](TRIZ-related/Vincent-Biomimetics.pdf)</u>
 
-
 1. Shiv Kumar, P. S. Bajwa, Kulbhushan. (Jan 2018). *Recent Trends in Problem Solving through TRIZ: A Review*. International Journal of Innovative Research in Science, Engineering and Technology. Vol. 7, Issue 1, January 2018. <u>[PDF](TRIZ-related/24_IJIRSET_TRIZ.pdf)</u>
 
 1. Denis Cavallucci. (November 6th 2009). *World Wide status of TRIZ perceptions and uses: a survey of results*. TRIZFuture 2009, Timisoara, Romania. <u>[PDF](TRIZ-related/Cavallucci-TRIZ_survey_V2.pdf)</u>
@@ -229,9 +243,14 @@ Procedia Engineering, December 2015. DOI: 10.1016/j.proeng.2015.12.400.
 
 1. Gunther Schuh, Christoph Haag. *How to prevent product piracy using a new TRIZ-based methodology*. TRIZ Future Conference 2008, published in Procedia Engineering(2011) 391–401. <u>[PDF](TRIZ-related/How_to_prevent_product_piracy_using_a_new_TRIZ-bas.pdf)</u>
 
+1. B. Cerit, G. Küçükyazıcı, and D. Şener.(2014) *TRIZ: Theory of Inventive Problem Solving and Comparison of TRIZ with the other Problem Solving Techniques*. BALKAN JOURNAL OF ELECTRICAL & COMPUTER ENGINEERING, 2014, Vol.2, No.2. <u>[PDF](TRIZ-related/Comparison of TRIZ with the other Problem Solving Techniques.pdf)</u>
+
+1. Prabhdeep Singh Bajwa, Dalgobind Mahto. (2013) *CONCEPTS, TOOLS AND TECHNIQUES OF PROBLEM SOLVING THROUGH TRIZ: A REVIEW*.
+<u>[PDF](TRIZ-related/65_CONCEPTS.pdf)</u>
+
 ## Teaching TRIZ
 
-1. Project TETRIS – TEaching TRIz at School. <u><https://innovazionesistematica.it/en/project/tetris/></u>
+1. Project TETRIS – *TE*aching *TRI*z at *S*chool. <u><https://innovazionesistematica.it/en/project/tetris/></u>
 
 1. Sergey Malkin, Donald Coates,Galina Malkin. *An Improved Method for Teaching the Theory of Inventive Problem Solving to Students*. <u>[PDF](TRIZ-related/Malkin-Coates-an-improved-method-for-teaching-the-theory-of-inventive-problem-solving-to-students.pdf)</u>
 
@@ -271,9 +290,21 @@ Procedia Engineering, December 2015. DOI: 10.1016/j.proeng.2015.12.400.
 
 1. CENTER OF OTSM-TRIZ TECHNOLOGIES: Jonathan Livingston Project. <u><http://www.trizminsk.org/eng/index.htm></u>
 
+### Other Websites
+
+1. Intellectual Property India: Searchable Patent Databases.<u><https://iprsearch.ipindia.gov.in/publicsearch></u>
 
 
+### Masters' and PhD Theses on TRIZ. 
+These are good especially for the overview of many problem-solving techniques in the intro chapters. 
 
+
+1. Roni Horowitz.(May 1999). Phd Thesis, Tel Aviv University.[*Creative Problem Solving in Engineering*.](https://asit.info/Creative%20Problem%20Solving%20in%20Engineering%20Design,%20thesis%20by%20Roni%20Horowitz.pdf). 
+Very readable. Introduction Chapters are especially very good. He derives his technique of **ASIT** from TRIZ in this PhD Thesis. Some terrific TRIZ examples in here, which are analyzed as part of my <u>[TRIZ Database.](/slides/PlayAndInvent/TRIZ-Database/index.html)</u>
+
+
+1. Chhabin Pokhrel. *ADAPTATION OF TRIZ METHOD FOR PROBLEM
+SOLVING IN PROCESS ENGINEERING*. LAPPEENRANTA UNIVERSITY OF TECHNOLOGY, Faculty of Technology. <u>[PDF](TRIZ-related/Adaptation of TRIZ Method for Problem Solving in Process Engineering by Pokhrel Chhabin.pdf)</u>
 
 
 
