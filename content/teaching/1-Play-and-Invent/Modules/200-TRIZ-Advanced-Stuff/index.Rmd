@@ -58,6 +58,7 @@ Hence he also documented **76 Scientific Solutions**, or *effects* that are rela
 This game idea the result of a chance conversation in class with student Ira Patil, FSP 2022. 
 
 Things you need:
+
 - Makey-Makey ( one per group )
 - Laptop
 - An App or a Game on the laptop (*Inner Game*)
