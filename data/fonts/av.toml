@@ -2,10 +2,11 @@
 name = "sharing-short-notice"
 
 # Optional Google font URL
-google_fonts = "Noto+Serif+JP|Sen|Roboto+Mono"
+google_fonts =  "Noto+Serif+JP|Sen|Roboto+Mono|Lora"
 
 # Font families
-heading_font = "Noto Serif JP"
+#heading_font = "Noto Serif JP"
+heading_font = "Lora"
 body_font = "Sen"
 nav_font = "Sen"
-mono_font = "Roboto Mono"
+mono_font = "Fira Code"

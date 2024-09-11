@@ -82,6 +82,8 @@ International Technology Education Association. <u>[PDF](TRIZ-related/NewToolsfo
 
 1. Arvind's TRIZ Case Study Database `r emoji::emoji("laugh")`! <u>[Online Presentation](/slides/PlayAndInvent/TRIZ-Database/index.html)</u>
 
+1. The TRIZ Journal. *Inventive Principle Examples* <u><https://the-trizjournal.com/40-inventive-principles-examples/></u>
+
 1. 40 Inventive Principles for Architecture. <u>[PDF](TRIZ-rela40-Inventive-Principles-for-Architecture.pdf)</u>
 
 1. 40 Inventive Principles for Business. <u>[PDF](TRIZ-related/40-Inventive-Principles-for-Business.pdf)</u>
@@ -208,6 +210,8 @@ Excellent searchable contradictions database with examples.
 
 
 ## TRIZ Case Studies
+
+1. Chao, J. and Peng, C. (2016) *High-Efficiency Solar Electricity of Umbrella by TRIZ Analysis*. Energy and Power Engineering, 8, 51-61. doi: <10.4236/epe.2016.82005>. <u>[PDF](TRIZ-related/Chao-etal-Solar-Electricity-Umbrella-Design.pdf.pdf)</u>
 
 1. TRIZ Contradictions in Science Fiction. <u>[PDF](TRIZ-related/Contradictions in Science Fiction.pdf)</u>
 

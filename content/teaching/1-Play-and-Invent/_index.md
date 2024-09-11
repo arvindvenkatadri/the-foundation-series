@@ -55,6 +55,36 @@ Field visits to product, food preparation, solar energy, and logistics companies
 
 The students will finally use the methods and ideas they have learnt and apply them in creating a project, artifact or performance of their own.
 
+
+### Why all this "Structure" to a course on Creativity?
+
+Let us see some short extracts from Herbert Simon's landmark book, **Sciences of the Artificial**: (emphasis everywhere in the following is mine)
+
+> Chapter 5: *The Science of Design: Creating the Artificial* 
+> Historically and traditionally, it has been the task of the science disciplines to teach about **natural things**: how they are and how they work. It has been the task of engineering schools to teach about **artificial things**: how to make artifacts that have desired properties and how to design.
+
+> Engineers are not the only professional designers. Everyone designs
+who devises courses of action aimed at changing existing situations into preferred ones. The intellectual activity that produces material artifacts is no different fundamentally from the one that prescribes remedies for a sick patient or the one that devises a new sales plan for a company or a social welfare policy for a state. Design, so construed, is the core of all professional training; it is the principal mark that **distinguishes the professions from the sciences**. Schools of engineering, as well as schools of
+architecture, business, education, law, and medicine, are all centrally concerned with the process of design.
+
+> In view of the key role of design in professional activity, it is ironic that in this century the natural sciences almost drove the sciences of the artificial from professional school curricula, a development that peaked about two or three decades after the Second World War. Engineering schools gradually became schools of physics and mathematics; medical school became schools of biological science; business schools became schools of finite mathematics.
+
+> Such a universal phenomenon must have had a basic cause. It did have
+a very obvious one. As professional schools, including the independent
+engineering schools, were more and more absorbed into the general cul-
+ture of the university, they hankered after academic respectability.
+
+> ***In terms of the prevailing norms, academic respectability calls for subject matter that is intellectually tough, analytic, formalizable, and teachable***.
+
+> ***In the past much, if not most, of what we knew about design and about the artificial sciences was intellectually soft, intuitive, informal, and cookbooky***. 
+
+Yeah. That's why this course exists. To make Design tough, analytic, formalizable, and ~~teachable~~ learnable. 
+
+## References
+
+1. Herbert A. Simon. (1988). *The Science of Design: Creating the Artificial*. Design Issues, Vol. 4, No. 1/2, Designing the Immaterial Society (1988), pp. 67-82.Stable URL: http://www.jstor.org/stable/1511391
+
+
 <span hidden>
 ## Daywise Plan
 

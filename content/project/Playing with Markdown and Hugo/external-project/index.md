@@ -9,3 +9,8 @@ tags:
 - Demo
 title: External Project
 ---
+
+## References
+
+1. Font Loading Strategies. <https://css-tricks.com/the-best-font-loading-strategies-and-how-to-execute-them/#loading-fonts-with-self-hosted-fonts>
+

@@ -4,22 +4,23 @@
     <title>TRIZ - A (Growing) Database of Case Studies</title>
     <meta charset="utf-8" />
     <meta name="author" content="Arvind Venkatadri" />
-    <meta name="date" content="2024-06-23" />
+    <meta name="date" content="2024-08-26" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
     <script src="libs/tile-view/tile-view.js"></script>
     <link href="libs/panelset/panelset.css" rel="stylesheet" />
     <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/xaringanExtra_fit-screen/fit-screen.js"></script>
     <script src="libs/clipboard/clipboard.min.js"></script>
     <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
-    <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
-    <link href="libs/shareon/shareon.min.css" rel="stylesheet" />
-    <script src="libs/shareon/shareon.min.js"></script>
-    <link href="libs/xaringanExtra-shareagain/shareagain.css" rel="stylesheet" />
-    <script src="libs/xaringanExtra-shareagain/shareagain.js"></script>
+    <script>window.xaringanExtraClipboard(null, {"button":"Click to Copy!","success":"Copied!","error":"Press Ctrl + C to copy!"})</script>
+    <link href="libs/tachyons/tachyons.min.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-webcam/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
     <link href="libs/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-progressBar/progress-bar.js"></script>
     <link href="libs/font-awesome-animation/font-awesome-animation-emi.css" rel="stylesheet" />
     <script src="libs/fontawesome/js/fontawesome-all.min.js"></script>
     <link rel="stylesheet" href="css/lexis.css" type="text/css" />
@@ -31,15 +32,24 @@
 
 
 
+name: title-slide
+class: title-slide, center, middle, inverse
 
+# TRIZ - A (Growing) Database of Case Studies
+#.fancy[A Reference for Students]
 
+&lt;br&gt;
 
-class: center middle
+.large[by Arvind Venkatadri]
 
-# TRIZ - A Database of Case Studies
-## A Reference for Students
+Written: May 04 2020
 
-### Arvind Venkatadri
+Updated: August 26 2024
+
+.footer-large[.right[.fira[
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;[The Foundation Series](https://arvindvenkatadri.com/)
+]]]
+
 
 ---
 
@@ -65,27 +75,54 @@ class: center middle
 ]
 
 ---
-## TRIZ: A Workflow Review
+## TRIZ: A Ladder of Abstraction
+
+&lt;article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4"&gt;
+  &lt;h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"&gt;Su-Field Analysis&lt;/h1&gt;
+&lt;/article&gt;
+&lt;article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4"&gt;
+  &lt;h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"&gt;IFR&lt;/h1&gt;
+&lt;/article&gt;
+&lt;article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4"&gt;
+  &lt;h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"&gt;PC + 6 Separation Principles&lt;/h1&gt;
+&lt;/article&gt;
+&lt;article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4"&gt;
+  &lt;h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3"&gt;TC + 40 Inventive Principles&lt;/h1&gt;
+&lt;/article&gt;
+
+---
+
+
+## TRIZ: A Workflow Review : 1
 
 - Find a "Problem Situation", using say 5W + H. 
+
 - Use the Ishikawa Diagram to finds **Knobs** and their **Parameters**
-- Formulate a **ADMINISTRATIVE CONTRADICTION (AC)** (a trade-off or a compromise) in "plain English using the method of manipaulation of the **Knobs**
+
+- Formulate a **ADMINISTRATIVE CONTRADICTION (AC)** 
+  - a trade-off or a compromise) in "plain English using the method of manipulation of the **Knobs**
+
  - Specify an **IDEAL FINAL RESULT**
+ 
  - Convert/metaphorize the **AC** into a **TECHNICAL CONTRADICTION(TC)** using **48 TRIZ PARAMETER**s
 
 
 ---
-## TRIZ: A Workflow Review
+## TRIZ: A Workflow Review : 2
 
 - Look up the **CONTRADICTION MATRIX**.  
+
 - Discover the **INVENTIVE PRINCIPLES** you might apply
+
 - *Un-metaphorize* the **INVENTIVE PRINCIPLES** to apply them in a specific way in your problem and solve it. Use your **CC**, and available **Resources**!
+
 - If possible formulate a **PHYSICAL CONTRADICTION(PC)** from your AC. 
   - E.g Something has to be hot and cold at the same time
   - Use **SEPARATION PRINCIPLES** to solve the **PC**
   - Use of **SEPARATION PRINCIPLES** may not involve much *un-metaphorization*, but applying them may be easier!!
   - But getting to a PC may not be easy.
 
+- If not solved, use **SUBSTANCE FIELD ANALYSIS** models
 
 ---
 
@@ -93,12 +130,12 @@ class: inverse, center, middle
 .pull-left[
 # Let us start with a couple of TRIZ stories!
 ## Then we jump in with detailed Case Studies!
-.small[
-Alice laughed. “There’s no use trying,” she said: “one can’t believe impossible things.”
+
+.fancy[Alice laughed. “There’s no use trying,” she said: “one can’t believe impossible things.”
 
 “I daresay you haven’t had much practice,” said the Queen. “When I was your age, I always did it for half-an-hour a day. Why, sometimes I’ve believed as many as six impossible things before breakfast.”]
-
 ]
+
 
 .pull-right[
 ![](images/2book25.jpg)
@@ -132,12 +169,11 @@ The art of inventing is the ability to remove barriers to Ideality in order to q
 ## TRIZ Workflow: Story #2: Red Adair and Oil Well Fires
 
 .pull-left[An oil well in Saudi Arabia exploded and caught fire.
-The result was a blazing inferno that consumed an enormous quantity of oil each day. After initial efforts to extinguish it failed, famed firefighter Red Adair was called in. Red knew that the fire could be put out if a huge amount of fire retardant foam could be dumped on the base of the well. 
+The result was a blazing inferno. Famed firefighter Red Adair was called in. Red knew that the fire could be put out if a huge amount of fire retardant foam could be dumped on the base of the well. 
 
 There was enough foam available at the site to do the job. However, there was no hose large  enough to put all the foam on the fire fast enough. 
 
-The small hoses that were available could not shoot the foam quickly enough
-to do any good. It looked like there would have to be costly delay before a serious attempt could be made.
+The small hoses that were available could not shoot the foam quickly enough to do any good. 
 ]
 
 .pull-right[However, Red Adair knew just what to do. He stationed
@@ -159,34 +195,37 @@ Excessive Action**
 
 .pull-left[
 - **AC**: I want to chill, but Mom wants me to take her veggie shopping. I have to put up with waste of time and possibly boredom. 
+
 - **Knobs** (short list): 
   - Travel Time(L/S); Purchase Time(L/S); Noise(Loud/Soft); Bargaining Talk(Long/Short)
+  
 - **Output**: Stress / Boredom / Waste of Time / Mom is Happy / Veggies
 ]
 .pull-right[
 - **IFR**: *"I should go AND not go to the market at the same time"*
+
 - **TC**: From the 48 TRIZ parameters:
-  - **TC1**: Increase *Productivity(39)* and not worsen *Stress(11)*
-  - **TC2**: Improve *Loss of Time(25)* and not worsen *Effect of External Harmful Factors(30)*
+  - **TC1**: Increase .bg-light-blue[*Productivity(39)*] and not worsen .bg-light-blue[*Stress(11)*]
+  - **TC2**: Improve .bg-light-blue[*Loss of Time(25)*] and not worsen .bg-light-blue[*Effect of External Harmful Factors(30)*]
   ]
 
 ---
 ## TRIZ Workflow: Case Study #1: Spotify Ad
 
 .pull-left[
-Inventive Principles:
-- TC1: 10(Prior Action), 37(Thermal Expansion), 14(Spheroidality).
+
+- TC1: .bg-yellow.b[10(Prior Action)], .bg-yellow.b[37(Thermal Expansion)], .bg-yellow.b[14(Spheroidality)].
 - Hmm, not very inspiring, unless 37 means *get angry with Mom* !! Never!!
 
-- TC2: 35(Parameter Change), 18(Mechanical Vibration)!!, 34(Rejecting and Regenerating Parts). 
+- TC2: .bg-yellow.b[35(Parameter Change)], .bg-yellow.b[18(Mechanical Vibration)]!!, .bg-yellow.b[34(Rejecting and Regenerating Parts)]. 
 ]
 
 .pull-right[
-Solution:
-- 18(Mechanical Vibration) : Make noise of your own? 🔉 NA
-- 35(Parameter Change): Change *Bargaining Talk* to *Sweet Sound*: Play music!!🎵
-- Also 14(Spheroidality): Wear "spherical" headphones!!🎧! Create a "sound sphere"! Long shot!!
-- SO: with Spotify on, I was **in the market, and not in the market** !! IFR achieved !! Ta Da !!
+
+- .bg-yellow.b[18(Mechanical Vibration)]: Make noise of your own? 🔉 NA
+- .bg-yellow.b[35(Parameter Change)]: Change *Bargaining Talk* to *Sweet Sound*: Play music!!🎵
+- Also .bg-yellow.b[14(Spheroidality)]: Wear "spherical" headphones!!🎧! Create a "sound sphere"! Long shot!!]
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[SO: with Spotify on, I was **in the market, and not in the market** !! IFR achieved !! Ta Da !!
 ]
 
 ---
@@ -202,10 +241,17 @@ We may never know, but thanks to the Banff Wildlife Crossings Project, there’s
 ]
 .pull-right[
 When the 82-kilometre section of the Trans-Canada Highway that runs through the Rocky Mountains in Banff National Park was built in the early 1950s, it wasn’t expected to be the major artery it is today. 
+
 But as park visitation increased, traffic volume surged—and so did highway-related wildlife mortality.
 ]
 
 .footnote[https://discoverapega.ca/stories/wildlife-crossings-key-to-highway-safety-in-banff/]
+
+
+---
+## TRIZ Workflow: Case Study #2: Wildlife Crossings in Banff
+
+&lt;img src="figs/unnamed-chunk-1-1.png" width="960px" height="480px" style="display: block; margin: auto;" /&gt;
 
 
 ---
@@ -223,9 +269,9 @@ But as park visitation increased, traffic volume surged—and so did highway-rel
 .pull-right[
 
 - **TC**: From the 39 TRIZ parameters:
-  - **TC1**: Increase *Speed(9)* and not worsen *Duration of Action by Moving Object(15)*
-  - **TC2**: Improve *Volume of Moving Object(7)* and not worsen *Loss of Time(25)*
-  - **TC3**: Improve *Object affected by external harmful factors*(30) and not worsen *Duration of Action by Stationary Object*(16)[ see footnote]
+  - **TC1**: .bg-light-blue[Increase *Speed(9)*] and not worsen .bg-light-blue[*Duration of Action by Moving Object(15)*]
+  - **TC2**: Improve .bg-light-blue[*Volume of Moving Object(7)*] and not worsen .bg-light-blue[*Loss of Time(25)*]
+  - **TC3**: Improve .bg-light-blue[*Object affected by external harmful factors*(30)] and not worsen .bg-light-blue[*Duration of Action by Stationary Object*(16)][ see footnote]
   
 .footnote[Animals are stationary compared to the cars!!]
 
@@ -239,18 +285,37 @@ But as park visitation increased, traffic volume surged—and so did highway-rel
 ### TRIZ Workflow: Case Study #2: Wildlife Crossings in Banff
 
 .pull-left[
-Inventive Principles:
-- **TC1**: 3(Local Quality), 19(Periodic Action), 35(Parameter Change), 5(Merging).....Local Quality? Parameter Change? Ok, change the road in some way...can't change all cars and definitely can't "change" animals!!
-- **TC2**: 35(Parameter Change), 18(Mechanical Vibration)!!, 34(Rejecting and Regenerating Parts). 
-- **TC3**: ***17(Another Dimension)!!!***, 1(Segmentation), 40(Composite Materials), 33(Homogeneity)
 
-Solution:
-- (17)Another Dimension + (35)Parameter Change + 3(Local Quality) = Animal Bridge!!!
-- Also 33(Homogeneity) = Equal Opportunity for Animals and Vehicles
+- **TC1**: 
+  - .bg-yellow.b[3(Local Quality)], .bg-yellow.b[19(Periodic Action)], .bg-yellow.b[35(Parameter Change)], .bg-yellow.b[5(Merging)].....
+  
+  - Local Quality? Parameter Change? 
+  - Ok, change the road in some way...can't change all cars and definitely can't "change" animals!!
 ]
 
 .pull-right[
+- **TC2**: 
+  - .bg-yellow.b[35(Parameter Change)], .bg-yellow.b[18(Mechanical Vibration)]!!, .bg-yellow.b[34(Rejecting and Regenerating Parts)].
+  
+- **TC3**: 
+  - .bg-yellow.b[***17(Another Dimension)!!!***], .bg-yellow.b[1(Segmentation)], .bg-yellow.b[40(Composite Materials)], .bg-yellow.b[33(Homogeneity)]
+
+]
+
+.footnote[We are using the **original** TRIZ Matrix here, not the updated 2003 version!]
+---
+### TRIZ Workflow: Case Study #2: Wildlife Crossings in Banff
+
+.pull-left[
+Solution:
+- .bg-yellow.b[(17)Another Dimension + (35)Parameter Change + 3(Local Quality)] = Animal Bridge!!!
+
+- Also .bg-yellow.b[33(Homogeneity)] = Equal Opportunity for Animals and Vehicles
+
+]
+.pull-right[
 ![](images/banff.jpg)
+
 ]
 
 ---
@@ -261,7 +326,7 @@ Solution:
 &lt;/center&gt;
 
 
-NOTE: The IFR embodies a **PC** !! So **Separation Principles** suggest "separation in Space and there you are: you have a bridge!!
+NOTE: The IFR embodies a **PC** !! So **Separation Principles** suggest "separation in Space and there you are: you have a bridge/tunnel!!
 ---
 
 ### TRIZ Workflow: Case Study #3: Bike Lane
@@ -314,7 +379,9 @@ This contradiction is resolved by **Separating** the requirements **in space**: 
 .pull-left[
 - **AC**: 
   - Plastics are polluting the oceans
+  
   - They are impossible to retrieve from there; 
+  
   - 80% of all ocean plastics come from ~1600 rivers!
 ]
 
@@ -336,31 +403,44 @@ This contradiction is resolved by **Separating** the requirements **in space**: 
 ]
 .pull-right[
 - **TC**: 
-  - **TC1**: Increase *Volume of Stationary Object*(8) and not worsen *Object affected by external harmful factors*(30)
+  - **TC1**: Increase .bg-light-blue[*Volume of Stationary Object*(8)] and not worsen .bg-light-blue[*Object affected by external harmful factors*(30)]
   
 - **PC**: The Plastics must be in the water AND not in the water at the same time. 
-  - ( Do we need "two kinds of water", then??? )
 ]
+
+.bg-washed-green.b--dark-green.ba.bw2.br3.shadow-5.ph4.mt5[Do we need "two kinds of water", then?
+We do. 
+
+]
+
 
 ---
 ### TRIZ Workflow: Case Study #5: Plastics in the Water
-
+TC1: Increase .bg-light-blue[*Volume of Stationary Object*(8)] and not worsen .bg-light-blue[*Object affected by external harmful factors*(30)]
 .pull-left[
-Inventive Principles:
-- **TC1**: 34(Discarding and Recovering), 39(Inert Atmosphere), 19(Periodic Action), 27(Cheap Short Living Objects).....
-  - IP34: Discarding and Recovering? What can we discard in the water? Would we want to? Isn't that adding to pollution?? Not sure...
-  - IP39: Inert Atmosphere? In water? Ok..water must *not* flow in some places and be "inert". But how? Some blockage?
+
+  - .bg-yellow.b[IP34: Discarding and Recovering?] 
+    - What can we discard in the water? Would we want to? Isn't that adding to pollution?? Not sure...
+  
+  - .bg-yellow.b[IP39: Inert Atmosphere]? 
+    - In water? Ok..water must *not* flow in some places and be "inert". 
+    - But how? Some blockage?
 
 ]
 
 .pull-right[
-- IP19: Periodic Action? Doing something again? What? Agitate the water? How?
+
+
+- .bg-yellow.b[IP19: Periodic Action]? 
+  - Doing something again? What? Agitate the water? How?
   
-- IP27: Cheap Short Living Objects? In the water? Wait....BUBBLES !!!!
+- .bg-yellow.b[IP27: Cheap Short Living Objects]? 
+  - In the water? 
+  - Wait....BUBBLES !!!!
 
 ]
 
-
+.footnote[We are using the **original** TRIZ Matrix here, not the updated 2003 version!]
 ---
 
 ## TRIZ Workflow: Case Study  #5: The Great Bubble Barrier
@@ -374,7 +454,7 @@ Inventive Principles:
 .pull-left[
 - Drivers "need" to protest against their Employers
 
-- Strikes hurt commuters, who are **forced to empathize** (Ha! Design Thinking!!)
+- Strikes hurt commuters, who are **forced to empathize** (Ha! .bg-green[Design Thinking]!!)
 
 - When drivers return, they are apologetic...maybe. 
 
@@ -409,37 +489,40 @@ Inventive Principles:
 - **IFR**: We must convey our anger only to employers who are far away. 
 
 ]
+
 ---
 
 ## TRIZ Workflow: Case Study #6: Bus Strikes in Japan
 .pull-left[
-**TC**: Improve *Force(10)* ( i.e.of the Strike) and not worsen * Object generated Harmful Effects(31)* ( i.e. on themselves nor on commuters)
+**TC**: Improve .bg-light-blue.b[*Force(10)]* ( i.e.of the Strike) and not worsen .bg-light-blue.b[*Object generated Harmful Effects(31)*] ( i.e. on themselves nor on commuters)
 
 ![](images/bus-strike.png)
 ]
 
 .pull-right[
-- IP13(The Other Way Around)!!...what is one way and can be turned around? Bus Routes? No...Wait! The Bus Tickets transaction! But how?
-- IP3(Local Quality)...Something should be different *inside* the bus!!
-- IP36(Phase Transition)..hmm..everybody involved must "change dramatically"...who?
-- IP24 Intermediary...What can act between Strikers and the Managers?
+- .bg-yellow.b[IP13(The Other Way Around)]!!...what is one way and can be turned around? Bus Routes? No...Wait! The Bus Tickets transaction! But how?
+
+- .bg-yellow.b[IP3(Local Quality)]...Something should be different *inside* the bus!!
+- .bg-yellow.b[IP36(Phase Transition)]..hmm..everybody involved must "change dramatically"...who?
+
+- .bg-yellow.b[IP24(Intermediary)]...What can act between Strikers and the Managers?
 
 ]
+
+.footnote[We are using the **original** TRIZ Matrix here, not the updated 2003 version!]
 ---
 ## TRIZ Workflow: Case Study #6: Bus Strikes in Japan
 
 Solution:
 - Run buses properly on time, but FREE
 
-- All Conductors stop ISSUING TICKETS !!
+- .bg-washed-green.b--dark-green.ba.bw2[ All Conductors stop ISSUING TICKETS !! ]
 
-- The Ticket Transaction is *reversed* in direction (effectively)
+- The Ticket Transaction is .bg-pink[*reversed*] in direction (effectively)
 
-- Everyone in the bus is *suddenly different*: Happy, excited... (phase transition)
+- Everyone in the bus is .bg-pink[*suddenly different*]: Happy, excited... (phase transition)
 
-- Fuel Cost and Loss of Revenue as *intermediary between striking staff and the company*!
-
-.footnote[http://www.darrellmann.com/mini-case-study-strike/]
+- Fuel Cost and Loss of Revenue as .bg-pink[*intermediary between striking staff and the company*]!
 
 ---
 
@@ -454,7 +537,9 @@ Solution:
 .pull-right[
 ## TRIZ Workflow: Case Study #7: Lawrence of Arabia
 - Lawrence of Arabia was a famous historical figure
+
 - He is said to have united the warring Arab tribes and made them fight against the Turkish forces
+
 - One key event in that war was the taking of the post of Aqaba, which is in modern-day Jordan
 
 ]
@@ -468,14 +553,15 @@ Solution:
 ## TRIZ Workflow: Case Study #7: Lawrence of Arabia
 
 &lt;center&gt;
-&lt;iframe width="950" height="500" src="https://www.youtube.com/embed/wyoEwfaXHkI" title="5. Lawrence meets Prince Faisal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;iframe width="960" height="480" src="https://www.youtube.com/embed/wyoEwfaXHkI" title="5. Lawrence meets Prince Faisal" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen&gt;&lt;/iframe&gt; &lt;figcaption&gt;Lawrence meets Feisal at Wadi Safra&lt;/figcaption&gt;
 &lt;/center&gt;
 
 ---
 
 ## TRIZ Workflow: Case Study #7: Lawrence of Arabia
 
-&lt;center&gt;&lt;iframe width="950" height="500" src="https://www.youtube.com/embed/5ZQSpMiaaxk" title="Lawrence Convinces Ali" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;
+&lt;center&gt;&lt;iframe width="960" height="480" src="https://www.youtube.com/embed/5ZQSpMiaaxk" title="Lawrence Convinces Ali" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;figcaption&gt;Lawrence Convinces Ali !&lt;/figcaption&gt;
+&lt;/center&gt;
 
 ---
 
@@ -489,40 +575,117 @@ Solution:
 ]
 .pull-right[
 - **TC**: 
-  - **TC1**: Increase *Stability of Objects Composition*(13) and not worsen *Duration of Action of a Moving Object*(15) 
+  - **TC1**: Increase .bg-light-blue[*Stability of Objects Composition*(13)] and not worsen .bg-light-blue[*Duration of Action of a Moving Object*(15)]
   
-- **PC**: The Ships must be near Aqaba and near the guns but not be near enough to shoot. (*They must be near and not near the guns at the same time*)
+- **~ PC**: The Ships must be near Aqaba and near the guns but not be near enough to shoot. 
+]
+
+.bg-washed-green.b--dark-green.ba.bw2.tc.fw6[ PC : *They must be near and not near the guns at the same time*. 
 ]
 
 ---
 
 ### TRIZ Workflow: Case Study #7: Lawrence of Arabia
+**TC1**: Increase .bg-light-blue[*Stability of Objects Composition*(13)] and not worsen .bg-light-blue[*Duration of Action of a Moving Object*(15)]
 
 .pull-left[
-Inventive Principles:
-- **TC1**: 13(The Other Way Around !!), 27(Cheap Short Living Objects), 10 (Prior Action), 35(Parameter Change)
 
-- IP10: Prior Action? How? Lawrence and Ali are far from Aqaba and cannot do anything "in advance"...Hmm...Lawrence and Ali must **recruit the Howeitat "in advance" of their attack **!!
+  - .b[IP13 (The Other Way Around !!)]
+  
+  - .b[IP27 (Cheap Short Living Objects)] 
+  
+  - .bg-yellow.b[IP10 (Prior Action)], 
+  
+  - .b[IP35 (Parameter Change)]
+]
+
+.pull-right[
+- .bg-yellow.b[IP10: Prior Action]? 
+
+  - How? 
+  - Lawrence and Ali are far from Aqaba and cannot do anything "in advance"...
+
+  - Hmm...Lawrence and Ali must **recruit the Howeitat "in advance" of their attack **!!
+]
+
+---
+### TRIZ Workflow: Case Study #7: Lawrence of Arabia 
+
+**TC1**: Increase .bg-light-blue[*Stability of Objects Composition*(13)] and not worsen .bg-light-blue[*Duration of Action of a Moving Object*(15)]
+
+.pull-left[
+
+  - .b[IP13 (The Other Way Around !!)]
+  
+  - .bg-yellow.b[IP27 (Cheap Short Living Objects)], 
+  
+  - .b[IP10 (Prior Action)], 
+  
+  - .b[IP35 (Parameter Change)]
+
 ]
 .pull-right[
-- IP27: Cheap Short Living Objects? What objects? Not men, not guns? Wait....**CAMELS**!!
-- IP35: Parameter Change? What parameter can Lawrence change? Timing, Date, Material? Wait..."Convert" sea-water into sand. 
-  - **ATTACK FROM THE DESERT**!! (NOTE: The Camel is the *ship of the desert* ! What a metaphor!!👏👏👏
-- IP13: The Other Way Around? How? Not attack by sea? Wait... **DIRECTION**!! Attack from the other side!!
+- .bg-yellow.b[IP27: Cheap Short Living Objects]? 
+
+  - What objects? 
+  
+  - Not men, not guns? 
+  
+  - Wait....**CAMELS** and **HORSES**!!
 ]
+
+.bg-washed-green.b--dark-green.ba.bw2.tc.fw6[
+
+ NOTE: The Camel is the .bg-light-blue[*ship of the desert*] ! What a metaphor!!🐫 = 🚢 !
+👏👏👏 
+]
+
+
+---
+### TRIZ Workflow: Case Study #7: Lawrence of Arabia 
+
+**TC1**: Increase .bg-light-blue[*Stability of Objects Composition*(13)] and not worsen .bg-light-blue[*Duration of Action of a Moving Object*(15)]
+
+.pull-left[
+
+  - .bg-yellow.b[IP13 (The Other Way Around !!)]
+  
+  - .b[27 (Cheap Short Living Objects)], 
+  
+  - .b[10 (Prior Action)], 
+  
+  - .bg-yellow.b[35 (Parameter Change)]
+  
+.bg-washed-green.b--dark-green.ba.bw2.tc.fw6[
+ NOTE: "The Desert is an Ocean in which no oar is dipped."
+]
+
+]
+
+.pull-right[
+- .bg-yellow.b[35 (Parameter Change)]? 
+  - What parameter can Lawrence change? 
+  - Timing, Date, Material? 
+  - Wait....bg-light-pink["Convert" sea-water into sand!]
+  - **ATTACK FROM THE DESERT**!! 
+  
+- .bg-yellow.b[IP13 (The Other Way Around !!)]
+  - How? Not attack by sea? Wait... **DIRECTION**!! Attack from the other side!!The land!
+]
+
+
 ---
 
 ### TRIZ Workflow: Case Study #7: Lawrence of Arabia
+**TC1**: Increase .bg-light-blue[*Stability of Objects Composition*(13)] and not worsen .bg-light-blue[*Duration of Action of a Moving Object*(15)]
 
-Solution:
-- IP10 (Prior Action): Get hold of the Howeitat tribe to unite with them and fight
+- .bg-yellow.b[IP10 (Prior Action)]: Get hold of the Howeitat tribe to unite with them and fight
 
-- IP27 (Cheap Short Living Objects: Attack with Camels! 
-This was really inspired from Lawrence's reading and knowledge of the Koran, and his statement to Feisal in the tent scene is very telling!
-- IP35(Parameter Change) and IP13 (The Other Way Around): Change *the direction of the attack!* Attack by land!! ↩️ So the "ships are near the guns, but because the guns point seaward, the "ships" cannot be sunk!
+- .bg-yellow.b[IP27 (Cheap Short Living Objects]: Attack with Camels and Horses! This was really inspired from Lawrence's reading and knowledge of the Koran, and his statement to Feisal in the tent scene is very telling!
+- .bg-yellow.b[IP35(Parameter Change)] and .bg-yellow.b[IP13(The Other Way Around)]: Change *the direction of the attack!* Attack by land!! ↩️ So the "ships" are .bg-light-green[near the guns], but because the guns point seaward, the "ships" are .bg-light-green[also out range]!
 
-- SO: With the landward attack on camels, with the Howeitat in company, Lawrence and Ali were able to brush aside the flimsy defences at Aqaba and take it!
-AND...Camels are the **Ship of the Desert!** 🐫 🚢, so that the attack **was** with **ships**!!
+.bg-washed-green.b--dark-green.ba.bw2.tc.fw6[SO: With the landward attack on camels and horses, with the Howeitat and Auda in company, Lawrence and Ali were able to brush aside the flimsy defences at Aqaba and take it !
+AND...Camels are the **Ship of the Desert!** 🐫 🚢, so that the attack **was** with **ships**!!]
 
 
 
@@ -531,8 +694,128 @@ AND...Camels are the **Ship of the Desert!** 🐫 🚢, so that the attack **was
 
 ### TRIZ Workflow: Case Study #7: Lawrence of Arabia - Solution in Action!
 
-&lt;center&gt;&lt;iframe width="950" height="500" src="https://www.youtube.com/embed/lChJz2DSpsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;/center&gt;
+&lt;center&gt;&lt;iframe width="950" height="500" src="https://www.youtube.com/embed/lChJz2DSpsE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;&lt;figcaption&gt;The Taking of Aqaba&lt;/figurecaption&gt;
+&lt;/center&gt;
 
+
+---
+
+### TRIZ Workflow: Case Study #8: The Antenna in Snow
+
+.pull-left[
+- Example from [Roni Horowitz's PhD Thesis](https://asit.info/Creative%20Problem%20Solving%20in%20Engineering%20Design,%20thesis%20by%20Roni%20Horowitz.pdf)
+
+- Field Deployable Antennas get covered with ice
+
+- Cause mast to collapse
+
+- Personnel visits are rare
+]
+
+.pull-right[
+![Created with Poe AI](images/An_antenna_covered_with_ice.png)
+
+]
+---
+### TRIZ Workflow: Case Study #8: The Antenna in Snow
+.pull-left[
+- **AC**: Ice accumulates on the metallic antenna and increases its weight, causing the light pole on which it is mounted to collapse. Since no one is around at the field site, this damage is discovered much later when someone arrives to take the antenna away. 
+
+- **Knobs**: Mast? Antenna? Support? Ice? Wind?
+
+- **IFR**: The Mast needs to be strong/heavy to support the antenna + ice, and be light to be carried away. 
+]
+.pull-right[
+- **TC**: 
+  - **TC1**: Increase .bg-light-blue[*Stability*(21)] and not worsen .bg-light-blue[*Weight of a Stationary Object*(2)]
+  - **TC2**: Improve .bg-light-blue[*Harmful Effects Acting on the System*(40)]  and not worsen .bg-light-blue[*Stability*(21)]
+  
+- **PC**: The Mast must be heavy/strong to withstand the ice load, and light to carry.
+]
+
+
+---
+
+### TRIZ Workflow: Case Study #8: The Antenna in Snow
+.pull-left[
+
+- **TC1**: 
+  - .b[IP40 (Composite Materials)]
+  
+  - .b[IP35 (Parameter Change)] 
+  
+  - .b[IP31 (Porous Materials)], 
+  
+  - .b[IP17 (Another Dimension)]
+]
+.pull-right[
+
+- **TC2**: 
+ - .b[IP40 (Composite Materials)]
+  
+  - .b[IP35 (Parameter Change)] 
+  
+  - .b[IP24 (Intermediary)], 
+  
+  - .b[IP4 (Asymmetry)]
+]
+
+.footnote[We are using the ~~**original** TRIZ Matrix here, not the~~ .bg-washed-red.b[updated 2003 version!]]
+---
+### TRIZ Workflow: Case Study #8: The Antenna in Snow
+
+.pull-left[
+
+  -.bg-yellow.b[IP40 (Composite Materials)]
+  
+  -.bg-yellow.b[IP31 (Porous Materials)]
+
+![](images/antenna-mast-honeycomb.jpeg)
+]
+
+.pull-right[
+- Could the mast be made up of composite materials that are stronger and lighter?
+
+- Porous Material? Maybe using a honeycomb structure, we could make the mast both strong and light at the same time
+
+- Still: these are big changes in the design!!
+
+- They contravene the .bg-light-red[CLOSED WORLD] idea proposed by Roni Horowitz
+]
+---
+
+### TRIZ Workflow: Case Study #8: The Antenna in Snow
+
+.pull-left[
+
+  -.bg-yellow.b[IP24 (Intermediary)]
+  
+  -.bg-light-blue.b[IP4 (Asymmetry)]
+  
+  -.bg-light-green.b[IP17 (Another Dimension)]
+  
+  -.bg-light-blue.b[IP35 (Parameter Change)] 
+
+![](images/metal pipe with thick ice coating.png)
+]
+.pull-right[
+.small[
+- What *Intermediary* could we use? And where? We have only wind and ice...
+
+- Can ICE be our intermediary? But it is what is coating our antenna!! .bg-washed-red[That's our problem thing!!]
+
+- Oh...the MAST ALSO could get coated with ICE
+
+- ICE makes the Mast stronger and supports it just when we need!!!
+
+- We can .bg-light-blue[make the mast *rough*, or with surface bumps] to ensure it takes on more ICE
+- The "bumps" need to be not along the length or breadth but outward along the .bg-light-green[width] of the pipe!
+
+
+- Also 22(Blessing in Disguise)]
+
+.bg-washed-red.footnote.small[Karl Dunkert's Functional Fixedness Bias!]
+]
 
 ---
 
