@@ -11,7 +11,8 @@ image:
   caption: Photo by <a href="https://unsplash.com/@brett_jordan?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Brett Jordan</a> on <a href="https://unsplash.com/s/photos/contradiction?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   focal_point: Smart
 slides: ""
-summary: 
+summary: "Why is a Raven like a Writing Desk?"
+abstract: "Why is a Raven like a Writing Desk?"
 links:
 - icon: flask
   icon_pack: fas

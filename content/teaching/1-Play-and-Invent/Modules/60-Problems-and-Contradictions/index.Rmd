@@ -3,7 +3,6 @@ title: "TRIZ - Problems and Contradictions"
 date: "2021-01-14"
 lastmod: " `r Sys.Date()`"
 linkTitle: "TRIZ - Problems and Contradictions"
-output: word_document
 weight: 60
 type: book
 view: 2
