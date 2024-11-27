@@ -15,7 +15,7 @@ summary:
 tags:
 - Voronoi Diagram
 - Delaunay Triangulation
-- Silhouette Diagra s
+- Silhouette Diagrams
 - Geogebra
 - Herds and Predators
 - Proximity
@@ -32,30 +32,48 @@ editor_options:
 
 <div id="a-model-for-proximity-the-voronoi-and-the-delaunay-diagrams" class="section level2">
 <h2>A Model for Proximity: The Voronoi and the Delaunay Diagrams</h2>
-<p>So how do we model “proximity”? Let us take a quick look at this description of <u><a href="/pdf/Proximity/FollowingtheHerd.pdf"><strong>Predator-Prey Dynamics.</strong></a></u></p>
+<p>So how do we model “proximity”? Let us take a quick look at this
+description of <u><a href="/pdf/Proximity/FollowingtheHerd.pdf"><strong>Predator-Prey
+Dynamics.</strong></a></u></p>
 <div id="plotting-the-delaunay-and-voronoi-diagrams" class="section level3">
 <h3>Plotting the Delaunay and Voronoi Diagrams</h3>
+<p>So here is an example of a computationally plotted Delaunay
+Triangulation and Voronoi Diagram:</p>
+<p><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-1.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-2.png" width="672" /><img src="{{< blogdown/postref >}}index_files/figure-html/unnamed-chunk-1-3.png" width="672" /></p>
 <p>How do we plot these diagrams?</p>
-<p>We will use this tool: <u><a href="https://www.geogebra.org/classic"><strong>Geogebra</strong></a></u></p>
-<p>Download and install this on your laptops. You can also use it in your browser <u><a href="https://www.geogebra.org/classic?lang=en" class="uri">https://www.geogebra.org/classic?lang=en</a></u> and download the Geogebra (<em>.ggb</em>) files that you create.</p>
+<p>We will use this tool:
+<u><a href="https://www.geogebra.org/classic"><strong>Geogebra</strong></a></u></p>
+<p>Download and install this on your laptops. You can also use it in your
+browser <u><a href="https://www.geogebra.org/classic?lang=en" class="uri">https://www.geogebra.org/classic?lang=en</a></u> and download
+the Geogebra (<em>.ggb</em>) files that you create.</p>
 <ol style="list-style-type: decimal">
-<li>Exercise 1: Let us first see <u><a href="/pdf/Proximity/SohoMap.ggb"><strong>Soho with the Voronoi Diagram</strong></a></u></li>
+<li>Exercise 1: Let us first see <u><a href="/pdf/Proximity/SohoMap.ggb"><strong>Soho with the Voronoi
+Diagram</strong></a></u></li>
 </ol>
 <p>Now let us make such a diagram step by step:</p>
 <ol style="list-style-type: decimal">
-<li><p>Exercise 2: Let us try with just three points and see what we need to do to plot the Voronoi Diagram.</p></li>
-<li><p>Exercise 3: With 4 points: <u><a href="/pdf/Proximity/four%20points.ggb">Four Pointer Voronoi</a></u></p></li>
-<li><p>Exercise 4: Let us now add more points. How do we make a multi-point Voronoi? We need to make a <u><a href="/pdf/Proximity/VoronoiLargeNoOfPointsInGeogebra.pdf"><strong>“list of points” in Geogebra</strong></a></u></p></li>
+<li><p>Exercise 2: Let us try with just three points and see what we need
+to do to plot the Voronoi Diagram.</p></li>
+<li><p>Exercise 3: With 4 points: <u><a href="/pdf/Proximity/four%20points.ggb">Four Pointer
+Voronoi</a></u></p></li>
+<li><p>Exercise 4: Let us now add more points. How do we make a multi-point
+Voronoi? We need to make a <u><a href="/pdf/Proximity/VoronoiLargeNoOfPointsInGeogebra.pdf"><strong>“list of points” in
+Geogebra</strong></a></u></p></li>
 </ol>
-<div id="discussion" class="section level4">
-<h4>Discussion</h4>
-<ul>
-<li>Did you see how the Delaunay Triangulation seems to “dislike” obtuse-angles, and changes the triangulation pattern when a certain (sum of) angles become more than 180?</li>
-<li>Wasn’t that a very Kandinsky-like thing to do, even for an algorithm?</li>
-<li>The Delaunay Triangulation gives us a set of traingular elements that cover our desired surface</li>
-<li>The Voronoi Diagram uses the Delaunay to give us <em>possibly infinite</em> proximal neighbourhoods.</li>
-</ul>
 </div>
+<div id="discussion" class="section level3">
+<h3>Discussion</h3>
+<ul>
+<li>Did you see how the Delaunay Triangulation seems to “dislike”
+obtuse-angles, and changes the triangulation pattern when a certain
+(sum of) angles become more than 180?</li>
+<li>Wasn’t that a very Kandinsky-like thing to do, even for an
+algorithm?</li>
+<li>The Delaunay Triangulation gives us a set of triangular elements
+that cover our desired surface</li>
+<li>The Voronoi Diagram uses the Delaunay to give us <em>possibly infinite</em>
+proximal neighbourhoods.</li>
+</ul>
 </div>
 </div>
 <div id="fun-stuff-with-geogebra-and-voronoi" class="section level2">
@@ -65,19 +83,25 @@ editor_options:
 </ol>
 <ul>
 <li>Create a set of points in Geogebra.</li>
-<li>Colour/Shape one of the outermost points as a predator which circles the herd.</li>
-<li>Use the Voronoi diagram to model the <em>Zone of Danger</em> for each of the animals in the inner herd.</li>
+<li>Colour/Shape one of the outermost points as a predator which circles
+the herd.</li>
+<li>Use the Voronoi diagram to model the <em>Zone of Danger</em> for each of
+the animals in the inner herd.</li>
 <li>Try <strong>Animation</strong> in Geogebra !!</li>
 </ul>
 <ol start="2" style="list-style-type: decimal">
 <li>Service Areas with Voronoi</li>
 </ol>
 <ul>
-<li>Import a 5km * 5km square of area in your home town, from Google Maps, into Geogebra.</li>
-<li>Locate points of interest, all in one category ( ATMs, Post Offices, Hospitals, Police Stations…)</li>
-<li>Plot the Voronoi Diagram to show the area served by each such institution.</li>
+<li>Import a 5km * 5km square of area in your home town, from Google
+Maps, into Geogebra.</li>
+<li>Locate points of interest, all in one category ( ATMs, Post Offices,
+Hospitals, Police Stations…)</li>
+<li>Plot the Voronoi Diagram to show the area served by each such
+institution.</li>
 <li>Calculate the area in Geogebra.</li>
-<li>Assume a flat population/sqkm and use that to calculate the number of people served by each.</li>
+<li>Assume a flat population/sqkm and use that to calculate the number
+of people served by each.</li>
 </ul>
 <p><strong>All</strong> of this can be done without leaving Geogebra !!</p>
 <ol start="3" style="list-style-type: decimal">
@@ -86,46 +110,55 @@ editor_options:
 <p>A. My name is Arnold Schwarzenegger</p>
 <ul>
 <li>Take a picture of yourself and import it into Geogebra</li>
-<li>Plot Points on the Portrait such that the main facial features are defined.</li>
-<li>Use a Delaunay Triagulation of these points to create a Portrait.</li>
+<li>Plot Points on the Portrait such that the main facial features are
+defined.</li>
+<li>Use a Delaunay Triangulation of these points to create a Portrait.</li>
 </ul>
 <p><img src="AVinMath.jpeg" /></p>
 <p>B. My Face is My Fortune</p>
 <ul>
 <li>Do the same for a famous person, past or present.</li>
-<li>Run a small survey in the class to see how many people can recognize celebrity!</li>
+<li>Run a small survey in the class to see how many people can recognize
+celebrity!</li>
 </ul>
 </div>
 <div id="other-distances" class="section level2">
 <h2>Other Distances?</h2>
 <div id="hamming-distances" class="section level3">
 <h3>Hamming Distances</h3>
-<p>We have used the simplest and most common of geometric distances between entities, the <strong>Euclidean Distance </strong> to model proximity. Are there other <em>measures of distance</em>?</p>
+<p>We have used the simplest and most common of geometric distances between
+entities, the <strong>Euclidean Distance</strong> to model proximity. Are there other
+<em>measures of distance</em>?</p>
 <ul>
-<li>How would you measure distance between <em>digital words</em>? For example <span class="math inline">\(10010011\)</span> and <span class="math inline">\(11011011\)</span>?</li>
+<li>How would you measure distance between <em>digital words</em>? For example
+<span class="math inline">\(10010011\)</span> and <span class="math inline">\(11011011\)</span>?</li>
 </ul>
 <blockquote>
-<p>The <strong>Hamming distance</strong> between two equal-length strings of symbols is the number of positions at which the corresponding symbols are different. The symbols may be letters, bits, or decimal digits, among other possibilities. For example, the Hamming distance between:
-“karolin” and “kathrin” is 3.
-“karolin” and “kerstin” is 3.
-“kathrin” and “kerstin” is 4.
-0000 and 1111 is 4.
-2173896 and 2233796 is 3.</p>
+<p>The <strong>Hamming distance</strong> between two equal-length strings of symbols
+is the number of positions at which the corresponding symbols are
+different. The symbols may be letters, bits, or decimal digits, among
+other possibilities. For example, the Hamming distance between:
+“karolin” and “kathrin” is 3. “karolin” and “kerstin” is 3. “kathrin”
+and “kerstin” is 4. 0000 and 1111 is 4. 2173896 and 2233796 is 3.</p>
 </blockquote>
-<p>The Hamming Distance can be calculated using a logical operation known as <u><a href="https://www.khanacademy.org/computing/computer-science/cryptography/ciphers/a/xor-bitwise-operation">“Exclusive-OR” or “XOR”</a></u>.</p>
+<p>The Hamming Distance can be calculated using a logical operation known
+as <u><a href="https://www.khanacademy.org/computing/computer-science/cryptography/ciphers/a/xor-bitwise-operation">“Exclusive-OR” or
+“XOR”</a></u>.</p>
 </div>
 <div id="great-circle-distances" class="section level3">
 <h3>Great Circle Distances</h3>
-<p>How would you measure distance over a <em>curved surface</em> such as the earth?</p>
-<p>View the path here: <u><a href="https://www.greatcirclemap.com/" class="uri">https://www.greatcirclemap.com/</a></u>
-Calculate distances here: <u><a href="https://www.gpsvisualizer.com/calculators" class="uri">https://www.gpsvisualizer.com/calculators</a></u></p>
+<p>How would you measure distance over a <em>curved surface</em> such as the
+earth?</p>
+<p>View the path here: <u><a href="https://www.greatcirclemap.com/" class="uri">https://www.greatcirclemap.com/</a></u> Calculate
+distances here: <u><a href="https://www.gpsvisualizer.com/calculators" class="uri">https://www.gpsvisualizer.com/calculators</a></u></p>
 </div>
 <div id="taxicab-distances" class="section level3">
 <h3>Taxicab Distances</h3>
 <p>And if a <em>man hatta</em> live in New York?</p>
 <p><img src="taxicab-manhattan-grid-layout-paths.gif" /></p>
 <p><img src="taxicab-manhattan-grid-taxicab-distance.png" /></p>
-<p>We will use the Euclidean and maybe other concepts of distance when we get into our Machine Learning models!</p>
+<p>We will use the Euclidean and maybe other concepts of distance when we
+get into our Machine Learning models!</p>
 </div>
 <div id="plotting-sihouette-diagrams" class="section level3">
 <h3>Plotting Sihouette Diagrams</h3>
@@ -141,64 +174,108 @@ Calculate distances here: <u><a href="https://www.gpsvisualizer.com/calculators"
 </div>
 <div id="a-brief-foray-into-cryptography" class="section level3">
 <h3>A Brief Foray into Cryptography</h3>
-<p>In the Sherlock Holmes story,<u><a href="https://www.gutenberg.org/files/108/108-h/108-h.htm#chap03"><strong>The Adventure of the Dancing Men</strong></a></u>, a criminal known the one of the characters communicates with her using a childish/child-like drawing which looks like this:</p>
-<p><img src="images/img01.jpg" />
-In this message, each character is a visual representation, or a substution for, a letter from the alphabet. The characters with flags are the first letter of a new word. The message is translated in the story as “Am here, Abe Slaney”.</p>
+<p>In the Sherlock Holmes story,<u><a href="https://www.gutenberg.org/files/108/108-h/108-h.htm#chap03"><strong>The Adventure of the Dancing
+Men</strong></a></u>,
+a criminal known the one of the characters communicates with her using a
+childish/child-like drawing which looks like this:</p>
+<p><img src="images/img01.jpg" /> In this message, each character is a visual
+representation, or a substution for, a letter from the alphabet. The
+characters with flags are the first letter of a new word. The message is
+translated in the story as “Am here, Abe Slaney”.</p>
 <p>The entire <strong>code alphabet</strong> is shown in the figure below:
 <img src="images/dancing-men-cipher-overview.png" /></p>
-<p>This code is a good example of a <u><a href="https://www.geeksforgeeks.org/substitution-cipher/"><strong>Substitution Cipher</strong></a></u> with non-text substition. See <u><a href="https://www.boxentriq.com/code-breaking/dancing-men-cipher" class="uri">https://www.boxentriq.com/code-breaking/dancing-men-cipher</a></u> and <u><a href="https://www.dcode.fr/dancing-men-cipher" class="uri">https://www.dcode.fr/dancing-men-cipher</a></u> for examples where you can encode and decode your own text, and send them to friends. 😎 😼</p>
-<p>The intent behind any substitution cipher is to be create <strong>distance</strong> from the original message, or characters. The algorithms to encode and decode uses this idea of <strong>distance</strong> to perform their operations and are entirely reversible.</p>
+<p>This code is a good example of a <u><a href="https://www.geeksforgeeks.org/substitution-cipher/"><strong>Substitution
+Cipher</strong></a></u> with
+non-text substition. See
+<u><a href="https://www.boxentriq.com/code-breaking/dancing-men-cipher" class="uri">https://www.boxentriq.com/code-breaking/dancing-men-cipher</a></u> and
+<u><a href="https://www.dcode.fr/dancing-men-cipher" class="uri">https://www.dcode.fr/dancing-men-cipher</a></u> for examples where you
+can encode and decode your own text, and send them to friends.
+😎 😼</p>
+<p>The intent behind any substitution cipher is to be create <strong>distance</strong>
+from the original message, or characters. The algorithms to encode and
+decode uses this idea of <strong>distance</strong> to perform their operations and
+are entirely reversible.</p>
 </div>
 </div>
 <div id="painting-with-proximitydistance" class="section level2">
 <h2>Painting with Proximity/Distance</h2>
-<p>Well, all right, all right, tech is fine. Can we use the idea of Proximity to create <strong>art</strong>? Well, we are not Kandinsky, but we can try. Here goes:</p>
+<p>Well, all right, all right, tech is fine. Can we use the idea of
+Proximity to create <strong>art</strong>? Well, we are not Kandinsky, but we can try.
+Here goes:</p>
 <ul>
 <li>Fire up the Strava app, or equivalent, on your phones.</li>
 <li>Walk out into the college campus, preferably under open sky.</li>
-<li>With the app on, try to create a figure <u><a href="https://gpsart.info/en/gpsart-en/nowhow1-en/">like this</a></u></li>
+<li>With the app on, try to create a figure <u><a href="https://gpsart.info/en/gpsart-en/nowhow1-en/">like
+this</a></u></li>
 <li>Share the image with your friend!</li>
 </ul>
 </div>
 <div id="wait-but-why" class="section level2">
 <h2><u><a href="https://waitbutwhy.com">Wait, But Why?</a></u></h2>
-<p>Here are some domains and purposes within them, that use the idea of Proximity, and use Voronoi/Delaunay diagrams in their work. From <u><a href="https://www.ics.uci.edu/~eppstein/gina/scot.drysdale.html">David Eppstein’s <em>Geometry in Action</em> webpage at UC, <del>Arvind</del> Irvine</a></u></p>
+<p>Here are some domains and purposes within them, that use the idea of
+Proximity, and use Voronoi/Delaunay diagrams in their work. From
+<u><a href="https://www.ics.uci.edu/~eppstein/gina/scot.drysdale.html">David Eppstein’s <em>Geometry in Action</em> webpage at UC, <del>Arvind</del>
+Irvine</a> :
+</u></p>
 <ul>
-<li>Anthropology and Archeology – Identify the parts of a region under the influence of different neolithic clans, chiefdoms, ceremonial centers, or hill forts.<br />
+<li>Anthropology and Archeology – <em>Identify the parts of a region under
+the influence of different neolithic clans, chiefdoms, ceremonial
+centers, or hill forts</em>.<br />
 </li>
-<li>Astronomy – Identify clusters of stars and clusters of galaxies (Here we saw what may be the earliest picture of a Voronoi diagram, drawn by Descartes in 1644, where the regions described the regions of gravitational influence of the sun and other stars.)<br />
+<li>Astronomy – <em>Identify clusters of stars and clusters of galaxies
+(Here we saw what may be the earliest picture of a Voronoi diagram,
+drawn by Descartes in 1644, where the regions described the regions
+of gravitational influence of the sun and other stars.)</em><br />
 </li>
-<li>Biology, Ecology, Forestry – Model and analyze plant competition (“Area potentially available to a tree”, “Plant polygons”)<br />
+<li>Biology, Ecology, Forestry – <em>Model and analyze plant competition
+(“Area potentially available to a tree”, “Plant polygons”)</em><br />
 </li>
-<li>Cartography – Piece together satellite photographs into large “mosaic” maps<br />
+<li>Cartography – <em>Piece together satellite photographs into large
+“mosaic” maps</em><br />
 </li>
-<li>Crystallography and Chemistry – Study chemical properties of metallic sodium (“Wigner-Seitz regions”); Modelling alloy structures as sphere packings (“Domain of an atom”)<br />
+<li>Crystallography and Chemistry – <em>Study chemical properties of
+metallic sodium (“Wigner-Seitz regions”); Modelling alloy structures
+as sphere packings (“Domain of an atom”)</em><br />
 </li>
-<li>Finite Element Analysis – Generating finite element meshes which avoid small angles<br />
+<li>Finite Element Analysis – <em>Generating finite element meshes which
+avoid small angles</em><br />
 </li>
-<li>Geography – Analyzing patterns of urban settlements<br />
+<li>Geography – <em>Analyzing patterns of urban settlements</em>. See also
+<a href="https://www.patternlanguage.com">Christopher Alexander’s Pattern
+Language</a><br />
 </li>
-<li>Geology – Estimation of ore reserves in a deposit using information obtained from bore holes; modelling crack patterns in basalt due to contraction on cooling<br />
+<li>Geology – <em>Estimation of ore reserves in a deposit using
+information obtained from bore holes; modelling crack patterns in
+basalt due to contraction on cooling</em><br />
 </li>
-<li>Geometric Modeling – Finding “good” triangulations of 3D surfaces<br />
+<li>Geometric Modeling – <em>Finding “good” triangulations of 3D
+surfaces</em><br />
 </li>
-<li>Marketing – Model market of US metropolitan areas; market area extending down to individual retail stores<br />
+<li>Marketing – <em>Model market of metropolitan areas; market area
+extending down to individual retail stores</em><br />
 </li>
-<li>Mathematics – Study of positive definite quadratic forms (“Dirichlet tesselation”, “Voronoi diagram”)<br />
+<li>Mathematics – <em>Study of positive definite quadratic forms
+(“Dirichlet tesselation”, “Voronoi diagram”)</em><br />
 </li>
-<li>Metallurgy – Modelling “grain growth” in metal films<br />
+<li>Metallurgy – <em>Modelling “grain growth” in metal films</em><br />
 </li>
-<li>Meteorology – Estimate regional rainfall averages, given data at discrete rain gauges (“Thiessen polygons”)<br />
+<li>Meteorology – <em>Estimate regional rainfall averages, given data at
+discrete rain gauges (“Thiessen polygons”)</em><br />
 </li>
-<li>Pattern Recognition – Find simple descriptors for shapes that extract 1D characterizations from 2D shapes (“Medial axis” or “skeleton” of a contour)<br />
+<li>Pattern Recognition – <em>Find simple descriptors for shapes that
+extract 1D characterizations from 2D shapes (“Medial axis” or
+“skeleton” of a contour)</em><br />
 </li>
-<li>Physiology – Analysis of capillary distribution in cross-sections of muscle tissue to compute oxygen transport (“Capillary domains”)<br />
+<li>Physiology – <em>Analysis of capillary distribution in cross-sections
+of muscle tissue to compute oxygen transport (“Capillary domains”)</em><br />
 </li>
-<li>Robotics – Path planning in the presence of obstacles<br />
+<li>Robotics/ Autonomous Vehicles– <em>Path planning in the presence of
+obstacles</em><br />
 </li>
-<li>Statistics and Data Analysis – Analyze statistical clustering (“Natural neighbors” interpolation)<br />
+<li>Statistics and Data Analysis – <em>Analyze statistical clustering
+(“Natural neighbors” interpolation)</em><br />
 </li>
-<li>Zoology – Model and analyze the territories of animals</li>
+<li>Zoology – <em>Model and analyze the territories of animals</em></li>
 </ul>
 </div>
 <div id="references" class="section level2">
@@ -206,8 +283,12 @@ In this message, each character is a visual representation, or a substution for,
 <ol style="list-style-type: decimal">
 <li><p><u><strong>Voronoi Diagrams and a Day at the Beach</strong>
 <a href="/pdf/Proximity/VoronoiDiagrams-ADayAtTheBeach.pdf"><strong>(PDF)</strong></a></u>
-Talks about cholera in Soho, the Voronoi diagram, and how to construct it using waves on a beach!!</p></li>
-<li><p>Data Genetics. <u><a href="http://datagenetics.com/blog/may12017/index.html"><em>Voronoi Tessellations</em>.</a></u>
-Very interesting 3D pictures of how Voronois and Delaunays are created.</p></li>
+Talks about cholera in Soho, the Voronoi diagram, and how to
+construct it using waves on a beach!!</p></li>
+<li><p>Data Genetics. <u><a href="http://datagenetics.com/blog/may12017/index.html"><em>Voronoi
+Tessellations</em>.</a></u>
+Very interesting 3D pictures of how Voronois and Delaunays are
+created.</p></li>
+<li><p>Gorilla Sun Blog. <a href="https://www.gorillasun.de/blog/delaunay-triangulation-and-voronoi-diagrams/" class="uri">https://www.gorillasun.de/blog/delaunay-triangulation-and-voronoi-diagrams/</a></p></li>
 </ol>
 </div>

@@ -31,7 +31,6 @@ library(embedr) # Embed multimedia in HTML files
 ![Photo by <a href="https://unsplash.com/@kolyakorzh?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mykola/Kolya Korzh</a> on <a href="https://unsplash.com/photos/brown-wooden-bird-house-ornament-HFogW6fHv4E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
   ](featured.jpg)
 
-
 ## Introduction
 
 Let us listen to the late great Benoit Mandelbrot, on the **Art of Roughness**.
@@ -42,6 +41,7 @@ Let us listen to the late great Benoit Mandelbrot, on the **Art of Roughness**.
 ## A Little ( just a little?) of Maths...
 
 ### What am $i$?
+
 Dude, what's the square root of -1?? `r emoji::emoji("scream_cat")` `r emoji::emoji("scream_cat")` `r emoji::emoji("scream_cat")`
 
 What can you do repeatedly to arrive at $[-1, 0]$?
@@ -62,6 +62,10 @@ Ever gone shopping for jewellery? How is the place organized? That is a good met
 `r blogdown::shortcode("youtube", "8ma6cV6fw24")`
 
 
+
+<iframe width="100%" height="560" frameborder="0"
+  src="https://observablehq.com/embed/@mcmcclur/julia-sets-and-the-mandelbrot-set?cells=topmatter%2Cwidget%2Cjulia_svg%2Ccompute_orbit"></iframe>
+  
 ## <u>[Wait, But Why?](https://waitbutwhy.com)</u>
 To be Written Up. 
 

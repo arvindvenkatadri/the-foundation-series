@@ -26,6 +26,8 @@ This is my exploration of diverse tools to help explain things better. I will lo
 7. g9: <http://omrelli.ug/g9/gallery/>
 8. Loopy: <http://ncase.me/loopy/>
 9. All Explorable Tools: <https://explorabl.es/tools/>
+10. APL: <https://tryapl.org>
+
 
 
 

@@ -37,6 +37,18 @@ library(blogdown)
 library(embedr) # Embed multimedia in HTML files
 ```
 
+<div class="pa4">
+  <blockquote class="athelas ml0 mt0 pl4 black-90 bl bw2 b--blue">
+    <p class="f5 f4-m f3-l lh-copy measure mt0">
+      Creativity is Paradoxical
+      
+To create, a person must have knowledge but forget the knowledge, must see unexpected connections in things but not have a mental disorder, must work hard but spend tume doing nothing as information incubates, must create many ideas yet most of them are useless, must look at the same thing as everyone else, yet see something different, must desire success but embrace failure, must be persistent but not stubborn, and must listen to experts but know how to disregard them.
+    </p>
+    <cite class="f6 ttu tracked fs-normal">―Michael Michalko</cite>
+  </blockquote>
+</div>
+
+
 ## Introduction
 
 >*The Year of Magical Thinking* is Joan Didion’s account of the year following the death of her husband, writer John Gregory Dunne, and her attempts to make sense of her grief while tending to the severe illness of her adopted daughter, Quintana. As she tries to make sense of John’s death and her own changed identity, Didion discovers that grief is not what she expected it to be. Consumed by memories of the years they lived in Los Angeles, shortly after they married and adopted Quintana, Didion feels that she has entered a state of temporary insanity. Though cool and collected on the surface, she begins to believe that her wishes might have the power to bring John back. To this end, she refuses to give away his clothes and shoes, believing that her husband will need them when he returns to her. She calls this childlike belief that her thoughts and wishes can alter reality “magical thinking.”
