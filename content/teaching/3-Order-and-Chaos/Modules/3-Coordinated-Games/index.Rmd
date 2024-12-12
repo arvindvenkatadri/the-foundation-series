@@ -119,9 +119,9 @@ The Stag Hunt is a less vindictive than the Prisoners' Dilemma and may be prefer
 
 ## Is it better to Die than to Kill?
 
-What game is being played here?
+What game is being played <u>[here](https://youtu.be/Iao7c5sw-Z8)</u>?
 
-<br> `r blogdown::shortcode("youtube", "f3LChcuRvNk")` <br>
+<br> `r blogdown::shortcode("youtube", "Iao7c5sw-Z8")` <br>
 
 This is the Chicken Game (CG), where it two Players *dare* each other to "chicken out" and survive, when put in a very strong adversarial situation.
 
@@ -169,7 +169,7 @@ and as with the PD, we have:
 $$
 R > (S + T)/2
 $$
-Chicken Games often occur in politics and of course, in offices and organizations, where co-workers dare each other to shirk from work the longest!! 
+Chicken Games often occur in politics and of course, in offices and organizations, where co-workers dare each other to shirk from work the longest!! Call Centres are a good place to look for manifestations of Chicken!!!
 
 Here us a <u>[*sermon*](https://ellerslie.com/the-game-of-chicken/)</u> on the Chicken Game. (Listen to the first few minutes for a good description of the Chicken Game.)
 
@@ -193,5 +193,7 @@ To be written up.
 
 
 5. Herbert Wulf.(01 March, 2023). *Cooperative Security, Arms Control and Disarmament:Chicken-Game*. <u>https://toda.org/global-outlook/2023/chicken-game.html</u>
+
+6. An [INTJ](https://www.16personalities.com/intj-personality) Professor's Suicide Note. Yes.  <u><https://willopines.wordpress.com/2017/04/19/punched-out/></u>
 
 
