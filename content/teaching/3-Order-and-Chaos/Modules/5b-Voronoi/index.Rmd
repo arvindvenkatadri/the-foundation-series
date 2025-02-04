@@ -43,6 +43,8 @@ library(latticeExtra)
 
 ```
 
+#### Don't Stand so Close to Me
+
 ## A Model for Proximity: The Voronoi and the Delaunay Diagrams
 
 So how do we model "proximity"? Let us take a quick look at this
@@ -232,9 +234,94 @@ To be written up!!
 
 ## So where are all these Proximities used?
 
-### A Brief Description of the GPS System
+### Proximities in the GPS System
 
-TBW.
+The GPS system is all about wanting to know if one is *proximate* to a
+desired landmark! But how does it work?
+
+Based on a measurement of two proximity scores, both electronic. One in
+Space and one in Time. Oooh, cryptic, isn't it? Here is how it works:
+
+-   Users receive GPS transmissions from more than one satellite (to
+    improve accuracy; more later).
+
+-   Each Satellite is given a **unique digital signature code**, called
+    its *Coarse/Acquisition*, or C/A Code.
+
+-   This code is a digital one-zero based sequence, which repeats after
+    a week.
+
+-   The code ones and zeroes are called **chips**; the chips are output
+    by each satellite at a rate of 1.023 MHz. ( i.e. a little faster
+    than a million chips per second)
+
+-   All satellites use an on-board time clock. All satellites are
+    synchronized and it is the same time on all satellites, regardless
+    of where they are in the sky.
+
+-   A User Receiver cannot understand what the satellite is saying,
+    UNLESS it removes/wipes off the signature used by the satellite. So
+    think of this in ***proximity*** terms: the user needs to know the
+    Signature Sequence and also be **in sync aligned** with it, chip for
+    chip.
+
+-   One the signature is removed, what remains is what the satellite is
+    saying.
+
+-   GPS#5 उवाच:
+
+    -   "It is 4 PM on my onboard clock";
+    -   "The ionosphere is doing weird things so please include that
+        weirdness in your position computation etc";
+    -   Other stuff, called the **satellite ephimeris** (which we may
+        discuss in class)
+
+But <u>[Houston, we have a problem](https://youtu.be/YwG4F-16Tno)</u>,
+but right here on the ground, mercifully. The problem is, wait for it,
+**the Speed of Light**. And it is a **good problem to have**.
+
+-   When you detect say GPS#5 saying it is 4 PM, that signal came from
+    GPS#5 to you at the speed of light, so ***by the time it arrives***,
+    the time on the satellite is already 4PM + 150 microseconds.
+
+-   Since different GPS satellites we can see are at different
+    ***ranges***, we receive different times from 5 different GPS
+    satellites.
+
+-   Then we can set up a set of linear matrix equations in these
+    variables:
+
+    -   "Received Time" from each satellite (***Pseudo-Range***)
+    -   Long and Lat (called a ***Position Fix***);
+    -   Absolute Time (***Time Fix***)
+
+-   Which we solve to obtain both Position Fix and Time Fix.
+
+So in summary, the user needs to calculate two proximities:
+
+-   A **C/A code proximity**, measured by the Hamming Distance between
+    the received code and a locally generated C/A code. Which code to
+    generate locally? We don't really know, so we generate \~ *all*.
+    Huh. And select that C/A code to wipe off which shows good proximity
+    with received C/A code. (This is called, in telecom language, a
+    ***Code Matched Filter*** and ***Rake Receiver***. Ask me what this
+    looks like, at your peril.)
+
+-   A **Time Proximity**, by correcting its own local clock to match the
+    satellite clocks, accurately. (This is called, in telecom language
+    again, a **Delay-Lock Loop**. Peril again.)
+
+### Code Proximity Measurement
+
+![Code Proximity Measure](/images/autocorr.jpeg){#fig-code-proximity}
+
+In the figure above, the red curve shows the Hamming Distance between a received C/A code, and its locally generated copy. Only when the proximity between them is within one-chip does the measure have any sensible amplitude. (This is called ***Autocorrelation***.)
+
+The blue curve show Hamming Distance proximity between a received C/A code and **any other** C/A code. At no overlap position do these dissimilar codes have a useful proximity measure. (This is known as **Cross-Correlation**). 
+
+C/A codes are ***designed*** to have that spike-like autocorrelation, and that fuzz like cross-correlation to aid in proximity-based synchronization and code wipe-off. 
+
+
 
 ### A Brief Foray into Cryptography
 
@@ -332,11 +419,13 @@ Irvine](https://www.ics.uci.edu/~eppstein/gina/scot.drysdale.html) :
     [**(PDF)**](/pdf/Proximity/VoronoiDiagrams-ADayAtTheBeach.pdf)</u>
     Talks about cholera in Soho, the Voronoi diagram, and how to
     construct it using waves on a beach!!
-
 2.  Data Genetics. <u>[*Voronoi
     Tessellations*.](http://datagenetics.com/blog/may12017/index.html)</u>
     Very interesting 3D pictures of how Voronois and Delaunays are
     created.
-    
-3. Gorilla Sun Blog. <https://www.gorillasun.de/blog/delaunay-triangulation-and-voronoi-diagrams/>
-
+3.  Gorilla Sun Blog.
+    <u><https://www.gorillasun.de/blog/delaunay-triangulation-and-voronoi-diagrams/></u>
+4.  How are Codes used in GPS?
+    <u><https://natronics.github.io/blag/2014/gps-viz-1/></u>
+5.  How Do Codes Work in GPS?
+    <u><https://natronics.github.io/blag/2014/gps-prn/></u>

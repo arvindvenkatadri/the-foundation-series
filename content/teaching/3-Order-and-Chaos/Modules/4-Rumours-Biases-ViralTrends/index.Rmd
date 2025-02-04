@@ -1,6 +1,6 @@
 ---
-title: "\U0001F345 Biases, Viral Trends, and Rumours!"
-subtitle: "No Man is An Island"
+title: "\U0001F345 Biases, Memes, Viral Trends, and Rumours!"
+subtitle: "Whom will you Copy today?"
 author: "Arvind V."
 date: 2024-01-04
 image:
@@ -12,12 +12,11 @@ editor_options:
   markdown: 
     wrap: 72
 ---
+#### Whom will you Copy today?
 
-```{r include=FALSE}
+```{r echo=FALSE}
 library(blogdown)
 ```
-
-#### No Man is an Island
 
 ![Photo by <a href="https://unsplash.com/@yaaniu?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Ahmed Yaaniu</a> on <a href="https://unsplash.com/photos/green-and-brown-island-in-the-middle-of-blue-water-lD2PZuMscsw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>](featured.jpg)
 
@@ -53,7 +52,7 @@ agent-like actions lead to bad outcomes in Society...
 
 Always?
 
-Not if we...choose wisely !!
+Not if we...choose to copy others wisely !!
 
 Let us play <u>**The Game of the Polygons** [(web
 link)](https://ncase.me/polygons/)</u>
@@ -105,13 +104,23 @@ Kuch toh log kahenge | People will say something or the other
 
 <br>
 
+### Discussion Questions
+
+- So how does one *scotch/stop* a rumour? Can you <u>[**be vaccinated** against rumours](https://www.complexity-explorables.org/explorables/epidemonic/)</u>? Is there a game-theoretic cost for the vaccination?
+- How does one be *individual and different* and still *one of the gang*? 
+- How do <u>[Echo Chambers](https://www.complexity-explorables.org/explorables/echo-chambers/)</u> work? And what game-theoretic costs do you have to pay here to be in and yet not quite in?
+- Is it possible to be inside and outside the group at the same time? Is it a good idea <u>[to be an insider and an outsider at the same time?](https://www.beyondintractability.org/essay/insider-partial)</u>
+- How does on think of products and ads, or policy messages? (Remember the <u>["Bell Bajaao" campaign?](https://youtu.be/zmNz0cTcxFU)</u>
+- There are popular and well-known phrases and memes in every language! Use them!!
+- Here is one for you: "Less Than Three!"
 
 ## Conclusions
 
-- Individual Actions Matter
+- Individual Actions Matter. Because they can be "reverse infections" **and** be contagious, in a positive way. 
 - Correlations between Individual Actions can create "standing waves" or "echoes" on the fabric of society.
   * Whatsapp "echo chambers"
-  * Popularity of Memes, Songs, Ads, and Products
+  * Popularity of Memes, Songs, and Movie lines
+  * Taglines from Ads, and Products ( e.g. "Think Different". Bah.)
 
 ## References
 

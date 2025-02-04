@@ -109,18 +109,16 @@ Updated: `r today`
 ---
 ## TRIZ: A Ladder of Abstraction
 
-<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
-  <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">Su-Field Analysis</h1>
-</article>
-<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
-  <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">IFR</h1>
-</article>
-<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
-  <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">PC + 6 Separation Principles</h1>
-</article>
-<article class="center mw5 mw6-ns br3 hidden ba b--black-10 mv4">
-  <h1 class="f4 bg-near-white br3 br--top black-60 mv0 pv2 ph3">TC + 40 Inventive Principles</h1>
-</article>
+
+<ul class="list pl0 ml0 center mw8 ba b--light-silver br2">
+  <li class="ph3 pv2 bb b--light-silver">Physical Contradiction + 6 Separation Principles</li>
+  <li class="ph3 pv2 bb b--light-silver">Contradiction Matrix  + 40 Inventive Principles</li>
+  <li class="ph3 pv2 bb b--light-silver">Technical Contradiction + 49 Parameters</li>
+  <li class="ph3 pv2 bb b--light-silver">Admin Contradiction</li>
+  <li class="ph3 pv2 bb b--light-silver">IFR</li>
+  <li class="ph3 pv2  bb b--light-silver">Su-Field Analysis</li>
+  <li class="ph3 pv2">Ishikawa + 5W + Knobs</li>
+</ul>
 
 ---
 
@@ -884,6 +882,70 @@ AND...Camels are the **Ship of the Desert!** `r emoji("camel")` `r emoji("ship")
 .bg-washed-red.footnote.small[Karl Dunkert's Functional Fixedness Bias!]
 ]
 
+---
+
+### TRIZ Workflow: Case Study #9: To the Manor Born (Ha-Ha!)
+
+.pull-left[
+A ***ha-ha*** (French: hâ-hâ [a a] or saut de loup [so də lu]), also known as a **sunk fence, blind fence, ditch and fence, deer wall, or foss**, is a *recessed* landscape design element that creates a **vertical barrier** (particularly on one side) while preserving an **uninterrupted view** of the landscape beyond from the other side. 
+
+The name comes from viewers' surprise when seeing the construction.
+]
+.pull-right[
+.pull-left[
+![](../../../images/256px-Scotland-2016-West_Lothian-Hopetoun_House_02.jpg)
+
+![](../../../images/256px-Ha_ha_wall_diagram.jpg)
+]
+.pull-right[
+![](../../../images/Ha-ha-Buffalo.jpeg)
+
+
+![](../../../images/Sheep-Ha-Ha.jpeg)
+]
+
+]
+
+---
+### TRIZ Workflow: Case Study #9: To the Manor Born (Ha-Ha!)
+.pull-left[
+- What is the Problem here?
+  - AC1: I want no animals near my property, but I should be able to see them.
+  
+  - AC2: I want my view to be uninterrupted but the animals cannot approach me. 
+      - (The idea of "prospect" in a landscape painting!!)
+]
+
+.pull-right[
+- Can we state an IFR?
+
+  - IFR1: Animals should be close by and not close by at the same time?
+  
+  - IFR2: Animals should be free and not free at the same time?
+]
+---
+### TRIZ Workflow: Case Study #9: To the Manor Born (Ha-Ha!)
+.pull-left[
+
+]
+
+.pull-right[
+
+]
+---
+### TRIZ Workflow: Case Study #9: To the Manor Born (Ha-Ha!)
+.pull-left[
+- What might be a good TC?
+  - 
+]
+
+.pull-right[
+And what does our Matrix say?
+  - Intermediary
+  - Another Dimension!
+  - Prior Action
+  - 
+]
 ---
 
 .pull-left[

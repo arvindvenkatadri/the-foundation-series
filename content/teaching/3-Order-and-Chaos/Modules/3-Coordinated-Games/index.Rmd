@@ -37,7 +37,7 @@ do?
 And, what does "less than three" even mean?!!??
 
 In the previous module on the Prisoners' Dilemma, we saw how we all are engaged in *adversarial and transactional Games* with many other people, most of 
-whom are strangers to us. But as remarked before, the Human Species is perhaps unique in that we are able to <u>[cooperate with strangers](https://fee.org/media/4316/547_42.pdf)</u>!! So we are not always adversaries or enemies, and we are able to obtain ***unspoken agreement and correspondence with strangers***.
+whom are strangers to us. But as remarked before, the Human Species is perhaps unique in that we are able to <u>[cooperate with strangers](https://fee.org/articles/book-reviews-september-2004/)</u> and <u>[possess bourgeois virtues](https://fee.org/articles/where-the-bourgeois-virtues-are-found)</u>!! So we are not always adversaries or enemies, and we are able to obtain ***unspoken agreement and correspondence with strangers***.
 
 What use would this be? Would it be a Design Tool? How?
 
@@ -60,7 +60,7 @@ And here is another video on the same topic, but with a historical, and spatial,
  <br> `r blogdown::shortcode("youtube", "oDsePkuaL9Q")` <br>
 
 
-Focal points can be used in Coordination Games: these are activities where people's actions tend to organize into Patterns based on specific default options. These actions could be 
+Focal points can be used in Coordination Games: these are activities where people's actions tend to organize into Patterns based on specific default options. These actions could be:
 
 a) Conversation, Words, Phrases, Gestures
 
@@ -193,6 +193,8 @@ To be written up.
 
 
 5. Herbert Wulf.(01 March, 2023). *Cooperative Security, Arms Control and Disarmament:Chicken-Game*. <u>https://toda.org/global-outlook/2023/chicken-game.html</u>
+
+6. <https://imotions.com/blog/learning/research-fundamentals/the-stag-hunt-game-theory/>
 
 6. An [INTJ](https://www.16personalities.com/intj-personality) Professor's Suicide Note. Yes.  <u><https://willopines.wordpress.com/2017/04/19/punched-out/></u>
 
