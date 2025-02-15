@@ -87,8 +87,9 @@ So what have learnt then? From the two exercises, we see that:
 
 
 ## Additional References
-1. <u><https://youtu.be/g34SYgKbqFY></u>
+1. Lawrence of Arabia - The Question of Identity
+<u><https://youtu.be/g34SYgKbqFY></u>
 
-
+`r blogdown::shortcode("youtube", "g34SYgKbqFY")`
 
 

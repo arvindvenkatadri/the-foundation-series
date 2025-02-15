@@ -42,7 +42,7 @@ library(embedr) # Embed multimedia in HTML files
     <p class="f5 f4-m f3-l lh-copy measure mt0">
       Creativity is Paradoxical
       
-To create, a person must have knowledge but forget the knowledge, must see unexpected connections in things but not have a mental disorder, must work hard but spend tume doing nothing as information incubates, must create many ideas yet most of them are useless, must look at the same thing as everyone else, yet see something different, must desire success but embrace failure, must be persistent but not stubborn, and must listen to experts but know how to disregard them.
+To create, a person must have knowledge but forget the knowledge, must see unexpected connections in things but not have a mental disorder, must work hard but spend time doing nothing as information incubates, must create many ideas yet most of them are useless, must look at the same thing as everyone else, yet see something different, must desire success but embrace failure, must be persistent but not stubborn, and must listen to experts but know how to disregard them.
     </p>
     <cite class="f6 ttu tracked fs-normal">―Michael Michalko</cite>
   </blockquote>
@@ -171,22 +171,24 @@ embedr::embed_audio("WordOfMouth-20200107-Metaphors.mp3")
 1.  <u>[Guilford Test for Divergent Thinking](https://curtbonk.com/bobweb/d1.html)</u>
 
 2.  <u>[Wallas-Kogan Test for Divergent Thinking](https://curtbonk.com/bobweb/d2.html)</u>
+1. Tihamér von Ghyczy (HBR, September 2003). *The Fruitful Flaws of Strategy
+Metaphors*. <u>[(PDF)](The Fruitful Flaws of Strategy Metaphors.pdf)</u>
 
-3.  Thibodeau, Paul & Boroditsky, Lera. (2011). **Metaphors We Think With: The Role of Metaphor in Reasoning**. PloS one. <u>[(PDF)](Thibodeau-Boroditsky-Role-of-Metaphor.pdf)</u>
+3.  Thibodeau, Paul & Boroditsky, Lera. (2011). *Metaphors We Think With: The Role of Metaphor in Reasoning*. PloS one. <u>[(PDF)](Thibodeau-Boroditsky-Role-of-Metaphor.pdf)</u>
 
-4.  Bobo Hjort. (2003) **Drawing, Knowledge, and Intuitive Thinking: Drawing as a Way to Understand and Solve Complex Problems in Art and Complexity**. J. Casti and A. Karlqvist (editors) © 2003 Published by Elsevier Science B.V.<u>[(PDF)](Hjort.pdf)</u>
+4.  Bobo Hjort. (2003) *Drawing, Knowledge, and Intuitive Thinking: Drawing as a Way to Understand and Solve Complex Problems in Art and Complexity*. J. Casti and A. Karlqvist (editors) © 2003 Published by Elsevier Science B.V.<u>[(PDF)](Hjort.pdf)</u>
 
-5.  David Chen, **Creative Paradoxical Thinking and Its Implications for Teaching and Learning Motor Skills** <u>[(PDF)](CreativeParadoxicalThinking2011.pdf)</u>
+5.  David Chen, *Paradoxical Thinking and Its Implications for Teaching and Learning Motor Skills* <u>[(PDF)](CreativeParadoxicalThinking2011.pdf)</u>
 
-6.  Holyoak and Thagard, **The Analogical Mind**, <u>[(PDF)](Holyoak-%20Thagard%20-%20Analogical%20Mind.1997pdf.pdf)</u>
+6.  Holyoak and Thagard, *The Analogical Mind*, <u>[(PDF)](Holyoak-%20Thagard%20-%20Analogical%20Mind.1997pdf.pdf)</u>
 
 7.  Joshua Ferris, <u>[The Market Value of my Father](https://www.wealthsimple.com/en-ca/magazine/joshua-ferris)</u>. A metaphorical Short Story.
 
-8.  Martin Weller. "Dangers of tech metaphors in nature – The Ed Techie." N.p., n.d. Web. 5 Apr. 2024. <u><https://blog.edtechie.net/books/dangers-of-tech-metaphors-in-nature></u>.
+8.  Martin Weller. *Dangers of tech metaphors in nature – The Ed Techie.* N.p., n.d. Web. 5 Apr. 2024. <u><https://blog.edtechie.net/books/dangers-of-tech-metaphors-in-nature></u>.
 
 9. Edith Ackermann(2001). <u>[*Piaget’s Constructivism, Papert’s Constructionism: What’s the difference?*](https://learning.media.mit.edu/content/publications/EA.Piaget%20_%20Papert.pdf)</u>
 
-10. Dubnick, R. (1980). Visible Poetry: Metaphor and Metonymy in the Paintings of Rene Magritte. Contemporary Literature, 21(3), 407. doi:10.2307/1208249. <u>[(PDF)](dubnick1980.pdf)</u>
+10. Dubnick, R. (1980). *Visible Poetry: Metaphor and Metonymy in the Paintings of Rene Magritte*. Contemporary Literature, 21(3), 407. doi:10.2307/1208249. <u>[(PDF)](dubnick1980.pdf)</u>
 
 11. Aniket Kittur, Lixiu Yu, Tom Hope, Joel Chan, Hila Lifshitz-Assaf, Karni Gilon, Felicia Ng, Robert E. Kraut, and Dafna Shahaf. (2019). *Scaling up analogical innovation with crowds and AI*. Proceedings of the National Academy of SciencesVol. 116, No. 6, February 5, 2019. <u>[**PDF**](kittur-et-al-2019-scaling-up-analogical-innovation-with-crowds-and-ai.pdf)</u>
 
