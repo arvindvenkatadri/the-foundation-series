@@ -11,13 +11,69 @@ image:
   focal_point: "smart"
 ---
 
-![](featured.jpg)
+## Inspiration
+
+![Daisugi](featured.jpg)
+
+![](kagga10.png)
+
+This is an extracted "kagga" from the famous 
+<u>[Mankutimmmana Kagga](https://translationtreasure.blogspot.com)</u>
+by D V Gundappa. (Quoted to me by late friend B.S.Nagesh Rao, 
+Digital Systems Division, ISRO Satellite Centre)
 
 ## Introduction
 Creative Problem Solving is a Process and can be taught and learnt.
-Brainstorming is utter BS. Post-Its are a great Invention, but a complete waste of time.
+Brainstorming is utter BS. Post-Its are a great Invention, but a 
+complete waste of time.
 
 This is a (very opinionated) {{<hl>}} Contextual Enquiry Course{{</hl>}} on {{<hl>}}Creative Problem Solving{{</hl>}}, designed for the Foundation (freshman) year of a Bachelor's Degree in Art and Design, at the Srishti Manipal Institute of Art, Design, and Technology, Bangalore, India.
+
+## Abstract
+
+This Unit takes students on a journey of understanding the process of 
+Personal Creativity and Structured Innovation.
+
+We begin by using the idea of Flow, as a pathway between ever-increasing 
+(creative) Complexity and Boredom as defined by Csikszentmihalyi. 
+Childhood Games will be examined to understand the aspects of Play and 
+linked to and the idea of "Infinite Games" by James Carse and how 
+Rule-Breaking in Play is an important step in enhancing personal creativity.
+
+Bourdieu's concept of Cultural Capital will be interpreted as one of 
+the primary sources for an individual's ideas, along with Csikzentmihalyi's 
+idea of the Creative Domain, Field and the Creative Individual. 
+Tools for enhancing Cultural Capital will be introduced. 
+The MBTI / Big 5 Tool will be used to understanding ourselves, our 
+abilities, strengths, traits and differences from others.
+
+Structured heuristic techniques based on de Bono's 6 Hat method will 
+help us see how to perform Situational Analysis and Idea Generation, 
+to help us take ideas from conception to execution. 
+Reference will be made to Alex Osborn's "Applied Imagination" methods 
+and tied to the Big 5 results.
+
+Aspects of the Systematic Russian Process of innovation and problem solving, 
+***TRIZ (Teoriya Resheniya Izobretatelskhikh Zadatch)*** invented by 
+Genrikh Altshuller will be introduced. Alshuller's idea of Generalized 
+Problem Solving by borrowing ideas/memes from other Domains, his 
+8 Laws of Evolution of Products, and ( a few of ) the 
+40 Inventive Principles derived from his analysis of patents, will be 
+covered in gamified fashion. These will be linked to with David Perkin's
+(Harvard Project Zero) ideas and Edward de Bono's methods to interpret, 
+and design for, existing situations and products.
+
+Advanced aspects of TRIZ such as Su-Field Analysis, the Laws of Product 
+Evolution, and ARIZ will be introduced in gamefied fashion. 
+
+Field visits to product, food preparation, solar energy, and logistics 
+companies will be used to bolster and demonstrate the unity of these 
+concepts acquired in class. Technological assignments, and non-tech 
+making and presenting tasks will also be used in class to create 
+gamefied experiences for all of these.
+
+The students will finally use the methods and ideas they have learnt 
+and apply them in creating a project, artifact or performance of their own.
 
 ## Course Contents
 
@@ -25,35 +81,17 @@ The course will have some basic foundations from psychological and cognitive sci
 
 - Fundamentals of {{<hl>}}Flow and Play{{</hl>}} as defined by Mihaly Csikszentmihalyi
 - Thinking Styles and how one appreciates the Problem Situation
-- Cognitive Biases and Functional Fixedness
-- A Mentality of Resource(fulness)
 - {{<hl>}}Cultural Capital{{</hl>}} as a source of one's Ideas
 - Genes and {{<hl>}}Memes{{</hl>}}
+- Cognitive Biases and Functional Fixedness
+- Cultivating a Mentality of Resource(fulness)
 - Metaphors as Gateways
 - {{<hl>}}The Six Thinking Hats Method{{</hl>}} and how to apply them in practice
-- Innovative Problems Solving Methods like {{<hl>}}TRIZ{{</hl>}}, its philosophy and techniques such as the {{<hl>}}Contradiction Matrix{{</hl>}} and {{<hl>}}40 Inventive Principles{{</hl>}}
+- Innovative Problems Solving Methods like {{<hl>}}TRIZ{{</hl>}}, its philosophy, 
+and techniques such as the {{<hl>}}TRIZ Contradiction Matrix{{</hl>}} and {{<hl>}}40 Inventive Principles{{</hl>}}
 - Advanced TRIZ methods such as {{<hl>}}Substance-Field Analysis{{</hl>}}, {{<hl>}}76 Innovation Principles{{</hl>}}, and the {{<hl>}}Laws of Product Evolution{{</hl>}}
-- Analysis of Movies for manifestations of metaphoric problems and TRIZ methods
-- Bring your own Problem: A Final Culminating Project
-
-
-## Abstract
-
-This Unit takes students on a journey of understanding the process of Personal Creativity and Structured Innovation.
-
-We begin by using the idea of Flow, as a pathway between ever-increasing (creative) Complexity and Boredom as defined by Csikszentmihalyi. Childhood Games will be examined to understand the aspects of Play and linked to and the idea of "Infinite Games" by James Carse and how Rule Breaking in Play is an important step in enhancing personal creativity.
-
-Bourdieu's concept of Cultural Capital will be interpreted as one of the primary sources for an individual's ideas, along with Csikzentmihalyi's idea of the Creative Domain, Field and the Creative Individual. Tools for enhancing Cultural Capital will be introduced. The MBTI / Big 5 Tool will be used to understanding ourselves, our abilities, strengths, traits and differences from others.
-
-Structured heuristic techniques based on de Bono's 6 Hat method will help us see how to perform Situational Analysis and Idea Generation, to help us take ideas from conception to execution. Reference will be made to Alex Osborn's "Applied Imagination" methods and tied to the Big 5 results.
-
-Aspects of the Russian system of innovation and problem solving, TRIZ (Teoriya Resheniya Izobretatelskhikh Zadatch) invented by Genrikh Altshuller will be introduced. Alshuller's idea of Generalized Problem Solving by borrowing ideas/memes from other Domains, his 8 Laws of Evolution of Products, and ( a few of ) the 40 Inventive Principles derived from his analysis of patents, will be covered in gamified fashion. These will be linked to with David Perkin's (Harvard Project Zero) ideas and Edward de Bono's methods to interpret, and design for, existing situations and products.
-
-Advanced aspects of TRIZ such as Su-Field Analysis, the Laws of Product Evolution, and ARIZ will be introduced in gamefied fashion. 
-
-Field visits to product, food preparation, solar energy, and logistics companies will be used to bolster and demonstrate the unity of these concepts acquired in class. Technological assignments, and non-tech making and presenting tasks will also be used in class to create gamefied experiences for all of these.
-
-The students will finally use the methods and ideas they have learnt and apply them in creating a project, artifact or performance of their own.
+- Analysis of Hollywood Movies for manifestations of metaphoric problems and TRIZ methods
+- ***Bring your own Problem***: A Final Culminating Problem-Solving Project
 
 
 ### Why all this "Structure" to a course on Creativity?

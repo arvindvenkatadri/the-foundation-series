@@ -152,6 +152,12 @@ This should also remind us of the *Guilford Alternative Uses Exercise* that we d
 
 ## Breaking Assumptions: Making New Worlds
 
+First, some comic relief about ***assumptions***:
+
+`r blogdown::shortcode("youtube", "JKHqjJIdM2w")`
+
+Chris Tucker seems to have discovered he had made an assumption! Luckily for him it is not too late!!
+
 We have seen how **material objects** seem to have *functional fixedness* in our minds. There is an equivalent idea that we can relate to *phenomena* and *processes*: we can call it *process fixedness*. What does it entail?
 
 Things that are **stated** as unchangeable:
@@ -166,7 +172,7 @@ Sadly, there are things that are **unstated** and mentally unchangeable:
 - Secrets? 
 - Or things that are unmentionable because someone does not like them?
 
-What is the process by which we may discover such ***assumptions on phenomena/process*** that we place on a situation?
+What is the METHOD by which we may discover such ***assumptions on phenomena/process*** that we place on a situation?
 
 << TO BE WRITTEN UP IN DETAIL.>>
 

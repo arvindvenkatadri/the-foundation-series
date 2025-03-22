@@ -24,6 +24,8 @@ url_video: ''
 external_link: ''
 ---
 
+#### <u>[Eureka](https://youtu.be/0v86Yk14rf8)</u> On Demand
+<br>
 
 ```{r,echo=FALSE, fig.align='center',fig.alt="Image by Etienne Girardet on Unsplash"}
 knitr::include_graphics("featured.jpg")
