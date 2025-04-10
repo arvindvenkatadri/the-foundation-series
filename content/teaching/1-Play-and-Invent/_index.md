@@ -15,12 +15,18 @@ image:
 
 ![Daisugi](featured.jpg)
 
-![](kagga10.png)
-
 This is an extracted "kagga" from the famous 
 <u>[Mankutimmmana Kagga](https://translationtreasure.blogspot.com)</u>
-by D V Gundappa. (Quoted to me by late friend B.S.Nagesh Rao, 
+by D V Gundappa. (Quoted to me in 1989 at Horanadu, by late friend B.S.Nagesh Rao, 
 Digital Systems Division, ISRO Satellite Centre)
+
+>hosa chiguru haLE bEru kUDiralu mara sogasu|<br>
+hosa yukti haLe tatva-doDagUDe dharma||<br>
+RuShivaakyadoDane vij~jaanakale mELavise|<br>
+jasavu janajIvanake  - maMkutimma || 522 ||
+
+![](kagga10.png)
+
 
 ## Introduction
 Creative Problem Solving is a Process and can be taught and learnt.
@@ -120,7 +126,10 @@ Yeah. That's why this course exists. To make Design tough, analytic, formalizabl
 
 ## References
 
-1. Herbert A. Simon. (1988). *The Science of Design: Creating the Artificial*. Design Issues, Vol. 4, No. 1/2, Designing the Immaterial Society (1988), pp. 67-82.Stable URL: http://www.jstor.org/stable/1511391
+1. Herbert A. Simon. (1988). *The Science of Design: Creating the Artificial*. 
+Design Issues, Vol. 4, No. 1/2, Designing the Immaterial Society (1988), 
+pp. 67-82.Stable URL: http://www.jstor.org/stable/1511391
+1. Preksa.(December 2019) *The Making of Mankutimmana Kagga*. <https://www.prekshaa.in/article/making-mankutimmana-kagga>
 
 
 <span hidden>
