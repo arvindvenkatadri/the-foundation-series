@@ -35,6 +35,8 @@ library(tidyverse)
 library(anicon)
 library(emojifont)
 library(emoji)
+# install.packages("remotes")
+# remotes::install_github("mitchelloharawild/icons")
 library(icons)
 ```
 

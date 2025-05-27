@@ -313,9 +313,10 @@ So in summary, the user needs to calculate two proximities:
 
 ### Code Proximity Measurement
 
-![Code Proximity Measure](/images/autocorr.jpeg){#fig-code-proximity}
+![Code Proximity Measure](images/autocorr.jpeg){#fig-code-autocorr}
 
-In the figure above, the red curve shows the Hamming Distance between a received C/A code, and its locally generated copy. Only when the proximity between them is within one-chip does the measure have any sensible amplitude. (This is called ***Autocorrelation***.)
+
+In the @fig-code-autocorr above, the red curve shows the Hamming Distance between a received C/A code, and its locally generated copy. Only when the proximity between them is within one-chip does the measure have any sensible amplitude. (This is called ***Autocorrelation***.)
 
 The blue curve show Hamming Distance proximity between a received C/A code and **any other** C/A code. At no overlap position do these dissimilar codes have a useful proximity measure. (This is known as **Cross-Correlation**). 
 
