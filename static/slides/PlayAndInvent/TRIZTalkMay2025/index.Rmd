@@ -22,6 +22,8 @@ output:
 dateWritten <- format(as.Date('2020-05-04'), format="%B %d %Y")
 today <- format(Sys.Date(), format="%B %d %Y")
 
+# https://jhelvy.github.io/lexis/
+# 
 library(knitr)
 library(tidyverse)
 library(fontawesome)
@@ -29,7 +31,7 @@ library(emo)
 library(emoji)
 library(emojifont)
 library(anicon)
-
+library(renderthis) # xaringanBuilder replacement
 options(
     htmltools.dir.version = FALSE,
     knitr.table.format = "html",
@@ -54,6 +56,7 @@ xaringanExtra::use_extra_styles(
   hover_code_line = TRUE,
   mute_unhighlighted_code = FALSE
 )
+
 showtext::showtext.auto()
 
 ```
@@ -134,7 +137,7 @@ exclude: true
 - Wanted to bring it to the classroom ! Didn't know how!!!
 
 
-- STUMBLED upon (classical) TRIZ in 2017
+- .orange[STUMBLED upon (classical) TRIZ in 2017]
 
 ]
 ---
@@ -172,7 +175,7 @@ background-size: contain
 .pull-right[
 ![](images/soviet-patents.png)
 
-- All *creative* Patents solved...CONTRADICTIONS!
+- **.red[All *creative* Patents solved...CONTRADICTIONS!]**
 ]
 
 ---
@@ -182,9 +185,9 @@ background-size: contain
 .pull-left[
 - Altshuller was a Patent Inspector in the Soviet Navy. 
 - **Data-mined** 25K Patent Applications, and found:
-- **Similar Contradictions** were found across Domains
-- **Similar Inventive Solutions** were found across Domains
- - But used ***different language / terminology***
+- **.orange[Similar Contradictions]** were found across Domains
+- **.orange[Similar Inventive Solutions]** were found across Domains
+ - But used ***.red[different language / terminology]***
 - So...how does a Plumber talk with a Heart Surgeon?
   - Watch [Grey's Anatomy](https://www.netflix.com/title/70140391) or [House](https://www.amazon.com/House-Season-1/dp/B000WCT7M8) together?
 
@@ -197,6 +200,11 @@ background-size: contain
 ![](https://www.dicardiology.com/sites/default/files/styles/content_feed_large_new/public/Cath_lab_Structural_heart_procedure_Adam_Greenbaum_Henry_Ford.jpg?itok=Qb5i31Zn)
 ]
 
+
+---
+class: center, middle, inverse
+
+## Worldviews in (classical) TRIZ
 
 ---
 
@@ -214,14 +222,14 @@ background-size: contain
 So?
 
 PROBLEM: Ever tried to scrape cheese off the inside of a pizza box lid?
-- Csikszentmihalyi: Keep a "Surprise Journal".
+- **.orange[Csikszentmihalyi: Keep a "Surprise Journal"]**
 ]
 
 ---
 
 ## A TRIZ Worldview: What's Your Inventive Problem? (In Class)
 .pull-left[
-![](images/chain.jpg)
+.polaroid[![](images/chain.jpg)]
 ]
 .pull-right[
 - Chains **need to be flexible** so that can wrap around sprockets
@@ -254,7 +262,7 @@ PROBLEM: Ever had greasy hands trying to re-align a slipped chain?
 ## A TRIZ Worldview: A Metaphoric Language
 
 .pull-left[
-- ***Big Idea :*** Generalized Problem: "Your Problem has been solved somewhere else", in a different DOMAIN in a different LANGUAGE
+- ***Big Idea :*** Generalized Problem: .orange["Your Problem has been solved somewhere else"], in a different DOMAIN in a different LANGUAGE
 
 - So can there be a "common" "crossover" language?
   - Altshuller invented one, with **Metaphors**
@@ -263,10 +271,10 @@ PROBLEM: Ever had greasy hands trying to re-align a slipped chain?
 
 ]
 .pull-right[
-- Why is a Raven like a Writing Desk?
+- "Why is a Raven like a Writing Desk?"
 ![](images/alice-party.jpg)
 
-- **In Class**: Reimagining Objects using Metaphors
+- **.green[In Class**]: Reimagining Objects using Metaphors
 ]
 
 ??? slide rule, for example
@@ -274,19 +282,19 @@ PROBLEM: Ever had greasy hands trying to re-align a slipped chain?
 ---
 
 ## A TRIZ Worldview: Resources
-- A Unique Way of looking at **Available Resources**
+- A Unique Way of looking at **.red[Available Resources]**
 
 .pull-left[
 - One Good way to do this is using the **Ishikawa Diagram**
-- Man, Material, Method, Management, Machinery (Ishikawa)
+- .red[Man, Material, Method, Management, Machinery (Ishikawa)]
   - This diagram is used **primarily** to assign **CAUSES**
-  - But it conveniently lists all the **Resources**.
+  - .blue[But it conveniently lists all the] **.blue[Resources]**.
   
 - What things create the compromise/tradeoff?
 ]
 
 .pull-right[
-![](images/IshikawaDiagram2-386e9108096f4149b67cb5a803c45dd0.webp)
+.border[![](images/IshikawaDiagram2-386e9108096f4149b67cb5a803c45dd0.webp)]
 
 .footnote[https://www.investopedia.com/terms/i/ishikawa-diagram.asp]
 ]
@@ -294,17 +302,17 @@ PROBLEM: Ever had greasy hands trying to re-align a slipped chain?
 
 ---
 
-## A TRIZ Worldview: Resources: In Class
+## A TRIZ Worldview: Resources: .green[In Class]
 .pull-left[
 
 We are far richer than we realize!
   
-  - ***Karl Duncker's Cognitive Games***
+  - ***.orange[Karl Duncker's Cognitive Games]***
   
   - [Functional Fixedness](https://thedecisionlab.com/biases/functional-fixedness) 
-  - ***Harper Lee's "To Kill a Mockingbird"*** (Ch.7: "We spat ourselves dry")
+  - ***.darkblue[Harper Lee's "To Kill a Mockingbird"]*** (Ch.7: "We spat ourselves dry")
   
-  - Thinking Inside the Box: ***Ellen Domb's "The Titanic Role-Play Game"***
+  - Thinking Inside the Box: ***.red[Ellen Domb's "The Titanic Role-Play Game"]***
 ]    
 
 .pull-right[
@@ -344,31 +352,35 @@ $$Ideality = Benefits / (Harm + Costs)$$
 
 
 ---
-## TRIZ Worldview: The Ideal Final Result: In Class
+## TRIZ Worldview: The Ideal Final Result: .green[In Class]
 .pull-left[
 <iframe width="560" height="415" src="https://www.youtube.com/embed/ry55--J4_VQ?si=FBWY0XtwVElAG-tx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+***.green["Apollo 13"]***
 ]
 .pull-right[
 ![](images/PostIt-Inventors.png)
 ]
-
+***.green["Who Invented the Post-It?"]***
 ---
 
 ## A TRIZ Worldview: Contradictions
 .pull-left[
   
 - **Contradictions** exist at multiple levels
-  - *Administrative*, or *plain English*. [(Oh those Russians...)](https://www.forbesindia.com/article/recliner/oh-those-russians-boney-m/21642/1)
+  - *.blue[Administrative]*, or *plain English*. [(Oh those Russians...)](https://www.forbesindia.com/article/recliner/oh-those-russians-boney-m/21642/1)
 
-  - *Technical* (Using TRIZ Metaphors, as we'll see)
+  - *.blue[Technical]* (Using ***.orange[TRIZ Metaphors]***, as we'll see)
   
-  - *Physical* [An Impossible Sounding Statement using TRIZ ideas](https://aliceinwonderland.fandom.com/wiki/Six_Impossible_Things) 
+  - *.blue[Physical]* An Impossible Sounding Statement (using TRIZ Syntax)
   
       - Ever heard of  [Hiranyakashipu?](https://en.wikipedia.org/wiki/Hiranyakashipu)
+      
 ]
+.footnote[https://aliceinwonderland.fandom.com/wiki/Six_Impossible_Things]
 
 .pull-right[
 ![](images/Hiranyakashipu.jpg)
+
 ]
 
 ---
@@ -377,19 +389,19 @@ $$Ideality = Benefits / (Harm + Costs)$$
 ## TRIZ Workflow: How to Create a Contradiction
 
 .pull-left[
-- From the Ishikawa Diagram
+- From the ***.orange[Ishikawa Diagram]***
 - **One Parameter or Knob** for each **Causes** 
   
-  - Each Knob creates a Certain Outcome at one Setting 
+  - Each ***.orange[Knob]*** creates a Certain ***.orange[Outcome]*** at one ***.blue[Setting]***
 
-  - And another Outcome at the Opposite Setting.
+  - And another ***.orange[Outcome]*** at the ***.blue[Opposite Setting]***.
 
-- This is the Source of your Administrative Contradiction !!
+- This is the Source of your ***Administrative Contradiction*** (In plain English) !!
 
   ]
 .pull-right[
 
-![](images/IshikawaDiagram2-386e9108096f4149b67cb5a803c45dd0.webp)
+.border[![Ishikawa Diagram](images/IshikawaDiagram2-386e9108096f4149b67cb5a803c45dd0.webp)]
 ]  
 
 https://www.opensourcetriz.com/teaching-materials.html
@@ -399,14 +411,14 @@ https://www.opensourcetriz.com/teaching-materials.html
 ## So How Do TRIZ Contradictions Work?
 .pull-left[
 - State your Problem in "plain English"
-- "Metaphorize" your Problem using 48 TRIZ Parameters
+- "Metaphorize" your Problem using ***.orange[48 TRIZ Parameters]***
   - You now have a **TRIZ Contradiction**
   - Maybe more than one way!!
   
   
-- Look up TRIZ Generalized Solutions for your Contradiction
+- Look up ***.orange[TRIZ Inventive Principles]*** for your Contradiction
   - You have say 4 **TRIZ Inventive Principles**
-  - These are also metaphors!
+  - These are also *metaphors*!
   
   
 - "Un-metaphorize" them back into your problem
@@ -414,27 +426,28 @@ https://www.opensourcetriz.com/teaching-materials.html
 
 
 .pull-right[
-
+.border[
 ```{r,echo=FALSE,out.height="350px"}
 knitr::include_graphics("images/generic-solution.png")
 
 ```
-- Ever used log tables? Addition is a "metaphor" for multiplication...no?
+]
+- Ever used log tables? ***Addition is a "metaphor" for multiplication...no?***
 ]
 
 ---
 
 ## TRIZ Contradiction Matrix
 .pull-left[
-- Uses 49 "TRIZ Standard" Parameters
+- Uses ***.orange[49 "TRIZ Standard" Parameters]***
 
-- Sets off Contradictions each against the others
+- Sets off Contradictions,  each Parameter against the others
 
-- 49 X 49 matrix!
+- ***.blue[49 X 49 matrix]***!
 
 - Each Cell represents a "Generalized Problem"
 
-- Each cell has "TRIZ Inventive Principles"
+- Each cell has ***.orange["TRIZ Inventive Principles"]***
 
 ]
 .pull-right[
@@ -445,7 +458,7 @@ src="pdf/ContradictionMatrix2003.pdf" type="application/pdf" id="embeded_pdf">
 
 ---
 
-## TRIZ Inventive Principles: In Class
+## TRIZ Inventive Principles: .green[In Class]
 
 .pull-left[
 <iframe width="560" height="415" src="https://www.youtube.com/embed/ddXUQu9RC4U?si=jY3BCadYAfuIczL6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -571,7 +584,7 @@ class: center, middle, inverse
 - Built in the early 1950s
 - Wasn’t expected to be the major artery it is today. 
 - Park visitation increased, traffic volume surged—
-- And so : Roadkill...
+- And so : ***.red[Roadkill...]***
 ]
 
 .footnote[https://discoverapega.ca/stories/wildlife-crossings-key-to-highway-safety-in-banff/]
@@ -587,13 +600,14 @@ class: center, middle, inverse
 
 - **Output**: Road Kill / Affects Animal Migration / Human Costs / Fast Journeys
 
-- **AC**: We want to drive at **high speed**, but **not kill migrating wild animals** (or endanger our vehicles). 
+- **.orange[AC]**: We want to drive at **high speed**, but **not kill migrating wild animals** (or endanger our vehicles). 
 
   ]
   
 .pull-right[
-![](https://arvindvenkatadri.com/project/triz-stuff/2023-07-02-wildlife-crossing/index_files/figure-html/unnamed-chunk-1-1.png)
-- **IFR**: *"The Animals and Humans should use the Road at the Same Time"*
+.border[![](https://arvindvenkatadri.com/project/triz-stuff/2023-07-02-wildlife-crossing/index_files/figure-html/unnamed-chunk-1-1.png)
+- **.orange[IFR]**: *"The Animals and Humans should use the Road at the Same Time"*
+]
 ]
 
 ---
@@ -602,11 +616,11 @@ class: center, middle, inverse
 
 .pull-left[
 - **Technical Contradictions**: 
-  - **TC1**: Increase *Speed(9)* and not worsen *Duration of Action by Moving Object(15)*
+  - **TC1**: Increase ***.blue[Speed(9)]*** and not worsen ***.red[Duration of Action by Moving Object(15)]***
   
-  - **TC2**: Improve *Volume of Moving Object(7)* and not worsen *Loss of Time(25)*
+  - **TC2**: Improve ***.blue[Volume of Moving Object(7)]*** and not worsen ***.red[Loss of Time(25)]***
   
-  - **TC3**: Improve *Object affected by external harmful factors*(30) and not worsen *Duration of Action by Stationary Object*(16)[see footnote]
+  - **TC3**: Improve ***.blue[Object affected by external harmful factors(30)]*** and not worsen ***.red[Duration of Action by Stationary Object(16)]***[see footnote]
 
 ]
 
@@ -625,10 +639,9 @@ class: center, middle, inverse
 ### TRIZ Workflow: Case Study #1: Wildlife Crossings in Banff
 
 - **Technical Contradictions**: 
-  - **TC1**: Increase *Speed(9)* and not worsen *Duration of Action by Moving Object(15)*
+  - **TC1**: Increase ***.blue[Speed(9)]*** and not worsen ***.red[Duration of Action by Moving Object(15)]***
   
-Inventive Principles and their Interpretation:
-- **TC1**: 
+- **TC1**: Inventive Principles and their Interpretation:
   - **3(Local Quality)**: Local Quality? Parameter Change? Ok, change the road in some way...can't change all cars and definitely can't "change" animals!!
   
   - **19(Periodic Action)**: Something to be done repeartedly, but what?
@@ -640,12 +653,12 @@ Inventive Principles and their Interpretation:
 ---
 ### TRIZ Workflow: Case Study #1: Wildlife Crossings in Banff
 
-  - **TC2**: Improve *Volume of Moving Object(7)* and not worsen *Loss of Time(25)*
+  - **TC2**: Improve ***.blue[Volume of Moving Object(7)]*** and not worsen ***.red[Loss of Time(25)]***
   
-Inventive Principles and their Interpretation:
+- **TC2**: Inventive Principles and their Interpretation:
   - **35(Parameter Change)**: hmm..suggested again. 
   
-  - **18(Mechanical Vibration)**: What????
+  - **18(Mechanical Vibration)**: What???? A Siren???
   
   - **34(Rejecting and Regenerating Parts)**: Hmm....Not particularly evocative...
 
@@ -657,10 +670,10 @@ class: inverse
 
 .pull-left[
 
-  - **TC3**: Improve *Object affected by external harmful factors*(30) and not worsen *Duration of Action by Stationary Object*(16)
+  - **TC3**: Improve ***Object affected by external harmful factors(30)*** and not worsen ***Duration of Action by Stationary Object(16)***
 ]
 .pull-right[
-Inventive Principles and their Interpretation:
+- **TC3**: Inventive Principles and their Interpretation:
 
   - ***17(Another Dimension)!!!***: Go above or below!!!
   
@@ -686,7 +699,7 @@ knitr::include_graphics("images/AB-BAN-2014-05.jpg")
 
 .pull-right[
  Solution:
-- **(17)Another Dimension + (35)Parameter Change + 3(Local Quality)** = Animal Bridge!!!
+- **(17)Another Dimension + (35)Parameter Change + 3(Local Quality)** = Animal Bridge!!! (And Tunnels also in places)
 
 - Also **33(Homogeneity)** = Equal Opportunity for Animals and Vehicles
 
@@ -694,6 +707,7 @@ knitr::include_graphics("images/AB-BAN-2014-05.jpg")
 
 Inventive Principles have a curious way of "coalescing" in the end!!
 
+.footnote[Herbivores use the bridges; Carnivores prefer the tunnels it seems]
 ---
 
 exclude: true
@@ -843,9 +857,9 @@ exclude: true
 .pull-left[
 - Drivers "need" to protest against their Employers
 
-- **Strikes hurt commuters**, who are **forced to empathize**
+- **Strikes unfortunately hurt commuters**, who are **forced to empathize**
 
-- Strikes do not directly "hurt the management"...which is the intent!
+- Strikes ***do not directly "hurt the management"***...which is the intent!
 
 - When drivers return, they are apologetic...maybe. 
 
@@ -859,8 +873,7 @@ exclude: true
 .footnote[http://www.darrellmann.com/mini-case-study-strike/]
 
 ---
-## TRIZ Workflow: Case Study #2: Bus Strikes in Japan
-
+### TRIZ Workflow: Case Study #2: Bus Strikes in Japan
 .pull-left[
 - **Knobs**: 
   - Drivers(Y/N); Commuters(Y/N); 
@@ -874,7 +887,8 @@ exclude: true
 
 .pull-right[
 - **IFR**: Drivers must convey their anger only to employers who are far away. 
-- **TC**: Improve *Force(10)* ( i.e.of the Strike) and not worsen * Object generated Harmful Effects(31)* ( i.e. on themselves nor on commuters)
+- **TC**: Improve ***.blue[Force(10)]*** ( i.e.of the Strike) and not worsen ***.red[Object generated Harmful Effects(31)]*** ( i.e. on themselves nor on commuters)
+
 - **AC**: We want to strike against our employers, but they are not riding on the buses we drive !! Commuters are!!
 - **"PC"**: Drivers must strike AND not strike at the same time! ( From whose **point of view** !! )
 
@@ -886,20 +900,20 @@ exclude: true
 
 .left-column[
 
-**TC**: Improve ***Force(10)*** ( i.e.of the Strike) and not worsen ***Object generated Harmful Effects(31)*** ( i.e. on themselves nor on commuters)
+**TC**: Improve ***.blue[Force(10)]*** ( i.e.of the Strike) and not worsen ***.red[Object generated Harmful Effects(31)]*** ( i.e. on themselves nor on commuters)
 ]
 
 .right-column[
 - **IP13(The Other Way Around!!)**: What points one way and can be turned around? Bus Routes? Ticket Transactions?
 
-- **3(Local Quality)**: Something should be different *inside* the bus!!
+- **IP3(Local Quality)**: Something should be different *inside* the bus!!
 
-- **36(Phase Transition**): Hmm..everybody involved must "change dramatically"...who? Commuters? Drivers ? 
+- **IP36(Phase Transition**): Hmm..everybody involved must "change dramatically"...who? Commuters? Drivers ? 
 
-- **24(Intermediary)**: Fuel Cost and Loss of Revenue as intermediary between striking staff and the company!
+- **IP24(Intermediary)**: Fuel Cost and Loss of Revenue as intermediary between striking staff and the company!
 ]
 
-How can we use these...
+How can we use these metaphoric solutions...
 ---
 
 ## TRIZ Workflow: Case Study: Bus Strikes in Japan
@@ -910,7 +924,7 @@ Solution:
 
 - Run buses properly on time! Use Fuel and be on Time! That'll fetch the Managers! **24(Intermediary)**
 
-- Everybody in the Bus Sympathises! **36(Phase Transition**) and **3(Local Quality)**
+- Everybody in the Bus suddenly Sympathises! **36(Phase Transition**) and **3(Local Quality)**
 
 .footnote[http://www.darrellmann.com/mini-case-study-strike/]
 ]
@@ -919,39 +933,191 @@ Solution:
 ]
 ---
 
-## TRIZ: Workflow Summary
+## TRIZ: My .green[In Class] Workflow Summary
 
- - Find a **PROBLEM** (Bourdieu, Csikszentmihalyi, David Foster Wallace)
- - Look at **RESOURCES** (knobs) within the Problem and how they affect the situation (Open Source TRIZ)
+.pull-left[
+- Find a **PROBLEM** (Bourdieu, Csikszentmihalyi, David Foster Wallace)
+- Look at **RESOURCES** (knobs) within the Problem and how they affect the situation (Open Source TRIZ)
   
- - Turn the knobs to formulate a **ADMINISTRATIVE CONTRADICTION** (a trade-off or a compromise in plain English)
+- Turn the knobs to formulate a **ADMINISTRATIVE CONTRADICTION** (a trade-off or a compromise in plain English)
+ ]
  
- - Specify an **IDEAL FINAL RESULT**
+.pull-right[
+- Specify an **IDEAL FINAL RESULT**
  
- - Convert/metaphorize the **CONTRADICTION** into **TRIZ PARAMETER**s
+- Convert/metaphorize the **CONTRADICTION** into **TRIZ PARAMETER**s
  
- - Look up the **TRIZ CONTRADICTION MATRIX**. Discover the **INVENTIVE PRINCIPLES** you might apply
+- Look up the **TRIZ CONTRADICTION MATRIX**. Discover the **INVENTIVE PRINCIPLES** you might apply
  
- - *Un-metaphorize* the **INVENTIVE PRINCIPLES** to apply them in a specific way in your problem and solve it!
-
+- *Un-metaphorize* the **INVENTIVE PRINCIPLES** to apply them in a specific way in your problem and solve it!
+]
 
 ---
-## And GenTRIZ?
+## And GenTRIZ? What are the Core Ideas?
+### "Eureka On Demand": A "Triple" Suite of Tools:
+.cols3[
+#### "Innovation Opportunity"
+- ***.blue[9 Windows]***
+
+- ***.blue[Most Valuable Parameter (MPV)]***
+
+- ***.blue["Anti-Product" View]***
+]
+
+.cols3[
+#### Problem Identification
+
+- ***.orange[Function / Component / Interaction / Cost Analysis]***
+- ***.orange[Function Ranking]***
+
+- ***.orange[Cause Effect Chain Analysis ( CECA )]***
+]
+
+.cols3[
+#### Problem Solving
+- ***.green[Trimming]***
+
+- ***.green[Contradictions]***
+
+- ***.green[Inventive Principles]***
+
+- ***.green[76 Scientific Effects / Solutions]***
+]
+
+---
+## And GenTRIZ? What are the Core Ideas?
+### "Eureka On Demand": A Full Suite of **Innovation Opportunity Tools**:
+
 .pull-left[
 
+- Thinking in ***"System Operators"*** ( ***.blue[9 Windows]*** ) 
+
+  - The past, present, and future of a (problematic) System
+  
+  - The Sub-System, System, and Super-System 
+
+]
+.pull-right[
+
+|             | Past | Present | Future |
+|-------------|------|---------|--------|
+| SuperSystem |      |         |        |
+| System      |      |         |        |
+| Subsystem   |      |         |        |
+]
+
+---
+
+## GenTRIZ: Main Parameter of Value (MPV)
+### "Eureka On Demand": A Full Suite of **Innovation Opportunity Tools**
+
+.pull-left[
+- Innovation = `r anicon::faa("arrow-up", animate="vertical")` Main Parameter of Value ( MPV )
+
+- How to find the MPV?
+]
+.pull-right[
+
+### MPV Discovery Table
+| PARAMETERS  | Known | Unknown                           |
+|-------------|-------|-----------------------------------|
+| Unsatisfied |  MPV  | Latent MPV / Accepted Limitation! |
+| Satisfied   |   PV  |               Tacit               |
+]
+
+---
+
+## And GenTRIZ? What are the Core Ideas?
+"Eureka On Demand": A Full Suite of **Problem Identification Tools**:
+.leftcol30[
+
+- ***.orange[Components + Function Analysis]***
+  - An action performed by one component to
+change or maintain a parameter of Another component
+]
+
+.rightcol70[
+
+| F. CARRIER 	| FUNCTION 	| F. OBJECT 	| CATEGORY (HARMFUL/ USEFUL) 	| Basic/Aux/Addl 	| PERFORMANCE ( Normal etc 	| RANKING 	| Scale 	| Oven 	|
+|:----------:	|----------	|:---------:	|:--------------------------:	|:--------------:	|:------------------------:	|:-------:	|:-----:	|:----:	|
+| VESSEL     	| holds    	| ACID      	| Useful                     	| Addl           	| Normal                   	| 1       	|   NO  	|  OK  	|
+| VESSEL     	| touches  	| OVEN      	| Useful                     	| Basic          	| Normal                   	| 3       	|   NO  	|  OK  	|
+| ACID       	| touches  	| SPECIMEN  	| Useful                     	| Basic          	| Normal                   	| 3       	|   OK  	|  NO  	|
+| SPECIMEN   	| touches  	| SCALE     	| Useful                     	| Basic          	| Normal                   	| 3       	|   OK  	|  OK  	|
+  - What? **Components** = **Substance** + **Field**
+  - How? ( ***NOUN + VERB + NOUN*** )
+  - How Much?: Basic / Additional / Auxiliary functions
+]
+
+---
+
+## And GenTRIZ? What are the Core Ideas?
+"Eureka On Demand": A Full Suite of **Problem Identification Tools**:
+.leftcol20[
+- ***.orange[Interaction Analysis]***
+
+- System: Acid-Corrosion Testing Tank for materials
+
+]
+.rightcol80[
+
+
+|          	| Vessel 	| Acid 	| Specimen 	| Air 	| Gravity 	| Light 	| Scale 	| Oven 	|
+|:--------:	|:------:	|:----:	|:--------:	|:---:	|:-------:	|:-----:	|:-----:	|:----:	|
+|  Vessel  	|    X   	|  OK  	|    NO    	|  OK 	|    OK   	|   OK  	|   NO  	|  OK  	|
+|   Acid   	|   OK   	|   X  	|    OK    	|  OK 	|    OK   	|   OK  	|   NO  	|  OK  	|
+| Specimen 	|   NO   	|  OK  	|     X    	|  OK 	|    OK   	|   OK  	|   OK  	|  NO  	|
+|    Air   	|   OK   	|  OK  	|    NO    	|  X  	|    OK   	|   OK  	|   OK  	|  OK  	|
+|  Gravity 	|   OK   	|  OK  	|    OK    	|  OK 	|    X    	|   OK  	|   OK  	|  OK  	|
+|   Light  	|   OK   	|  OK  	|    OK    	|  OK 	|    OK   	|   X   	|   OK  	|  OK  	|
+|   Scale  	|   NO   	|  NO  	|    OK    	|  OK 	|    OK   	|   OK  	|   X   	|  NO  	|
+|   Oven   	|   OK   	|  OK  	|    NO    	|  OK 	|    OK   	|   OK  	|   NO  	|   X  	|
+|          	|        	|      	|          	|     	|         	|       	|       	|      	|
+]
+
+---
+## And GenTRIZ? What are the Core Ideas?
+"Eureka On Demand": A Full Suite of **Problem Solution Tools**:
+.pull-left[
+- ***.blue[Trimming]***
+  - What parts of the System can be removed? 
+      - Ranking
+      
+  - How can you justify their removal?
+      - Unimpaired Functionality
 
 ]
 
 .pull-right[
+.border[![](images/FunctionRanking.drawio.png)]
+]
 
+
+---
+## Finally: What will I add into my Course?
+
+.pull-left[
+- More of the Problem Identification Tools
+
+- Try to game-ify them! 
+
+- Real Life Examples
+]
+.pull-right[
+
+- ***.blue[Most Valuable Parameter (MPV)]***
+
+- ***.blue["Anti-Product" View]***
+- ***.orange[Function / Component / Interaction / Cost Analysis]***
+
+- ***.green[Trimming!]***
 
 ]
 
 
-
----
-
-
+#### My Contradiction / Challenge? 
+  - How to turn Procedures/Processes into Games in the Classroom!!
+  - What do I **TRIM** from the existing course !!
 ---
 .pull-left[
 ![](https://roundlearning.files.wordpress.com/2017/10/dartagnan-musketeers.jpg)
@@ -961,10 +1127,9 @@ Maurice Leloir (1851-1940)
 
 .pull-right[
 
-# Thanks!
+# Thank You!!
 
-## Slides made 
-###with 
+## Slides made with 
 ## `r anicon::faa("r-project", animate="vertical")` 
 ### via the R packages:<br>
 
