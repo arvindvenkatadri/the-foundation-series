@@ -19,9 +19,9 @@ interests:
 - Music and Sound
 - Reading and Literature
 organizations:
-- name: Dayanand Sagar University, School of Management and Commerce Studies
-  url: https://www.dsu.edu.in/
-  role: Adjunct Professor
+# - name: Dayanand Sagar University, School of Management and Commerce Studies
+#   url: https://www.dsu.edu.in/
+#   role: Adjunct Professor
 - name: Srishti Manipal Institute of Art, Design, and Technology
   url: https://srishtimanipalinstitute.in
   role: External Faculty

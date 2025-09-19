@@ -5,7 +5,7 @@ summary: "The Grammar of Maps"
 author: "Arvind Venkatadri"
 date: "`r Sys.Date()`"
 weight : 60
-type: book
+type: page
 output:
   html_document:
     toc_float: true

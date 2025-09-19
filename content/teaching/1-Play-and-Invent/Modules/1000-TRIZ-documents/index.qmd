@@ -2,30 +2,10 @@
 title: "TRIZ - Reference Documents"
 author: "Arvind V"
 date: "2024-08-06"
-output: html_document
-lastmod: " `r Sys.Date()`"
-external_link: ""
-weight: 1000
-type: book
-image:
-  caption: ""
-  focal_point: Smart
-links:
-# - icon: flask
-#   icon_pack: fas
-#   name: TRIZ DataBase
-#   url: slides/PlayAndInvent/TRIZ-Database/index.html
-# - icon: game
-#   icon_pack: fab
-#   name: Game
-#   url: /pdf/TRIZ/Titanic_Case_Study.pdf
-slides: 
+date-modified: " `r Sys.Date()`"
+order: 1000
 summary: "This Module is part of a Creative Problem Solving course I offer at Srishti Manipal Institute, Bangalore"
-tags: ""
-# url_code: ""
-# url_pdf: ""
-# url_slides: "slides/PlayAndInvent/TRIZ-Basics/index.html"
-# url_video: ""
+category: ""
 ---
 
 ```{r setup, include=FALSE}
@@ -80,7 +60,7 @@ International Technology Education Association. <u>[PDF](TRIZ-related/NewToolsfo
 
 ## TRIZ Examples
 
-1. Arvind's TRIZ Case Study Database `r emoji::emoji("laugh")`! <u>[Online Presentation](/slides/PlayAndInvent/TRIZ-Database/index.html)</u>
+1. Arvind V.'s TRIZ Case Study Database `r emoji::emoji("laugh")`! <u>[Presentation](../../../../slides/)</u>
 
 1. The TRIZ Journal. *Inventive Principle Examples* <u><https://the-trizjournal.com/40-inventive-principles-examples/></u>
 

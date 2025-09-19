@@ -2,9 +2,10 @@
 title: "Lab-00: Science, Human Experience, Experiments, and Data"
 subtitle: ""
 author: "Arvind Venkatadri"
-date: "`r Sys.Date()`"
+date: 2022-10-20
+date-modified: "`r Sys.Date()`"
 weight: 10
-type: "book"
+type: book
 summary: "What is Data? Why do we visualize it?"
 output:
   html_document:
