@@ -25,6 +25,9 @@ organizations:
 - name: Srishti Manipal Institute of Art, Design, and Technology
   url: https://srishtimanipalinstitute.in
   role: External Faculty
+- name: MMRFIC Technology Pvt. Ltd.
+  url: https://mmrfic.com
+  role: Engineering Manager
 social:
 - icon: envelope
   icon_pack: fas

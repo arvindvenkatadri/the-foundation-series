@@ -34,7 +34,7 @@ url_video: ""
 ---
 ```{r setup, include=FALSE}
 library(tidyverse)
-devtools::install_github("ricardo-bion/ggradar")
+#devtools::install_github("ricardo-bion/ggradar")
 library(ggradar) # Radar Plots
 
 ```

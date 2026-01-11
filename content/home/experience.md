@@ -27,24 +27,22 @@ date_format: Jan 2006
 
 experience:
 
-  - title: Adjunct Professor
-    company: Dayanand Sagar University
-    company_url: 'https://www.dsu.edu.in/'
+  - title: Engineering Manager
+    company: MMRFIC Technology Pvt. Ltd
+    company_url: 'https://mmrfic.com'
     location: Bangalore, India
-    date_start: '2022-07-25'
+    date_start: '2026-01-05'
     date_end: ''
     description: |2-
         
-        * Teaching courses in the School of Commerce and Management Studies
-        * Creativity and Innovation with TRIZ
-        * Business Data Analytics 
+        * I manage a team of engineers working on advanced wireless communication and defence systems
 
-  - title: Faculty Member
+  - title: External Faculty Member
     company: Srishti Manipal Institute of Art, Design, and Technology
     company_url: 'https://srishtimanipalinstitute.in/'
     location: Bangalore, India
     date_start: '2014-05-02'
-    date_end: '2022-10-31'
+    date_end: ''
     description: |2-
         
         * Teaching courses in the School of Foundation Studies
@@ -56,6 +54,21 @@ experience:
         * Collaborations with visiting Artists/Creators on outbound student courses
         * Design of Exams, Evaluations, and Grading Systems
  
+        
+
+  - title: Adjunct Professor
+    company: Dayanand Sagar University
+    company_url: 'https://www.dsu.edu.in/'
+    location: Bangalore, India
+    date_start: '2022-07-25'
+    date_end: '2025-06-30'
+    description: |2-
+        
+        * Taught courses in the School of Commerce and Management Studies
+        * Creativity and Innovation with TRIZ
+        * Business Data Analytics 
+
+
   - title: Co-Founder
     company: Chipper Sage Education, Bangalore, India
     company_url: 'https://www.thechippersage.com/'

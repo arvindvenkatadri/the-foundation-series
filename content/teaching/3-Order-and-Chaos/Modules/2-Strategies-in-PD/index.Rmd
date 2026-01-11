@@ -188,6 +188,10 @@ We'll see.
 
 ## References
 
+1. Veritasium on YouTube
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mScpHTIi-kM?si=vV-9n8gFvE-vXrC9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 1. Jeff Desjardins (2014). *The Silver Rule, Taleb, and the Slippery Slope to Interventionism*. <u><https://medium.com/@jeffdesjardins/the-silver-rule-taleb-and-the-slippery-slope-to-interventionism-ef6baef17c23></u>
 
 1. Carl Sagan's "A New Way To Think About Rules To Live By". <u><https://tetrahedral.blogspot.com/2011/12/carl-sagans-new-way-to-think-about.html></u>

@@ -117,7 +117,7 @@ a > code {
   overflow-x: auto;
   padding: .5em;
   color: #fff;
-  background: var(--color-gray);
+  background: var(--color-tan);
 }
 
 .inverse {
