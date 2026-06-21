@@ -165,3 +165,5 @@ icon:
     ai: true
     fa: true
 toc: true
+text-decoration: true
+

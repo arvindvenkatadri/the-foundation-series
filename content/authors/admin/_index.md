@@ -48,3 +48,32 @@ superuser: yes
 ---
 
 Teaching Complexity Science; Problem Solving using TRIZ; Design Thinking from Short Stories in English; Data Analytics and Data Visualization using R/RStudio; FOSS Software for Data Visualization; Statistical Inference, and Machine Learning.
+
+My other teaching websites are:
+
+- [Maths for Creative Coders](https://mathforcoders.netlify.app)
+- [Model Thinking in Design](https://old-tortoise-taught-us.netlify.app/)
+- [Data Viz and Stats in R](https://madhatterguide.netlify.app)
+- [Data Visualization with No Code](https://nocodedataviz.netlify.app/)
+- [TRIZ for Problem Solvers](https://teaching-triz.netlify.app)
+- [Literary Jukebox: Design Thinking from Short Fiction](https://literary-jukebox.netlify.app)
+- [Intro to Design of Experiments in R](https://doe-a-deer.netlify.app) (Extreme Work in Progress!)
+
+My student portfolios are here:\
+[We R Us: A R workshop](https://we-r-us.netlify.app/portfolio/);[Nikhita Purohit](https://nikhita-project-1.netlify.app/);[Diya Bijoy](https://diyadata.netlify.app/);[Rayna Singh](https://my-blog-rayna.netlify.app/);[Khushi Nagesh](https://khushinagesh.netlify.app/);
+
+and
+[Ananya Satish, Nishtha Raval](https://editor.p5js.org/nishtharaval1/full/JYltkiSNS);[Sneha Manu Jacob aka SMJ](https://editor.p5js.org/SnehaManuJacob/sketches/8RDpOGwbT); [Sara Saju](https://meucsara.netlify.app/); and [Diya Bijoy, Rayna Singh, Aanya Pandith, Naman Rajoria, Soumya Saboo.](https://naman-a2-mudra.netlify.app/posts/welcome/)
+
+
+You can find me on
+[Twitter](https://twitter.com/arvind_v), or
+[GitHub](https://github.com/arvindvenkatadri), and on
+[LinkedIn](https://www.linkedin.com/in/arvindvenkatadri)! Feel free to
+reach out to me via [mail](mailto:arvind.venkatadri@gmail.com) too!
+
+
+<center>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="arvindvenkatadri" data-color="#FFDD00" data-emoji=""  data-font="Cookie" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+
+

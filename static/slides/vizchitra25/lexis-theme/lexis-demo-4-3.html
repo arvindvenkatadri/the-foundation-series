@@ -29,6 +29,16 @@
 
 
 ```
+## Warning: `vec_depth()` was deprecated in purrr 1.0.0.
+## ℹ Please use `pluck_depth()` instead.
+## ℹ The deprecated feature was likely used in the purrr package.
+##   Please report the issue at &lt;https://github.com/tidyverse/purrr/issues&gt;.
+## This warning is displayed once per session.
+## Call `lifecycle::last_lifecycle_warnings()` to see where this warning was
+## generated.
+```
+
+```
 ## Warning: {metathis} can't directly include &lt;meta&gt; tags inside blogdown posts
 ## because the mechanism for including tags in the &lt;head&gt; section of a page
 ## depends on the Hugo template. If you see this message but are not rendering a
@@ -75,7 +85,7 @@ class: title-slide, center, middle, inverse
 
 Written: May 04 2020
 
-Updated: September 19 2025
+Updated: June 21 2026
 
 .footer-large[.right[.fira[
 &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;[What does "λέξις" mean](https://jhelvy.github.io/lexis/index.html#what-does-%CE%BB%CE%AD%CE%BE%CE%B9%CF%82-mean)
@@ -322,7 +332,8 @@ foo &lt;- function(arg1 = 100, arg2 = "character string") {
 ```
 
 ```
-#&gt; Error in 1 + "a": non-numeric argument to binary operator
+#&gt; Error in `1 + "a"`:
+#&gt; ! non-numeric argument to binary operator
 ```
 ]
 
@@ -380,7 +391,7 @@ ggplot(mtcars, aes(x = mpg, y = hp)) +
 
 .panel[.panel-name[Plot]
 
-&lt;img src="figs/unnamed-chunk-4-1.png" width="288" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/unnamed-chunk-4-1.png" alt="" width="288" style="display: block; margin: auto;" /&gt;
 ]
 ]
 
@@ -687,7 +698,7 @@ ggplot(mtcars, aes(x = mpg, y = hp)) +
 ]
 ````
 .border[
-&lt;img src="figs/unnamed-chunk-15-1.png" width="288" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/unnamed-chunk-15-1.png" alt="" width="288" style="display: block; margin: auto;" /&gt;
 ]]
 .rightcol[
 ````markdown
@@ -701,7 +712,7 @@ ggplot(mtcars, aes(x = mpg, y = hp)) +
 ]
 ````
 .circle[
-&lt;img src="figs/unnamed-chunk-16-1.png" width="288" style="display: block; margin: auto;" /&gt;
+&lt;img src="figs/unnamed-chunk-16-1.png" alt="" width="288" style="display: block; margin: auto;" /&gt;
 ]]
 
 ---

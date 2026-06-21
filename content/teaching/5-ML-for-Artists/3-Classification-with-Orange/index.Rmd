@@ -31,9 +31,9 @@ library(blogdown)
 library(DiagrammeR)
 library(tidyverse)
 library(palmerpenguins)
-#devtools::install_github('paulofelipe/D3plusR')
-#https://d3plus.org/?path=/docs/introduction--documentation
-#https://github.com/d3plus/d3plus/wiki/Visualizations
+# devtools::install_github('paulofelipe/D3plusR')
+# https://d3plus.org/?path=/docs/introduction--documentation
+# https://github.com/d3plus/d3plus/wiki/Visualizations
 library(D3plusR)
 library(emoji)
 ```
