@@ -4,7 +4,7 @@
     <title>Student and Faculty Experience in FSP this Year</title>
     <meta charset="utf-8" />
     <meta name="author" content="Sadhvi Jawa, Minakshi Singh, Vidhu Gandhi, Yash Bhandari, Arvind Venkatadri" />
-    <meta name="date" content="2021-10-21" />
+    <meta name="date" content="2026-07-28" />
     <script src="index_files/header-attrs/header-attrs.js"></script>
     <link href="index_files/xaringanExtra-extra-styles/xaringanExtra-extra-styles.css" rel="stylesheet" />
     <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
@@ -57,7 +57,7 @@ class: center middle
 
 .pull-right[
 
-&lt;img src="https://cdn.pixabay.com/photo/2017/07/06/10/07/fruit-2477527__340.jpg" width="100%" /&gt;
+&lt;img src="https://cdn.pixabay.com/photo/2017/07/06/10/07/fruit-2477527__340.jpg" alt="" width="100%" /&gt;
 
 
 ]
@@ -206,7 +206,7 @@ How do we create the Nudge to move from **PE&lt;--&gt;KE**?
 
 - ** Flexible Credits!!**
 
-- ** And...Faculty?** 😩
+- ** And...Faculty?** 😪
 
 ]
 
@@ -240,11 +240,11 @@ The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](http://yihu
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
 <script>var slideshow = remark.create({
-"slideNumberFormat": "%current%",
-"highlightStyle": "github",
-"highlightLines": true,
-"ratio": "16:9",
-"countIncrementalSlides": true
+  "slideNumberFormat": "%current%",
+  "highlightStyle": "github",
+  "highlightLines": true,
+  "ratio": "16:9",
+  "countIncrementalSlides": true
 });
 if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   window.dispatchEvent(new Event('resize'));
@@ -285,6 +285,19 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
     deleted = true;
   });
 })();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
 (function() {
   "use strict"
   // Replace <script> tags in slides area to make them executable
