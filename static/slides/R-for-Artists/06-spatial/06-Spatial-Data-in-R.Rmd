@@ -1038,7 +1038,7 @@ tm_shape(lnd) +
   tm_add_legend(type = "symbol", col = "red",
                 title = "Hire Cycles Here") +
 
-  tm_scale_bar(position=c("left", "bottom"),#<<
+  tm_scalebar(position=c("left", "bottom"),#<<
                text.size = 1) + #<<
   tm_compass(position = c("right", "top"), #<<
              type = "rose", #<<
@@ -1075,7 +1075,7 @@ tm_shape(cycle_hire_osm) +
   tm_graticules() +
   tm_add_legend(type = "symbol", col = "red",
                 title = "Hire Cycles Here") +
-  tm_scale_bar(position=c("left", "bottom"),text.size = 1) + 
+  tm_scalebar(position=c("left", "bottom"),text.size = 1) + 
   tm_compass(position = c("right", "top"), type = "rose",
              size = 2) +
   tm_credits(text = "Arvind V, 2021", #<<
